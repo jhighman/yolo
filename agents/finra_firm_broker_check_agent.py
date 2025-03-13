@@ -442,13 +442,9 @@ class FinraFirmBrokerCheckAgent:
         self.logger.info("Starting FINRA BrokerCheck firm search by CRD", extra=log_context)
 
         try:
-            # Construct search parameters
             params = dict(BROKERCHECK_CONFIG["default_params"])
-            params.update({
-                'query': organization_crd
-            })
+            params.update({'query': organization_crd})
 
-            # Log the complete request details
             request_details = {
                 "url": BROKERCHECK_CONFIG["base_search_url"],
                 "method": "GET",
@@ -458,12 +454,11 @@ class FinraFirmBrokerCheckAgent:
             self.logger.debug("Outgoing request details", extra={**log_context, "request": request_details})
 
             response = self.session.get(
-                BROKERCHECK_CONFIG["base_search_url"], 
+                BROKERCHECK_CONFIG["base_search_url"],
                 params=params,
-                timeout=(10, 30)  # (connect timeout, read timeout)
+                timeout=(10, 30)
             )
 
-            # Log response details
             response_details = {
                 "status_code": response.status_code,
                 "headers": dict(response.headers),
@@ -472,7 +467,6 @@ class FinraFirmBrokerCheckAgent:
             }
             self.logger.debug("Response details", extra={**log_context, "response": response_details})
 
-            # Validate and parse response
             data = self.validate_response(response, log_context)
             self.logger.debug("Raw API response", extra={**log_context, "raw_response": data})
 
@@ -488,7 +482,6 @@ class FinraFirmBrokerCheckAgent:
                     )
                     continue
 
-                # Parse address details if present
                 address_details = {}
                 if source.get("firm_ia_address_details"):
                     try:
@@ -500,9 +493,9 @@ class FinraFirmBrokerCheckAgent:
                         )
 
                 result = {
-                    'firm_name': source.get('firm_name', ''),
-                    'crd_number': source.get('firm_source_id', ''),
-                    'firm_url': f"https://brokercheck.finra.org/firm/summary/{source.get('firm_source_id', '')}",
+                    'firm_name': source.get('org_name', ''),
+                    'crd_number': source.get('org_source_id', ''),
+                    'firm_url': f"https://brokercheck.finra.org/firm/summary/{source.get('org_source_id', '')}",
                     'firm_other_names': source.get('firm_other_names', []),
                     'firm_ia_scope': source.get('firm_ia_scope', ''),
                     'firm_ia_disclosure_fl': source.get('firm_ia_disclosure_fl', ''),
@@ -510,7 +503,6 @@ class FinraFirmBrokerCheckAgent:
                     'firm_ia_address_details': address_details
                 }
 
-                # Include highlight information if available
                 if "highlight" in hit:
                     result['highlight'] = hit['highlight']
 
@@ -521,14 +513,12 @@ class FinraFirmBrokerCheckAgent:
                 extra={**log_context, "total_hits": total_hits, "results_count": len(results)}
             )
 
-            # Add total_hits to the first result if we have any results
             if results:
                 results[0]['total_hits'] = total_hits
 
             return results
 
         except FinraAPIError:
-            # Re-raise any of our custom exceptions
             raise
         except Timeout as e:
             raise FinraRequestError(f"Request timed out: {str(e)}")
