@@ -135,17 +135,31 @@ class FinraFirmBrokerCheckAgent:
                 'size': '50'
             })
 
-            self.logger.debug("Fetching from BrokerCheck API", 
-                            extra={**log_context, "url": BROKERCHECK_CONFIG["base_search_url"], 
-                                  "params": params})
+            # Log the complete request details
+            request_details = {
+                "url": BROKERCHECK_CONFIG["base_search_url"],
+                "method": "GET",
+                "params": params,
+                "headers": dict(self.session.headers)
+            }
+            self.logger.debug("Outgoing request details", extra={**log_context, "request": request_details})
 
             response = self.session.get(BROKERCHECK_CONFIG["base_search_url"], params=params)
             response.raise_for_status()
 
+            # Log response details
+            response_details = {
+                "status_code": response.status_code,
+                "headers": dict(response.headers),
+                "url": response.url,
+                "elapsed": str(response.elapsed)
+            }
+            self.logger.debug("Response details", extra={**log_context, "response": response_details})
+
             if response.status_code == 200:
                 data = response.json()
-                self.logger.info("BrokerCheck search completed successfully", 
-                               extra={**log_context, "response_data": data})
+                # Log raw response data at debug level
+                self.logger.debug("Raw API response", extra={**log_context, "raw_response": data})
                 
                 results = []
                 if "hits" in data and "hits" in data["hits"]:
@@ -157,13 +171,15 @@ class FinraFirmBrokerCheckAgent:
                             'firm_url': f"https://brokercheck.finra.org/firm/summary/{source.get('org_source_id', '')}"
                         })
                 
+                self.logger.info("BrokerCheck search completed successfully", 
+                               extra={**log_context, "results_count": len(results)})
                 return results
             else:
                 self.logger.error("Unexpected status code", 
                                 extra={**log_context, "status_code": response.status_code})
                 return []
 
-        except requests.exceptions.RequestException as e:
+        except requests.RequestException as e:
             self.logger.error("Request error during fetch", 
                             extra={**log_context, "error": str(e)})
             raise
@@ -192,14 +208,32 @@ class FinraFirmBrokerCheckAgent:
             url = f'https://api.brokercheck.finra.org/search/firm/{crd_number}'
             params = dict(BROKERCHECK_CONFIG["default_params"])
 
-            self.logger.debug("Fetching detailed info from BrokerCheck API", 
-                            extra={**log_context, "url": url, "params": params})
+            # Log the complete request details
+            request_details = {
+                "url": url,
+                "method": "GET",
+                "params": params,
+                "headers": dict(self.session.headers)
+            }
+            self.logger.debug("Outgoing request details", extra={**log_context, "request": request_details})
 
             response = self.session.get(url, params=params)
             response.raise_for_status()
 
+            # Log response details
+            response_details = {
+                "status_code": response.status_code,
+                "headers": dict(response.headers),
+                "url": response.url,
+                "elapsed": str(response.elapsed)
+            }
+            self.logger.debug("Response details", extra={**log_context, "response": response_details})
+
             if response.status_code == 200:
                 raw_data = response.json()
+                # Log raw response data at debug level
+                self.logger.debug("Raw API response", extra={**log_context, "raw_response": raw_data})
+                
                 if "hits" in raw_data and raw_data["hits"]["hits"]:
                     content_str = raw_data["hits"]["hits"][0]["_source"]["content"]
                     try:
@@ -209,7 +243,7 @@ class FinraFirmBrokerCheckAgent:
                         return detailed_data
                     except json.JSONDecodeError as e:
                         self.logger.error("Failed to parse content JSON", 
-                                        extra={**log_context, "error": str(e)})
+                                        extra={**log_context, "error": str(e), "content": content_str})
                         return {}
                 else:
                     self.logger.warning("No hits found in detailed response", extra=log_context)
@@ -219,7 +253,7 @@ class FinraFirmBrokerCheckAgent:
                                 extra={**log_context, "status_code": response.status_code})
                 return {}
 
-        except requests.exceptions.RequestException as e:
+        except requests.RequestException as e:
             self.logger.error("Request error during fetch", 
                             extra={**log_context, "error": str(e)})
             raise
@@ -252,7 +286,7 @@ class FinraFirmBrokerCheckAgent:
             # Construct search parameters
             params = dict(BROKERCHECK_CONFIG["default_params"])
             params.update({
-                'query': organization_crd,  # Use query parameter instead of firm
+                'query': organization_crd,
                 'type': 'Firm',
                 'sortField': 'Relevance',
                 'sortOrder': 'Desc',
@@ -262,17 +296,32 @@ class FinraFirmBrokerCheckAgent:
                 'size': '50'
             })
 
-            self.logger.debug("Fetching from BrokerCheck API", 
-                            extra={**log_context, "url": BROKERCHECK_CONFIG["base_search_url"], 
-                                  "params": params})
+            # Log the complete request details
+            request_details = {
+                "url": BROKERCHECK_CONFIG["base_search_url"],
+                "method": "GET",
+                "params": params,
+                "headers": dict(self.session.headers)
+            }
+            self.logger.debug("Outgoing request details", extra={**log_context, "request": request_details})
 
             response = self.session.get(BROKERCHECK_CONFIG["base_search_url"], params=params)
             response.raise_for_status()
 
+            # Log response details
+            response_details = {
+                "status_code": response.status_code,
+                "headers": dict(response.headers),
+                "url": response.url,
+                "elapsed": str(response.elapsed)
+            }
+            self.logger.debug("Response details", extra={**log_context, "response": response_details})
+
             if response.status_code == 200:
                 try:
                     data = response.json()
-                    self.logger.debug("Raw API response", extra={"response": data})
+                    # Log raw response data at debug level
+                    self.logger.debug("Raw API response", extra={**log_context, "raw_response": data})
                     
                     results = []
                     total_hits = 0
