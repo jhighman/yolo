@@ -25,29 +25,54 @@ sys.path.append(str(Path(__file__).parent.parent))
 import json
 import logging
 from logging import Logger
-from typing import Dict, List, Optional, Any, cast
+from typing import Dict, List, Optional, Any, cast, Union
 import requests
 from bs4 import BeautifulSoup, Tag
 from bs4.element import NavigableString
 from datetime import datetime
 import time
 from functools import wraps
+from requests.exceptions import RequestException, HTTPError, ConnectionError, Timeout
 from utils.logging_config import setup_logging
 
 # Get module logger
 logger = logging.getLogger('finra_firm_brokercheck_agent')
 
+class FinraAPIError(Exception):
+    """Base exception for FINRA API related errors."""
+    def __init__(self, message: str, status_code: Optional[int] = None, response_text: Optional[str] = None):
+        self.message = message
+        self.status_code = status_code
+        self.response_text = response_text
+        super().__init__(self.message)
+
+class FinraResponseError(FinraAPIError):
+    """Exception for invalid or malformed API responses."""
+    pass
+
+class FinraRequestError(FinraAPIError):
+    """Exception for API request failures."""
+    pass
+
+class FinraRateLimitError(FinraAPIError):
+    """Exception for rate limit related errors."""
+    pass
+
 # Configuration for FINRA BrokerCheck API
 BROKERCHECK_CONFIG: Dict[str, Any] = {
     "base_search_url": "https://api.brokercheck.finra.org/search/firm",
     "default_params": {
-        "filter": "active=true,prev=true",  # Filters for active/previously registered firms
-        "includePrevious": "true",  # Include past registrations
         "hl": "true",  # Highlight search terms in results
         "nrows": "12",  # Number of rows per response
         "start": "0",  # Starting index for pagination
+        "r": "25",  # Results per page
+        "sort": "score+desc",  # Sort by relevance score descending
         "wt": "json"  # Response format (JSON)
-    }
+    },
+    "max_retries": 3,  # Maximum number of retry attempts
+    "retry_delay": 1,  # Initial delay between retries (seconds)
+    "retry_backoff": 2,  # Multiplicative factor for retry delay
+    "retry_status_codes": {408, 429, 500, 502, 503, 504}  # Status codes to retry on
 }
 
 # Rate limiting configuration
@@ -66,12 +91,73 @@ def rate_limit(func):
         if func.__name__ in last_call:
             elapsed = current_time - last_call[func.__name__]
             if elapsed < RATE_LIMIT_DELAY:
-                time.sleep(RATE_LIMIT_DELAY - elapsed)
+                wait_time = RATE_LIMIT_DELAY - elapsed
+                logger.debug(f"Rate limiting: waiting {wait_time:.2f} seconds")
+                time.sleep(wait_time)
         
         # Update last call time and execute function
         last_call[func.__name__] = time.time()
         return func(*args, **kwargs)
     
+    return wrapper
+
+def retry_on_error(func):
+    """Decorator to implement retry logic with exponential backoff."""
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        max_retries = BROKERCHECK_CONFIG["max_retries"]
+        retry_delay = BROKERCHECK_CONFIG["retry_delay"]
+        retry_backoff = BROKERCHECK_CONFIG["retry_backoff"]
+        retry_status_codes = BROKERCHECK_CONFIG["retry_status_codes"]
+
+        last_error = None
+        for attempt in range(max_retries):
+            try:
+                return func(*args, **kwargs)
+            except HTTPError as e:
+                if e.response.status_code in retry_status_codes:
+                    wait_time = retry_delay * (retry_backoff ** attempt)
+                    logger.warning(
+                        f"Request failed with status {e.response.status_code}, "
+                        f"retrying in {wait_time} seconds (attempt {attempt + 1}/{max_retries})"
+                    )
+                    time.sleep(wait_time)
+                    last_error = e
+                else:
+                    raise FinraRequestError(
+                        f"HTTP error occurred: {str(e)}", 
+                        status_code=e.response.status_code,
+                        response_text=e.response.text
+                    )
+            except ConnectionError as e:
+                wait_time = retry_delay * (retry_backoff ** attempt)
+                logger.warning(
+                    f"Connection error occurred, retrying in {wait_time} seconds "
+                    f"(attempt {attempt + 1}/{max_retries})"
+                )
+                time.sleep(wait_time)
+                last_error = e
+            except Timeout as e:
+                wait_time = retry_delay * (retry_backoff ** attempt)
+                logger.warning(
+                    f"Request timed out, retrying in {wait_time} seconds "
+                    f"(attempt {attempt + 1}/{max_retries})"
+                )
+                time.sleep(wait_time)
+                last_error = e
+
+        # If we've exhausted all retries, raise the last error
+        if isinstance(last_error, HTTPError):
+            raise FinraRequestError(
+                f"Max retries exceeded. Last error: {str(last_error)}", 
+                status_code=last_error.response.status_code,
+                response_text=last_error.response.text
+            )
+        elif isinstance(last_error, (ConnectionError, Timeout)):
+            raise FinraRequestError(f"Max retries exceeded. Last error: {str(last_error)}")
+        else:
+            raise FinraRequestError("Max retries exceeded with unknown error")
+
     return wrapper
 
 class FinraFirmBrokerCheckAgent:
@@ -90,14 +176,73 @@ class FinraFirmBrokerCheckAgent:
         """
         self.logger = logger or logging.getLogger(__name__)
         self.session = requests.Session()
-        # Set up common headers to mimic browser behavior
+        # Set up headers to match the actual FINRA API request
         self.session.headers.update({
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-            'Accept-Language': 'en-US,en;q=0.5'
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36',
+            'Accept': 'application/json, text/plain, */*',
+            'Referer': 'https://brokercheck.finra.org/',
+            'sec-ch-ua': '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"',
+            'sec-ch-ua-mobile': '?0',
+            'sec-ch-ua-platform': '"macOS"'
         })
 
+    def validate_response(self, response: requests.Response, log_context: Dict[str, Any]) -> Dict[str, Any]:
+        """Validate and parse API response.
+
+        Args:
+            response: Response object from requests
+            log_context: Logging context dictionary
+
+        Returns:
+            Parsed JSON response data
+
+        Raises:
+            FinraResponseError: If response validation fails
+        """
+        try:
+            response.raise_for_status()
+            data = response.json()
+            
+            if not isinstance(data, dict):
+                raise FinraResponseError(
+                    "Invalid response format: expected JSON object",
+                    status_code=response.status_code,
+                    response_text=response.text
+                )
+            
+            hits = data.get("hits")
+            if not isinstance(hits, dict):
+                raise FinraResponseError(
+                    "Invalid response structure: missing or invalid 'hits' object",
+                    status_code=response.status_code,
+                    response_text=response.text
+                )
+            
+            hit_list = hits.get("hits")
+            if not isinstance(hit_list, list):
+                raise FinraResponseError(
+                    "Invalid response structure: missing or invalid 'hits.hits' array",
+                    status_code=response.status_code,
+                    response_text=response.text
+                )
+            
+            return data
+            
+        except json.JSONDecodeError as e:
+            raise FinraResponseError(
+                f"Failed to parse JSON response: {str(e)}",
+                status_code=response.status_code,
+                response_text=response.text
+            )
+        except requests.exceptions.HTTPError as e:
+            raise FinraRequestError(
+                f"HTTP error occurred: {str(e)}",
+                status_code=response.status_code,
+                response_text=response.text
+            )
+
     @rate_limit
+    @retry_on_error
     def search_firm(self, firm_name: str, reference_id: Optional[str] = None) -> List[Dict[str, str]]:
         """Search for a firm in FINRA's BrokerCheck system.
 
@@ -113,7 +258,9 @@ class FinraFirmBrokerCheckAgent:
             - firm_url: URL to the firm's detailed page
 
         Raises:
-            requests.RequestException: If there's an error with the HTTP request.
+            FinraRequestError: If there's an error with the HTTP request
+            FinraResponseError: If the response is invalid or malformed
+            FinraRateLimitError: If rate limiting is encountered
         """
         log_context = {
             "firm_name": firm_name,
@@ -125,14 +272,7 @@ class FinraFirmBrokerCheckAgent:
             # Construct search parameters
             params = dict(BROKERCHECK_CONFIG["default_params"])
             params.update({
-                'query': firm_name,
-                'type': 'Firm',
-                'sortField': 'Relevance',
-                'sortOrder': 'Desc',
-                'brokerDealers': 'true',
-                'investmentAdvisors': 'true',
-                'isNlSearch': 'false',
-                'size': '50'
+                'query': firm_name
             })
 
             # Log the complete request details
@@ -144,8 +284,11 @@ class FinraFirmBrokerCheckAgent:
             }
             self.logger.debug("Outgoing request details", extra={**log_context, "request": request_details})
 
-            response = self.session.get(BROKERCHECK_CONFIG["base_search_url"], params=params)
-            response.raise_for_status()
+            response = self.session.get(
+                BROKERCHECK_CONFIG["base_search_url"], 
+                params=params,
+                timeout=(10, 30)  # (connect timeout, read timeout)
+            )
 
             # Log response details
             response_details = {
@@ -156,33 +299,41 @@ class FinraFirmBrokerCheckAgent:
             }
             self.logger.debug("Response details", extra={**log_context, "response": response_details})
 
-            if response.status_code == 200:
-                data = response.json()
-                # Log raw response data at debug level
-                self.logger.debug("Raw API response", extra={**log_context, "raw_response": data})
-                
-                results = []
-                if "hits" in data and "hits" in data["hits"]:
-                    for hit in data["hits"]["hits"]:
-                        source = hit.get("_source", {})
-                        results.append({
-                            'firm_name': source.get('org_name', ''),
-                            'crd_number': source.get('org_source_id', ''),
-                            'firm_url': f"https://brokercheck.finra.org/firm/summary/{source.get('org_source_id', '')}"
-                        })
-                
-                self.logger.info("BrokerCheck search completed successfully", 
-                               extra={**log_context, "results_count": len(results)})
-                return results
-            else:
-                self.logger.error("Unexpected status code", 
-                                extra={**log_context, "status_code": response.status_code})
-                return []
+            # Validate and parse response
+            data = self.validate_response(response, log_context)
+            self.logger.debug("Raw API response", extra={**log_context, "raw_response": data})
 
-        except requests.RequestException as e:
-            self.logger.error("Request error during fetch", 
-                            extra={**log_context, "error": str(e)})
+            results = []
+            for hit in data["hits"]["hits"]:
+                source = hit.get("_source", {})
+                if not isinstance(source, dict):
+                    self.logger.warning(
+                        "Invalid hit source format",
+                        extra={**log_context, "hit": hit}
+                    )
+                    continue
+                
+                results.append({
+                    'firm_name': source.get('org_name', ''),
+                    'crd_number': source.get('org_source_id', ''),
+                    'firm_url': f"https://brokercheck.finra.org/firm/summary/{source.get('org_source_id', '')}"
+                })
+
+            self.logger.info(
+                "BrokerCheck search completed successfully",
+                extra={**log_context, "results_count": len(results)}
+            )
+            return results
+
+        except FinraAPIError:
+            # Re-raise any of our custom exceptions
             raise
+        except Timeout as e:
+            raise FinraRequestError(f"Request timed out: {str(e)}")
+        except ConnectionError as e:
+            raise FinraRequestError(f"Connection error: {str(e)}")
+        except Exception as e:
+            raise FinraRequestError(f"Unexpected error: {str(e)}")
 
     @rate_limit
     def get_firm_details(self, crd_number: str, reference_id: Optional[str] = None) -> Dict[str, Any]:
@@ -259,6 +410,7 @@ class FinraFirmBrokerCheckAgent:
             raise
 
     @rate_limit
+    @retry_on_error
     def search_firm_by_crd(self, organization_crd: str, reference_id: Optional[str] = None) -> List[Dict[str, str]]:
         """Search for a firm in FINRA's BrokerCheck system using CRD number.
 
@@ -272,9 +424,16 @@ class FinraFirmBrokerCheckAgent:
             - firm_name: The name of the firm
             - crd_number: The firm's CRD number
             - firm_url: URL to the firm's detailed page
+            - firm_other_names: List of other names for the firm
+            - firm_ia_scope: Investment adviser scope (e.g., "ACTIVE")
+            - firm_ia_disclosure_fl: Investment adviser disclosure flag
+            - firm_branches_count: Number of branch offices
+            - firm_ia_address_details: Detailed address information
 
         Raises:
-            requests.RequestException: If there's an error with the HTTP request.
+            FinraRequestError: If there's an error with the HTTP request
+            FinraResponseError: If the response is invalid or malformed
+            FinraRateLimitError: If rate limiting is encountered
         """
         log_context = {
             "organization_crd": organization_crd,
@@ -286,14 +445,7 @@ class FinraFirmBrokerCheckAgent:
             # Construct search parameters
             params = dict(BROKERCHECK_CONFIG["default_params"])
             params.update({
-                'query': organization_crd,
-                'type': 'Firm',
-                'sortField': 'Relevance',
-                'sortOrder': 'Desc',
-                'brokerDealers': 'true',
-                'investmentAdvisors': 'true',
-                'isNlSearch': 'false',
-                'size': '50'
+                'query': organization_crd
             })
 
             # Log the complete request details
@@ -305,8 +457,11 @@ class FinraFirmBrokerCheckAgent:
             }
             self.logger.debug("Outgoing request details", extra={**log_context, "request": request_details})
 
-            response = self.session.get(BROKERCHECK_CONFIG["base_search_url"], params=params)
-            response.raise_for_status()
+            response = self.session.get(
+                BROKERCHECK_CONFIG["base_search_url"], 
+                params=params,
+                timeout=(10, 30)  # (connect timeout, read timeout)
+            )
 
             # Log response details
             response_details = {
@@ -317,55 +472,70 @@ class FinraFirmBrokerCheckAgent:
             }
             self.logger.debug("Response details", extra={**log_context, "response": response_details})
 
-            if response.status_code == 200:
-                try:
-                    data = response.json()
-                    # Log raw response data at debug level
-                    self.logger.debug("Raw API response", extra={**log_context, "raw_response": data})
-                    
-                    results = []
-                    total_hits = 0
-                    
-                    # Check if we have valid response data
-                    if data and isinstance(data, dict):
-                        hits = data.get("hits", {})
-                        if isinstance(hits, dict):
-                            # Get total hits count
-                            total_hits = hits.get("total", 0)
-                            hit_list = hits.get("hits", [])
-                            if isinstance(hit_list, list):
-                                for hit in hit_list:
-                                    if isinstance(hit, dict):
-                                        source = hit.get("_source", {})
-                                        if source:
-                                            results.append({
-                                                'firm_name': source.get('org_name', ''),
-                                                'crd_number': source.get('org_source_id', ''),
-                                                'firm_url': f"https://brokercheck.finra.org/firm/summary/{source.get('org_source_id', '')}"
-                                            })
-                    
-                    self.logger.info("BrokerCheck search completed successfully", 
-                                   extra={**log_context, "total_hits": total_hits, "results_count": len(results)})
-                    
-                    # Add total_hits to the first result if we have any results
-                    if results:
-                        results[0]['total_hits'] = total_hits
-                    
-                    return results
-                
-                except (json.JSONDecodeError, AttributeError, TypeError) as e:
-                    self.logger.error("Error parsing API response", 
-                                    extra={**log_context, "error": str(e), "response_text": response.text})
-                    return []
-            else:
-                self.logger.error("Unexpected status code", 
-                                extra={**log_context, "status_code": response.status_code})
-                return []
+            # Validate and parse response
+            data = self.validate_response(response, log_context)
+            self.logger.debug("Raw API response", extra={**log_context, "raw_response": data})
 
-        except requests.RequestException as e:
-            self.logger.error("Request error during fetch", 
-                            extra={**log_context, "error": str(e)})
+            results = []
+            total_hits = data["hits"]["total"]
+
+            for hit in data["hits"]["hits"]:
+                source = hit.get("_source", {})
+                if not isinstance(source, dict):
+                    self.logger.warning(
+                        "Invalid hit source format",
+                        extra={**log_context, "hit": hit}
+                    )
+                    continue
+
+                # Parse address details if present
+                address_details = {}
+                if source.get("firm_ia_address_details"):
+                    try:
+                        address_details = json.loads(source["firm_ia_address_details"])
+                    except json.JSONDecodeError:
+                        self.logger.warning(
+                            "Failed to parse address details",
+                            extra={**log_context, "address_details": source["firm_ia_address_details"]}
+                        )
+
+                result = {
+                    'firm_name': source.get('firm_name', ''),
+                    'crd_number': source.get('firm_source_id', ''),
+                    'firm_url': f"https://brokercheck.finra.org/firm/summary/{source.get('firm_source_id', '')}",
+                    'firm_other_names': source.get('firm_other_names', []),
+                    'firm_ia_scope': source.get('firm_ia_scope', ''),
+                    'firm_ia_disclosure_fl': source.get('firm_ia_disclosure_fl', ''),
+                    'firm_branches_count': source.get('firm_branches_count', 0),
+                    'firm_ia_address_details': address_details
+                }
+
+                # Include highlight information if available
+                if "highlight" in hit:
+                    result['highlight'] = hit['highlight']
+
+                results.append(result)
+
+            self.logger.info(
+                "BrokerCheck search completed successfully",
+                extra={**log_context, "total_hits": total_hits, "results_count": len(results)}
+            )
+
+            # Add total_hits to the first result if we have any results
+            if results:
+                results[0]['total_hits'] = total_hits
+
+            return results
+
+        except FinraAPIError:
+            # Re-raise any of our custom exceptions
             raise
+        except Timeout as e:
+            raise FinraRequestError(f"Request timed out: {str(e)}")
+        except ConnectionError as e:
+            raise FinraRequestError(f"Connection error: {str(e)}")
+        except Exception as e:
+            raise FinraRequestError(f"Unexpected error: {str(e)}")
 
     def save_results(self, results: Dict[str, Any], output_path: str) -> None:
         """Save the search results to a file.
@@ -390,12 +560,37 @@ class FinraFirmBrokerCheckAgent:
 def run_cli():
     """Run the CLI menu system for testing the FINRA firm broker check agent."""
     # Initialize logging with the proper configuration and debug enabled
-    loggers = setup_logging(debug=True)  # Enable debug logging
+    loggers = setup_logging(debug=True)
     logger = loggers.get('finra_brokercheck', logging.getLogger(__name__))
     
     agent = FinraFirmBrokerCheckAgent(logger=logger)
     last_results = []  # Store last search results for reuse
     
+    def handle_api_error(e: Exception, operation: str) -> None:
+        """Handle API errors in a consistent way.
+        
+        Args:
+            e: The exception that occurred
+            operation: Description of the operation that failed
+        """
+        if isinstance(e, FinraResponseError):
+            print(f"\nError: Invalid response from FINRA API during {operation}")
+            print(f"Details: {e.message}")
+            if e.response_text:
+                logger.debug(f"Raw response: {e.response_text}")
+        elif isinstance(e, FinraRequestError):
+            print(f"\nError: Failed to communicate with FINRA API during {operation}")
+            print(f"Details: {e.message}")
+            if hasattr(e, 'status_code'):
+                print(f"Status code: {e.status_code}")
+        elif isinstance(e, FinraRateLimitError):
+            print(f"\nError: Rate limit exceeded during {operation}")
+            print("Please wait a moment before trying again")
+        else:
+            print(f"\nAn unexpected error occurred during {operation}: {str(e)}")
+        
+        logger.error(f"Error during {operation}", exc_info=True)
+
     def print_menu():
         print("\nFINRA Firm BrokerCheck Agent CLI")
         print("=" * 35)
@@ -443,8 +638,8 @@ def run_cli():
             else:
                 print(f"\nNo firms found matching '{firm_name}'")
         
-        except requests.RequestException as e:
-            print(f"\nError searching for firm: {e}")
+        except Exception as e:
+            handle_api_error(e, "firm name search")
     
     def search_firm_by_crd_menu():
         nonlocal last_results
