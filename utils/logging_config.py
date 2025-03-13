@@ -2,7 +2,7 @@ import logging
 import logging.handlers
 import os
 from pathlib import Path
-from typing import Dict, Set
+from typing import Dict, Set, Any
 
 # Define LOGGER_GROUPS at module scope
 LOGGER_GROUPS = {
@@ -102,21 +102,36 @@ def setup_logging(debug: bool = False) -> Dict[str, logging.Logger]:
     _LOGGING_INITIALIZED = True
     return loggers
 
-def reconfigure_logging(loggers: Dict[str, logging.Logger], enabled_groups: Set[str], group_levels: Dict[str, str]) -> None:
-    """Reconfigure logging settings for specified logger groups."""
+def reconfigure_logging(loggers: Dict[str, Any], enabled_groups: Set[str], group_levels: Dict[str, str]) -> None:
+    """Reconfigure logging settings for specified logger groups.
+    
+    Args:
+        loggers: Dictionary containing logger instances and group information
+        enabled_groups: Set of group names to enable
+        group_levels: Dictionary mapping group names to their desired log levels
+    """
+    # Get the groups dictionary from the loggers dict, defaulting to empty dict if not found
     groups = loggers.get('_groups', {})
+    if not isinstance(groups, dict):
+        return
+        
     for group_name, group_loggers in groups.items():
+        if not isinstance(group_loggers, dict):
+            continue
+            
         if group_name in enabled_groups:
             level = group_levels.get(group_name, logging.INFO)
             numeric_level = level if isinstance(level, int) else getattr(logging, str(level).upper(), logging.INFO)
             for logger_name in group_loggers.values():
-                logger = logging.getLogger(logger_name)
-                logger.setLevel(numeric_level)
-                logger.disabled = False
+                if isinstance(logger_name, str):
+                    logger = logging.getLogger(logger_name)
+                    logger.setLevel(numeric_level)
+                    logger.disabled = False
         else:
             for logger_name in group_loggers.values():
-                logger = logging.getLogger(logger_name)
-                logger.disabled = True
+                if isinstance(logger_name, str):
+                    logger = logging.getLogger(logger_name)
+                    logger.disabled = True
 
 def flush_logs():
     """Flush all log handlers to ensure logs are written to disk."""

@@ -4,10 +4,12 @@ This module implements an agent for searching and extracting information
 from FINRA's BrokerCheck system (https://brokercheck.finra.org/).
 """
 
+import json
 import logging
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Any, cast
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Tag
+from bs4.element import NavigableString
 from datetime import datetime
 
 class FinraFirmBrokerCheckAgent:
@@ -36,7 +38,7 @@ class FinraFirmBrokerCheckAgent:
             'Accept-Language': 'en-US,en;q=0.5'
         })
 
-    def search_firm(self, firm_name: str) -> List[Dict]:
+    def search_firm(self, firm_name: str) -> List[Dict[str, str]]:
         """Search for a firm in FINRA's BrokerCheck system.
 
         Args:
@@ -65,18 +67,37 @@ class FinraFirmBrokerCheckAgent:
 
             # Parse the response
             soup = BeautifulSoup(response.text, 'html.parser')
-            results = []
+            results: List[Dict[str, str]] = []
 
             # Extract firm information from the search results
             # Note: This is a placeholder implementation. The actual parsing logic
             # would need to be updated based on the actual HTML structure of the site
-            for firm in soup.find_all('div', class_='firm-result'):
-                firm_info = {
-                    'firm_name': firm.find('h3', class_='firm-name').text.strip(),
-                    'crd_number': firm.find('span', class_='crd-number').text.strip(),
-                    'firm_url': self.BASE_URL + firm.find('a')['href']
-                }
-                results.append(firm_info)
+            for firm_elem in soup.find_all('div', {'class': 'firm-result'}):
+                # Cast to Tag since we know find_all returns Tags
+                firm = cast(Tag, firm_elem)
+                
+                # Find required elements
+                name_elem = firm.find('h3', {'class': 'firm-name'})
+                crd_elem = firm.find('span', {'class': 'crd-number'})
+                link_elem = firm.find('a')
+                
+                # Check if all elements exist and are Tags
+                if all(isinstance(elem, Tag) for elem in [name_elem, crd_elem, link_elem] if elem is not None):
+                    # Safe to cast since we checked they're not None
+                    name_elem = cast(Tag, name_elem)
+                    crd_elem = cast(Tag, crd_elem)
+                    link_elem = cast(Tag, link_elem)
+                    
+                    # Get the href attribute safely
+                    href = link_elem.get('href', '')
+                    
+                    if href:
+                        firm_info = {
+                            'firm_name': name_elem.get_text(strip=True),
+                            'crd_number': crd_elem.get_text(strip=True),
+                            'firm_url': f"{self.BASE_URL}{href}"
+                        }
+                        results.append(firm_info)
 
             self.logger.info(f"Found {len(results)} results for firm: {firm_name}")
             return results
@@ -85,7 +106,7 @@ class FinraFirmBrokerCheckAgent:
             self.logger.error(f"Error searching for firm {firm_name}: {str(e)}")
             raise
 
-    def get_firm_details(self, firm_url: str) -> Dict:
+    def get_firm_details(self, firm_url: str) -> Dict[str, Any]:
         """Get detailed information about a specific firm.
 
         Args:
@@ -107,7 +128,7 @@ class FinraFirmBrokerCheckAgent:
             # Extract detailed firm information
             # Note: This is a placeholder implementation. The actual parsing logic
             # would need to be updated based on the actual HTML structure of the site
-            details = {
+            details: Dict[str, Any] = {
                 'name': '',
                 'crd_number': '',
                 'sec_number': '',
@@ -126,7 +147,7 @@ class FinraFirmBrokerCheckAgent:
             self.logger.error(f"Error getting firm details from {firm_url}: {str(e)}")
             raise
 
-    def save_results(self, results: Dict, output_path: str) -> None:
+    def save_results(self, results: Dict[str, Any], output_path: str) -> None:
         """Save the search results to a file.
 
         Args:
