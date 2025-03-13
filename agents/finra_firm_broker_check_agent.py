@@ -341,7 +341,7 @@ class FinraFirmBrokerCheckAgent:
 def run_cli():
     """Run the CLI menu system for testing the FINRA firm broker check agent."""
     # Initialize logging with the proper configuration
-    loggers = setup_logging(debug=False)
+    loggers = setup_logging()  # Remove debug=False to use default level
     logger = loggers.get('finra_brokercheck', logging.getLogger(__name__))
     
     agent = FinraFirmBrokerCheckAgent(logger=logger)
