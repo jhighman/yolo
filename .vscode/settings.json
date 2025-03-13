@@ -1,0 +1,8 @@
+{
+    "python.defaultInterpreterPath": "/Users/cto/myvenv/bin/python",
+    "python.analysis.extraPaths": ["/Users/cto/myvenv/lib/python3.*/site-packages"],
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.autoImportCompletions": true,
+    "python.linting.enabled": true,
+    "python.formatting.provider": "black"
+}
