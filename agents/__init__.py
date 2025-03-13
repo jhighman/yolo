@@ -5,5 +5,9 @@ and extract information from different URL-based resources.
 """
 
 from .finra_firm_broker_check_agent import FinraFirmBrokerCheckAgent
+from .sec_firm_iapd_agent import SECFirmIAPDAgent
 
-__all__ = ['FinraFirmBrokerCheckAgent']
+__all__ = [
+    'FinraFirmBrokerCheckAgent',
+    'SECFirmIAPDAgent'
+]

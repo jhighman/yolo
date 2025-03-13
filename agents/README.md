@@ -10,6 +10,7 @@ An agent for searching and extracting information from FINRA's BrokerCheck syste
 
 #### Features:
 - Search for firms by name
+- Search for firms by CRD number
 - Retrieve detailed firm information
 - Save search results to JSON files
 
@@ -24,7 +25,38 @@ agent = FinraFirmBrokerCheckAgent()
 results = agent.search_firm("Example Firm Name")
 
 # Get detailed information for a specific firm
-firm_details = agent.get_firm_details(results[0]['firm_url'])
+firm_details = agent.get_firm_details(results[0]['crd_number'])
+
+# Save the results
+agent.save_results(firm_details, 'output/')
+```
+
+### SECFirmIAPDAgent
+
+An agent for searching and extracting information from SEC's Investment Adviser Public Disclosure (IAPD) system (https://adviserinfo.sec.gov/).
+
+#### Features:
+- Search for investment adviser firms by name
+- Search for firms by CRD number
+- Retrieve detailed firm information
+- Save search results to JSON files
+- Comprehensive logging with debug information
+
+#### Usage Example:
+```python
+from agents import SECFirmIAPDAgent
+
+# Initialize the agent
+agent = SECFirmIAPDAgent()
+
+# Search for a firm by name
+results = agent.search_firm("Example Firm Name")
+
+# Search for a firm by CRD number
+results = agent.search_firm_by_crd("123456")
+
+# Get detailed information for a specific firm
+firm_details = agent.get_firm_details(results[0]['crd_number'])
 
 # Save the results
 agent.save_results(firm_details, 'output/')
