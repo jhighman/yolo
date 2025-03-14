@@ -446,13 +446,17 @@ class FirmMarshaller:
             result: Raw SEC search result
             
         Returns:
-            Normalized firm data
+            Normalized firm data with additional SEC-specific fields
         """
         return {
             'firm_name': result.get('org_name'),
             'crd_number': result.get('org_crd'),
-            'sec_number': result.get('sec_number'),
+            'sec_number': result.get('firm_ia_full_sec_number'),
             'source': 'SEC',
+            'other_names': result.get('firm_other_names', []),
+            'registration_scope': result.get('firm_ia_scope'),
+            'has_disclosures': result.get('firm_ia_disclosure_fl') == 'Y',
+            'branch_count': result.get('firm_branches_count'),
             'raw_data': result
         }
         
@@ -484,14 +488,18 @@ class FirmMarshaller:
             details: Raw SEC firm details
             
         Returns:
-            Normalized firm details
+            Normalized firm details with additional SEC-specific fields
         """
         return {
             'firm_name': details.get('org_name'),
             'crd_number': details.get('org_crd'),
-            'sec_number': details.get('sec_number'),
+            'sec_number': details.get('firm_ia_full_sec_number'),
             'source': 'SEC',
             'registration_status': details.get('registration_status'),
+            'registration_scope': details.get('firm_ia_scope'),
+            'has_disclosures': details.get('firm_ia_disclosure_fl') == 'Y',
+            'branch_count': details.get('firm_branches_count'),
+            'other_names': details.get('firm_other_names', []),
             'addresses': details.get('addresses', []),
             'disclosures': details.get('disclosures', []),
             'raw_data': details

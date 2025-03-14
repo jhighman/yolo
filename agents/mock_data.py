@@ -25,9 +25,18 @@ MOCK_FIRMS = {
         "sec": {
             "org_name": "Baker Avenue Asset Management LP",
             "org_crd": "131940",
-            "sec_number": "801-69103",
+            "firm_ia_sec_number": "69103",
+            "firm_ia_full_sec_number": "801-69103",
+            "firm_other_names": [
+                "BAKER AVENUE ASSET MANAGEMENT, LP",
+                "BAKERAVENUE WEALTH MANAGEMENT",
+                "BAKERAVENUE"
+            ],
             "firm_type": "Investment Adviser",
             "registration_status": "ACTIVE",
+            "firm_ia_scope": "ACTIVE",
+            "firm_ia_disclosure_fl": "N",
+            "firm_branches_count": 1,
             "addresses": [
                 {
                     "address_type": "MAIN OFFICE",
@@ -69,7 +78,7 @@ def get_mock_finra_firm_by_crd(crd_number: str) -> dict:
             return {
                 "org_name": firm_data["finra"]["org_name"],
                 "org_source_id": firm_data["finra"]["org_source_id"],
-                "registration_status": firm_data["finra"]["registration_status"]
+                "registration_status": firm_data["registration_status"]
             }
     return {}
 
@@ -80,9 +89,14 @@ def get_mock_sec_search_results(firm_name: str) -> list:
         return [{
             "org_name": firm_data["org_name"],
             "org_crd": firm_data["org_crd"],
-            "sec_number": firm_data["sec_number"],
+            "firm_ia_sec_number": firm_data["firm_ia_sec_number"],
+            "firm_ia_full_sec_number": firm_data["firm_ia_full_sec_number"],
+            "firm_other_names": firm_data["firm_other_names"],
             "firm_type": firm_data["firm_type"],
-            "registration_status": firm_data["registration_status"]
+            "registration_status": firm_data["registration_status"],
+            "firm_ia_scope": firm_data["firm_ia_scope"],
+            "firm_ia_disclosure_fl": firm_data["firm_ia_disclosure_fl"],
+            "firm_branches_count": firm_data["firm_branches_count"]
         }]
     return []
 
@@ -100,8 +114,13 @@ def get_mock_sec_firm_by_crd(crd_number: str) -> dict:
             return {
                 "org_name": firm_data["sec"]["org_name"],
                 "org_crd": firm_data["sec"]["org_crd"],
-                "sec_number": firm_data["sec"]["sec_number"],
-                "firm_type": firm_data["firm_type"],
-                "registration_status": firm_data["registration_status"]
+                "firm_ia_sec_number": firm_data["sec"]["firm_ia_sec_number"],
+                "firm_ia_full_sec_number": firm_data["sec"]["firm_ia_full_sec_number"],
+                "firm_other_names": firm_data["sec"]["firm_other_names"],
+                "firm_type": firm_data["sec"]["firm_type"],
+                "registration_status": firm_data["sec"]["registration_status"],
+                "firm_ia_scope": firm_data["sec"]["firm_ia_scope"],
+                "firm_ia_disclosure_fl": firm_data["sec"]["firm_ia_disclosure_fl"],
+                "firm_branches_count": firm_data["sec"]["firm_branches_count"]
             }
     return {} 
