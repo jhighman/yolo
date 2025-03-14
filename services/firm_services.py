@@ -36,11 +36,12 @@ class FirmServicesFacade:
         self.firm_marshaller = FirmMarshaller()
         logger.debug("FirmServicesFacade initialized")
 
-    def search_firm(self, firm_name: str) -> List[Dict[str, Any]]:
+    def search_firm(self, subject_id: str, firm_name: str) -> List[Dict[str, Any]]:
         """
         Search for a firm across both FINRA and SEC databases.
         
         Args:
+            subject_id: The ID of the subject/client making the request
             firm_name: Name of the firm to search for
             
         Returns:
@@ -52,7 +53,7 @@ class FirmServicesFacade:
         
         # Search FINRA
         try:
-            finra_results = fetch_finra_firm_search(firm_id, {"firm_name": firm_name})
+            finra_results = fetch_finra_firm_search(subject_id, firm_id, {"firm_name": firm_name})
             if isinstance(finra_results, list):
                 logger.debug(f"Found {len(finra_results)} FINRA results for {firm_name}")
                 for result in finra_results:
@@ -64,7 +65,7 @@ class FirmServicesFacade:
             
         # Search SEC
         try:
-            sec_results = fetch_sec_firm_search(firm_id, {"firm_name": firm_name})
+            sec_results = fetch_sec_firm_search(subject_id, firm_id, {"firm_name": firm_name})
             if isinstance(sec_results, list):
                 logger.debug(f"Found {len(sec_results)} SEC results for {firm_name}")
                 for result in sec_results:
@@ -76,11 +77,12 @@ class FirmServicesFacade:
             
         return results
 
-    def get_firm_details(self, crd_number: str) -> Optional[Dict[str, Any]]:
+    def get_firm_details(self, subject_id: str, crd_number: str) -> Optional[Dict[str, Any]]:
         """
         Get detailed firm information from both FINRA and SEC using CRD number.
         
         Args:
+            subject_id: The ID of the subject/client making the request
             crd_number: The firm's CRD number
             
         Returns:
@@ -91,7 +93,7 @@ class FirmServicesFacade:
         
         # Try FINRA first
         try:
-            finra_details = fetch_finra_firm_details(firm_id, {"crd_number": crd_number})
+            finra_details = fetch_finra_firm_details(subject_id, firm_id, {"crd_number": crd_number})
             if isinstance(finra_details, dict):
                 logger.debug(f"Found FINRA details for CRD {crd_number}")
                 return self.firm_marshaller.normalize_finra_details(finra_details)
@@ -100,7 +102,7 @@ class FirmServicesFacade:
             
         # If FINRA fails, try SEC
         try:
-            sec_details = fetch_sec_firm_details(firm_id, {"crd_number": crd_number})
+            sec_details = fetch_sec_firm_details(subject_id, firm_id, {"crd_number": crd_number})
             if isinstance(sec_details, dict):
                 logger.debug(f"Found SEC details for CRD {crd_number}")
                 return self.firm_marshaller.normalize_sec_details(sec_details)
@@ -109,11 +111,12 @@ class FirmServicesFacade:
             
         return None
 
-    def search_firm_by_crd(self, crd_number: str) -> Optional[Dict[str, Any]]:
+    def search_firm_by_crd(self, subject_id: str, crd_number: str) -> Optional[Dict[str, Any]]:
         """
         Search for a firm by CRD number across both FINRA and SEC databases.
         
         Args:
+            subject_id: The ID of the subject/client making the request
             crd_number: The firm's CRD number
             
         Returns:
@@ -124,7 +127,7 @@ class FirmServicesFacade:
         
         # Try FINRA first
         try:
-            finra_result = fetch_finra_firm_by_crd(firm_id, {"crd_number": crd_number})
+            finra_result = fetch_finra_firm_by_crd(subject_id, firm_id, {"crd_number": crd_number})
             if isinstance(finra_result, dict):
                 logger.debug(f"Found FINRA result for CRD {crd_number}")
                 return self.firm_marshaller.normalize_finra_result(finra_result)
@@ -133,7 +136,7 @@ class FirmServicesFacade:
             
         # If FINRA fails, try SEC
         try:
-            sec_result = fetch_sec_firm_by_crd(firm_id, {"crd_number": crd_number})
+            sec_result = fetch_sec_firm_by_crd(subject_id, firm_id, {"crd_number": crd_number})
             if isinstance(sec_result, dict):
                 logger.debug(f"Found SEC result for CRD {crd_number}")
                 return self.firm_marshaller.normalize_sec_result(sec_result)
@@ -150,46 +153,6 @@ def print_results(results: Union[Dict[str, Any], List[Dict[str, Any]], None], in
         print("\nResults:")
         print(json.dumps(results, indent=indent))
 
-def interactive_menu() -> None:
-    """Run an interactive menu for testing firm services."""
-    facade = FirmServicesFacade()
-    
-    while True:
-        print("\n=== Firm Services Testing Menu ===")
-        print("1. Search firm by name")
-        print("2. Get firm details by CRD")
-        print("3. Search firm by CRD")
-        print("4. Exit")
-        
-        choice = input("\nEnter your choice (1-4): ").strip()
-        
-        if choice == "1":
-            firm_name = input("Enter firm name to search: ").strip()
-            if firm_name:
-                results = facade.search_firm(firm_name)
-                print_results(results)
-        
-        elif choice == "2":
-            crd_number = input("Enter CRD number: ").strip()
-            if crd_number:
-                results = facade.get_firm_details(crd_number)
-                print_results(results)
-        
-        elif choice == "3":
-            crd_number = input("Enter CRD number: ").strip()
-            if crd_number:
-                results = facade.search_firm_by_crd(crd_number)
-                print_results(results)
-        
-        elif choice == "4":
-            print("\nExiting...")
-            break
-        
-        else:
-            print("\nInvalid choice. Please try again.")
-        
-        input("\nPress Enter to continue...")
-
 def parse_args() -> argparse.Namespace:
     """Parse command line arguments."""
     parser = argparse.ArgumentParser(
@@ -200,6 +163,12 @@ def parse_args() -> argparse.Namespace:
         "--interactive",
         action="store_true",
         help="Run in interactive menu mode"
+    )
+    
+    parser.add_argument(
+        "--subject-id",
+        required=True,
+        help="ID of the subject/client making the request"
     )
     
     subparsers = parser.add_subparsers(dest="command", help="Available commands")
@@ -236,6 +205,46 @@ def parse_args() -> argparse.Namespace:
     
     return parser.parse_args()
 
+def interactive_menu(subject_id: str) -> None:
+    """Run an interactive menu for testing firm services."""
+    facade = FirmServicesFacade()
+    
+    while True:
+        print("\n=== Firm Services Testing Menu ===")
+        print("1. Search firm by name")
+        print("2. Get firm details by CRD")
+        print("3. Search firm by CRD")
+        print("4. Exit")
+        
+        choice = input("\nEnter your choice (1-4): ").strip()
+        
+        if choice == "1":
+            firm_name = input("Enter firm name to search: ").strip()
+            if firm_name:
+                results = facade.search_firm(subject_id, firm_name)
+                print_results(results)
+        
+        elif choice == "2":
+            crd_number = input("Enter CRD number: ").strip()
+            if crd_number:
+                results = facade.get_firm_details(subject_id, crd_number)
+                print_results(results)
+        
+        elif choice == "3":
+            crd_number = input("Enter CRD number: ").strip()
+            if crd_number:
+                results = facade.search_firm_by_crd(subject_id, crd_number)
+                print_results(results)
+        
+        elif choice == "4":
+            print("\nExiting...")
+            break
+        
+        else:
+            print("\nInvalid choice. Please try again.")
+        
+        input("\nPress Enter to continue...")
+
 def main():
     """Main entry point for the CLI."""
     # Configure logging
@@ -248,20 +257,20 @@ def main():
     facade = FirmServicesFacade()
     
     if args.interactive:
-        interactive_menu()
+        interactive_menu(args.subject_id)
         return
     
     try:
         if args.command == "search":
-            results = facade.search_firm(args.firm_name)
+            results = facade.search_firm(args.subject_id, args.firm_name)
             print_results(results)
         
         elif args.command == "details":
-            results = facade.get_firm_details(args.crd_number)
+            results = facade.get_firm_details(args.subject_id, args.crd_number)
             print_results(results)
         
         elif args.command == "search-crd":
-            results = facade.search_firm_by_crd(args.crd_number)
+            results = facade.search_firm_by_crd(args.subject_id, args.crd_number)
             print_results(results)
         
         else:

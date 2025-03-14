@@ -63,8 +63,20 @@ def is_cache_valid(cached_date: str) -> bool:
         logger.warning(f"Invalid date format in cache manifest: {cached_date}")
         return False
 
-def build_cache_path(firm_id: str, agent_name: str, service: str) -> Path:
-    return CACHE_FOLDER / firm_id / agent_name / service
+def build_cache_path(subject_id: str, firm_id: str, agent_name: str, service: str) -> Path:
+    """
+    Build the cache path for a given request.
+    
+    Args:
+        subject_id: The ID of the subject/client making the request
+        firm_id: The ID of the firm being queried
+        agent_name: The name of the agent service
+        service: The service being called
+        
+    Returns:
+        Path object representing the cache location
+    """
+    return CACHE_FOLDER / subject_id / firm_id / agent_name / service
 
 def build_file_name(agent_name: str, firm_id: str, service: str, date: str, ordinal: Optional[int] = None) -> str:
     base = f"{agent_name}_{firm_id}_{service}_{date}"
@@ -175,13 +187,21 @@ def fetch_agent_data(agent_name: str, service: str, params: Dict[str, Any]) -> t
         return [], None
 
 def check_cache_or_fetch(
-    agent_name: str, service: str, firm_id: str, params: Dict[str, Any]
+    subject_id: str,
+    agent_name: str, 
+    service: str, 
+    firm_id: str, 
+    params: Dict[str, Any]
 ) -> Union[Dict[str, Any], List[Dict[str, Any]]]:
     if not firm_id or firm_id.strip() == "":
         logger.error(f"Invalid firm_id: '{firm_id}' for agent {agent_name}/{service}")
         raise ValueError(f"firm_id must be a non-empty string, got '{firm_id}'")
     
-    cache_path = build_cache_path(firm_id, agent_name, service)
+    if not subject_id or subject_id.strip() == "":
+        logger.error(f"Invalid subject_id: '{subject_id}' for agent {agent_name}/{service}")
+        raise ValueError(f"subject_id must be a non-empty string, got '{subject_id}'")
+    
+    cache_path = build_cache_path(subject_id, firm_id, agent_name, service)
     date = get_current_date()
     cache_path.mkdir(parents=True, exist_ok=True)
 
@@ -209,8 +229,8 @@ def check_cache_or_fetch(
     return results[0] if len(results) == 1 and not is_multiple else results
 
 # Higher-order function to create service-specific fetchers
-def create_fetcher(agent_name: str, service: str) -> Callable[[str, Dict[str, Any]], Union[Optional[Dict], List[Dict]]]:
-    return lambda firm_id, params: check_cache_or_fetch(agent_name, service, firm_id, params)
+def create_fetcher(agent_name: str, service: str) -> Callable[[str, str, Dict[str, Any]], Union[Optional[Dict], List[Dict]]]:
+    return lambda subject_id, firm_id, params: check_cache_or_fetch(subject_id, agent_name, service, firm_id, params)
 
 # Fetcher functions for all agent services
 fetch_finra_firm_search = create_fetcher("FINRA_FirmBrokerCheck_Agent", "search_firm")
@@ -227,10 +247,10 @@ def main():
     firm_id = "FIRM001"
     
     print(f"\nSearching for firm: {firm_name}")
-    finra_results = fetch_finra_firm_search(firm_id, {"firm_name": firm_name})
+    finra_results = fetch_finra_firm_search("Goldman Sachs", firm_id, {"firm_name": firm_name})
     print("\nFINRA Search Results:", json.dumps(finra_results, indent=2))
     
-    sec_results = fetch_sec_firm_search(firm_id, {"firm_name": firm_name})
+    sec_results = fetch_sec_firm_search("Goldman Sachs", firm_id, {"firm_name": firm_name})
     print("\nSEC Search Results:", json.dumps(sec_results, indent=2))
     
     # Example firm details lookup
@@ -238,7 +258,7 @@ def main():
         crd_number = finra_results[0].get("crd_number")
         if crd_number:
             print(f"\nGetting details for CRD: {crd_number}")
-            finra_details = fetch_finra_firm_details(firm_id, {"crd_number": crd_number})
+            finra_details = fetch_finra_firm_details("Goldman Sachs", firm_id, {"crd_number": crd_number})
             print("\nFINRA Firm Details:", json.dumps(finra_details, indent=2))
 
 class FirmMarshaller:

@@ -13,6 +13,7 @@ class TestFirmServicesFacade(unittest.TestCase):
     def setUp(self):
         """Set up test fixtures before each test method."""
         self.facade = FirmServicesFacade()
+        self.subject_id = "TEST_SUBJECT_001"
         
         # Sample test data
         self.sample_finra_result = {
@@ -75,7 +76,7 @@ class TestFirmServicesFacade(unittest.TestCase):
         mock_sec_search.return_value = [self.sample_sec_result]
         
         # Execute search
-        results = self.facade.search_firm("Test Firm")
+        results = self.facade.search_firm(self.subject_id, "Test Firm")
         
         # Verify results
         self.assertEqual(len(results), 2)
@@ -83,8 +84,8 @@ class TestFirmServicesFacade(unittest.TestCase):
         self.assertIn(self.normalized_sec_search_result, results)
         
         # Verify mocks called correctly
-        mock_finra_search.assert_called_once_with("search_Test Firm", {"firm_name": "Test Firm"})
-        mock_sec_search.assert_called_once_with("search_Test Firm", {"firm_name": "Test Firm"})
+        mock_finra_search.assert_called_once_with(self.subject_id, "search_Test Firm", {"firm_name": "Test Firm"})
+        mock_sec_search.assert_called_once_with(self.subject_id, "search_Test Firm", {"firm_name": "Test Firm"})
 
     @patch('services.firm_services.fetch_finra_firm_search')
     @patch('services.firm_services.fetch_sec_firm_search')
@@ -95,7 +96,7 @@ class TestFirmServicesFacade(unittest.TestCase):
         mock_sec_search.return_value = [self.sample_sec_result]
         
         # Execute search
-        results = self.facade.search_firm("Test Firm")
+        results = self.facade.search_firm(self.subject_id, "Test Firm")
         
         # Verify results - should only have SEC result
         self.assertEqual(len(results), 1)
@@ -109,13 +110,13 @@ class TestFirmServicesFacade(unittest.TestCase):
         mock_finra_details.return_value = self.sample_finra_result
         
         # Execute search
-        result = self.facade.get_firm_details("12345")
+        result = self.facade.get_firm_details(self.subject_id, "12345")
         
         # Verify result
         self.assertEqual(result, self.normalized_finra_details)
         
         # Verify only FINRA was called (SEC shouldn't be called if FINRA succeeds)
-        mock_finra_details.assert_called_once_with("details_12345", {"crd_number": "12345"})
+        mock_finra_details.assert_called_once_with(self.subject_id, "details_12345", {"crd_number": "12345"})
         mock_sec_details.assert_not_called()
 
     @patch('services.firm_services.fetch_finra_firm_details')
@@ -127,7 +128,7 @@ class TestFirmServicesFacade(unittest.TestCase):
         mock_sec_details.return_value = self.sample_sec_result
         
         # Execute search
-        result = self.facade.get_firm_details("12345")
+        result = self.facade.get_firm_details(self.subject_id, "12345")
         
         # Verify result
         self.assertEqual(result, self.normalized_sec_details)
@@ -144,13 +145,13 @@ class TestFirmServicesFacade(unittest.TestCase):
         mock_finra_search.return_value = self.sample_finra_result
         
         # Execute search
-        result = self.facade.search_firm_by_crd("12345")
+        result = self.facade.search_firm_by_crd(self.subject_id, "12345")
         
         # Verify result
         self.assertEqual(result, self.normalized_finra_search_result)
         
         # Verify only FINRA was called
-        mock_finra_search.assert_called_once_with("search_crd_12345", {"crd_number": "12345"})
+        mock_finra_search.assert_called_once_with(self.subject_id, "search_crd_12345", {"crd_number": "12345"})
         mock_sec_search.assert_not_called()
 
     @patch('services.firm_services.fetch_finra_firm_by_crd')
@@ -162,7 +163,7 @@ class TestFirmServicesFacade(unittest.TestCase):
         mock_sec_search.side_effect = Exception("SEC API Error")
         
         # Execute search
-        result = self.facade.search_firm_by_crd("12345")
+        result = self.facade.search_firm_by_crd(self.subject_id, "12345")
         
         # Verify result is None when both services fail
         self.assertIsNone(result)
@@ -178,19 +179,19 @@ class TestFirmServicesFacade(unittest.TestCase):
                 # Test with None response
                 mock_finra.return_value = None
                 mock_sec.return_value = None
-                results = self.facade.search_firm("Test Firm")
+                results = self.facade.search_firm(self.subject_id, "Test Firm")
                 self.assertEqual(len(results), 0)
                 
                 # Test with string response instead of list
                 mock_finra.return_value = "Invalid Response"
                 mock_sec.return_value = "Invalid Response"
-                results = self.facade.search_firm("Test Firm")
+                results = self.facade.search_firm(self.subject_id, "Test Firm")
                 self.assertEqual(len(results), 0)
                 
                 # Test with list containing non-dict items
                 mock_finra.return_value = ["not a dict", 123]
                 mock_sec.return_value = ["not a dict", 123]
-                results = self.facade.search_firm("Test Firm")
+                results = self.facade.search_firm(self.subject_id, "Test Firm")
                 self.assertEqual(len(results), 0)
 
 class TestFirmServicesCLI(unittest.TestCase):
@@ -199,6 +200,7 @@ class TestFirmServicesCLI(unittest.TestCase):
     def setUp(self):
         """Set up test fixtures before each test method."""
         self.facade = FirmServicesFacade()
+        self.subject_id = "TEST_SUBJECT_001"
         
         # Sample test data
         self.sample_search_results = [
@@ -235,6 +237,7 @@ class TestFirmServicesCLI(unittest.TestCase):
         mock_args.return_value = argparse.Namespace(
             command='search',
             firm_name='Test Firm',
+            subject_id=self.subject_id,
             interactive=False
         )
         
@@ -258,7 +261,7 @@ class TestFirmServicesCLI(unittest.TestCase):
             self.assertIn("FINRA", output)
             
             # Verify search was called with correct parameters
-            mock_search.assert_called_once_with("Test Firm")
+            mock_search.assert_called_once_with(self.subject_id, "Test Firm")
         finally:
             sys.stdout = sys.__stdout__
 
@@ -270,6 +273,7 @@ class TestFirmServicesCLI(unittest.TestCase):
         mock_args.return_value = argparse.Namespace(
             command='details',
             crd_number='12345',
+            subject_id=self.subject_id,
             interactive=False
         )
         
@@ -293,7 +297,7 @@ class TestFirmServicesCLI(unittest.TestCase):
             self.assertIn("APPROVED", output)
             
             # Verify details was called with correct parameters
-            mock_details.assert_called_once_with("12345")
+            mock_details.assert_called_once_with(self.subject_id, "12345")
         finally:
             sys.stdout = sys.__stdout__
 
@@ -305,6 +309,7 @@ class TestFirmServicesCLI(unittest.TestCase):
         mock_args.return_value = argparse.Namespace(
             command='search-crd',
             crd_number='12345',
+            subject_id=self.subject_id,
             interactive=False
         )
         
@@ -328,7 +333,7 @@ class TestFirmServicesCLI(unittest.TestCase):
             self.assertIn("FINRA", output)
             
             # Verify search_crd was called with correct parameters
-            mock_search_crd.assert_called_once_with("12345")
+            mock_search_crd.assert_called_once_with(self.subject_id, "12345")
         finally:
             sys.stdout = sys.__stdout__
 
@@ -350,7 +355,7 @@ class TestFirmServicesCLI(unittest.TestCase):
         
         try:
             from services.firm_services import interactive_menu
-            interactive_menu()
+            interactive_menu(self.subject_id)
             
             # Verify the output contains expected data
             output = captured_output.getvalue()
@@ -359,7 +364,7 @@ class TestFirmServicesCLI(unittest.TestCase):
             self.assertIn("FINRA", output)
             
             # Verify search was called with correct parameters
-            mock_search.assert_called_once_with("Test Firm")
+            mock_search.assert_called_once_with(self.subject_id, "Test Firm")
         finally:
             sys.stdout = sys.__stdout__
 
@@ -381,7 +386,7 @@ class TestFirmServicesCLI(unittest.TestCase):
         
         try:
             from services.firm_services import interactive_menu
-            interactive_menu()
+            interactive_menu(self.subject_id)
             
             # Verify the output contains expected data
             output = captured_output.getvalue()
@@ -390,7 +395,7 @@ class TestFirmServicesCLI(unittest.TestCase):
             self.assertIn("APPROVED", output)
             
             # Verify details was called with correct parameters
-            mock_details.assert_called_once_with("12345")
+            mock_details.assert_called_once_with(self.subject_id, "12345")
         finally:
             sys.stdout = sys.__stdout__
 
@@ -412,7 +417,7 @@ class TestFirmServicesCLI(unittest.TestCase):
         
         try:
             from services.firm_services import interactive_menu
-            interactive_menu()
+            interactive_menu(self.subject_id)
             
             # Verify the output contains expected data
             output = captured_output.getvalue()
@@ -421,7 +426,7 @@ class TestFirmServicesCLI(unittest.TestCase):
             self.assertIn("FINRA", output)
             
             # Verify search_crd was called with correct parameters
-            mock_search_crd.assert_called_once_with("12345")
+            mock_search_crd.assert_called_once_with(self.subject_id, "12345")
         finally:
             sys.stdout = sys.__stdout__
 
@@ -439,7 +444,7 @@ class TestFirmServicesCLI(unittest.TestCase):
         
         try:
             from services.firm_services import interactive_menu
-            interactive_menu()
+            interactive_menu(self.subject_id)
             
             # Verify the output contains error message
             output = captured_output.getvalue()
@@ -461,7 +466,7 @@ class TestFirmServicesCLI(unittest.TestCase):
         
         try:
             from services.firm_services import interactive_menu
-            interactive_menu()
+            interactive_menu(self.subject_id)
             
             # Verify no results were displayed
             output = captured_output.getvalue()
@@ -477,6 +482,7 @@ class TestFirmServicesCLI(unittest.TestCase):
         mock_args.return_value = argparse.Namespace(
             command='search',
             firm_name='Nonexistent Firm',
+            subject_id=self.subject_id,
             interactive=False
         )
         
@@ -507,6 +513,7 @@ class TestFirmServicesCLI(unittest.TestCase):
         mock_args.return_value = argparse.Namespace(
             command='details',
             crd_number='99999',
+            subject_id=self.subject_id,
             interactive=False
         )
         
@@ -531,13 +538,14 @@ class TestFirmServicesCLI(unittest.TestCase):
 
     @patch('argparse.ArgumentParser.parse_args')
     @patch('services.firm_services.FirmServicesFacade.search_firm')
-    @patch('sys.exit')  # Add patch for sys.exit
+    @patch('sys.exit')
     def test_cli_search_service_error(self, mock_exit, mock_search, mock_args):
         """Test CLI search command when service throws an error."""
         # Setup mock arguments
         mock_args.return_value = argparse.Namespace(
             command='search',
             firm_name='Test Firm',
+            subject_id=self.subject_id,
             interactive=False
         )
         
@@ -582,7 +590,7 @@ class TestFirmServicesCLI(unittest.TestCase):
         
         try:
             from services.firm_services import interactive_menu
-            interactive_menu()
+            interactive_menu(self.subject_id)
             
             # Verify error output
             output = captured_output.getvalue()
@@ -604,7 +612,7 @@ class TestFirmServicesCLI(unittest.TestCase):
         
         try:
             from services.firm_services import interactive_menu
-            interactive_menu()
+            interactive_menu(self.subject_id)
             
             # Verify graceful exit message
             output = captured_output.getvalue()
@@ -626,7 +634,7 @@ class TestFirmServicesCLI(unittest.TestCase):
         
         try:
             from services.firm_services import interactive_menu
-            interactive_menu()
+            interactive_menu(self.subject_id)
             
             # Verify multiple error messages
             output = captured_output.getvalue()
