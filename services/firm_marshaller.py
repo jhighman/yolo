@@ -450,7 +450,7 @@ class FirmMarshaller:
         """
         return {
             'firm_name': result.get('org_name'),
-            'crd_number': result.get('org_pk'),
+            'crd_number': result.get('org_crd'),
             'sec_number': result.get('sec_number'),
             'source': 'SEC',
             'raw_data': result
@@ -487,8 +487,8 @@ class FirmMarshaller:
             Normalized firm details
         """
         return {
-            'firm_name': details.get('firm_name'),
-            'crd_number': details.get('crd_number'),
+            'firm_name': details.get('org_name'),
+            'crd_number': details.get('org_crd'),
             'sec_number': details.get('sec_number'),
             'source': 'SEC',
             'registration_status': details.get('registration_status'),
