@@ -24,7 +24,7 @@ MOCK_FIRMS = {
         },
         "sec": {
             "org_name": "Baker Avenue Asset Management LP",
-            "org_pk": "131940",
+            "org_crd": "131940",
             "sec_number": "801-69103",
             "firm_type": "Investment Adviser",
             "registration_status": "ACTIVE",
@@ -79,7 +79,7 @@ def get_mock_sec_search_results(firm_name: str) -> list:
         firm_data = MOCK_FIRMS[firm_name]["sec"]
         return [{
             "org_name": firm_data["org_name"],
-            "org_pk": firm_data["org_pk"],
+            "org_crd": firm_data["org_crd"],
             "sec_number": firm_data["sec_number"],
             "firm_type": firm_data["firm_type"],
             "registration_status": firm_data["registration_status"]
@@ -89,17 +89,17 @@ def get_mock_sec_search_results(firm_name: str) -> list:
 def get_mock_sec_firm_details(crd_number: str) -> dict:
     """Get mock SEC firm details for a CRD number."""
     for firm_data in MOCK_FIRMS.values():
-        if firm_data["sec"]["org_pk"] == crd_number:
+        if firm_data["sec"]["org_crd"] == crd_number:
             return firm_data["sec"]
     return {}
 
 def get_mock_sec_firm_by_crd(crd_number: str) -> dict:
     """Get mock SEC firm search results by CRD number."""
     for firm_data in MOCK_FIRMS.values():
-        if firm_data["sec"]["org_pk"] == crd_number:
+        if firm_data["sec"]["org_crd"] == crd_number:
             return {
                 "org_name": firm_data["sec"]["org_name"],
-                "org_pk": firm_data["sec"]["org_pk"],
+                "org_crd": firm_data["sec"]["org_crd"],
                 "sec_number": firm_data["sec"]["sec_number"],
                 "firm_type": firm_data["firm_type"],
                 "registration_status": firm_data["registration_status"]
