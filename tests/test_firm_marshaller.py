@@ -97,12 +97,13 @@ class TestFirmMarshaller(unittest.TestCase):
 
     def test_build_cache_path(self):
         """Test building cache path."""
+        subject_id = "SUBJECT123"
         firm_id = "FIRM123"
         agent_name = "TEST_Agent"
         service = "search_firm"
         
-        expected_path = Path(self.temp_dir) / firm_id / agent_name / service
-        actual_path = build_cache_path(firm_id, agent_name, service)
+        expected_path = Path(self.temp_dir) / subject_id / firm_id / agent_name / service
+        actual_path = build_cache_path(subject_id, firm_id, agent_name, service)
         
         self.assertEqual(expected_path, actual_path)
 
@@ -191,21 +192,22 @@ class TestFirmMarshaller(unittest.TestCase):
     def test_check_cache_or_fetch(self, mock_fetch):
         """Test cache checking and fetching logic."""
         mock_fetch.return_value = ([self.sample_firm_data], 0.1)
+        subject_id = "SUBJECT123"
         
         # Test with invalid firm_id
         with self.assertRaises(ValueError):
-            check_cache_or_fetch("TEST_Agent", "search_firm", "", {})
+            check_cache_or_fetch(subject_id, "TEST_Agent", "search_firm", "", {})
         
         # Test cache miss
         result = check_cache_or_fetch(
-            "TEST_Agent", "search_firm", "FIRM123",
+            subject_id, "TEST_Agent", "search_firm", "FIRM123",
             {"firm_name": "Test Firm"}
         )
         self.assertEqual(result, [self.sample_firm_data])
         
         # Test cache hit (run same query again)
         result = check_cache_or_fetch(
-            "TEST_Agent", "search_firm", "FIRM123",
+            subject_id, "TEST_Agent", "search_firm", "FIRM123",
             {"firm_name": "Test Firm"}
         )
         self.assertEqual(result, [self.sample_firm_data])
@@ -214,15 +216,16 @@ class TestFirmMarshaller(unittest.TestCase):
 
     def test_log_request(self):
         """Test request logging."""
+        subject_id = "SUBJECT123"
         firm_id = "FIRM123"
         agent_name = "TEST_Agent"
         service = "search_firm"
         status = "Cached"
         duration = 0.1
         
-        log_request(firm_id, agent_name, service, status, duration)
+        log_request(subject_id, firm_id, agent_name, service, status, duration)
         
-        log_path = Path(self.temp_dir) / firm_id / "request_log.txt"
+        log_path = Path(self.temp_dir) / subject_id / firm_id / "request_log.txt"
         self.assertTrue(log_path.exists())
         
         with log_path.open("r") as f:
@@ -236,25 +239,26 @@ class TestFirmMarshaller(unittest.TestCase):
     def test_fetcher_functions(self, mock_check_cache):
         """Test the high-level fetcher functions."""
         mock_check_cache.return_value = [self.sample_firm_data]
+        subject_id = "SUBJECT123"
         
         # Test FINRA fetchers
-        result = fetch_finra_firm_search("FIRM123", {"firm_name": "Test Firm"})
+        result = fetch_finra_firm_search(subject_id, "FIRM123", {"firm_name": "Test Firm"})
         self.assertEqual(result, [self.sample_firm_data])
         
-        result = fetch_finra_firm_by_crd("FIRM123", {"crd_number": "123456"})
+        result = fetch_finra_firm_by_crd(subject_id, "FIRM123", {"crd_number": "123456"})
         self.assertEqual(result, [self.sample_firm_data])
         
-        result = fetch_finra_firm_details("FIRM123", {"crd_number": "123456"})
+        result = fetch_finra_firm_details(subject_id, "FIRM123", {"crd_number": "123456"})
         self.assertEqual(result, [self.sample_firm_data])
         
         # Test SEC fetchers
-        result = fetch_sec_firm_search("FIRM123", {"firm_name": "Test Firm"})
+        result = fetch_sec_firm_search(subject_id, "FIRM123", {"firm_name": "Test Firm"})
         self.assertEqual(result, [self.sample_firm_data])
         
-        result = fetch_sec_firm_by_crd("FIRM123", {"crd_number": "123456"})
+        result = fetch_sec_firm_by_crd(subject_id, "FIRM123", {"crd_number": "123456"})
         self.assertEqual(result, [self.sample_firm_data])
         
-        result = fetch_sec_firm_details("FIRM123", {"crd_number": "123456"})
+        result = fetch_sec_firm_details(subject_id, "FIRM123", {"crd_number": "123456"})
         self.assertEqual(result, [self.sample_firm_data])
 
 if __name__ == '__main__':
