@@ -214,9 +214,11 @@ def interactive_menu(subject_id: str) -> None:
         print("1. Search firm by name")
         print("2. Get firm details by CRD")
         print("3. Search firm by CRD")
-        print("4. Exit")
+        print("4. Example: Search 'Baker Avenue Asset Management'")
+        print("5. Example: Search CRD '131940'")
+        print("6. Exit")
         
-        choice = input("\nEnter your choice (1-4): ").strip()
+        choice = input("\nEnter your choice (1-6): ").strip()
         
         if choice == "1":
             firm_name = input("Enter firm name to search: ").strip()
@@ -235,8 +237,18 @@ def interactive_menu(subject_id: str) -> None:
             if crd_number:
                 results = facade.search_firm_by_crd(subject_id, crd_number)
                 print_results(results)
-        
+                
         elif choice == "4":
+            print("\nSearching for: Baker Avenue Asset Management...")
+            results = facade.search_firm(subject_id, "Baker Avenue Asset Management")
+            print_results(results)
+            
+        elif choice == "5":
+            print("\nSearching for CRD: 131940...")
+            results = facade.search_firm_by_crd(subject_id, "131940")
+            print_results(results)
+        
+        elif choice == "6":
             print("\nExiting...")
             break
         
