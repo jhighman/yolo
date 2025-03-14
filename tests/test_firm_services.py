@@ -3,6 +3,7 @@
 import unittest
 from unittest.mock import patch, MagicMock
 from typing import Dict, Any, List
+import argparse
 
 from services.firm_services import FirmServicesFacade
 
@@ -191,6 +192,448 @@ class TestFirmServicesFacade(unittest.TestCase):
                 mock_sec.return_value = ["not a dict", 123]
                 results = self.facade.search_firm("Test Firm")
                 self.assertEqual(len(results), 0)
+
+class TestFirmServicesCLI(unittest.TestCase):
+    """Test cases for the FirmServices CLI."""
+
+    def setUp(self):
+        """Set up test fixtures before each test method."""
+        self.facade = FirmServicesFacade()
+        
+        # Sample test data
+        self.sample_search_results = [
+            {
+                "firm_name": "Test Firm FINRA",
+                "crd_number": "12345",
+                "source": "FINRA",
+                "raw_data": {
+                    "org_name": "Test Firm FINRA",
+                    "org_source_id": "12345"
+                }
+            }
+        ]
+        
+        self.sample_details = {
+            "firm_name": "Test Firm FINRA",
+            "crd_number": "12345",
+            "source": "FINRA",
+            "registration_status": "APPROVED",
+            "addresses": [],
+            "disclosures": [],
+            "raw_data": {
+                "org_name": "Test Firm FINRA",
+                "org_source_id": "12345",
+                "registration_status": "APPROVED"
+            }
+        }
+
+    @patch('argparse.ArgumentParser.parse_args')
+    @patch('services.firm_services.FirmServicesFacade.search_firm')
+    def test_cli_search_command(self, mock_search, mock_args):
+        """Test the CLI search command."""
+        # Setup mock arguments
+        mock_args.return_value = argparse.Namespace(
+            command='search',
+            firm_name='Test Firm',
+            interactive=False
+        )
+        
+        # Setup mock search results
+        mock_search.return_value = self.sample_search_results
+        
+        # Capture stdout to verify output
+        from io import StringIO
+        import sys
+        captured_output = StringIO()
+        sys.stdout = captured_output
+        
+        try:
+            from services.firm_services import main
+            main()
+            
+            # Verify the output contains expected data
+            output = captured_output.getvalue()
+            self.assertIn("Test Firm FINRA", output)
+            self.assertIn("12345", output)
+            self.assertIn("FINRA", output)
+            
+            # Verify search was called with correct parameters
+            mock_search.assert_called_once_with("Test Firm")
+        finally:
+            sys.stdout = sys.__stdout__
+
+    @patch('argparse.ArgumentParser.parse_args')
+    @patch('services.firm_services.FirmServicesFacade.get_firm_details')
+    def test_cli_details_command(self, mock_details, mock_args):
+        """Test the CLI details command."""
+        # Setup mock arguments
+        mock_args.return_value = argparse.Namespace(
+            command='details',
+            crd_number='12345',
+            interactive=False
+        )
+        
+        # Setup mock details results
+        mock_details.return_value = self.sample_details
+        
+        # Capture stdout to verify output
+        from io import StringIO
+        import sys
+        captured_output = StringIO()
+        sys.stdout = captured_output
+        
+        try:
+            from services.firm_services import main
+            main()
+            
+            # Verify the output contains expected data
+            output = captured_output.getvalue()
+            self.assertIn("Test Firm FINRA", output)
+            self.assertIn("12345", output)
+            self.assertIn("APPROVED", output)
+            
+            # Verify details was called with correct parameters
+            mock_details.assert_called_once_with("12345")
+        finally:
+            sys.stdout = sys.__stdout__
+
+    @patch('argparse.ArgumentParser.parse_args')
+    @patch('services.firm_services.FirmServicesFacade.search_firm_by_crd')
+    def test_cli_search_crd_command(self, mock_search_crd, mock_args):
+        """Test the CLI search-crd command."""
+        # Setup mock arguments
+        mock_args.return_value = argparse.Namespace(
+            command='search-crd',
+            crd_number='12345',
+            interactive=False
+        )
+        
+        # Setup mock search results
+        mock_search_crd.return_value = self.sample_search_results[0]
+        
+        # Capture stdout to verify output
+        from io import StringIO
+        import sys
+        captured_output = StringIO()
+        sys.stdout = captured_output
+        
+        try:
+            from services.firm_services import main
+            main()
+            
+            # Verify the output contains expected data
+            output = captured_output.getvalue()
+            self.assertIn("Test Firm FINRA", output)
+            self.assertIn("12345", output)
+            self.assertIn("FINRA", output)
+            
+            # Verify search_crd was called with correct parameters
+            mock_search_crd.assert_called_once_with("12345")
+        finally:
+            sys.stdout = sys.__stdout__
+
+    @patch('builtins.input')
+    @patch('services.firm_services.FirmServicesFacade.search_firm')
+    def test_interactive_search(self, mock_search, mock_input):
+        """Test the interactive search functionality."""
+        # Setup mock inputs (search firm, then exit)
+        mock_input.side_effect = ["1", "Test Firm", "", "4"]
+        
+        # Setup mock search results
+        mock_search.return_value = self.sample_search_results
+        
+        # Capture stdout to verify output
+        from io import StringIO
+        import sys
+        captured_output = StringIO()
+        sys.stdout = captured_output
+        
+        try:
+            from services.firm_services import interactive_menu
+            interactive_menu()
+            
+            # Verify the output contains expected data
+            output = captured_output.getvalue()
+            self.assertIn("Test Firm FINRA", output)
+            self.assertIn("12345", output)
+            self.assertIn("FINRA", output)
+            
+            # Verify search was called with correct parameters
+            mock_search.assert_called_once_with("Test Firm")
+        finally:
+            sys.stdout = sys.__stdout__
+
+    @patch('builtins.input')
+    @patch('services.firm_services.FirmServicesFacade.get_firm_details')
+    def test_interactive_details(self, mock_details, mock_input):
+        """Test the interactive get firm details functionality."""
+        # Setup mock inputs (get details, then exit)
+        mock_input.side_effect = ["2", "12345", "", "4"]
+        
+        # Setup mock details results
+        mock_details.return_value = self.sample_details
+        
+        # Capture stdout to verify output
+        from io import StringIO
+        import sys
+        captured_output = StringIO()
+        sys.stdout = captured_output
+        
+        try:
+            from services.firm_services import interactive_menu
+            interactive_menu()
+            
+            # Verify the output contains expected data
+            output = captured_output.getvalue()
+            self.assertIn("Test Firm FINRA", output)
+            self.assertIn("12345", output)
+            self.assertIn("APPROVED", output)
+            
+            # Verify details was called with correct parameters
+            mock_details.assert_called_once_with("12345")
+        finally:
+            sys.stdout = sys.__stdout__
+
+    @patch('builtins.input')
+    @patch('services.firm_services.FirmServicesFacade.search_firm_by_crd')
+    def test_interactive_search_crd(self, mock_search_crd, mock_input):
+        """Test the interactive search by CRD functionality."""
+        # Setup mock inputs (search by CRD, then exit)
+        mock_input.side_effect = ["3", "12345", "", "4"]
+        
+        # Setup mock search results
+        mock_search_crd.return_value = self.sample_search_results[0]
+        
+        # Capture stdout to verify output
+        from io import StringIO
+        import sys
+        captured_output = StringIO()
+        sys.stdout = captured_output
+        
+        try:
+            from services.firm_services import interactive_menu
+            interactive_menu()
+            
+            # Verify the output contains expected data
+            output = captured_output.getvalue()
+            self.assertIn("Test Firm FINRA", output)
+            self.assertIn("12345", output)
+            self.assertIn("FINRA", output)
+            
+            # Verify search_crd was called with correct parameters
+            mock_search_crd.assert_called_once_with("12345")
+        finally:
+            sys.stdout = sys.__stdout__
+
+    @patch('builtins.input')
+    def test_interactive_invalid_choice(self, mock_input):
+        """Test handling of invalid menu choices."""
+        # Setup mock inputs (invalid choice, then exit)
+        mock_input.side_effect = ["invalid", "", "4"]
+        
+        # Capture stdout to verify output
+        from io import StringIO
+        import sys
+        captured_output = StringIO()
+        sys.stdout = captured_output
+        
+        try:
+            from services.firm_services import interactive_menu
+            interactive_menu()
+            
+            # Verify the output contains error message
+            output = captured_output.getvalue()
+            self.assertIn("Invalid choice", output)
+        finally:
+            sys.stdout = sys.__stdout__
+
+    @patch('builtins.input')
+    def test_interactive_empty_input(self, mock_input):
+        """Test handling of empty input values."""
+        # Setup mock inputs (search firm with empty name, then exit)
+        mock_input.side_effect = ["1", "", "", "4"]
+        
+        # Capture stdout to verify output
+        from io import StringIO
+        import sys
+        captured_output = StringIO()
+        sys.stdout = captured_output
+        
+        try:
+            from services.firm_services import interactive_menu
+            interactive_menu()
+            
+            # Verify no results were displayed
+            output = captured_output.getvalue()
+            self.assertNotIn("Results:", output)
+        finally:
+            sys.stdout = sys.__stdout__
+
+    @patch('argparse.ArgumentParser.parse_args')
+    @patch('services.firm_services.FirmServicesFacade.search_firm')
+    def test_cli_search_no_results(self, mock_search, mock_args):
+        """Test CLI search command when no results are found."""
+        # Setup mock arguments
+        mock_args.return_value = argparse.Namespace(
+            command='search',
+            firm_name='Nonexistent Firm',
+            interactive=False
+        )
+        
+        # Setup mock search results - empty list
+        mock_search.return_value = []
+        
+        # Capture stdout
+        from io import StringIO
+        import sys
+        captured_output = StringIO()
+        sys.stdout = captured_output
+        
+        try:
+            from services.firm_services import main
+            main()
+            
+            # Verify output indicates no results
+            output = captured_output.getvalue()
+            self.assertIn("No results found", output)
+        finally:
+            sys.stdout = sys.__stdout__
+
+    @patch('argparse.ArgumentParser.parse_args')
+    @patch('services.firm_services.FirmServicesFacade.get_firm_details')
+    def test_cli_details_not_found(self, mock_details, mock_args):
+        """Test CLI details command when firm is not found."""
+        # Setup mock arguments
+        mock_args.return_value = argparse.Namespace(
+            command='details',
+            crd_number='99999',
+            interactive=False
+        )
+        
+        # Setup mock details result - None indicates not found
+        mock_details.return_value = None
+        
+        # Capture stdout
+        from io import StringIO
+        import sys
+        captured_output = StringIO()
+        sys.stdout = captured_output
+        
+        try:
+            from services.firm_services import main
+            main()
+            
+            # Verify output indicates no results
+            output = captured_output.getvalue()
+            self.assertIn("No results found", output)
+        finally:
+            sys.stdout = sys.__stdout__
+
+    @patch('argparse.ArgumentParser.parse_args')
+    @patch('services.firm_services.FirmServicesFacade.search_firm')
+    @patch('sys.exit')  # Add patch for sys.exit
+    def test_cli_search_service_error(self, mock_exit, mock_search, mock_args):
+        """Test CLI search command when service throws an error."""
+        # Setup mock arguments
+        mock_args.return_value = argparse.Namespace(
+            command='search',
+            firm_name='Test Firm',
+            interactive=False
+        )
+        
+        # Setup mock to raise an exception
+        mock_search.side_effect = Exception("Service unavailable")
+        
+        # Capture stdout
+        from io import StringIO
+        import sys
+        captured_output = StringIO()
+        sys.stdout = captured_output
+        
+        try:
+            from services.firm_services import main
+            main()
+            
+            # Verify error output
+            output = captured_output.getvalue()
+            self.assertIn("error", output.lower())
+            self.assertIn("service unavailable", output.lower())
+            
+            # Verify sys.exit was called with code 1
+            mock_exit.assert_called_once_with(1)
+        finally:
+            sys.stdout = sys.__stdout__
+
+    @patch('builtins.input')
+    @patch('services.firm_services.FirmServicesFacade.search_firm')
+    def test_interactive_search_service_error(self, mock_search, mock_input):
+        """Test interactive search when service throws an error."""
+        # Setup mock inputs (search firm, then exit)
+        mock_input.side_effect = ["1", "Test Firm", "", "4"]
+        
+        # Setup mock to raise an exception
+        mock_search.side_effect = Exception("Service unavailable")
+        
+        # Capture stdout
+        from io import StringIO
+        import sys
+        captured_output = StringIO()
+        sys.stdout = captured_output
+        
+        try:
+            from services.firm_services import interactive_menu
+            interactive_menu()
+            
+            # Verify error output
+            output = captured_output.getvalue()
+            self.assertIn("Error", output.lower())
+        finally:
+            sys.stdout = sys.__stdout__
+
+    @patch('builtins.input')
+    def test_interactive_keyboard_interrupt(self, mock_input):
+        """Test handling of KeyboardInterrupt in interactive mode."""
+        # Setup mock to raise KeyboardInterrupt
+        mock_input.side_effect = KeyboardInterrupt()
+        
+        # Capture stdout
+        from io import StringIO
+        import sys
+        captured_output = StringIO()
+        sys.stdout = captured_output
+        
+        try:
+            from services.firm_services import interactive_menu
+            interactive_menu()
+            
+            # Verify graceful exit message
+            output = captured_output.getvalue()
+            self.assertIn("Exiting", output)
+        finally:
+            sys.stdout = sys.__stdout__
+
+    @patch('builtins.input')
+    def test_interactive_multiple_invalid_inputs(self, mock_input):
+        """Test handling of multiple invalid inputs in interactive mode."""
+        # Setup mock inputs (multiple invalid choices, then exit)
+        mock_input.side_effect = ["invalid1", "invalid2", "0", "5", "", "4"]
+        
+        # Capture stdout
+        from io import StringIO
+        import sys
+        captured_output = StringIO()
+        sys.stdout = captured_output
+        
+        try:
+            from services.firm_services import interactive_menu
+            interactive_menu()
+            
+            # Verify multiple error messages
+            output = captured_output.getvalue()
+            error_count = output.lower().count("invalid choice")
+            self.assertGreater(error_count, 1)
+        finally:
+            sys.stdout = sys.__stdout__
 
 if __name__ == '__main__':
     unittest.main() 

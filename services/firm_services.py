@@ -144,7 +144,7 @@ class FirmServicesFacade:
 
 def print_results(results: Union[Dict[str, Any], List[Dict[str, Any]], None], indent: int = 2) -> None:
     """Print results in a formatted JSON structure."""
-    if results is None:
+    if results is None or (isinstance(results, list) and len(results) == 0):
         print("\nNo results found.")
     else:
         print("\nResults:")
@@ -251,20 +251,24 @@ def main():
         interactive_menu()
         return
     
-    if args.command == "search":
-        results = facade.search_firm(args.firm_name)
-        print_results(results)
-    
-    elif args.command == "details":
-        results = facade.get_firm_details(args.crd_number)
-        print_results(results)
-    
-    elif args.command == "search-crd":
-        results = facade.search_firm_by_crd(args.crd_number)
-        print_results(results)
-    
-    else:
-        print("\nNo command specified. Use --help for usage information.")
+    try:
+        if args.command == "search":
+            results = facade.search_firm(args.firm_name)
+            print_results(results)
+        
+        elif args.command == "details":
+            results = facade.get_firm_details(args.crd_number)
+            print_results(results)
+        
+        elif args.command == "search-crd":
+            results = facade.search_firm_by_crd(args.crd_number)
+            print_results(results)
+        
+        else:
+            print("\nNo command specified. Use --help for usage information.")
+            sys.exit(1)
+    except Exception as e:
+        print(f"\nError: {str(e)}")
         sys.exit(1)
 
 if __name__ == "__main__":
