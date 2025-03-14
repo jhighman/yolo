@@ -8,7 +8,13 @@ and provides a unified interface for business logic to retrieve and store normal
 
 import json
 import logging
+import argparse
 from typing import Optional, Dict, Any, List, Union
+import sys
+from pathlib import Path
+
+# Add parent directory to Python path
+sys.path.append(str(Path(__file__).parent.parent))
 
 from services.firm_marshaller import (
     FirmMarshaller,
@@ -136,24 +142,130 @@ class FirmServicesFacade:
                 
         return None
 
-def main():
-    """Example usage of the FirmServicesFacade."""
+def print_results(results: Union[Dict[str, Any], List[Dict[str, Any]], None], indent: int = 2) -> None:
+    """Print results in a formatted JSON structure."""
+    if results is None:
+        print("\nNo results found.")
+    else:
+        print("\nResults:")
+        print(json.dumps(results, indent=indent))
+
+def interactive_menu() -> None:
+    """Run an interactive menu for testing firm services."""
     facade = FirmServicesFacade()
     
-    # Example searches
-    firm_name = "Fidelity"
-    print(f"\nSearching for firm: {firm_name}")
-    results = facade.search_firm(firm_name)
-    print(json.dumps(results, indent=2))
+    while True:
+        print("\n=== Firm Services Testing Menu ===")
+        print("1. Search firm by name")
+        print("2. Get firm details by CRD")
+        print("3. Search firm by CRD")
+        print("4. Exit")
+        
+        choice = input("\nEnter your choice (1-4): ").strip()
+        
+        if choice == "1":
+            firm_name = input("Enter firm name to search: ").strip()
+            if firm_name:
+                results = facade.search_firm(firm_name)
+                print_results(results)
+        
+        elif choice == "2":
+            crd_number = input("Enter CRD number: ").strip()
+            if crd_number:
+                results = facade.get_firm_details(crd_number)
+                print_results(results)
+        
+        elif choice == "3":
+            crd_number = input("Enter CRD number: ").strip()
+            if crd_number:
+                results = facade.search_firm_by_crd(crd_number)
+                print_results(results)
+        
+        elif choice == "4":
+            print("\nExiting...")
+            break
+        
+        else:
+            print("\nInvalid choice. Please try again.")
+        
+        input("\nPress Enter to continue...")
+
+def parse_args() -> argparse.Namespace:
+    """Parse command line arguments."""
+    parser = argparse.ArgumentParser(
+        description="Firm Services CLI - Search and retrieve firm information from FINRA and SEC"
+    )
     
-    crd_number = "7784"
-    print(f"\nGetting details for CRD: {crd_number}")
-    details = facade.get_firm_details(crd_number)
-    print(json.dumps(details, indent=2))
+    parser.add_argument(
+        "--interactive",
+        action="store_true",
+        help="Run in interactive menu mode"
+    )
     
-    print(f"\nSearching for firm by CRD: {crd_number}")
-    result = facade.search_firm_by_crd(crd_number)
-    print(json.dumps(result, indent=2))
+    subparsers = parser.add_subparsers(dest="command", help="Available commands")
+    
+    # Search firm by name
+    search_parser = subparsers.add_parser(
+        "search",
+        help="Search for firms by name"
+    )
+    search_parser.add_argument(
+        "firm_name",
+        help="Name of the firm to search for"
+    )
+    
+    # Get firm details
+    details_parser = subparsers.add_parser(
+        "details",
+        help="Get detailed firm information by CRD number"
+    )
+    details_parser.add_argument(
+        "crd_number",
+        help="CRD number of the firm"
+    )
+    
+    # Search firm by CRD
+    crd_parser = subparsers.add_parser(
+        "search-crd",
+        help="Search for a firm by CRD number"
+    )
+    crd_parser.add_argument(
+        "crd_number",
+        help="CRD number of the firm"
+    )
+    
+    return parser.parse_args()
+
+def main():
+    """Main entry point for the CLI."""
+    # Configure logging
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s | %(levelname)s | %(name)s | %(message)s'
+    )
+    
+    args = parse_args()
+    facade = FirmServicesFacade()
+    
+    if args.interactive:
+        interactive_menu()
+        return
+    
+    if args.command == "search":
+        results = facade.search_firm(args.firm_name)
+        print_results(results)
+    
+    elif args.command == "details":
+        results = facade.get_firm_details(args.crd_number)
+        print_results(results)
+    
+    elif args.command == "search-crd":
+        results = facade.search_firm_by_crd(args.crd_number)
+        print_results(results)
+    
+    else:
+        print("\nNo command specified. Use --help for usage information.")
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()

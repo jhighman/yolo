@@ -157,7 +157,7 @@ def fetch_agent_data(agent_name: str, service: str, params: Dict[str, Any]) -> t
         agent_fn = AGENT_SERVICES[agent_name][service]
         start_time = time.time()
         
-        result = agent_fn(**params, logger=logger)
+        result = agent_fn(**params)
         duration = time.time() - start_time
         
         if isinstance(result, list):
@@ -240,6 +240,85 @@ def main():
             print(f"\nGetting details for CRD: {crd_number}")
             finra_details = fetch_finra_firm_details(firm_id, {"crd_number": crd_number})
             print("\nFINRA Firm Details:", json.dumps(finra_details, indent=2))
+
+class FirmMarshaller:
+    """Service for normalizing firm data from different sources into a consistent format."""
+    
+    def normalize_finra_result(self, result: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Normalize a FINRA search result into the standard format.
+        
+        Args:
+            result: Raw FINRA search result
+            
+        Returns:
+            Normalized firm data
+        """
+        return {
+            'firm_name': result.get('org_name'),
+            'crd_number': result.get('org_source_id'),
+            'source': 'FINRA',
+            'raw_data': result
+        }
+        
+    def normalize_sec_result(self, result: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Normalize an SEC search result into the standard format.
+        
+        Args:
+            result: Raw SEC search result
+            
+        Returns:
+            Normalized firm data
+        """
+        return {
+            'firm_name': result.get('firm_name'),
+            'crd_number': result.get('crd_number'),
+            'sec_number': result.get('sec_number'),
+            'source': 'SEC',
+            'raw_data': result
+        }
+        
+    def normalize_finra_details(self, details: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Normalize FINRA firm details into the standard format.
+        
+        Args:
+            details: Raw FINRA firm details
+            
+        Returns:
+            Normalized firm details
+        """
+        return {
+            'firm_name': details.get('org_name'),
+            'crd_number': details.get('org_source_id'),
+            'source': 'FINRA',
+            'registration_status': details.get('registration_status'),
+            'addresses': details.get('addresses', []),
+            'disclosures': details.get('disclosures', []),
+            'raw_data': details
+        }
+        
+    def normalize_sec_details(self, details: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Normalize SEC firm details into the standard format.
+        
+        Args:
+            details: Raw SEC firm details
+            
+        Returns:
+            Normalized firm details
+        """
+        return {
+            'firm_name': details.get('firm_name'),
+            'crd_number': details.get('crd_number'),
+            'sec_number': details.get('sec_number'),
+            'source': 'SEC',
+            'registration_status': details.get('registration_status'),
+            'addresses': details.get('addresses', []),
+            'disclosures': details.get('disclosures', []),
+            'raw_data': details
+        }
 
 if __name__ == "__main__":
     main()
