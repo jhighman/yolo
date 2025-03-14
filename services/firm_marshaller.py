@@ -130,8 +130,16 @@ def build_cache_path(subject_id: str, firm_id: str, agent_name: str, service: st
         
     Returns:
         Path object representing the cache location
+    
+    The cache is organized in the following hierarchy:
+    cache/
+    └── subject_id/
+        └── agent_name/
+            └── service/
+                └── firm_id/
+                    └── data files
     """
-    return CACHE_FOLDER / subject_id / firm_id / agent_name / service
+    return CACHE_FOLDER / subject_id / agent_name / service / firm_id
 
 def build_file_name(agent_name: str, firm_id: str, service: str, date: str, ordinal: Optional[int] = None) -> str:
     base = f"{agent_name}_{firm_id}_{service}_{date}"
@@ -219,10 +227,11 @@ def log_request(subject_id: str, firm_id: str, agent_name: str, service: str, st
         status: The status of the request (e.g. "Cached", "Fetched")
         duration: Optional duration of the request in seconds
     """
-    log_path = CACHE_FOLDER / subject_id / firm_id / REQUEST_LOG_FILE
+    # Place request logs at the agent level for better auditability
+    log_path = CACHE_FOLDER / subject_id / agent_name / REQUEST_LOG_FILE
     log_path.parent.mkdir(parents=True, exist_ok=True)
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    log_entry = f"[{timestamp}] {agent_name}/{service} - {status}"
+    log_entry = f"[{timestamp}] {service}/{firm_id} - {status}"
     if duration is not None:
         log_entry += f" (fetch duration: {duration:.2f}s)"
     log_entry += "\n"
@@ -440,8 +449,8 @@ class FirmMarshaller:
             Normalized firm data
         """
         return {
-            'firm_name': result.get('firm_name'),
-            'crd_number': result.get('crd_number'),
+            'firm_name': result.get('org_name'),
+            'crd_number': result.get('org_pk'),
             'sec_number': result.get('sec_number'),
             'source': 'SEC',
             'raw_data': result

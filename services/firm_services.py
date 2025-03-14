@@ -23,7 +23,8 @@ from services.firm_marshaller import (
     fetch_finra_firm_details,
     fetch_sec_firm_search,
     fetch_sec_firm_by_crd,
-    fetch_sec_firm_details
+    fetch_sec_firm_details,
+    ResponseStatus
 )
 
 logger = logging.getLogger(__name__)
@@ -53,25 +54,33 @@ class FirmServicesFacade:
         
         # Search FINRA
         try:
-            finra_results = fetch_finra_firm_search(subject_id, firm_id, {"firm_name": firm_name})
-            if isinstance(finra_results, list):
-                logger.debug(f"Found {len(finra_results)} FINRA results for {firm_name}")
-                for result in finra_results:
-                    if isinstance(result, dict):
-                        normalized = self.firm_marshaller.normalize_finra_result(result)
-                        results.append(normalized)
+            finra_response = fetch_finra_firm_search(subject_id, firm_id, {"firm_name": firm_name})
+            if finra_response.status == ResponseStatus.SUCCESS and finra_response.data:
+                if isinstance(finra_response.data, list):
+                    logger.debug(f"Found {len(finra_response.data)} FINRA results for {firm_name}")
+                    for result in finra_response.data:
+                        if isinstance(result, dict):
+                            normalized = self.firm_marshaller.normalize_finra_result(result)
+                            results.append(normalized)
+                elif isinstance(finra_response.data, dict):
+                    normalized = self.firm_marshaller.normalize_finra_result(finra_response.data)
+                    results.append(normalized)
         except Exception as e:
             logger.error(f"Error searching FINRA for {firm_name}: {str(e)}")
             
         # Search SEC
         try:
-            sec_results = fetch_sec_firm_search(subject_id, firm_id, {"firm_name": firm_name})
-            if isinstance(sec_results, list):
-                logger.debug(f"Found {len(sec_results)} SEC results for {firm_name}")
-                for result in sec_results:
-                    if isinstance(result, dict):
-                        normalized = self.firm_marshaller.normalize_sec_result(result)
-                        results.append(normalized)
+            sec_response = fetch_sec_firm_search(subject_id, firm_id, {"firm_name": firm_name})
+            if sec_response.status == ResponseStatus.SUCCESS and sec_response.data:
+                if isinstance(sec_response.data, list):
+                    logger.debug(f"Found {len(sec_response.data)} SEC results for {firm_name}")
+                    for result in sec_response.data:
+                        if isinstance(result, dict):
+                            normalized = self.firm_marshaller.normalize_sec_result(result)
+                            results.append(normalized)
+                elif isinstance(sec_response.data, dict):
+                    normalized = self.firm_marshaller.normalize_sec_result(sec_response.data)
+                    results.append(normalized)
         except Exception as e:
             logger.error(f"Error searching SEC for {firm_name}: {str(e)}")
             
@@ -93,19 +102,25 @@ class FirmServicesFacade:
         
         # Try FINRA first
         try:
-            finra_details = fetch_finra_firm_details(subject_id, firm_id, {"crd_number": crd_number})
-            if isinstance(finra_details, dict):
+            finra_response = fetch_finra_firm_details(subject_id, firm_id, {"crd_number": crd_number})
+            if finra_response.status == ResponseStatus.SUCCESS and finra_response.data:
                 logger.debug(f"Found FINRA details for CRD {crd_number}")
-                return self.firm_marshaller.normalize_finra_details(finra_details)
+                if isinstance(finra_response.data, dict):
+                    return self.firm_marshaller.normalize_finra_details(finra_response.data)
+                elif isinstance(finra_response.data, list) and finra_response.data:
+                    return self.firm_marshaller.normalize_finra_details(finra_response.data[0])
         except Exception as e:
             logger.error(f"Error getting FINRA details for CRD {crd_number}: {str(e)}")
             
         # If FINRA fails, try SEC
         try:
-            sec_details = fetch_sec_firm_details(subject_id, firm_id, {"crd_number": crd_number})
-            if isinstance(sec_details, dict):
+            sec_response = fetch_sec_firm_details(subject_id, firm_id, {"crd_number": crd_number})
+            if sec_response.status == ResponseStatus.SUCCESS and sec_response.data:
                 logger.debug(f"Found SEC details for CRD {crd_number}")
-                return self.firm_marshaller.normalize_sec_details(sec_details)
+                if isinstance(sec_response.data, dict):
+                    return self.firm_marshaller.normalize_sec_details(sec_response.data)
+                elif isinstance(sec_response.data, list) and sec_response.data:
+                    return self.firm_marshaller.normalize_sec_details(sec_response.data[0])
         except Exception as e:
             logger.error(f"Error getting SEC details for CRD {crd_number}: {str(e)}")
             
