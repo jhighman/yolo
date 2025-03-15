@@ -27,6 +27,7 @@ from services.firm_marshaller import (
     fetch_sec_firm_details,
     ResponseStatus
 )
+from agents.firm_compliance_report_agent import save_compliance_report
 
 # Initialize logging
 loggers = setup_logging(debug=True)
@@ -204,6 +205,25 @@ class FirmServicesFacade:
         except Exception as e:
             logger.error(f"Error saving report: {str(e)}")
             raise
+
+    def save_compliance_report(self, report: Dict[str, Any], employee_number: Optional[str] = None) -> bool:
+        """
+        Save a compliance report with optional employee number.
+        
+        Args:
+            report: The compliance report to save
+            employee_number: Optional employee number for reference
+            
+        Returns:
+            bool: True if save was successful, False otherwise
+        """
+        logger.info(f"Saving compliance report for employee_number={employee_number}")
+        success = save_compliance_report(report, employee_number)
+        if success:
+            logger.debug(f"Compliance report saved: {json.dumps(report, indent=2)}")
+        else:
+            logger.error("Failed to save compliance report")
+        return success
 
 def print_results(results: Union[Dict[str, Any], List[Dict[str, Any]], None], indent: int = 2) -> None:
     """Print results in a formatted JSON structure."""
