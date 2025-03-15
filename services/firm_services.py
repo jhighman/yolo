@@ -189,6 +189,22 @@ class FirmServicesFacade:
                 
         return None
 
+    def save_business_report(self, report: Dict[str, Any], business_ref: str) -> None:
+        """
+        Save a business report to the cache.
+        
+        Args:
+            report: The report to save
+            business_ref: Reference ID for the business
+        """
+        logger.info(f"Saving business report for business_ref: {business_ref}")
+        try:
+            # For now, we'll just log the report since we don't have persistent storage
+            logger.debug(f"Report content: {json.dumps(report, indent=2)}")
+        except Exception as e:
+            logger.error(f"Error saving report: {str(e)}")
+            raise
+
 def print_results(results: Union[Dict[str, Any], List[Dict[str, Any]], None], indent: int = 2) -> None:
     """Print results in a formatted JSON structure."""
     if results is None or (isinstance(results, list) and len(results) == 0):
