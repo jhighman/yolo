@@ -2,6 +2,146 @@
 
 This repository contains tools and services for handling firm-related financial regulatory data, including search strategies and logging infrastructure.
 
+## Data Models
+
+### Normalized Firm Data
+
+The `FirmServicesFacade` returns normalized firm data that combines information from both FINRA and SEC sources. Below is the complete structure of a normalized firm record:
+
+```typescript
+{
+  // Core Firm Information
+  "firm_id": string,              // Unique identifier for the firm
+  "firm_name": string,            // Primary business name
+  "crd_number": string,           // Central Registration Depository number
+  "sec_number": string | null,    // SEC registration number (if available)
+  "tax_id": string | null,        // Tax identification number
+  
+  // Registration Status
+  "is_sec_registered": boolean,   // Current SEC registration status
+  "is_finra_registered": boolean, // Current FINRA registration status
+  "is_state_registered": boolean, // State registration status
+  "registration_status": string,  // Overall registration status (e.g., "APPROVED", "TERMINATED")
+  "registration_date": string,    // ISO 8601 date of initial registration
+  
+  // Business Details
+  "business_type": string,        // Type of business (e.g., "Corporation", "LLC")
+  "other_names": string[],        // List of alternative business names
+  "website": string | null,       // Firm's website URL
+  
+  // Contact Information
+  "headquarters": {
+    "address_line1": string,
+    "address_line2": string | null,
+    "city": string,
+    "state": string,
+    "zip_code": string,
+    "country": string
+  },
+  "mailing_address": {           // May be different from headquarters
+    "address_line1": string,
+    "address_line2": string | null,
+    "city": string,
+    "state": string,
+    "zip_code": string,
+    "country": string
+  },
+  "phone_numbers": string[],     // List of contact phone numbers
+  "email": string | null,        // Primary contact email
+  
+  // Regulatory Information
+  "regulatory_authorities": string[],  // List of regulatory bodies overseeing the firm
+  "notice_filings": [{
+    "state": string,
+    "status": string,
+    "effective_date": string,    // ISO 8601 date
+    "termination_date": string | null
+  }],
+  
+  // Disclosure Information
+  "disclosure_count": number,    // Total number of disclosures
+  "disclosures": [{
+    "type": string,             // Type of disclosure
+    "date": string,             // ISO 8601 date
+    "status": string,
+    "description": string,
+    "resolution": string | null,
+    "sanctions": string[] | null
+  }],
+  
+  // Registration Types
+  "is_era_registered": boolean,         // ERA registration status
+  "is_sec_era_registered": boolean,     // SEC ERA registration status
+  "is_state_era_registered": boolean,   // State ERA registration status
+  
+  // Documentation
+  "adv_filing_date": string | null,     // Latest ADV filing date (ISO 8601)
+  "has_adv_pdf": boolean,               // Whether ADV PDF is available
+  "brochures": [{
+    "title": string,
+    "date": string,             // ISO 8601 date
+    "url": string | null
+  }],
+  
+  // Professional Qualifications
+  "accountant_exams": [{
+    "exam_type": string,
+    "status": string,
+    "date": string              // ISO 8601 date
+  }],
+  
+  // Metadata
+  "last_updated": string,       // ISO 8601 date-time of last data update
+  "data_sources": string[],     // List of data sources used (e.g., ["FINRA", "SEC"])
+  "cache_status": {
+    "is_cached": boolean,
+    "cache_date": string | null, // ISO 8601 date-time
+    "ttl": number               // Time-to-live in seconds
+  }
+}
+```
+
+### Search Results Structure
+
+When searching for firms, the results are returned as an array of simplified firm records:
+
+```typescript
+{
+  "total_results": number,
+  "page": number,
+  "page_size": number,
+  "results": [{
+    "firm_id": string,
+    "firm_name": string,
+    "crd_number": string,
+    "sec_number": string | null,
+    "registration_status": string,
+    "business_type": string,
+    "headquarters": {
+      "city": string,
+      "state": string,
+      "country": string
+    },
+    "match_score": number       // Relevance score for the search
+  }]
+}
+```
+
+### Usage Examples
+
+```python
+# Get detailed firm information
+firm_details = firm_services.get_firm_details(subject_id="user123", crd_number="123456")
+print(f"Firm Name: {firm_details['firm_name']}")
+print(f"Registration Status: {firm_details['registration_status']}")
+print(f"Disclosures: {firm_details['disclosure_count']}")
+
+# Search for firms
+search_results = firm_services.search_firm(subject_id="user123", firm_name="Baker")
+for result in search_results['results']:
+    print(f"Found: {result['firm_name']} (CRD: {result['crd_number']})")
+```
+
 ## Command Line Tools
 
 ### Firm Business CLI
