@@ -1,7 +1,3 @@
-"""Evaluation module for firm data analysis and reporting."""
+"""Evaluation module for firm reports."""
 
-from .firm_evaluation_processor import FirmEvaluationProcessor
-from .firm_evaluation_report_builder import FirmEvaluationReportBuilder
-from .firm_evaluation_report_director import FirmEvaluationReportDirector
-
-__all__ = ['FirmEvaluationProcessor', 'FirmEvaluationReportBuilder', 'FirmEvaluationReportDirector']
+# Empty init file - we don't need the imports for testing search strategies
