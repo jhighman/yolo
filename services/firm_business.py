@@ -514,16 +514,21 @@ def process_claim(
             logger.error(f"Failed to generate evaluation report: {str(e)}", exc_info=True)
             raise
         
-        # Save report
+        # Save report using the compliance report method
         try:
-            facade.save_business_report(report, business_ref_str)
-            logger.info("Business report saved successfully", extra={
+            if not facade.save_compliance_report(report, business_ref_str):
+                logger.error("Failed to save compliance report", extra={
+                    "business_ref": business_ref_str,
+                    "timestamp": datetime.now().isoformat()
+                })
+                raise EvaluationProcessError("Failed to save compliance report")
+            logger.info("Compliance report saved successfully", extra={
                 "business_ref": business_ref_str,
                 "timestamp": datetime.now().isoformat()
             })
         except Exception as e:
-            logger.error(f"Failed to save business report: {str(e)}", exc_info=True)
-            raise EvaluationProcessError(f"Failed to save business report: {str(e)}")
+            logger.error(f"Failed to save compliance report: {str(e)}", exc_info=True)
+            raise EvaluationProcessError(f"Failed to save compliance report: {str(e)}")
         
         logger.info("Claim processing completed", extra={
             "business_ref": business_ref_str,
