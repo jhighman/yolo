@@ -8,7 +8,6 @@ results through method chaining and produces a structured output for downstream 
 
 from collections import OrderedDict
 from typing import Dict, Any, cast
-import copy  # Add import for deepcopy
 
 class FirmEvaluationReportBuilder:
     """Constructs compliance reports for business entities by collecting sub-evaluations."""
@@ -159,6 +158,6 @@ class FirmEvaluationReportBuilder:
         Returns:
             Dictionary containing all report sections in the specified order
         """
-        return cast(Dict[str, Any], copy.deepcopy(dict(self.report)))  # Create deep copy
+        return cast(Dict[str, Any], dict(self.report))  # Cast OrderedDict to Dict[str, Any]
 
 # TODO: Implement firm evaluation report builder logic

@@ -11,8 +11,6 @@ from typing import Dict, Any, List, Tuple, Optional
 import sys
 from pathlib import Path
 from datetime import datetime
-import time
-import json
 
 # Add parent directory to Python path
 sys.path.append(str(Path(__file__).parent.parent))
@@ -63,33 +61,9 @@ class FirmEvaluationReportDirector:
             TypeError: If builder is not a FirmEvaluationReportBuilder instance
         """
         if not isinstance(builder, FirmEvaluationReportBuilder):
-            logger.error("Invalid builder type provided", extra={
-                "builder_type": type(builder).__name__,
-                "expected_type": "FirmEvaluationReportBuilder"
-            })
             raise TypeError("Builder must be an instance of FirmEvaluationReportBuilder")
         self.builder = builder
-        self.evaluation_start_time = None
-        self.section_timings = {}
-        
-        logger.info("FirmEvaluationReportDirector initialized", extra={
-            "builder_id": id(builder),
-            "timestamp": datetime.now().isoformat()
-        })
-
-    def _log_timing(self, section: str, duration: float) -> None:
-        """Log timing information for a section.
-        
-        Args:
-            section: Name of the section being timed
-            duration: Duration in seconds
-        """
-        self.section_timings[section] = duration
-        logger.debug(f"Section timing", extra={
-            "section": section,
-            "duration_seconds": duration,
-            "timestamp": datetime.now().isoformat()
-        })
+        logger.debug("FirmEvaluationReportDirector initialized")
 
     def _validate_input_data(self, claim: Dict[str, Any], extracted_info: Dict[str, Any]) -> None:
         """Validate input data for required fields and data types.
@@ -101,11 +75,6 @@ class FirmEvaluationReportDirector:
         Raises:
             InvalidDataError: If required fields are missing or invalid
         """
-        logger.debug("Validating input data", extra={
-            "claim_keys": list(claim.keys() if isinstance(claim, dict) else []),
-            "extracted_info_keys": list(extracted_info.keys() if isinstance(extracted_info, dict) else [])
-        })
-        
         # Validate claim data
         if not isinstance(claim, dict):
             raise InvalidDataError("Claim must be a dictionary")
@@ -141,13 +110,6 @@ class FirmEvaluationReportDirector:
         Raises:
             ValueError: If explanation is empty or invalid
         """
-        logger.debug("Creating skip evaluation", extra={
-            "explanation": explanation,
-            "has_alert": alert is not None,
-            "has_due_diligence": due_diligence is not None,
-            "timestamp": datetime.now().isoformat()
-        })
-        
         if not explanation or not isinstance(explanation, str):
             raise ValueError("Explanation must be a non-empty string")
             
@@ -176,22 +138,17 @@ class FirmEvaluationReportDirector:
             Risk level string ("High", "Medium", or "Low")
             
         Raises:
-            TypeError: If alerts is not a list
+            TypeError: If alerts is not a list or contains non-Alert objects
         """
-        logger.debug("Determining risk level", extra={
-            "total_alerts": len(alerts) if isinstance(alerts, list) else 0,
-            "alert_types": [a.alert_type for a in alerts if a is not None] if isinstance(alerts, list) else [],
-            "timestamp": datetime.now().isoformat()
-        })
-        
         if not isinstance(alerts, list):
             raise TypeError("Alerts must be a list")
+            
+        for alert in alerts:
+            if not isinstance(alert, Alert):
+                raise TypeError("All items in alerts must be Alert objects")
         
-        # Filter out None values
-        valid_alerts = [alert for alert in alerts if alert is not None]
-        
-        has_high = any(alert.severity == AlertSeverity.HIGH for alert in valid_alerts)
-        has_medium = any(alert.severity == AlertSeverity.MEDIUM for alert in valid_alerts)
+        has_high = any(alert.severity == AlertSeverity.HIGH for alert in alerts)
+        has_medium = any(alert.severity == AlertSeverity.MEDIUM for alert in alerts)
         
         if has_high:
             return "High"
@@ -218,53 +175,19 @@ class FirmEvaluationReportDirector:
         Raises:
             EvaluationProcessError: If evaluation fails
         """
-        start_time = time.time()
-        logger.info(f"Starting evaluation of {section_name}", extra={
-            "section": section_name,
-            "evaluator": evaluator.__name__ if hasattr(evaluator, "__name__") else str(evaluator),
-            "args_count": len(args),
-            "timestamp": datetime.now().isoformat()
-        })
-        
         try:
-            result = evaluator(*args)
-            duration = time.time() - start_time
-            self._log_timing(section_name, duration)
-            
-            compliant, explanation, alerts = result
-            logger.info(f"Completed evaluation of {section_name}", extra={
-                "section": section_name,
-                "duration_seconds": duration,
-                "compliant": compliant,
-                "alert_count": len(alerts),
-                "alert_types": [a.alert_type for a in alerts if a is not None],
-                "alert_severities": [a.severity.value for a in alerts if a is not None],
-                "timestamp": datetime.now().isoformat()
-            })
-            
-            return result
-            
+            return evaluator(*args)
         except Exception as e:
-            duration = time.time() - start_time
-            self._log_timing(section_name, duration)
-            
             error_msg = f"Error evaluating {section_name}: {str(e)}"
-            logger.error(error_msg, extra={
-                "section": section_name,
-                "error_type": type(e).__name__,
-                "error_details": str(e),
-                "duration_seconds": duration,
-                "timestamp": datetime.now().isoformat()
-            }, exc_info=True)
+            logger.error(error_msg, exc_info=True)
             
+            # Create error alert
             error_alert = Alert(
                 alert_type="EvaluationError",
                 severity=AlertSeverity.HIGH,
                 metadata={
                     "section": section_name,
                     "error": str(e),
-                    "error_type": type(e).__name__,
-                    "duration_seconds": duration,
                     "timestamp": datetime.now().isoformat()
                 },
                 description=error_msg
@@ -290,37 +213,17 @@ class FirmEvaluationReportDirector:
             InvalidDataError: If input data is invalid
             EvaluationProcessError: If evaluation process fails
         """
-        self.evaluation_start_time = time.time()
-        
         try:
             # Validate input data
             self._validate_input_data(claim, extracted_info)
             
             business_name = claim.get('business_name', 'Unknown')
-            business_ref = claim.get('business_ref')
-            
-            logger.info("Starting evaluation report construction", extra={
-                "business_name": business_name,
-                "business_ref": business_ref,
-                "timestamp": datetime.now().isoformat(),
-                "claim_fields": list(claim.keys()),
-                "extracted_info_size": len(json.dumps(extracted_info))
-            })
+            logger.info(f"Constructing evaluation report for business: {business_name}")
             
             # Set basic data with error handling
             try:
                 self.builder.set_claim(claim)
-                logger.debug("Claim data set successfully", extra={
-                    "business_name": business_name,
-                    "business_ref": business_ref
-                })
             except Exception as e:
-                logger.error("Failed to set claim data", extra={
-                    "error": str(e),
-                    "error_type": type(e).__name__,
-                    "business_name": business_name,
-                    "business_ref": business_ref
-                }, exc_info=True)
                 raise EvaluationProcessError(f"Failed to set claim data: {str(e)}")
             
             # Get or create search evaluation
@@ -331,33 +234,22 @@ class FirmEvaluationReportDirector:
                 "timestamp": datetime.now().isoformat()
             })
             
-            logger.debug("Search evaluation data", extra={
-                "search_source": search_evaluation.get("source"),
-                "search_compliance": search_evaluation.get("compliance"),
-                "business_name": business_name
-            })
-            
             try:
                 self.builder.set_search_evaluation(search_evaluation)
             except Exception as e:
-                logger.error("Failed to set search evaluation", extra={
-                    "error": str(e),
-                    "error_type": type(e).__name__,
-                    "business_name": business_name
-                }, exc_info=True)
                 raise EvaluationProcessError(f"Failed to set search evaluation: {str(e)}")
+            
+            # Get business reference with validation
+            business_ref = claim.get("business_ref")
+            if not business_ref:
+                raise InvalidDataError("Missing business reference in claim")
             
             # Check skip or failure conditions
             skip_reasons = search_evaluation.get("skip_reasons", [])
             search_failed = not search_evaluation.get("compliance", False)
             
             if skip_reasons or search_failed:
-                logger.info("Skip or failure condition detected", extra={
-                    "business_name": business_name,
-                    "skip_reasons": skip_reasons,
-                    "search_failed": search_failed,
-                    "timestamp": datetime.now().isoformat()
-                })
+                logger.info(f"Skip or failure condition detected for {business_name}")
                 
                 # Create appropriate alert
                 if search_failed:
@@ -406,12 +298,8 @@ class FirmEvaluationReportDirector:
                     raise EvaluationProcessError(f"Failed to set skipped evaluations: {str(e)}")
                 
             else:
-                logger.info("Proceeding with full evaluation", extra={
-                    "business_name": business_name,
-                    "timestamp": datetime.now().isoformat()
-                })
-                
                 # Perform full evaluation with error handling
+                logger.info(f"Performing full evaluation for {business_name}")
                 business_info = extracted_info
                 
                 # Registration status
@@ -517,16 +405,7 @@ class FirmEvaluationReportDirector:
             # Compute final evaluation
             try:
                 report = self.builder.build()
-                logger.debug("Report built successfully", extra={
-                    "business_name": business_name,
-                    "report_sections": list(report.keys())
-                })
             except Exception as e:
-                logger.error("Failed to build report", extra={
-                    "error": str(e),
-                    "error_type": type(e).__name__,
-                    "business_name": business_name
-                }, exc_info=True)
                 raise EvaluationProcessError(f"Failed to build report: {str(e)}")
                 
             all_alerts: List[Alert] = []
@@ -597,48 +476,17 @@ class FirmEvaluationReportDirector:
             except Exception as e:
                 raise EvaluationProcessError(f"Failed to set final evaluation: {str(e)}")
             
-            total_duration = time.time() - self.evaluation_start_time
-            
-            logger.info("Evaluation completed", extra={
-                "business_name": business_name,
-                "total_duration_seconds": total_duration,
-                "section_timings": self.section_timings,
-                "total_alerts": len(all_alerts),
-                "risk_level": risk_level,
-                "overall_compliance": overall_compliance,
-                "alert_summary": {
-                    "high": len([a for a in all_alerts if a.severity == AlertSeverity.HIGH]),
-                    "medium": len([a for a in all_alerts if a.severity == AlertSeverity.MEDIUM]),
-                    "low": len([a for a in all_alerts if a.severity == AlertSeverity.LOW])
-                },
-                "timestamp": datetime.now().isoformat()
-            })
-            
-            return report
+            logger.info(f"Completed evaluation report for {business_name} with risk level: {risk_level}")
+            return self.builder.build()
             
         except InvalidDataError as e:
-            logger.error("Invalid input data", extra={
-                "error": str(e),
-                "error_type": "InvalidDataError",
-                "business_name": claim.get('business_name', 'Unknown'),
-                "duration_seconds": time.time() - self.evaluation_start_time
-            }, exc_info=True)
+            logger.error(f"Invalid input data: {str(e)}", exc_info=True)
             raise
         except EvaluationProcessError as e:
-            logger.error("Evaluation process error", extra={
-                "error": str(e),
-                "error_type": "EvaluationProcessError",
-                "business_name": claim.get('business_name', 'Unknown'),
-                "duration_seconds": time.time() - self.evaluation_start_time
-            }, exc_info=True)
+            logger.error(f"Evaluation process error: {str(e)}", exc_info=True)
             raise
         except Exception as e:
-            logger.error("Unexpected error", extra={
-                "error": str(e),
-                "error_type": type(e).__name__,
-                "business_name": claim.get('business_name', 'Unknown'),
-                "duration_seconds": time.time() - self.evaluation_start_time
-            }, exc_info=True)
+            logger.error(f"Unexpected error in evaluation: {str(e)}", exc_info=True)
             raise EvaluationProcessError(f"Unexpected error: {str(e)}")
 
 # TODO: Implement firm evaluation report director logic
