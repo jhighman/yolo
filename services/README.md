@@ -264,3 +264,145 @@ Planned improvements include:
 - Real-time status updates
 - Extended skip conditions
 - Performance optimizations 
+
+### Firm Business API (`firm_business_api.py`)
+
+The module provides a FastAPI-based REST API for processing business compliance claims. It supports two processing modes and webhook notifications for asynchronous report delivery.
+
+#### Installation
+
+1. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+2. Start the API server:
+```bash
+uvicorn services.firm_business_api:app --reload
+```
+
+#### API Endpoints
+
+1. **Get Processing Modes**
+   - Endpoint: `GET /processing-modes`
+   - Returns available processing modes and their configurations
+   ```bash
+   curl http://localhost:8000/processing-modes
+   ```
+
+2. **Process Claim (Basic Mode)**
+   - Endpoint: `POST /process-claim-basic`
+   - Skips financial and legal reviews for faster processing
+   ```bash
+   curl -X POST http://localhost:8000/process-claim-basic \
+     -H "Content-Type: application/json" \
+     -d '{
+       "reference_id": "CLAIM123",
+       "business_name": "Example Corp",
+       "tax_id": "12-3456789",
+       "organization_crd": "123456",
+       "business_location": "New York, NY"
+     }'
+   ```
+
+3. **Process Claim (Complete Mode)**
+   - Endpoint: `POST /process-claim-complete`
+   - Includes all reviews (financial, legal)
+   ```bash
+   curl -X POST http://localhost:8000/process-claim-complete \
+     -H "Content-Type: application/json" \
+     -d '{
+       "reference_id": "CLAIM123",
+       "business_name": "Example Corp",
+       "tax_id": "12-3456789",
+       "organization_crd": "123456",
+       "business_location": "New York, NY"
+     }'
+   ```
+
+#### Webhook Support
+
+You can provide a webhook URL to receive the report asynchronously:
+
+```bash
+curl -X POST http://localhost:8000/process-claim-complete \
+  -H "Content-Type: application/json" \
+  -d '{
+    "reference_id": "CLAIM123",
+    "business_name": "Example Corp",
+    "tax_id": "12-3456789",
+    "organization_crd": "123456",
+    "webhook_url": "https://your-webhook.com/endpoint"
+  }'
+```
+
+#### Request Fields
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| reference_id | string | Yes | Unique identifier for the claim |
+| business_name | string | Yes | Name of the business |
+| tax_id | string | No | Business tax ID |
+| organization_crd | string | No | CRD number |
+| business_location | string | No | Business location |
+| business_ref | string | No | Custom business reference |
+| webhook_url | string (URL) | No | Webhook URL for async report delivery |
+
+#### Response Format
+
+```json
+{
+  "reference_id": "CLAIM123",
+  "claim": { ... },
+  "search_evaluation": { ... },
+  "registration_status": { ... },
+  "regulatory_oversight": { ... },
+  "disclosures": { ... },
+  "financials": { ... },
+  "legal": { ... },
+  "qualifications": { ... },
+  "data_integrity": { ... },
+  "final_evaluation": {
+    "overall_compliance": true,
+    "compliance_explanation": "All compliance checks passed",
+    "overall_risk_level": "Low",
+    "recommendations": "No immediate action required",
+    "alerts": [ ... ],
+    "evaluation_timestamp": "2024-01-01T12:00:00Z"
+  }
+}
+```
+
+#### Error Handling
+
+The API returns appropriate HTTP status codes:
+- 200: Success
+- 422: Validation error (invalid request data)
+- 500: Internal server error
+
+Error responses include a detail message:
+```json
+{
+  "detail": "Error processing claim: <error message>"
+}
+```
+
+#### Best Practices
+
+1. Always provide as much information as possible in the claim for better results
+2. Use basic mode for quick initial assessments
+3. Use complete mode for thorough compliance checks
+4. Implement webhook error handling for reliable report delivery
+5. Monitor the API logs for debugging and troubleshooting
+
+#### Rate Limiting
+
+The API implements rate limiting through the underlying services. Ensure your client handles 429 (Too Many Requests) responses appropriately.
+
+#### Security Considerations
+
+1. Run the API behind a reverse proxy in production
+2. Use HTTPS for all communications
+3. Implement authentication/authorization as needed
+4. Validate and sanitize webhook URLs
+5. Monitor for abuse patterns 
