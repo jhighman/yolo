@@ -54,9 +54,10 @@ def setup_logging(debug: bool = False) -> Dict[str, logging.Logger]:
     if _LOGGING_INITIALIZED:
         return {key: logging.getLogger(name) for key, name in LOGGER_GROUPS['core'].items()}
 
-    # Create logs directory
+    # Create logs directory structure
     log_dir = "logs"
-    os.makedirs(log_dir, exist_ok=True)
+    for group in LOGGER_GROUPS.keys():
+        os.makedirs(os.path.join(log_dir, group), exist_ok=True)
 
     # Set level based on debug flag
     base_level = logging.DEBUG if debug else logging.INFO
@@ -65,35 +66,34 @@ def setup_logging(debug: bool = False) -> Dict[str, logging.Logger]:
     root_logger = logging.getLogger()
     root_logger.handlers.clear()
 
-    # Create handlers
+    # Create console handler for all logs
     console_handler = logging.StreamHandler()
-    file_handler = logging.handlers.RotatingFileHandler(
-        os.path.join(log_dir, "app.log"),
-        maxBytes=10*1024*1024,  # 10MB
-        backupCount=5
-    )
-
-    # Set levels
     console_handler.setLevel(base_level)
-    file_handler.setLevel(base_level)
-
-    # Create formatter
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     console_handler.setFormatter(formatter)
-    file_handler.setFormatter(formatter)
-
-    # Add handlers to root logger
     root_logger.addHandler(console_handler)
-    root_logger.addHandler(file_handler)
     root_logger.setLevel(base_level)
 
     # Initialize all loggers from groups
     loggers = {}
     for group_name, group_loggers in LOGGER_GROUPS.items():
+        # Create a file handler for this group
+        group_log_file = os.path.join(log_dir, group_name, f"{group_name}.log")
+        file_handler = logging.handlers.RotatingFileHandler(
+            group_log_file,
+            maxBytes=10*1024*1024,  # 10MB
+            backupCount=5
+        )
+        file_handler.setLevel(base_level)
+        file_handler.setFormatter(formatter)
+        
+        # Create and configure loggers for this group
         for logger_key, logger_name in group_loggers.items():
             logger = logging.getLogger(logger_name)
             logger.setLevel(base_level)
-            logger.propagate = True
+            logger.propagate = False  # Don't propagate to root logger
+            logger.addHandler(console_handler)  # Add console handler
+            logger.addHandler(file_handler)  # Add group-specific file handler
             loggers[logger_key] = logger
 
     # Add group information to the loggers dict
