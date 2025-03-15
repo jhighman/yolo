@@ -12,7 +12,7 @@ from typing import Dict, Any, Optional
 import asyncio
 import aiohttp
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
+from pydantic import BaseModel, HttpUrl
 import sys
 from pathlib import Path
 
@@ -59,7 +59,7 @@ class ClaimRequest(BaseModel):
     organization_crd: Optional[str] = None
     business_location: Optional[str] = None
     business_ref: Optional[str] = None
-    webhook_url: Optional[str] = None
+    webhook_url: Optional[HttpUrl] = None  # Using HttpUrl for URL validation
 
     class Config:
         extra = "allow"  # Allow additional fields
