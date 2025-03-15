@@ -1,6 +1,127 @@
-# Firm Services CLI
+# Firm Services and Business Logic
 
-A command-line interface for retrieving and managing firm information from FINRA BrokerCheck and SEC IAPD databases.
+This repository contains tools and services for handling firm-related financial regulatory data, including search strategies and logging infrastructure.
+
+## Command Line Tools
+
+### Firm Business CLI
+
+The `firm_business.py` CLI provides an interactive interface for testing search strategy determination. It helps verify how the system selects appropriate search strategies based on available business data.
+
+#### Usage
+
+```bash
+python3 services/firm_business.py --interactive [--log-level {DEBUG,INFO,WARNING,ERROR,CRITICAL}]
+```
+
+Options:
+- `--interactive`: Run in interactive menu mode
+- `--log-level`: Set logging level (default: INFO)
+
+#### Interactive Menu Options
+
+1. Test with tax_id and CRD
+2. Test with CRD only
+3. Test with SEC number
+4. Test with business name and location
+5. Test with business name only
+6. Test with empty claim
+7. Show implemented strategies
+8. Exit
+
+#### Search Strategy Implementation
+
+The system implements a hierarchical search strategy:
+
+Currently Implemented:
+- ✓ TAX_ID_AND_CRD: Highest priority when both tax ID and CRD are available
+- ✓ CRD_ONLY: Used when only CRD number is available
+- ✓ NAME_ONLY: Used when only business name is available
+- ✓ DEFAULT: Fallback strategy when no other strategy is applicable
+
+Not Yet Implemented:
+- ✗ TAX_ID_ONLY: For tax ID-based searches
+- ✗ SEC_NUMBER_ONLY: For SEC number-based searches
+- ✗ NAME_AND_LOCATION: For name and location combined searches
+
+### Firm Services CLI
+
+The `firm_services.py` CLI provides access to external financial regulatory services (FINRA BrokerCheck and SEC IAPD firm data).
+
+#### Usage
+
+```bash
+python3 services/firm_services.py [--interactive] [--log-level {DEBUG,INFO,WARNING,ERROR,CRITICAL}] --subject-id SUBJECT_ID {search,details,search-crd} ...
+```
+
+Options:
+- `--interactive`: Run in interactive menu mode
+- `--log-level`: Set logging level (default: INFO)
+- `--subject-id`: ID of the subject/client making the request
+
+Commands:
+- `search`: Search for firms by name
+- `details`: Get detailed firm information by CRD number
+- `search-crd`: Search for a firm by CRD number
+
+## Logging System
+
+The application uses a structured logging system that organizes logs by service groups:
+
+### Log Directory Structure
+
+```
+logs/
+├── agents/
+│   └── agents.log      # Agent-related logs (FINRA, SEC agents)
+├── core/
+│   └── core.log       # Core application logs
+├── evaluation/
+│   └── evaluation.log # Evaluation and report processing logs
+└── services/
+    └── services.log   # Service-related logs (firm business, normalizer)
+```
+
+### Logging Configuration
+
+- Each service group has its own log file
+- Log files rotate at 10MB with 5 backup files
+- Logs include timestamp, logger name, level, and formatted messages
+- JSON data is properly formatted in logs
+- Console output is maintained for all logs
+- Log levels can be configured per group
+
+### Log Groups
+
+1. Services:
+   - firm_business
+   - firm_normalizer
+   - firm_marshaller
+   - firm_name_matcher
+
+2. Agents:
+   - FINRA agents (disciplinary, arbitration, brokercheck)
+   - SEC agents (disciplinary, arbitration, IAPD)
+   - NFA basic agent
+   - Agent manager
+
+3. Evaluation:
+   - Firm evaluation processor
+   - Report builder
+   - Report director
+
+4. Core:
+   - Main application
+   - API
+   - Core business logic
+
+### Setting Log Levels
+
+Log levels can be set via:
+1. Command line arguments (`--log-level`)
+2. Environment variables
+3. Configuration files
+4. Runtime reconfiguration using `reconfigure_logging()`
 
 ## Features
 
