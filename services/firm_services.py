@@ -205,6 +205,16 @@ class FirmServicesFacade:
             logger.error(f"Error saving report: {str(e)}")
             raise
 
+    def cleanup(self) -> None:
+        """Clean up resources and connections when shutting down."""
+        logger.info("Cleaning up FirmServicesFacade resources")
+        try:
+            # Add any cleanup logic here (e.g., close connections, clear caches)
+            pass
+        except Exception as e:
+            logger.error(f"Error during cleanup: {str(e)}", exc_info=True)
+            raise
+
 def print_results(results: Union[Dict[str, Any], List[Dict[str, Any]], None], indent: int = 2) -> None:
     """Print results in a formatted JSON structure."""
     if results is None or (isinstance(results, list) and len(results) == 0):
