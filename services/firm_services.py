@@ -16,6 +16,7 @@ from pathlib import Path
 # Add parent directory to Python path
 sys.path.append(str(Path(__file__).parent.parent))
 
+from utils.logging_config import setup_logging
 from services.firm_marshaller import (
     FirmMarshaller,
     fetch_finra_firm_search,
@@ -27,7 +28,9 @@ from services.firm_marshaller import (
     ResponseStatus
 )
 
-logger = logging.getLogger(__name__)
+# Initialize logging
+loggers = setup_logging(debug=True)
+logger = loggers.get('services', logging.getLogger(__name__))
 
 class FirmServicesFacade:
     """Facade for accessing firm-related financial regulatory services."""
@@ -100,31 +103,57 @@ class FirmServicesFacade:
         logger.info(f"Getting firm details for CRD: {crd_number}")
         firm_id = f"details_{crd_number}"  # Create a unique ID for caching
         
-        # Try FINRA first
+        finra_details = None
+        sec_details = None
+        
+        # Get FINRA details
         try:
             finra_response = fetch_finra_firm_details(subject_id, firm_id, {"crd_number": crd_number})
             if finra_response.status == ResponseStatus.SUCCESS and finra_response.data:
                 logger.debug(f"Found FINRA details for CRD {crd_number}")
                 if isinstance(finra_response.data, dict):
-                    return self.firm_marshaller.normalize_finra_details(finra_response.data)
+                    finra_details = self.firm_marshaller.normalize_finra_details(finra_response.data)
                 elif isinstance(finra_response.data, list) and finra_response.data:
-                    return self.firm_marshaller.normalize_finra_details(finra_response.data[0])
+                    finra_details = self.firm_marshaller.normalize_finra_details(finra_response.data[0])
         except Exception as e:
             logger.error(f"Error getting FINRA details for CRD {crd_number}: {str(e)}")
             
-        # If FINRA fails, try SEC
+        # Get SEC details
         try:
             sec_response = fetch_sec_firm_details(subject_id, firm_id, {"crd_number": crd_number})
             if sec_response.status == ResponseStatus.SUCCESS and sec_response.data:
                 logger.debug(f"Found SEC details for CRD {crd_number}")
                 if isinstance(sec_response.data, dict):
-                    return self.firm_marshaller.normalize_sec_details(sec_response.data)
+                    sec_details = self.firm_marshaller.normalize_sec_details(sec_response.data)
                 elif isinstance(sec_response.data, list) and sec_response.data:
-                    return self.firm_marshaller.normalize_sec_details(sec_response.data[0])
+                    sec_details = self.firm_marshaller.normalize_sec_details(sec_response.data[0])
         except Exception as e:
             logger.error(f"Error getting SEC details for CRD {crd_number}: {str(e)}")
-            
-        return None
+        
+        # Combine details
+        if finra_details and sec_details:
+            # Start with FINRA details as base
+            combined = finra_details.copy()
+            # Add SEC-specific fields
+            combined.update({
+                'sec_number': sec_details.get('sec_number'),
+                'other_names': sec_details.get('other_names', []),
+                'notice_filings': sec_details.get('notice_filings', []),
+                'registration_date': sec_details.get('registration_date'),
+                'is_sec_registered': sec_details.get('is_sec_registered', False),
+                'is_state_registered': sec_details.get('is_state_registered', False),
+                'is_era_registered': sec_details.get('is_era_registered', False),
+                'is_sec_era_registered': sec_details.get('is_sec_era_registered', False),
+                'is_state_era_registered': sec_details.get('is_state_era_registered', False),
+                'adv_filing_date': sec_details.get('adv_filing_date'),
+                'has_adv_pdf': sec_details.get('has_adv_pdf', False),
+                'accountant_exams': sec_details.get('accountant_exams', []),
+                'brochures': sec_details.get('brochures', [])
+            })
+            return combined
+        
+        # Return whichever details we found, or None if neither found
+        return finra_details or sec_details or None
 
     def search_firm_by_crd(self, subject_id: str, crd_number: str) -> Optional[Dict[str, Any]]:
         """
@@ -186,6 +215,13 @@ def parse_args() -> argparse.Namespace:
         help="ID of the subject/client making the request"
     )
     
+    parser.add_argument(
+        "--log-level",
+        choices=["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"],
+        default="INFO",
+        help="Set the logging level (default: INFO)"
+    )
+    
     subparsers = parser.add_subparsers(dest="command", help="Available commands")
     
     # Search firm by name
@@ -220,7 +256,7 @@ def parse_args() -> argparse.Namespace:
     
     return parser.parse_args()
 
-def interactive_menu(subject_id: str) -> None:
+def interactive_menu(subject_id: str, log_level: str) -> None:
     """Run an interactive menu for testing firm services."""
     facade = FirmServicesFacade()
     
@@ -274,17 +310,22 @@ def interactive_menu(subject_id: str) -> None:
 
 def main():
     """Main entry point for the CLI."""
-    # Configure logging
-    logging.basicConfig(
-        level=logging.INFO,
-        format='%(asctime)s | %(levelname)s | %(name)s | %(message)s'
-    )
-    
     args = parse_args()
+    
+    # Configure logging with user-specified level
+    log_level = getattr(logging, args.log_level)
+    loggers = setup_logging(debug=(log_level == logging.DEBUG))
+    logger = loggers.get('services', logging.getLogger(__name__))
+    
+    # Set log level for all loggers
+    for logger_name in loggers:
+        if isinstance(logger_name, str) and not logger_name.startswith('_'):
+            loggers[logger_name].setLevel(log_level)
+    
     facade = FirmServicesFacade()
     
     if args.interactive:
-        interactive_menu(args.subject_id)
+        interactive_menu(args.subject_id, args.log_level)
         return
     
     try:
@@ -304,6 +345,7 @@ def main():
             print("\nNo command specified. Use --help for usage information.")
             sys.exit(1)
     except Exception as e:
+        logger.error(f"Error in main: {str(e)}", exc_info=True)
         print(f"\nError: {str(e)}")
         sys.exit(1)
 

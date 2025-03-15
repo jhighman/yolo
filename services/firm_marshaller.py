@@ -18,16 +18,13 @@ from functools import wraps, partial
 from dataclasses import dataclass
 from enum import Enum
 
+from utils.logging_config import setup_logging
 from agents.finra_firm_broker_check_agent import FinraFirmBrokerCheckAgent
 from agents.sec_firm_iapd_agent import SECFirmIAPDAgent
 
-# Setup logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s | %(levelname)s | %(name)s | %(message)s',
-    handlers=[logging.StreamHandler()]
-)
-logger = logging.getLogger("FirmMarshaller")
+# Initialize logging
+loggers = setup_logging(debug=True)
+logger = loggers.get('firm_marshaller', logging.getLogger(__name__))
 
 # Configuration
 CACHE_FOLDER = Path(__file__).parent.parent / "cache"
@@ -480,29 +477,89 @@ class FirmMarshaller:
             'raw_data': details
         }
         
-    def normalize_sec_details(self, details: Dict[str, Any]) -> Dict[str, Any]:
+    def normalize_sec_details(self, details: dict) -> dict:
         """
-        Normalize SEC firm details into the standard format.
+        Normalize SEC firm details response into a standard format.
         
         Args:
-            details: Raw SEC firm details
+            details (dict): Raw SEC firm details response
             
         Returns:
-            Normalized firm details with additional SEC-specific fields
+            dict: Normalized firm details with fields:
+                - firm_name (str): Name of the firm
+                - crd_number (str): CRD number
+                - sec_number (str): SEC number in format "{type}-{number}"
+                - registration_status (str): Registration status
+                - address (dict): Office address details
+                - notice_filings (list): State notice filings
+                - registration_date (str): Initial registration date
+                - other_names (list): Alternative firm names
+                - is_sec_registered (bool): Whether firm is SEC registered
+                - is_state_registered (bool): Whether firm is state registered
+                - is_era_registered (bool): Whether firm is ERA registered
+                - adv_filing_date (str): Latest ADV filing date
+                - has_adv_pdf (bool): Whether firm has ADV PDF
+                - accountant_exams (list): Surprise accountant examinations
+                - brochures (list): ADV brochure details
         """
+        if not details or 'hits' not in details or not details['hits'].get('hits'):
+            return {}
+        
+        content = details['hits']['hits'][0]['_source'].get('iacontent', {})
+        if isinstance(content, str):
+            content = json.loads(content)
+        
+        basic_info = content.get('basicInformation', {})
+        address_info = content.get('iaFirmAddressDetails', {}).get('officeAddress', {})
+        reg_status = content.get('registrationStatus', [{}])[0]
+        org_status = content.get('orgScopeStatusFlags', {})
+        
         return {
-            'firm_name': details.get('org_name'),
-            'crd_number': details.get('org_crd'),
-            'sec_number': details.get('firm_ia_full_sec_number'),
-            'source': 'SEC',
-            'registration_status': details.get('registration_status'),
-            'registration_scope': details.get('firm_ia_scope'),
-            'has_disclosures': details.get('firm_ia_disclosure_fl') == 'Y',
-            'branch_count': details.get('firm_branches_count'),
-            'other_names': details.get('firm_other_names', []),
-            'addresses': details.get('addresses', []),
-            'disclosures': details.get('disclosures', []),
-            'raw_data': details
+            'firm_name': basic_info.get('firmName'),
+            'crd_number': str(basic_info.get('firmId')),
+            'sec_number': f"{basic_info.get('iaSECNumberType', '')}-{basic_info.get('iaSECNumber', '')}",
+            'registration_status': reg_status.get('status'),
+            'address': {
+                'street': f"{address_info.get('street1', '')} {address_info.get('street2', '')}".strip(),
+                'city': address_info.get('city'),
+                'state': address_info.get('state'),
+                'zip': address_info.get('postalCode'),
+                'country': address_info.get('country')
+            },
+            'notice_filings': [
+                {
+                    'jurisdiction': filing.get('jurisdiction'),
+                    'status': filing.get('status'),
+                    'effective_date': filing.get('effectiveDate')
+                }
+                for filing in content.get('noticeFilings', [])
+            ],
+            'registration_date': reg_status.get('effectiveDate'),
+            'other_names': basic_info.get('otherNames', []),
+            'is_sec_registered': org_status.get('isSECRegistered') == 'Y',
+            'is_state_registered': org_status.get('isStateRegistered') == 'Y',
+            'is_era_registered': org_status.get('isERARegistered') == 'Y',
+            'is_sec_era_registered': org_status.get('isSECERARegistered') == 'Y',
+            'is_state_era_registered': org_status.get('isStateERARegistered') == 'Y',
+            'adv_filing_date': basic_info.get('advFilingDate'),
+            'has_adv_pdf': basic_info.get('hasPdf') == 'Y',
+            'accountant_exams': [
+                {
+                    'firm_name': exam.get('accountantFirmName'),
+                    'filing_date': exam.get('filingDate'),
+                    'status': exam.get('fileStatus')
+                }
+                for exam in content.get('accountantSurpriseExams', [])
+            ],
+            'brochures': [
+                {
+                    'name': brochure.get('brochureName'),
+                    'version_id': brochure.get('brochureVersionID'),
+                    'date_submitted': brochure.get('dateSubmitted'),
+                    'last_confirmed': brochure.get('lastConfirmed')
+                }
+                for brochure in content.get('brochures', {}).get('brochuredetails', [])
+            ]
         }
 
 if __name__ == "__main__":
