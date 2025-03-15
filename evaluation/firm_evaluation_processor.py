@@ -13,6 +13,7 @@ from typing import Dict, Any, List, Optional, Tuple
 from datetime import datetime, timedelta
 import sys
 from pathlib import Path
+import argparse
 
 # Add parent directory to Python path
 sys.path.append(str(Path(__file__).parent.parent))
@@ -86,6 +87,14 @@ def determine_alert_category(alert_type: str) -> str:
     
     return category_mapping.get(alert_type, "GENERAL")
 
+def parse_iso_date(date_str: str) -> datetime:
+    """Parse ISO format date string to timezone-naive datetime."""
+    if date_str.endswith('Z'):
+        date_str = date_str[:-1]
+    elif '+' in date_str:
+        date_str = date_str.split('+')[0]
+    return datetime.fromisoformat(date_str)
+
 def evaluate_registration_status(business_info: Dict[str, Any]) -> Tuple[bool, str, List[Alert]]:
     """
     Evaluate the firm's registration status with regulatory bodies.
@@ -109,19 +118,7 @@ def evaluate_registration_status(business_info: Dict[str, Any]) -> Tuple[bool, s
     registration_status = business_info.get('registration_status', '').upper()
     registration_date_str = business_info.get('registration_date')
     
-    # Check if any registration is active
-    has_active_registration = any([is_sec_registered, is_finra_registered, is_state_registered])
-    
-    if not has_active_registration:
-        alerts.append(Alert(
-            alert_type="NoActiveRegistration",
-            severity=AlertSeverity.HIGH,
-            metadata={"registration_status": registration_status},
-            description="No active registrations found with any regulatory body"
-        ))
-        return False, "No active registrations found", alerts
-    
-    # Check registration status
+    # Check registration status first
     if registration_status == "TERMINATED":
         alerts.append(Alert(
             alert_type="TerminatedRegistration",
@@ -140,14 +137,22 @@ def evaluate_registration_status(business_info: Dict[str, Any]) -> Tuple[bool, s
         ))
         return False, "Registration is pending", alerts
     
+    # Check if any registration is active
+    has_active_registration = any([is_sec_registered, is_finra_registered, is_state_registered])
+    
+    if not has_active_registration:
+        alerts.append(Alert(
+            alert_type="NoActiveRegistration",
+            severity=AlertSeverity.HIGH,
+            metadata={"registration_status": registration_status},
+            description="No active registrations found with any regulatory body"
+        ))
+        return False, "No active registrations found", alerts
+    
     # Check registration date if available
     if registration_date_str:
         try:
-            # Handle potential Z suffix in ISO format
-            date_str = registration_date_str
-            if date_str.endswith('Z'):
-                date_str = date_str[:-1] + '+00:00'
-            registration_date = datetime.fromisoformat(date_str)
+            registration_date = parse_iso_date(registration_date_str)
             
             if registration_date > datetime.now():
                 alerts.append(Alert(
@@ -217,6 +222,9 @@ def evaluate_regulatory_oversight(business_info: Dict[str, Any], business_name: 
         ))
         return False, "No regulatory oversight detected", alerts
     
+    # If SEC is a regulatory authority, the firm is compliant regardless of notice filings
+    has_sec_authority = "SEC" in regulatory_authorities
+    
     # Evaluate notice filings
     active_filings = []
     terminated_filings = []
@@ -238,11 +246,7 @@ def evaluate_regulatory_oversight(business_info: Dict[str, Any], business_name: 
             continue
             
         try:
-            # Handle potential Z suffix in ISO format
-            date_str = effective_date_str
-            if date_str.endswith('Z'):
-                date_str = date_str[:-1] + '+00:00'
-            effective_date = datetime.fromisoformat(date_str)
+            effective_date = parse_iso_date(effective_date_str)
             
             # Check if filing is terminated
             if termination_date_str:
@@ -284,9 +288,11 @@ def evaluate_regulatory_oversight(business_info: Dict[str, Any], business_name: 
         explanation = f"Firm has active notice filings in {', '.join(active_filings)}"
         if terminated_filings:
             explanation += f" and terminated filings in {', '.join(terminated_filings)}"
-        return len(alerts) == 0, explanation, alerts
     else:
-        return False, "No active notice filings found", alerts
+        explanation = "No active notice filings found"
+    
+    # Return true if SEC authority exists, regardless of notice filings
+    return has_sec_authority, explanation, alerts
 
 def evaluate_disclosures(disclosures: List[Dict[str, Any]], business_name: str) -> Tuple[bool, str, List[Alert]]:
     """
@@ -328,10 +334,7 @@ def evaluate_disclosures(disclosures: List[Dict[str, Any]], business_name: str) 
             continue
             
         try:
-            # Handle potential Z suffix in ISO format
-            if date_str.endswith('Z'):
-                date_str = date_str[:-1] + '+00:00'
-            disclosure_date = datetime.fromisoformat(date_str)
+            disclosure_date = parse_iso_date(date_str)
             
             if status != "RESOLVED":
                 unresolved_count += 1
@@ -408,6 +411,7 @@ def evaluate_financials(business_info: Dict[str, Any], business_name: str) -> Tu
     """
     logger.debug(f"Evaluating financials for {business_name}")
     alerts = []
+    is_outdated = False
     
     # Check ADV filing status
     adv_filing_date_str = business_info.get('adv_filing_date')
@@ -423,13 +427,10 @@ def evaluate_financials(business_info: Dict[str, Any], business_name: str) -> Tu
         return False, "No ADV filing information available", alerts
     
     try:
-        # Handle potential Z suffix in ISO format
-        date_str = adv_filing_date_str
-        if date_str.endswith('Z'):
-            date_str = date_str[:-1] + '+00:00'
-        adv_filing_date = datetime.fromisoformat(date_str)
+        adv_filing_date = parse_iso_date(adv_filing_date_str)
         
         if datetime.now() - adv_filing_date > timedelta(days=365):
+            is_outdated = True
             alerts.append(Alert(
                 alert_type="OutdatedFinancialFiling",
                 severity=AlertSeverity.MEDIUM,
@@ -474,13 +475,11 @@ def evaluate_financials(business_info: Dict[str, Any], business_name: str) -> Tu
             description="Financial disclosure or distress indicator found"
         ))
     
-    # Determine overall financial compliance
-    if not alerts:
-        return True, "No financial issues detected", alerts
-    elif any(a.severity == AlertSeverity.HIGH for a in alerts):
-        return False, "Significant financial concerns detected", alerts
-    else:
-        return False, "Minor financial documentation issues found", alerts
+    # Fail if there are HIGH severity alerts or if both outdated and missing PDF
+    has_high_severity = any(a.severity == AlertSeverity.HIGH for a in alerts)
+    has_both_issues = is_outdated and not has_adv_pdf
+    
+    return not (has_high_severity or has_both_issues), "Financial documentation issues found", alerts
 
 def evaluate_legal(
     business_info: Dict[str, Any],
@@ -594,6 +593,7 @@ def evaluate_qualifications(accountant_exams: List[Dict[str, Any]], business_nam
     failed_exams = []
     outdated_exams = []
     current_exams = []
+    missing_dates = []
     
     for exam in accountant_exams:
         status = exam.get('status', '').upper()
@@ -611,13 +611,11 @@ def evaluate_qualifications(accountant_exams: List[Dict[str, Any]], business_nam
                 },
                 description=f"Missing date for {exam_type} exam"
             ))
+            missing_dates.append(exam_type)
             continue
             
         try:
-            # Handle potential Z suffix in ISO format
-            if date_str.endswith('Z'):
-                date_str = date_str[:-1] + '+00:00'
-            exam_date = datetime.fromisoformat(date_str)
+            exam_date = parse_iso_date(date_str)
             
             if status == 'FAILED':
                 failed_exams.append(exam_type)
@@ -663,11 +661,15 @@ def evaluate_qualifications(accountant_exams: List[Dict[str, Any]], business_nam
             explanation += f"; Outdated: {', '.join(outdated_exams)}"
         if failed_exams:
             explanation += f"; Failed: {', '.join(failed_exams)}"
-        return len(failed_exams) == 0, explanation, alerts
+        if missing_dates:
+            explanation += f"; Missing dates: {', '.join(missing_dates)}"
     elif outdated_exams:
-        return False, f"All qualifications outdated: {', '.join(outdated_exams)}", alerts
+        explanation = f"All qualifications outdated: {', '.join(outdated_exams)}"
     else:
-        return False, f"Failed qualifications: {', '.join(failed_exams)}", alerts
+        explanation = f"Failed qualifications: {', '.join(failed_exams)}"
+    
+    # Only fail if there are failed exams (missing dates and outdated exams are not failures)
+    return len(failed_exams) == 0, explanation, alerts
 
 def evaluate_data_integrity(business_info: Dict[str, Any]) -> Tuple[bool, str, List[Alert]]:
     """
@@ -684,6 +686,7 @@ def evaluate_data_integrity(business_info: Dict[str, Any]) -> Tuple[bool, str, L
     """
     logger.debug("Evaluating data integrity")
     alerts = []
+    has_invalid_dates = False
     
     # Check last update timestamp
     last_updated_str = business_info.get('last_updated')
@@ -694,29 +697,29 @@ def evaluate_data_integrity(business_info: Dict[str, Any]) -> Tuple[bool, str, L
             metadata={},
             description="No last update timestamp found"
         ))
-    else:
-        try:
-            # Handle potential Z suffix in ISO format
-            date_str = last_updated_str
-            if date_str.endswith('Z'):
-                date_str = date_str[:-1] + '+00:00'
-            last_updated = datetime.fromisoformat(date_str)
-            
-            if datetime.now() - last_updated > timedelta(days=180):
-                alerts.append(Alert(
-                    alert_type="OutdatedData",
-                    severity=AlertSeverity.MEDIUM,
-                    metadata={"last_updated": last_updated_str},
-                    description="Data is more than 6 months old"
-                ))
-        except ValueError as e:
-            logger.error(f"Invalid last updated date format: {last_updated_str}")
+        return False, "Missing last update timestamp", alerts
+    
+    try:
+        last_updated = parse_iso_date(last_updated_str)
+        
+        # Only add alert if data is older than 6 months
+        data_age = datetime.now() - last_updated
+        if data_age > timedelta(days=180):
             alerts.append(Alert(
-                alert_type="InvalidLastUpdateDate",
+                alert_type="OutdatedData",
                 severity=AlertSeverity.MEDIUM,
-                metadata={"date": last_updated_str},
-                description="Invalid last update date format"
+                metadata={"last_updated": last_updated_str},
+                description="Data is more than 6 months old"
             ))
+    except ValueError as e:
+        logger.error(f"Invalid last updated date format: {last_updated_str}")
+        alerts.append(Alert(
+            alert_type="InvalidLastUpdateDate",
+            severity=AlertSeverity.HIGH,
+            metadata={"date": last_updated_str},
+            description="Invalid last update date format"
+        ))
+        has_invalid_dates = True
     
     # Check data sources
     data_sources = business_info.get('data_sources', [])
@@ -727,6 +730,7 @@ def evaluate_data_integrity(business_info: Dict[str, Any]) -> Tuple[bool, str, L
             metadata={},
             description="No data sources specified"
         ))
+        return False, "No data sources specified", alerts
     
     # Check cache status
     cache_status = business_info.get('cache_status', {})
@@ -734,16 +738,13 @@ def evaluate_data_integrity(business_info: Dict[str, Any]) -> Tuple[bool, str, L
     cache_date_str = cache_status.get('cache_date')
     ttl = cache_status.get('ttl', 0)
     
-    if is_cached and cache_date_str:
+    if is_cached and cache_date_str and ttl > 0:
         try:
-            # Handle potential Z suffix in ISO format
-            date_str = cache_date_str
-            if date_str.endswith('Z'):
-                date_str = date_str[:-1] + '+00:00'
-            cache_date = datetime.fromisoformat(date_str)
+            cache_date = parse_iso_date(cache_date_str)
             cache_age = datetime.now() - cache_date
             
-            if ttl > 0 and cache_age > timedelta(seconds=ttl):
+            # Only add alert if cache has expired
+            if cache_age > timedelta(seconds=ttl):
                 alerts.append(Alert(
                     alert_type="ExpiredCache",
                     severity=AlertSeverity.LOW,
@@ -758,15 +759,183 @@ def evaluate_data_integrity(business_info: Dict[str, Any]) -> Tuple[bool, str, L
             logger.error(f"Invalid cache date format: {cache_date_str}")
             alerts.append(Alert(
                 alert_type="InvalidCacheDate",
-                severity=AlertSeverity.LOW,
+                severity=AlertSeverity.HIGH,
                 metadata={"date": cache_date_str},
                 description="Invalid cache date format"
             ))
+            has_invalid_dates = True
     
-    # Determine overall data integrity
-    if not alerts:
+    # Return appropriate message based on alerts
+    if has_invalid_dates:
+        return False, "Invalid date formats found", alerts
+    elif not alerts:
         return True, "Data is current and reliable", alerts
     elif any(a.severity == AlertSeverity.HIGH for a in alerts):
         return False, "Significant data integrity issues found", alerts
     else:
-        return False, "Minor data integrity concerns identified", alerts
+        return True, "Data is current with minor concerns", alerts
+
+def main():
+    """Main entry point for the evaluation processor CLI."""
+    parser = argparse.ArgumentParser(
+        description="Firm Evaluation Processor - Evaluate firm compliance and generate reports"
+    )
+    
+    parser.add_argument(
+        "--subject-id",
+        required=True,
+        help="ID of the subject/client making the request"
+    )
+    
+    parser.add_argument(
+        "--log-level",
+        choices=["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"],
+        default="INFO",
+        help="Set the logging level (default: INFO)"
+    )
+    
+    subparsers = parser.add_subparsers(dest="command", help="Available commands")
+    
+    # Evaluate command
+    evaluate_parser = subparsers.add_parser(
+        "evaluate",
+        help="Run evaluations on a firm"
+    )
+    evaluate_parser.add_argument(
+        "firm_name",
+        help="Name of the firm to evaluate"
+    )
+    evaluate_parser.add_argument(
+        "--crd",
+        help="CRD number of the firm (if known)"
+    )
+    
+    # Report command
+    report_parser = subparsers.add_parser(
+        "report",
+        help="Generate a detailed evaluation report"
+    )
+    report_parser.add_argument(
+        "firm_name",
+        help="Name of the firm to report on"
+    )
+    report_parser.add_argument(
+        "--crd",
+        help="CRD number of the firm (if known)"
+    )
+    report_parser.add_argument(
+        "--output",
+        help="Output file path for the report (default: stdout)"
+    )
+    
+    args = parser.parse_args()
+    
+    # Configure logging
+    log_level = getattr(logging, args.log_level)
+    loggers = setup_logging(debug=(log_level == logging.DEBUG))
+    logger = loggers.get('evaluation', logging.getLogger(__name__))
+    
+    # Import here to avoid circular imports
+    from services.firm_services import FirmServicesFacade
+    
+    try:
+        facade = FirmServicesFacade()
+        
+        if args.command == "evaluate":
+            # Get firm details
+            if args.crd:
+                business_info = facade.get_firm_details(args.subject_id, args.crd)
+            else:
+                results = facade.search_firm(args.subject_id, args.firm_name)
+                if not results:
+                    print(f"No firms found matching name: {args.firm_name}")
+                    return
+                business_info = results[0]  # Use first match
+            
+            if not business_info:
+                print(f"Could not retrieve firm information for: {args.firm_name}")
+                return
+            
+            # Run all evaluations
+            evaluations = [
+                ("Registration Status", evaluate_registration_status(business_info)),
+                ("Regulatory Oversight", evaluate_regulatory_oversight(business_info, args.firm_name)),
+                ("Disclosures", evaluate_disclosures(business_info.get('disclosures', []), args.firm_name)),
+                ("Financials", evaluate_financials(business_info, args.firm_name)),
+                ("Legal", evaluate_legal(business_info, args.firm_name)),
+                ("Qualifications", evaluate_qualifications(business_info.get('accountant_exams', []), args.firm_name)),
+                ("Data Integrity", evaluate_data_integrity(business_info))
+            ]
+            
+            # Print results
+            print(f"\nEvaluation Results for {args.firm_name}:")
+            print("-" * 80)
+            
+            for category, (compliant, explanation, alerts) in evaluations:
+                status = "PASS" if compliant else "FAIL"
+                print(f"\n{category}: {status}")
+                print(f"Explanation: {explanation}")
+                if alerts:
+                    print("Alerts:")
+                    for alert in alerts:
+                        print(f"  - [{alert.severity.value}] {alert.alert_type}: {alert.description}")
+            
+        elif args.command == "report":
+            # Similar to evaluate but with more detailed output
+            if args.crd:
+                business_info = facade.get_firm_details(args.subject_id, args.crd)
+            else:
+                results = facade.search_firm(args.subject_id, args.firm_name)
+                if not results:
+                    print(f"No firms found matching name: {args.firm_name}")
+                    return
+                business_info = results[0]  # Use first match
+            
+            if not business_info:
+                print(f"Could not retrieve firm information for: {args.firm_name}")
+                return
+            
+            # Generate detailed report
+            report = {
+                "firm_name": args.firm_name,
+                "evaluation_date": datetime.now().isoformat(),
+                "evaluations": {}
+            }
+            
+            # Run all evaluations
+            evaluators = {
+                "registration_status": evaluate_registration_status,
+                "regulatory_oversight": lambda x: evaluate_regulatory_oversight(x, args.firm_name),
+                "disclosures": lambda x: evaluate_disclosures(x.get('disclosures', []), args.firm_name),
+                "financials": lambda x: evaluate_financials(x, args.firm_name),
+                "legal": lambda x: evaluate_legal(x, args.firm_name),
+                "qualifications": lambda x: evaluate_qualifications(x.get('accountant_exams', []), args.firm_name),
+                "data_integrity": evaluate_data_integrity
+            }
+            
+            for category, evaluator in evaluators.items():
+                compliant, explanation, alerts = evaluator(business_info)
+                report["evaluations"][category] = {
+                    "compliant": compliant,
+                    "explanation": explanation,
+                    "alerts": [alert.to_dict() for alert in alerts]
+                }
+            
+            # Output report
+            if args.output:
+                with open(args.output, 'w') as f:
+                    json.dump(report, f, indent=2)
+                print(f"Report written to: {args.output}")
+            else:
+                print(json.dumps(report, indent=2))
+        
+        else:
+            parser.print_help()
+            
+    except Exception as e:
+        logger.error(f"Error in main: {str(e)}", exc_info=True)
+        print(f"\nError: {str(e)}")
+        sys.exit(1)
+
+if __name__ == "__main__":
+    main()
