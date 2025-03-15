@@ -1,7 +1,9 @@
 """Service for handling firm-specific business logic.
 
 This module contains the core business logic for processing and analyzing firm-related data,
-implementing search strategies and compliance reporting for business entities.
+implementing search strategies, compliance reporting, and risk evaluation for business entities.
+It integrates search functionality with compliance evaluation and report generation to provide
+comprehensive business intelligence and due diligence reporting.
 """
 
 import json
@@ -9,13 +11,31 @@ import logging
 import argparse
 import sys
 from pathlib import Path
-from typing import Dict, Any, Set
+from typing import Dict, Any, Set, Callable, Optional
 from enum import Enum
+from datetime import datetime
 
 # Add parent directory to Python path
 sys.path.append(str(Path(__file__).parent.parent))
 
 from utils.logging_config import setup_logging
+from evaluation.firm_evaluation_processor import (
+    evaluate_registration_status,
+    evaluate_regulatory_oversight,
+    evaluate_disclosures,
+    evaluate_financials,
+    evaluate_legal,
+    evaluate_qualifications,
+    evaluate_data_integrity,
+    Alert,
+    AlertSeverity
+)
+from evaluation.firm_evaluation_report_builder import FirmEvaluationReportBuilder
+from evaluation.firm_evaluation_report_director import (
+    FirmEvaluationReportDirector,
+    InvalidDataError,
+    EvaluationProcessError
+)
 
 # Initialize logging
 loggers = setup_logging(debug=True)
@@ -256,6 +276,266 @@ def main():
     else:
         print("Please use --interactive flag to test search strategies")
         return
+
+@implemented_strategy(SearchStrategy.TAX_ID_AND_CRD.value)
+def search_with_tax_id_and_org_crd(
+    claim: Dict[str, Any],
+    facade: Any,
+    business_ref: str
+) -> Dict[str, Any]:
+    """Search using tax ID and CRD number."""
+    tax_id = claim.get('tax_id')
+    org_crd = claim.get('organization_crd')
+    
+    logger.info(f"Searching with tax_id and CRD", extra={
+        "tax_id": tax_id,
+        "org_crd": org_crd,
+        "business_ref": business_ref
+    })
+    
+    result = facade.search_firm_by_crd(business_ref, org_crd)
+    if result:
+        return {
+            "compliance": True,
+            "compliance_explanation": "Found by CRD",
+            "source": "FINRA",
+            "basic_result": result,
+            "detailed_result": facade.get_firm_details(business_ref, org_crd),
+            "timestamp": datetime.now().isoformat()
+        }
+    return {
+        "compliance": False,
+        "compliance_explanation": "Not found by CRD",
+        "source": "FINRA",
+        "timestamp": datetime.now().isoformat()
+    }
+
+@implemented_strategy(SearchStrategy.CRD_ONLY.value)
+def search_with_crd_only(
+    claim: Dict[str, Any],
+    facade: Any,
+    business_ref: str
+) -> Dict[str, Any]:
+    """Search using CRD number only."""
+    org_crd = claim.get('organization_crd')
+    
+    logger.info(f"Searching with CRD only", extra={
+        "org_crd": org_crd,
+        "business_ref": business_ref
+    })
+    
+    result = facade.search_firm_by_crd(business_ref, org_crd)
+    if result:
+        return {
+            "compliance": True,
+            "compliance_explanation": "Found by CRD",
+            "source": "FINRA",
+            "basic_result": result,
+            "detailed_result": facade.get_firm_details(business_ref, org_crd),
+            "timestamp": datetime.now().isoformat()
+        }
+    return {
+        "compliance": False,
+        "compliance_explanation": "Not found by CRD",
+        "source": "FINRA",
+        "timestamp": datetime.now().isoformat()
+    }
+
+@implemented_strategy(SearchStrategy.NAME_ONLY.value)
+def search_with_name_only(
+    claim: Dict[str, Any],
+    facade: Any,
+    business_ref: str
+) -> Dict[str, Any]:
+    """Search using business name only."""
+    business_name = claim.get('business_name')
+    
+    logger.info(f"Searching with business name only", extra={
+        "business_name": business_name,
+        "business_ref": business_ref
+    })
+    
+    results = facade.search_firm(business_ref, business_name)
+    if results:
+        # Use first match
+        result = results[0]
+        org_crd = result.get('organization_crd')
+        if org_crd:
+            return {
+                "compliance": True,
+                "compliance_explanation": "Found by name",
+                "source": "FINRA",
+                "basic_result": result,
+                "detailed_result": facade.get_firm_details(business_ref, org_crd),
+                "timestamp": datetime.now().isoformat()
+            }
+    return {
+        "compliance": False,
+        "compliance_explanation": "Not found by name",
+        "source": "FINRA",
+        "timestamp": datetime.now().isoformat()
+    }
+
+@implemented_strategy(SearchStrategy.DEFAULT.value)
+def search_with_default(
+    claim: Dict[str, Any],
+    facade: Any,
+    business_ref: str
+) -> Dict[str, Any]:
+    """Default search strategy when no other strategy is applicable."""
+    business_name = claim.get('business_name')
+    
+    logger.info(f"Using default search strategy", extra={
+        "business_name": business_name,
+        "business_ref": business_ref
+    })
+    
+    if business_name:
+        return search_with_name_only(claim, facade, business_ref)
+    
+    return {
+        "compliance": False,
+        "compliance_explanation": "Insufficient search criteria",
+        "source": "UNKNOWN",
+        "timestamp": datetime.now().isoformat()
+    }
+
+def process_claim(
+    claim: Dict[str, Any],
+    facade: Any,  # BusinessServicesFacade instance
+    business_ref: Optional[str] = None,
+    skip_financials: bool = False,
+    skip_legal: bool = False
+) -> Dict[str, Any]:
+    """Process a business claim by executing search, evaluation, and report generation.
+    
+    Args:
+        claim: Dictionary containing business attributes
+        facade: BusinessServicesFacade instance for data retrieval
+        business_ref: Optional business reference ID
+        skip_financials: Flag to skip financial evaluation
+        skip_legal: Flag to skip legal evaluation
+        
+    Returns:
+        Dictionary containing the complete compliance report
+        
+    Raises:
+        InvalidDataError: If claim data is invalid
+        EvaluationProcessError: If evaluation process fails
+    """
+    claim_summary = json.dumps(claim, indent=2)
+    logger.info(f"Processing claim: {claim_summary}", extra={
+        "skip_financials": skip_financials,
+        "skip_legal": skip_legal,
+        "timestamp": datetime.now().isoformat()
+    })
+    
+    # Set business reference
+    if business_ref is None:
+        business_ref = claim.get("business_ref", "BIZ_DEFAULT")
+    
+    # At this point business_ref is guaranteed to be a string
+    assert business_ref is not None
+    business_ref_str: str = business_ref
+    
+    try:
+        # Determine and execute search strategy
+        strategy_type = determine_search_strategy(claim)
+        logger.info(f"Selected search strategy: {strategy_type.value}")
+        
+        search_evaluation = {
+            "compliance": False,
+            "compliance_explanation": "Search not performed",
+            "source": "UNKNOWN",
+            "timestamp": datetime.now().isoformat()
+        }
+        
+        try:
+            # Execute the appropriate search function based on strategy type
+            if strategy_type == SearchStrategy.TAX_ID_AND_CRD:
+                search_evaluation = search_with_tax_id_and_org_crd(claim, facade, business_ref_str)
+            elif strategy_type == SearchStrategy.CRD_ONLY:
+                search_evaluation = search_with_crd_only(claim, facade, business_ref_str)
+            elif strategy_type == SearchStrategy.NAME_ONLY:
+                search_evaluation = search_with_name_only(claim, facade, business_ref_str)
+            else:
+                search_evaluation = search_with_default(claim, facade, business_ref_str)
+                
+        except Exception as e:
+            logger.error(f"Search strategy failed: {str(e)}", exc_info=True)
+            search_evaluation.update({
+                "compliance": False,
+                "compliance_explanation": f"Search failed: {str(e)}",
+                "error": str(e),
+                "error_type": type(e).__name__
+            })
+        
+        # Prepare extracted info for evaluation
+        extracted_info = {
+            "search_evaluation": search_evaluation,
+            "business": {},
+            "business_name": "",
+            "disclosures": [],
+            "accountant_exams": [],
+            "locations": []
+        }
+        
+        if search_evaluation.get("compliance", False):
+            basic_result = search_evaluation.get("basic_result", {})
+            detailed_result = search_evaluation.get("detailed_result", {})
+            
+            extracted_info.update({
+                "business": basic_result,
+                "business_name": basic_result.get("business_name", ""),
+                "disclosures": detailed_result.get("disclosures", []),
+                "accountant_exams": detailed_result.get("accountant_exams", []),
+                "locations": detailed_result.get("locations", [])
+            })
+            
+            # Add skip flags to extracted info
+            if skip_financials:
+                extracted_info["skip_financials"] = True
+            if skip_legal:
+                extracted_info["skip_legal"] = True
+        
+        # Initialize report builder and director
+        builder = FirmEvaluationReportBuilder(claim.get("reference_id", "UNKNOWN"))
+        director = FirmEvaluationReportDirector(builder)
+        
+        # Generate evaluation report
+        try:
+            report = director.construct_evaluation_report(claim, extracted_info)
+            logger.info("Evaluation report generated successfully", extra={
+                "business_ref": business_ref_str,
+                "report_sections": list(report.keys()),
+                "timestamp": datetime.now().isoformat()
+            })
+        except (InvalidDataError, EvaluationProcessError) as e:
+            logger.error(f"Failed to generate evaluation report: {str(e)}", exc_info=True)
+            raise
+        
+        # Save report
+        try:
+            facade.save_business_report(report, business_ref_str)
+            logger.info("Business report saved successfully", extra={
+                "business_ref": business_ref_str,
+                "timestamp": datetime.now().isoformat()
+            })
+        except Exception as e:
+            logger.error(f"Failed to save business report: {str(e)}", exc_info=True)
+            raise EvaluationProcessError(f"Failed to save business report: {str(e)}")
+        
+        logger.info("Claim processing completed", extra={
+            "business_ref": business_ref_str,
+            "claim_summary": claim_summary,
+            "timestamp": datetime.now().isoformat()
+        })
+        
+        return report
+        
+    except Exception as e:
+        logger.error(f"Unexpected error in process_claim: {str(e)}", exc_info=True)
+        raise
 
 if __name__ == "__main__":
     main()

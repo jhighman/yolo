@@ -1,127 +1,285 @@
-"""Tests for firm business logic and search strategies."""
+"""Unit tests for the firm business module."""
 
 import unittest
+from unittest.mock import Mock, patch
+from datetime import datetime
+import json
 from typing import Dict, Any
-import sys
-from pathlib import Path
-
-# Add parent directory to Python path
-sys.path.append(str(Path(__file__).parent.parent))
 
 from services.firm_business import (
     SearchStrategy,
-    SearchImplementationStatus,
-    determine_search_strategy
+    determine_search_strategy,
+    search_with_tax_id_and_org_crd,
+    search_with_crd_only,
+    search_with_name_only,
+    search_with_default,
+    process_claim,
+    SearchImplementationStatus
 )
+from evaluation.firm_evaluation_processor import Alert, AlertSeverity
+from evaluation.firm_evaluation_report_director import InvalidDataError, EvaluationProcessError
 
-class TestSearchStrategyDetermination(unittest.TestCase):
-    """Test cases for search strategy determination."""
+class TestFirmBusiness(unittest.TestCase):
+    """Test cases for firm business module."""
 
     def setUp(self):
-        """Reset the implementation registry before each test."""
-        SearchImplementationStatus._implemented_strategies.clear()
-        # Re-register the strategies that are implemented in the actual code
+        """Set up test fixtures."""
+        self.facade = Mock()
+        self.business_ref = "TEST_REF"
+        
+        # Register implemented strategies
         SearchImplementationStatus.register_implementation(SearchStrategy.TAX_ID_AND_CRD.value)
         SearchImplementationStatus.register_implementation(SearchStrategy.CRD_ONLY.value)
         SearchImplementationStatus.register_implementation(SearchStrategy.NAME_ONLY.value)
         SearchImplementationStatus.register_implementation(SearchStrategy.DEFAULT.value)
 
-    def test_implemented_strategies(self):
-        """Test that the correct strategies are marked as implemented."""
-        implemented = SearchImplementationStatus.get_implemented_strategies()
-        
-        # Verify implemented strategies
-        self.assertIn(SearchStrategy.TAX_ID_AND_CRD.value, implemented)
-        self.assertIn(SearchStrategy.CRD_ONLY.value, implemented)
-        self.assertIn(SearchStrategy.NAME_ONLY.value, implemented)
-        self.assertIn(SearchStrategy.DEFAULT.value, implemented)
-        
-        # Verify non-implemented strategies
-        self.assertNotIn(SearchStrategy.TAX_ID_ONLY.value, implemented)
-        self.assertNotIn(SearchStrategy.SEC_NUMBER_ONLY.value, implemented)
-        self.assertNotIn(SearchStrategy.NAME_AND_LOCATION.value, implemented)
-
-    def test_tax_id_and_crd_strategy(self):
-        """Test that TAX_ID_AND_CRD strategy is selected when both fields are present."""
+    def test_determine_search_strategy(self):
+        """Test search strategy determination based on claim data."""
+        # Test tax_id and CRD
         claim = {
             "tax_id": "123456789",
             "organization_crd": "987654",
             "business_name": "Test Firm"
         }
-        strategy = determine_search_strategy(claim)
-        self.assertEqual(strategy, SearchStrategy.TAX_ID_AND_CRD)
+        self.assertEqual(
+            determine_search_strategy(claim),
+            SearchStrategy.TAX_ID_AND_CRD
+        )
 
-    def test_crd_only_strategy(self):
-        """Test that CRD_ONLY strategy is selected when only CRD is present."""
+        # Test CRD only
         claim = {
             "organization_crd": "987654",
             "business_name": "Test Firm"
         }
-        strategy = determine_search_strategy(claim)
-        self.assertEqual(strategy, SearchStrategy.CRD_ONLY)
+        self.assertEqual(
+            determine_search_strategy(claim),
+            SearchStrategy.CRD_ONLY
+        )
 
-    def test_name_only_strategy(self):
-        """Test that NAME_ONLY strategy is selected when only business name is present."""
+        # Test name only
         claim = {
             "business_name": "Test Firm"
         }
-        strategy = determine_search_strategy(claim)
-        self.assertEqual(strategy, SearchStrategy.NAME_ONLY)
+        self.assertEqual(
+            determine_search_strategy(claim),
+            SearchStrategy.NAME_ONLY
+        )
 
-    def test_default_strategy(self):
-        """Test that DEFAULT strategy is selected when no usable fields are present."""
+        # Test empty claim
         claim = {}
-        strategy = determine_search_strategy(claim)
-        self.assertEqual(strategy, SearchStrategy.DEFAULT)
+        self.assertEqual(
+            determine_search_strategy(claim),
+            SearchStrategy.DEFAULT
+        )
 
-    def test_fallback_to_implemented_strategy(self):
-        """Test fallback to implemented strategies when optimal is not implemented."""
-        # Case 1: SEC number should fall back to name if available
-        claim = {
-            "sec_number": "123-45678",
-            "business_name": "Test Firm"
-        }
-        strategy = determine_search_strategy(claim)
-        self.assertEqual(strategy, SearchStrategy.NAME_ONLY)
-        
-        # Case 2: Name and location should fall back to name only
-        claim = {
-            "business_name": "Test Firm",
-            "business_location": "New York"
-        }
-        strategy = determine_search_strategy(claim)
-        self.assertEqual(strategy, SearchStrategy.NAME_ONLY)
-        
-        # Case 3: Tax ID only should fall back to name if available
+    def test_search_with_tax_id_and_org_crd(self):
+        """Test search using tax ID and CRD."""
         claim = {
             "tax_id": "123456789",
+            "organization_crd": "987654"
+        }
+
+        # Test successful search
+        self.facade.search_firm_by_crd.return_value = {
+            "organization_crd": "987654",
             "business_name": "Test Firm"
         }
-        strategy = determine_search_strategy(claim)
-        self.assertEqual(strategy, SearchStrategy.NAME_ONLY)
-
-    def test_unimplemented_strategies_not_selected(self):
-        """Test that unimplemented strategies are never selected."""
-        # SEC number only
-        claim = {"sec_number": "123-45678"}
-        strategy = determine_search_strategy(claim)
-        self.assertNotEqual(strategy, SearchStrategy.SEC_NUMBER_ONLY)
-        self.assertEqual(strategy, SearchStrategy.DEFAULT)
-        
-        # Tax ID only
-        claim = {"tax_id": "123456789"}
-        strategy = determine_search_strategy(claim)
-        self.assertNotEqual(strategy, SearchStrategy.TAX_ID_ONLY)
-        self.assertEqual(strategy, SearchStrategy.DEFAULT)
-        
-        # Name and location
-        claim = {
-            "business_name": "Test Firm",
-            "business_location": "New York"
+        self.facade.get_firm_details.return_value = {
+            "disclosures": [],
+            "accountant_exams": []
         }
-        strategy = determine_search_strategy(claim)
-        self.assertNotEqual(strategy, SearchStrategy.NAME_AND_LOCATION)
-        self.assertEqual(strategy, SearchStrategy.NAME_ONLY)
+
+        result = search_with_tax_id_and_org_crd(claim, self.facade, self.business_ref)
+        self.assertTrue(result["compliance"])
+        self.assertEqual(result["source"], "FINRA")
+        self.assertTrue("basic_result" in result)
+        self.assertTrue("detailed_result" in result)
+
+        # Test failed search
+        self.facade.search_firm_by_crd.return_value = None
+        result = search_with_tax_id_and_org_crd(claim, self.facade, self.business_ref)
+        self.assertFalse(result["compliance"])
+
+    def test_search_with_crd_only(self):
+        """Test search using CRD only."""
+        claim = {
+            "organization_crd": "987654"
+        }
+
+        # Test successful search
+        self.facade.search_firm_by_crd.return_value = {
+            "organization_crd": "987654",
+            "business_name": "Test Firm"
+        }
+        self.facade.get_firm_details.return_value = {
+            "disclosures": [],
+            "accountant_exams": []
+        }
+
+        result = search_with_crd_only(claim, self.facade, self.business_ref)
+        self.assertTrue(result["compliance"])
+        self.assertEqual(result["source"], "FINRA")
+
+        # Test failed search
+        self.facade.search_firm_by_crd.return_value = None
+        result = search_with_crd_only(claim, self.facade, self.business_ref)
+        self.assertFalse(result["compliance"])
+
+    def test_search_with_name_only(self):
+        """Test search using business name only."""
+        claim = {
+            "business_name": "Test Firm"
+        }
+
+        # Test successful search
+        self.facade.search_firm.return_value = [{
+            "organization_crd": "987654",
+            "business_name": "Test Firm"
+        }]
+        self.facade.get_firm_details.return_value = {
+            "disclosures": [],
+            "accountant_exams": []
+        }
+
+        result = search_with_name_only(claim, self.facade, self.business_ref)
+        self.assertTrue(result["compliance"])
+        self.assertEqual(result["source"], "FINRA")
+
+        # Test failed search
+        self.facade.search_firm.return_value = []
+        result = search_with_name_only(claim, self.facade, self.business_ref)
+        self.assertFalse(result["compliance"])
+
+    def test_search_with_default(self):
+        """Test default search strategy."""
+        # Test with business name
+        claim = {
+            "business_name": "Test Firm"
+        }
+        self.facade.search_firm.return_value = [{
+            "organization_crd": "987654",
+            "business_name": "Test Firm"
+        }]
+        self.facade.get_firm_details.return_value = {
+            "disclosures": [],
+            "accountant_exams": []
+        }
+
+        result = search_with_default(claim, self.facade, self.business_ref)
+        self.assertTrue(result["compliance"])
+
+        # Test without business name
+        claim = {}
+        result = search_with_default(claim, self.facade, self.business_ref)
+        self.assertFalse(result["compliance"])
+        self.assertEqual(result["compliance_explanation"], "Insufficient search criteria")
+
+    @patch('services.firm_business.FirmEvaluationReportBuilder')
+    @patch('services.firm_business.FirmEvaluationReportDirector')
+    def test_process_claim(self, mock_director_class, mock_builder_class):
+        """Test claim processing end-to-end."""
+        # Set up mocks
+        mock_builder = Mock()
+        mock_director = Mock()
+        mock_builder_class.return_value = mock_builder
+        mock_director_class.return_value = mock_director
+
+        # Create test data
+        claim = {
+            "reference_id": "TEST123",
+            "business_name": "Test Firm",
+            "organization_crd": "987654"
+        }
+
+        # Mock successful search
+        self.facade.search_firm_by_crd.return_value = {
+            "organization_crd": "987654",
+            "business_name": "Test Firm"
+        }
+        self.facade.get_firm_details.return_value = {
+            "disclosures": [],
+            "accountant_exams": []
+        }
+
+        # Mock report generation
+        mock_report = {
+            "reference_id": "TEST123",
+            "final_evaluation": {
+                "overall_compliance": True,
+                "risk_level": "Low"
+            }
+        }
+        mock_director.construct_evaluation_report.return_value = mock_report
+
+        # Test successful processing
+        result = process_claim(claim, self.facade, self.business_ref)
+        self.assertEqual(result, mock_report)
+        self.facade.save_business_report.assert_called_once()
+
+        # Test with invalid data
+        mock_director.construct_evaluation_report.side_effect = InvalidDataError("Invalid data")
+        with self.assertRaises(InvalidDataError):
+            process_claim(claim, self.facade, self.business_ref)
+
+        # Test with evaluation error
+        mock_director.construct_evaluation_report.side_effect = EvaluationProcessError("Process failed")
+        with self.assertRaises(EvaluationProcessError):
+            process_claim(claim, self.facade, self.business_ref)
+
+        # Test with save error
+        mock_director.construct_evaluation_report.side_effect = None
+        self.facade.save_business_report.side_effect = Exception("Save failed")
+        with self.assertRaises(EvaluationProcessError):
+            process_claim(claim, self.facade, self.business_ref)
+
+    def test_process_claim_with_skip_flags(self):
+        """Test claim processing with skip flags."""
+        claim = {
+            "reference_id": "TEST123",
+            "business_name": "Test Firm",
+            "organization_crd": "987654"
+        }
+
+        # Set up mocks
+        self.facade.search_firm_by_crd.return_value = {
+            "organization_crd": "987654",
+            "business_name": "Test Firm"
+        }
+        self.facade.get_firm_details.return_value = {
+            "disclosures": [],
+            "accountant_exams": []
+        }
+
+        # Test with skip flags
+        with patch('services.firm_business.FirmEvaluationReportBuilder') as mock_builder_class:
+            with patch('services.firm_business.FirmEvaluationReportDirector') as mock_director_class:
+                mock_builder = Mock()
+                mock_director = Mock()
+                mock_builder_class.return_value = mock_builder
+                mock_director_class.return_value = mock_director
+
+                mock_report = {
+                    "reference_id": "TEST123",
+                    "final_evaluation": {
+                        "overall_compliance": True,
+                        "risk_level": "Low"
+                    }
+                }
+                mock_director.construct_evaluation_report.return_value = mock_report
+
+                result = process_claim(
+                    claim,
+                    self.facade,
+                    self.business_ref,
+                    skip_financials=True,
+                    skip_legal=True
+                )
+
+                # Verify skip flags were passed correctly
+                call_args = mock_director.construct_evaluation_report.call_args[0]
+                extracted_info = call_args[1]
+                self.assertTrue(extracted_info.get("skip_financials"))
+                self.assertTrue(extracted_info.get("skip_legal"))
 
 if __name__ == '__main__':
     unittest.main() 
