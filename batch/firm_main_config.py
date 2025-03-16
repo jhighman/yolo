@@ -21,7 +21,7 @@ canonical_fields = {
     'normalized_name': ['normalizedName', 'Normalized Name', 'normalized_name'],  # New: from "normalizedName"
     'principal': ['principal', 'Principal', 'principal_name'],  # New: from "principal"
     'tax_id': ['taxId', 'Tax ID', 'tax_id', 'ein', 'EIN', 'taxID'],  # Updated: added 'taxID'
-    'organization_crd': ['orgCRD', 'Organization CRD', 'org_crd_number', 'firm_crd', 'organizationCRD', 'organization_crd', 'organizationCrdNumber'],  # Updated: kept broad aliases
+    'organization_crd': ['orgCRD', 'Organization CRD', 'org_crd_number', 'firm_crd', 'organizationCRD', 'organization_crd', 'organizationCrdNumber', 'crd_number'],  # Updated: added 'crd_number' as an alias
     'organization_name': ['orgName', 'Organization Name', 'organization_name', 'firm_name', 'organizationName'],
     'address_line1': ['addressLine1', 'Address Line 1', 'address_line1', 'addressLineOne', 'street1'],  # Updated: added 'street1'
     'address_line2': ['addressLine2', 'Address Line 2', 'address_line2', 'addressLineTwo'],

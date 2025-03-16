@@ -142,17 +142,17 @@ def get_mock_finra_search_results(firm_name: str) -> list:
         }]
     return []
 
-def get_mock_finra_firm_details(crd_number: str) -> dict:
-    """Get mock FINRA firm details for a CRD number."""
+def get_mock_finra_firm_details(organization_crd: str) -> dict:
+    """Get mock FINRA firm details for testing."""
     for firm_data in MOCK_FIRMS.values():
-        if firm_data["finra"]["org_source_id"] == crd_number:
+        if firm_data["finra"]["org_source_id"] == organization_crd:
             return firm_data["finra"]
     return {}
 
-def get_mock_finra_firm_by_crd(crd_number: str) -> dict:
-    """Get mock FINRA firm search results by CRD number."""
+def get_mock_finra_firm_by_crd(organization_crd: str) -> dict:
+    """Get mock FINRA firm by CRD for testing."""
     for firm_data in MOCK_FIRMS.values():
-        if firm_data["finra"]["org_source_id"] == crd_number:
+        if firm_data["finra"]["org_source_id"] == organization_crd:
             return {
                 "org_name": firm_data["finra"]["org_name"],
                 "org_source_id": firm_data["finra"]["org_source_id"],
@@ -178,15 +178,15 @@ def get_mock_sec_search_results(firm_name: str) -> list:
         }]
     return []
 
-def get_mock_sec_firm_details(crd_number: str) -> dict:
-    """Get mock SEC firm details by CRD number."""
-    if crd_number == "131940":
+def get_mock_sec_firm_details(organization_crd: str) -> dict:
+    """Get mock SEC firm details for testing."""
+    if organization_crd == "131940":
         return SEC_FIRM_DETAILS
     return {}
 
-def get_mock_sec_firm_by_crd(crd_number: str) -> dict:
-    """Get mock SEC firm by CRD number."""
+def get_mock_sec_firm_by_crd(organization_crd: str) -> dict:
+    """Get mock SEC firm by CRD for testing."""
     for firm_data in MOCK_FIRMS.values():
-        if firm_data.get('sec', {}).get('org_crd') == crd_number:
+        if firm_data.get('sec', {}).get('org_crd') == organization_crd:
             return firm_data['sec']
     return {} 

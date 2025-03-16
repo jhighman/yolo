@@ -1,0 +1,20 @@
+{
+  "evaluate_search": true,
+  "evaluate_registration": true,
+  "evaluate_disclosures": true,
+  "evaluate_financials": false,
+  "evaluate_legal": false,
+  "skip_financials": true,
+  "skip_legal": true,
+  "enabled_logging_groups": [
+    "agents",
+    "core"
+  ],
+  "logging_levels": {
+    "core": "INFO",
+    "agents": "INFO",
+    "services": "WARNING"
+  },
+  "config_file": "config.json",
+  "default_wait_time": 7.0
+}

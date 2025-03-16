@@ -21,6 +21,15 @@ from utils.logging_config import setup_logging, reconfigure_logging, flush_logs,
 logger = logging.getLogger('main')  # Changed to match the core group logger name
 csv_processor = CSVProcessor()  # Global instance for signal handling
 
+# Define log levels for menu options
+LOG_LEVELS = {
+    "1": ("DEBUG", logging.DEBUG),
+    "2": ("INFO", logging.INFO),
+    "3": ("WARNING", logging.WARNING),
+    "4": ("ERROR", logging.ERROR),
+    "5": ("CRITICAL", logging.CRITICAL)
+}
+
 def signal_handler(sig, frame):
     """Handle interrupt signals by saving checkpoint and exiting."""
     if csv_processor.current_csv and csv_processor.current_line > 0:
@@ -88,21 +97,22 @@ def run_batch_processing(facade: FirmServicesFacade, config: Dict[str, bool], wa
             logger.error(f"Error removing checkpoint file {CHECKPOINT_FILE}: {str(e)}")
 
 def main():
-    parser = argparse.ArgumentParser(description="Firm Compliance CSV Processor")
-    parser.add_argument('--diagnostic', action='store_true', help="Enable verbose debug logging")
+    """Main entry point for the batch processing script."""
+    parser = argparse.ArgumentParser(description='Batch process business entity compliance claims from CSV files.')
+    parser.add_argument('--headless', action='store_true', help='Run in headless mode without interactive menu')
+    parser.add_argument('--debug', action='store_true', help='Enable debug logging')
     parser.add_argument('--wait-time', type=float, default=DEFAULT_WAIT_TIME, help=f"Seconds to wait between records (default: {DEFAULT_WAIT_TIME})")
     parser.add_argument('--skip-financials', action='store_true', help="Skip financial review for all claims")
     parser.add_argument('--skip-legal', action='store_true', help="Skip legal review for all claims")
-    parser.add_argument('--headless', action='store_true', help="Run in headless mode with specified settings")
     args = parser.parse_args()
 
-    # Initialize logging with debug flag from args
-    loggers = setup_logging(args.diagnostic)
+    # Initialize logging with debug mode if specified
+    loggers = setup_logging(debug=args.debug)
     global logger
     logger = loggers['main']  # Use the 'main' logger from the core group
 
     logger.info("=== Starting application ===")
-    logger.debug("Debug logging is enabled" if args.diagnostic else "Debug logging is disabled")
+    logger.debug("Debug logging is enabled" if args.debug else "Debug logging is disabled")
 
     signal.signal(signal.SIGINT, signal_handler)
     signal.signal(signal.SIGTERM, signal_handler)
@@ -115,36 +125,39 @@ def main():
         logger.error(f"Failed to initialize FirmServicesFacade: {str(e)}", exc_info=True)
         return
 
-    LOG_LEVELS = {
-        "1": ("DEBUG", logging.DEBUG),
-        "2": ("INFO", logging.INFO),
-        "3": ("WARNING", logging.WARNING),
-        "4": ("ERROR", logging.ERROR),
-        "5": ("CRITICAL", logging.CRITICAL)
+    # Configure logging groups
+    enabled_groups = {"core", "agents"}  # Enable both core and agents groups
+    group_levels = {
+        "core": "INFO",
+        "agents": "INFO"
     }
+    
+    # Reconfigure logging with the specified groups and levels
+    reconfigure_logging(loggers, enabled_groups, group_levels)
+    
+    # Load configuration
+    config = load_config()
+    wait_time = config.get("wait_time", args.wait_time)
 
     if args.headless:
+        # Headless mode configuration
         config = {
-            "evaluate_search": True,
-            "evaluate_registration": True,
-            "evaluate_disclosures": True,
             "evaluate_financials": False,
             "evaluate_legal": False,
             "skip_financials": args.skip_financials,
             "skip_legal": args.skip_legal,
-            "enabled_logging_groups": ["core"],  # Default to core group only
-            "logging_levels": {"core": "INFO"},
+            "enabled_logging_groups": ["core", "agents"],  # Include both core and agents groups
+            "logging_levels": {"core": "INFO", "agents": "INFO"},
             "config_file": "config.json",
             "default_wait_time": DEFAULT_WAIT_TIME
         }
         if not (args.skip_financials or args.skip_legal):
             loaded_config = load_config()
             config.update({
-                "skip_financials": loaded_config.get("skip_financials", True),
-                "skip_legal": loaded_config.get("skip_legal", True),
-                "enabled_logging_groups": loaded_config.get("enabled_logging_groups", ["core"]),
-                "logging_levels": loaded_config.get("logging_levels", {"core": "INFO"})
+                "evaluate_financials": not loaded_config.get("skip_financials", True),
+                "evaluate_legal": not loaded_config.get("skip_legal", True)
             })
+        
         # Reconfigure logging based on loaded settings
         reconfigure_logging(loggers, set(config["enabled_logging_groups"]), config["logging_levels"])
         run_batch_processing(facade, config, args.wait_time, loggers)
@@ -153,8 +166,8 @@ def main():
     # Interactive mode settings
     skip_financials = True
     skip_legal = True
-    enabled_groups = {"core"}  # Start with core group enabled
-    group_levels = {"core": "INFO", "services": "WARNING", "agents": "WARNING"}  # Default levels for all groups
+    enabled_groups = {"core", "agents"}  # Start with both core and agents groups enabled
+    group_levels = {"core": "INFO", "agents": "INFO", "services": "WARNING"}  # Default levels for all groups
     wait_time = DEFAULT_WAIT_TIME
 
     config = {

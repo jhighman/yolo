@@ -36,14 +36,14 @@ REQUEST_LOG_FILE = "request_log.txt"
 # Agent service mapping
 AGENT_SERVICES: Dict[str, Dict[str, Callable]] = {
     "FINRA_FirmBrokerCheck_Agent": {
-        "search_firm": FinraFirmBrokerCheckAgent().search_firm,
-        "search_firm_by_crd": FinraFirmBrokerCheckAgent().search_firm_by_crd,
-        "get_firm_details": FinraFirmBrokerCheckAgent().get_firm_details
+        "search_firm": FinraFirmBrokerCheckAgent(logger=loggers.get('finra_brokercheck')).search_firm,
+        "search_firm_by_crd": FinraFirmBrokerCheckAgent(logger=loggers.get('finra_brokercheck')).search_firm_by_crd,
+        "get_firm_details": FinraFirmBrokerCheckAgent(logger=loggers.get('finra_brokercheck')).get_firm_details
     },
     "SEC_FirmIAPD_Agent": {
-        "search_firm": SECFirmIAPDAgent().search_firm,
-        "search_firm_by_crd": SECFirmIAPDAgent().search_firm_by_crd,
-        "get_firm_details": SECFirmIAPDAgent().get_firm_details
+        "search_firm": SECFirmIAPDAgent(logger=loggers.get('sec_iapd')).search_firm,
+        "search_firm_by_crd": SECFirmIAPDAgent(logger=loggers.get('sec_iapd')).search_firm_by_crd,
+        "get_firm_details": SECFirmIAPDAgent(logger=loggers.get('sec_iapd')).get_firm_details
     }
 }
 
@@ -240,6 +240,10 @@ def fetch_agent_data(agent_name: str, service: str, params: Dict[str, Any]) -> t
         agent_fn = AGENT_SERVICES[agent_name][service]
         start_time = time.time()
         
+        # Map crd_number to organization_crd if present
+        if 'crd_number' in params:
+            params['organization_crd'] = params.pop('crd_number')
+        
         result = agent_fn(**params)
         duration = time.time() - start_time
         
@@ -404,10 +408,10 @@ def main():
         isinstance(finra_response.data, list) and 
         finra_response.data):
         
-        crd_number = finra_response.data[0].get("crd_number")
-        if crd_number:
-            print(f"\nGetting details for CRD: {crd_number}")
-            finra_details = fetch_finra_firm_details(subject_id, firm_id, {"crd_number": crd_number})
+        organization_crd = finra_response.data[0].get("organization_crd")
+        if organization_crd:
+            print(f"\nGetting details for CRD: {organization_crd}")
+            finra_details = fetch_finra_firm_details(subject_id, firm_id, {"organization_crd": organization_crd})
             print("\nFINRA Firm Details Response:")
             print(f"Status: {finra_details.status.value}")
             print(f"Message: {finra_details.message}")
@@ -430,7 +434,7 @@ class FirmMarshaller:
         """
         return {
             'firm_name': result.get('org_name'),
-            'crd_number': result.get('org_source_id'),
+            'organization_crd': result.get('org_source_id'),
             'source': 'FINRA',
             'raw_data': result
         }
@@ -447,7 +451,7 @@ class FirmMarshaller:
         """
         return {
             'firm_name': result.get('org_name'),
-            'crd_number': result.get('org_crd'),
+            'organization_crd': result.get('org_crd'),
             'sec_number': result.get('firm_ia_full_sec_number'),
             'source': 'SEC',
             'other_names': result.get('firm_other_names', []),
@@ -469,7 +473,7 @@ class FirmMarshaller:
         """
         return {
             'firm_name': details.get('org_name'),
-            'crd_number': details.get('org_source_id'),
+            'organization_crd': details.get('org_source_id'),
             'source': 'FINRA',
             'registration_status': details.get('registration_status'),
             'addresses': details.get('addresses', []),
@@ -487,7 +491,7 @@ class FirmMarshaller:
         Returns:
             dict: Normalized firm details with fields:
                 - firm_name (str): Name of the firm
-                - crd_number (str): CRD number
+                - organization_crd (str): CRD number
                 - sec_number (str): SEC number in format "{type}-{number}"
                 - registration_status (str): Registration status
                 - address (dict): Office address details
@@ -516,7 +520,7 @@ class FirmMarshaller:
         
         return {
             'firm_name': basic_info.get('firmName'),
-            'crd_number': str(basic_info.get('firmId')),
+            'organization_crd': str(basic_info.get('firmId')),
             'sec_number': f"{basic_info.get('iaSECNumberType', '')}-{basic_info.get('iaSECNumber', '')}",
             'registration_status': reg_status.get('status'),
             'address': {
