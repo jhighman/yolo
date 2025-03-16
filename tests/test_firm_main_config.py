@@ -2,7 +2,7 @@ import unittest
 import os
 import json
 import tempfile
-from input.batch.firm_main_config import (
+from batch.firm_main_config import (
     load_config,
     save_config,
     DEFAULT_CONFIG,
