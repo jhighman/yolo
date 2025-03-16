@@ -1,8 +1,5 @@
 """
-firm_compliance_report_agent.py
-
-This module provides functionality for saving compliance reports to the cache folder
-under a business_ref subfolder, with versioning based on significant changes.
+Agent for handling firm compliance report operations.
 """
 
 import json
@@ -11,7 +8,7 @@ from pathlib import Path
 from typing import Dict, Any, Optional, List
 from datetime import datetime
 
-from ..cache_manager.config import DEFAULT_CACHE_FOLDER as CACHE_FOLDER, DATE_FORMAT
+from cache_manager.config import DEFAULT_CACHE_FOLDER as CACHE_FOLDER, DATE_FORMAT
 
 # Configure logging
 logger = logging.getLogger(__name__)

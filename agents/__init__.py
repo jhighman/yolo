@@ -1,11 +1,10 @@
-"""Agents module for URL-based resource searching.
-
-This module contains various agent implementations that are designed to search
-and extract information from different URL-based resources.
+"""
+Agents package for handling external service interactions.
 """
 
-from .finra_firm_broker_check_agent import FinraFirmBrokerCheckAgent
-from .sec_firm_iapd_agent import SECFirmIAPDAgent
+from .finra_firm_broker_check_agent import *
+from .sec_firm_iapd_agent import *
+from .firm_compliance_report_agent import *
 
 __all__ = [
     'FinraFirmBrokerCheckAgent',

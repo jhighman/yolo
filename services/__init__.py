@@ -1,3 +1,8 @@
-"""Services package for firm-related data processing."""
+"""
+Services package for business logic and data processing.
+"""
 
-__all__ = []
+from .firm_services import FirmServicesFacade
+from .firm_business import process_claim
+
+__all__ = ['FirmServicesFacade', 'process_claim']
