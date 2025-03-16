@@ -23,7 +23,6 @@ logger = logging.getLogger('firm_main_csv_processing')
 class SkipScenario(Enum):
     NO_BUSINESS_REF = "Missing business reference"
     NO_BUSINESS_NAME = "Missing business name"
-    NO_TAX_ID = "Missing tax ID"
     NO_IDENTIFIERS = "Missing all identifiers (organization_crd, business_name)"
 
 class CSVProcessor:
@@ -78,9 +77,6 @@ class CSVProcessor:
         business_name = claim.get('business_name', '').strip()
         if not business_name:
             issues.append(SkipScenario.NO_BUSINESS_NAME.value)
-        tax_id = claim.get('tax_id', '').strip()
-        if not tax_id:
-            issues.append(SkipScenario.NO_TAX_ID.value)
         org_crd = claim.get('organization_crd', '').strip()
         if not (org_crd or business_name):
             issues.append(SkipScenario.NO_IDENTIFIERS.value)
