@@ -1,66 +1,42 @@
+"""
+firm_compliance_report_agent.py
+
+This module provides functionality for saving compliance reports to the cache folder
+under a business_ref subfolder, with versioning based on significant changes.
+"""
+
 import json
 import logging
-from datetime import datetime
 from pathlib import Path
-from typing import Dict, Any, Optional
-import re
+from typing import Dict, Any, Optional, List
+from datetime import datetime
 
+from ..cache_manager.config import DEFAULT_CACHE_FOLDER as CACHE_FOLDER, DATE_FORMAT
+
+# Configure logging
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
 
-CACHE_FOLDER = Path("cache/compliance_reports")
-DATE_FORMAT = "%Y%m%d"
-
-def has_significant_changes(new_report: dict, old_report: dict) -> bool:
+def has_significant_changes(new_report: Dict[str, Any], old_report: Dict[str, Any]) -> bool:
     """
-    Compare two compliance reports to detect significant changes.
-    Returns True if significant changes are found, False otherwise.
+    Compare two compliance reports to determine if significant changes warrant a new version.
+    
+    Args:
+        new_report: The new compliance report to evaluate
+        old_report: The latest cached report for comparison
+        
+    Returns:
+        bool: True if compliance flags or alert count differ, False otherwise
     """
     try:
-        # Check if any required fields are missing
-        required_fields = ["final_evaluation"]
-        for field in required_fields:
-            if field not in new_report or field not in old_report:
-                logging.debug(f"Missing required field: {field}")
-                return True
-
-        # Check if any fields in final_evaluation are missing
-        required_eval_fields = ["overall_compliance", "alert_summary", "alerts"]
-        for field in required_eval_fields:
-            if field not in new_report["final_evaluation"] or field not in old_report["final_evaluation"]:
-                logging.debug(f"Missing field in final_evaluation: {field}")
-                return True
-
-        # Compare overall compliance
-        if new_report["final_evaluation"]["overall_compliance"] != old_report["final_evaluation"]["overall_compliance"]:
-            logging.debug("Overall compliance changed")
+        # Check overall compliance
+        new_compliance = new_report.get("final_evaluation", {}).get("overall_compliance")
+        old_compliance = old_report.get("final_evaluation", {}).get("overall_compliance")
+        
+        if new_compliance != old_compliance:
+            logger.debug(f"Overall compliance changed: {old_compliance} -> {new_compliance}")
             return True
-
-        # Compare alert summary
-        new_summary = new_report["final_evaluation"]["alert_summary"]
-        old_summary = old_report["final_evaluation"]["alert_summary"]
-        for severity in ["high", "medium", "low"]:
-            if new_summary.get(severity, 0) != old_summary.get(severity, 0):
-                logging.debug(f"Alert count changed for severity {severity}")
-                return True
-
-        # Compare alerts
-        new_alerts = new_report["final_evaluation"]["alerts"]
-        old_alerts = old_report["final_evaluation"]["alerts"]
-        if len(new_alerts) != len(old_alerts):
-            logging.debug("Alert count changed")
-            return True
-
-        # Compare alert contents
-        for new_alert, old_alert in zip(sorted(new_alerts, key=lambda x: x.get("type", "")), 
-                                      sorted(old_alerts, key=lambda x: x.get("type", ""))):
-            if (new_alert.get("type") != old_alert.get("type") or
-                new_alert.get("severity") != old_alert.get("severity") or
-                new_alert.get("message") != old_alert.get("message")):
-                logging.debug("Alert content changed")
-                return True
-
-        # Compare section compliance
+        
+        # Check section compliances
         sections = [
             "search_evaluation",
             "registration_status",
@@ -71,96 +47,141 @@ def has_significant_changes(new_report: dict, old_report: dict) -> bool:
             "qualifications",
             "data_integrity"
         ]
+        
         for section in sections:
-            if section in new_report and section in old_report:
-                new_compliance = new_report[section].get("compliance")
-                old_compliance = old_report[section].get("compliance")
-                if new_compliance != old_compliance:
-                    logging.debug(f"Section compliance changed for {section}: {old_compliance} -> {new_compliance}")
-                    return True
-            else:
-                # If any section is missing in either report, consider it a change
-                logging.debug(f"Missing section: {section}")
+            new_section = new_report.get(section, {}).get("compliance")
+            old_section = old_report.get(section, {}).get("compliance")
+            
+            if new_section != old_section:
+                logger.debug(f"{section} compliance changed: {old_section} -> {new_section}")
                 return True
-
-        logging.debug("No significant changes detected")
+        
+        # Compare alert counts
+        new_alerts = new_report.get("final_evaluation", {}).get("alerts", [])
+        old_alerts = old_report.get("final_evaluation", {}).get("alerts", [])
+        
+        if len(new_alerts) != len(old_alerts):
+            logger.debug(f"Alert count changed: {len(old_alerts)} -> {len(new_alerts)}")
+            return True
+        
+        # No significant changes detected
         return False
-
+        
     except Exception as e:
-        logging.error(f"Error comparing reports: {e}")
-        # Return True on error to ensure a new version is created
+        logger.error(f"Error comparing reports: {str(e)}")
+        # Return True to be safe (will create new version)
         return True
 
-def get_version_number(filename: str) -> int:
-    """Extract version number from filename."""
-    match = re.search(r"_v(\d+)_", filename)
-    return int(match.group(1)) if match else 0
-
-def save_compliance_report(report: dict, business_ref: Optional[str] = None) -> bool:
+def _get_latest_version(files: List[Path], reference_id: str, date_str: str) -> int:
     """
-    Save a compliance report to the cache directory with versioning.
-    Returns True if the report was saved successfully, False otherwise.
+    Get the latest version number from existing files.
+    
+    Args:
+        files: List of existing file paths
+        reference_id: Report reference ID
+        date_str: Date string in the filename
+        
+    Returns:
+        int: Latest version number, or 0 if no files exist
+    """
+    version = 0
+    prefix = f"FirmComplianceReport_{reference_id}_v"
+    suffix = f"_{date_str}.json"
+    
+    for file in files:
+        name = file.name
+        if name.startswith(prefix) and name.endswith(suffix):
+            try:
+                current = int(name[len(prefix):-len(suffix)].split('_')[0])
+                version = max(version, current)
+            except (ValueError, IndexError):
+                continue
+    
+    return version
+
+def save_compliance_report(
+    report: Dict[str, Any],
+    business_ref: Optional[str] = None,
+    logger: logging.Logger = logger
+) -> bool:
+    """
+    Save a compliance report to the cache with versioning based on changes.
+    
+    Args:
+        report: Compliance report dictionary (must contain reference_id)
+        business_ref: Optional business identifier (e.g., "BIZ_001")
+        logger: Logger instance for custom logging
+        
+    Returns:
+        bool: True if saved successfully, False otherwise
     """
     try:
-        # Validate report format
-        if not isinstance(report, dict) or "final_evaluation" not in report:
-            logging.error("Invalid report format")
+        # Validate report
+        if not isinstance(report, dict) or not report:
+            logger.error("Invalid report: must be a non-empty dictionary")
             return False
-
-        # Get business reference from report if not provided
+        
+        reference_id = report.get("reference_id")
+        if not reference_id:
+            logger.error("Missing reference_id in report")
+            return False
+        
+        # Get business_ref from input, report, or default
         if not business_ref:
-            business_ref = report.get("claim", {}).get("business_ref")
-            if not business_ref:
-                logging.error("No business reference found in report")
-                return False
-
-        # Create cache directory
-        cache_dir = CACHE_FOLDER / business_ref
-        cache_dir.mkdir(parents=True, exist_ok=True)
-
-        # Get current date and find existing versions
-        current_date = datetime.now().strftime(DATE_FORMAT)
-        pattern = f"FirmComplianceReport_{business_ref}_v*_{current_date}.json"
-        existing_files = sorted(cache_dir.glob(pattern))
-
-        # Determine next version number
-        if not existing_files:
-            version = 1
-        else:
-            latest_file = existing_files[-1]
-            latest_version = get_version_number(latest_file.stem)
-            if latest_version is None:
-                version = 1
-            else:
-                # Check if there are significant changes
-                try:
-                    with open(latest_file, 'r') as f:
-                        content = f.read()
-                        if not content:
-                            version = latest_version + 1
-                        else:
-                            latest_report = json.loads(content)
-                            if has_significant_changes(report, latest_report):
-                                version = latest_version + 1
-                            else:
-                                logging.info("No significant changes detected, skipping save")
-                                return True
-                except (json.JSONDecodeError, IOError) as e:
-                    logging.error(f"Error reading latest version: {e}")
-                    version = latest_version + 1
-
-        # Save new version
-        filename = f"FirmComplianceReport_{business_ref}_v{version}_{current_date}.json"
-        filepath = cache_dir / filename
-        try:
-            with open(filepath, 'w') as f:
-                json.dump(report, f, indent=2)
-            logging.info(f"Saved compliance report: {filepath}")
-            return True
-        except IOError as e:
-            logging.error(f"Error saving compliance report: {e}")
+            business_ref = report.get("claim", {}).get("business_ref", "Unknown")
+        
+        if not isinstance(business_ref, str):
+            logger.error(f"Invalid business_ref type: {type(business_ref)}")
             return False
-
+        
+        logger.info(f"Processing compliance report for reference_id={reference_id}, business_ref={business_ref}")
+        
+        # Create cache directory
+        cache_path = CACHE_FOLDER / business_ref
+        cache_path.mkdir(parents=True, exist_ok=True)
+        
+        # Generate date string for filename
+        date_str = datetime.now().strftime(DATE_FORMAT)
+        
+        # Find existing files for this reference_id and date
+        existing_files = sorted(
+            cache_path.glob(f"FirmComplianceReport_{reference_id}_v*_{date_str}.json")
+        )
+        
+        # Get latest version and file
+        latest_version = _get_latest_version(existing_files, reference_id, date_str)
+        latest_file = None if not existing_files else existing_files[-1]
+        
+        # Check for significant changes if we have a previous version
+        should_save = True
+        if latest_file and latest_file.exists():
+            try:
+                with latest_file.open('r') as f:
+                    old_report = json.load(f)
+                should_save = has_significant_changes(report, old_report)
+            except Exception as e:
+                logger.error(f"Error reading latest file: {str(e)}")
+                should_save = True  # Save new version if we can't compare
+        
+        if not should_save:
+            logger.info(f"No significant changes detected for {reference_id}, skipping save")
+            return True
+        
+        # Create new version
+        new_version = latest_version + 1
+        new_filename = f"FirmComplianceReport_{reference_id}_v{new_version}_{date_str}.json"
+        new_path = cache_path / new_filename
+        
+        # Save new version
+        try:
+            with new_path.open('w') as f:
+                json.dump(report, f, indent=2)
+            logger.info(f"Saved compliance report: {new_path}")
+            return True
+        except Exception as e:
+            logger.error(f"Failed to save report: {str(e)}")
+            return False
+            
     except Exception as e:
-        logging.error(f"Error saving compliance report: {e}")
+        logger.error(f"Unexpected error in save_compliance_report: {str(e)}")
         return False
