@@ -404,329 +404,285 @@ class SummaryGenerator:
 
     def _build_tree(self, data: Any) -> TaxonomyNode:
         """
-        Recursively build a hierarchical tree from a JSON object for taxonomy generation.
-
+        Build a taxonomy tree from any data structure.
+        
         Args:
-            data (Any): JSON data to process (dict, list, or primitive).
-
+            data: Any Python data structure
+            
         Returns:
-            TaxonomyNode: Nested dictionary with "_types" (set of data types) and "children".
+            TaxonomyNode: Tree representation of the data structure
         """
-        node: TaxonomyNode = {"_types": set(), "children": {}}
+        types = set()
+        children: Union[Dict[str, TaxonomyNode], List[Any]] = {}
         
         if isinstance(data, dict):
-            node["_types"].add("dict")
-            node["children"] = {
-                key: cast(Dict[str, Any], self._build_tree(value))
+            types.add("dict")
+            children = {
+                key: self._build_tree(value)
                 for key, value in data.items()
             }
         elif isinstance(data, list):
-            node["_types"].add("list")
-            node["children"] = [
-                cast(Dict[str, Any], self._build_tree(item))
-                for item in data
-            ]
+            types.add("list")
+            children = [self._build_tree(item) for item in data]
+        elif isinstance(data, bool):  # Check for bool before int/float since bool is a subclass of int
+            types.add("bool")
+        elif isinstance(data, (int, float)):
+            types.add("number")
+        elif isinstance(data, str):
+            types.add("str")
+        elif data is None:
+            types.add("null")
         else:
-            node["_types"].add(type(data).__name__)
-            node["children"] = {}
-            
-        return node
-
-    def _merge_trees(self, base_tree: TaxonomyNode, new_tree: TaxonomyNode) -> None:
-        """
-        Merge a new taxonomy tree into an existing base tree in-place.
-
-        Args:
-            base_tree (TaxonomyNode): The existing tree to merge into.
-            new_tree (TaxonomyNode): The new tree to merge from.
-        """
-        base_tree["_types"].update(new_tree["_types"])
+            types.add(type(data).__name__)
         
-        if isinstance(base_tree["children"], dict) and isinstance(new_tree["children"], dict):
-            for key, value in new_tree["children"].items():
-                if key not in base_tree["children"]:
-                    base_tree["children"][key] = value
+        return {
+            "_types": types,
+            "children": children
+        }
+
+    def _merge_trees(self, tree1: TaxonomyNode, tree2: TaxonomyNode) -> None:
+        """
+        Merge two taxonomy trees in-place.
+        
+        Args:
+            tree1: First tree (modified in-place)
+            tree2: Second tree to merge into the first
+        """
+        tree1["_types"].update(tree2["_types"])
+        
+        if isinstance(tree1["children"], dict) and isinstance(tree2["children"], dict):
+            for key, subtree2 in tree2["children"].items():
+                if key in tree1["children"]:
+                    self._merge_trees(cast(TaxonomyNode, tree1["children"][key]), subtree2)
                 else:
-                    self._merge_trees(
-                        cast(TaxonomyNode, base_tree["children"][key]),
-                        cast(TaxonomyNode, value)
-                    )
-        elif isinstance(base_tree["children"], list) and isinstance(new_tree["children"], list):
-            while len(base_tree["children"]) < len(new_tree["children"]):
-                base_tree["children"].append({"_types": set(), "children": {}})
-            for i in range(len(new_tree["children"])):
-                self._merge_trees(
-                    cast(TaxonomyNode, base_tree["children"][i]),
-                    cast(TaxonomyNode, new_tree["children"][i])
-                )
-
-    def _print_tree(self, tree: TaxonomyNode, indent: int = 0, field_name: str = "<root>") -> str:
-        """
-        Recursively pretty-print the taxonomy tree with indentation.
-
-        Args:
-            tree (TaxonomyNode): The taxonomy tree to print.
-            indent (int): Current indentation level (default: 0).
-            field_name (str): Name of the current field (default: "<root>").
-
-        Returns:
-            str: Formatted string representation of the tree.
-        """
-        lines = []
-        prefix = "  " * indent
-        type_str = f"{{'{', '.join(sorted(tree['_types']))}'}}"
-        lines.append(f"{prefix}- {field_name} (types={type_str})")
-        
-        if isinstance(tree["children"], dict):
-            for key, value in sorted(tree["children"].items()):
-                lines.append(self._print_tree(
-                    cast(TaxonomyNode, value),
-                    indent + 1,
-                    field_name=key
-                ))
-        elif isinstance(tree["children"], list):
-            for i, child in enumerate(tree["children"]):
-                lines.append(self._print_tree(
-                    cast(TaxonomyNode, child),
-                    indent + 1,
-                    field_name=f"[{i}]"
-                ))
-            
-        return "\n".join(lines)
-
-    def _check_field_value(self, data: Dict[str, Any], field_path: str) -> Tuple[bool, str]:
-        """
-        Check if a field exists and has a non-null, non-empty value.
-
-        Args:
-            data (Dict[str, Any]): The JSON data to check.
-            field_path (str): Dot-separated path to the field (e.g., "claim.business_name").
-
-        Returns:
-            Tuple[bool, str]: (has_value, status_message)
-                - has_value: True if the field has a non-null, non-empty value.
-                - status_message: "Has Value", "Missing", "Null", or "Empty" indicating the field's state.
-        """
-        keys = field_path.split(".")
-        current = data
-        for key in keys:
-            if isinstance(current, dict) and key in current:
-                current = current[key]
-            else:
-                return False, "Missing"
-        if current is None:
-            return False, "Null"
-        if isinstance(current, str) and not current.strip():
-            return False, "Empty"
-        return True, "Has Value"
+                    cast(Dict[str, TaxonomyNode], tree1["children"])[key] = subtree2
 
     def generate_taxonomy_from_latest_reports(self) -> str:
         """
         Generate a taxonomy tree from the latest FirmComplianceReport JSON files.
-
+        
         Returns:
-            str: Human-readable representation of the taxonomy tree.
+            str: Human-readable representation of the taxonomy tree
         """
         try:
-            if self.compliance_handler:
-                reports_json = self.compliance_handler.list_compliance_reports(
-                    page=1,
-                    page_size=99999
-                )
-                reports_data = json.loads(reports_json)
-                
-                if reports_data.get("status") != "success":
-                    return f"Error generating taxonomy: {reports_data.get('message', 'Unknown error')}"
-                
-                reports = []
-                for business_ref, report_list in reports_data.get("reports", {}).items():
-                    for report_info in report_list:
-                        try:
-                            file_path = Path(f"{business_ref}/{report_info['file_name']}")
-                            if report_data := self.file_handler.read_json(file_path):
-                                reports.append(report_data)
-                        except Exception as e:
-                            logger.error(f"Error reading file {file_path}: {str(e)}")
-                            continue
-            else:
-                reports = []
-                for file_path in self.file_handler.list_files(".", "FirmComplianceReport_*.json"):
-                    try:
-                        if report_data := self.file_handler.read_json(file_path):
-                            reports.append(report_data)
-                    except Exception as e:
-                        logger.error(f"Error reading file {file_path}: {str(e)}")
-                        continue
-
-            if not reports:
-                return "No valid reports found for taxonomy generation"
-
-            # Initialize combined_tree as a proper TaxonomyNode
-            combined_tree: TaxonomyNode = {"_types": set(), "children": {}}
+            if not self.compliance_handler:
+                return "Error: No compliance handler available"
             
-            for report in reports:
-                try:
-                    report_tree = self._build_tree(report)
-                    self._merge_trees(combined_tree, report_tree)
-                except Exception as e:
-                    logger.error(f"Error merging taxonomy tree: {str(e)}")
-                    continue
-
-            return f"Generated taxonomy tree from {len(reports)} reports:\n{json.dumps(combined_tree, indent=2)}"
-
+            reports_json = self.compliance_handler.list_compliance_reports(page=1, page_size=99999)
+            reports_data = json.loads(reports_json)
+            
+            if reports_data.get("status") != "success":
+                return f"Error: {reports_data.get('message', 'Failed to retrieve reports')}"
+            
+            combined_tree: Optional[TaxonomyNode] = None
+            
+            for business_ref, reports_list in reports_data.get("reports", {}).items():
+                for report_info in reports_list:
+                    try:
+                        file_path = Path(report_info["file_name"])
+                        if report_data := self.file_handler.read_json(file_path):
+                            tree = self._build_tree(report_data)
+                            if combined_tree is None:
+                                combined_tree = tree
+                            else:
+                                self._merge_trees(combined_tree, tree)
+                    except Exception as e:
+                        logger.error(f"Error processing file {file_path}: {str(e)}")
+                        continue
+            
+            if combined_tree is None:
+                return "No valid reports found to generate taxonomy"
+            
+            return self._format_taxonomy_tree(combined_tree)
+            
         except Exception as e:
             logger.error(f"Error generating taxonomy: {str(e)}")
             return f"Error generating taxonomy: {str(e)}"
 
+    def _format_taxonomy_tree(self, tree: TaxonomyNode, indent: int = 0) -> str:
+        """
+        Format a taxonomy tree for human-readable output.
+        
+        Args:
+            tree: TaxonomyNode to format
+            indent: Current indentation level
+            
+        Returns:
+            str: Human-readable tree representation
+        """
+        result = []
+        prefix = "  " * indent
+        
+        types_str = ", ".join(sorted(tree["_types"]))
+        result.append(f"{prefix}Types: {types_str}")
+        
+        if isinstance(tree["children"], dict):
+            for key, subtree in sorted(tree["children"].items()):
+                result.append(f"{prefix}{key}:")
+                result.append(self._format_taxonomy_tree(subtree, indent + 1))
+        elif isinstance(tree["children"], list) and tree["children"]:
+            result.append(f"{prefix}Items:")
+            for subtree in tree["children"]:
+                result.append(self._format_taxonomy_tree(subtree, indent + 1))
+        
+        return "\n".join(result)
+
     def generate_risk_dashboard(self) -> str:
         """
         Generate a compliance risk dashboard from the latest reports.
-
+        
         Returns:
-            str: Human-readable risk dashboard.
+            str: Human-readable risk dashboard
         """
         try:
-            if self.compliance_handler:
-                reports_json = self.compliance_handler.list_compliance_reports(
-                    page=1,
-                    page_size=99999
-                )
-                reports_data = json.loads(reports_json)
-                
-                if reports_data.get("status") != "success":
-                    return f"Error generating risk dashboard: {reports_data.get('message', 'Unknown error')}"
-                
-                reports = []
-                for business_ref, report_list in reports_data.get("reports", {}).items():
-                    for report_info in report_list:
-                        try:
-                            file_path = Path(f"{business_ref}/{report_info['file_name']}")
-                            if report_data := self.file_handler.read_json(file_path):
-                                reports.append(report_data)
-                        except Exception as e:
-                            logger.error(f"Error reading file {file_path}: {str(e)}")
-                            continue
-            else:
-                reports = []
-                for file_path in self.file_handler.list_files(".", "FirmComplianceReport_*.json"):
+            if not self.compliance_handler:
+                return "Error: No compliance handler available"
+            
+            reports_json = self.compliance_handler.list_compliance_reports(page=1, page_size=99999)
+            reports_data = json.loads(reports_json)
+            
+            if reports_data.get("status") != "success":
+                return f"Error: {reports_data.get('message', 'Failed to retrieve reports')}"
+            
+            risk_levels = {"Low": 0, "Medium": 0, "High": 0, "Unknown": 0}
+            total_alerts = 0
+            top_alerts: Dict[str, int] = defaultdict(int)
+            
+            for business_ref, reports_list in reports_data.get("reports", {}).items():
+                for report_info in reports_list:
                     try:
+                        file_path = Path(report_info["file_name"])
                         if report_data := self.file_handler.read_json(file_path):
-                            reports.append(report_data)
+                            final_eval = report_data.get("final_evaluation", {})
+                            risk_level = final_eval.get("overall_risk_level", "Unknown")
+                            risk_levels[risk_level] += 1
+                            
+                            alerts = final_eval.get("alerts", [])
+                            total_alerts += len(alerts)
+                            
+                            for alert in alerts:
+                                alert_type = alert.get("alert_type", "Unknown")
+                                top_alerts[alert_type] += 1
+                                
                     except Exception as e:
-                        logger.error(f"Error reading file {file_path}: {str(e)}")
+                        logger.error(f"Error processing file {file_path}: {str(e)}")
                         continue
-
-            if not reports:
-                return "No valid reports found for risk dashboard generation"
-
-            risk_categories = {
-                "Low": [],
-                "Medium": [],
-                "High": [],
-                "Unknown": []
-            }
-
-            for report in reports:
-                try:
-                    alerts = report.get("final_evaluation", {}).get("alerts", [])
-                    severity = max((alert.get("severity", "Unknown") for alert in alerts), default="Unknown")
-                    risk_categories[severity].append(report.get("claim", {}).get("business_ref", "Unknown"))
-                except Exception as e:
-                    logger.error(f"Error processing report for risk dashboard: {str(e)}")
-                    continue
-
-            dashboard = ["Firm Compliance Risk Dashboard", "-" * 30]
-            for risk_level, firms in risk_categories.items():
-                dashboard.append(f"\n{risk_level} Risk Firms ({len(firms)}):")
-                for firm in firms:
-                    dashboard.append(f"- {firm}")
-
-            return "\n".join(dashboard)
-
+            
+            # Format dashboard
+            lines = [
+                "Firm Compliance Risk Dashboard",
+                "===========================",
+                "",
+                "Risk Level Distribution:",
+                f"- High Risk Firms:   {risk_levels['High']}",
+                f"- Medium Risk Firms: {risk_levels['Medium']}",
+                f"- Low Risk Firms:    {risk_levels['Low']}",
+                f"- Unknown Risk:      {risk_levels['Unknown']}",
+                "",
+                f"Total Alerts: {total_alerts}",
+                "",
+                "Top Alert Types:",
+            ]
+            
+            # Add top 10 alert types
+            for alert_type, count in sorted(top_alerts.items(), key=lambda x: (-x[1], x[0]))[:10]:
+                lines.append(f"- {alert_type}: {count}")
+            
+            return "\n".join(lines)
+            
         except Exception as e:
             logger.error(f"Error generating risk dashboard: {str(e)}")
             return f"Error generating risk dashboard: {str(e)}"
 
     def generate_data_quality_report(self) -> str:
         """
-        Generate a data quality report checking for non-null, non-empty values.
-
+        Generate a data quality report from the latest reports.
+        
         Returns:
-            str: Human-readable data quality report.
+            str: Human-readable data quality report
         """
         try:
-            if self.compliance_handler:
-                reports_json = self.compliance_handler.list_compliance_reports(
-                    page=1,
-                    page_size=99999
-                )
-                reports_data = json.loads(reports_json)
-                
-                if reports_data.get("status") != "success":
-                    return f"Error generating data quality report: {reports_data.get('message', 'Unknown error')}"
-                
-                reports = []
-                for business_ref, report_list in reports_data.get("reports", {}).items():
-                    for report_info in report_list:
-                        try:
-                            file_path = Path(f"{business_ref}/{report_info['file_name']}")
-                            if report_data := self.file_handler.read_json(file_path):
-                                reports.append(report_data)
-                        except Exception as e:
-                            logger.error(f"Error reading file {file_path}: {str(e)}")
-                            continue
-            else:
-                reports = []
-                for file_path in self.file_handler.list_files(".", "FirmComplianceReport_*.json"):
-                    try:
-                        if report_data := self.file_handler.read_json(file_path):
-                            reports.append(report_data)
-                    except Exception as e:
-                        logger.error(f"Error reading file {file_path}: {str(e)}")
-                        continue
-
-            if not reports:
-                return "No valid reports found for data quality analysis"
-
-            total_reports = len(reports)
+            if not self.compliance_handler:
+                return "Error: No compliance handler available"
+            
+            reports_json = self.compliance_handler.list_compliance_reports(page=1, page_size=99999)
+            reports_data = json.loads(reports_json)
+            
+            if reports_data.get("status") != "success":
+                return f"Error: {reports_data.get('message', 'Failed to retrieve reports')}"
+            
+            total_reports = 0
             field_stats = {
-                "claim.business_name": {"present": 0, "missing": 0, "examples": []},
-                "claim.business_ref": {"present": 0, "missing": 0, "examples": []},
-                "final_evaluation.alerts": {"present": 0, "missing": 0, "examples": []}
+                "claim.business_name": {"present": 0, "missing": 0, "empty": 0, "examples": set()},
+                "claim.business_ref": {"present": 0, "missing": 0, "empty": 0, "examples": set()},
+                "final_evaluation.alerts": {"present": 0, "missing": 0, "empty": 0},
+                "final_evaluation.overall_compliance": {"present": 0, "missing": 0},
+                "final_evaluation.overall_risk_level": {"present": 0, "missing": 0, "examples": set()}
             }
-
-            for report in reports:
-                try:
-                    for field_path, stats in field_stats.items():
-                        parts = field_path.split(".")
-                        value = report
-                        for part in parts:
-                            value = value.get(part, {})
-                        
-                        if value and value != {}:
-                            stats["present"] += 1
-                            if len(stats["examples"]) < 3:
-                                stats["examples"].append(str(value))
-                        else:
-                            stats["missing"] += 1
-                except Exception as e:
-                    logger.error(f"Error processing report for data quality: {str(e)}")
-                    continue
-
-            report_lines = ["Firm Data Quality Report", "-" * 25]
-            for field_path, stats in field_stats.items():
-                present_pct = (stats["present"] / total_reports) * 100
-                report_lines.extend([
-                    f"\n{field_path}:",
-                    f"Present: {stats['present']} ({present_pct:.1f}%)",
-                    f"Missing: {stats['missing']}",
-                    "Examples:" if stats["examples"] else "No examples available"
+            
+            for business_ref, reports_list in reports_data.get("reports", {}).items():
+                for report_info in reports_list:
+                    try:
+                        file_path = Path(report_info["file_name"])
+                        if report_data := self.file_handler.read_json(file_path):
+                            total_reports += 1
+                            
+                            # Check claim fields
+                            claim = report_data.get("claim", {})
+                            self._check_field(field_stats, "claim.business_name", 
+                                           claim.get("business_name"), store_example=True)
+                            self._check_field(field_stats, "claim.business_ref",
+                                           claim.get("business_ref"), store_example=True)
+                            
+                            # Check final evaluation fields
+                            final_eval = report_data.get("final_evaluation", {})
+                            self._check_field(field_stats, "final_evaluation.alerts",
+                                           final_eval.get("alerts"))
+                            self._check_field(field_stats, "final_evaluation.overall_compliance",
+                                           final_eval.get("overall_compliance"))
+                            self._check_field(field_stats, "final_evaluation.overall_risk_level",
+                                           final_eval.get("overall_risk_level"), store_example=True)
+                            
+                    except Exception as e:
+                        logger.error(f"Error processing file {file_path}: {str(e)}")
+                        continue
+            
+            # Format report
+            lines = [
+                "Firm Data Quality Report",
+                "=====================",
+                "",
+                f"Total Reports Analyzed: {total_reports}",
+                "",
+                "Field Statistics:",
+            ]
+            
+            for field, stats in field_stats.items():
+                present_pct = (stats["present"] / total_reports * 100) if total_reports > 0 else 0
+                lines.extend([
+                    f"\n{field}:",
+                    f"- Present: {stats['present']} ({present_pct:.1f}%)",
+                    f"- Missing: {stats['missing']}",
+                    f"- Empty: {stats.get('empty', 0)}"
                 ])
-                for example in stats["examples"]:
-                    report_lines.append(f"- {example}")
-
-            return "\n".join(report_lines)
-
+                
+                if "examples" in stats and stats["examples"]:
+                    examples = sorted(stats["examples"])[:3]  # Show up to 3 examples
+                    lines.append(f"- Examples: {', '.join(str(ex) for ex in examples)}")
+            
+            return "\n".join(lines)
+            
         except Exception as e:
             logger.error(f"Error generating data quality report: {str(e)}")
             return f"Error generating data quality report: {str(e)}"
+
+    def _check_field(self, stats: Dict[str, Dict[str, Any]], field: str, value: Any, store_example: bool = False) -> None:
+        """Helper method for data quality report to check field presence and content."""
+        if value is None:
+            stats[field]["missing"] += 1
+        else:
+            stats[field]["present"] += 1
+            if isinstance(value, (str, list)) and not value:
+                stats[field]["empty"] += 1
+            if store_example and value and len(stats[field]["examples"]) < 5:
+                stats[field]["examples"].add(str(value)) 
