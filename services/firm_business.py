@@ -359,7 +359,7 @@ def search_with_name_only(
     if results:
         # Use first match
         result = results[0]
-        org_crd = result.get('organization_crd')
+        org_crd = result.get('crd_number') or result.get('organization_crd')
         if org_crd:
             return {
                 "compliance": True,

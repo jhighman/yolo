@@ -50,6 +50,135 @@ MOCK_FIRMS = {
             ],
             "disclosures": []
         }
+    },
+    "Able Wealth Management, LLC": {
+        "finra": {
+            "org_name": "Able Wealth Management, LLC",
+            "org_source_id": "298085",
+            "registration_status": "APPROVED",
+            "addresses": [
+                {
+                    "address_type": "MAIN",
+                    "street_1": "695 Cross Street",
+                    "street_2": "",
+                    "city": "Lakewood",
+                    "state": "NJ",
+                    "zip": "8701",
+                    "country": "UNITED STATES"
+                }
+            ],
+            "disclosures": []
+        },
+        "sec": {
+            "org_name": "Able Wealth Management, LLC",
+            "org_crd": "298085",
+            "firm_ia_sec_number": "123456",
+            "firm_ia_full_sec_number": "801-123456",
+            "firm_other_names": [],
+            "firm_type": "Investment Adviser",
+            "registration_status": "ACTIVE",
+            "firm_ia_scope": "ACTIVE",
+            "firm_ia_disclosure_fl": "N",
+            "firm_branches_count": 1,
+            "addresses": [
+                {
+                    "address_type": "MAIN OFFICE",
+                    "street_1": "695 Cross Street",
+                    "street_2": "",
+                    "city": "Lakewood",
+                    "state": "NJ",
+                    "zip": "8701",
+                    "country": "UNITED STATES"
+                }
+            ],
+            "disclosures": []
+        }
+    },
+    "Adell, Harriman & Carpenter, Inc.": {
+        "finra": {
+            "org_name": "Adell, Harriman & Carpenter, Inc.",
+            "org_source_id": "107488",
+            "registration_status": "APPROVED",
+            "addresses": [
+                {
+                    "address_type": "MAIN",
+                    "street_1": "2700 Post Oak Blvd.",
+                    "street_2": "Suite 1200",
+                    "city": "Houston",
+                    "state": "TX",
+                    "zip": "77056",
+                    "country": "UNITED STATES"
+                }
+            ],
+            "disclosures": []
+        },
+        "sec": {
+            "org_name": "Adell, Harriman & Carpenter, Inc.",
+            "org_crd": "107488",
+            "firm_ia_sec_number": "234567",
+            "firm_ia_full_sec_number": "801-234567",
+            "firm_other_names": [],
+            "firm_type": "Investment Adviser",
+            "registration_status": "ACTIVE",
+            "firm_ia_scope": "ACTIVE",
+            "firm_ia_disclosure_fl": "N",
+            "firm_branches_count": 1,
+            "addresses": [
+                {
+                    "address_type": "MAIN OFFICE",
+                    "street_1": "2700 Post Oak Blvd.",
+                    "street_2": "Suite 1200",
+                    "city": "Houston",
+                    "state": "TX",
+                    "zip": "77056",
+                    "country": "UNITED STATES"
+                }
+            ],
+            "disclosures": []
+        }
+    },
+    "ALLIANCE GLOBAL PARTNERS, LLC": {
+        "finra": {
+            "org_name": "ALLIANCE GLOBAL PARTNERS, LLC",
+            "org_source_id": "8361",
+            "registration_status": "APPROVED",
+            "addresses": [
+                {
+                    "address_type": "MAIN",
+                    "street_1": "88 Post Road West",
+                    "street_2": "",
+                    "city": "Westport",
+                    "state": "CT",
+                    "zip": "6880",
+                    "country": "UNITED STATES"
+                }
+            ],
+            "disclosures": []
+        },
+        "sec": {
+            "org_name": "ALLIANCE GLOBAL PARTNERS, LLC",
+            "org_crd": "8361",
+            "firm_ia_sec_number": "345678",
+            "firm_ia_full_sec_number": "801-345678",
+            "firm_other_names": [],
+            "firm_type": "Investment Adviser",
+            "registration_status": "ACTIVE",
+            "firm_ia_scope": "ACTIVE",
+            "firm_ia_disclosure_fl": "N",
+            "firm_branches_count": 1,
+            "addresses": [
+                {
+                    "address_type": "MAIN OFFICE",
+                    "street_1": "88 Post Road West",
+                    "street_2": "",
+                    "city": "Westport",
+                    "state": "CT",
+                    "zip": "6880",
+                    "country": "UNITED STATES"
+                }
+            ],
+            "disclosures": []
+        }
     }
 }
 
@@ -133,6 +262,7 @@ SEC_FIRM_DETAILS = {
 
 def get_mock_finra_search_results(firm_name: str) -> list:
     """Get mock FINRA search results for a firm name."""
+    # First try exact match
     if firm_name in MOCK_FIRMS:
         firm_data = MOCK_FIRMS[firm_name]["finra"]
         return [{
@@ -140,6 +270,18 @@ def get_mock_finra_search_results(firm_name: str) -> list:
             "org_source_id": firm_data["org_source_id"],
             "registration_status": firm_data["registration_status"]
         }]
+    
+    # Try case-insensitive match
+    firm_name_lower = firm_name.lower()
+    for key, value in MOCK_FIRMS.items():
+        if key.lower() == firm_name_lower:
+            firm_data = value["finra"]
+            return [{
+                "org_name": firm_data["org_name"],
+                "org_source_id": firm_data["org_source_id"],
+                "registration_status": firm_data["registration_status"]
+            }]
+    
     return []
 
 def get_mock_finra_firm_details(crd_number: str) -> dict:
@@ -162,6 +304,7 @@ def get_mock_finra_firm_by_crd(crd_number: str) -> dict:
 
 def get_mock_sec_search_results(firm_name: str) -> list:
     """Get mock SEC search results for a firm name."""
+    # First try exact match
     if firm_name in MOCK_FIRMS:
         firm_data = MOCK_FIRMS[firm_name]["sec"]
         return [{
@@ -176,11 +319,32 @@ def get_mock_sec_search_results(firm_name: str) -> list:
             "firm_ia_disclosure_fl": firm_data["firm_ia_disclosure_fl"],
             "firm_branches_count": firm_data["firm_branches_count"]
         }]
+    
+    # Try case-insensitive match
+    firm_name_lower = firm_name.lower()
+    for key, value in MOCK_FIRMS.items():
+        if key.lower() == firm_name_lower:
+            firm_data = value["sec"]
+            return [{
+                "org_name": firm_data["org_name"],
+                "org_crd": firm_data["org_crd"],
+                "firm_ia_sec_number": firm_data["firm_ia_sec_number"],
+                "firm_ia_full_sec_number": firm_data["firm_ia_full_sec_number"],
+                "firm_other_names": firm_data["firm_other_names"],
+                "firm_type": firm_data["firm_type"],
+                "registration_status": firm_data["registration_status"],
+                "firm_ia_scope": firm_data["firm_ia_scope"],
+                "firm_ia_disclosure_fl": firm_data["firm_ia_disclosure_fl"],
+                "firm_branches_count": firm_data["firm_branches_count"]
+            }]
+    
     return []
 
 def get_mock_sec_firm_details(crd_number: str) -> dict:
     """Get mock SEC firm details by CRD number."""
-    if crd_number == "131940":
+    # For now, return the same SEC_FIRM_DETAILS for all CRD numbers
+    # In a real implementation, we would have different details for each CRD
+    if crd_number in ["131940", "298085", "107488", "8361"]:
         return SEC_FIRM_DETAILS
     return {}
 
