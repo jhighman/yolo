@@ -438,6 +438,9 @@ def process_claim(
     assert business_ref is not None
     business_ref_str: str = business_ref
     
+    # Ensure business_ref is in the claim for FirmEvaluationReportDirector
+    claim["business_ref"] = business_ref_str
+    
     try:
         # Determine and execute search strategy
         strategy_type = determine_search_strategy(claim)

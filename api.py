@@ -15,6 +15,8 @@ Use endpoints like `/process-claim-basic`, `/cache/clear`, `/compliance/latest`,
 - Integrates `cache_manager` for cache operations and `firm-business` for claim processing.
 - Uses `FirmServicesFacade` for claim processing and `CacheManager` for cache management.
 - Supports asynchronous webhook notifications for processed claims.
+- Accepts and echoes back additional fields from inbound data, including workProduct,
+  entity information, address details, and more.
 """
 
 import json
@@ -66,12 +68,29 @@ PROCESSING_MODES = {
 
 # Define the request model using Pydantic with mandatory fields
 class ClaimRequest(BaseModel):
+    # Original required fields
     reference_id: str
     business_ref: str
     business_name: str
     tax_id: str
     organization_crd: Optional[str] = None
     webhook_url: Optional[str] = None
+    
+    # New fields from inbound data examples
+    _id: Optional[Dict[str, str]] = None
+    type: Optional[str] = None
+    workProduct: Optional[str] = None
+    entity: Optional[str] = None
+    entityName: Optional[str] = None
+    name: Optional[str] = None
+    normalizedName: Optional[str] = None
+    principal: Optional[str] = None
+    street1: Optional[str] = None
+    city: Optional[str] = None
+    state: Optional[str] = None
+    zip: Optional[str] = None
+    status: Optional[str] = None
+    notes: Optional[str] = None
 
     class Config:
         extra = "allow"
@@ -107,8 +126,14 @@ async def process_claim_helper(request: ClaimRequest, mode: str) -> Dict[str, An
 
     # Convert Pydantic model to dict for process_claim
     claim = request.dict(exclude_unset=True)
-    business_ref = claim.pop("business_ref")
-    webhook_url = claim.pop("webhook_url", None)
+    business_ref = claim.get("business_ref")  # Get but don't remove business_ref
+    webhook_url = claim.pop("webhook_url", None)  # Only remove webhook_url
+    
+    # Ensure all fields from the inbound data are included in the claim
+    # Map any fields that need special handling
+    if "_id" in claim and isinstance(claim["_id"], dict) and "$oid" in claim["_id"]:
+        # Extract the ObjectId value if it exists in MongoDB format
+        claim["mongo_id"] = claim["_id"]["$oid"]
 
     try:
         # Process the claim using firm-business.py with updated parameters
@@ -127,6 +152,13 @@ async def process_claim_helper(request: ClaimRequest, mode: str) -> Dict[str, An
         # Report is saved to cache/<business_ref>/ by process_claim
         logger.info(f"Successfully processed claim for reference_id={request.reference_id} with mode={mode}")
 
+        # Include the original claim data in the response with business_ref
+        if "claim" not in report:
+            # Create a complete claim with all fields including business_ref
+            complete_claim = claim.copy()
+            complete_claim["business_ref"] = business_ref
+            report["claim"] = complete_claim
+
         # Handle webhook if provided
         if webhook_url:
             asyncio.create_task(send_to_webhook(webhook_url, report, request.reference_id))
@@ -140,7 +172,24 @@ async def process_claim_helper(request: ClaimRequest, mode: str) -> Dict[str, An
 # Claim Processing Endpoint
 @app.post("/process-claim-basic", response_model=Dict[str, Any])
 async def process_claim_basic(request: ClaimRequest):
-    """Process a claim with basic mode (skips all reviews)."""
+    """
+    Process a claim with basic mode (skips all reviews).
+    
+    This endpoint accepts additional fields from inbound data such as:
+    - workProduct: Work product identifier
+    - entity: Entity identifier
+    - entityName: Entity name
+    - normalizedName: Normalized entity name
+    - principal: Principal name
+    - street1: Street address
+    - city: City
+    - state: State
+    - zip: ZIP code
+    - status: Status
+    - notes: Additional notes
+    
+    All provided fields will be echoed back in the response under the 'claim' key.
+    """
     return await process_claim_helper(request, "basic")
 
 @app.get("/processing-modes")
