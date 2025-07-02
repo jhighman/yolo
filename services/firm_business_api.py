@@ -12,7 +12,7 @@ from typing import Dict, Any, Optional
 import asyncio
 import aiohttp
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, HttpUrl
+from pydantic import BaseModel, HttpUrl, root_validator, validator
 import sys
 from pathlib import Path
 
@@ -53,16 +53,59 @@ PROCESSING_MODES = {
 
 class ClaimRequest(BaseModel):
     """Validates incoming claim data."""
+    # Required fields
     reference_id: str
-    business_name: str
+    business_ref: str
+    
+    # Optional fields (at least one identifier required)
+    business_name: Optional[str] = None
     tax_id: Optional[str] = None
     organization_crd: Optional[str] = None
     business_location: Optional[str] = None
-    business_ref: Optional[str] = None
-    webhook_url: Optional[HttpUrl] = None  # Using HttpUrl for URL validation
+    webhook_url: Optional[HttpUrl] = None
 
     class Config:
         extra = "allow"  # Allow additional fields
+
+    @validator("reference_id")
+    def validate_reference_id(cls, v):
+        """Validate that reference_id is not empty."""
+        if not v or not v.strip():
+            logger.error("Validation failed: reference_id is empty")
+            raise ValueError("reference_id cannot be empty")
+        return v.strip()
+
+    @validator("business_ref")
+    def validate_business_ref(cls, v):
+        """Validate that business_ref is not empty."""
+        if not v or not v.strip():
+            logger.error("Validation failed: business_ref is empty")
+            raise ValueError("business_ref cannot be empty")
+        return v.strip()
+
+    @root_validator(pre=True)
+    def validate_identifiers(cls, values):
+        """Validate that at least one identifier is provided."""
+        identifiers = [
+            values.get("business_name"),
+            values.get("tax_id"),
+            values.get("organization_crd")
+        ]
+        
+        # Log the identifiers being checked
+        logger.info("Checking identifiers:", extra={
+            "business_name": values.get("business_name"),
+            "tax_id": values.get("tax_id"),
+            "organization_crd": values.get("organization_crd")
+        })
+        
+        # Check if at least one identifier has a non-empty value
+        if not any(id for id in identifiers if id and isinstance(id, str) and id.strip()):
+            logger.error("Validation failed: No valid identifier provided")
+            raise ValueError(
+                "At least one identifier (business_name, tax_id, or organization_crd) must be provided"
+            )
+        return values
 
 async def send_to_webhook(webhook_url: str, report: Dict[str, Any], reference_id: str) -> None:
     """

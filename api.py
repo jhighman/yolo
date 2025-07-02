@@ -21,8 +21,8 @@ Use endpoints like `/process-claim-basic`, `/cache/clear`, `/compliance/latest`,
 
 import json
 from typing import Dict, Any, Optional
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
+from fastapi import FastAPI, HTTPException, Request
+from pydantic import BaseModel, root_validator, validator
 import aiohttp
 import asyncio
 import logging
@@ -68,11 +68,13 @@ PROCESSING_MODES = {
 
 # Define the request model using Pydantic with mandatory fields
 class ClaimRequest(BaseModel):
-    # Original required fields
+    # Required fields
     reference_id: str
     business_ref: str
-    business_name: str
-    tax_id: str
+    
+    # Optional fields
+    business_name: Optional[str] = None
+    tax_id: Optional[str] = None
     organization_crd: Optional[str] = None
     webhook_url: Optional[str] = None
     
@@ -174,22 +176,31 @@ async def process_claim_helper(request: ClaimRequest, mode: str) -> Dict[str, An
 async def process_claim_basic(request: ClaimRequest):
     """
     Process a claim with basic mode (skips all reviews).
-    
-    This endpoint accepts additional fields from inbound data such as:
-    - workProduct: Work product identifier
-    - entity: Entity identifier
-    - entityName: Entity name
-    - normalizedName: Normalized entity name
-    - principal: Principal name
-    - street1: Street address
-    - city: City
-    - state: State
-    - zip: ZIP code
-    - status: Status
-    - notes: Additional notes
-    
-    All provided fields will be echoed back in the response under the 'claim' key.
     """
+    # Log the incoming request data
+    logger.info("Received request data:", extra={
+        "request_data": request.dict(),
+        "endpoint": "/process-claim-basic"
+    })
+    
+    # Validate that at least one identifier is provided
+    identifiers = [
+        request.business_name,
+        request.tax_id,
+        request.organization_crd
+    ]
+    
+    if not any(id for id in identifiers if id and isinstance(id, str) and id.strip()):
+        logger.error("Validation failed: No valid identifier provided")
+        raise HTTPException(
+            status_code=422,
+            detail={
+                "error": "Validation Error",
+                "message": "At least one identifier (business_name, tax_id, or organization_crd) must be provided",
+                "provided_data": request.dict(exclude_unset=True)
+            }
+        )
+    
     return await process_claim_helper(request, "basic")
 
 @app.get("/processing-modes")

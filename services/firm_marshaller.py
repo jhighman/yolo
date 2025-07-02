@@ -467,19 +467,62 @@ class FirmMarshaller:
         Returns:
             Normalized firm details
         """
-        return {
-            'firm_name': details.get('org_name'),
-            'crd_number': details.get('org_source_id'),
-            'source': 'FINRA',
-            'registration_status': details.get('registration_status'),
-            'addresses': details.get('addresses', []),
-            'disclosures': details.get('disclosures', []),
-            'raw_data': details
-        }
+        logger.debug(f"Normalizing FINRA details: {type(details)}")
+        
+        if not details:
+            logger.warning("Empty details provided to normalize_finra_details")
+            return {}
+            
+        # Extract content based on response format
+        try:
+            # Check if the response has a content field that needs to be parsed
+            content = details.get('content', details)
+            if isinstance(content, str):
+                try:
+                    content = json.loads(content)
+                    logger.debug("Successfully parsed content JSON string")
+                except json.JSONDecodeError as e:
+                    logger.error(f"Failed to parse content JSON: {e}")
+                    content = details
+            
+            # Extract basic information
+            basic_info = {}
+            if 'basicInformation' in content and isinstance(content['basicInformation'], dict):
+                basic_info = content['basicInformation']
+            
+            # Get firm name and CRD number
+            firm_name = basic_info.get('firmName') or details.get('org_name')
+            firm_id = basic_info.get('firmId') or details.get('org_source_id')
+            crd_number = str(firm_id) if firm_id is not None else None
+            
+            return {
+                'firm_name': firm_name,
+                'crd_number': crd_number,
+                'source': 'FINRA',
+                'registration_status': details.get('registration_status') or basic_info.get('iaScope'),
+                'addresses': details.get('addresses', []),
+                'disclosures': details.get('disclosures', []),
+                'raw_data': content
+            }
+        except Exception as e:
+            logger.error(f"Error normalizing FINRA details: {e}")
+            return {
+                'firm_name': details.get('org_name'),
+                'crd_number': details.get('org_source_id'),
+                'source': 'FINRA',
+                'registration_status': details.get('registration_status'),
+                'addresses': details.get('addresses', []),
+                'disclosures': details.get('disclosures', []),
+                'raw_data': details
+            }
         
     def normalize_sec_details(self, details: dict) -> dict:
         """
         Normalize SEC firm details response into a standard format.
+        
+        This method handles various response formats from the SEC API and extracts
+        firm details into a consistent structure. It's designed to be robust against
+        different response structures and missing fields.
         
         Args:
             details (dict): Raw SEC firm details response
@@ -502,65 +545,135 @@ class FirmMarshaller:
                 - accountant_exams (list): Surprise accountant examinations
                 - brochures (list): ADV brochure details
         """
-        if not details or 'hits' not in details or not details['hits'].get('hits'):
+        logger.debug(f"Normalizing SEC details: {type(details)}")
+        
+        if not details:
+            logger.warning("Empty details provided to normalize_sec_details")
             return {}
-        
-        content = details['hits']['hits'][0]['_source'].get('iacontent', {})
-        if isinstance(content, str):
-            content = json.loads(content)
-        
-        basic_info = content.get('basicInformation', {})
-        address_info = content.get('iaFirmAddressDetails', {}).get('officeAddress', {})
-        reg_status = content.get('registrationStatus', [{}])[0]
-        org_status = content.get('orgScopeStatusFlags', {})
-        
-        return {
-            'firm_name': basic_info.get('firmName'),
-            'crd_number': str(basic_info.get('firmId')),
-            'sec_number': f"{basic_info.get('iaSECNumberType', '')}-{basic_info.get('iaSECNumber', '')}",
-            'registration_status': reg_status.get('status'),
-            'address': {
-                'street': f"{address_info.get('street1', '')} {address_info.get('street2', '')}".strip(),
-                'city': address_info.get('city'),
-                'state': address_info.get('state'),
-                'zip': address_info.get('postalCode'),
-                'country': address_info.get('country')
-            },
-            'notice_filings': [
-                {
-                    'jurisdiction': filing.get('jurisdiction'),
-                    'status': filing.get('status'),
-                    'effective_date': filing.get('effectiveDate')
-                }
-                for filing in content.get('noticeFilings', [])
-            ],
-            'registration_date': reg_status.get('effectiveDate'),
-            'other_names': basic_info.get('otherNames', []),
-            'is_sec_registered': org_status.get('isSECRegistered') == 'Y',
-            'is_state_registered': org_status.get('isStateRegistered') == 'Y',
-            'is_era_registered': org_status.get('isERARegistered') == 'Y',
-            'is_sec_era_registered': org_status.get('isSECERARegistered') == 'Y',
-            'is_state_era_registered': org_status.get('isStateERARegistered') == 'Y',
-            'adv_filing_date': basic_info.get('advFilingDate'),
-            'has_adv_pdf': basic_info.get('hasPdf') == 'Y',
-            'accountant_exams': [
-                {
-                    'firm_name': exam.get('accountantFirmName'),
-                    'filing_date': exam.get('filingDate'),
-                    'status': exam.get('fileStatus')
-                }
-                for exam in content.get('accountantSurpriseExams', [])
-            ],
-            'brochures': [
-                {
-                    'name': brochure.get('brochureName'),
-                    'version_id': brochure.get('brochureVersionID'),
-                    'date_submitted': brochure.get('dateSubmitted'),
-                    'last_confirmed': brochure.get('lastConfirmed')
-                }
-                for brochure in content.get('brochures', {}).get('brochuredetails', [])
-            ]
-        }
+            
+        # Extract content based on response format
+        content = {}
+        try:
+            # Format 1: Elasticsearch-like response with hits
+            if 'hits' in details:
+                hits = details.get('hits', {}).get('hits', [])
+                if hits and len(hits) > 0:
+                    source = hits[0].get('_source', {})
+                    iacontent = source.get('iacontent', {})
+                    
+                    # Handle iacontent as string (needs parsing) or dict
+                    if isinstance(iacontent, str):
+                        try:
+                            content = json.loads(iacontent)
+                            logger.debug("Successfully parsed iacontent JSON string")
+                        except json.JSONDecodeError as e:
+                            logger.error(f"Failed to parse iacontent JSON: {e}")
+                            return {}
+                    else:
+                        content = iacontent
+            
+            # Format 2: Direct content in response
+            elif 'basicInformation' in details:
+                content = details
+                
+            # Format 3: Content in 'data' field
+            elif 'data' in details and isinstance(details['data'], dict):
+                content = details['data']
+                
+            # Format 4: Results array with first item
+            elif 'results' in details and isinstance(details['results'], list) and details['results']:
+                content = details['results'][0]
+                
+            else:
+                logger.warning(f"Unrecognized SEC details format: {list(details.keys())}")
+                return {}
+                
+        except Exception as e:
+            logger.error(f"Error extracting content from SEC details: {e}")
+            return {}
+            
+        # Now extract fields from the content
+        try:
+            # Get nested objects with safe fallbacks
+            basic_info = content.get('basicInformation', {})
+            if not isinstance(basic_info, dict):
+                basic_info = {}
+                
+            address_details = content.get('iaFirmAddressDetails', {})
+            if not isinstance(address_details, dict):
+                address_details = {}
+                
+            address_info = address_details.get('officeAddress', {})
+            if not isinstance(address_info, dict):
+                address_info = {}
+                
+            reg_statuses = content.get('registrationStatus', [])
+            reg_status = reg_statuses[0] if isinstance(reg_statuses, list) and reg_statuses else {}
+            if not isinstance(reg_status, dict):
+                reg_status = {}
+                
+            org_status = content.get('orgScopeStatusFlags', {})
+            if not isinstance(org_status, dict):
+                org_status = {}
+            
+            # Extract firm ID and convert to string if present
+            firm_id = basic_info.get('firmId')
+            crd_number = str(firm_id) if firm_id is not None else None
+            
+            # Build normalized response
+            return {
+                'firm_name': basic_info.get('firmName'),
+                'crd_number': crd_number,
+                'sec_number': f"{basic_info.get('iaSECNumberType', '')}-{basic_info.get('iaSECNumber', '')}",
+                'registration_status': reg_status.get('status'),
+                'address': {
+                    'street': f"{address_info.get('street1', '')} {address_info.get('street2', '')}".strip(),
+                    'city': address_info.get('city'),
+                    'state': address_info.get('state'),
+                    'zip': address_info.get('postalCode'),
+                    'country': address_info.get('country')
+                },
+                'notice_filings': [
+                    {
+                        'jurisdiction': filing.get('jurisdiction'),
+                        'status': filing.get('status'),
+                        'effective_date': filing.get('effectiveDate')
+                    }
+                    for filing in content.get('noticeFilings', [])
+                    if isinstance(filing, dict)
+                ],
+                'registration_date': reg_status.get('effectiveDate'),
+                'other_names': basic_info.get('otherNames', []),
+                'is_sec_registered': org_status.get('isSECRegistered') == 'Y',
+                'is_state_registered': org_status.get('isStateRegistered') == 'Y',
+                'is_era_registered': org_status.get('isERARegistered') == 'Y',
+                'is_sec_era_registered': org_status.get('isSECERARegistered') == 'Y',
+                'is_state_era_registered': org_status.get('isStateERARegistered') == 'Y',
+                'adv_filing_date': basic_info.get('advFilingDate'),
+                'has_adv_pdf': basic_info.get('hasPdf') == 'Y',
+                'accountant_exams': [
+                    {
+                        'firm_name': exam.get('accountantFirmName'),
+                        'filing_date': exam.get('filingDate'),
+                        'status': exam.get('fileStatus')
+                    }
+                    for exam in content.get('accountantSurpriseExams', [])
+                    if isinstance(exam, dict)
+                ],
+                'brochures': [
+                    {
+                        'name': brochure.get('brochureName'),
+                        'version_id': brochure.get('brochureVersionID'),
+                        'date_submitted': brochure.get('dateSubmitted'),
+                        'last_confirmed': brochure.get('lastConfirmed')
+                    }
+                    for brochure in content.get('brochures', {}).get('brochuredetails', [])
+                    if isinstance(brochure, dict)
+                ]
+            }
+        except Exception as e:
+            logger.error(f"Error normalizing SEC details: {e}")
+            return {}
 
 if __name__ == "__main__":
     main()

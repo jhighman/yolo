@@ -158,35 +158,48 @@ class FirmServicesFacade:
 
     def search_firm_by_crd(self, subject_id: str, crd_number: str) -> Optional[Dict[str, Any]]:
         """
-        Search for a firm by CRD number across both FINRA and SEC databases.
+        Search for a firm by CRD number across both FINRA and SEC databases,
+        then fetch detailed information if found.
         
         Args:
             subject_id: The ID of the subject/client making the request
             crd_number: The firm's CRD number
             
         Returns:
-            Normalized firm record or None if not found
+            Detailed firm information or None if not found
         """
         logger.info(f"Searching for firm by CRD: {crd_number}")
         firm_id = f"search_crd_{crd_number}"  # Create a unique ID for caching
         
-        # Try FINRA first
+        # First, check if we can find the firm in either database
+        found_firm = False
+        source = None
+        
+        # Try SEC first
         try:
-            finra_result = fetch_finra_firm_by_crd(subject_id, firm_id, {"crd_number": crd_number})
-            if isinstance(finra_result, dict):
-                logger.debug(f"Found FINRA result for CRD {crd_number}")
-                return self.firm_marshaller.normalize_finra_result(finra_result)
-        except Exception as e:
-            logger.error(f"Error searching FINRA by CRD {crd_number}: {str(e)}")
-            
-        # If FINRA fails, try SEC
-        try:
-            sec_result = fetch_sec_firm_by_crd(subject_id, firm_id, {"crd_number": crd_number})
-            if isinstance(sec_result, dict):
+            sec_response = fetch_sec_firm_by_crd(subject_id, firm_id, {"crd_number": crd_number})
+            if sec_response.status == ResponseStatus.SUCCESS and sec_response.data:
                 logger.debug(f"Found SEC result for CRD {crd_number}")
-                return self.firm_marshaller.normalize_sec_result(sec_result)
+                found_firm = True
+                source = "SEC"
         except Exception as e:
             logger.error(f"Error searching SEC by CRD {crd_number}: {str(e)}")
+                
+        # If SEC fails or returns empty, try FINRA
+        if not found_firm:
+            try:
+                finra_response = fetch_finra_firm_by_crd(subject_id, firm_id, {"crd_number": crd_number})
+                if finra_response.status == ResponseStatus.SUCCESS and finra_response.data:
+                    logger.debug(f"Found FINRA result for CRD {crd_number}")
+                    found_firm = True
+                    source = "FINRA"
+            except Exception as e:
+                logger.error(f"Error searching FINRA by CRD {crd_number}: {str(e)}")
+        
+        # If we found the firm in either database, get detailed information
+        if found_firm:
+            logger.info(f"Found firm with CRD {crd_number} in {source}, fetching detailed information")
+            return self.get_firm_details(subject_id, crd_number)
                 
         return None
 
@@ -240,15 +253,15 @@ def parse_args() -> argparse.Namespace:
     )
     
     parser.add_argument(
-        "--interactive",
+        "--headless",
         action="store_true",
-        help="Run in interactive menu mode"
+        help="Run in headless (non-interactive) mode with CLI arguments"
     )
     
     parser.add_argument(
         "--subject-id",
-        required=True,
-        help="ID of the subject/client making the request"
+        required=False,
+        help="ID of the subject/client making the request (required in headless mode)"
     )
     
     parser.add_argument(
@@ -295,7 +308,12 @@ def parse_args() -> argparse.Namespace:
 def interactive_menu(subject_id: str, log_level: str) -> None:
     """Run an interactive menu for testing firm services."""
     facade = FirmServicesFacade()
-    
+
+    # Prompt for subject_id and crd_number at the start
+    print("\n=== Firm Services Interactive Session ===")
+    current_subject_id = input(f"Enter subject ID [{subject_id}]: ").strip() or subject_id
+    current_crd_number = input("Enter CRD number: ").strip()
+
     while True:
         print("\n=== Firm Services Testing Menu ===")
         print("1. Search firm by name")
@@ -303,39 +321,54 @@ def interactive_menu(subject_id: str, log_level: str) -> None:
         print("3. Search firm by CRD")
         print("4. Example: Search 'Baker Avenue Asset Management'")
         print("5. Example: Search CRD '131940'")
-        print("6. Exit")
+        print("6. Change subject ID or CRD number")
+        print("7. Exit")
         
-        choice = input("\nEnter your choice (1-6): ").strip()
+        choice = input("\nEnter your choice (1-7): ").strip()
         
         if choice == "1":
             firm_name = input("Enter firm name to search: ").strip()
             if firm_name:
-                results = facade.search_firm(subject_id, firm_name)
+                results = facade.search_firm(current_subject_id, firm_name)
                 print_results(results)
         
         elif choice == "2":
-            crd_number = input("Enter CRD number: ").strip()
-            if crd_number:
-                results = facade.get_firm_details(subject_id, crd_number)
+            # Use stored CRD number
+            if current_crd_number:
+                results = facade.get_firm_details(current_subject_id, current_crd_number)
                 print_results(results)
+            else:
+                print("\nNo CRD number set. Please set it using option 6.")
         
         elif choice == "3":
-            crd_number = input("Enter CRD number: ").strip()
-            if crd_number:
-                results = facade.search_firm_by_crd(subject_id, crd_number)
+            # Use stored CRD number
+            if current_crd_number:
+                results = facade.search_firm_by_crd(current_subject_id, current_crd_number)
                 print_results(results)
+            else:
+                print("\nNo CRD number set. Please set it using option 6.")
                 
         elif choice == "4":
             print("\nSearching for: Baker Avenue Asset Management...")
-            results = facade.search_firm(subject_id, "Baker Avenue Asset Management")
+            results = facade.search_firm(current_subject_id, "Baker Avenue Asset Management")
             print_results(results)
             
         elif choice == "5":
             print("\nSearching for CRD: 131940...")
-            results = facade.search_firm_by_crd(subject_id, "131940")
+            results = facade.search_firm_by_crd(current_subject_id, "131940")
             print_results(results)
         
         elif choice == "6":
+            # Change subject ID or CRD number
+            new_subject_id = input(f"Enter new subject ID [{current_subject_id}]: ").strip()
+            if new_subject_id:
+                current_subject_id = new_subject_id
+            new_crd_number = input(f"Enter new CRD number [{current_crd_number}]: ").strip()
+            if new_crd_number:
+                current_crd_number = new_crd_number
+            print("\nSubject ID and CRD number updated.")
+        
+        elif choice == "7":
             print("\nExiting...")
             break
         
@@ -360,10 +393,20 @@ def main():
     
     facade = FirmServicesFacade()
     
-    if args.interactive:
-        interactive_menu(args.subject_id, args.log_level)
+    if not args.headless:
+        # Always run interactive menu unless --headless is specified
+        interactive_menu(args.subject_id or "", args.log_level)
         return
-    
+
+    # Headless mode: require subject-id and command
+    if not args.subject_id:
+        print("\nError: --subject-id is required in headless mode.")
+        sys.exit(1)
+
+    if not args.command:
+        print("\nError: command is required in headless mode. Use --help for usage information.")
+        sys.exit(1)
+
     try:
         if args.command == "search":
             results = facade.search_firm(args.subject_id, args.firm_name)

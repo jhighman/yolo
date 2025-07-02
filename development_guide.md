@@ -226,7 +226,7 @@ The system currently lacks batch processing functionality. You need to implement
 
 4. **Expected CSV format**
    ```
-   reference_id,business_ref,business_name,tax_id,organization_crd
+   reference_id,business_ref,business_name,tax_id,corganization_crd
    REF001,BIZ001,Acme Financial,12-3456789,123456
    REF002,BIZ002,Baker Investments,23-4567890,234567
    ```

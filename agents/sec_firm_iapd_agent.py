@@ -386,12 +386,18 @@ class SECFirmIAPDAgent:
                     hit = data["hits"]["hits"][0]
                     if "_source" in hit and "iacontent" in hit["_source"]:
                         try:
-                            details = hit["_source"]["iacontent"]
-                            logger.info("Successfully retrieved firm details for CRD: %s", 
+                            # Parse the JSON string into a dictionary
+                            iacontent = hit["_source"]["iacontent"]
+                            if isinstance(iacontent, str):
+                                details = json.loads(iacontent)
+                            else:
+                                details = iacontent
+                                
+                            logger.info("Successfully retrieved firm details for CRD: %s",
                                        crd_number, extra=log_context)
                             return details
                         except Exception as e:
-                            logger.error("Failed to parse content for CRD: %s, error: %s", 
+                            logger.error("Failed to parse content for CRD: %s, error: %s",
                                         crd_number, e, extra=log_context)
                             raise SECResponseError(f"Failed to parse content for CRD: {crd_number}, error: {e}")
                 
@@ -444,6 +450,19 @@ def get_firm_details(crd_number: str, employee_number: Optional[str] = None) -> 
     """
     agent = SECFirmIAPDAgent(use_mock=True)  # Default to mock mode for backward compatibility
     return agent.get_firm_details(crd_number, employee_number)
+
+def search_entity_detailed_info(crd_number: str, employee_number: Optional[str] = None) -> Dict:
+    """
+    Get detailed information about a firm by CRD number.
+    
+    Args:
+        crd_number (str): The Central Registration Depository (CRD) number of the firm.
+        employee_number (Optional[str]): Optional identifier for logging.
+    
+    Returns:
+        Dict: A dictionary with firm details if successful, empty dict if the fetch fails.
+    """
+    return get_firm_details(crd_number, employee_number)
 
 # Example usage
 if __name__ == "__main__":

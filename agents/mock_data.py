@@ -137,6 +137,51 @@ MOCK_FIRMS = {
             "disclosures": []
         }
     },
+    "BAKER STREET ADVISORS, LLC": {
+        "finra": {
+            "org_name": "BAKER STREET ADVISORS, LLC",
+            "org_source_id": "128066",
+            "registration_status": "APPROVED",
+            "addresses": [
+                {
+                    "address_type": "MAIN",
+                    "street_1": "575 MARKET STREET",
+                    "street_2": "SUITE 600",
+                    "city": "SAN FRANCISCO",
+                    "state": "CA",
+                    "zip": "94105",
+                    "country": "UNITED STATES"
+                }
+            ],
+            "disclosures": []
+        },
+        "sec": {
+            "org_name": "BAKER STREET ADVISORS, LLC",
+            "org_crd": "128066",
+            "firm_ia_sec_number": "62370",
+            "firm_ia_full_sec_number": "801-62370",
+            "firm_other_names": [
+                "BAKER STREET ADVISORS, LLC"
+            ],
+            "firm_type": "Investment Adviser",
+            "registration_status": "ACTIVE",
+            "firm_ia_scope": "ACTIVE",
+            "firm_ia_disclosure_fl": "N",
+            "firm_branches_count": 1,
+            "addresses": [
+                {
+                    "address_type": "MAIN OFFICE",
+                    "street_1": "575 MARKET STREET",
+                    "street_2": "SUITE 600",
+                    "city": "SAN FRANCISCO",
+                    "state": "CA",
+                    "zip": "94105",
+                    "country": "UNITED STATES"
+                }
+            ],
+            "disclosures": []
+        }
+    },
     "ALLIANCE GLOBAL PARTNERS, LLC": {
         "finra": {
             "org_name": "ALLIANCE GLOBAL PARTNERS, LLC",
@@ -344,7 +389,7 @@ def get_mock_sec_firm_details(crd_number: str) -> dict:
     """Get mock SEC firm details by CRD number."""
     # For now, return the same SEC_FIRM_DETAILS for all CRD numbers
     # In a real implementation, we would have different details for each CRD
-    if crd_number in ["131940", "298085", "107488", "8361"]:
+    if crd_number in ["131940", "298085", "107488", "8361", "128066"]:
         return SEC_FIRM_DETAILS
     return {}
 

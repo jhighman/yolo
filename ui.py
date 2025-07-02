@@ -43,7 +43,7 @@ def api_call(method: str, endpoint: str, data: Optional[Union[Dict[str, Any], Di
         data (Optional[Union[Dict[str, Any], Dict[str, Union[int, str]]]], optional): Data for request (query params or JSON body).
 
     Returns:
-        str: Raw response text or error message.
+        str: JSON response string in standard API format: {"status": str, "message": str, "data": Any}
     """
     url = f"{API_BASE_URL}{endpoint}"
     try:
@@ -52,13 +52,103 @@ def api_call(method: str, endpoint: str, data: Optional[Union[Dict[str, Any], Di
         elif method == "post":
             response = requests.post(url, json=data)
         else:
-            return "Unsupported method"
+            return json.dumps({
+                "status": "error",
+                "message": "Invalid request method",
+                "data": {
+                    "error_type": "InvalidMethod",
+                    "details": f"Method '{method}' is not supported. Use 'get' or 'post'.",
+                    "endpoint": endpoint
+                }
+            })
         
-        response.raise_for_status()
-        return response.text
+        # Try to parse response as JSON first
+        try:
+            response.raise_for_status()
+            if not response.text.strip():
+                return json.dumps({
+                    "status": "error",
+                    "message": "Server returned an empty response",
+                    "data": {
+                        "error_type": "EmptyResponse",
+                        "details": "The server response was empty or contained only whitespace",
+                        "endpoint": endpoint,
+                        "http_status": response.status_code
+                    }
+                })
+            
+            # Try to parse as JSON to ensure it's valid
+            response_data = json.loads(response.text)
+            # If it's already in our format, return as is
+            if isinstance(response_data, dict) and all(k in response_data for k in ["status", "message"]):
+                return response.text
+            # Otherwise, wrap it in our format
+            return json.dumps({
+                "status": "success",
+                "message": "Request completed successfully",
+                "data": response_data
+            })
+            
+        except json.JSONDecodeError:
+            return json.dumps({
+                "status": "error",
+                "message": "Server returned invalid JSON",
+                "data": {
+                    "error_type": "InvalidJSON",
+                    "details": "The server response could not be parsed as JSON",
+                    "raw_response": response.text[:200] + "..." if len(response.text) > 200 else response.text,
+                    "endpoint": endpoint,
+                    "http_status": response.status_code
+                }
+            })
+            
+    except requests.exceptions.ConnectionError as e:
+        logger.error(f"Connection error: {str(e)}")
+        return json.dumps({
+            "status": "error",
+            "message": "Could not connect to the server",
+            "data": {
+                "error_type": "ConnectionError",
+                "details": str(e),
+                "endpoint": endpoint,
+                "server_url": API_BASE_URL
+            }
+        })
+    except requests.exceptions.HTTPError as e:
+        logger.error(f"HTTP error: {str(e)}")
+        return json.dumps({
+            "status": "error",
+            "message": f"Server returned HTTP {e.response.status_code}",
+            "data": {
+                "error_type": "HTTPError",
+                "details": str(e),
+                "endpoint": endpoint,
+                "http_status": e.response.status_code,
+                "response_text": e.response.text[:200] + "..." if len(e.response.text) > 200 else e.response.text
+            }
+        })
     except requests.RequestException as e:
-        logger.error(f"API call failed: {str(e)}")
-        return f"Error: {str(e)}"
+        logger.error(f"Request error: {str(e)}")
+        return json.dumps({
+            "status": "error",
+            "message": "Request failed",
+            "data": {
+                "error_type": type(e).__name__,
+                "details": str(e),
+                "endpoint": endpoint
+            }
+        })
+    except Exception as e:
+        logger.error(f"Unexpected error: {str(e)}")
+        return json.dumps({
+            "status": "error",
+            "message": "An unexpected error occurred",
+            "data": {
+                "error_type": type(e).__name__,
+                "details": str(e),
+                "endpoint": endpoint
+            }
+        })
 
 def render_claim_report(report_json: str) -> Tuple[str, str]:
     """
@@ -72,6 +162,17 @@ def render_claim_report(report_json: str) -> Tuple[str, str]:
     """
     try:
         report = json.loads(report_json)
+        
+        # Check if this is an error response
+        if isinstance(report, dict) and report.get("status") == "error":
+            error_html = f"""<div style='color: red; padding: 10px; border: 1px solid red; margin: 10px;'>
+                <h3>Error</h3>
+                <p><strong>Message:</strong> {report.get('message', 'Unknown error')}</p>
+                <p><strong>Type:</strong> {report.get('error_type', 'Unknown')}</p>
+                {f"<p><strong>Endpoint:</strong> {report.get('endpoint')}</p>" if report.get('endpoint') else ""}
+                </div>"""
+            return error_html, json.dumps(report, indent=2)
+            
         json_output = json.dumps(report, indent=2)
     except json.JSONDecodeError:
         error_msg = f"<div style='color: red;'>Invalid report format: {report_json}</div>"
@@ -105,7 +206,7 @@ def render_claim_report(report_json: str) -> Tuple[str, str]:
         html += "</ul></li>"
     html += "</ul>"
 
-    # Evaluation Sections (tailored to our domain)
+    # Evaluation Sections
     sections = [
         ("Search Evaluation", "search_evaluation"),
         ("Registration Status", "registration_status"),
@@ -141,32 +242,77 @@ def process_claim(reference_id: str, business_ref: str, business_name: str, tax_
     Args:
         reference_id (str): Mandatory reference ID.
         business_ref (str): Mandatory business reference.
-        business_name (str): Mandatory business name.
-        tax_id (str): Mandatory tax ID.
-        organization_crd (str): Optional organization CRD.
+        business_name (str): Optional business name (at least one identifier required).
+        tax_id (str): Optional tax ID (at least one identifier required).
+        organization_crd (str): Optional organization CRD (at least one identifier required).
         webhook_url (str): Optional webhook URL.
 
     Returns:
         Tuple[str, str]: (Rendered HTML report or validation error, pretty-printed JSON)
     """
-    # Validate mandatory fields
-    if not all([reference_id, business_ref, business_name, tax_id]):
-        error_html = "<div style='color: red;'>Please fill in all required fields: Reference ID, Business Ref, Business Name, and Tax ID.</div>"
-        return error_html, ""
+    # Validate mandatory administrative fields
+    missing_admin_fields = []
+    if not reference_id or not reference_id.strip():
+        missing_admin_fields.append("Reference ID")
+    if not business_ref or not business_ref.strip():
+        missing_admin_fields.append("Business Ref")
 
-    # Validate that at least one of organization_crd or business_name is provided (business_name is mandatory, so just check format)
-    if not business_name.strip():
-        error_html = "<div style='color: orange;'>Business Name must not be empty.</div>"
-        return error_html, ""
+    if missing_admin_fields:
+        error_response = {
+            "status": "error",
+            "message": "Required administrative fields are missing",
+            "data": {
+                "error_type": "ValidationError",
+                "missing_fields": missing_admin_fields,
+                "details": f"The following required administrative fields are missing or empty: {', '.join(missing_admin_fields)}",
+                "field_requirements": {
+                    "reference_id": "Required: Unique identifier for this claim",
+                    "business_ref": "Required: Business reference identifier"
+                }
+            }
+        }
+        return render_claim_report(json.dumps(error_response))
 
-    data = {
-        "reference_id": reference_id,
-        "business_ref": business_ref,
-        "business_name": business_name,
-        "tax_id": tax_id,
-        "organization_crd": organization_crd if organization_crd else None,
-        "webhook_url": webhook_url if webhook_url else None
+    # Validate that at least one identifier is provided
+    identifiers = {
+        "Business Name": business_name.strip() if business_name else "",
+        "Tax ID": tax_id.strip() if tax_id else "",
+        "Organization CRD": organization_crd.strip() if organization_crd else ""
     }
+
+    if not any(identifiers.values()):
+        error_response = {
+            "status": "error",
+            "message": "No business identifier provided",
+            "data": {
+                "error_type": "ValidationError",
+                "details": "At least one business identifier must be provided",
+                "field_requirements": {
+                    "business_name": "Optional: Legal name of the business (at least one identifier required)",
+                    "tax_id": "Optional: Tax identification number (at least one identifier required)",
+                    "organization_crd": "Optional: CRD number (at least one identifier required)"
+                },
+                "provided_identifiers": identifiers
+            }
+        }
+        return render_claim_report(json.dumps(error_response))
+
+    # Prepare data for API call, only including non-empty values
+    data = {
+        "reference_id": reference_id.strip(),
+        "business_ref": business_ref.strip()
+    }
+
+    # Add optional fields only if they have values
+    if business_name and business_name.strip():
+        data["business_name"] = business_name.strip()
+    if tax_id and tax_id.strip():
+        data["tax_id"] = tax_id.strip()
+    if organization_crd and organization_crd.strip():
+        data["organization_crd"] = organization_crd.strip()
+    if webhook_url and webhook_url.strip():
+        data["webhook_url"] = webhook_url.strip()
+    
     endpoint = "/process-claim-basic"  # Only basic mode is supported
     raw_response = api_call("post", endpoint, data)
     return render_claim_report(raw_response)
@@ -247,13 +393,23 @@ with demo:
     # Claim Processing Section
     with gr.Row():
         with gr.Column():
-            gr.Markdown("## Submit Business Compliance Claim")
+            gr.Markdown("""## Submit Business Compliance Claim
+            
+            **Required Fields:**
+            - Reference ID
+            - Business Ref
+            
+            **Identifiers (at least one required):**
+            - Business Name
+            - Tax ID
+            - Organization CRD
+            """)
             reference_id = gr.Textbox(label="Reference ID *", placeholder="e.g., B123")
             business_ref = gr.Textbox(label="Business Ref *", placeholder="e.g., BIZ123")
-            business_name = gr.Textbox(label="Business Name *", placeholder="e.g., Acme Corp")
-            tax_id = gr.Textbox(label="Tax ID *", placeholder="e.g., 12-3456789")
+            business_name = gr.Textbox(label="Business Name", placeholder="e.g., Acme Corp")
+            tax_id = gr.Textbox(label="Tax ID", placeholder="e.g., 12-3456789")
             organization_crd = gr.Textbox(label="Organization CRD", placeholder="e.g., 123456")
-            webhook_url = gr.Textbox(label="Webhook URL", placeholder="e.g., https://your-webhook.com/endpoint")
+            webhook_url = gr.Textbox(label="Webhook URL (optional)", placeholder="e.g., https://your-webhook.com/endpoint")
             submit_btn = gr.Button("Submit Claim")
 
         with gr.Column():
