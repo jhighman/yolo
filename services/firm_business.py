@@ -293,20 +293,36 @@ def search_with_tax_id_and_org_crd(
         "business_ref": business_ref
     })
     
+    # Check if facade is None
+    if facade is None:
+        logger.warning("Facade is None, cannot search by tax_id and CRD", extra={
+            "tax_id": tax_id,
+            "org_crd": org_crd,
+            "business_ref": business_ref
+        })
+        return {
+            "compliance": False,
+            "compliance_explanation": "Search failed: Facade not available",
+            "source": "UNKNOWN",
+            "timestamp": datetime.now().isoformat()
+        }
+    
     result = facade.search_firm_by_crd(business_ref, org_crd)
     if result:
+        detailed = facade.get_firm_details(business_ref, org_crd)
+        top_source = (detailed or {}).get('source', result.get('source', 'UNKNOWN'))
         return {
             "compliance": True,
             "compliance_explanation": "Found by CRD",
-            "source": "FINRA",
+            "source": top_source,
             "basic_result": result,
-            "detailed_result": facade.get_firm_details(business_ref, org_crd),
+            "detailed_result": detailed,
             "timestamp": datetime.now().isoformat()
         }
     return {
         "compliance": False,
         "compliance_explanation": "Not found by CRD",
-        "source": "FINRA",
+        "source": "UNKNOWN",
         "timestamp": datetime.now().isoformat()
     }
 
@@ -324,20 +340,35 @@ def search_with_crd_only(
         "business_ref": business_ref
     })
     
+    # Check if facade is None
+    if facade is None:
+        logger.warning("Facade is None, cannot search by CRD", extra={
+            "org_crd": org_crd,
+            "business_ref": business_ref
+        })
+        return {
+            "compliance": False,
+            "compliance_explanation": "Search failed: Facade not available",
+            "source": "UNKNOWN",
+            "timestamp": datetime.now().isoformat()
+        }
+    
     result = facade.search_firm_by_crd(business_ref, org_crd)
     if result:
+        detailed = facade.get_firm_details(business_ref, org_crd)
+        top_source = (detailed or {}).get('source', result.get('source', 'UNKNOWN'))
         return {
             "compliance": True,
             "compliance_explanation": "Found by CRD",
-            "source": "FINRA",
+            "source": top_source,
             "basic_result": result,
-            "detailed_result": facade.get_firm_details(business_ref, org_crd),
+            "detailed_result": detailed,
             "timestamp": datetime.now().isoformat()
         }
     return {
         "compliance": False,
         "compliance_explanation": "Not found by CRD",
-        "source": "FINRA",
+        "source": "UNKNOWN",
         "timestamp": datetime.now().isoformat()
     }
 
@@ -355,24 +386,39 @@ def search_with_name_only(
         "business_ref": business_ref
     })
     
+    # Check if facade is None
+    if facade is None:
+        logger.warning("Facade is None, cannot search by business name", extra={
+            "business_name": business_name,
+            "business_ref": business_ref
+        })
+        return {
+            "compliance": False,
+            "compliance_explanation": "Search failed: Facade not available",
+            "source": "UNKNOWN",
+            "timestamp": datetime.now().isoformat()
+        }
+    
     results = facade.search_firm(business_ref, business_name)
     if results:
         # Use first match
         result = results[0]
         org_crd = result.get('crd_number') or result.get('organization_crd')
         if org_crd:
+            detailed = facade.get_firm_details(business_ref, org_crd)
+            top_source = (detailed or {}).get('source', result.get('source', 'UNKNOWN'))
             return {
                 "compliance": True,
                 "compliance_explanation": "Found by name",
-                "source": "FINRA",
+                "source": top_source,
                 "basic_result": result,
-                "detailed_result": facade.get_firm_details(business_ref, org_crd),
+                "detailed_result": detailed,
                 "timestamp": datetime.now().isoformat()
             }
     return {
         "compliance": False,
         "compliance_explanation": "Not found by name",
-        "source": "FINRA",
+        "source": "UNKNOWN",
         "timestamp": datetime.now().isoformat()
     }
 
@@ -389,6 +435,19 @@ def search_with_default(
         "business_name": business_name,
         "business_ref": business_ref
     })
+    
+    # Check if facade is None
+    if facade is None:
+        logger.warning("Facade is None, cannot perform default search", extra={
+            "business_name": business_name,
+            "business_ref": business_ref
+        })
+        return {
+            "compliance": False,
+            "compliance_explanation": "Search failed: Facade not available",
+            "source": "UNKNOWN",
+            "timestamp": datetime.now().isoformat()
+        }
     
     if business_name:
         return search_with_name_only(claim, facade, business_ref)
@@ -500,6 +559,10 @@ def process_claim(
                 extracted_info["skip_financials"] = True
             if skip_legal:
                 extracted_info["skip_legal"] = True
+            
+            # Set top-level source to match detailed_result or basic_result
+            top_source = (detailed_result or {}).get('source', basic_result.get('source', 'UNKNOWN'))
+            search_evaluation['source'] = top_source
         
         # Initialize report builder and director
         builder = FirmEvaluationReportBuilder(claim.get("reference_id", "UNKNOWN"))
@@ -519,16 +582,28 @@ def process_claim(
         
         # Save report using the compliance report method
         try:
-            if not facade.save_compliance_report(report, business_ref_str):
-                logger.error("Failed to save compliance report", extra={
+            # Check if facade is None
+            if facade is None:
+                logger.warning("Facade is None, skipping save_compliance_report", extra={
                     "business_ref": business_ref_str,
                     "timestamp": datetime.now().isoformat()
                 })
-                raise EvaluationProcessError("Failed to save compliance report")
-            logger.info("Compliance report saved successfully", extra={
-                "business_ref": business_ref_str,
-                "timestamp": datetime.now().isoformat()
-            })
+                # Just log a warning and continue without saving
+                logger.info("Compliance report processing completed without saving", extra={
+                    "business_ref": business_ref_str,
+                    "timestamp": datetime.now().isoformat()
+                })
+            else:
+                if not facade.save_compliance_report(report, business_ref_str):
+                    logger.error("Failed to save compliance report", extra={
+                        "business_ref": business_ref_str,
+                        "timestamp": datetime.now().isoformat()
+                    })
+                    raise EvaluationProcessError("Failed to save compliance report")
+                logger.info("Compliance report saved successfully", extra={
+                    "business_ref": business_ref_str,
+                    "timestamp": datetime.now().isoformat()
+                })
         except Exception as e:
             logger.error(f"Failed to save compliance report: {str(e)}", exc_info=True)
             raise EvaluationProcessError(f"Failed to save compliance report: {str(e)}")

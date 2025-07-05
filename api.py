@@ -41,6 +41,19 @@ from cache_manager.file_handler import FileHandler
 loggers = setup_logging(debug=True)
 logger = loggers["api"]
 
+# Initialize services for Celery workers
+from services.firm_services import FirmServicesFacade
+from cache_manager.cache_operations import CacheManager
+from cache_manager.file_handler import FileHandler
+from cache_manager.firm_compliance_handler import FirmComplianceHandler
+
+# Initialize global instances for Celery workers
+celery_facade = FirmServicesFacade()
+celery_cache_manager = CacheManager()
+celery_file_handler = FileHandler(celery_cache_manager.cache_folder)
+celery_compliance_handler = FirmComplianceHandler(celery_file_handler.base_path)
+logger.info("Celery worker services initialized")
+
 # Initialize Celery with Redis
 celery_app = Celery(
     "firm_compliance_tasks",
@@ -185,7 +198,7 @@ def process_firm_compliance_claim(self, request_dict: Dict[str, Any], mode: str)
 
         report = process_claim(
             claim=claim,
-            facade=facade,
+            facade=celery_facade,  # Use the Celery worker's facade instance
             business_ref=business_ref,
             skip_financials=mode_settings["skip_financials"],
             skip_legal=mode_settings["skip_legal"]
@@ -268,7 +281,7 @@ async def process_claim_helper(request: ClaimRequest, mode: str, send_webhook: b
     try:
         report = process_claim(
             claim=claim,
-            facade=facade,
+            facade=facade,  # Use the FastAPI app's facade instance
             business_ref=business_ref,
             skip_financials=mode_settings["skip_financials"],
             skip_legal=mode_settings["skip_legal"]
