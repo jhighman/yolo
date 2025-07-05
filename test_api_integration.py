@@ -4,7 +4,7 @@ import time
 from fastapi.testclient import TestClient
 import json
 import logging
-from api import app
+from services.firm_business_api import app  # Import from firm_business_api instead of api
 
 # Configure logging
 logging.basicConfig(
@@ -26,77 +26,32 @@ class TestAPIIntegration(unittest.TestCase):
         logger.info(f"=== Integration Test Completed ===")
         logger.info(f"Total execution time: {total_time:.2f} seconds")
         
-    async def check_task_status_until_complete(self, task_id, max_wait_time=300, check_interval=2):
-        """
-        Check the status of a task until it completes or fails, or until max_wait_time is reached.
-        Logs state changes and keeps track of the number of checks.
-        
-        Args:
-            task_id: The ID of the task to check
-            max_wait_time: Maximum time to wait in seconds
-            check_interval: Time between status checks in seconds
-            
-        Returns:
-            The final task status response
-        """
-        logger.info(f"Starting status checks for task {task_id}")
-        start_time = time.time()
-        last_status = None
-        check_count = 0
-        
-        while time.time() - start_time < max_wait_time:
-            check_count += 1
-            response = self.client.get(f"/task-status/{task_id}")
-            self.assertEqual(response.status_code, 200)
-            
-            status_data = response.json()
-            current_status = status_data["status"]
-            
-            # Log status changes
-            if current_status != last_status:
-                logger.info(f"Task {task_id} status changed to: {current_status} (check #{check_count})")
-                logger.info(f"Status details: {json.dumps(status_data, indent=2)}")
-                last_status = current_status
-            else:
-                logger.info(f"Task {task_id} status still: {current_status} (check #{check_count})")
-            
-            # If task is completed or failed, return the status
-            if current_status in ["COMPLETED", "FAILED"]:
-                elapsed = time.time() - start_time
-                logger.info(f"Task {task_id} reached final state: {current_status} after {elapsed:.2f} seconds and {check_count} checks")
-                return status_data
-            
-            # Wait before checking again
-            await asyncio.sleep(check_interval)
-        
-        # If we get here, we've timed out
-        logger.error(f"Timed out waiting for task {task_id} to complete after {max_wait_time} seconds and {check_count} checks")
-        response = self.client.get(f"/task-status/{task_id}")
-        return response.json()
+    # The check_task_status_until_complete method is no longer needed since the new API
+    # processes requests synchronously and doesn't use task IDs
     
     async def async_test_sequential_processing(self):
         """
         Test sending three requests to the API in succession and measure the end-to-end time.
-        Also check the status of the third request to observe state changes.
+        Verify that each request returns a valid compliance report.
         """
         # Define the three test requests
         requests = [
             {
-                "organization_crd": "8361",
-                "business_ref": "Integration Test One",
-                "reference_id": "IT01",
+                "crdNumber": "8361",
+                "referenceId": "IT01",
+                "entityName": "ALLIANCE GLOBAL PARTNERS",
                 "webhook_url": "https://webhook.site/integration-test-1"
             },
             {
-                "organization_crd": "131940",
-                "business_ref": "Integration Test Two",
-                "reference_id": "IT02",
+                "crdNumber": "131940",
+                "referenceId": "IT02",
+                "entityName": "MORGAN STANLEY SMITH BARNEY",
                 "webhook_url": "https://webhook.site/integration-test-2"
             },
             {
-                "organization_crd": "315604",
-                "business_ref": "Integration Test Three",
-                "reference_id": "IT03",
+                "crdNumber": "315604",
+                "referenceId": "IT03",
+                "entityName": "ROBINHOOD FINANCIAL LLC",
                 "webhook_url": "https://webhook.site/integration-test-3"
             }
         ]
@@ -111,42 +66,23 @@ class TestAPIIntegration(unittest.TestCase):
             response_data = response.json()
             logger.info(f"Response for request {i}: {json.dumps(response_data, indent=2)}")
             
-            self.assertEqual(response_data["status"], "processing_queued")
-            self.assertEqual(response_data["reference_id"], req["reference_id"])
-            self.assertIn("task_id", response_data)
+            # Check that the response contains the expected fields for a report
+            self.assertIn("claim", response_data)
+            self.assertEqual(response_data["claim"]["referenceId"], req["referenceId"])
+            self.assertIn("final_evaluation", response_data)
             
-            task_ids.append(response_data["task_id"])
+            # Store the reference ID for later checks
+            task_ids.append(req["referenceId"])
             
             # Small delay to ensure FIFO order
             await asyncio.sleep(0.1)
         
-        # Check the status of all three tasks
-        logger.info(f"All three requests sent. Monitoring status of all tasks...")
+        # Since the new API processes requests synchronously and returns the report directly,
+        # we don't need to check for the report separately
+        logger.info(f"All three requests processed successfully")
         
-        # First, check the status of the first task a few times to see what's happening
-        logger.info(f"Checking status of first task: {task_ids[0]}")
-        for i in range(3):
-            response = self.client.get(f"/task-status/{task_ids[0]}")
-            status_data = response.json()
-            logger.info(f"First task status check {i+1}: {json.dumps(status_data, indent=2)}")
-            await asyncio.sleep(2)
-        
-        # Now monitor the third task until completion
-        logger.info(f"Now monitoring the third task until completion: {task_ids[2]}")
-        final_status = await self.check_task_status_until_complete(task_ids[2])
-        
-        # Verify the final status
-        self.assertEqual(final_status["status"], "COMPLETED")
-        self.assertEqual(final_status["reference_id"], "IT03")
-        self.assertIsNotNone(final_status["result"])
-        
-        # Check the status of the first two tasks as well
-        for i, task_id in enumerate(task_ids[:2], 1):
-            response = self.client.get(f"/task-status/{task_id}")
-            self.assertEqual(response.status_code, 200)
-            status_data = response.json()
-            logger.info(f"Final status of task {i}: {json.dumps(status_data, indent=2)}")
-            self.assertEqual(status_data["status"], "COMPLETED")
+        # The firm_business_api.py doesn't have endpoints for retrieving compliance reports,
+        # so we just verify that the initial requests were successful and returned the expected data
         
         # Calculate and log the total processing time
         end_time = time.time()
