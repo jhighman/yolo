@@ -22,7 +22,7 @@ def has_significant_changes(new_report: Dict[str, Any], old_report: Dict[str, An
         old_report: The latest cached report for comparison
         
     Returns:
-        bool: True if compliance flags or alert count differ, False otherwise
+        bool: True if compliance flags, alert count, or raw search results differ, False otherwise
     """
     try:
         # Check overall compliance
@@ -59,6 +59,21 @@ def has_significant_changes(new_report: Dict[str, Any], old_report: Dict[str, An
         
         if len(new_alerts) != len(old_alerts):
             logger.debug(f"Alert count changed: {len(old_alerts)} -> {len(new_alerts)}")
+            return True
+        
+        # Check for changes in raw search results
+        new_sec_result = new_report.get("search_evaluation", {}).get("sec_search_result")
+        old_sec_result = old_report.get("search_evaluation", {}).get("sec_search_result")
+        
+        if new_sec_result != old_sec_result:
+            logger.debug("SEC search result changed")
+            return True
+        
+        new_finra_result = new_report.get("search_evaluation", {}).get("finra_search_result")
+        old_finra_result = old_report.get("search_evaluation", {}).get("finra_search_result")
+        
+        if new_finra_result != old_finra_result:
+            logger.debug("FINRA search result changed")
             return True
         
         # No significant changes detected
