@@ -192,7 +192,11 @@ class FinraFirmBrokerCheckAgent:
                 # Check for API error messages
                 if "errorCode" in data and data["errorCode"] != 0:
                     error_msg = data.get("errorMessage", "Unknown API error")
-                    logger.warning("API returned error: %s", error_msg)
+                    # Special handling for "Search unavailable" error
+                    if "Search unavailable" in error_msg:
+                        logger.info("FINRA search unavailable for firm: %s - treating as no results", firm_name)
+                    else:
+                        logger.warning("API returned error: %s", error_msg)
                     return []
                 
                 # Handle different response formats
@@ -278,7 +282,11 @@ class FinraFirmBrokerCheckAgent:
                 # Check for API error messages
                 if "errorCode" in data and data["errorCode"] != 0:
                     error_msg = data.get("errorMessage", "Unknown API error")
-                    logger.warning("API returned error: %s", error_msg, extra=log_context)
+                    # Special handling for "Search unavailable" error
+                    if "Search unavailable" in error_msg:
+                        logger.info("FINRA search unavailable for CRD: %s - treating as no results", crd_number, extra=log_context)
+                    else:
+                        logger.warning("API returned error: %s", error_msg, extra=log_context)
                     return []
                 
                 # Handle different response formats
@@ -452,7 +460,11 @@ class FinraFirmBrokerCheckAgent:
                 # Check for API error messages
                 if "errorCode" in data and data["errorCode"] != 0:
                     error_msg = data.get("errorMessage", "Unknown API error")
-                    logger.warning("API returned error: %s", error_msg, extra=log_context)
+                    # Special handling for "Search unavailable" error
+                    if "Search unavailable" in error_msg:
+                        logger.info("FINRA search unavailable for entity CRD: %s - treating as no results", crd_number, extra=log_context)
+                    else:
+                        logger.warning("API returned error: %s", error_msg, extra=log_context)
                     return None
                 
                 logger.info(f"Basic entity data fetched successfully ({entity_type})", extra=log_context)

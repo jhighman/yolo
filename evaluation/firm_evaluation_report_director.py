@@ -19,7 +19,6 @@ from utils.logging_config import setup_logging
 from .firm_evaluation_report_builder import FirmEvaluationReportBuilder
 from .firm_evaluation_processor import (
     evaluate_registration_status,
-    evaluate_regulatory_oversight,
     evaluate_disclosures,
     evaluate_financials,
     evaluate_legal,
@@ -48,7 +47,7 @@ class EvaluationProcessError(FirmEvaluationError):
 class FirmEvaluationReportDirector:
     """Orchestrates the construction of firm-specific compliance reports."""
     
-    REQUIRED_CLAIM_FIELDS = ['business_name', 'business_ref']
+    REQUIRED_CLAIM_FIELDS = ['business_ref']  # business_name is now optional
     REQUIRED_INFO_FIELDS = ['search_evaluation']
     
     def __init__(self, builder: FirmEvaluationReportBuilder):
@@ -234,6 +233,13 @@ class FirmEvaluationReportDirector:
                 "timestamp": datetime.now().isoformat()
             })
             
+            # Ensure raw search results are preserved
+            if "sec_search_result" in extracted_info:
+                search_evaluation["sec_search_result"] = extracted_info["sec_search_result"]
+            
+            if "finra_search_result" in extracted_info:
+                search_evaluation["finra_search_result"] = extracted_info["finra_search_result"]
+            
             try:
                 self.builder.set_search_evaluation(search_evaluation)
             except Exception as e:
@@ -279,21 +285,19 @@ class FirmEvaluationReportDirector:
                 
                 # Set all evaluations to skipped state with error handling
                 try:
-                    self.builder.set_registration_status(
-                        self._create_skip_evaluation(explanation, alert))
-                    self.builder.set_regulatory_oversight(
-                        self._create_skip_evaluation(explanation, None))
-                    self.builder.set_disclosures(
-                        self._create_skip_evaluation(f"No disclosures evaluated: {explanation}", None))
-                    self.builder.set_financials(
-                        self._create_skip_evaluation(explanation, None))
-                    self.builder.set_legal(
-                        self._create_skip_evaluation(explanation, None, 
-                            extracted_info.get("legal", {}).get("due_diligence", {})))
-                    self.builder.set_qualifications(
-                        self._create_skip_evaluation(explanation, None))
-                    self.builder.set_data_integrity(
-                        self._create_skip_evaluation(explanation, None))
+                    # Get the source from search_evaluation or basic_result
+                    basic_result = search_evaluation.get("basic_result", {})
+                    source = basic_result.get("source", search_evaluation.get("source", "UNKNOWN"))
+                    
+                    # Create a standard skip evaluation with the correct source
+                    skip_eval = self._create_skip_evaluation(explanation, alert)
+                    skip_eval["source"] = source
+                    
+                    # Set all evaluations to skipped state with error handling
+                    self.builder.set_status_evaluation(skip_eval)
+                    self.builder.set_disclosure_review(skip_eval)
+                    self.builder.set_disciplinary_evaluation(skip_eval)
+                    self.builder.set_arbitration_review(skip_eval)
                 except Exception as e:
                     raise EvaluationProcessError(f"Failed to set skipped evaluations: {str(e)}")
                 
@@ -302,104 +306,75 @@ class FirmEvaluationReportDirector:
                 logger.info(f"Performing full evaluation for {business_name}")
                 business_info = extracted_info
                 
-                # Registration status
+                # Map old method names to new method names for backward compatibility
+                method_mapping = {
+                    "set_registration_status": "set_status_evaluation",
+                    "set_disclosures": "set_disclosure_review"
+                }
+                
+                # Add compatibility layer for old method calls
+                original_builder = self.builder
+                
+                # Create method proxies for backward compatibility
+                for old_method, new_method in method_mapping.items():
+                    if hasattr(self.builder, old_method) and hasattr(self.builder, new_method):
+                        setattr(self.builder, old_method, getattr(self.builder, new_method))
+                
+                # Status evaluation (replaces registration_status)
                 compliant, explanation, alerts = self._safe_evaluate(
                     evaluate_registration_status,
                     business_info,
-                    section_name="registration_status"
+                    section_name="status_evaluation"
                 )
-                self.builder.set_registration_status({
+                # Get the source from search_evaluation or basic_result
+                basic_result = search_evaluation.get("basic_result", {})
+                source = basic_result.get("source", search_evaluation.get("source", "UNKNOWN"))
+                
+                self.builder.set_status_evaluation({
+                    "source": source,
                     "compliance": compliant,
-                    "explanation": explanation,
-                    "alerts": [alert.to_dict() for alert in alerts],
-                    "timestamp": datetime.now().isoformat()
+                    "compliance_explanation": explanation,
+                    "alerts": [alert.to_dict() for alert in alerts]
                 })
                 
-                # Regulatory oversight
-                compliant, explanation, alerts = self._safe_evaluate(
-                    evaluate_regulatory_oversight,
-                    business_info,
-                    business_name,
-                    section_name="regulatory_oversight"
-                )
-                self.builder.set_regulatory_oversight({
-                    "compliance": compliant,
-                    "explanation": explanation,
-                    "alerts": [alert.to_dict() for alert in alerts],
-                    "timestamp": datetime.now().isoformat()
-                })
-                
-                # Disclosures
+                # Disclosure review (replaces disclosures)
                 compliant, explanation, alerts = self._safe_evaluate(
                     evaluate_disclosures,
                     extracted_info.get("disclosures", []),
                     business_name,
-                    section_name="disclosures"
+                    section_name="disclosure_review"
                 )
-                self.builder.set_disclosures({
+                self.builder.set_disclosure_review({
+                    "source": source,
                     "compliance": compliant,
-                    "explanation": explanation,
-                    "alerts": [alert.to_dict() for alert in alerts],
-                    "timestamp": datetime.now().isoformat()
+                    "compliance_explanation": explanation,
+                    "alerts": [alert.to_dict() for alert in alerts]
                 })
                 
-                # Financials
-                compliant, explanation, alerts = self._safe_evaluate(
-                    evaluate_financials,
-                    business_info,
-                    business_name,
-                    section_name="financials"
-                )
-                self.builder.set_financials({
-                    "compliance": compliant,
-                    "explanation": explanation,
-                    "alerts": [alert.to_dict() for alert in alerts],
-                    "timestamp": datetime.now().isoformat()
+                # Disciplinary evaluation (new)
+                # Check for disciplinary actions
+                disciplinary_actions = extracted_info.get("disciplinary_actions", [])
+                disciplinary_compliant = len(disciplinary_actions) == 0
+                disciplinary_explanation = "No disciplinary actions found." if disciplinary_compliant else "Disciplinary actions found."
+                
+                self.builder.set_disciplinary_evaluation({
+                    "source": source,
+                    "compliance": disciplinary_compliant,
+                    "compliance_explanation": disciplinary_explanation,
+                    "alerts": []  # No alerts for disciplinary evaluation
                 })
                 
-                # Legal
-                compliant, explanation, alerts = self._safe_evaluate(
-                    evaluate_legal,
-                    business_info,
-                    business_name,
-                    extracted_info.get("legal", {}).get("due_diligence"),
-                    section_name="legal"
-                )
-                legal_eval = {
-                    "compliance": compliant,
-                    "explanation": explanation,
-                    "alerts": [alert.to_dict() for alert in alerts],
-                    "timestamp": datetime.now().isoformat()
-                }
-                if "due_diligence" in extracted_info.get("legal", {}):
-                    legal_eval["due_diligence"] = extracted_info["legal"]["due_diligence"]
-                self.builder.set_legal(legal_eval)
+                # Arbitration review (new)
+                # Check for arbitration cases
+                arbitration_cases = extracted_info.get("arbitration_cases", [])
+                arbitration_compliant = len(arbitration_cases) == 0
+                arbitration_explanation = "No arbitration cases found." if arbitration_compliant else "Arbitration cases found."
                 
-                # Qualifications
-                compliant, explanation, alerts = self._safe_evaluate(
-                    evaluate_qualifications,
-                    extracted_info.get("accountant_exams", []),
-                    business_name,
-                    section_name="qualifications"
-                )
-                self.builder.set_qualifications({
-                    "compliance": compliant,
-                    "explanation": explanation,
-                    "alerts": [alert.to_dict() for alert in alerts],
-                    "timestamp": datetime.now().isoformat()
-                })
-                
-                # Data integrity
-                compliant, explanation, alerts = self._safe_evaluate(
-                    evaluate_data_integrity,
-                    business_info,
-                    section_name="data_integrity"
-                )
-                self.builder.set_data_integrity({
-                    "compliance": compliant,
-                    "explanation": explanation,
-                    "alerts": [alert.to_dict() for alert in alerts],
-                    "timestamp": datetime.now().isoformat()
+                self.builder.set_arbitration_review({
+                    "source": source,
+                    "compliance": arbitration_compliant,
+                    "compliance_explanation": arbitration_explanation,
+                    "alerts": []  # No alerts for arbitration review
                 })
             
             # Compute final evaluation
@@ -412,24 +387,29 @@ class FirmEvaluationReportDirector:
             overall_compliance = search_evaluation.get("compliance", False)
             
             # Collect alerts and check compliance with error handling
-            for section in ["registration_status", "regulatory_oversight", "disclosures",
-                          "financials", "legal", "qualifications", "data_integrity"]:
+            for section in ["status_evaluation", "disclosure_review",
+                          "disciplinary_evaluation",
+                          "arbitration_review"]:
                 try:
                     section_data = report[section]
                     overall_compliance = overall_compliance and section_data.get("compliance", True)
                     
+                    # In the new format, alerts might not be present in individual sections
+                    # but we still need to check for backward compatibility
                     section_alerts = section_data.get("alerts", [])
                     for alert_dict in section_alerts:
                         try:
-                            alert = Alert(
-                                alert_type=alert_dict["alert_type"],
-                                severity=AlertSeverity[alert_dict["severity"]],
-                                metadata=alert_dict["metadata"],
-                                description=alert_dict["description"],
-                                alert_category=alert_dict.get("alert_category")
-                            )
-                            if alert.severity != AlertSeverity.INFO:
-                                all_alerts.append(alert)
+                            # Handle both old and new alert formats
+                            if isinstance(alert_dict, dict) and "alert_type" in alert_dict:
+                                alert = Alert(
+                                    alert_type=alert_dict["alert_type"],
+                                    severity=AlertSeverity[alert_dict["severity"]] if isinstance(alert_dict["severity"], str) else alert_dict["severity"],
+                                    metadata=alert_dict.get("metadata", {}),
+                                    description=alert_dict.get("description", ""),
+                                    alert_category=alert_dict.get("alert_category")
+                                )
+                                if alert.severity != AlertSeverity.INFO:
+                                    all_alerts.append(alert)
                         except (KeyError, ValueError) as e:
                             logger.error(f"Invalid alert data in {section}: {str(e)}")
                 except KeyError as e:
@@ -456,19 +436,65 @@ class FirmEvaluationReportDirector:
                 compliance_explanation = "One or more compliance checks failed"
                 recommendations = "Review alerts and take corrective action"
             
+            # Map old alert types to new standardized alert types
+            alert_type_mapping = {
+                "NoActiveRegistration": "Regulatory Disclosure",
+                "NoRegulatoryOversight": "Regulatory Disclosure",
+                "NoADVFiling": "Compliance Disclosure",
+                "NoLastUpdateDate": "Compliance Disclosure",
+                "BusinessNotFound": "Compliance Disclosure",
+                "RecordSkipped": "Compliance Disclosure",
+                "EvaluationError": "System Disclosure",
+                # Add more mappings as needed
+            }
+            
+            # Map alert categories to standardized categories
+            category_mapping = {
+                "REGISTRATION": "REGULATORY",
+                "REGULATORY": "REGULATORY",
+                "GENERAL": "COMPLIANCE",
+                # Add more mappings as needed
+            }
+            
+            # Format alerts according to new structure
+            formatted_alerts = []
+            for alert in all_alerts:
+                # Map alert type to standardized type
+                standardized_type = alert_type_mapping.get(alert.alert_type, alert.alert_type)
+                
+                # Map alert category to standardized category
+                original_category = alert.alert_category or "COMPLIANCE"
+                standardized_category = category_mapping.get(original_category, original_category)
+                
+                # Ensure category is one of the specified values
+                if standardized_category not in ["COMPLIANCE", "REGULATORY", "DISCLOSURE"]:
+                    standardized_category = "COMPLIANCE"
+                
+                # Create standardized alert
+                formatted_alert = {
+                    "eventDate": datetime.now().strftime("%Y-%m-%d"),
+                    "severity": alert.severity.name,
+                    "alert_category": standardized_category,
+                    "alert_type": standardized_type,
+                    "description": alert.description,
+                    "source": source,
+                    "metadata": alert.metadata or {}
+                }
+                formatted_alerts.append(formatted_alert)
+            
+            # Create standardized recommendations based on risk level
+            standardized_recommendations = {
+                "High": "Immediate action required due to critical compliance issues.",
+                "Medium": "Review and address compliance concerns within standard timeframes.",
+                "Low": "No immediate action required, monitor for changes."
+            }.get(risk_level, recommendations)
+            
             final_eval = {
                 "overall_compliance": overall_compliance,
-                "compliance_explanation": compliance_explanation,
                 "overall_risk_level": risk_level,
-                "recommendations": recommendations,
-                "alerts": [alert.to_dict() for alert in all_alerts],
-                "evaluation_timestamp": datetime.now().isoformat(),
-                "total_alerts": len(all_alerts),
-                "alert_summary": {
-                    "high": len([a for a in all_alerts if a.severity == AlertSeverity.HIGH]),
-                    "medium": len([a for a in all_alerts if a.severity == AlertSeverity.MEDIUM]),
-                    "low": len([a for a in all_alerts if a.severity == AlertSeverity.LOW])
-                }
+                "recommendations": standardized_recommendations,
+                "description": compliance_explanation,
+                "alerts": formatted_alerts
             }
             
             try:

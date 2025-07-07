@@ -307,24 +307,87 @@ def search_with_tax_id_and_org_crd(
             "timestamp": datetime.now().isoformat()
         }
     
-    result = facade.search_firm_by_crd(business_ref, org_crd)
-    if result:
-        detailed = facade.get_firm_details(business_ref, org_crd)
-        top_source = (detailed or {}).get('source', result.get('source', 'UNKNOWN'))
-        return {
-            "compliance": True,
-            "compliance_explanation": "Found by CRD",
-            "source": top_source,
-            "basic_result": result,
-            "detailed_result": detailed,
-            "timestamp": datetime.now().isoformat()
-        }
-    return {
+    # Get search results from both SEC and FINRA
+    sec_search_result = None
+    finra_search_result = None
+    
+    try:
+        # This will call both SEC and FINRA internally
+        result = facade.search_firm_by_crd(business_ref, org_crd)
+        
+        # Try to get the raw search results from both sources
+        firm_id = f"search_crd_{org_crd}"
+        
+        # Get SEC search result
+        try:
+            from services.firm_marshaller import fetch_sec_firm_by_crd, ResponseStatus
+            sec_response = fetch_sec_firm_by_crd(business_ref, firm_id, {"crd_number": org_crd})
+            if sec_response.status == ResponseStatus.SUCCESS and sec_response.data:
+                sec_search_result = sec_response.data
+        except Exception as e:
+            logger.error(f"Error getting SEC search result: {str(e)}")
+        
+        # Get FINRA search result
+        try:
+            from services.firm_marshaller import fetch_finra_firm_by_crd, ResponseStatus
+            finra_response = fetch_finra_firm_by_crd(business_ref, firm_id, {"crd_number": org_crd})
+            if finra_response.status == ResponseStatus.SUCCESS:
+                finra_search_result = finra_response.data
+        except Exception as e:
+            logger.error(f"Error getting FINRA search result: {str(e)}")
+        
+        if result:
+            detailed = facade.get_firm_details(business_ref, org_crd)
+            
+            # Get the source from basic_result first, then from detailed_result if not available
+            basic_source = result.get('source', 'UNKNOWN')
+            
+            # Create the evaluation with search results included
+            evaluation = {
+                "compliance": True,
+                "compliance_explanation": "Found by CRD",
+                "source": basic_source,  # Use the source from basic_result
+                "basic_result": result,
+                "detailed_result": detailed,
+                "timestamp": datetime.now().isoformat()
+            }
+            
+            # Always include SEC search result
+            evaluation["sec_search_result"] = sec_search_result or {
+                "status": "not_found",
+                "details": {}
+            }
+            
+            # Always include FINRA search result
+            evaluation["finra_search_result"] = finra_search_result or {
+                "status": "not_found",
+                "details": {}
+            }
+                
+            return evaluation
+    except Exception as e:
+        logger.error(f"Error in search_with_tax_id_and_org_crd: {str(e)}")
+    
+    # If we get here, the search failed or no results were found
+    evaluation = {
         "compliance": False,
         "compliance_explanation": "Not found by CRD",
         "source": "UNKNOWN",
         "timestamp": datetime.now().isoformat()
     }
+    
+    # Always include search results, even if empty
+    evaluation["sec_search_result"] = sec_search_result or {
+        "status": "not_found",
+        "details": {}
+    }
+    
+    evaluation["finra_search_result"] = finra_search_result or {
+        "status": "not_found",
+        "details": {}
+    }
+        
+    return evaluation
 
 @implemented_strategy(SearchStrategy.CRD_ONLY.value)
 def search_with_crd_only(
@@ -353,24 +416,87 @@ def search_with_crd_only(
             "timestamp": datetime.now().isoformat()
         }
     
-    result = facade.search_firm_by_crd(business_ref, org_crd)
-    if result:
-        detailed = facade.get_firm_details(business_ref, org_crd)
-        top_source = (detailed or {}).get('source', result.get('source', 'UNKNOWN'))
-        return {
-            "compliance": True,
-            "compliance_explanation": "Found by CRD",
-            "source": top_source,
-            "basic_result": result,
-            "detailed_result": detailed,
-            "timestamp": datetime.now().isoformat()
-        }
-    return {
+    # Get search results from both SEC and FINRA
+    sec_search_result = None
+    finra_search_result = None
+    
+    try:
+        # This will call both SEC and FINRA internally
+        result = facade.search_firm_by_crd(business_ref, org_crd)
+        
+        # Try to get the raw search results from both sources
+        firm_id = f"search_crd_{org_crd}"
+        
+        # Get SEC search result
+        try:
+            from services.firm_marshaller import fetch_sec_firm_by_crd, ResponseStatus
+            sec_response = fetch_sec_firm_by_crd(business_ref, firm_id, {"crd_number": org_crd})
+            if sec_response.status == ResponseStatus.SUCCESS and sec_response.data:
+                sec_search_result = sec_response.data
+        except Exception as e:
+            logger.error(f"Error getting SEC search result: {str(e)}")
+        
+        # Get FINRA search result
+        try:
+            from services.firm_marshaller import fetch_finra_firm_by_crd, ResponseStatus
+            finra_response = fetch_finra_firm_by_crd(business_ref, firm_id, {"crd_number": org_crd})
+            if finra_response.status == ResponseStatus.SUCCESS:
+                finra_search_result = finra_response.data
+        except Exception as e:
+            logger.error(f"Error getting FINRA search result: {str(e)}")
+        
+        if result:
+            detailed = facade.get_firm_details(business_ref, org_crd)
+            
+            # Get the source from basic_result first, then from detailed_result if not available
+            basic_source = result.get('source', 'UNKNOWN')
+            
+            # Create the evaluation with search results included
+            evaluation = {
+                "compliance": True,
+                "compliance_explanation": "Found by CRD",
+                "source": basic_source,  # Use the source from basic_result
+                "basic_result": result,
+                "detailed_result": detailed,
+                "timestamp": datetime.now().isoformat()
+            }
+            
+            # Always include SEC search result
+            evaluation["sec_search_result"] = sec_search_result or {
+                "status": "not_found",
+                "details": {}
+            }
+            
+            # Always include FINRA search result
+            evaluation["finra_search_result"] = finra_search_result or {
+                "status": "not_found",
+                "details": {}
+            }
+                
+            return evaluation
+    except Exception as e:
+        logger.error(f"Error in search_with_crd_only: {str(e)}")
+    
+    # If we get here, the search failed or no results were found
+    evaluation = {
         "compliance": False,
         "compliance_explanation": "Not found by CRD",
         "source": "UNKNOWN",
         "timestamp": datetime.now().isoformat()
     }
+    
+    # Always include search results, even if empty
+    evaluation["sec_search_result"] = sec_search_result or {
+        "status": "not_found",
+        "details": {}
+    }
+    
+    evaluation["finra_search_result"] = finra_search_result or {
+        "status": "not_found",
+        "details": {}
+    }
+        
+    return evaluation
 
 @implemented_strategy(SearchStrategy.NAME_ONLY.value)
 def search_with_name_only(
@@ -399,28 +525,92 @@ def search_with_name_only(
             "timestamp": datetime.now().isoformat()
         }
     
-    results = facade.search_firm(business_ref, business_name)
-    if results:
-        # Use first match
-        result = results[0]
-        org_crd = result.get('crd_number') or result.get('organization_crd')
-        if org_crd:
-            detailed = facade.get_firm_details(business_ref, org_crd)
-            top_source = (detailed or {}).get('source', result.get('source', 'UNKNOWN'))
-            return {
-                "compliance": True,
-                "compliance_explanation": "Found by name",
-                "source": top_source,
-                "basic_result": result,
-                "detailed_result": detailed,
-                "timestamp": datetime.now().isoformat()
-            }
-    return {
+    # Get search results from both SEC and FINRA
+    sec_search_result = None
+    finra_search_result = None
+    
+    try:
+        # Search by name
+        results = facade.search_firm(business_ref, business_name)
+        
+        if results:
+            # Use first match
+            result = results[0]
+            org_crd = result.get('crd_number') or result.get('organization_crd')
+            
+            if org_crd:
+                # Try to get the raw search results from both sources
+                firm_id = f"search_crd_{org_crd}"
+                
+                # Get SEC search result
+                try:
+                    from services.firm_marshaller import fetch_sec_firm_by_crd, ResponseStatus
+                    sec_response = fetch_sec_firm_by_crd(business_ref, firm_id, {"crd_number": org_crd})
+                    if sec_response.status == ResponseStatus.SUCCESS and sec_response.data:
+                        sec_search_result = sec_response.data
+                except Exception as e:
+                    logger.error(f"Error getting SEC search result: {str(e)}")
+                
+                # Get FINRA search result
+                try:
+                    from services.firm_marshaller import fetch_finra_firm_by_crd, ResponseStatus
+                    finra_response = fetch_finra_firm_by_crd(business_ref, firm_id, {"crd_number": org_crd})
+                    if finra_response.status == ResponseStatus.SUCCESS:
+                        finra_search_result = finra_response.data
+                except Exception as e:
+                    logger.error(f"Error getting FINRA search result: {str(e)}")
+                
+                detailed = facade.get_firm_details(business_ref, org_crd)
+                
+                # Get the source from basic_result first, then from detailed_result if not available
+                basic_source = result.get('source', 'UNKNOWN')
+                
+                # Create the evaluation with search results included
+                evaluation = {
+                    "compliance": True,
+                    "compliance_explanation": "Found by name",
+                    "source": basic_source,  # Use the source from basic_result
+                    "basic_result": result,
+                    "detailed_result": detailed,
+                    "timestamp": datetime.now().isoformat()
+                }
+                
+                # Always include SEC search result
+                evaluation["sec_search_result"] = sec_search_result or {
+                    "status": "not_found",
+                    "details": {}
+                }
+                
+                # Always include FINRA search result
+                evaluation["finra_search_result"] = finra_search_result or {
+                    "status": "not_found",
+                    "details": {}
+                }
+                    
+                return evaluation
+    except Exception as e:
+        logger.error(f"Error in search_with_name_only: {str(e)}")
+    
+    # If we get here, the search failed or no results were found
+    evaluation = {
         "compliance": False,
         "compliance_explanation": "Not found by name",
         "source": "UNKNOWN",
         "timestamp": datetime.now().isoformat()
     }
+    
+    # Always include search results, even if empty
+    evaluation["sec_search_result"] = sec_search_result or {
+        "status": "not_found",
+        "details": {}
+    }
+    
+    evaluation["finra_search_result"] = finra_search_result or {
+        "status": "not_found",
+        "details": {}
+    }
+        
+    return evaluation
 
 @implemented_strategy(SearchStrategy.DEFAULT.value)
 def search_with_default(
@@ -452,6 +642,7 @@ def search_with_default(
     if business_name:
         return search_with_name_only(claim, facade, business_ref)
     
+    # If we get here, there's insufficient search criteria
     return {
         "compliance": False,
         "compliance_explanation": "Insufficient search criteria",
@@ -500,6 +691,10 @@ def process_claim(
     # Ensure business_ref is in the claim for FirmEvaluationReportDirector
     claim["business_ref"] = business_ref_str
     
+    # Ensure entityName is in the claim for name evaluation
+    if "entityName" not in claim and "business_name" in claim:
+        claim["entityName"] = claim["business_name"]
+    
     try:
         # Determine and execute search strategy
         strategy_type = determine_search_strategy(claim)
@@ -542,6 +737,17 @@ def process_claim(
             "locations": []
         }
         
+        # Always add search results to extracted_info
+        extracted_info["sec_search_result"] = search_evaluation.get("sec_search_result", {
+            "status": "not_found",
+            "details": {}
+        })
+        
+        extracted_info["finra_search_result"] = search_evaluation.get("finra_search_result", {
+            "status": "not_found",
+            "details": {}
+        })
+        
         if search_evaluation.get("compliance", False):
             basic_result = search_evaluation.get("basic_result", {})
             detailed_result = search_evaluation.get("detailed_result", {})
@@ -560,9 +766,9 @@ def process_claim(
             if skip_legal:
                 extracted_info["skip_legal"] = True
             
-            # Set top-level source to match detailed_result or basic_result
-            top_source = (detailed_result or {}).get('source', basic_result.get('source', 'UNKNOWN'))
-            search_evaluation['source'] = top_source
+            # Set top-level source to match basic_result source
+            basic_source = basic_result.get('source', 'UNKNOWN')
+            search_evaluation['source'] = basic_source
         
         # Initialize report builder and director
         builder = FirmEvaluationReportBuilder(claim.get("reference_id", "UNKNOWN"))

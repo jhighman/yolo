@@ -94,6 +94,12 @@ class FirmServicesFacade:
         """
         Get detailed firm information from both FINRA and SEC using CRD number.
         
+        Precedence rules:
+        1. First check FINRA BrokerCheck to determine if found by CRD
+        2. Then check SEC to see if found there
+        3. If found in both places, SEC wins
+        4. If neither is found, use the not found result of SEC
+        
         Args:
             subject_id: The ID of the subject/client making the request
             crd_number: The firm's CRD number
@@ -107,32 +113,57 @@ class FirmServicesFacade:
         finra_details = None
         sec_details = None
         
-        # Get FINRA details
+        # First check if firm exists in FINRA by CRD
+        finra_exists = False
+        search_firm_id = f"search_crd_{crd_number}"
         try:
-            finra_response = fetch_finra_firm_details(subject_id, firm_id, {"crd_number": crd_number})
-            if finra_response.status == ResponseStatus.SUCCESS and finra_response.data:
-                logger.debug(f"Found FINRA details for CRD {crd_number}")
-                if isinstance(finra_response.data, dict):
-                    finra_details = self.firm_marshaller.normalize_finra_details(finra_response.data)
-                elif isinstance(finra_response.data, list) and finra_response.data:
-                    finra_details = self.firm_marshaller.normalize_finra_details(finra_response.data[0])
+            finra_search_response = fetch_finra_firm_by_crd(subject_id, search_firm_id, {"crd_number": crd_number})
+            if finra_search_response.status == ResponseStatus.SUCCESS and finra_search_response.data:
+                finra_exists = True
+                logger.debug(f"Firm exists in FINRA for CRD {crd_number}")
         except Exception as e:
-            logger.error(f"Error getting FINRA details for CRD {crd_number}: {str(e)}")
-            
-        # Get SEC details
-        try:
-            sec_response = fetch_sec_firm_details(subject_id, firm_id, {"crd_number": crd_number})
-            if sec_response.status == ResponseStatus.SUCCESS and sec_response.data:
-                logger.debug(f"Found SEC details for CRD {crd_number}")
-                if isinstance(sec_response.data, dict):
-                    sec_details = self.firm_marshaller.normalize_sec_details(sec_response.data)
-                elif isinstance(sec_response.data, list) and sec_response.data:
-                    sec_details = self.firm_marshaller.normalize_sec_details(sec_response.data[0])
-        except Exception as e:
-            logger.error(f"Error getting SEC details for CRD {crd_number}: {str(e)}")
+            logger.error(f"Error checking if firm exists in FINRA for CRD {crd_number}: {str(e)}")
         
-        # Combine details
+        # Then check if firm exists in SEC by CRD
+        sec_exists = False
+        try:
+            sec_search_response = fetch_sec_firm_by_crd(subject_id, search_firm_id, {"crd_number": crd_number})
+            if sec_search_response.status == ResponseStatus.SUCCESS and sec_search_response.data:
+                sec_exists = True
+                logger.debug(f"Firm exists in SEC for CRD {crd_number}")
+        except Exception as e:
+            logger.error(f"Error checking if firm exists in SEC for CRD {crd_number}: {str(e)}")
+        
+        # Get FINRA details if it exists in FINRA
+        if finra_exists:
+            try:
+                finra_response = fetch_finra_firm_details(subject_id, firm_id, {"crd_number": crd_number})
+                if finra_response.status == ResponseStatus.SUCCESS and finra_response.data:
+                    logger.debug(f"Found FINRA details for CRD {crd_number}")
+                    if isinstance(finra_response.data, dict):
+                        finra_details = self.firm_marshaller.normalize_finra_details(finra_response.data)
+                    elif isinstance(finra_response.data, list) and finra_response.data:
+                        finra_details = self.firm_marshaller.normalize_finra_details(finra_response.data[0])
+            except Exception as e:
+                logger.error(f"Error getting FINRA details for CRD {crd_number}: {str(e)}")
+        
+        # Get SEC details if it exists in SEC
+        if sec_exists:
+            try:
+                sec_response = fetch_sec_firm_details(subject_id, firm_id, {"crd_number": crd_number})
+                if sec_response.status == ResponseStatus.SUCCESS and sec_response.data:
+                    logger.debug(f"Found SEC details for CRD {crd_number}")
+                    if isinstance(sec_response.data, dict):
+                        sec_details = self.firm_marshaller.normalize_sec_details(sec_response.data)
+                    elif isinstance(sec_response.data, list) and sec_response.data:
+                        sec_details = self.firm_marshaller.normalize_sec_details(sec_response.data[0])
+            except Exception as e:
+                logger.error(f"Error getting SEC details for CRD {crd_number}: {str(e)}")
+        
+        # Apply precedence rules
         if finra_details and sec_details:
+            # If found in both places, SEC wins, but combine the data
+            logger.debug(f"Found in both FINRA and SEC, combining with SEC precedence for CRD {crd_number}")
             # Start with FINRA details as base
             combined = finra_details.copy()
             # Add SEC-specific fields
@@ -149,12 +180,24 @@ class FirmServicesFacade:
                 'adv_filing_date': sec_details.get('adv_filing_date'),
                 'has_adv_pdf': sec_details.get('has_adv_pdf', False),
                 'accountant_exams': sec_details.get('accountant_exams', []),
-                'brochures': sec_details.get('brochures', [])
+                'brochures': sec_details.get('brochures', []),
+                'source': 'SEC'
             })
             return combined
-        
-        # Return whichever details we found, or None if neither found
-        return finra_details or sec_details or None
+        elif finra_details:
+            # If only found in FINRA, use FINRA details
+            logger.debug(f"Found only in FINRA for CRD {crd_number}")
+            finra_details['source'] = 'FINRA'
+            return finra_details
+        elif sec_details:
+            # If only found in SEC, use SEC details
+            logger.debug(f"Found only in SEC for CRD {crd_number}")
+            sec_details['source'] = 'SEC'
+            return sec_details
+        else:
+            # If not found in either, return None
+            logger.debug(f"Not found in either FINRA or SEC for CRD {crd_number}")
+            return None
 
     def search_firm_by_crd(self, subject_id: str, crd_number: str) -> Optional[Dict[str, Any]]:
         """
@@ -175,26 +218,28 @@ class FirmServicesFacade:
         found_firm = False
         source = None
         
-        # Try SEC first
+        # Try SEC
+        sec_found = False
         try:
             sec_response = fetch_sec_firm_by_crd(subject_id, firm_id, {"crd_number": crd_number})
             if sec_response.status == ResponseStatus.SUCCESS and sec_response.data:
                 logger.debug(f"Found SEC result for CRD {crd_number}")
                 found_firm = True
+                sec_found = True
                 source = "SEC"
         except Exception as e:
             logger.error(f"Error searching SEC by CRD {crd_number}: {str(e)}")
                 
-        # If SEC fails or returns empty, try FINRA
-        if not found_firm:
-            try:
-                finra_response = fetch_finra_firm_by_crd(subject_id, firm_id, {"crd_number": crd_number})
-                if finra_response.status == ResponseStatus.SUCCESS and finra_response.data:
-                    logger.debug(f"Found FINRA result for CRD {crd_number}")
-                    found_firm = True
+        # Always try FINRA too, regardless of SEC result
+        try:
+            finra_response = fetch_finra_firm_by_crd(subject_id, firm_id, {"crd_number": crd_number})
+            if finra_response.status == ResponseStatus.SUCCESS and finra_response.data:
+                logger.debug(f"Found FINRA result for CRD {crd_number}")
+                found_firm = True
+                if not sec_found:  # Only change source if SEC didn't find it
                     source = "FINRA"
-            except Exception as e:
-                logger.error(f"Error searching FINRA by CRD {crd_number}: {str(e)}")
+        except Exception as e:
+            logger.error(f"Error searching FINRA by CRD {crd_number}: {str(e)}")
         
         # If we found the firm in either database, get detailed information
         if found_firm:

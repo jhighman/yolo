@@ -207,7 +207,12 @@ def save_cached_data(cache_path: Path, file_name: str, data: Dict) -> None:
 def save_multiple_results(cache_path: Path, agent_name: str, firm_id: str, service: str, date: str, results: List[Dict]) -> None:
     if not results:
         file_name = build_file_name(agent_name, firm_id, service, date, 1)
-        save_cached_data(cache_path, file_name, {"result": "No Results Found"})
+        save_cached_data(cache_path, file_name, {
+            "result": "No Results Found",
+            "status": "not_found",
+            "message": "No results found for the search criteria",
+            "timestamp": get_manifest_timestamp()
+        })
     else:
         for i, result in enumerate(results, 1):
             file_name = build_file_name(agent_name, firm_id, service, date, i)
@@ -326,6 +331,24 @@ def check_cache_or_fetch(
                     metadata={"cache": "hit", "cached_date": cached_date}
                 )
             
+            # Check if this is a cached "not found" result for multiple results
+            if is_multiple and len(cached_data) == 1 and isinstance(cached_data[0], dict) and cached_data[0].get("result") == "Not Found":
+                return ResponseModel(
+                    status=ResponseStatus.NOT_FOUND,
+                    data=None,
+                    message=cached_data[0].get("message", f"No results found for {service}"),
+                    metadata={"cache": "hit", "cached_date": cached_date, "original_status": cached_data[0].get("status")}
+                )
+            
+            # Check if this is a cached "not found" result
+            if not is_multiple and isinstance(cached_data, dict) and cached_data.get("result") == "Not Found":
+                return ResponseModel(
+                    status=ResponseStatus.NOT_FOUND,
+                    data=None,
+                    message=cached_data.get("message", f"No results found for {service}"),
+                    metadata={"cache": "hit", "cached_date": cached_date, "original_status": cached_data.get("status")}
+                )
+            
             return ResponseModel(
                 status=ResponseStatus.SUCCESS,
                 data=cached_data,
@@ -337,10 +360,18 @@ def check_cache_or_fetch(
     response, fetch_duration = fetch_agent_data(agent_name, service, params)
     log_request(subject_id, firm_id, agent_name, service, "Fetched", fetch_duration)
     
-    # Only cache if we have valid data
-    if response.status == ResponseStatus.SUCCESS:
+    # Cache both successful and not found responses for audit purposes
+    if response.status in [ResponseStatus.SUCCESS, ResponseStatus.NOT_FOUND]:
         file_name = build_file_name(agent_name, firm_id, service, date)
-        if not is_multiple and response.data:
+        if response.status == ResponseStatus.NOT_FOUND:
+            # Cache not found results with a special indicator
+            save_cached_data(cache_path, file_name, {
+                "result": "Not Found",
+                "status": response.status.value,
+                "message": response.message,
+                "timestamp": get_manifest_timestamp()
+            })
+        elif not is_multiple and response.data:
             save_cached_data(cache_path, file_name, response.data[0])
         else:
             save_multiple_results(cache_path, agent_name, firm_id, service, date, response.data or [])

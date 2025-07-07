@@ -21,31 +21,48 @@ class FirmEvaluationReportBuilder:
         self.report = OrderedDict([
             ("reference_id", reference_id),
             ("claim", {}),
+            ("entity", {}),
             ("search_evaluation", {}),
-            ("registration_status", {}),
-            ("regulatory_oversight", {}),
-            ("disclosures", {}),
-            ("financials", {}),
-            ("legal", {}),
-            ("qualifications", {}),
-            ("data_integrity", {}),
+            ("status_evaluation", {}),
+            ("disclosure_review", {}),
+            ("disciplinary_evaluation", {}),
+            ("arbitration_review", {}),
             ("final_evaluation", {})
         ])
 
     def set_claim(self, claim: Dict[str, Any]) -> "FirmEvaluationReportBuilder":
-        """Set the original claim data in the report.
+        """Set the simplified claim data in the report.
         
         Args:
-            claim: Dictionary containing claim data (e.g., business name, tax ID)
+            claim: Dictionary containing claim data
             
         Returns:
             self for method chaining
         """
-        self.report["claim"] = claim
+        # Extract only the required fields for the simplified claim structure
+        simplified_claim = {
+            "referenceId": claim.get("reference_id") or claim.get("referenceId", ""),
+            "crdNumber": claim.get("organization_crd") or claim.get("crdNumber", ""),
+            "entityName": claim.get("business_name") or claim.get("entityName", "")
+        }
+        
+        self.report["claim"] = simplified_claim
+        return self
+
+    def set_entity(self, entity_data: Dict[str, Any]) -> "FirmEvaluationReportBuilder":
+        """Set the entity information in the report.
+        
+        Args:
+            entity_data: Dictionary containing entity information
+            
+        Returns:
+            self for method chaining
+        """
+        self.report["entity"] = entity_data
         return self
 
     def set_search_evaluation(self, search_evaluation: Dict[str, Any]) -> "FirmEvaluationReportBuilder":
-        """Set the search evaluation results from upstream processing.
+        """Set the simplified search evaluation results from upstream processing.
         
         Args:
             search_evaluation: Dictionary containing search results and compliance status
@@ -53,91 +70,104 @@ class FirmEvaluationReportBuilder:
         Returns:
             self for method chaining
         """
-        self.report["search_evaluation"] = search_evaluation
+        # Get the source from basic_result
+        basic_result = search_evaluation.get("basic_result", {})
+        source = basic_result.get("source", search_evaluation.get("source", "UNKNOWN"))
+        
+        # Remove redundant source from basic_result if it exists
+        if basic_result and "source" in basic_result:
+            basic_result = {k: v for k, v in basic_result.items() if k != "source"}
+        
+        # Extract entity information from basic_result and set it
+        if basic_result:
+            entity_data = {
+                "firm_name": basic_result.get("firm_name", ""),
+                "crd_number": basic_result.get("crd_number", ""),
+                "sec_number": basic_result.get("sec_number", ""),
+                "registration_status": basic_result.get("registration_status", ""),
+                "address": basic_result.get("address", {}),
+                "registration_date": basic_result.get("registration_date", ""),
+                "other_names": basic_result.get("other_names", []),
+                "is_sec_registered": basic_result.get("is_sec_registered", False),
+                "is_state_registered": basic_result.get("is_state_registered", False),
+                "is_era_registered": basic_result.get("is_era_registered", False),
+                "is_sec_era_registered": basic_result.get("is_sec_era_registered", False),
+                "is_state_era_registered": basic_result.get("is_state_era_registered", False),
+                "adv_filing_date": basic_result.get("adv_filing_date", ""),
+                "has_adv_pdf": basic_result.get("has_adv_pdf", False)
+            }
+            self.set_entity(entity_data)
+        
+        # Extract only the required fields for the simplified search_evaluation structure
+        simplified_search_evaluation = {
+            "source": source,  # Use the source from basic_result
+            "compliance": search_evaluation.get("compliance", False),
+            "compliance_explanation": f"Search completed successfully with {source} data, individual found."
+                if search_evaluation.get("compliance", False)
+                else f"Search failed to find entity in {source}.",
+            "basic_result": basic_result
+        }
+        
+        # Always include raw search results
+        simplified_search_evaluation["sec_search_result"] = search_evaluation.get("sec_search_result", {
+            "status": "not_found",
+            "details": {}
+        })
+        
+        simplified_search_evaluation["finra_search_result"] = search_evaluation.get("finra_search_result", {
+            "status": "not_found",
+            "details": {}
+        })
+        
+        self.report["search_evaluation"] = simplified_search_evaluation
         return self
 
-    def set_registration_status(self, registration_status: Dict[str, Any]) -> "FirmEvaluationReportBuilder":
-        """Set the registration status evaluation.
+    def set_status_evaluation(self, status_evaluation: Dict[str, Any]) -> "FirmEvaluationReportBuilder":
+        """Set the status evaluation (replaces registration_status).
         
         Args:
-            registration_status: Dictionary containing registration compliance evaluation
+            status_evaluation: Dictionary containing registration status compliance evaluation
             
         Returns:
             self for method chaining
         """
-        self.report["registration_status"] = registration_status
+        self.report["status_evaluation"] = status_evaluation
         return self
 
-    def set_regulatory_oversight(self, regulatory_oversight: Dict[str, Any]) -> "FirmEvaluationReportBuilder":
-        """Set the regulatory oversight evaluation.
+    def set_disclosure_review(self, disclosure_review: Dict[str, Any]) -> "FirmEvaluationReportBuilder":
+        """Set the disclosure review (replaces disclosures).
         
         Args:
-            regulatory_oversight: Dictionary containing oversight compliance evaluation
+            disclosure_review: Dictionary containing disclosure compliance evaluation
             
         Returns:
             self for method chaining
         """
-        self.report["regulatory_oversight"] = regulatory_oversight
+        self.report["disclosure_review"] = disclosure_review
         return self
 
-    def set_disclosures(self, disclosures: Dict[str, Any]) -> "FirmEvaluationReportBuilder":
-        """Set the disclosure evaluation.
+    def set_disciplinary_evaluation(self, disciplinary_evaluation: Dict[str, Any]) -> "FirmEvaluationReportBuilder":
+        """Set the disciplinary evaluation.
         
         Args:
-            disclosures: Dictionary containing disclosure compliance evaluation
+            disciplinary_evaluation: Dictionary containing disciplinary action evaluation
             
         Returns:
             self for method chaining
         """
-        self.report["disclosures"] = disclosures
+        self.report["disciplinary_evaluation"] = disciplinary_evaluation
         return self
 
-    def set_financials(self, financials: Dict[str, Any]) -> "FirmEvaluationReportBuilder":
-        """Set the financial stability evaluation.
+    def set_arbitration_review(self, arbitration_review: Dict[str, Any]) -> "FirmEvaluationReportBuilder":
+        """Set the arbitration review.
         
         Args:
-            financials: Dictionary containing financial compliance evaluation
+            arbitration_review: Dictionary containing arbitration data evaluation
             
         Returns:
             self for method chaining
         """
-        self.report["financials"] = financials
-        return self
-
-    def set_legal(self, legal: Dict[str, Any]) -> "FirmEvaluationReportBuilder":
-        """Set the legal compliance evaluation.
-        
-        Args:
-            legal: Dictionary containing legal compliance evaluation
-            
-        Returns:
-            self for method chaining
-        """
-        self.report["legal"] = legal
-        return self
-
-    def set_qualifications(self, qualifications: Dict[str, Any]) -> "FirmEvaluationReportBuilder":
-        """Set the professional qualifications evaluation.
-        
-        Args:
-            qualifications: Dictionary containing qualifications compliance evaluation
-            
-        Returns:
-            self for method chaining
-        """
-        self.report["qualifications"] = qualifications
-        return self
-
-    def set_data_integrity(self, data_integrity: Dict[str, Any]) -> "FirmEvaluationReportBuilder":
-        """Set the data integrity evaluation.
-        
-        Args:
-            data_integrity: Dictionary containing data reliability evaluation
-            
-        Returns:
-            self for method chaining
-        """
-        self.report["data_integrity"] = data_integrity
+        self.report["arbitration_review"] = arbitration_review
         return self
 
     def set_final_evaluation(self, final_evaluation: Dict[str, Any]) -> "FirmEvaluationReportBuilder":

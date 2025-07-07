@@ -4,6 +4,13 @@ firm_business_api.py
 This module provides a FastAPI application with endpoints for processing business compliance claims.
 It supports basic and complete processing modes, integrates with firm-business.py for data processing,
 and provides webhook support for asynchronous report delivery.
+
+CSV Input Format:
+For CSV input, the expected format is:
+referenceId,crdNumber,entityName
+
+Example:
+SPID_EntityBioId,288933,"CLEAR STREET LLC"
 """
 
 import json
@@ -52,60 +59,39 @@ PROCESSING_MODES = {
 }
 
 class ClaimRequest(BaseModel):
-    """Validates incoming claim data."""
+    """Validates incoming claim data for the simplified API."""
     # Required fields
-    reference_id: str
-    business_ref: str
-    
-    # Optional fields (at least one identifier required)
-    business_name: Optional[str] = None
-    tax_id: Optional[str] = None
-    organization_crd: Optional[str] = None
-    business_location: Optional[str] = None
+    referenceId: str
+    crdNumber: str
+    entityName: str
     webhook_url: Optional[HttpUrl] = None
 
     class Config:
         extra = "allow"  # Allow additional fields
 
-    @validator("reference_id")
+    @validator("referenceId")
     def validate_reference_id(cls, v):
-        """Validate that reference_id is not empty."""
+        """Validate that referenceId is not empty."""
         if not v or not v.strip():
-            logger.error("Validation failed: reference_id is empty")
-            raise ValueError("reference_id cannot be empty")
+            logger.error("Validation failed: referenceId is empty")
+            raise ValueError("referenceId cannot be empty")
         return v.strip()
 
-    @validator("business_ref")
-    def validate_business_ref(cls, v):
-        """Validate that business_ref is not empty."""
+    @validator("crdNumber")
+    def validate_crd_number(cls, v):
+        """Validate that crdNumber is not empty."""
         if not v or not v.strip():
-            logger.error("Validation failed: business_ref is empty")
-            raise ValueError("business_ref cannot be empty")
+            logger.error("Validation failed: crdNumber is empty")
+            raise ValueError("crdNumber cannot be empty")
         return v.strip()
-
-    @root_validator(pre=True)
-    def validate_identifiers(cls, values):
-        """Validate that at least one identifier is provided."""
-        identifiers = [
-            values.get("business_name"),
-            values.get("tax_id"),
-            values.get("organization_crd")
-        ]
         
-        # Log the identifiers being checked
-        logger.info("Checking identifiers:", extra={
-            "business_name": values.get("business_name"),
-            "tax_id": values.get("tax_id"),
-            "organization_crd": values.get("organization_crd")
-        })
-        
-        # Check if at least one identifier has a non-empty value
-        if not any(id for id in identifiers if id and isinstance(id, str) and id.strip()):
-            logger.error("Validation failed: No valid identifier provided")
-            raise ValueError(
-                "At least one identifier (business_name, tax_id, or organization_crd) must be provided"
-            )
-        return values
+    @validator("entityName")
+    def validate_entity_name(cls, v):
+        """Validate that entityName is not empty."""
+        if not v or not v.strip():
+            logger.error("Validation failed: entityName is empty")
+            raise ValueError("entityName cannot be empty")
+        return v.strip()
 
 async def send_to_webhook(webhook_url: str, report: Dict[str, Any], reference_id: str) -> None:
     """
@@ -155,8 +141,8 @@ async def process_claim_helper(request: ClaimRequest, mode: str) -> Dict[str, An
         HTTPException: If processing fails
     """
     logger.info(f"Processing claim in {mode} mode", extra={
-        "reference_id": request.reference_id,
-        "business_name": request.business_name,
+        "reference_id": request.referenceId,
+        "entity_name": request.entityName,
         "mode": mode
     })
     
@@ -168,25 +154,33 @@ async def process_claim_helper(request: ClaimRequest, mode: str) -> Dict[str, An
         claim_dict = request.dict()
         webhook_url = claim_dict.pop("webhook_url", None)
         
+        # Map the new API fields to the internal claim format
+        internal_claim = {
+            "reference_id": claim_dict.get("referenceId"),
+            "business_ref": claim_dict.get("referenceId"),  # Use referenceId as business_ref
+            "organization_crd": claim_dict.get("crdNumber"),
+            "business_name": claim_dict.get("entityName")
+        }
+        
         # Process claim
         report = process_claim(
-            claim=claim_dict,
+            claim=internal_claim,
             facade=facade,
-            business_ref=claim_dict.get("business_ref"),
+            business_ref=internal_claim.get("business_ref"),
             skip_financials=mode_settings["skip_financials"],
             skip_legal=mode_settings["skip_legal"]
         )
         
         # Send to webhook if URL provided
         if webhook_url:
-            asyncio.create_task(send_to_webhook(webhook_url, report, request.reference_id))
+            asyncio.create_task(send_to_webhook(webhook_url, report, request.referenceId))
         
         return report
         
     except Exception as e:
         logger.error(f"Error processing claim", extra={
-            "reference_id": request.reference_id,
-            "business_name": request.business_name,
+            "reference_id": request.referenceId,
+            "entity_name": request.entityName,
             "mode": mode,
             "error": str(e),
             "error_type": type(e).__name__
@@ -216,10 +210,18 @@ async def shutdown_event():
     """Clean up resources on API shutdown."""
     logger.info("Shutting down API")
     try:
-        facade.cleanup()  # Assuming facade has a cleanup method
-        logger.info("Successfully cleaned up resources")
+        # Use a more defensive approach to cleanup
+        if facade is not None:
+            cleanup_method = getattr(facade, 'cleanup', None)
+            if callable(cleanup_method):
+                cleanup_method()
+                logger.info("Successfully cleaned up resources")
+            else:
+                logger.info("No cleanup method available on facade")
+        else:
+            logger.info("No facade instance to clean up")
     except Exception as e:
         logger.error(f"Error during cleanup", extra={
             "error": str(e),
             "error_type": type(e).__name__
-        }) 
+        })
