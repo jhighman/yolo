@@ -31,7 +31,7 @@ logging.basicConfig(
 logger = logging.getLogger("ui")
 
 # API base URL (adjust if your FastAPI server runs on a different host/port)
-API_BASE_URL = "http://localhost:8000"
+API_BASE_URL = "http://localhost:9000"  # Changed from 8000 to 9000
 
 def api_call(method: str, endpoint: str, data: Optional[Union[Dict[str, Any], Dict[str, Union[int, str]]]] = None) -> str:
     """
@@ -509,4 +509,7 @@ with demo:
     )
 
 if __name__ == "__main__":
-    demo.launch()
+    demo.launch(
+        share=True,  # Creates a public link accessible from anywhere
+        server_port=9001  # Changed from default 7860 to 9001
+    )

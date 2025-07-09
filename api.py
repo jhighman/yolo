@@ -8,7 +8,7 @@ and managing cached compliance data. It supports multiple processing modes (basi
 asynchronous task queuing with Celery, and webhook notifications for processed claims.
 
 🔧 USAGE
-Run the API with `uvicorn api:app --host 0.0.0.0 --port 8000 --log-level info`.
+Run the API with `uvicorn api:app --host 0.0.0.0 --port 9000 --log-level info`.
 Use endpoints like `/process-claim-{mode}`, `/cache/clear`, `/compliance/latest`, etc.
 Ensure Redis is running for Celery (e.g., `redis://localhost:6379/0`).
 
@@ -602,4 +602,4 @@ async def get_all_compliance_summaries(page: int = 1, page_size: int = 10):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000, log_level="info")
+    uvicorn.run(app, host="0.0.0.0", port=9000, log_level="info")
