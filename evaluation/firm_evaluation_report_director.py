@@ -386,6 +386,9 @@ class FirmEvaluationReportDirector:
             all_alerts: List[Alert] = []
             overall_compliance = search_evaluation.get("compliance", False)
             
+            # Track alert fingerprints to avoid duplicates
+            seen_alert_fingerprints = set()
+            
             # Collect alerts and check compliance with error handling
             for section in ["status_evaluation", "disclosure_review",
                           "disciplinary_evaluation",
@@ -408,7 +411,19 @@ class FirmEvaluationReportDirector:
                                     description=alert_dict.get("description", ""),
                                     alert_category=alert_dict.get("alert_category")
                                 )
-                                if alert.severity != AlertSeverity.INFO:
+                                
+                                # Skip INFO severity alerts
+                                if alert.severity == AlertSeverity.INFO:
+                                    continue
+                                
+                                # Create a fingerprint to identify duplicate alerts
+                                # Use alert_type, description, and business_ref (if available) as the fingerprint
+                                business_ref = alert_dict.get("metadata", {}).get("business_ref", "")
+                                alert_fingerprint = f"{alert.alert_type}|{alert.description}|{business_ref}"
+                                
+                                # Only add the alert if we haven't seen this fingerprint before
+                                if alert_fingerprint not in seen_alert_fingerprints:
+                                    seen_alert_fingerprints.add(alert_fingerprint)
                                     all_alerts.append(alert)
                         except (KeyError, ValueError) as e:
                             logger.error(f"Invalid alert data in {section}: {str(e)}")
