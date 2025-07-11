@@ -1,58 +1,40 @@
-#!/usr/bin/env python3
-"""
-Test script to search for BROOKSTONE SECURITIES, INC with CRD #29116
-using the FirmServicesFacade directly.
-"""
-
-import sys
 import json
-from pathlib import Path
-sys.path.append(str(Path(__file__).parent))
-
 from services.firm_services import FirmServicesFacade
 
-def main():
-    # Create a subject ID for testing
+def test_brookstone_search():
+    """Test searching for BROOKSTONE SECURITIES, INC (CRD #29116)"""
+    # Initialize services
+    firm_services = FirmServicesFacade()
+    
+    # Search for firm by CRD
+    crd_number = "29116"
+    print(f"\nSearching for firm by CRD: {crd_number}")
     subject_id = "TEST_BROOKSTONE"
+    firm_details = firm_services.search_firm_by_crd(subject_id, crd_number)
     
-    # Create the facade
-    facade = FirmServicesFacade()
+    print("\nSearch Result:")
+    print(json.dumps(firm_details, indent=2))
     
-    # Search for BROOKSTONE SECURITIES, INC by CRD #29116
-    print(f"\nSearching for firm by CRD: 29116")
-    result = facade.search_firm_by_crd(subject_id, "29116")
+    # Get detailed information
+    print("\nGetting detailed information:")
+    firm_details = firm_services.get_firm_details(subject_id, crd_number)
+    print(json.dumps(firm_details, indent=2))
     
-    if result:
-        print("\nSearch Result:")
-        print(json.dumps(result, indent=2))
-        
-        # If found, get detailed information
-        print("\nGetting detailed information:")
-        details = facade.get_firm_details(subject_id, "29116")
-        
-        if details:
-            print(json.dumps(details, indent=2))
-            
-            # Check for firm status and display appropriate message
-            if 'firm_status' in details:
-                print(f"\nFirm Status: {details['firm_status'].upper()}")
-                
-            if 'status_message' in details:
-                print(f"\nStatus Message: {details['status_message']}")
-        else:
-            print("No details found")
+    if firm_details:
+        print(f"\nFirm Status: {firm_details.get('firm_status', 'UNKNOWN').upper()}")
+        print(f"\nStatus Message: {firm_details.get('status_message', 'N/A')}")
     else:
-        print("\nNo results found for CRD #29116")
+        print("\nFirm not found!")
     
-    # Also try searching by name
-    print("\nSearching for firm by name: BROOKSTONE SECURITIES, INC")
-    name_results = facade.search_firm(subject_id, "BROOKSTONE SECURITIES, INC")
+    # Search for firm by name
+    firm_name = "BROOKSTONE SECURITIES, INC"
+    print(f"\nSearching for firm by name: {firm_name}")
+    name_results = firm_services.search_firm(subject_id, firm_name)
     
-    if name_results:
-        print("\nName Search Results:")
-        print(json.dumps(name_results, indent=2))
-    else:
-        print("\nNo results found for name 'BROOKSTONE SECURITIES, INC'")
+    print("\nName Search Results:")
+    print(json.dumps(name_results, indent=2))
+    
+    return firm_details
 
 if __name__ == "__main__":
-    main()
+    test_brookstone_search()
