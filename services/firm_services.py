@@ -99,13 +99,16 @@ class FirmServicesFacade:
         2. Then check SEC to see if found there
         3. If found in both places, SEC wins
         4. If neither is found, use the not found result of SEC
+        5. If firm exists in search but detailed information is unavailable, return partial information
+           with a status indicating the firm is inactive/expelled
         
         Args:
             subject_id: The ID of the subject/client making the request
             crd_number: The firm's CRD number
             
         Returns:
-            Combined firm details or None if not found
+            Combined firm details or None if not found. May include a 'firm_status' field
+            with values like 'active', 'inactive', or 'expelled' to indicate the firm's status.
         """
         logger.info(f"Getting firm details for CRD: {crd_number}")
         firm_id = f"details_{crd_number}"  # Create a unique ID for caching
@@ -181,20 +184,63 @@ class FirmServicesFacade:
                 'has_adv_pdf': sec_details.get('has_adv_pdf', False),
                 'accountant_exams': sec_details.get('accountant_exams', []),
                 'brochures': sec_details.get('brochures', []),
-                'source': 'SEC'
+                'source': 'SEC',
+                'firm_status': 'active'
             })
             return combined
         elif finra_details:
             # If only found in FINRA, use FINRA details
             logger.debug(f"Found only in FINRA for CRD {crd_number}")
             finra_details['source'] = 'FINRA'
+            finra_details['firm_status'] = 'active'
             return finra_details
         elif sec_details:
             # If only found in SEC, use SEC details
             logger.debug(f"Found only in SEC for CRD {crd_number}")
             sec_details['source'] = 'SEC'
+            sec_details['firm_status'] = 'active'
             return sec_details
         else:
+            # Check if firm exists in search but details are unavailable
+            # This is the case for inactive/expelled firms
+            if finra_exists or sec_exists:
+                logger.debug(f"Firm exists in search but details unavailable for CRD {crd_number}, likely inactive/expelled")
+                
+                # Create a partial record with available information
+                partial_info = {
+                    'crd_number': crd_number,
+                    'firm_status': 'inactive',
+                    'source': 'SEC' if sec_exists else 'FINRA'
+                }
+                
+                # Try to get the firm name from search results
+                if sec_exists:
+                    try:
+                        sec_search_data = sec_search_response.data
+                        if isinstance(sec_search_data, dict) and 'firm_other_names' in sec_search_data:
+                            # Extract firm name from other_names if available
+                            firm_name = sec_search_data.get('org_name') or sec_search_data.get('firm_name')
+                            if firm_name:
+                                partial_info['firm_name'] = firm_name
+                            else:
+                                partial_info['firm_name'] = f"Unknown Firm (CRD #{crd_number})"
+                            partial_info['other_names'] = sec_search_data.get('firm_other_names', [])
+                        elif isinstance(sec_search_data, list) and sec_search_data:
+                            first_result = sec_search_data[0]
+                            firm_name = first_result.get('org_name') or first_result.get('firm_name')
+                            if firm_name:
+                                partial_info['firm_name'] = firm_name
+                            else:
+                                partial_info['firm_name'] = f"Unknown Firm (CRD #{crd_number})"
+                            partial_info['other_names'] = first_result.get('firm_other_names', [])
+                    except Exception as e:
+                        logger.error(f"Error extracting firm name from SEC search for CRD {crd_number}: {str(e)}")
+                
+                # Add a message about the firm status
+                partial_info['status_message'] = "This firm exists but appears to be inactive or expelled. Limited information is available."
+                
+                return partial_info
+            
             # If not found in either, return None
             logger.debug(f"Not found in either FINRA or SEC for CRD {crd_number}")
             return None
