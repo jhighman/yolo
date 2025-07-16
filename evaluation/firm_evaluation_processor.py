@@ -57,6 +57,7 @@ def determine_alert_category(alert_type: str) -> str:
         "NoActiveRegistration": "REGISTRATION",
         "TerminatedRegistration": "REGISTRATION",
         "PendingRegistration": "REGISTRATION",
+        "InactiveExpelledFirm": "REGISTRATION",
         
         # Regulatory oversight alerts
         "NoRegulatoryOversight": "REGULATORY",
@@ -110,6 +111,22 @@ def evaluate_registration_status(business_info: Dict[str, Any]) -> Tuple[bool, s
     """
     logger.debug("Evaluating registration status")
     alerts = []
+    
+    # Check if firm is inactive/expelled first
+    firm_status = business_info.get('firm_status', '').lower()
+    if firm_status == 'inactive':
+        status_message = business_info.get('status_message', 'Firm appears to be inactive or expelled')
+        alerts.append(Alert(
+            alert_type="InactiveExpelledFirm",
+            severity=AlertSeverity.HIGH,
+            metadata={
+                "firm_status": firm_status,
+                "status_message": status_message
+            },
+            description="Firm is inactive or has been expelled from regulatory bodies",
+            alert_category="REGULATORY"
+        ))
+        return False, "Firm is inactive or expelled", alerts
     
     # Extract registration flags and status information
     is_sec_registered = business_info.get('is_sec_registered', False)

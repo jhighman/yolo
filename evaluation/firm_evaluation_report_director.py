@@ -460,6 +460,7 @@ class FirmEvaluationReportDirector:
                 "BusinessNotFound": "Compliance Disclosure",
                 "RecordSkipped": "Compliance Disclosure",
                 "EvaluationError": "System Disclosure",
+                "InactiveExpelledFirm": "Regulatory Disclosure",
                 # Add more mappings as needed
             }
             
