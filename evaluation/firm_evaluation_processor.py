@@ -159,7 +159,7 @@ def evaluate_registration_status(business_info: Dict[str, Any]) -> Tuple[bool, s
                 "status_message": status_message
             },
             description="Firm is inactive or has been expelled from regulatory bodies",
-            alert_category="REGULATORY"
+            alert_category="REGISTRATION"
         ))
         return False, "Firm is inactive or expelled", alerts
     

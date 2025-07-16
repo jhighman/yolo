@@ -460,23 +460,48 @@ class FirmEvaluationReportDirector:
             
             # Map old alert types to new standardized alert types
             alert_type_mapping = {
-                "NoActiveRegistration": "Regulatory Disclosure",
-                "NoRegulatoryOversight": "Regulatory Disclosure",
-                "NoADVFiling": "Compliance Disclosure",
-                "NoLastUpdateDate": "Compliance Disclosure",
-                "BusinessNotFound": "Compliance Disclosure",
-                "RecordSkipped": "Compliance Disclosure",
-                "EvaluationError": "System Disclosure",
-                "InactiveExpelledFirm": "Regulatory Disclosure",
-                # Add more mappings as needed
+                "NoActiveRegistration": "Registration Issue",
+                "TerminatedRegistration": "Registration Issue",
+                "PendingRegistration": "Registration Issue",
+                "InactiveExpelledFirm": "Registration Issue",
+                
+                "NoRegulatoryOversight": "Regulatory Issue",
+                "TerminatedNoticeFiling": "Regulatory Issue",
+                
+                "UnresolvedDisclosure": "Disclosure Issue",
+                "RecentDisclosure": "Disclosure Issue",
+                "SanctionsImposed": "Disclosure Issue",
+                
+                "FinancialDisclosure": "Financial Issue",
+                "OutdatedFinancialFiling": "Financial Issue",
+                "NoADVFiling": "Financial Issue",
+                
+                "PendingLegalAction": "Legal Issue",
+                "JurisdictionMismatch": "Legal Issue",
+                "LegalSearchInfo": "Legal Issue",
+                
+                "FailedAccountantExam": "Qualification Issue",
+                "OutdatedQualification": "Qualification Issue",
+                
+                "OutdatedData": "Data Integrity Issue",
+                "NoDataSources": "Data Integrity Issue",
+                "NoLastUpdateDate": "Data Integrity Issue",
+                
+                "BusinessNotFound": "System Issue",
+                "RecordSkipped": "System Issue",
+                "EvaluationError": "System Issue"
             }
             
             # Map alert categories to standardized categories
             category_mapping = {
-                "REGISTRATION": "REGULATORY",
+                "REGISTRATION": "REGISTRATION",
                 "REGULATORY": "REGULATORY",
-                "GENERAL": "COMPLIANCE",
-                # Add more mappings as needed
+                "DISCLOSURE": "DISCLOSURE",
+                "FINANCIAL": "FINANCIAL",
+                "LEGAL": "LEGAL",
+                "QUALIFICATION": "QUALIFICATION",
+                "DATA_INTEGRITY": "DATA_INTEGRITY",
+                "GENERAL": "REGULATORY"  # Default general alerts to REGULATORY
             }
             
             # Format alerts according to new structure
@@ -490,8 +515,9 @@ class FirmEvaluationReportDirector:
                 standardized_category = category_mapping.get(original_category, original_category)
                 
                 # Ensure category is one of the specified values
-                if standardized_category not in ["COMPLIANCE", "REGULATORY", "DISCLOSURE"]:
-                    standardized_category = "COMPLIANCE"
+                if standardized_category not in ["REGISTRATION", "REGULATORY", "DISCLOSURE",
+                                               "FINANCIAL", "LEGAL", "QUALIFICATION", "DATA_INTEGRITY"]:
+                    standardized_category = "REGULATORY"  # Default to REGULATORY instead of COMPLIANCE
                 
                 # Create standardized alert
                 formatted_alert = {
