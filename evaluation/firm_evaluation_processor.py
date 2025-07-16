@@ -89,12 +89,47 @@ def determine_alert_category(alert_type: str) -> str:
     return category_mapping.get(alert_type, "GENERAL")
 
 def parse_iso_date(date_str: str) -> datetime:
-    """Parse ISO format date string to timezone-naive datetime."""
+    """Parse date string to timezone-naive datetime.
+    
+    Handles multiple formats:
+    - ISO format (2025-07-16T14:08:40)
+    - US date format (MM/DD/YYYY)
+    - Other common formats
+    """
+    if not date_str:
+        raise ValueError("Empty date string")
+        
+    # Handle ISO format with timezone indicators
     if date_str.endswith('Z'):
         date_str = date_str[:-1]
     elif '+' in date_str:
         date_str = date_str.split('+')[0]
-    return datetime.fromisoformat(date_str)
+        
+    try:
+        # Try ISO format first
+        return datetime.fromisoformat(date_str)
+    except ValueError:
+        pass
+        
+    # Try common US date format (MM/DD/YYYY)
+    try:
+        if '/' in date_str:
+            parts = date_str.split('/')
+            if len(parts) == 3:
+                month, day, year = parts
+                return datetime(int(year), int(month), int(day))
+    except ValueError:
+        pass
+        
+    # Try other common formats
+    for fmt in ["%m/%d/%Y", "%Y-%m-%d", "%d-%m-%Y", "%Y/%m/%d", "%d/%m/%Y"]:
+        try:
+            return datetime.strptime(date_str, fmt)
+        except ValueError:
+            continue
+            
+    # If all attempts fail, raise ValueError
+    raise ValueError(f"Unable to parse date string: {date_str}")
 
 def evaluate_registration_status(business_info: Dict[str, Any]) -> Tuple[bool, str, List[Alert]]:
     """
@@ -133,7 +168,8 @@ def evaluate_registration_status(business_info: Dict[str, Any]) -> Tuple[bool, s
     is_finra_registered = business_info.get('is_finra_registered', False)
     is_state_registered = business_info.get('is_state_registered', False)
     # Check registration status in both top-level and basic_result
-    registration_status = business_info.get('registration_status', '').upper()
+    registration_status_raw = business_info.get('registration_status', '')
+    registration_status = registration_status_raw.upper() if registration_status_raw else ''
     
     # If not found in top-level, check in basic_result
     if not registration_status and 'basic_result' in business_info:

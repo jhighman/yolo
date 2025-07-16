@@ -60,8 +60,27 @@ def test_brookstone_report():
     
     # Check for duplicate alerts in final_evaluation
     if 'final_evaluation' in report:
+        # Print overall compliance status
+        overall_compliance = report['final_evaluation'].get('overall_compliance', None)
+        print(f"\nOverall Compliance: {overall_compliance}")
+        
+        # Get alerts
         alerts = report['final_evaluation'].get('alerts', [])
-        alert_texts = [alert.get('alert_text', '') for alert in alerts]
+        
+        # Print alert details
+        print("\nFinal Evaluation Alerts:")
+        if alerts:
+            for i, alert in enumerate(alerts):
+                print(f"\nAlert {i+1}:")
+                print(f"  Type: {alert.get('alert_type', 'N/A')}")
+                print(f"  Severity: {alert.get('severity', 'N/A')}")
+                print(f"  Description: {alert.get('description', 'N/A')}")
+                print(f"  Category: {alert.get('alert_category', 'N/A')}")
+        else:
+            print("  No alerts found in final_evaluation!")
+        
+        # Check for duplicates
+        alert_texts = [alert.get('description', '') for alert in alerts]
         unique_alerts = set(alert_texts)
         
         print(f"\nTotal alerts in final_evaluation: {len(alerts)}")
