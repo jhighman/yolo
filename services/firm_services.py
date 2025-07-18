@@ -212,18 +212,42 @@ class FirmServicesFacade:
                 'source': 'SEC',
                 'firm_status': 'active'
             })
+            
+            # Ensure registration flags are properly set
+            if not combined.get('is_sec_registered') and sec_details.get('is_sec_registered'):
+                combined['is_sec_registered'] = True
+            
+            # Always set is_finra_registered to True if firm exists in FINRA
+            if finra_exists:
+                combined['is_finra_registered'] = True
+                
+            # If firm_ia_scope is available in either source, include it
+            if 'firm_ia_scope' in sec_details and not combined.get('firm_ia_scope'):
+                combined['firm_ia_scope'] = sec_details.get('firm_ia_scope')
+            elif 'firm_ia_scope' in finra_details and not combined.get('firm_ia_scope'):
+                combined['firm_ia_scope'] = finra_details.get('firm_ia_scope')
+                
             return combined
         elif finra_details:
             # If only found in FINRA, use FINRA details
             logger.debug(f"Found only in FINRA for CRD {crd_number}")
             finra_details['source'] = 'FINRA'
             finra_details['firm_status'] = 'active'
+            
+            # Always set is_finra_registered to True if firm exists in FINRA
+            finra_details['is_finra_registered'] = True
+                
             return finra_details
         elif sec_details:
             # If only found in SEC, use SEC details
             logger.debug(f"Found only in SEC for CRD {crd_number}")
             sec_details['source'] = 'SEC'
             sec_details['firm_status'] = 'active'
+            
+            # Ensure SEC registration flag is set
+            if not sec_details.get('is_sec_registered'):
+                sec_details['is_sec_registered'] = True
+                
             return sec_details
         else:
             # Check if firm exists in search but details are unavailable
@@ -239,17 +263,20 @@ class FirmServicesFacade:
                 }
                 
                 # Try to get the firm name from search results
-                if sec_exists:
+                if sec_exists and hasattr(sec_search_response, 'data') and sec_search_response.data:
                     try:
                         sec_search_data = sec_search_response.data
-                        if isinstance(sec_search_data, dict) and 'firm_other_names' in sec_search_data:
-                            # Extract firm name from other_names if available
+                        if isinstance(sec_search_data, dict):
+                            # Extract firm name from available fields
                             firm_name = sec_search_data.get('org_name') or sec_search_data.get('firm_name')
                             if firm_name:
                                 partial_info['firm_name'] = firm_name
                             else:
                                 partial_info['firm_name'] = f"Unknown Firm (CRD #{crd_number})"
-                            partial_info['other_names'] = sec_search_data.get('firm_other_names', [])
+                            
+                            # Get other names if available
+                            if 'firm_other_names' in sec_search_data:
+                                partial_info['other_names'] = sec_search_data.get('firm_other_names', [])
                         elif isinstance(sec_search_data, list) and sec_search_data:
                             first_result = sec_search_data[0]
                             firm_name = first_result.get('org_name') or first_result.get('firm_name')
@@ -257,9 +284,92 @@ class FirmServicesFacade:
                                 partial_info['firm_name'] = firm_name
                             else:
                                 partial_info['firm_name'] = f"Unknown Firm (CRD #{crd_number})"
-                            partial_info['other_names'] = first_result.get('firm_other_names', [])
+                            
+                            # Get other names if available
+                            if 'firm_other_names' in first_result:
+                                partial_info['other_names'] = first_result.get('firm_other_names', [])
                     except Exception as e:
                         logger.error(f"Error extracting firm name from SEC search for CRD {crd_number}: {str(e)}")
+                
+                # Try FINRA search results if SEC didn't provide a name
+                if 'firm_name' not in partial_info and finra_exists and hasattr(finra_search_response, 'data') and finra_search_response.data:
+                    try:
+                        finra_search_data = finra_search_response.data
+                        if isinstance(finra_search_data, dict) and 'firm_name' in finra_search_data:
+                            firm_name = finra_search_data.get('firm_name')
+                            if firm_name is not None:
+                                partial_info['firm_name'] = firm_name
+                        elif isinstance(finra_search_data, list) and finra_search_data and 'firm_name' in finra_search_data[0]:
+                            firm_name = finra_search_data[0].get('firm_name')
+                            if firm_name is not None:
+                                partial_info['firm_name'] = firm_name
+                    except Exception as e:
+                        logger.error(f"Error extracting firm name from FINRA search for CRD {crd_number}: {str(e)}")
+                
+                # If we still don't have a firm name, use a generic one
+                if 'firm_name' not in partial_info:
+                    partial_info['firm_name'] = f"Unknown Firm (CRD #{crd_number})"
+                
+                # Add a message about the firm status
+                partial_info['status_message'] = "This firm exists but appears to be inactive or expelled. Limited information is available."
+                
+                # Add registration status if available
+                if sec_exists and hasattr(sec_search_response, 'data') and sec_search_response.data:
+                    try:
+                        sec_search_data = sec_search_response.data
+                        if isinstance(sec_search_data, dict) and 'registration_status' in sec_search_data:
+                            registration_status = sec_search_data.get('registration_status')
+                            if registration_status is not None:
+                                partial_info['registration_status'] = registration_status
+                    except Exception:
+                        pass
+                
+                return partial_info
+            
+            # Check if we have search results but no details
+            # This is a more reliable way to determine if a firm is inactive/expelled
+            if finra_exists or sec_exists:
+                logger.debug(f"Firm exists in search but details unavailable for CRD {crd_number}, likely inactive/expelled")
+                
+                # Create a partial record with available information
+                partial_info = {
+                    'crd_number': crd_number,
+                    'firm_status': 'inactive',
+                    'source': 'SEC' if sec_exists else 'FINRA'
+                }
+                
+                # Try to get the firm name from search results
+                if sec_exists and hasattr(sec_search_response, 'data') and sec_search_response.data:
+                    try:
+                        sec_search_data = sec_search_response.data
+                        if isinstance(sec_search_data, dict) and 'org_name' in sec_search_data:
+                            firm_name = sec_search_data.get('org_name')
+                            if firm_name is not None:
+                                partial_info['firm_name'] = firm_name
+                        elif isinstance(sec_search_data, list) and sec_search_data and 'org_name' in sec_search_data[0]:
+                            firm_name = sec_search_data[0].get('org_name')
+                            if firm_name is not None:
+                                partial_info['firm_name'] = firm_name
+                    except Exception as e:
+                        logger.error(f"Error extracting firm name from SEC search for CRD {crd_number}: {str(e)}")
+                
+                if finra_exists and hasattr(finra_search_response, 'data') and finra_search_response.data:
+                    try:
+                        finra_search_data = finra_search_response.data
+                        if isinstance(finra_search_data, dict) and 'firm_name' in finra_search_data:
+                            firm_name = finra_search_data.get('firm_name')
+                            if firm_name is not None:
+                                partial_info['firm_name'] = firm_name
+                        elif isinstance(finra_search_data, list) and finra_search_data and 'firm_name' in finra_search_data[0]:
+                            firm_name = finra_search_data[0].get('firm_name')
+                            if firm_name is not None:
+                                partial_info['firm_name'] = firm_name
+                    except Exception as e:
+                        logger.error(f"Error extracting firm name from FINRA search for CRD {crd_number}: {str(e)}")
+                
+                # If we still don't have a firm name, use a generic one
+                if 'firm_name' not in partial_info:
+                    partial_info['firm_name'] = f"Unknown Firm (CRD #{crd_number})"
                 
                 # Add a message about the firm status
                 partial_info['status_message'] = "This firm exists but appears to be inactive or expelled. Limited information is available."

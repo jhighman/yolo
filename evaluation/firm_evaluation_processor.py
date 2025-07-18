@@ -151,6 +151,7 @@ def evaluate_registration_status(business_info: Dict[str, Any]) -> Tuple[bool, s
     firm_status = business_info.get('firm_status', '').lower()
     if firm_status == 'inactive':
         status_message = business_info.get('status_message', 'Firm appears to be inactive or expelled')
+        # Add InactiveExpelledFirm alert
         alerts.append(Alert(
             alert_type="InactiveExpelledFirm",
             severity=AlertSeverity.HIGH,
@@ -161,6 +162,21 @@ def evaluate_registration_status(business_info: Dict[str, Any]) -> Tuple[bool, s
             description="Firm is inactive or has been expelled from regulatory bodies",
             alert_category="REGISTRATION"
         ))
+        
+        # Also add NoActiveRegistration alert for inactive firms
+        alerts.append(Alert(
+            alert_type="NoActiveRegistration",
+            severity=AlertSeverity.HIGH,
+            metadata={
+                "registration_status": "",
+                "firm_ia_scope": "",
+                "firm_status": firm_status,
+                "source": business_info.get('source', 'Unknown')
+            },
+            description="No active registrations found with any regulatory body",
+            alert_category="REGISTRATION"
+        ))
+        
         return False, "Firm is inactive or expelled", alerts
     
     # Extract registration flags and status information
@@ -253,22 +269,33 @@ def evaluate_registration_status(business_info: Dict[str, Any]) -> Tuple[bool, s
     if firm_ia_scope == "ACTIVE":
         is_compliant = True
     
+    # Check if firm_status is explicitly set to 'active'
+    if firm_status == 'active':
+        is_compliant = True
+    
     # Check if any registration is active (as a fallback)
     # Also consider firm_ia_scope == "ACTIVE" as an active registration
     has_active_registration = any([
         is_sec_registered,
         is_finra_registered,
         is_state_registered,
-        firm_ia_scope == "ACTIVE"
+        firm_ia_scope == "ACTIVE",
+        # If source is FINRA or SEC and firm_status is 'active', consider it as having active registration
+        (business_info.get('source') in ['FINRA', 'SEC'] and firm_status == 'active')
     ])
     
-    if not is_compliant and not has_active_registration:
+    if has_active_registration:
+        is_compliant = True
+    
+    if not is_compliant:
         alerts.append(Alert(
             alert_type="NoActiveRegistration",
             severity=AlertSeverity.HIGH,
             metadata={
                 "registration_status": registration_status,
-                "firm_ia_scope": firm_ia_scope
+                "firm_ia_scope": firm_ia_scope,
+                "firm_status": firm_status,
+                "source": business_info.get('source', 'Unknown')
             },
             description="No active registrations found with any regulatory body"
         ))
