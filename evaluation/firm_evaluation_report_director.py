@@ -539,6 +539,7 @@ class FirmEvaluationReportDirector:
             }.get(risk_level, recommendations)
             
             final_eval = {
+                "source": source,  # Add source field from search_evaluation
                 "overall_compliance": overall_compliance,
                 "overall_risk_level": risk_level,
                 "recommendations": standardized_recommendations,
