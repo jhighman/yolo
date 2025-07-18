@@ -9,6 +9,7 @@ and provides a unified interface for business logic to retrieve and store normal
 import json
 import logging
 import argparse
+import time
 from typing import Optional, Dict, Any, List, Union
 import sys
 from pathlib import Path
@@ -39,7 +40,19 @@ class FirmServicesFacade:
     def __init__(self):
         """Initialize the facade with required services."""
         self.firm_marshaller = FirmMarshaller()
+        self.last_api_call_time = 0
+        self.service_delay = 4  # 4 second delay between API calls at service level
         logger.debug("FirmServicesFacade initialized")
+    
+    def _apply_service_delay(self):
+        """Apply a delay between API calls to prevent rate limiting issues."""
+        current_time = time.time()
+        elapsed = current_time - self.last_api_call_time
+        if elapsed < self.service_delay:
+            delay = self.service_delay - elapsed
+            logger.debug(f"Applying service-level delay of {delay:.2f}s")
+            time.sleep(delay)
+        self.last_api_call_time = time.time()
 
     def search_firm(self, subject_id: str, firm_name: str) -> List[Dict[str, Any]]:
         """
@@ -58,6 +71,8 @@ class FirmServicesFacade:
         
         # Search FINRA
         try:
+            # Apply delay before FINRA API call
+            self._apply_service_delay()
             finra_response = fetch_finra_firm_search(subject_id, firm_id, {"firm_name": firm_name})
             if finra_response.status == ResponseStatus.SUCCESS and finra_response.data:
                 if isinstance(finra_response.data, list):
@@ -74,6 +89,8 @@ class FirmServicesFacade:
             
         # Search SEC
         try:
+            # Apply delay before SEC API call
+            self._apply_service_delay()
             sec_response = fetch_sec_firm_search(subject_id, firm_id, {"firm_name": firm_name})
             if sec_response.status == ResponseStatus.SUCCESS and sec_response.data:
                 if isinstance(sec_response.data, list):
@@ -120,6 +137,8 @@ class FirmServicesFacade:
         finra_exists = False
         search_firm_id = f"search_crd_{crd_number}"
         try:
+            # Apply delay before FINRA API call
+            self._apply_service_delay()
             finra_search_response = fetch_finra_firm_by_crd(subject_id, search_firm_id, {"crd_number": crd_number})
             if finra_search_response.status == ResponseStatus.SUCCESS and finra_search_response.data:
                 finra_exists = True
@@ -130,6 +149,8 @@ class FirmServicesFacade:
         # Then check if firm exists in SEC by CRD
         sec_exists = False
         try:
+            # Apply delay before SEC API call
+            self._apply_service_delay()
             sec_search_response = fetch_sec_firm_by_crd(subject_id, search_firm_id, {"crd_number": crd_number})
             if sec_search_response.status == ResponseStatus.SUCCESS and sec_search_response.data:
                 sec_exists = True
@@ -140,6 +161,8 @@ class FirmServicesFacade:
         # Get FINRA details if it exists in FINRA
         if finra_exists:
             try:
+                # Apply delay before FINRA details API call
+                self._apply_service_delay()
                 finra_response = fetch_finra_firm_details(subject_id, firm_id, {"crd_number": crd_number})
                 if finra_response.status == ResponseStatus.SUCCESS and finra_response.data:
                     logger.debug(f"Found FINRA details for CRD {crd_number}")
@@ -153,6 +176,8 @@ class FirmServicesFacade:
         # Get SEC details if it exists in SEC
         if sec_exists:
             try:
+                # Apply delay before SEC details API call
+                self._apply_service_delay()
                 sec_response = fetch_sec_firm_details(subject_id, firm_id, {"crd_number": crd_number})
                 if sec_response.status == ResponseStatus.SUCCESS and sec_response.data:
                     logger.debug(f"Found SEC details for CRD {crd_number}")
@@ -267,6 +292,8 @@ class FirmServicesFacade:
         # Try SEC
         sec_found = False
         try:
+            # Apply delay before SEC API call
+            self._apply_service_delay()
             sec_response = fetch_sec_firm_by_crd(subject_id, firm_id, {"crd_number": crd_number})
             if sec_response.status == ResponseStatus.SUCCESS and sec_response.data:
                 logger.debug(f"Found SEC result for CRD {crd_number}")
@@ -278,6 +305,8 @@ class FirmServicesFacade:
                 
         # Always try FINRA too, regardless of SEC result
         try:
+            # Apply delay before FINRA API call
+            self._apply_service_delay()
             finra_response = fetch_finra_firm_by_crd(subject_id, firm_id, {"crd_number": crd_number})
             if finra_response.status == ResponseStatus.SUCCESS and finra_response.data:
                 logger.debug(f"Found FINRA result for CRD {crd_number}")
