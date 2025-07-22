@@ -474,6 +474,44 @@ def evaluate_disclosures(disclosures: List[Dict[str, Any]], business_name: str) 
     if not disclosures:
         return True, "No disclosures found", alerts
     
+    # Check if we have the new format with disclosureType and disclosureCount
+    if any('disclosureType' in d for d in disclosures):
+        total_disclosure_count = 0
+        disclosure_types = []
+        
+        for disclosure in disclosures:
+            disclosure_type = disclosure.get('disclosureType', 'Unknown')
+            disclosure_count = disclosure.get('disclosureCount', 0)
+            total_disclosure_count += disclosure_count
+            
+            if disclosure_count > 0:
+                disclosure_types.append(f"{disclosure_type} ({disclosure_count})")
+                
+                # Create an alert for each disclosure type
+                severity = AlertSeverity.HIGH if disclosure_type in ["Regulatory Event", "Criminal"] else AlertSeverity.MEDIUM
+                
+                alerts.append(Alert(
+                    alert_type=f"{disclosure_type.replace(' ', '')}Disclosure",
+                    severity=severity,
+                    metadata={
+                        "disclosure_type": disclosure_type,
+                        "count": disclosure_count
+                    },
+                    description=f"{disclosure_count} {disclosure_type} disclosure(s) found",
+                    alert_category="DISCLOSURE"
+                ))
+        
+        # Determine compliance based on disclosure types and counts
+        has_high_severity = any(a.severity == AlertSeverity.HIGH for a in alerts)
+        
+        if not disclosure_types:
+            return True, "No disclosures found", alerts
+        elif has_high_severity:
+            return False, f"Significant disclosures found: {', '.join(disclosure_types)}", alerts
+        else:
+            return True, f"Minor disclosures found: {', '.join(disclosure_types)}", alerts
+    
+    # Original implementation for backward compatibility
     unresolved_count = 0
     recent_resolved_count = 0
     active_sanctions_count = 0
