@@ -655,7 +655,8 @@ def process_claim(
     facade: Any,  # BusinessServicesFacade instance
     business_ref: Optional[str] = None,
     skip_financials: bool = False,
-    skip_legal: bool = False
+    skip_legal: bool = False,
+    skip_adv: bool = True
 ) -> Dict[str, Any]:
     """Process a business claim by executing search, evaluation, and report generation.
     
@@ -665,6 +666,7 @@ def process_claim(
         business_ref: Optional business reference ID
         skip_financials: Flag to skip financial evaluation
         skip_legal: Flag to skip legal evaluation
+        skip_adv: Flag to skip ADV evaluation
         
     Returns:
         Dictionary containing the complete compliance report
@@ -677,6 +679,7 @@ def process_claim(
     logger.info(f"Processing claim: {claim_summary}", extra={
         "skip_financials": skip_financials,
         "skip_legal": skip_legal,
+        "skip_adv": skip_adv,
         "timestamp": datetime.now().isoformat()
     })
     
@@ -765,6 +768,8 @@ def process_claim(
                 extracted_info["skip_financials"] = True
             if skip_legal:
                 extracted_info["skip_legal"] = True
+            if skip_adv:
+                extracted_info["skip_adv"] = True
             
             # Set top-level source to match basic_result source
             basic_source = basic_result.get('source', 'UNKNOWN')
