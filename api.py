@@ -22,14 +22,17 @@ Ensure Redis is running for Celery (e.g., `redis://localhost:6379/0`).
 
 import json
 import logging
-from typing import Dict, Any, Optional
-from fastapi import FastAPI, HTTPException, Depends
+import random
+import time
+from typing import Dict, Any, Optional, List
+from fastapi import FastAPI, HTTPException, Depends, Query
 from pydantic import BaseModel, validator
 from celery import Celery
 from celery.result import AsyncResult
 import aiohttp
 import asyncio
 import os
+import requests
 
 from utils.logging_config import setup_logging
 from services.firm_services import FirmServicesFacade
@@ -68,13 +71,18 @@ celery_app.conf.update(
     result_serializer="json",
     task_track_started=True,
     task_time_limit=3600,
-    task_concurrency=1,
+    task_concurrency=4,  # Increased from 1 for better throughput
     worker_prefetch_multiplier=1,
     task_acks_late=True,
     task_default_queue="firm_compliance_queue",
+    # Added reliability settings
+    broker_connection_retry=True,
+    broker_connection_retry_on_startup=True,
+    broker_connection_max_retries=10,
+    broker_transport_options={'visibility_timeout': 3600},
 )
 
-# Settings, ClaimRequest, and TaskStatusResponse models
+# Settings, ClaimRequest, TaskStatusResponse, and WebhookStatus models
 class Settings(BaseModel):
     headless: bool = True
     debug: bool = False
@@ -85,6 +93,18 @@ class TaskStatusResponse(BaseModel):
     reference_id: Optional[str] = None
     result: Optional[Dict[str, Any]] = None
     error: Optional[str] = None
+
+class WebhookStatus(BaseModel):
+    reference_id: str
+    webhook_url: str
+    task_id: Optional[str] = None
+    attempts: int = 0
+    last_attempt: Optional[str] = None
+    status: str = "pending"  # pending, success, failed, retrying
+    response_code: Optional[int] = None
+    error: Optional[str] = None
+    created_at: str
+    updated_at: str
 
 class ClaimRequest(BaseModel):
     reference_id: str
@@ -136,6 +156,10 @@ facade = None
 cache_manager = None
 file_handler = None
 compliance_handler = None
+
+# Simple in-memory storage for webhook statuses
+# In a production environment, this would be replaced with a database
+webhook_statuses = {}
 
 # Startup event
 @app.on_event("startup")
@@ -217,12 +241,9 @@ def process_firm_compliance_claim(self, request_dict: Dict[str, Any], mode: str)
         logger.info(f"Successfully processed claim for reference_id={request.reference_id}")
 
         if webhook_url:
-            loop = asyncio.new_event_loop()
-            asyncio.set_event_loop(loop)
-            try:
-                loop.run_until_complete(send_to_webhook(webhook_url, report, request.reference_id))
-            finally:
-                loop.close()
+            # Queue webhook delivery as a separate task with retries
+            logger.info(f"Queuing webhook delivery for reference_id={request.reference_id}")
+            send_webhook_notification.delay(webhook_url, report, request.reference_id)
         
         return report
     
@@ -234,16 +255,125 @@ def process_firm_compliance_claim(self, request_dict: Dict[str, Any], mode: str)
             "message": f"Claim processing failed: {str(e)}"
         }
         if webhook_url:
-            loop = asyncio.new_event_loop()
-            asyncio.set_event_loop(loop)
-            try:
-                loop.run_until_complete(send_to_webhook(webhook_url, error_report, request_dict["reference_id"]))
-            finally:
-                loop.close()
+            # Queue webhook delivery for error report
+            logger.info(f"Queuing webhook delivery for error report, reference_id={request_dict['reference_id']}")
+            send_webhook_notification.delay(webhook_url, error_report, request_dict["reference_id"])
         self.retry(exc=e, countdown=60)
         return error_report
 
-# Webhook function
+# Dedicated Celery task for webhook delivery
+@celery_app.task(name="send_webhook_notification", bind=True, max_retries=5, default_retry_delay=30)
+def send_webhook_notification(self, webhook_url: str, report: Dict[str, Any], reference_id: str):
+    """
+    Dedicated Celery task for webhook delivery with robust retry logic.
+    
+    Args:
+        webhook_url (str): The URL to send the webhook to
+        report (Dict[str, Any]): The report data to send
+        reference_id (str): Reference ID for tracking
+        
+    Returns:
+        bool: True if successful, raises exception on failure (which triggers retry)
+    """
+    webhook_logger = loggers.get("webhook", logger)
+    
+    # Create a webhook error log file if it doesn't exist
+    webhook_log_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "logs")
+    os.makedirs(webhook_log_dir, exist_ok=True)
+    webhook_log_file = os.path.join(webhook_log_dir, "webhook_errors.log")
+    
+    # Initialize or update webhook status
+    current_time = self.request.id or str(time.time())
+    if reference_id not in webhook_statuses:
+        webhook_statuses[reference_id] = {
+            "reference_id": reference_id,
+            "webhook_url": webhook_url,
+            "task_id": self.request.id,
+            "attempts": 0,
+            "last_attempt": None,
+            "status": "pending",
+            "response_code": None,
+            "error": None,
+            "created_at": current_time,
+            "updated_at": current_time
+        }
+    
+    # Update attempt count and status
+    webhook_statuses[reference_id]["attempts"] += 1
+    webhook_statuses[reference_id]["last_attempt"] = current_time
+    webhook_statuses[reference_id]["status"] = "retrying" if self.request.retries > 0 else "pending"
+    webhook_statuses[reference_id]["updated_at"] = current_time
+    
+    try:
+        webhook_logger.info(f"Attempt {self.request.retries + 1} sending webhook for reference_id={reference_id}")
+        
+        # Add timestamp and attempt number to the report for tracking
+        if isinstance(report, dict):
+            report["webhook_sent_at"] = self.request.id
+            report["webhook_attempt"] = self.request.retries + 1
+        
+        # Use synchronous requests for Celery worker
+        response = requests.post(webhook_url, json=report, timeout=30)
+        
+        if response.status_code == 200:
+            webhook_logger.info(f"Successfully sent webhook for reference_id={reference_id}")
+            
+            # Update webhook status to success
+            webhook_statuses[reference_id]["status"] = "success"
+            webhook_statuses[reference_id]["response_code"] = response.status_code
+            webhook_statuses[reference_id]["updated_at"] = str(time.time())
+            
+            return True
+        else:
+            error_msg = f"Webhook delivery failed for reference_id={reference_id}: Status {response.status_code}, Response: {response.text}"
+            webhook_logger.error(error_msg)
+            
+            # Update webhook status with error
+            webhook_statuses[reference_id]["status"] = "failed"
+            webhook_statuses[reference_id]["response_code"] = response.status_code
+            webhook_statuses[reference_id]["error"] = error_msg
+            webhook_statuses[reference_id]["updated_at"] = str(time.time())
+            
+            # Write to dedicated webhook error log file
+            with open(webhook_log_file, "a") as f:
+                f.write(f"[{self.request.id}] {error_msg}\n")
+            
+            raise Exception(f"Webhook failed with status {response.status_code}: {response.text}")
+    
+    except (requests.Timeout, requests.ConnectionError) as e:
+        error_msg = f"Webhook connection error for reference_id={reference_id}: {str(e)}"
+        webhook_logger.error(error_msg)
+        
+        # Update webhook status with error
+        webhook_statuses[reference_id]["status"] = "retrying"
+        webhook_statuses[reference_id]["error"] = error_msg
+        webhook_statuses[reference_id]["updated_at"] = str(time.time())
+        
+        with open(webhook_log_file, "a") as f:
+            f.write(f"[{self.request.id}] {error_msg}\n")
+        
+        # Exponential backoff with jitter for network-related errors
+        retry_countdown = min(2 ** self.request.retries * 30 + random.uniform(0, 30), 300)
+        self.retry(exc=e, countdown=retry_countdown)
+        
+    except Exception as e:
+        error_msg = f"Error sending webhook for reference_id={reference_id}: {str(e)}"
+        webhook_logger.error(error_msg, exc_info=True)
+        
+        # Update webhook status with error
+        webhook_statuses[reference_id]["status"] = "retrying"
+        webhook_statuses[reference_id]["error"] = error_msg
+        webhook_statuses[reference_id]["updated_at"] = str(time.time())
+        
+        # Write to dedicated webhook error log file
+        with open(webhook_log_file, "a") as f:
+            f.write(f"[{self.request.id}] {error_msg}\n")
+        
+        # Exponential backoff with jitter for general errors
+        retry_countdown = min(2 ** self.request.retries * 30 + random.uniform(0, 30), 300)
+        self.retry(exc=e, countdown=retry_countdown)
+
+# Original async webhook function (kept for FastAPI endpoints)
 async def send_to_webhook(webhook_url: str, report: Dict[str, Any], reference_id: str):
     """Asynchronously send the report to the specified webhook URL."""
     webhook_logger = loggers.get("webhook", logger)
@@ -707,6 +837,83 @@ async def get_webhook_logs(lines: int = 50):
     except Exception as e:
         logger.error(f"Error reading webhook logs: {str(e)}", exc_info=True)
         return {"error": f"Failed to read webhook logs: {str(e)}"}
+
+# Webhook status endpoints
+@app.get("/webhook-status/{reference_id}")
+async def get_webhook_status(reference_id: str):
+    """
+    Get the status of webhook deliveries for a specific reference_id.
+    
+    Args:
+        reference_id (str): The reference ID to check webhook status for
+        
+    Returns:
+        Dict[str, Any]: Webhook status details
+    """
+    if reference_id not in webhook_statuses:
+        raise HTTPException(status_code=404, detail=f"No webhook status found for reference_id={reference_id}")
+    
+    return webhook_statuses[reference_id]
+
+@app.get("/webhook-statuses")
+async def list_webhook_statuses(
+    page: int = Query(1, ge=1),
+    page_size: int = Query(10, ge=1, le=100),
+    status: Optional[str] = None
+):
+    """
+    List all webhook statuses with optional filtering and pagination.
+    
+    Args:
+        page (int): Page number (1-based)
+        page_size (int): Number of items per page
+        status (str, optional): Filter by status (pending, success, failed, retrying)
+        
+    Returns:
+        Dict[str, Any]: Paginated list of webhook statuses
+    """
+    filtered_statuses: List[Dict[str, Any]] = []
+    
+    for webhook_status in webhook_statuses.values():
+        if status is None or webhook_status["status"] == status:
+            filtered_statuses.append(webhook_status)
+    
+    # Sort by updated_at (most recent first)
+    filtered_statuses.sort(key=lambda x: x["updated_at"], reverse=True)
+    
+    # Paginate
+    start_idx = (page - 1) * page_size
+    end_idx = start_idx + page_size
+    paginated_statuses = filtered_statuses[start_idx:end_idx]
+    
+    return {
+        "total": len(filtered_statuses),
+        "page": page,
+        "page_size": page_size,
+        "pages": (len(filtered_statuses) + page_size - 1) // page_size,
+        "statuses": paginated_statuses
+    }
+
+@app.delete("/webhook-status/{reference_id}")
+async def delete_webhook_status(reference_id: str):
+    """
+    Delete webhook status for a specific reference_id.
+    
+    Args:
+        reference_id (str): The reference ID to delete webhook status for
+        
+    Returns:
+        Dict[str, Any]: Confirmation message
+    """
+    if reference_id not in webhook_statuses:
+        raise HTTPException(status_code=404, detail=f"No webhook status found for reference_id={reference_id}")
+    
+    del webhook_statuses[reference_id]
+    
+    return {
+        "status": "success",
+        "message": f"Webhook status for reference_id={reference_id} deleted"
+    }
 
 if __name__ == "__main__":
     import uvicorn
