@@ -42,6 +42,10 @@ LOGGER_GROUPS = {
         'agent_manager': 'agent_manager',
         'evaluation_processor': 'firm_evaluation_processor',
         'api': 'api'
+    },
+    'webhooks': {
+        'webhook': 'webhook',
+        'webhook_callback': 'webhook_callback'
     }
 }
 

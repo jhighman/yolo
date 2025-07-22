@@ -21,6 +21,7 @@ Ensure Redis is running for Celery (e.g., `redis://localhost:6379/0`).
 """
 
 import json
+import logging
 from typing import Dict, Any, Optional
 from fastapi import FastAPI, HTTPException, Depends
 from pydantic import BaseModel, validator
@@ -40,6 +41,7 @@ from cache_manager.file_handler import FileHandler
 # Setup logging
 loggers = setup_logging(debug=True)
 logger = loggers["api"]
+webhook_logger = logging.getLogger("webhook")  # Get the webhook logger
 
 # Initialize services for Celery workers
 from services.firm_services import FirmServicesFacade
@@ -244,16 +246,49 @@ def process_firm_compliance_claim(self, request_dict: Dict[str, Any], mode: str)
 # Webhook function
 async def send_to_webhook(webhook_url: str, report: Dict[str, Any], reference_id: str):
     """Asynchronously send the report to the specified webhook URL."""
+    webhook_logger = loggers.get("webhook", logger)
+    
+    # Create a webhook error log file if it doesn't exist
+    webhook_log_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "logs")
+    os.makedirs(webhook_log_dir, exist_ok=True)
+    webhook_log_file = os.path.join(webhook_log_dir, "webhook_errors.log")
+    
     async with aiohttp.ClientSession() as session:
         try:
-            logger.info(f"Sending report to webhook URL: {webhook_url} for reference_id={reference_id}")
-            async with session.post(webhook_url, json=report) as response:
+            webhook_logger.info(f"Sending report to webhook URL: {webhook_url} for reference_id={reference_id}")
+            
+            # Add timestamp to the report for tracking
+            if isinstance(report, dict):
+                report["webhook_sent_at"] = asyncio.get_event_loop().time()
+            
+            async with session.post(webhook_url, json=report, timeout=aiohttp.ClientTimeout(total=30)) as response:
                 if response.status == 200:
-                    logger.info(f"Successfully sent report to webhook for reference_id={reference_id}")
+                    webhook_logger.info(f"Successfully sent report to webhook for reference_id={reference_id}")
+                    return True
                 else:
-                    logger.error(f"Webhook delivery failed for reference_id={reference_id}: Status {response.status}, Response: {await response.text()}")
+                    error_msg = f"Webhook delivery failed for reference_id={reference_id}: Status {response.status}, Response: {await response.text()}"
+                    webhook_logger.error(error_msg)
+                    
+                    # Write to dedicated webhook error log file
+                    with open(webhook_log_file, "a") as f:
+                        f.write(f"[{asyncio.get_event_loop().time()}] {error_msg}\n")
+                    
+                    return False
+        except asyncio.TimeoutError:
+            error_msg = f"Webhook timeout for reference_id={reference_id} to URL: {webhook_url}"
+            webhook_logger.error(error_msg)
+            with open(webhook_log_file, "a") as f:
+                f.write(f"[{asyncio.get_event_loop().time()}] {error_msg}\n")
+            return False
         except Exception as e:
-            logger.error(f"Error sending to webhook for reference_id={reference_id}: {str(e)}", exc_info=True)
+            error_msg = f"Error sending to webhook for reference_id={reference_id}: {str(e)}"
+            webhook_logger.error(error_msg, exc_info=True)
+            
+            # Write to dedicated webhook error log file
+            with open(webhook_log_file, "a") as f:
+                f.write(f"[{asyncio.get_event_loop().time()}] {error_msg}\n")
+            
+            return False
 
 # Helper function for synchronous claim processing
 async def process_claim_helper(request: ClaimRequest, mode: str, send_webhook: bool = True) -> Dict[str, Any]:
@@ -599,6 +634,79 @@ async def get_all_compliance_summaries(page: int = 1, page_size: int = 10):
         "page_size": page_size,
         "message": "All summaries generation not implemented"
     }
+
+# Webhook testing endpoints
+@app.post("/test-webhook")
+async def test_webhook(webhook_url: str, test_payload: Optional[Dict[str, Any]] = None):
+    """
+    Test a webhook URL by sending a test payload.
+    
+    Args:
+        webhook_url (str): The webhook URL to test
+        test_payload (Dict[str, Any], optional): Custom payload to send. If not provided, a default test payload is used.
+        
+    Returns:
+        Dict[str, Any]: Result of the webhook test
+    """
+    if not webhook_url:
+        raise HTTPException(status_code=400, detail="webhook_url is required")
+    
+    if test_payload is None:
+        test_payload = {
+            "test": True,
+            "timestamp": asyncio.get_event_loop().time(),
+            "message": "This is a test webhook payload"
+        }
+    
+    reference_id = f"test-{asyncio.get_event_loop().time()}"
+    success = await send_to_webhook(webhook_url, test_payload, reference_id)
+    
+    if success:
+        return {
+            "status": "success",
+            "message": "Webhook test successful",
+            "webhook_url": webhook_url
+        }
+    else:
+        return {
+            "status": "error",
+            "message": "Webhook test failed. Check webhook_errors.log for details.",
+            "webhook_url": webhook_url
+        }
+
+@app.get("/webhook-logs")
+async def get_webhook_logs(lines: int = 50):
+    """
+    Get the most recent webhook error logs.
+    
+    Args:
+        lines (int): Number of recent log lines to return
+        
+    Returns:
+        Dict[str, Any]: Recent webhook error logs
+    """
+    webhook_log_file = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)),
+        "logs",
+        "webhook_errors.log"
+    )
+    
+    if not os.path.exists(webhook_log_file):
+        return {"logs": [], "message": "No webhook error logs found"}
+    
+    try:
+        with open(webhook_log_file, "r") as f:
+            all_logs = f.readlines()
+        
+        recent_logs = all_logs[-lines:] if len(all_logs) > lines else all_logs
+        return {
+            "logs": recent_logs,
+            "total_errors": len(all_logs),
+            "showing": len(recent_logs)
+        }
+    except Exception as e:
+        logger.error(f"Error reading webhook logs: {str(e)}", exc_info=True)
+        return {"error": f"Failed to read webhook logs: {str(e)}"}
 
 if __name__ == "__main__":
     import uvicorn
