@@ -27,6 +27,7 @@ class FirmEvaluationReportBuilder:
             ("disclosure_review", {}),
             ("disciplinary_evaluation", {}),
             ("arbitration_review", {}),
+            ("adv_evaluation", {}),  # New section for ADV PDF evaluation
             ("final_evaluation", {})
         ])
 
@@ -168,6 +169,18 @@ class FirmEvaluationReportBuilder:
             self for method chaining
         """
         self.report["arbitration_review"] = arbitration_review
+        return self
+        
+    def set_adv_evaluation(self, adv_evaluation: Dict[str, Any]) -> "FirmEvaluationReportBuilder":
+        """Set the ADV evaluation results.
+        
+        Args:
+            adv_evaluation: Dictionary containing ADV PDF evaluation results
+            
+        Returns:
+            self for method chaining
+        """
+        self.report["adv_evaluation"] = adv_evaluation
         return self
 
     def set_final_evaluation(self, final_evaluation: Dict[str, Any]) -> "FirmEvaluationReportBuilder":

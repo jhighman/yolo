@@ -27,6 +27,7 @@ from .firm_evaluation_processor import (
     Alert,
     AlertSeverity
 )
+from agents.adv_processing_agent import process_adv
 
 # Initialize logging
 loggers = setup_logging(debug=True)
@@ -298,6 +299,7 @@ class FirmEvaluationReportDirector:
                     self.builder.set_disclosure_review(skip_eval)
                     self.builder.set_disciplinary_evaluation(skip_eval)
                     self.builder.set_arbitration_review(skip_eval)
+                    self.builder.set_adv_evaluation(skip_eval)
                 except Exception as e:
                     raise EvaluationProcessError(f"Failed to set skipped evaluations: {str(e)}")
                 
@@ -383,6 +385,32 @@ class FirmEvaluationReportDirector:
                     "compliance_explanation": arbitration_explanation,
                     "alerts": []  # No alerts for arbitration review
                 })
+                
+                # ADV evaluation (new)
+                # Check if ADV evaluation should be skipped
+                if business_info.get("skip_adv", False):
+                    # Create a skipped ADV evaluation
+                    logger.info(f"Skipping ADV evaluation for {business_name} due to skip_adv flag")
+                    skip_eval = self._create_skip_evaluation("ADV evaluation skipped due to configuration")
+                    skip_eval["source"] = source
+                    skip_eval["adv_status"] = "skipped"
+                    self.builder.set_adv_evaluation(skip_eval)
+                else:
+                    # Get CRD number from business_info
+                    crd_number = business_info.get("crd_number", "")
+                    if not crd_number and basic_result:
+                        crd_number = basic_result.get("crd_number", "")
+                    
+                    # Use business_ref as subject_id
+                    subject_id = business_ref
+                    
+                    # Process ADV PDF using the entity data from business_info
+                    adv_evaluation = process_adv(subject_id, crd_number, business_info)
+                    
+                    # Add source to ADV evaluation
+                    adv_evaluation["source"] = source
+                    
+                    self.builder.set_adv_evaluation(adv_evaluation)
             
             # Compute final evaluation
             try:
@@ -399,7 +427,8 @@ class FirmEvaluationReportDirector:
             # Collect alerts and check compliance with error handling
             for section in ["status_evaluation", "disclosure_review",
                           "disciplinary_evaluation",
-                          "arbitration_review"]:
+                          "arbitration_review",
+                          "adv_evaluation"]:
                 try:
                     section_data = report[section]
                     overall_compliance = overall_compliance and section_data.get("compliance", True)
@@ -475,6 +504,7 @@ class FirmEvaluationReportDirector:
                 "FinancialDisclosure": "Financial Issue",
                 "OutdatedFinancialFiling": "Financial Issue",
                 "NoADVFiling": "Financial Issue",
+                "ADVDownloadFailed": "Financial Issue",
                 
                 "PendingLegalAction": "Legal Issue",
                 "JurisdictionMismatch": "Legal Issue",
