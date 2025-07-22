@@ -121,6 +121,29 @@ def rate_limit(func):
     
     return wrapper
 
+
+def retry_with_backoff(max_retries=3, backoff_factor=1.5):
+    """Retry decorator with exponential backoff."""
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            retries = 0
+            max_wait = 30  # Maximum wait time in seconds
+            while retries < max_retries:
+                try:
+                    return func(*args, **kwargs)
+                except (requests.exceptions.ConnectionError, ConnectionResetError) as e:
+                    retries += 1
+                    if retries >= max_retries:
+                        logger.error(f"Max retries ({max_retries}) exceeded for {func.__name__}: {e}")
+                        raise
+                    
+                    wait_time = min(backoff_factor * (2 ** (retries - 1)), max_wait)
+                    logger.warning(f"Connection error in {func.__name__}, retrying in {wait_time:.2f}s (attempt {retries}/{max_retries}): {e}")
+                    time.sleep(wait_time)
+            return func(*args, **kwargs)  # This line should never be reached
+        return wrapper
+    return decorator
 class FinraAPIError(Exception):
     """Base exception for FINRA API errors."""
     pass
@@ -150,10 +173,15 @@ class FinraFirmBrokerCheckAgent:
         self.config = config or {}
         self.use_mock = use_mock
         self.session = requests.Session()
+        # Add User-Agent header to avoid potential blocking
+        self.session.headers.update({
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        })
         logger.info("Initialized FINRA BrokerCheck API agent with config: %s, use_mock: %s", 
                    self.config, self.use_mock)
 
     @rate_limit
+    @retry_with_backoff()
     def search_firm(self, firm_name: str) -> List[Dict]:
         """Search for firms by name.
 
@@ -236,6 +264,7 @@ class FinraFirmBrokerCheckAgent:
             raise FinraAPIError(f"Unexpected error during firm search: {e}")
 
     @rate_limit
+    @retry_with_backoff()
     def search_firm_by_crd(self, crd_number: str, employee_number: Optional[str] = None) -> List[Dict]:
         """Search for a firm by CRD number.
 
@@ -265,8 +294,8 @@ class FinraFirmBrokerCheckAgent:
                     return [{"firm_name": result["org_name"], "crd_number": result["org_source_id"]}]
                 return []
             
-            url = BROKERCHECK_CONFIG["firm_search_url"]
-            params = {**BROKERCHECK_CONFIG["default_params"], "query": crd_number}
+            url = f"{BROKERCHECK_CONFIG['firm_search_url']}/{crd_number}"
+            params = BROKERCHECK_CONFIG["default_params"]
             
             logger.debug("Fetching firm info from BrokerCheck API", 
                         extra={**log_context, "url": url, "params": params})
@@ -326,6 +355,7 @@ class FinraFirmBrokerCheckAgent:
             raise FinraAPIError(f"Unexpected error during firm CRD search: {e}")
 
     @rate_limit
+    @retry_with_backoff()
     def get_firm_details(self, crd_number: str, employee_number: Optional[str] = None) -> Dict:
         """Get detailed information about a firm by CRD number.
 
@@ -406,7 +436,8 @@ class FinraFirmBrokerCheckAgent:
             raise FinraAPIError(f"Unexpected error during firm details fetch: {e}")
 
     @rate_limit
-    def search_entity(self, crd_number: str, entity_type: str = "individual", 
+    @retry_with_backoff()
+    def search_entity(self, crd_number: str, entity_type: str = "individual",
                      employee_number: Optional[str] = None) -> Optional[Dict]:
         """
         Fetches basic information from FINRA BrokerCheck for an entity (individual or firm) using their CRD number.
@@ -430,7 +461,9 @@ class FinraFirmBrokerCheckAgent:
             return None
 
         # Select appropriate endpoint based on entity type
-        url = BROKERCHECK_CONFIG["firm_search_url"] if entity_type.lower() == "firm" else BROKERCHECK_CONFIG["entity_search_url"]
+        base_url = BROKERCHECK_CONFIG["firm_search_url"] if entity_type.lower() == "firm" else BROKERCHECK_CONFIG["entity_search_url"]
+        # Use the CRD in the path instead of as a query parameter
+        url = f"{base_url}/{crd_number}"
         
         logger.info(f"Starting FINRA BrokerCheck basic entity search ({entity_type})", extra=log_context)
 
@@ -445,8 +478,8 @@ class FinraFirmBrokerCheckAgent:
 
         try:
             params = dict(BROKERCHECK_CONFIG["default_params"])
-            params["query"] = crd_number
-            logger.debug(f"Fetching basic entity info from BrokerCheck API ({entity_type})", 
+            # No need to add crd_number as a query parameter since it's in the URL path
+            logger.debug(f"Fetching basic entity info from BrokerCheck API ({entity_type})",
                         extra={**log_context, "url": url, "params": params})
 
             response = self.session.get(url, params=params)
@@ -490,7 +523,8 @@ class FinraFirmBrokerCheckAgent:
             return None
 
     @rate_limit
-    def search_entity_detailed_info(self, crd_number: str, entity_type: str = "individual", 
+    @retry_with_backoff()
+    def search_entity_detailed_info(self, crd_number: str, entity_type: str = "individual",
                                    employee_number: Optional[str] = None) -> Optional[Dict]:
         """
         Fetches detailed information from FINRA BrokerCheck for an entity (individual or firm) using their CRD number.
