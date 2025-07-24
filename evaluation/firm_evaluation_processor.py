@@ -211,6 +211,34 @@ def evaluate_registration_status(business_info: Dict[str, Any]) -> Tuple[bool, s
     
     if isinstance(firm_ia_scope, str):
         firm_ia_scope = firm_ia_scope.upper()
+        
+    # Check if firm is found in SEC but not registered
+    if business_info.get('source') == 'SEC' and not is_sec_registered:
+        # Check raw data for additional information
+        raw_data = None
+        if 'raw_data' in business_info:
+            raw_data = business_info.get('raw_data', {})
+        elif 'basic_result' in business_info and 'raw_data' in business_info.get('basic_result', {}):
+            raw_data = business_info.get('basic_result', {}).get('raw_data', {})
+            
+        firm_status_raw = None
+        if raw_data and 'basicInformation' in raw_data:
+            firm_status_raw = raw_data.get('basicInformation', {}).get('firmStatus')
+            
+        alerts.append(Alert(
+            alert_type="NoActiveRegistration",
+            severity=AlertSeverity.HIGH,
+            metadata={
+                "registration_status": registration_status,
+                "firm_ia_scope": firm_ia_scope,
+                "firm_status": firm_status_raw or firm_status,
+                "source": business_info.get('source', 'Unknown'),
+                "is_sec_registered": is_sec_registered
+            },
+            description="Firm is not registered with SEC",
+            alert_category="REGISTRATION"
+        ))
+        return False, "Firm is not registered with SEC", alerts
     
     # Check registration status first for terminal conditions
     if registration_status == "TERMINATED":
@@ -271,7 +299,8 @@ def evaluate_registration_status(business_info: Dict[str, Any]) -> Tuple[bool, s
     
     # Check if firm_status is explicitly set to 'active'
     if firm_status == 'active':
-        is_compliant = True
+        # Only consider active if at least one registration is active
+        is_compliant = any([is_sec_registered, is_finra_registered, is_state_registered])
     
     # Check if any registration is active (as a fallback)
     # Also consider firm_ia_scope == "ACTIVE" as an active registration
@@ -279,9 +308,7 @@ def evaluate_registration_status(business_info: Dict[str, Any]) -> Tuple[bool, s
         is_sec_registered,
         is_finra_registered,
         is_state_registered,
-        firm_ia_scope == "ACTIVE",
-        # If source is FINRA or SEC and firm_status is 'active', consider it as having active registration
-        (business_info.get('source') in ['FINRA', 'SEC'] and firm_status == 'active')
+        firm_ia_scope == "ACTIVE"
     ])
     
     if has_active_registration:
