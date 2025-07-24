@@ -212,8 +212,8 @@ def evaluate_registration_status(business_info: Dict[str, Any]) -> Tuple[bool, s
     if isinstance(firm_ia_scope, str):
         firm_ia_scope = firm_ia_scope.upper()
         
-    # Check if firm is found in SEC but not registered
-    if business_info.get('source') == 'SEC' and not is_sec_registered:
+    # Check if firm is found in SEC but not registered with any regulatory body
+    if business_info.get('source') == 'SEC' and not is_sec_registered and not is_state_registered and not is_finra_registered:
         # Check raw data for additional information
         raw_data = None
         if 'raw_data' in business_info:
@@ -233,12 +233,14 @@ def evaluate_registration_status(business_info: Dict[str, Any]) -> Tuple[bool, s
                 "firm_ia_scope": firm_ia_scope,
                 "firm_status": firm_status_raw or firm_status,
                 "source": business_info.get('source', 'Unknown'),
-                "is_sec_registered": is_sec_registered
+                "is_sec_registered": is_sec_registered,
+                "is_state_registered": is_state_registered,
+                "is_finra_registered": is_finra_registered
             },
-            description="Firm is not registered with SEC",
+            description="Firm is not registered with any regulatory body",
             alert_category="REGISTRATION"
         ))
-        return False, "Firm is not registered with SEC", alerts
+        return False, "Firm is not registered with any regulatory body", alerts
     
     # Check registration status first for terminal conditions
     if registration_status == "TERMINATED":
