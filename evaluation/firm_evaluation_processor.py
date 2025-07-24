@@ -299,6 +299,11 @@ def evaluate_registration_status(business_info: Dict[str, Any]) -> Tuple[bool, s
     if firm_ia_scope == "ACTIVE":
         is_compliant = True
     
+    # Check if any registration is active
+    # This is the primary check - if any registration flag is true, the firm is compliant
+    if is_sec_registered or is_finra_registered or is_state_registered:
+        is_compliant = True
+    
     # Check if firm_status is explicitly set to 'active'
     if firm_status == 'active':
         # Only consider active if at least one registration is active
@@ -324,7 +329,10 @@ def evaluate_registration_status(business_info: Dict[str, Any]) -> Tuple[bool, s
                 "registration_status": registration_status,
                 "firm_ia_scope": firm_ia_scope,
                 "firm_status": firm_status,
-                "source": business_info.get('source', 'Unknown')
+                "source": business_info.get('source', 'Unknown'),
+                "is_sec_registered": is_sec_registered,
+                "is_state_registered": is_state_registered,
+                "is_finra_registered": is_finra_registered
             },
             description="No active registrations found with any regulatory body"
         ))

@@ -308,12 +308,19 @@ class FirmEvaluationReportDirector:
                 logger.info(f"Performing full evaluation for {business_name}")
                 business_info = extracted_info
                 
-                # Copy firm_status and status_message from basic_result to business_info
+                # Copy firm_status, status_message, and registration flags from basic_result to business_info
                 basic_result = search_evaluation.get("basic_result", {})
                 if "firm_status" in basic_result:
                     business_info["firm_status"] = basic_result["firm_status"]
                 if "status_message" in basic_result:
                     business_info["status_message"] = basic_result["status_message"]
+                # Copy registration flags
+                if "is_sec_registered" in basic_result:
+                    business_info["is_sec_registered"] = basic_result["is_sec_registered"]
+                if "is_state_registered" in basic_result:
+                    business_info["is_state_registered"] = basic_result["is_state_registered"]
+                if "is_finra_registered" in basic_result:
+                    business_info["is_finra_registered"] = basic_result["is_finra_registered"]
                 
                 # Map old method names to new method names for backward compatibility
                 method_mapping = {
