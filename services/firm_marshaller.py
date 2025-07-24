@@ -652,10 +652,23 @@ class FirmMarshaller:
             crd_number = str(firm_id) if firm_id is not None else None
             
             # Build normalized response
+            # Handle SEC number - use IA SEC number if available, otherwise use BD SEC number
+            ia_sec_number = basic_info.get('iaSECNumber')
+            ia_sec_number_type = basic_info.get('iaSECNumberType')
+            bd_sec_number = basic_info.get('bdSECNumber')
+            
+            # Determine the SEC number to use
+            if ia_sec_number and ia_sec_number_type:
+                sec_number = f"{ia_sec_number_type}-{ia_sec_number}"
+            elif bd_sec_number:
+                sec_number = f"8-{bd_sec_number}"  # BD SEC numbers use "8-" prefix
+            else:
+                sec_number = "-"  # Default if no SEC number is available
+                
             return {
                 'firm_name': basic_info.get('firmName'),
                 'crd_number': crd_number,
-                'sec_number': f"{basic_info.get('iaSECNumberType', '')}-{basic_info.get('iaSECNumber', '')}",
+                'sec_number': sec_number,
                 'registration_status': reg_status.get('status'),
                 'address': {
                     'street': f"{address_info.get('street1', '')} {address_info.get('street2', '')}".strip(),
