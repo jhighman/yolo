@@ -297,7 +297,7 @@ class FinraFirmBrokerCheckAgent:
             url = f"{BROKERCHECK_CONFIG['firm_search_url']}/{crd_number}"
             params = BROKERCHECK_CONFIG["default_params"]
             
-            logger.debug("Fetching firm info from BrokerCheck API", 
+            logger.debug("Fetching firm info from BrokerCheck API",
                         extra={**log_context, "url": url, "params": params})
             
             response = self.session.get(url, params=params, timeout=(10, 30))
@@ -323,10 +323,30 @@ class FinraFirmBrokerCheckAgent:
                     for hit in data["hits"]["hits"]:
                         if "_source" in hit:
                             source = hit["_source"]
-                            results.append({
-                                "firm_name": source.get("org_name", ""),
-                                "crd_number": source.get("org_source_id", "")
-                            })
+                            
+                            # Standard format with org_name and org_source_id
+                            if "org_name" in source and "org_source_id" in source:
+                                results.append({
+                                    "firm_name": source.get("org_name", ""),
+                                    "crd_number": source.get("org_source_id", "")
+                                })
+                            # Handle content field that contains JSON
+                            elif "content" in source:
+                                try:
+                                    content = source["content"]
+                                    if isinstance(content, str):
+                                        content_data = json.loads(content)
+                                    else:
+                                        content_data = content
+                                        
+                                    basic_info = content_data.get("basicInformation", {})
+                                    results.append({
+                                        "firm_name": basic_info.get("firmName", ""),
+                                        "crd_number": str(basic_info.get("firmId", ""))
+                                    })
+                                except Exception as e:
+                                    logger.error(f"Error parsing content: {e}", extra=log_context)
+                                    # Continue with other formats
                 elif "results" in data:
                     for result in data["results"]:
                         results.append({

@@ -268,7 +268,7 @@ class SECFirmIAPDAgent:
             url = IAPD_CONFIG["firm_search_url"]
             params = {**IAPD_CONFIG["default_params"], "query": crd_number}
             
-            logger.debug("Fetching firm info from SEC IAPD API", 
+            logger.debug("Fetching firm info from SEC IAPD API",
                         extra={**log_context, "url": url, "params": params})
             
             response = self.session.get(url, params=params, timeout=(10, 30))
@@ -286,18 +286,73 @@ class SECFirmIAPDAgent:
                 
                 # Handle different response formats
                 if "hits" in data and data["hits"] is not None and "hits" in data["hits"] and data["hits"]["hits"]:
+                    # Process the first hit
                     hit = data["hits"]["hits"][0]
                     if "_source" in hit:
                         source = hit["_source"]
+                        
+                        # Handle standard format with org_name and org_crd
+                        if "org_name" in source and "org_crd" in source:
+                            return {
+                                "org_name": source.get("org_name", ""),
+                                "org_crd": source.get("org_crd", ""),
+                                "firm_ia_sec_number": source.get("firm_ia_sec_number", ""),
+                                "firm_ia_full_sec_number": source.get("firm_ia_full_sec_number", ""),
+                                "firm_other_names": source.get("firm_other_names", []),
+                                "firm_type": source.get("firm_type", ""),
+                                "registration_status": source.get("registration_status", ""),
+                                "firm_ia_scope": source.get("firm_ia_scope", ""),
+                                "firm_ia_disclosure_fl": source.get("firm_ia_disclosure_fl", ""),
+                                "firm_branches_count": source.get("firm_branches_count", 0)
+                            }
+                        # Handle alternative format with firm_source_id and firm_name
+                        elif "firm_source_id" in source and "firm_name" in source:
+                            return {
+                                "org_name": source.get("firm_name", ""),
+                                "org_crd": source.get("firm_source_id", ""),
+                                "firm_ia_sec_number": source.get("firm_ia_sec_number", ""),
+                                "firm_ia_full_sec_number": source.get("firm_ia_full_sec_number", ""),
+                                "firm_other_names": source.get("firm_other_names", []),
+                                "firm_type": source.get("firm_type", ""),
+                                "registration_status": source.get("registration_status", ""),
+                                "firm_ia_scope": source.get("firm_scope", ""),  # Note: different field name
+                                "firm_ia_disclosure_fl": source.get("firm_ia_disclosure_fl", ""),
+                                "firm_branches_count": source.get("firm_branches_count", 0)
+                            }
+                        # If neither format is found, try to extract from content if available
+                        elif "content" in source:
+                            try:
+                                content = source["content"]
+                                if isinstance(content, str):
+                                    content = json.loads(content)
+                                
+                                basic_info = content.get("basicInformation", {})
+                                return {
+                                    "org_name": basic_info.get("firmName", ""),
+                                    "org_crd": str(basic_info.get("firmId", "")),
+                                    "firm_ia_sec_number": basic_info.get("iaSECNumber", ""),
+                                    "firm_ia_full_sec_number": f"{basic_info.get('iaSECNumberType', '')}-{basic_info.get('iaSECNumber', '')}" if basic_info.get('iaSECNumber') else "",
+                                    "firm_other_names": basic_info.get("otherNames", []),
+                                    "firm_type": basic_info.get("firmType", ""),
+                                    "registration_status": basic_info.get("firmStatus", ""),
+                                    "firm_ia_scope": basic_info.get("iaScope", ""),
+                                    "firm_ia_disclosure_fl": content.get("iaDisclosureFlag", ""),
+                                    "firm_branches_count": source.get("firm_branches_count", 0)
+                                }
+                            except Exception as e:
+                                logger.error(f"Error parsing content: {e}", extra=log_context)
+                                # Continue with other formats
+                        
+                        # If we still don't have a match, return whatever we can find
                         return {
-                            "org_name": source.get("org_name", ""),
-                            "org_crd": source.get("org_crd", ""),
+                            "org_name": source.get("org_name", source.get("firm_name", "")),
+                            "org_crd": source.get("org_crd", source.get("firm_source_id", "")),
                             "firm_ia_sec_number": source.get("firm_ia_sec_number", ""),
                             "firm_ia_full_sec_number": source.get("firm_ia_full_sec_number", ""),
                             "firm_other_names": source.get("firm_other_names", []),
                             "firm_type": source.get("firm_type", ""),
                             "registration_status": source.get("registration_status", ""),
-                            "firm_ia_scope": source.get("firm_ia_scope", ""),
+                            "firm_ia_scope": source.get("firm_ia_scope", source.get("firm_scope", "")),
                             "firm_ia_disclosure_fl": source.get("firm_ia_disclosure_fl", ""),
                             "firm_branches_count": source.get("firm_branches_count", 0)
                         }
