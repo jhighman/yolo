@@ -10,14 +10,14 @@ from difflib import SequenceMatcher
 class FirmNameMatcher:
     """Service for fuzzy matching of firm names."""
     
-    def find_best_match(self, search_name: str, candidates: List[Dict[str, Any]], threshold: float = 0.8) -> Optional[Dict[str, Any]]:
+    def find_best_match(self, search_name: str, candidates: List[Dict[str, Any]], threshold: float = 0.75) -> Optional[Dict[str, Any]]:
         """
         Find the best matching firm record from a list of candidates.
         
         Args:
             search_name: Name to search for
             candidates: List of firm records to search through
-            threshold: Minimum similarity score threshold (default: 0.8)
+            threshold: Minimum similarity score threshold (default: 0.75)
             
         Returns:
             Best matching firm record or None if no good match found

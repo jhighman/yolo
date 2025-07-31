@@ -397,9 +397,11 @@ def search_with_crd_only(
 ) -> Dict[str, Any]:
     """Search using CRD number only."""
     org_crd = claim.get('organization_crd')
+    business_name = claim.get('business_name')
     
     logger.info(f"Searching with CRD only", extra={
         "org_crd": org_crd,
+        "business_name": business_name,
         "business_ref": business_ref
     })
     
@@ -422,7 +424,7 @@ def search_with_crd_only(
     
     try:
         # This will call both SEC and FINRA internally
-        result = facade.search_firm_by_crd(business_ref, org_crd)
+        result = facade.search_firm_by_crd(business_ref, org_crd, business_name)
         
         # Try to get the raw search results from both sources
         firm_id = f"search_crd_{org_crd}"
@@ -697,6 +699,9 @@ def process_claim(
     # Ensure entityName is in the claim for name evaluation
     if "entityName" not in claim and "business_name" in claim:
         claim["entityName"] = claim["business_name"]
+        
+    # Log the entity name for debugging
+    logger.debug(f"Entity name for evaluation: {claim.get('entityName', 'Not provided')}")
     
     try:
         # Determine and execute search strategy

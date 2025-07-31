@@ -380,7 +380,7 @@ class FirmServicesFacade:
             logger.debug(f"Not found in either FINRA or SEC for CRD {crd_number}")
             return None
 
-    def search_firm_by_crd(self, subject_id: str, crd_number: str) -> Optional[Dict[str, Any]]:
+    def search_firm_by_crd(self, subject_id: str, crd_number: str, entity_name: Optional[str] = None) -> Optional[Dict[str, Any]]:
         """
         Search for a firm by CRD number across both FINRA and SEC databases,
         then fetch detailed information if found.
@@ -388,11 +388,17 @@ class FirmServicesFacade:
         Args:
             subject_id: The ID of the subject/client making the request
             crd_number: The firm's CRD number
+            entity_name: Optional entity name for logging and verification
             
         Returns:
             Detailed firm information or None if not found
         """
-        logger.info(f"Searching for firm by CRD: {crd_number}")
+        log_context = {
+            "crd_number": crd_number,
+            "entity_name": entity_name
+        }
+        
+        logger.info(f"Searching for firm by CRD: {crd_number}", extra=log_context)
         firm_id = f"search_crd_{crd_number}"  # Create a unique ID for caching
         
         # First, check if we can find the firm in either database
@@ -406,12 +412,12 @@ class FirmServicesFacade:
             self._apply_service_delay()
             sec_response = fetch_sec_firm_by_crd(subject_id, firm_id, {"crd_number": crd_number})
             if sec_response.status == ResponseStatus.SUCCESS and sec_response.data:
-                logger.debug(f"Found SEC result for CRD {crd_number}")
+                logger.debug(f"Found SEC result for CRD {crd_number}", extra=log_context)
                 found_firm = True
                 sec_found = True
                 source = "SEC"
         except Exception as e:
-            logger.error(f"Error searching SEC by CRD {crd_number}: {str(e)}")
+            logger.error(f"Error searching SEC by CRD {crd_number}: {str(e)}", extra=log_context)
                 
         # Always try FINRA too, regardless of SEC result
         try:
@@ -419,16 +425,16 @@ class FirmServicesFacade:
             self._apply_service_delay()
             finra_response = fetch_finra_firm_by_crd(subject_id, firm_id, {"crd_number": crd_number})
             if finra_response.status == ResponseStatus.SUCCESS and finra_response.data:
-                logger.debug(f"Found FINRA result for CRD {crd_number}")
+                logger.debug(f"Found FINRA result for CRD {crd_number}", extra=log_context)
                 found_firm = True
                 if not sec_found:  # Only change source if SEC didn't find it
                     source = "FINRA"
         except Exception as e:
-            logger.error(f"Error searching FINRA by CRD {crd_number}: {str(e)}")
+            logger.error(f"Error searching FINRA by CRD {crd_number}: {str(e)}", extra=log_context)
         
         # If we found the firm in either database, get detailed information
         if found_firm:
-            logger.info(f"Found firm with CRD {crd_number} in {source}, fetching detailed information")
+            logger.info(f"Found firm with CRD {crd_number} in {source}, fetching detailed information", extra=log_context)
             return self.get_firm_details(subject_id, crd_number)
                 
         return None
