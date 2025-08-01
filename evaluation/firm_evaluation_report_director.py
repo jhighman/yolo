@@ -354,10 +354,26 @@ class FirmEvaluationReportDirector:
                 })
                 
                 # Disclosure review (replaces disclosures)
+                # Check if disclosure flag is present in SEC search result
+                disclosure_flag = None
+                if "sec_search_result" in search_evaluation and "firm_ia_disclosure_fl" in search_evaluation["sec_search_result"]:
+                    disclosure_flag = search_evaluation["sec_search_result"]["firm_ia_disclosure_fl"]
+                    logger.info(f"Found disclosure flag in SEC search result: {disclosure_flag}")
+                
+                # Check if FINRA disclosures are available as fallback
+                finra_disclosures = None
+                if "finra_search_result" in search_evaluation and search_evaluation["finra_search_result"].get("status") != "not_found":
+                    finra_result = search_evaluation["finra_search_result"]
+                    if isinstance(finra_result, dict) and "disclosures" in finra_result:
+                        finra_disclosures = finra_result["disclosures"]
+                        logger.info(f"Found {len(finra_disclosures)} FINRA disclosures for fallback")
+                
                 compliant, explanation, alerts = self._safe_evaluate(
                     evaluate_disclosures,
                     extracted_info.get("disclosures", []),
                     business_name,
+                    disclosure_flag,
+                    finra_disclosures,
                     section_name="disclosure_review"
                 )
                 self.builder.set_disclosure_review({

@@ -491,13 +491,20 @@ def evaluate_regulatory_oversight(business_info: Dict[str, Any], business_name: 
     # Return true if SEC authority exists, regardless of notice filings
     return has_sec_authority, explanation, alerts
 
-def evaluate_disclosures(disclosures: List[Dict[str, Any]], business_name: str) -> Tuple[bool, str, List[Alert]]:
+def evaluate_disclosures(
+    disclosures: List[Dict[str, Any]],
+    business_name: str,
+    disclosure_flag: Optional[str] = None,
+    finra_disclosures: Optional[List[Dict[str, Any]]] = None
+) -> Tuple[bool, str, List[Alert]]:
     """
     Evaluate the firm's disclosure history for compliance and risk.
     
     Args:
         disclosures: List of disclosure records
         business_name: Name of the business for reporting
+        disclosure_flag: Optional flag indicating if disclosures exist (e.g., "Y" or "N")
+        finra_disclosures: Optional list of FINRA disclosure records to check as fallback
         
     Returns:
         Tuple containing:
@@ -508,7 +515,160 @@ def evaluate_disclosures(disclosures: List[Dict[str, Any]], business_name: str) 
     logger.debug(f"Evaluating disclosures for {business_name}")
     alerts = []
     
-    if not disclosures:
+    # First check if we have actual disclosures
+    if disclosures:
+        # Check if we have the new format with disclosureType and disclosureCount
+        if any('disclosureType' in d for d in disclosures):
+            total_disclosure_count = 0
+            disclosure_types = []
+            
+            for disclosure in disclosures:
+                disclosure_type = disclosure.get('disclosureType', 'Unknown')
+                disclosure_count = disclosure.get('disclosureCount', 0)
+                total_disclosure_count += disclosure_count
+                
+                if disclosure_count > 0:
+                    disclosure_types.append(f"{disclosure_type} ({disclosure_count})")
+                    
+                    # Create an alert for each disclosure type
+                    severity = AlertSeverity.HIGH if disclosure_type in ["Regulatory Event", "Criminal"] else AlertSeverity.MEDIUM
+                    
+                    alerts.append(Alert(
+                        alert_type=f"{disclosure_type.replace(' ', '')}Disclosure",
+                        severity=severity,
+                        metadata={
+                            "disclosure_type": disclosure_type,
+                            "count": disclosure_count
+                        },
+                        description=f"{disclosure_count} {disclosure_type} disclosure(s) found",
+                        alert_category="DISCLOSURE"
+                    ))
+            
+            # Determine compliance based on disclosure types and counts
+            has_high_severity = any(a.severity == AlertSeverity.HIGH for a in alerts)
+            
+            if not disclosure_types:
+                return True, "No disclosures found", alerts
+            elif has_high_severity:
+                return False, f"Significant disclosures found: {', '.join(disclosure_types)}", alerts
+            else:
+                return True, f"Minor disclosures found: {', '.join(disclosure_types)}", alerts
+        
+        # Original implementation for backward compatibility
+        unresolved_count = 0
+        recent_resolved_count = 0
+        active_sanctions_count = 0
+        
+        for disclosure in disclosures:
+            status = disclosure.get('status', '').upper()
+            date_str = disclosure.get('date')
+            sanctions = disclosure.get('sanctions', [])
+            
+            if not date_str:
+                logger.error("Missing date in disclosure")
+                alerts.append(Alert(
+                    alert_type="MissingDisclosureDate",
+                    severity=AlertSeverity.MEDIUM,
+                    metadata={"status": status},
+                    description="Missing date in disclosure record"
+                ))
+                continue
+                
+            try:
+                disclosure_date = parse_iso_date(date_str)
+                
+                if status != "RESOLVED":
+                    unresolved_count += 1
+                    alerts.append(Alert(
+                        alert_type="UnresolvedDisclosure",
+                        severity=AlertSeverity.HIGH,
+                        metadata={
+                            "date": date_str,
+                            "status": status,
+                            "description": disclosure.get('description', 'No description provided')
+                        },
+                        description=f"Unresolved disclosure from {date_str}"
+                    ))
+                elif datetime.now() - disclosure_date <= timedelta(days=365*2):
+                    recent_resolved_count += 1
+                    alerts.append(Alert(
+                        alert_type="RecentDisclosure",
+                        severity=AlertSeverity.MEDIUM,
+                        metadata={
+                            "date": date_str,
+                            "description": disclosure.get('description', 'No description provided')
+                        },
+                        description=f"Recently resolved disclosure from {date_str}"
+                    ))
+                
+                if sanctions:
+                    active_sanctions_count += 1
+                    alerts.append(Alert(
+                        alert_type="SanctionsImposed",
+                        severity=AlertSeverity.HIGH,
+                        metadata={
+                            "date": date_str,
+                            "sanctions": sanctions
+                        },
+                        description=f"Active sanctions from disclosure dated {date_str}"
+                    ))
+                    
+            except ValueError as e:
+                logger.error(f"Invalid date format in disclosure: {date_str}")
+                alerts.append(Alert(
+                    alert_type="InvalidDisclosureDate",
+                    severity=AlertSeverity.MEDIUM,
+                    metadata={"date": date_str},
+                    description="Invalid date format in disclosure"
+                ))
+        
+        # Build explanation
+        if unresolved_count == 0 and active_sanctions_count == 0:
+            if recent_resolved_count == 0:
+                return True, "All disclosures resolved with no recent incidents", alerts
+            else:
+                return True, f"{recent_resolved_count} recently resolved disclosure(s) found", alerts
+        else:
+            explanation = []
+            if unresolved_count > 0:
+                explanation.append(f"{unresolved_count} unresolved disclosure(s)")
+            if active_sanctions_count > 0:
+                explanation.append(f"{active_sanctions_count} active sanction(s)")
+            return False, f"Issues found: {', '.join(explanation)}", alerts
+    
+    # If no disclosures but SEC flag indicates they exist, check FINRA as fallback
+    elif disclosure_flag and disclosure_flag.upper() in ["Y", "YES"]:
+        # If FINRA disclosures are available, use them
+        if finra_disclosures and len(finra_disclosures) > 0:
+            logger.info(f"Using FINRA disclosures as fallback for {business_name}")
+            # Process FINRA disclosures
+            for disclosure in finra_disclosures:
+                alerts.append(Alert(
+                    alert_type="FINRADisclosureRecord",
+                    severity=AlertSeverity.HIGH,
+                    metadata={
+                        "source": "FINRA",
+                        "business_name": business_name,
+                        "disclosure_details": disclosure
+                    },
+                    description=f"Disclosure record found in FINRA data",
+                    alert_category="DISCLOSURE"
+                ))
+            return False, f"Disclosures found in FINRA data", alerts
+        else:
+            # No FINRA disclosures either, report missing records
+            alerts.append(Alert(
+                alert_type="MissingDisclosureRecords",
+                severity=AlertSeverity.HIGH,
+                metadata={
+                    "disclosure_flag": disclosure_flag,
+                    "business_name": business_name
+                },
+                description=f"Disclosure flag is '{disclosure_flag}' but no disclosure records are available",
+                alert_category="DISCLOSURE"
+            ))
+            return False, f"Disclosure flag indicates disclosures exist but records are unavailable", alerts
+    elif not disclosures:
         return True, "No disclosures found", alerts
     
     # Check if we have the new format with disclosureType and disclosureCount
