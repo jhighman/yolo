@@ -190,8 +190,8 @@ class FirmServicesFacade:
         
         # Apply precedence rules
         if finra_details and sec_details:
-            # If found in both places, SEC wins, but combine the data
-            logger.debug(f"Found in both FINRA and SEC, combining with SEC precedence for CRD {crd_number}")
+            # If found in both places, combine the data
+            logger.debug(f"Found in both FINRA and SEC, combining data for CRD {crd_number}")
             # Start with FINRA details as base
             combined = finra_details.copy()
             # Add SEC-specific fields
@@ -209,9 +209,17 @@ class FirmServicesFacade:
                 'has_adv_pdf': sec_details.get('has_adv_pdf', False),
                 'accountant_exams': sec_details.get('accountant_exams', []),
                 'brochures': sec_details.get('brochures', []),
-                'source': 'SEC',
                 'firm_status': 'active'
             })
+            
+            # Determine the primary source based on registration status
+            if sec_details.get('is_sec_registered', False):
+                combined['source'] = 'SEC'
+            elif finra_details.get('is_finra_registered', False):
+                combined['source'] = 'FINRA'
+            else:
+                # If neither is registered, use SEC as default
+                combined['source'] = 'SEC'
             
             # Ensure registration flags are properly set
             if not combined.get('is_sec_registered') and sec_details.get('is_sec_registered'):
@@ -415,11 +423,12 @@ class FirmServicesFacade:
                 logger.debug(f"Found SEC result for CRD {crd_number}", extra=log_context)
                 found_firm = True
                 sec_found = True
-                source = "SEC"
+                source = "SEC"  # Temporary source, will be updated based on registration status
         except Exception as e:
             logger.error(f"Error searching SEC by CRD {crd_number}: {str(e)}", extra=log_context)
                 
         # Always try FINRA too, regardless of SEC result
+        finra_found = False
         try:
             # Apply delay before FINRA API call
             self._apply_service_delay()
@@ -427,7 +436,8 @@ class FirmServicesFacade:
             if finra_response.status == ResponseStatus.SUCCESS and finra_response.data:
                 logger.debug(f"Found FINRA result for CRD {crd_number}", extra=log_context)
                 found_firm = True
-                if not sec_found:  # Only change source if SEC didn't find it
+                finra_found = True
+                if not sec_found:  # Only set initial source if SEC didn't find it
                     source = "FINRA"
         except Exception as e:
             logger.error(f"Error searching FINRA by CRD {crd_number}: {str(e)}", extra=log_context)
@@ -435,7 +445,17 @@ class FirmServicesFacade:
         # If we found the firm in either database, get detailed information
         if found_firm:
             logger.info(f"Found firm with CRD {crd_number} in {source}, fetching detailed information", extra=log_context)
-            return self.get_firm_details(subject_id, crd_number)
+            detailed_info = self.get_firm_details(subject_id, crd_number)
+            
+            # Ensure source is correctly set based on registration status
+            if detailed_info:
+                if detailed_info.get('is_sec_registered', False):
+                    detailed_info['source'] = 'SEC'
+                elif detailed_info.get('is_finra_registered', False):
+                    detailed_info['source'] = 'FINRA'
+                # else keep the source as is
+            
+            return detailed_info
                 
         return None
 
