@@ -199,8 +199,18 @@ class FirmEvaluationReportBuilder:
         """Finalize and return the fully constructed report.
         
         Returns:
-            Dictionary containing all report sections in the specified order
+            Dictionary containing all report sections in the specified order,
+            excluding Arbitration, ADV, and Disciplinary sections which are
+            preserved in the builder but not included in the final report.
         """
-        return cast(Dict[str, Any], dict(self.report))  # Cast OrderedDict to Dict[str, Any]
+        # Create a copy of the report without the excluded sections
+        filtered_report = OrderedDict()
+        sections_to_exclude = ["arbitration_review", "adv_evaluation", "disciplinary_evaluation"]
+        
+        for key, value in self.report.items():
+            if key not in sections_to_exclude:
+                filtered_report[key] = value
+        
+        return cast(Dict[str, Any], dict(filtered_report))  # Cast OrderedDict to Dict[str, Any]
 
 # TODO: Implement firm evaluation report builder logic
