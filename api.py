@@ -33,6 +33,8 @@ import aiohttp
 import asyncio
 import os
 import requests
+import traceback
+from prometheus_client import Counter, Histogram, start_http_server
 
 from utils.logging_config import setup_logging
 from services.firm_services import FirmServicesFacade
@@ -59,6 +61,19 @@ celery_file_handler = FileHandler(celery_cache_manager.cache_folder)
 celery_compliance_handler = FirmComplianceHandler(celery_file_handler.base_path)
 logger.info("Celery worker services initialized")
 
+# Initialize Prometheus metrics
+task_counter = Counter('celery_tasks_total', 'Total number of Celery tasks', ['task_name', 'status'])
+task_duration = Histogram('celery_task_duration_seconds', 'Task duration in seconds', ['task_name'])
+webhook_counter = Counter('webhook_delivery_total', 'Total number of webhook deliveries', ['status'])
+webhook_duration = Histogram('webhook_delivery_duration_seconds', 'Webhook delivery duration in seconds')
+
+# Start Prometheus metrics server on port 8000
+try:
+    start_http_server(8000)
+    logger.info("Prometheus metrics server started on port 8000")
+except Exception as e:
+    logger.error(f"Failed to start Prometheus metrics server: {str(e)}")
+
 # Initialize Celery with Redis
 celery_app = Celery(
     "firm_compliance_tasks",
@@ -81,6 +96,21 @@ celery_app.conf.update(
     broker_connection_max_retries=10,
     broker_transport_options={'visibility_timeout': 3600},
 )
+
+# Configure Celery to use a dead letter queue
+celery_app.conf.update(
+    task_routes={
+        'process_firm_compliance_claim': {'queue': 'firm_compliance_queue'},
+        'send_webhook_notification': {'queue': 'webhook_queue'},
+        'dead_letter_task': {'queue': 'dead_letter_queue'}
+    }
+)
+
+# Dead letter task to handle permanently failed tasks
+@celery_app.task(name="dead_letter_task")
+def dead_letter_task(task_name, args, kwargs, exc_info):
+    logger.error(f"Task {task_name} permanently failed: {exc_info}")
+    # Store in database or send alert
 
 # Settings, ClaimRequest, TaskStatusResponse, and WebhookStatus models
 class Settings(BaseModel):
@@ -157,9 +187,93 @@ cache_manager = None
 file_handler = None
 compliance_handler = None
 
-# Simple in-memory storage for webhook statuses
-# In a production environment, this would be replaced with a database
-webhook_statuses = {}
+# Redis-based storage for webhook statuses
+# Uses the same Redis instance as Celery for persistence
+def get_redis_client():
+    """Get Redis client from Celery's backend."""
+    return celery_app.backend.client
+
+# TTL constants for Redis keys (in seconds)
+WEBHOOK_TTL_SUCCESS = 30 * 60            # 30 minutes for successful webhooks
+WEBHOOK_TTL_FAILED = 7 * 24 * 60 * 60    # 7 days for failed webhooks
+WEBHOOK_TTL_PENDING = 7 * 24 * 60 * 60   # 7 days for pending/retrying webhooks
+
+def store_webhook_status(reference_id, status_data):
+    """Store webhook status in Redis with appropriate TTL."""
+    redis_client = get_redis_client()
+    key = f"webhook_status:{reference_id}"
+    
+    # Determine TTL based on status
+    status = status_data.get("status", "pending")
+    if status == "success":
+        ttl = WEBHOOK_TTL_SUCCESS
+    elif status == "failed":
+        ttl = WEBHOOK_TTL_FAILED
+    else:  # pending or retrying
+        ttl = WEBHOOK_TTL_PENDING
+    
+    # Store with TTL
+    redis_client.set(key, json.dumps(status_data), ex=ttl)
+    
+    # Add to index set for listing (with its own TTL)
+    redis_client.sadd("webhook_status:all", reference_id)
+    # Refresh TTL on the index set (use the longest TTL to ensure it outlives all entries)
+    # Both WEBHOOK_TTL_FAILED and WEBHOOK_TTL_PENDING are 7 days
+    redis_client.expire("webhook_status:all", WEBHOOK_TTL_FAILED)
+    
+    return status_data
+
+def get_webhook_status(reference_id):
+    """Get webhook status from Redis."""
+    redis_client = get_redis_client()
+    key = f"webhook_status:{reference_id}"
+    data = redis_client.get(key)
+    if data:
+        return json.loads(data)
+    return None
+
+def update_webhook_status(reference_id, updates):
+    """Update webhook status in Redis with appropriate TTL."""
+    current = get_webhook_status(reference_id)
+    if not current:
+        return None
+    
+    # Update the status data
+    current.update(updates)
+    
+    # Store with updated TTL based on new status
+    return store_webhook_status(reference_id, current)
+
+def delete_webhook_status(reference_id):
+    """Delete webhook status from Redis."""
+    redis_client = get_redis_client()
+    key = f"webhook_status:{reference_id}"
+    redis_client.delete(key)
+    redis_client.srem("webhook_status:all", reference_id)
+    return True
+
+def list_webhook_statuses(status_filter=None, offset=0, limit=10):
+    """List webhook statuses from Redis with pagination."""
+    redis_client = get_redis_client()
+    all_refs = redis_client.smembers("webhook_status:all")
+    
+    results = []
+    for ref in all_refs:
+        ref_str = ref.decode('utf-8') if isinstance(ref, bytes) else ref
+        status_data = get_webhook_status(ref_str)
+        if status_data and (status_filter is None or status_data.get("status") == status_filter):
+            results.append(status_data)
+    
+    # Sort by updated_at (most recent first)
+    results.sort(key=lambda x: x.get("updated_at", "0"), reverse=True)
+    
+    # Apply pagination
+    paginated = results[offset:offset+limit]
+    
+    return {
+        "total": len(results),
+        "items": paginated
+    }
 
 # Startup event
 @app.on_event("startup")
@@ -196,25 +310,106 @@ def get_celery_app():
     return celery_app
 
 # Celery task for processing claims
+# Circuit breaker for external service calls
+class CircuitBreaker:
+    def __init__(self, name, fail_max=5, reset_timeout=60):
+        self.name = name
+        self.fail_max = fail_max
+        self.reset_timeout = reset_timeout
+        self.failures = 0
+        self.state = "closed"  # closed, open, half-open
+        self.last_failure_time = 0
+        
+    def __call__(self, func):
+        def wrapper(*args, **kwargs):
+            current_time = time.time()
+            
+            # Check if circuit is open
+            if self.state == "open":
+                if current_time - self.last_failure_time > self.reset_timeout:
+                    logger.info(f"Circuit {self.name} transitioning from open to half-open")
+                    self.state = "half-open"
+                else:
+                    logger.warning(f"Circuit {self.name} is open, rejecting call")
+                    raise RuntimeError(f"Circuit {self.name} is open")
+            
+            try:
+                result = func(*args, **kwargs)
+                
+                # Success - reset circuit if in half-open state
+                if self.state == "half-open":
+                    logger.info(f"Circuit {self.name} transitioning from half-open to closed")
+                    self.state = "closed"
+                    self.failures = 0
+                
+                return result
+                
+            except Exception as e:
+                self.failures += 1
+                self.last_failure_time = current_time
+                
+                if self.failures >= self.fail_max:
+                    logger.warning(f"Circuit {self.name} transitioning to open after {self.failures} failures")
+                    self.state = "open"
+                
+                raise e
+                
+        return wrapper
+
+# Create circuit breakers for external services
+finra_breaker = CircuitBreaker("finra_api", fail_max=5, reset_timeout=60)
+sec_breaker = CircuitBreaker("sec_api", fail_max=5, reset_timeout=60)
+
 @celery_app.task(name="process_firm_compliance_claim", bind=True, max_retries=3, default_retry_delay=60)
 def process_firm_compliance_claim(self, request_dict: Dict[str, Any], mode: str):
-    """
-    Celery task to process a firm compliance claim asynchronously.
+    """Celery task to process a firm compliance claim asynchronously."""
+    reference_id = request_dict.get('reference_id', 'unknown')
+    start_time = time.time()
+    task_counter.labels(task_name='process_firm_compliance_claim', status='started').inc()
+    logger.info(f"Starting Celery task for reference_id={reference_id} with mode={mode}")
     
-    Args:
-        request_dict (Dict[str, Any]): Claim request data.
-        mode (str): Processing mode ("basic", "extended", "complete").
+    # Add task context to all logs
+    task_context = {
+        "task_id": self.request.id,
+        "reference_id": reference_id,
+        "mode": mode,
+        "attempt": self.request.retries + 1
+    }
     
-    Returns:
-        Dict[str, Any]: Processed compliance report or error details.
-    """
-    logger.info(f"Starting Celery task for reference_id={request_dict['reference_id']} with mode={mode}")
+    self.update_state(state="PENDING", meta={"reference_id": reference_id})
     
-    self.update_state(state="PENDING", meta={"reference_id": request_dict['reference_id']})
+    # Pre-execution validation and health checks
+    try:
+        # Validate input parameters
+        if not reference_id or not isinstance(reference_id, str):
+            raise ValueError(f"Invalid reference_id: {reference_id}")
+            
+        # Check if required services are available
+        if not celery_facade or not celery_cache_manager:
+            raise RuntimeError("Required services not initialized")
+            
+        # Verify Redis connection (broker/backend)
+        try:
+            self.app.backend.client.ping()
+        except Exception as e:
+            logger.error(f"Redis backend unavailable: {str(e)}", extra=task_context)
+            raise RuntimeError(f"Redis backend unavailable: {str(e)}")
+    except (ValueError, RuntimeError) as e:
+        # Don't retry on validation errors - these are permanent failures
+        logger.error(f"Task validation failed: {str(e)}", extra=task_context, exc_info=True)
+        return {
+            "status": "error",
+            "reference_id": reference_id,
+            "message": f"Task validation failed: {str(e)}",
+            "error_type": "validation_error"
+        }
     
     try:
         request = ClaimRequest(**request_dict)
-        mode_settings = PROCESSING_MODES[mode]
+        mode_settings = PROCESSING_MODES.get(mode)
+        if not mode_settings:
+            raise ValueError(f"Invalid processing mode: {mode}")
+            
         claim = request.dict(exclude_unset=True)
         business_ref = claim.get("business_ref")
         webhook_url = claim.pop("webhook_url", None)
@@ -222,156 +417,317 @@ def process_firm_compliance_claim(self, request_dict: Dict[str, Any], mode: str)
         if "_id" in claim and isinstance(claim["_id"], dict) and "$oid" in claim["_id"]:
             claim["mongo_id"] = claim["_id"]["$oid"]
 
-        report = process_claim(
-            claim=claim,
-            facade=celery_facade,  # Use the Celery worker's facade instance
-            business_ref=business_ref,
-            skip_financials=mode_settings["skip_financials"],
-            skip_legal=mode_settings["skip_legal"]
-        )
+        # Wrap the process_claim call in a specific try/except to catch failures
+        try:
+            report = process_claim(
+                claim=claim,
+                facade=celery_facade,
+                business_ref=business_ref,
+                skip_financials=mode_settings["skip_financials"],
+                skip_legal=mode_settings["skip_legal"]
+            )
+        except Exception as process_error:
+            logger.error(
+                f"Error in process_claim for reference_id={reference_id}: {str(process_error)}",
+                extra=task_context,
+                exc_info=True
+            )
+            raise RuntimeError(f"Process claim execution failed: {str(process_error)}")
         
         if report is None:
-            logger.error(f"Failed to process claim for reference_id={request.reference_id}: process_claim returned None")
-            raise ValueError("Claim processing failed unexpectedly")
+            error_msg = f"Failed to process claim for reference_id={reference_id}: process_claim returned None"
+            logger.error(error_msg, extra=task_context)
+            raise ValueError(error_msg)
 
         complete_claim = claim.copy()
         complete_claim["business_ref"] = business_ref
         report["claim"] = complete_claim
         
-        logger.info(f"Successfully processed claim for reference_id={request.reference_id}")
+        logger.info(f"Successfully processed claim for reference_id={reference_id}", extra=task_context)
 
         if webhook_url:
             # Queue webhook delivery as a separate task with retries
-            logger.info(f"Queuing webhook delivery for reference_id={request.reference_id}")
-            send_webhook_notification.delay(webhook_url, report, request.reference_id)
+            logger.info(f"Queuing webhook delivery for reference_id={reference_id}", extra=task_context)
+            send_webhook_notification.delay(webhook_url, report, reference_id)
         
         return report
     
-    except Exception as e:
-        logger.error(f"Error processing claim for reference_id={request_dict['reference_id']}: {str(e)}", exc_info=True)
+    except (ValueError, TypeError) as e:
+        # Data validation errors - don't retry these
+        logger.error(f"Validation error for reference_id={reference_id}: {str(e)}", extra=task_context, exc_info=True)
         error_report = {
             "status": "error",
-            "reference_id": request_dict["reference_id"],
-            "message": f"Claim processing failed: {str(e)}"
+            "reference_id": reference_id,
+            "message": f"Validation error: {str(e)}",
+            "error_type": "validation_error"
         }
         if webhook_url:
-            # Queue webhook delivery for error report
-            logger.info(f"Queuing webhook delivery for error report, reference_id={request_dict['reference_id']}")
-            send_webhook_notification.delay(webhook_url, error_report, request_dict["reference_id"])
-        self.retry(exc=e, countdown=60)
+            send_webhook_notification.delay(webhook_url, error_report, reference_id)
+        task_duration.labels(task_name='process_firm_compliance_claim').observe(time.time() - start_time)
+        return error_report
+        
+    except (requests.Timeout, requests.ConnectionError, aiohttp.ClientError) as e:
+        # Network errors - these are retryable
+        logger.error(f"Network error for reference_id={reference_id}: {str(e)}", extra=task_context, exc_info=True)
+        error_report = {
+            "status": "error",
+            "reference_id": reference_id,
+            "message": f"Network error: {str(e)}",
+            "error_type": "network_error",
+            "retrying": self.request.retries < self.max_retries
+        }
+        if webhook_url:
+            send_webhook_notification.delay(webhook_url, error_report, reference_id)
+            
+        # Use exponential backoff with jitter
+        retry_countdown = min(2 ** self.request.retries * 60 + random.uniform(0, 30), 300)
+        try:
+            self.retry(exc=e, countdown=retry_countdown)
+        except self.MaxRetriesExceededError:
+            logger.error(f"Max retries exceeded for reference_id={reference_id}", extra=task_context)
+            error_report["retrying"] = False
+            error_report["message"] = f"Network error (max retries exceeded): {str(e)}"
+        return error_report
+    
+    except Exception as e:
+        # Unexpected errors - log extensively and retry
+        logger.error(
+            f"Unexpected error processing claim for reference_id={reference_id}: {str(e)}",
+            extra=task_context,
+            exc_info=True
+        )
+        
+        # Capture stack trace for better debugging
+        stack_trace = traceback.format_exc()
+        logger.error(f"Stack trace: {stack_trace}", extra=task_context)
+        
+        error_report = {
+            "status": "error",
+            "reference_id": reference_id,
+            "message": f"Unexpected error: {str(e)}",
+            "error_type": "unexpected_error",
+            "retrying": self.request.retries < self.max_retries
+        }
+        
+        if webhook_url:
+            send_webhook_notification.delay(webhook_url, error_report, reference_id)
+        
+        # Use exponential backoff with jitter
+        retry_countdown = min(2 ** self.request.retries * 60 + random.uniform(0, 30), 300)
+        try:
+            self.retry(exc=e, countdown=retry_countdown)
+        except self.MaxRetriesExceededError:
+            logger.error(f"Max retries exceeded for reference_id={reference_id}", extra=task_context)
+            error_report["retrying"] = False
+            error_report["message"] = f"Unexpected error (max retries exceeded): {str(e)}"
+        
         return error_report
 
 # Dedicated Celery task for webhook delivery
-@celery_app.task(name="send_webhook_notification", bind=True, max_retries=5, default_retry_delay=30)
+@celery_app.task(name="send_webhook_notification", bind=True, max_retries=3, default_retry_delay=30)
 def send_webhook_notification(self, webhook_url: str, report: Dict[str, Any], reference_id: str):
-    """
-    Dedicated Celery task for webhook delivery with robust retry logic.
-    
-    Args:
-        webhook_url (str): The URL to send the webhook to
-        report (Dict[str, Any]): The report data to send
-        reference_id (str): Reference ID for tracking
-        
-    Returns:
-        bool: True if successful, raises exception on failure (which triggers retry)
-    """
+    """Dedicated Celery task for webhook delivery with robust retry logic."""
+    start_time = time.time()
+    webhook_counter.labels(status='started').inc()
     webhook_logger = loggers.get("webhook", logger)
+    
+    # Add task context to all logs
+    task_context = {
+        "task_id": self.request.id,
+        "reference_id": reference_id,
+        "webhook_url": webhook_url,
+        "attempt": self.request.retries + 1
+    }
     
     # Create a webhook error log file if it doesn't exist
     webhook_log_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "logs")
     os.makedirs(webhook_log_dir, exist_ok=True)
     webhook_log_file = os.path.join(webhook_log_dir, "webhook_errors.log")
     
-    # Initialize or update webhook status
+    # Pre-execution validation
+    if not webhook_url or not isinstance(webhook_url, str):
+        webhook_logger.error(f"Invalid webhook_url: {webhook_url}", extra=task_context)
+        return {
+            "status": "error",
+            "reference_id": reference_id,
+            "message": f"Invalid webhook URL: {webhook_url}",
+            "error_type": "validation_error"
+        }
+    
+    if not reference_id or not isinstance(reference_id, str):
+        webhook_logger.error(f"Invalid reference_id: {reference_id}", extra=task_context)
+        return {
+            "status": "error",
+            "reference_id": reference_id,
+            "message": "Invalid reference ID",
+            "error_type": "validation_error"
+        }
+    
+    if not isinstance(report, dict):
+        webhook_logger.error(f"Invalid report type: {type(report)}", extra=task_context)
+        webhook_counter.labels(status='validation_error').inc()
+        webhook_duration.observe(time.time() - start_time)
+        return {
+            "status": "error",
+            "reference_id": reference_id,
+            "message": f"Invalid report type: {type(report)}",
+            "error_type": "validation_error"
+        }
+    
+    # Initialize or update webhook status in Redis
     current_time = self.request.id or str(time.time())
-    if reference_id not in webhook_statuses:
-        webhook_statuses[reference_id] = {
+    current_status = get_webhook_status(reference_id)
+    
+    if not current_status:
+        # Create new status
+        status_data = {
             "reference_id": reference_id,
             "webhook_url": webhook_url,
             "task_id": self.request.id,
-            "attempts": 0,
-            "last_attempt": None,
-            "status": "pending",
+            "attempts": 1,
+            "last_attempt": current_time,
+            "status": "retrying" if self.request.retries > 0 else "pending",
             "response_code": None,
             "error": None,
             "created_at": current_time,
             "updated_at": current_time
         }
-    
-    # Update attempt count and status
-    webhook_statuses[reference_id]["attempts"] += 1
-    webhook_statuses[reference_id]["last_attempt"] = current_time
-    webhook_statuses[reference_id]["status"] = "retrying" if self.request.retries > 0 else "pending"
-    webhook_statuses[reference_id]["updated_at"] = current_time
+        store_webhook_status(reference_id, status_data)
+    else:
+        # Update existing status
+        updates = {
+            "attempts": current_status.get("attempts", 0) + 1,
+            "last_attempt": current_time,
+            "status": "retrying" if self.request.retries > 0 else "pending",
+            "updated_at": current_time
+        }
+        update_webhook_status(reference_id, updates)
     
     try:
-        webhook_logger.info(f"Attempt {self.request.retries + 1} sending webhook for reference_id={reference_id}")
+        webhook_logger.info(f"Attempt {self.request.retries + 1} sending webhook for reference_id={reference_id}", extra=task_context)
         
         # Add timestamp and attempt number to the report for tracking
         if isinstance(report, dict):
             report["webhook_sent_at"] = self.request.id
             report["webhook_attempt"] = self.request.retries + 1
         
-        # Use synchronous requests for Celery worker
-        response = requests.post(webhook_url, json=report, timeout=30)
+        # Use synchronous requests for Celery worker with timeout
+        try:
+            response = requests.post(webhook_url, json=report, timeout=30)
+            response.raise_for_status()  # Raise exception for 4XX/5XX status codes
+        except requests.exceptions.Timeout as e:
+            webhook_logger.error(f"Webhook request timed out for reference_id={reference_id}", extra=task_context)
+            raise e
+        except requests.exceptions.ConnectionError as e:
+            webhook_logger.error(f"Webhook connection error for reference_id={reference_id}: {str(e)}", extra=task_context)
+            raise e
+        except requests.exceptions.HTTPError as e:
+            webhook_logger.error(f"Webhook HTTP error for reference_id={reference_id}: {str(e)}", extra=task_context)
+            raise e
+        except requests.exceptions.RequestException as e:
+            webhook_logger.error(f"Webhook request error for reference_id={reference_id}: {str(e)}", extra=task_context)
+            raise e
         
-        if response.status_code == 200:
-            webhook_logger.info(f"Successfully sent webhook for reference_id={reference_id}")
-            
-            # Update webhook status to success
-            webhook_statuses[reference_id]["status"] = "success"
-            webhook_statuses[reference_id]["response_code"] = response.status_code
-            webhook_statuses[reference_id]["updated_at"] = str(time.time())
-            
-            return True
-        else:
-            error_msg = f"Webhook delivery failed for reference_id={reference_id}: Status {response.status_code}, Response: {response.text}"
-            webhook_logger.error(error_msg)
-            
-            # Update webhook status with error
-            webhook_statuses[reference_id]["status"] = "failed"
-            webhook_statuses[reference_id]["response_code"] = response.status_code
-            webhook_statuses[reference_id]["error"] = error_msg
-            webhook_statuses[reference_id]["updated_at"] = str(time.time())
-            
-            # Write to dedicated webhook error log file
-            with open(webhook_log_file, "a") as f:
-                f.write(f"[{self.request.id}] {error_msg}\n")
-            
-            raise Exception(f"Webhook failed with status {response.status_code}: {response.text}")
+        webhook_logger.info(f"Successfully sent webhook for reference_id={reference_id}", extra=task_context)
+        webhook_counter.labels(status='success').inc()
+        
+        # Update webhook status to success in Redis
+        update_webhook_status(reference_id, {
+            "status": "success",
+            "response_code": response.status_code,
+            "updated_at": str(time.time())
+        })
+        
+        webhook_duration.observe(time.time() - start_time)
+        return {
+            "status": "success",
+            "reference_id": reference_id,
+            "response_code": response.status_code
+        }
     
     except (requests.Timeout, requests.ConnectionError) as e:
+        webhook_counter.labels(status='network_error').inc()
         error_msg = f"Webhook connection error for reference_id={reference_id}: {str(e)}"
-        webhook_logger.error(error_msg)
+        webhook_logger.error(error_msg, extra=task_context, exc_info=True)
         
-        # Update webhook status with error
-        webhook_statuses[reference_id]["status"] = "retrying"
-        webhook_statuses[reference_id]["error"] = error_msg
-        webhook_statuses[reference_id]["updated_at"] = str(time.time())
+        # Update webhook status with error in Redis
+        update_webhook_status(reference_id, {
+            "status": "retrying",
+            "error": error_msg,
+            "updated_at": str(time.time())
+        })
         
         with open(webhook_log_file, "a") as f:
             f.write(f"[{self.request.id}] {error_msg}\n")
         
         # Exponential backoff with jitter for network-related errors
         retry_countdown = min(2 ** self.request.retries * 30 + random.uniform(0, 30), 300)
-        self.retry(exc=e, countdown=retry_countdown)
+        try:
+            self.retry(exc=e, countdown=retry_countdown)
+        except self.MaxRetriesExceededError:
+            webhook_logger.error(f"Max retries exceeded for reference_id={reference_id}", extra=task_context)
+            update_webhook_status(reference_id, {"status": "failed"})
+            return {
+                "status": "error",
+                "reference_id": reference_id,
+                "message": f"Webhook delivery failed after {self.request.retries + 1} attempts: {str(e)}",
+                "error_type": "network_error",
+                "retrying": False
+            }
+        
+        webhook_duration.observe(time.time() - start_time)
+        return {
+            "status": "error",
+            "reference_id": reference_id,
+            "message": f"Webhook delivery failed: {str(e)}",
+            "error_type": "network_error",
+            "retrying": True
+        }
         
     except Exception as e:
+        webhook_counter.labels(status='unexpected_error').inc()
         error_msg = f"Error sending webhook for reference_id={reference_id}: {str(e)}"
-        webhook_logger.error(error_msg, exc_info=True)
+        webhook_logger.error(error_msg, extra=task_context, exc_info=True)
         
-        # Update webhook status with error
-        webhook_statuses[reference_id]["status"] = "retrying"
-        webhook_statuses[reference_id]["error"] = error_msg
-        webhook_statuses[reference_id]["updated_at"] = str(time.time())
+        # Capture stack trace for better debugging
+        stack_trace = traceback.format_exc()
+        webhook_logger.error(f"Stack trace: {stack_trace}", extra=task_context)
+        
+        # Update webhook status with error in Redis
+        update_webhook_status(reference_id, {
+            "status": "retrying",
+            "error": error_msg,
+            "updated_at": str(time.time())
+        })
         
         # Write to dedicated webhook error log file
         with open(webhook_log_file, "a") as f:
             f.write(f"[{self.request.id}] {error_msg}\n")
+            f.write(f"[{self.request.id}] Stack trace: {stack_trace}\n")
         
         # Exponential backoff with jitter for general errors
         retry_countdown = min(2 ** self.request.retries * 30 + random.uniform(0, 30), 300)
-        self.retry(exc=e, countdown=retry_countdown)
+        try:
+            self.retry(exc=e, countdown=retry_countdown)
+        except self.MaxRetriesExceededError:
+            webhook_logger.error(f"Max retries exceeded for reference_id={reference_id}", extra=task_context)
+            update_webhook_status(reference_id, {"status": "failed"})
+            return {
+                "status": "error",
+                "reference_id": reference_id,
+                "message": f"Webhook delivery failed after {self.request.retries + 1} attempts: {str(e)}",
+                "error_type": "unexpected_error",
+                "retrying": False
+            }
+        
+        webhook_duration.observe(time.time() - start_time)
+        return {
+            "status": "error",
+            "reference_id": reference_id,
+            "message": f"Webhook delivery failed: {str(e)}",
+            "error_type": "unexpected_error",
+            "retrying": True
+        }
 
 # Original async webhook function (kept for FastAPI endpoints)
 async def send_to_webhook(webhook_url: str, report: Dict[str, Any], reference_id: str):
@@ -840,7 +1196,7 @@ async def get_webhook_logs(lines: int = 50):
 
 # Webhook status endpoints
 @app.get("/webhook-status/{reference_id}")
-async def get_webhook_status(reference_id: str):
+async def get_webhook_status_endpoint(reference_id: str):
     """
     Get the status of webhook deliveries for a specific reference_id.
     
@@ -850,13 +1206,14 @@ async def get_webhook_status(reference_id: str):
     Returns:
         Dict[str, Any]: Webhook status details
     """
-    if reference_id not in webhook_statuses:
+    status = get_webhook_status(reference_id)
+    if not status:
         raise HTTPException(status_code=404, detail=f"No webhook status found for reference_id={reference_id}")
     
-    return webhook_statuses[reference_id]
+    return status
 
 @app.get("/webhook-statuses")
-async def list_webhook_statuses(
+async def list_webhook_statuses_endpoint(
     page: int = Query(1, ge=1),
     page_size: int = Query(10, ge=1, le=100),
     status: Optional[str] = None
@@ -872,30 +1229,119 @@ async def list_webhook_statuses(
     Returns:
         Dict[str, Any]: Paginated list of webhook statuses
     """
-    filtered_statuses: List[Dict[str, Any]] = []
-    
-    for webhook_status in webhook_statuses.values():
-        if status is None or webhook_status["status"] == status:
-            filtered_statuses.append(webhook_status)
-    
-    # Sort by updated_at (most recent first)
-    filtered_statuses.sort(key=lambda x: x["updated_at"], reverse=True)
-    
-    # Paginate
-    start_idx = (page - 1) * page_size
-    end_idx = start_idx + page_size
-    paginated_statuses = filtered_statuses[start_idx:end_idx]
+    offset = (page - 1) * page_size
+    result = list_webhook_statuses(status, offset, page_size)
     
     return {
-        "total": len(filtered_statuses),
+        "total": result["total"],
         "page": page,
         "page_size": page_size,
-        "pages": (len(filtered_statuses) + page_size - 1) // page_size,
-        "statuses": paginated_statuses
+        "pages": (result["total"] + page_size - 1) // page_size,
+        "statuses": result["items"]
+    }
+    
+@app.get("/health")
+async def health_check():
+    """Check the health of the API and its dependencies."""
+    health = {"status": "healthy", "components": {}}
+    
+    # Check Redis connection
+    try:
+        redis_client = celery_app.backend.client
+        redis_client.ping()
+        health["components"]["redis"] = "healthy"
+    except Exception as e:
+        health["components"]["redis"] = {"status": "unhealthy", "error": str(e)}
+        health["status"] = "degraded"
+    
+    # Check facade service
+    try:
+        if facade:
+            health["components"]["facade"] = "healthy"
+        else:
+            health["components"]["facade"] = "not_initialized"
+            health["status"] = "degraded"
+    except Exception as e:
+        health["components"]["facade"] = {"status": "unhealthy", "error": str(e)}
+        health["status"] = "degraded"
+    
+    # Add more component checks as needed
+    
+    return health
+
+@app.post("/webhook-cleanup")
+async def cleanup_old_webhook_statuses():
+    """
+    Manually trigger cleanup of old webhook statuses.
+    This is typically not needed as Redis TTL handles automatic cleanup,
+    but can be useful for immediate cleanup or testing.
+    
+    Returns:
+        Dict[str, Any]: Cleanup results
+    """
+    redis_client = get_redis_client()
+    all_refs = redis_client.smembers("webhook_status:all")
+    
+    cleaned = 0
+    errors = 0
+    
+    for ref in all_refs:
+        ref_str = ref.decode('utf-8') if isinstance(ref, bytes) else ref
+        status = get_webhook_status(ref_str)
+        
+        # If status doesn't exist but is in the index, remove from index
+        if not status:
+            redis_client.srem("webhook_status:all", ref_str)
+            cleaned += 1
+            continue
+        
+        # Check if status is old enough to be cleaned up
+        updated_at = status.get("updated_at", "0")
+        try:
+            # Convert to timestamp if it's not already
+            if not isinstance(updated_at, (int, float)):
+                # Try to parse as ISO format or timestamp string
+                try:
+                    from datetime import datetime
+                    dt = datetime.fromisoformat(updated_at.replace('Z', '+00:00'))
+                    updated_timestamp = dt.timestamp()
+                except:
+                    updated_timestamp = float(updated_at)
+            else:
+                updated_timestamp = float(updated_at)
+                
+            current_time = time.time()
+            
+            # Apply cleanup rules based on status
+            status_type = status.get("status", "pending")
+            if status_type == "success" and current_time - updated_timestamp > WEBHOOK_TTL_SUCCESS:
+                # Success webhooks expire after 30 minutes
+                delete_webhook_status(ref_str)
+                cleaned += 1
+                logger.info(f"Cleaned up successful webhook status for {ref_str} (age: {current_time - updated_timestamp:.1f}s)")
+            elif status_type == "failed" and current_time - updated_timestamp > WEBHOOK_TTL_FAILED:
+                # Failed webhooks expire after 7 days
+                delete_webhook_status(ref_str)
+                cleaned += 1
+                logger.info(f"Cleaned up failed webhook status for {ref_str} (age: {(current_time - updated_timestamp)/86400:.1f} days)")
+            elif status_type in ["pending", "retrying"] and current_time - updated_timestamp > WEBHOOK_TTL_PENDING:
+                # Pending/retrying webhooks expire after 7 days
+                delete_webhook_status(ref_str)
+                cleaned += 1
+                logger.info(f"Cleaned up {status_type} webhook status for {ref_str} (age: {(current_time - updated_timestamp)/86400:.1f} days)")
+        except Exception as e:
+            logger.error(f"Error cleaning up webhook status {ref_str}: {str(e)}")
+            errors += 1
+    
+    return {
+        "status": "success",
+        "cleaned": cleaned,
+        "errors": errors,
+        "message": f"Cleaned up {cleaned} old webhook statuses with {errors} errors"
     }
 
 @app.delete("/webhook-status/{reference_id}")
-async def delete_webhook_status(reference_id: str):
+async def delete_webhook_status_endpoint(reference_id: str):
     """
     Delete webhook status for a specific reference_id.
     
@@ -905,10 +1351,11 @@ async def delete_webhook_status(reference_id: str):
     Returns:
         Dict[str, Any]: Confirmation message
     """
-    if reference_id not in webhook_statuses:
+    status = get_webhook_status(reference_id)
+    if not status:
         raise HTTPException(status_code=404, detail=f"No webhook status found for reference_id={reference_id}")
     
-    del webhook_statuses[reference_id]
+    delete_webhook_status(reference_id)
     
     return {
         "status": "success",
