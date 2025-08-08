@@ -1,0 +1,365 @@
+{
+  "basicInformation": {
+    "individualId": 4175091,
+    "firstName": "EDUARDO",
+    "middleName": "LUIS",
+    "lastName": "SORDO",
+    "otherNames": [
+      "EDDIE  SORDO",
+      "EDUARDO L SORDO",
+      "EDUARDO  SORDO"
+    ],
+    "bcScope": "Active",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDate": "9/28/2000"
+  },
+  "currentEmployments": [
+    {
+      "firmId": 19850,
+      "firmName": "CALAMOS FINANCIAL SERVICES LLC",
+      "iaOnly": "N",
+      "registrationBeginDate": "2/8/2022",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE",
+      "bdSECNumber": "37854",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 2,
+          "locatedAtFlag": "N",
+          "supervisedFromFlag": "Y",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "91017",
+          "street1": "2020 CALAMOS COURT",
+          "city": "NAPERVILLE",
+          "cityAlias": [
+            "NAPERVILLE",
+            "WARRENVILLE"
+          ],
+          "state": "IL",
+          "country": "UNITED STATES",
+          "zipCode": "60563-2787",
+          "latitude": "41.794539",
+          "longitude": "-88.173239",
+          "geoLocation": "41.794539,-88.173239",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "07/26/2021"
+        }
+      ]
+    }
+  ],
+  "currentIAEmployments": [
+    {
+      "firmId": 143490,
+      "firmName": "CALAMOS WEALTH MANAGEMENT LLC",
+      "iaOnly": "Y",
+      "registrationBeginDate": "9/8/2021",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "67787",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 2,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "220 Alhambra Circle",
+          "street2": "Suite 700",
+          "city": "Coral Gables",
+          "cityAlias": [
+            "COCONUT GROVE",
+            "CORAL GABLES",
+            "MIAMI"
+          ],
+          "state": "FL",
+          "country": "United States",
+          "zipCode": "33134",
+          "latitude": "25.752956",
+          "longitude": "-80.271061",
+          "geoLocation": "25.752956,-80.271061",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "07/26/2021"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "21570",
+      "firmId": 7452,
+      "firmName": "VANGUARD MARKETING CORPORATION",
+      "city": "MALVERN",
+      "state": "PA",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "1/25/2019",
+      "registrationEndDate": "8/11/2021",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "23292",
+      "firmId": 7784,
+      "firmName": "FIDELITY BROKERAGE SERVICES LLC",
+      "city": "BOCA RATON",
+      "state": "FL",
+      "registrationBeginDate": "11/2/2010",
+      "registrationEndDate": "1/4/2019",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "37967",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "37180",
+      "firmId": 19616,
+      "firmName": "WELLS FARGO ADVISORS, LLC",
+      "city": "BOCA RATON",
+      "state": "FL",
+      "registrationBeginDate": "2/13/2009",
+      "registrationEndDate": "10/5/2010",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "7163",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "16267",
+      "firmId": 8174,
+      "firmName": "UBS FINANCIAL SERVICES INC.",
+      "city": "BOCA RATON",
+      "state": "FL",
+      "registrationBeginDate": "4/19/2005",
+      "registrationEndDate": "3/4/2009",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "54949",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "13975",
+      "firmId": 1137,
+      "firmName": "PRINCOR FINANCIAL SERVICES CORPORATION",
+      "city": "DES MOINES",
+      "state": "IA",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "8/31/2004",
+      "registrationEndDate": "4/8/2005",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "14235",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "7221",
+      "firmId": 7691,
+      "firmName": "MERRILL LYNCH, PIERCE, FENNER & SMITH INCORPORATED",
+      "city": "NEW YORK",
+      "state": "NY",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "8/5/2004",
+      "registrationEndDate": "8/19/2004",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "33805",
+      "firmId": 16361,
+      "firmName": "BANC OF AMERICA INVESTMENT SERVICES, INC.",
+      "city": "BOSTON",
+      "state": "MA",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "5/16/2000",
+      "registrationEndDate": "6/14/2004",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "112027",
+      "iaSECNumberType": "801",
+      "firmId": 288590,
+      "firmName": "FIDELITY PERSONAL AND WORKPLACE ADVISORS",
+      "city": "BOSTON",
+      "state": "MA",
+      "country": "United States",
+      "registrationBeginDate": "7/13/2018",
+      "registrationEndDate": "1/14/2019",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "13243",
+      "iaSECNumberType": "801",
+      "firmId": 104555,
+      "firmName": "STRATEGIC ADVISERS LLC",
+      "city": "BOCA RATON",
+      "state": "FL",
+      "country": "United States",
+      "registrationBeginDate": "12/22/2010",
+      "registrationEndDate": "7/13/2018",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "37967",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "37180",
+      "firmId": 19616,
+      "firmName": "WELLS FARGO ADVISORS, LLC",
+      "city": "BOCA RATON",
+      "state": "FL",
+      "country": "United States",
+      "registrationBeginDate": "2/20/2009",
+      "registrationEndDate": "10/5/2010",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "7163",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "16267",
+      "firmId": 8174,
+      "firmName": "UBS FINANCIAL SERVICES INC.",
+      "city": "BOCA RATON",
+      "state": "FL",
+      "country": "United States",
+      "registrationBeginDate": "4/25/2005",
+      "registrationEndDate": "3/4/2009",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "8/26/2010",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 10,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "TIME FRAME: JULY 2007-DECEMBER 2008. CLAIMANT ALLEGES UNSUITABLE INVESTMENT RECOMMENDATIONS OF MUTUAL FUNDS AND USE OF MARGIN.",
+        "Damage Amount Requested": "$1,000,000.00",
+        "Settlement Amount": "$350,000.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": ""
+      }
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 3,
+    "productExamCount": 4
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "4/8/2005",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "5/16/2000",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [
+    {
+      "examCategory": "Series 24",
+      "examName": "General Securities Principal Examination",
+      "examTakenDate": "3/29/2019",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 10",
+      "examName": "General Securities Sales Supervisor - General Module Examination",
+      "examTakenDate": "11/14/2013",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 9",
+      "examName": "General Securities Sales Supervisor - Options Module Examination",
+      "examTakenDate": "11/23/2011",
+      "examScope": "BC"
+    }
+  ],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "10/1/2018",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 31",
+      "examName": "Futures Managed Funds Examination",
+      "examTakenDate": "4/2/2010",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "2/9/2005",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 6",
+      "examName": "Investment Company Products/Variable Contracts Representative Examination",
+      "examTakenDate": "5/15/2000",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "approvedSRORegistrationCount": 1,
+    "approvedFinraRegistrationCount": 1,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 2
+  },
+  "registeredStates": [
+    {
+      "state": "Florida",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "9/8/2021"
+    },
+    {
+      "state": "Illinois",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "9/9/2021"
+    }
+  ],
+  "registeredSROs": [
+    {
+      "sro": "FINRA",
+      "status": "APPROVED",
+      "CategoriesList": [
+        "General Securities Principal",
+        "Full Registration/General Securities Representative"
+      ]
+    }
+  ],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}

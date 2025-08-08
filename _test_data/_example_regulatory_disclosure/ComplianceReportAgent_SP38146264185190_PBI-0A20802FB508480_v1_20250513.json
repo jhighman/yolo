@@ -1,0 +1,921 @@
+{
+  "reference_id": "SP38146264185190_PBI-0A20802FB508480",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-0A20802FB508480",
+    "first_name": "Michael",
+    "last_name": "Mullen",
+    "employee_number": "EN-051340",
+    "zip": "7739",
+    "crdNumber": "1428116",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "1428116",
+    "individual_name": "Michael Mullen",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "FINRA_BrokerCheck",
+    "basic_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "MICHAEL ANTHONY MULLEN",
+      "other_names": [
+        "MICHAEL  MULLEN"
+      ],
+      "bc_scope": "Active",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "1/18/1996",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Award / Judgment",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "MISREPRESENTATION ALLEGED DAMAGES 248,000",
+            "Damage Amount Requested": "$248,000.00",
+            "Damages Granted": "$280,582.41",
+            "DisplayAAOLinkIfExists": "Y",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "96-00125",
+            "Broker Comment": [
+              "THE ARBITRATION CLAIMANTS WERE CLIENTS THROUGH A JOINT REP NUMBER. THE SERVICING BROKER LEFT THE FIRM AND TOOK THE CLIENTS WITH HIM. SUBSEQUENTLY AN ARBITRATION CLAIM WAS FILED THAT NAMED THE FIRM, THE CEO AND MYSELF. DESPITE THE EVIDENCE PRESENTED; THE PANEL RULED IN THE CUSTOMERS' FAVOR AND AN AWARD WAS GRANTED, A DECISION WHICH I STRONGLY DISAGREED WITH. I MADE NO CONTRIBUTIONS TO THE AWARD; THE ENTIRE AMOUNT WAS PAID BY MY PREVIOUS FIRM."
+            ]
+          }
+        },
+        {
+          "eventDate": "10/25/1990",
+          "disclosureType": "Regulatory",
+          "disclosureResolution": "Final",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "DocketNumberFDA": "",
+            "DocketNumberAAO": "",
+            "Initiated By": "HAWAII SECURITIES ENFORCEMENT UNIT",
+            "Allegations": "OFFER AND SALE OF SECURITIES BY AN\r\nUNREGISTERED SALESPERSON.",
+            "Resolution": "Consent",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Suspension"
+              }
+            ],
+            "Sanction Details": "A CONSENT AGREEMENT WAS EXECUTED ON 10/25/90\r\nWHEREBY, MICHAEL ANTHONY MULLEN AGREED TO CONTRIBUTE $500 TO\r\nTHE COMPLIANCE RESOLUTION FUND AND TO A SUSPENSION OF HIS\r\nHAWAII REGISTRATION FROM 12/21/89 TO 6/21/90. D. H. BLAIR &\r\nCO., INC., ON BEHALF OF MULLEN, WILL OFFER TO RESCIND THE SALE\r\nOF SECURITIES TO ONE HAWAII RESIDENT.",
+            "Broker Comment": [
+              "NOT PROVIDED"
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "12/31/2011",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "9/14/1989",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 4",
+          "examName": "Registered Options Principal Examination",
+          "examTakenDate": "12/5/2006",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 24",
+          "examName": "General Securities Principal Examination",
+          "examTakenDate": "4/8/1994",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 99TO",
+          "examName": "Operations Professional Examination",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "8/19/1989",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "2543",
+          "firm_name": "B. RILEY WEALTH MANAGEMENT",
+          "registration_begin_date": "3/16/2021",
+          "branch_offices": [
+            {
+              "street": "10 BROAD STREET",
+              "city": "RED BANK",
+              "state": "NJ",
+              "zip_code": "07701"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "7569",
+          "firm_name": "NATIONAL SECURITIES CORPORATION",
+          "registration_begin_date": "5/30/2008",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/22/2022"
+        },
+        {
+          "firm_id": "29686",
+          "firm_name": "WINSLOW, EVANS & CROCKER, INC.",
+          "registration_begin_date": "1/23/2020",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "6/10/2021"
+        },
+        {
+          "firm_id": "17609",
+          "firm_name": "GUNNALLEN FINANCIAL, INC",
+          "registration_begin_date": "4/12/2006",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "6/6/2008"
+        },
+        {
+          "firm_id": "35459",
+          "firm_name": "JOSEPH STEVENS & COMPANY, INC.",
+          "registration_begin_date": "4/25/1994",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "4/28/2006"
+        },
+        {
+          "firm_id": "23180",
+          "firm_name": "A.S. GOLDMEN & CO., INC.",
+          "registration_begin_date": "8/29/1991",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "5/2/1994"
+        },
+        {
+          "firm_id": "6833",
+          "firm_name": "D. H. BLAIR & CO., INC.",
+          "registration_begin_date": "8/22/1989",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/16/1991"
+        }
+      ],
+      "crd_number": "1428116"
+    },
+    "detailed_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "MICHAEL ANTHONY MULLEN",
+      "other_names": [
+        "MICHAEL  MULLEN"
+      ],
+      "bc_scope": "Active",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "1/18/1996",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Award / Judgment",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "MISREPRESENTATION ALLEGED DAMAGES 248,000",
+            "Damage Amount Requested": "$248,000.00",
+            "Damages Granted": "$280,582.41",
+            "DisplayAAOLinkIfExists": "Y",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "96-00125",
+            "Broker Comment": [
+              "THE ARBITRATION CLAIMANTS WERE CLIENTS THROUGH A JOINT REP NUMBER. THE SERVICING BROKER LEFT THE FIRM AND TOOK THE CLIENTS WITH HIM. SUBSEQUENTLY AN ARBITRATION CLAIM WAS FILED THAT NAMED THE FIRM, THE CEO AND MYSELF. DESPITE THE EVIDENCE PRESENTED; THE PANEL RULED IN THE CUSTOMERS' FAVOR AND AN AWARD WAS GRANTED, A DECISION WHICH I STRONGLY DISAGREED WITH. I MADE NO CONTRIBUTIONS TO THE AWARD; THE ENTIRE AMOUNT WAS PAID BY MY PREVIOUS FIRM."
+            ]
+          }
+        },
+        {
+          "eventDate": "10/25/1990",
+          "disclosureType": "Regulatory",
+          "disclosureResolution": "Final",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "DocketNumberFDA": "",
+            "DocketNumberAAO": "",
+            "Initiated By": "HAWAII SECURITIES ENFORCEMENT UNIT",
+            "Allegations": "OFFER AND SALE OF SECURITIES BY AN\r\nUNREGISTERED SALESPERSON.",
+            "Resolution": "Consent",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Suspension"
+              }
+            ],
+            "Sanction Details": "A CONSENT AGREEMENT WAS EXECUTED ON 10/25/90\r\nWHEREBY, MICHAEL ANTHONY MULLEN AGREED TO CONTRIBUTE $500 TO\r\nTHE COMPLIANCE RESOLUTION FUND AND TO A SUSPENSION OF HIS\r\nHAWAII REGISTRATION FROM 12/21/89 TO 6/21/90. D. H. BLAIR &\r\nCO., INC., ON BEHALF OF MULLEN, WILL OFFER TO RESCIND THE SALE\r\nOF SECURITIES TO ONE HAWAII RESIDENT.",
+            "Broker Comment": [
+              "NOT PROVIDED"
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "12/31/2011",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "9/14/1989",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 4",
+          "examName": "Registered Options Principal Examination",
+          "examTakenDate": "12/5/2006",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 24",
+          "examName": "General Securities Principal Examination",
+          "examTakenDate": "4/8/1994",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 99TO",
+          "examName": "Operations Professional Examination",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "8/19/1989",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "2543",
+          "firm_name": "B. RILEY WEALTH MANAGEMENT",
+          "registration_begin_date": "3/16/2021",
+          "branch_offices": [
+            {
+              "street": "10 BROAD STREET",
+              "city": "RED BANK",
+              "state": "NJ",
+              "zip_code": "07701"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "7569",
+          "firm_name": "NATIONAL SECURITIES CORPORATION",
+          "registration_begin_date": "5/30/2008",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/22/2022"
+        },
+        {
+          "firm_id": "29686",
+          "firm_name": "WINSLOW, EVANS & CROCKER, INC.",
+          "registration_begin_date": "1/23/2020",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "6/10/2021"
+        },
+        {
+          "firm_id": "17609",
+          "firm_name": "GUNNALLEN FINANCIAL, INC",
+          "registration_begin_date": "4/12/2006",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "6/6/2008"
+        },
+        {
+          "firm_id": "35459",
+          "firm_name": "JOSEPH STEVENS & COMPANY, INC.",
+          "registration_begin_date": "4/25/1994",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "4/28/2006"
+        },
+        {
+          "firm_id": "23180",
+          "firm_name": "A.S. GOLDMEN & CO., INC.",
+          "registration_begin_date": "8/29/1991",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "5/2/1994"
+        },
+        {
+          "firm_id": "6833",
+          "firm_name": "D. H. BLAIR & CO., INC.",
+          "registration_begin_date": "8/22/1989",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/16/1991"
+        }
+      ],
+      "crd_number": "1428116"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "1428116",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA BrokerCheck data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "Michael",
+        "middle": null,
+        "last": "Mullen"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "MICHAEL",
+            "middle": "ANTHONY",
+            "last": "MULLEN"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        },
+        {
+          "name_source": "other_names[0]",
+          "fetched_name": {
+            "first": "MICHAEL",
+            "middle": null,
+            "last": "MULLEN"
+          },
+          "score": 100.0,
+          "first_score": 1.0,
+          "middle_score": 0.0,
+          "last_score": 1.0
+        }
+      ],
+      "best_match": {
+        "name_source": "other_names[0]",
+        "fetched_name": {
+          "first": "MICHAEL",
+          "middle": null,
+          "last": "MULLEN"
+        },
+        "score": 100.0,
+        "first_score": 1.0,
+        "middle_score": 0.0,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "Michael Mullen has 1 customer dispute disclosure, 1 regulatory disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "MISREPRESENTATION ALLEGED DAMAGES 248,000",
+            "Damage Amount Requested": "$248,000.00",
+            "Damages Granted": "$280,582.41",
+            "DisplayAAOLinkIfExists": "Y",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "96-00125",
+            "Broker Comment": [
+              "THE ARBITRATION CLAIMANTS WERE CLIENTS THROUGH A JOINT REP NUMBER. THE SERVICING BROKER LEFT THE FIRM AND TOOK THE CLIENTS WITH HIM. SUBSEQUENTLY AN ARBITRATION CLAIM WAS FILED THAT NAMED THE FIRM, THE CEO AND MYSELF. DESPITE THE EVIDENCE PRESENTED; THE PANEL RULED IN THE CUSTOMERS' FAVOR AND AN AWARD WAS GRANTED, A DECISION WHICH I STRONGLY DISAGREED WITH. I MADE NO CONTRIBUTIONS TO THE AWARD; THE ENTIRE AMOUNT WAS PAID BY MY PREVIOUS FIRM."
+            ]
+          },
+          "event_date": "1/18/1996",
+          "resolution": "Award / Judgment"
+        },
+        "description": "Customer dispute on 1/18/1996. Resolution: Award / Judgment. Allegations: MISREPRESENTATION ALLEGED DAMAGES 248,000. Damage requested: $248,000.00. Settlement: Not specified"
+      },
+      {
+        "alert_type": "Regulatory Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "DocketNumberFDA": "",
+            "DocketNumberAAO": "",
+            "Initiated By": "HAWAII SECURITIES ENFORCEMENT UNIT",
+            "Allegations": "OFFER AND SALE OF SECURITIES BY AN\r\nUNREGISTERED SALESPERSON.",
+            "Resolution": "Consent",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Suspension"
+              }
+            ],
+            "Sanction Details": "A CONSENT AGREEMENT WAS EXECUTED ON 10/25/90\r\nWHEREBY, MICHAEL ANTHONY MULLEN AGREED TO CONTRIBUTE $500 TO\r\nTHE COMPLIANCE RESOLUTION FUND AND TO A SUSPENSION OF HIS\r\nHAWAII REGISTRATION FROM 12/21/89 TO 6/21/90. D. H. BLAIR &\r\nCO., INC., ON BEHALF OF MULLEN, WILL OFFER TO RESCIND THE SALE\r\nOF SECURITIES TO ONE HAWAII RESIDENT.",
+            "Broker Comment": [
+              "NOT PROVIDED"
+            ]
+          },
+          "event_date": "10/25/1990",
+          "resolution": "Final"
+        },
+        "description": "Regulatory action on 10/25/1990 initiated by HAWAII SECURITIES ENFORCEMENT UNIT. Resolution: Final. Allegations: OFFER AND SALE OF SECURITIES BY AN\r\nUNREGISTERED SALESPERSON.. Sanctions: Suspension"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": false,
+    "compliance_explanation": "Disciplinary records found for Michael Mullen.",
+    "actions": [
+      {
+        "case_id": "Unknown",
+        "date": "Unknown",
+        "details": {
+          "action_type": "Disciplinary",
+          "firms_individuals": "MICHAEL C MULLEN",
+          "description": ""
+        }
+      },
+      {
+        "case_id": "Unknown",
+        "date": "Unknown",
+        "details": {
+          "action_type": "Disciplinary",
+          "firms_individuals": "MICHAEL G MULLEN",
+          "description": ""
+        }
+      }
+    ],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Proceeding",
+        "alert_category": "DISCIPLINARY",
+        "severity": "HIGH",
+        "metadata": {
+          "record": {
+            "case_id": "Unknown",
+            "date": "Unknown",
+            "details": {
+              "action_type": "Disciplinary",
+              "firms_individuals": "MICHAEL C MULLEN",
+              "description": ""
+            }
+          }
+        },
+        "description": "Disciplinary record found: Case ID Unknown for Michael Mullen."
+      },
+      {
+        "alert_type": "Disciplinary Proceeding",
+        "alert_category": "DISCIPLINARY",
+        "severity": "HIGH",
+        "metadata": {
+          "record": {
+            "case_id": "Unknown",
+            "date": "Unknown",
+            "details": {
+              "action_type": "Disciplinary",
+              "firms_individuals": "MICHAEL G MULLEN",
+              "description": ""
+            }
+          }
+        },
+        "description": "Disciplinary record found: Case ID Unknown for Michael Mullen."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Michael Mullen",
+      "sec_disciplinary": {
+        "source": "SEC_Disciplinary",
+        "records_found": 2,
+        "records_filtered": 0,
+        "names_found": [
+          "MICHAEL C MULLEN",
+          "MICHAEL G MULLEN"
+        ],
+        "name_scores": {
+          "MICHAEL C MULLEN": 95.24,
+          "MICHAEL G MULLEN": 95.24
+        },
+        "exact_match_found": true,
+        "status": "Exact matches found"
+      },
+      "finra_disciplinary": {
+        "source": "FINRA_Disciplinary",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Michael Barrows, Eric John Ludovico",
+          "Michael Barrows, Eric John Ludovico",
+          "Michael J. Dugan",
+          "Jason Michael Poschinger",
+          "John Michael Palma",
+          "Joseph Michael Cannon",
+          "Network 1 Financial Securities Inc.Michael Molinaro",
+          "Michael Louis Miro",
+          "Steven Michael Blanchard",
+          "MICHAEL RYAN PETRUSKA",
+          "Michael J. Brewster",
+          "Michael T. Shoniker",
+          "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.",
+          "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.",
+          "Michael R. Rosalia",
+          "Jason Michael Poschinger",
+          "Michael Lancaster"
+        ],
+        "name_scores": {
+          "Michael Barrows, Eric John Ludovico": 0.0,
+          "Michael J. Dugan": 47.62,
+          "Jason Michael Poschinger": 9.52,
+          "John Michael Palma": 9.52,
+          "Joseph Michael Cannon": 9.52,
+          "Network 1 Financial Securities Inc.Michael Molinaro": 9.52,
+          "Michael Louis Miro": 47.62,
+          "Steven Michael Blanchard": 9.52,
+          "MICHAEL RYAN PETRUSKA": 47.62,
+          "Michael J. Brewster": 47.62,
+          "Michael T. Shoniker": 47.62,
+          "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.": 0.0,
+          "Michael R. Rosalia": 47.62,
+          "Michael Lancaster": 47.37
+        },
+        "exact_match_found": false,
+        "status": "Partial failure: Error processing 'Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": false,
+    "compliance_explanation": "Arbitration issues found for Michael Mullen.",
+    "actions": [
+      {
+        "case_id": "In the Matter of MICHAEL C. MULLEN, CPA, SEC File No. 3-11802",
+        "date": "Jan. 27, 2005",
+        "details": {
+          "action_type": "Award against individual",
+          "firms_individuals": "Michael Mullen",
+          "description": "Case In the Matter of MICHAEL C. MULLEN, CPA, SEC File No. 3-11802 closed with outcome: Award against individual",
+          "enforcement_action": "In the Matter of MICHAEL C. MULLEN, CPA, SEC File No. 3-11802",
+          "documents": [
+            {
+              "title": "34-51084",
+              "link": "https://www.sec.gov/litigation/admin/34-51084.htm"
+            }
+          ]
+        },
+        "matched_name": "Michael Mullen"
+      },
+      {
+        "case_id": "In the Matter of Berkower LLC; Michael G. Mullen, CPA; and Maurice Berkower, CPA, SEC File No. 3-21193",
+        "date": "Sept. 30, 2022",
+        "details": {
+          "action_type": "Award against individual",
+          "firms_individuals": "Michael Mullen",
+          "description": "Case In the Matter of Berkower LLC; Michael G. Mullen, CPA; and Maurice Berkower, CPA, SEC File No. 3-21193 closed with outcome: Award against individual",
+          "enforcement_action": "In the Matter of Berkower LLC; Michael G. Mullen, CPA; and Maurice Berkower, CPA, SEC File No. 3-21193",
+          "documents": [
+            {
+              "title": "34-95959",
+              "link": "https://www.sec.gov/litigation/admin/2022/34-95959.pdf"
+            }
+          ]
+        },
+        "matched_name": "Michael Mullen"
+      }
+    ],
+    "alerts": [
+      {
+        "alert_type": "Arbitration Compliance",
+        "alert_category": "ARBITRATION",
+        "severity": "HIGH",
+        "metadata": {
+          "arbitration": {
+            "case_id": "In the Matter of MICHAEL C. MULLEN, CPA, SEC File No. 3-11802",
+            "date": "Jan. 27, 2005",
+            "details": {
+              "action_type": "Award against individual",
+              "firms_individuals": "Michael Mullen",
+              "description": "Case In the Matter of MICHAEL C. MULLEN, CPA, SEC File No. 3-11802 closed with outcome: Award against individual",
+              "enforcement_action": "In the Matter of MICHAEL C. MULLEN, CPA, SEC File No. 3-11802",
+              "documents": [
+                {
+                  "title": "34-51084",
+                  "link": "https://www.sec.gov/litigation/admin/34-51084.htm"
+                }
+              ]
+            },
+            "matched_name": "Michael Mullen"
+          }
+        },
+        "description": "Arbitration issue found: Case In the Matter of MICHAEL C. MULLEN, CPA, SEC File No. 3-11802 for Michael Mullen, status: unknown, outcome: award against individual."
+      },
+      {
+        "alert_type": "Arbitration Compliance",
+        "alert_category": "ARBITRATION",
+        "severity": "HIGH",
+        "metadata": {
+          "arbitration": {
+            "case_id": "In the Matter of Berkower LLC; Michael G. Mullen, CPA; and Maurice Berkower, CPA, SEC File No. 3-21193",
+            "date": "Sept. 30, 2022",
+            "details": {
+              "action_type": "Award against individual",
+              "firms_individuals": "Michael Mullen",
+              "description": "Case In the Matter of Berkower LLC; Michael G. Mullen, CPA; and Maurice Berkower, CPA, SEC File No. 3-21193 closed with outcome: Award against individual",
+              "enforcement_action": "In the Matter of Berkower LLC; Michael G. Mullen, CPA; and Maurice Berkower, CPA, SEC File No. 3-21193",
+              "documents": [
+                {
+                  "title": "34-95959",
+                  "link": "https://www.sec.gov/litigation/admin/2022/34-95959.pdf"
+                }
+              ]
+            },
+            "matched_name": "Michael Mullen"
+          }
+        },
+        "description": "Arbitration issue found: Case In the Matter of Berkower LLC; Michael G. Mullen, CPA; and Maurice Berkower, CPA, SEC File No. 3-21193 for Michael Mullen, status: unknown, outcome: award against individual."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Michael Mullen",
+      "sec_arbitration": {
+        "source": "SEC_Arbitration",
+        "records_found": 2,
+        "records_filtered": 0,
+        "names_found": [
+          "Michael Mullen",
+          "Michael Mullen"
+        ],
+        "name_scores": {
+          "Michael Mullen": 100.0
+        },
+        "exact_match_found": true,
+        "status": "Exact matches found"
+      },
+      "finra_arbitration": {
+        "source": "FINRA_Arbitration",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Merrill Lynch Pierce Fenner & Smith Inc.",
+          "Michael Wein",
+          "Sterne",
+          "Agee & Leach",
+          "Inc.",
+          "Key Investment Services LLC",
+          "Jack Hicks",
+          "Sterne",
+          "Agee & Leach",
+          "Inc.",
+          "Robert Mullen",
+          "Christopher Mullen",
+          "Morgan Stanley",
+          "Juan Larrain",
+          "Sandgrain Securities LLC",
+          "Douglas Rachlin",
+          "Henry Robertson",
+          "Fidelity Brokerage Services LLC",
+          "Neuberger Berman LLC",
+          "Peter Mullen",
+          "Merrill Lynch Pierce Fenner & Smith Inc.",
+          "Paul Mullen",
+          "Gregory Jacobson",
+          "Ameriprise Financial Services",
+          "Inc."
+        ],
+        "name_scores": {
+          "Merrill Lynch Pierce Fenner & Smith Inc.": 9.52,
+          "Michael Wein": 47.37,
+          "Sterne": 5.26,
+          "Agee & Leach": 9.52,
+          "Inc.": 5.26,
+          "Key Investment Services LLC": 9.52,
+          "Jack Hicks": 5.26,
+          "Robert Mullen": 57.89,
+          "Christopher Mullen": 57.89,
+          "Morgan Stanley": 5.26,
+          "Juan Larrain": 5.26,
+          "Sandgrain Securities LLC": 9.52,
+          "Douglas Rachlin": 5.26,
+          "Henry Robertson": 5.26,
+          "Fidelity Brokerage Services LLC": 9.52,
+          "Neuberger Berman LLC": 9.52,
+          "Peter Mullen": 57.89,
+          "Paul Mullen": 57.89,
+          "Gregory Jacobson": 5.26,
+          "Ameriprise Financial Services": 9.52
+        },
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Michael Mullen'"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for Michael Mullen; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "MISREPRESENTATION ALLEGED DAMAGES 248,000",
+            "Damage Amount Requested": "$248,000.00",
+            "Damages Granted": "$280,582.41",
+            "DisplayAAOLinkIfExists": "Y",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "96-00125",
+            "Broker Comment": [
+              "THE ARBITRATION CLAIMANTS WERE CLIENTS THROUGH A JOINT REP NUMBER. THE SERVICING BROKER LEFT THE FIRM AND TOOK THE CLIENTS WITH HIM. SUBSEQUENTLY AN ARBITRATION CLAIM WAS FILED THAT NAMED THE FIRM, THE CEO AND MYSELF. DESPITE THE EVIDENCE PRESENTED; THE PANEL RULED IN THE CUSTOMERS' FAVOR AND AN AWARD WAS GRANTED, A DECISION WHICH I STRONGLY DISAGREED WITH. I MADE NO CONTRIBUTIONS TO THE AWARD; THE ENTIRE AMOUNT WAS PAID BY MY PREVIOUS FIRM."
+            ]
+          },
+          "event_date": "1/18/1996",
+          "resolution": "Award / Judgment"
+        },
+        "description": "Customer dispute on 1/18/1996. Resolution: Award / Judgment. Allegations: MISREPRESENTATION ALLEGED DAMAGES 248,000. Damage requested: $248,000.00. Settlement: Not specified"
+      },
+      {
+        "alert_type": "Regulatory Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "DocketNumberFDA": "",
+            "DocketNumberAAO": "",
+            "Initiated By": "HAWAII SECURITIES ENFORCEMENT UNIT",
+            "Allegations": "OFFER AND SALE OF SECURITIES BY AN\r\nUNREGISTERED SALESPERSON.",
+            "Resolution": "Consent",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Suspension"
+              }
+            ],
+            "Sanction Details": "A CONSENT AGREEMENT WAS EXECUTED ON 10/25/90\r\nWHEREBY, MICHAEL ANTHONY MULLEN AGREED TO CONTRIBUTE $500 TO\r\nTHE COMPLIANCE RESOLUTION FUND AND TO A SUSPENSION OF HIS\r\nHAWAII REGISTRATION FROM 12/21/89 TO 6/21/90. D. H. BLAIR &\r\nCO., INC., ON BEHALF OF MULLEN, WILL OFFER TO RESCIND THE SALE\r\nOF SECURITIES TO ONE HAWAII RESIDENT.",
+            "Broker Comment": [
+              "NOT PROVIDED"
+            ]
+          },
+          "event_date": "10/25/1990",
+          "resolution": "Final"
+        },
+        "description": "Regulatory action on 10/25/1990 initiated by HAWAII SECURITIES ENFORCEMENT UNIT. Resolution: Final. Allegations: OFFER AND SALE OF SECURITIES BY AN\r\nUNREGISTERED SALESPERSON.. Sanctions: Suspension"
+      },
+      {
+        "alert_type": "Disciplinary Proceeding",
+        "alert_category": "DISCIPLINARY",
+        "severity": "HIGH",
+        "metadata": {
+          "record": {
+            "case_id": "Unknown",
+            "date": "Unknown",
+            "details": {
+              "action_type": "Disciplinary",
+              "firms_individuals": "MICHAEL C MULLEN",
+              "description": ""
+            }
+          }
+        },
+        "description": "Disciplinary record found: Case ID Unknown for Michael Mullen."
+      },
+      {
+        "alert_type": "Disciplinary Proceeding",
+        "alert_category": "DISCIPLINARY",
+        "severity": "HIGH",
+        "metadata": {
+          "record": {
+            "case_id": "Unknown",
+            "date": "Unknown",
+            "details": {
+              "action_type": "Disciplinary",
+              "firms_individuals": "MICHAEL G MULLEN",
+              "description": ""
+            }
+          }
+        },
+        "description": "Disciplinary record found: Case ID Unknown for Michael Mullen."
+      },
+      {
+        "alert_type": "Arbitration Compliance",
+        "alert_category": "ARBITRATION",
+        "severity": "HIGH",
+        "metadata": {
+          "arbitration": {
+            "case_id": "In the Matter of MICHAEL C. MULLEN, CPA, SEC File No. 3-11802",
+            "date": "Jan. 27, 2005",
+            "details": {
+              "action_type": "Award against individual",
+              "firms_individuals": "Michael Mullen",
+              "description": "Case In the Matter of MICHAEL C. MULLEN, CPA, SEC File No. 3-11802 closed with outcome: Award against individual",
+              "enforcement_action": "In the Matter of MICHAEL C. MULLEN, CPA, SEC File No. 3-11802",
+              "documents": [
+                {
+                  "title": "34-51084",
+                  "link": "https://www.sec.gov/litigation/admin/34-51084.htm"
+                }
+              ]
+            },
+            "matched_name": "Michael Mullen"
+          }
+        },
+        "description": "Arbitration issue found: Case In the Matter of MICHAEL C. MULLEN, CPA, SEC File No. 3-11802 for Michael Mullen, status: unknown, outcome: award against individual."
+      },
+      {
+        "alert_type": "Arbitration Compliance",
+        "alert_category": "ARBITRATION",
+        "severity": "HIGH",
+        "metadata": {
+          "arbitration": {
+            "case_id": "In the Matter of Berkower LLC; Michael G. Mullen, CPA; and Maurice Berkower, CPA, SEC File No. 3-21193",
+            "date": "Sept. 30, 2022",
+            "details": {
+              "action_type": "Award against individual",
+              "firms_individuals": "Michael Mullen",
+              "description": "Case In the Matter of Berkower LLC; Michael G. Mullen, CPA; and Maurice Berkower, CPA, SEC File No. 3-21193 closed with outcome: Award against individual",
+              "enforcement_action": "In the Matter of Berkower LLC; Michael G. Mullen, CPA; and Maurice Berkower, CPA, SEC File No. 3-21193",
+              "documents": [
+                {
+                  "title": "34-95959",
+                  "link": "https://www.sec.gov/litigation/admin/2022/34-95959.pdf"
+                }
+              ]
+            },
+            "matched_name": "Michael Mullen"
+          }
+        },
+        "description": "Arbitration issue found: Case In the Matter of Berkower LLC; Michael G. Mullen, CPA; and Maurice Berkower, CPA, SEC File No. 3-21193 for Michael Mullen, status: unknown, outcome: award against individual."
+      }
+    ]
+  }
+}

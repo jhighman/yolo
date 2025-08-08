@@ -1,0 +1,125 @@
+{
+  "basicInformation": {
+    "individualId": 2505417,
+    "firstName": "EDWARD",
+    "middleName": "DAKIN",
+    "lastName": "DEWEES",
+    "otherNames": [],
+    "bcScope": "NotInScope",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "7/28/2006"
+  },
+  "currentIAEmployments": [
+    {
+      "firmId": 282563,
+      "firmName": "DOUGLAS C. LANE & ASSOCIATES",
+      "iaOnly": "Y",
+      "registrationBeginDate": "2/17/2016",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "626424",
+          "street1": "ONE DAG HAMMARSKJOLD PLAZA",
+          "street2": "885 SECOND AVENUE, 42 FLOOR",
+          "city": "NEW YORK",
+          "cityAlias": [
+            "GRAND CENTRAL",
+            "MANHATTAN",
+            "NEW YORK",
+            "NEW YORK CITY",
+            "NY",
+            "NY CITY",
+            "NYC"
+          ],
+          "state": "NY",
+          "country": "United States",
+          "zipCode": "10017",
+          "latitude": "40.752516",
+          "longitude": "-73.973072",
+          "geoLocation": "40.752516,-73.973072",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "01/01/2016"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "47055",
+      "iaSECNumberType": "801",
+      "firmId": 104882,
+      "firmName": "DOUGLAS C. LANE & ASSOCIATES, INC.",
+      "city": "NEW YORK",
+      "state": "NY",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "7/25/2006",
+      "registrationEndDate": "2/12/2016",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "INACTIVE"
+    }
+  ],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "10/13/2020",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "Client alleges advisor improperly acted on instructions from client's spouse in connection with transactions in client's account on March 23, 2020.",
+        "Damage Amount Requested": "$475,000.00",
+        "Settlement Amount": "$475,000.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": ""
+      }
+    }
+  ],
+  "iaDisclosures": [
+    {
+      "disclosureType": "Customer Dispute",
+      "disclosureCount": 1
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 0,
+    "principalExamCount": 0,
+    "productExamCount": 0
+  },
+  "stateExamCategory": [],
+  "principalExamCategory": [],
+  "productExamCategory": [],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 2
+  },
+  "registeredStates": [
+    {
+      "state": "New York",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "7/31/2021"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "2/17/2016"
+    }
+  ],
+  "registeredSROs": [],
+  "currentEmployments": []
+}

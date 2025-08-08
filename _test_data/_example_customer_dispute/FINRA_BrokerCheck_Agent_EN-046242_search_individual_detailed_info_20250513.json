@@ -1,0 +1,462 @@
+{
+  "basicInformation": {
+    "individualId": 2075689,
+    "firstName": "PAYAM",
+    "lastName": "TAGHIBAGI",
+    "otherNames": [
+      "PAUL  TAGHIBAGI"
+    ],
+    "bcScope": "Active",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDate": "7/22/1990"
+  },
+  "currentEmployments": [
+    {
+      "firmId": 18923,
+      "firmName": "SIGNATURE ESTATE SECURITIES, LLC",
+      "iaOnly": "N",
+      "registrationBeginDate": "8/20/2023",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE",
+      "bdSECNumber": "37065",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "797302",
+          "street1": "2121 Avenue of Stars",
+          "street2": "Suite 1600",
+          "city": "Los Angeles",
+          "cityAlias": [
+            "CENTURY CITY",
+            "LOS ANGELES"
+          ],
+          "state": "CA",
+          "country": "United States",
+          "zipCode": "90067",
+          "latitude": "34.05775",
+          "longitude": "-118.4138",
+          "geoLocation": "34.05775,-118.4138",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "08/17/2023"
+        }
+      ]
+    }
+  ],
+  "currentIAEmployments": [
+    {
+      "firmId": 108163,
+      "firmName": "SEIA",
+      "iaOnly": "Y",
+      "registrationBeginDate": "5/12/1997",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "56288",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "2121 AVENUE OF THE STARS, SUITE 1600",
+          "city": "LOS ANGELES",
+          "cityAlias": [
+            "CENTURY CITY",
+            "LOS ANGELES"
+          ],
+          "state": "CA",
+          "country": "United States",
+          "zipCode": "90067",
+          "latitude": "34.05775",
+          "longitude": "-118.4138",
+          "geoLocation": "34.05775,-118.4138",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "11/21/1997"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "54859",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "40218",
+      "firmId": 23131,
+      "firmName": "OSAIC WEALTH, INC.",
+      "city": "LOS ANGELES",
+      "state": "CA",
+      "registrationBeginDate": "11/2/2018",
+      "registrationEndDate": "8/23/2023",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "56298",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "13995",
+      "firmId": 468,
+      "firmName": "SIGNATOR INVESTORS, INC.",
+      "city": "LOS ANGELES",
+      "state": "CA",
+      "registrationBeginDate": "7/23/1990",
+      "registrationEndDate": "11/2/2018",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "15661",
+      "firmId": 5181,
+      "firmName": "JOHN HANCOCK MUTUAL LIFE INSURANCE COMPANY",
+      "city": "BOSTON",
+      "state": "MA",
+      "country": "United States",
+      "registrationBeginDate": "7/23/1990",
+      "registrationEndDate": "5/1/1997",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "previousIAEmployments": [],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "7/7/2020",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 10,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "Customer alleges that Representative recommended unsuitable investments resulting in losses.",
+        "Damage Amount Requested": "$5,000.00",
+        "Settlement Amount": "$14,999.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": "",
+        "Broker Comment": [
+          "Advisor maintains that the recommendations to the client were suitable and inline with the client's instructions and stated investment objectives. Nevertheless, as a gesture of customer goodwill and without admitting to any wrongdoing, customer was provided a refund of $14,999 in management fees."
+        ]
+      }
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 1,
+    "productExamCount": 4
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "9/8/1998",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "8/3/1990",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [
+    {
+      "examCategory": "Series 24",
+      "examName": "General Securities Principal Examination",
+      "examTakenDate": "4/6/1999",
+      "examScope": "BC"
+    }
+  ],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "10/1/2018",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "11/3/1993",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 22",
+      "examName": "Direct Participation Programs Representative Examination",
+      "examTakenDate": "3/14/1991",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 6",
+      "examName": "Investment Company Products/Variable Contracts Representative Examination",
+      "examTakenDate": "7/20/1990",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "approvedSRORegistrationCount": 1,
+    "approvedFinraRegistrationCount": 1,
+    "approvedStateRegistrationCount": 37,
+    "approvedIAStateRegistrationCount": 2
+  },
+  "registeredStates": [
+    {
+      "state": "Alabama",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/23/2023"
+    },
+    {
+      "state": "Alaska",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/23/2023"
+    },
+    {
+      "state": "Arizona",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/23/2023"
+    },
+    {
+      "state": "California",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "5/12/1997"
+    },
+    {
+      "state": "California",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/20/2023"
+    },
+    {
+      "state": "Colorado",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/20/2023"
+    },
+    {
+      "state": "Florida",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/20/2023"
+    },
+    {
+      "state": "Georgia",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/20/2023"
+    },
+    {
+      "state": "Hawaii",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/20/2023"
+    },
+    {
+      "state": "Idaho",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/20/2023"
+    },
+    {
+      "state": "Illinois",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/20/2023"
+    },
+    {
+      "state": "Indiana",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/23/2023"
+    },
+    {
+      "state": "Iowa",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/23/2023"
+    },
+    {
+      "state": "Kansas",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/23/2023"
+    },
+    {
+      "state": "Kentucky",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/23/2023"
+    },
+    {
+      "state": "Louisiana",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/23/2023"
+    },
+    {
+      "state": "Maine",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/23/2023"
+    },
+    {
+      "state": "Maryland",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/20/2023"
+    },
+    {
+      "state": "Massachusetts",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/23/2023"
+    },
+    {
+      "state": "Minnesota",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/23/2023"
+    },
+    {
+      "state": "Mississippi",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/20/2023"
+    },
+    {
+      "state": "Montana",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/20/2023"
+    },
+    {
+      "state": "Nevada",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/23/2023"
+    },
+    {
+      "state": "New Jersey",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/20/2023"
+    },
+    {
+      "state": "New Mexico",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/23/2023"
+    },
+    {
+      "state": "New York",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/20/2023"
+    },
+    {
+      "state": "North Carolina",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/23/2023"
+    },
+    {
+      "state": "Ohio",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/23/2023"
+    },
+    {
+      "state": "Oregon",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/23/2023"
+    },
+    {
+      "state": "Pennsylvania",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/23/2023"
+    },
+    {
+      "state": "Puerto Rico",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/23/2023"
+    },
+    {
+      "state": "South Carolina",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/23/2023"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/27/2019"
+    },
+    {
+      "state": "Texas",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/20/2023"
+    },
+    {
+      "state": "Utah",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/23/2023"
+    },
+    {
+      "state": "Virginia",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/23/2023"
+    },
+    {
+      "state": "Washington",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/20/2023"
+    },
+    {
+      "state": "Wisconsin",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/23/2023"
+    },
+    {
+      "state": "Wyoming",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/20/2023"
+    }
+  ],
+  "registeredSROs": [
+    {
+      "sro": "FINRA",
+      "status": "APPROVED",
+      "CategoriesList": [
+        "Direct Participation Program Representative",
+        "General Securities Principal",
+        "Full Registration/General Securities Representative",
+        "Investment Company and Variable Contracts Products Rep."
+      ]
+    }
+  ],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}

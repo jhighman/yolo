@@ -1,0 +1,530 @@
+{
+  "reference_id": "SP38146264185190_PBI-8E9826260DDF493",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-8E9826260DDF493",
+    "first_name": "Brett",
+    "last_name": "Anderson",
+    "employee_number": "EN-044490",
+    "zip": "75209",
+    "crdNumber": "2246562",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "2246562",
+    "individual_name": "Brett Anderson",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "FINRA_BrokerCheck",
+    "basic_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "BRETT DEREK ANDERSON",
+      "other_names": [
+        "BRETT  ANDERSON"
+      ],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "10/21/2002",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "CLIENT ALLEGES A FAILURE TO FOLLOW INSTRUCTIONS IN A TIMELY MANNER TO LIQUIDATE MUTUAL FUND POSITIONS HELD AT ANOTHER FIRM AND TRANSFER THE ASSETS TO SCHWAB ON SEPTEMBER 3, 2002. REP DISPUTES CLIENT CLAIM, AND CLAIMS AGREEMENT WAS TO HOLD CERTAIN MUTUAL FUNDS WHILE SELLING CERTAIN OTHERS.",
+            "Damage Amount Requested": "$13,041.00",
+            "Settlement Amount": "$13,041.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 66",
+          "examName": "Uniform Combined State Law Examination",
+          "examTakenDate": "5/9/2002",
+          "examScope": "BOTH"
+        },
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "11/14/1996",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "9/4/1992",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "12/31/2015",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "12/23/1992",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "19532",
+          "firm_name": "INTERNATIONAL RESEARCH SECURITIES, INC.",
+          "registration_begin_date": "12/14/2007",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "12/31/2015"
+        },
+        {
+          "firm_id": "43730",
+          "firm_name": "AMERICAN SECURITIES GROUP, INC.",
+          "registration_begin_date": "3/11/2005",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "10/8/2007"
+        },
+        {
+          "firm_id": "5393",
+          "firm_name": "CHARLES SCHWAB & CO., INC.",
+          "registration_begin_date": "4/19/2002",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/9/2004"
+        },
+        {
+          "firm_id": "7691",
+          "firm_name": "MERRILL LYNCH, PIERCE, FENNER & SMITH INCORPORATED",
+          "registration_begin_date": "11/5/1996",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "9/1/1998"
+        },
+        {
+          "firm_id": "5393",
+          "firm_name": "CHARLES SCHWAB & CO., INC.",
+          "registration_begin_date": "4/6/1993",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "10/10/1996"
+        },
+        {
+          "firm_id": "13686",
+          "firm_name": "H.D. VEST INVESTMENT SECURITIES, INC.",
+          "registration_begin_date": "2/1/1993",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "4/14/1993"
+        }
+      ],
+      "crd_number": "2246562"
+    },
+    "detailed_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "BRETT DEREK ANDERSON",
+      "other_names": [
+        "BRETT  ANDERSON"
+      ],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "10/21/2002",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "CLIENT ALLEGES A FAILURE TO FOLLOW INSTRUCTIONS IN A TIMELY MANNER TO LIQUIDATE MUTUAL FUND POSITIONS HELD AT ANOTHER FIRM AND TRANSFER THE ASSETS TO SCHWAB ON SEPTEMBER 3, 2002. REP DISPUTES CLIENT CLAIM, AND CLAIMS AGREEMENT WAS TO HOLD CERTAIN MUTUAL FUNDS WHILE SELLING CERTAIN OTHERS.",
+            "Damage Amount Requested": "$13,041.00",
+            "Settlement Amount": "$13,041.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 66",
+          "examName": "Uniform Combined State Law Examination",
+          "examTakenDate": "5/9/2002",
+          "examScope": "BOTH"
+        },
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "11/14/1996",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "9/4/1992",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "12/31/2015",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "12/23/1992",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "19532",
+          "firm_name": "INTERNATIONAL RESEARCH SECURITIES, INC.",
+          "registration_begin_date": "12/14/2007",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "12/31/2015"
+        },
+        {
+          "firm_id": "43730",
+          "firm_name": "AMERICAN SECURITIES GROUP, INC.",
+          "registration_begin_date": "3/11/2005",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "10/8/2007"
+        },
+        {
+          "firm_id": "5393",
+          "firm_name": "CHARLES SCHWAB & CO., INC.",
+          "registration_begin_date": "4/19/2002",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/9/2004"
+        },
+        {
+          "firm_id": "7691",
+          "firm_name": "MERRILL LYNCH, PIERCE, FENNER & SMITH INCORPORATED",
+          "registration_begin_date": "11/5/1996",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "9/1/1998"
+        },
+        {
+          "firm_id": "5393",
+          "firm_name": "CHARLES SCHWAB & CO., INC.",
+          "registration_begin_date": "4/6/1993",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "10/10/1996"
+        },
+        {
+          "firm_id": "13686",
+          "firm_name": "H.D. VEST INVESTMENT SECURITIES, INC.",
+          "registration_begin_date": "2/1/1993",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "4/14/1993"
+        }
+      ],
+      "crd_number": "2246562"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "2246562",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA BrokerCheck data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "Brett",
+        "middle": null,
+        "last": "Anderson"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "BRETT",
+            "middle": "DEREK",
+            "last": "ANDERSON"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        },
+        {
+          "name_source": "other_names[0]",
+          "fetched_name": {
+            "first": "BRETT",
+            "middle": null,
+            "last": "ANDERSON"
+          },
+          "score": 100.0,
+          "first_score": 1.0,
+          "middle_score": 0.0,
+          "last_score": 1.0
+        }
+      ],
+      "best_match": {
+        "name_source": "other_names[0]",
+        "fetched_name": {
+          "first": "BRETT",
+          "middle": null,
+          "last": "ANDERSON"
+        },
+        "score": 100.0,
+        "first_score": 1.0,
+        "middle_score": 0.0,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "Brett Anderson has 1 customer dispute disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "CLIENT ALLEGES A FAILURE TO FOLLOW INSTRUCTIONS IN A TIMELY MANNER TO LIQUIDATE MUTUAL FUND POSITIONS HELD AT ANOTHER FIRM AND TRANSFER THE ASSETS TO SCHWAB ON SEPTEMBER 3, 2002. REP DISPUTES CLIENT CLAIM, AND CLAIMS AGREEMENT WAS TO HOLD CERTAIN MUTUAL FUNDS WHILE SELLING CERTAIN OTHERS.",
+            "Damage Amount Requested": "$13,041.00",
+            "Settlement Amount": "$13,041.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          },
+          "event_date": "10/21/2002",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 10/21/2002. Resolution: Settled. Allegations: CLIENT ALLEGES A FAILURE TO FOLLOW INSTRUCTIONS IN A TIMELY MANNER TO LIQUIDATE MUTUAL FUND POSITIONS HELD AT ANOTHER FIRM AND TRANSFER THE ASSETS TO SCHWAB ON SEPTEMBER 3, 2002. REP DISPUTES CLIENT CLAIM, AND CLAIMS AGREEMENT WAS TO HOLD CERTAIN MUTUAL FUNDS WHILE SELLING CERTAIN OTHERS.. Damage requested: $13,041.00. Settlement: $13,041.00"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No matching disciplinary records found for Brett Anderson, but 16 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Search Info",
+        "alert_category": "DISCIPLINARY",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Brett Anderson",
+            "sec_disciplinary": {
+              "source": "SEC_Disciplinary",
+              "records_found": 1,
+              "records_filtered": 1,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'Brett Anderson'"
+            },
+            "finra_disciplinary": {
+              "source": "FINRA_Disciplinary",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Brett Allen Rutherford",
+                "Jesse Brett Butler",
+                "Aurel Davina Anderson",
+                "James Brett Stuart",
+                "Brett Arthur Hartvigson",
+                "Todd R. Anderson",
+                "James Brett Stuart",
+                "Adam Bruce Anderson",
+                "Kiffin Anderson",
+                "Todd Ray Anderson",
+                "Justin Anderson",
+                "Latonya L. Anderson",
+                "Jeffrey Scott Anderson",
+                "Brett S. Briggs",
+                "Brett David Levinson"
+              ],
+              "name_scores": {
+                "Brett Allen Rutherford": 47.62,
+                "Jesse Brett Butler": 9.52,
+                "Aurel Davina Anderson": 57.14,
+                "James Brett Stuart": 9.52,
+                "Brett Arthur Hartvigson": 47.62,
+                "Todd R. Anderson": 57.14,
+                "Adam Bruce Anderson": 57.14,
+                "Kiffin Anderson": 57.89,
+                "Todd Ray Anderson": 57.14,
+                "Justin Anderson": 57.89,
+                "Latonya L. Anderson": 57.14,
+                "Jeffrey Scott Anderson": 57.14,
+                "Brett S. Briggs": 47.62,
+                "Brett David Levinson": 47.62
+              },
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'Brett Anderson'"
+            }
+          }
+        },
+        "description": "Found 16 disciplinary records for Brett Anderson, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Brett Anderson",
+      "sec_disciplinary": {
+        "source": "SEC_Disciplinary",
+        "records_found": 1,
+        "records_filtered": 1,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Brett Anderson'"
+      },
+      "finra_disciplinary": {
+        "source": "FINRA_Disciplinary",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Brett Allen Rutherford",
+          "Jesse Brett Butler",
+          "Aurel Davina Anderson",
+          "James Brett Stuart",
+          "Brett Arthur Hartvigson",
+          "Todd R. Anderson",
+          "James Brett Stuart",
+          "Adam Bruce Anderson",
+          "Kiffin Anderson",
+          "Todd Ray Anderson",
+          "Justin Anderson",
+          "Latonya L. Anderson",
+          "Jeffrey Scott Anderson",
+          "Brett S. Briggs",
+          "Brett David Levinson"
+        ],
+        "name_scores": {
+          "Brett Allen Rutherford": 47.62,
+          "Jesse Brett Butler": 9.52,
+          "Aurel Davina Anderson": 57.14,
+          "James Brett Stuart": 9.52,
+          "Brett Arthur Hartvigson": 47.62,
+          "Todd R. Anderson": 57.14,
+          "Adam Bruce Anderson": 57.14,
+          "Kiffin Anderson": 57.89,
+          "Todd Ray Anderson": 57.14,
+          "Justin Anderson": 57.89,
+          "Latonya L. Anderson": 57.14,
+          "Jeffrey Scott Anderson": 57.14,
+          "Brett S. Briggs": 47.62,
+          "Brett David Levinson": 47.62
+        },
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Brett Anderson'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": true,
+    "compliance_explanation": "No arbitration records found for Brett Anderson.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "searched_name": "Brett Anderson",
+      "sec_arbitration": {
+        "source": "SEC_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_arbitration": {
+        "source": "FINRA_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for Brett Anderson; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "CLIENT ALLEGES A FAILURE TO FOLLOW INSTRUCTIONS IN A TIMELY MANNER TO LIQUIDATE MUTUAL FUND POSITIONS HELD AT ANOTHER FIRM AND TRANSFER THE ASSETS TO SCHWAB ON SEPTEMBER 3, 2002. REP DISPUTES CLIENT CLAIM, AND CLAIMS AGREEMENT WAS TO HOLD CERTAIN MUTUAL FUNDS WHILE SELLING CERTAIN OTHERS.",
+            "Damage Amount Requested": "$13,041.00",
+            "Settlement Amount": "$13,041.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          },
+          "event_date": "10/21/2002",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 10/21/2002. Resolution: Settled. Allegations: CLIENT ALLEGES A FAILURE TO FOLLOW INSTRUCTIONS IN A TIMELY MANNER TO LIQUIDATE MUTUAL FUND POSITIONS HELD AT ANOTHER FIRM AND TRANSFER THE ASSETS TO SCHWAB ON SEPTEMBER 3, 2002. REP DISPUTES CLIENT CLAIM, AND CLAIMS AGREEMENT WAS TO HOLD CERTAIN MUTUAL FUNDS WHILE SELLING CERTAIN OTHERS.. Damage requested: $13,041.00. Settlement: $13,041.00"
+      }
+    ]
+  }
+}

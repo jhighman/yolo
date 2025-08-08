@@ -1,0 +1,171 @@
+{
+  "reference_id": "test-ref-110966",
+  "claim": {
+    "reference_id": "test-ref-110966",
+    "business_ref": "BIZ_110966",
+    "business_name": "FISCHER INVESTMENT GROUP, INC.",
+    "organization_crd": "110966",
+    "entityName": "FISCHER INVESTMENT GROUP, INC."
+  },
+  "entity": {
+    "firm_name": "FISCHER INVESTMENT GROUP, INC.",
+    "crd_number": "110966",
+    "sec_number": "801-30304",
+    "registration_status": "ACTIVE",
+    "address": {},
+    "registration_date": "8/7/1987",
+    "other_names": [
+      "ARCURIA CAPITAL MANAGEMENT",
+      "RULISON & CO INC",
+      "HAYES FISCHER CAPITAL MANAGEMENT, INC.",
+      "FISCHER INVESTMENT GROUP, INC."
+    ],
+    "is_sec_registered": true,
+    "is_state_registered": false,
+    "is_era_registered": false,
+    "is_sec_era_registered": false,
+    "is_state_era_registered": false,
+    "adv_filing_date": "09/13/2024",
+    "has_adv_pdf": true
+  },
+  "search_evaluation": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with SEC data, individual found.",
+    "basic_result": {
+      "firm_name": "FISCHER INVESTMENT GROUP, INC.",
+      "crd_number": "110966",
+      "registration_status": "ACTIVE",
+      "addresses": [],
+      "disclosures": [],
+      "raw_data": {
+        "basicInformation": {
+          "firmId": 110966,
+          "firmName": "FISCHER INVESTMENT GROUP, INC.",
+          "otherNames": [
+            "ARCURIA CAPITAL MANAGEMENT",
+            "RULISON & CO INC",
+            "HAYES FISCHER CAPITAL MANAGEMENT, INC.",
+            "FISCHER INVESTMENT GROUP, INC."
+          ],
+          "iaScope": "ACTIVE",
+          "isIAFirm": "Y",
+          "legacyReportStatus": "Not Requested",
+          "iaSECNumber": "30304",
+          "iaSECNumberType": "801",
+          "crs": {
+            "crsType": "IA",
+            "fileId": "c651f568-9f26-495c-8b49-0491f9cb0183"
+          }
+        },
+        "iaFirmAddressDetails": {
+          "officeAddress": {
+            "street1": "1175 PITTSFORD-VICTOR RD",
+            "street2": "SUITE 240",
+            "city": "PITTSFORD",
+            "state": "NY",
+            "country": "United States",
+            "postalCode": "14534"
+          }
+        },
+        "iaDisclosureFlag": "N"
+      },
+      "sec_number": "801-30304",
+      "other_names": [
+        "ARCURIA CAPITAL MANAGEMENT",
+        "RULISON & CO INC",
+        "HAYES FISCHER CAPITAL MANAGEMENT, INC.",
+        "FISCHER INVESTMENT GROUP, INC."
+      ],
+      "notice_filings": [
+        {
+          "jurisdiction": "New York",
+          "status": "Notice Filed",
+          "effective_date": "10/15/1986"
+        }
+      ],
+      "registration_date": "8/7/1987",
+      "is_sec_registered": true,
+      "is_state_registered": false,
+      "is_era_registered": false,
+      "is_sec_era_registered": false,
+      "is_state_era_registered": false,
+      "adv_filing_date": "09/13/2024",
+      "has_adv_pdf": true,
+      "accountant_exams": [],
+      "brochures": [
+        {
+          "name": "ADV PART II JUNE 30, 2024",
+          "version_id": 924942,
+          "date_submitted": "9/13/2024",
+          "last_confirmed": null
+        }
+      ],
+      "firm_status": "active",
+      "is_finra_registered": true
+    },
+    "sec_search_result": {
+      "org_name": "FISCHER INVESTMENT GROUP, INC.",
+      "org_crd": "110966",
+      "firm_ia_sec_number": "30304",
+      "firm_ia_full_sec_number": "801-30304",
+      "firm_other_names": [
+        "ARCURIA CAPITAL MANAGEMENT",
+        "RULISON & CO INC",
+        "HAYES FISCHER CAPITAL MANAGEMENT, INC.",
+        "FISCHER INVESTMENT GROUP, INC."
+      ],
+      "firm_type": "",
+      "registration_status": "",
+      "firm_ia_scope": "",
+      "firm_ia_disclosure_fl": "N",
+      "firm_branches_count": 1
+    },
+    "finra_search_result": {
+      "firm_name": "FISCHER INVESTMENT GROUP, INC.",
+      "crd_number": "110966"
+    }
+  },
+  "status_evaluation": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "Firm is registered with SEC, FINRA",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "No disclosures found",
+    "alerts": []
+  },
+  "disciplinary_evaluation": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "No disciplinary actions found.",
+    "alerts": []
+  },
+  "arbitration_review": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "No arbitration cases found.",
+    "alerts": []
+  },
+  "adv_evaluation": {
+    "compliance": true,
+    "explanation": "ADV evaluation skipped due to configuration",
+    "alerts": [],
+    "skipped": true,
+    "skip_timestamp": "2025-08-04T16:42:57.620123",
+    "source": "SEC",
+    "adv_status": "skipped"
+  },
+  "final_evaluation": {
+    "source": "SEC",
+    "overall_compliance": true,
+    "overall_risk_level": "Low",
+    "recommendations": "No immediate action required, monitor for changes.",
+    "description": "All compliance checks passed",
+    "alerts": []
+  },
+  "generated_at": "2025-08-04T16:42:57.635702"
+}

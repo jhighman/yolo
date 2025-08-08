@@ -1,0 +1,653 @@
+{
+  "reference_id": "SP38146264185190_PBI-797D031453014C0",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-797D031453014C0",
+    "first_name": "Joseph",
+    "last_name": "Krauszer",
+    "employee_number": "EN-055867",
+    "zip": "32746",
+    "crdNumber": "4198566",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "4198566",
+    "individual_name": "Joseph Krauszer",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "FINRA_BrokerCheck",
+    "basic_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "JOSEPH KRISTOPHER KRAUSZER",
+      "other_names": [
+        "KRIS  KRAUSZER"
+      ],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "3/8/2011",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "CLAIMANT WHO TOOK OVER ACCOUNT FOR DECEASED FATHER ALLEGES THAT FA RECOMMENDED AN UNSUITBALE LEHMAN BROTHERS STRUCTURED PRODUCT, AND MISREPRESENTED THAT IT WAS GUARANTEED. TIME FRAME: JANUARY 2008-OCTOBER 2008",
+            "Damage Amount Requested": "$30,000.00",
+            "Settlement Amount": "$14,490.00",
+            "DisplayAAOLinkIfExists": "Y",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "11-00355",
+            "Broker Comment": [
+              "THE MATTER WAS LATER SETTLED BY UBS WITHOUT ANY FINDING OF WRONGDOING ON THE PART OF MR. KRAUSZER, WHO WAS NOT REQUIRED TO MAKE ANY MONETARY CONTRIBUTION TO THE\r\nSETTLEMENT ENTERED INTO WITH CLAIMANT."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 66",
+          "examName": "Uniform Combined State Law Examination",
+          "examTakenDate": "6/6/2005",
+          "examScope": "BOTH"
+        },
+        {
+          "examCategory": "Series 6TO",
+          "examName": "Investment Company Products/Variable Contracts Representative Examination",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "3/15/2002",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "7784",
+          "firm_name": "FIDELITY BROKERAGE SERVICES LLC",
+          "registration_begin_date": "2/14/2012",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "3/18/2022"
+        },
+        {
+          "firm_id": "19616",
+          "firm_name": "WELLS FARGO ADVISORS, LLC",
+          "registration_begin_date": "7/25/2008",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "1/19/2012"
+        },
+        {
+          "firm_id": "8174",
+          "firm_name": "UBS FINANCIAL SERVICES INC.",
+          "registration_begin_date": "5/16/2005",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/8/2008"
+        },
+        {
+          "firm_id": "7556",
+          "firm_name": "MORGAN STANLEY DW INC.",
+          "registration_begin_date": "3/18/2002",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "4/18/2005"
+        }
+      ],
+      "crd_number": "4198566"
+    },
+    "detailed_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "JOSEPH KRISTOPHER KRAUSZER",
+      "other_names": [
+        "KRIS  KRAUSZER"
+      ],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "3/8/2011",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "CLAIMANT WHO TOOK OVER ACCOUNT FOR DECEASED FATHER ALLEGES THAT FA RECOMMENDED AN UNSUITBALE LEHMAN BROTHERS STRUCTURED PRODUCT, AND MISREPRESENTED THAT IT WAS GUARANTEED. TIME FRAME: JANUARY 2008-OCTOBER 2008",
+            "Damage Amount Requested": "$30,000.00",
+            "Settlement Amount": "$14,490.00",
+            "DisplayAAOLinkIfExists": "Y",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "11-00355",
+            "Broker Comment": [
+              "THE MATTER WAS LATER SETTLED BY UBS WITHOUT ANY FINDING OF WRONGDOING ON THE PART OF MR. KRAUSZER, WHO WAS NOT REQUIRED TO MAKE ANY MONETARY CONTRIBUTION TO THE\r\nSETTLEMENT ENTERED INTO WITH CLAIMANT."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 66",
+          "examName": "Uniform Combined State Law Examination",
+          "examTakenDate": "6/6/2005",
+          "examScope": "BOTH"
+        },
+        {
+          "examCategory": "Series 6TO",
+          "examName": "Investment Company Products/Variable Contracts Representative Examination",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "3/15/2002",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "7784",
+          "firm_name": "FIDELITY BROKERAGE SERVICES LLC",
+          "registration_begin_date": "2/14/2012",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "3/18/2022"
+        },
+        {
+          "firm_id": "19616",
+          "firm_name": "WELLS FARGO ADVISORS, LLC",
+          "registration_begin_date": "7/25/2008",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "1/19/2012"
+        },
+        {
+          "firm_id": "8174",
+          "firm_name": "UBS FINANCIAL SERVICES INC.",
+          "registration_begin_date": "5/16/2005",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/8/2008"
+        },
+        {
+          "firm_id": "7556",
+          "firm_name": "MORGAN STANLEY DW INC.",
+          "registration_begin_date": "3/18/2002",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "4/18/2005"
+        }
+      ],
+      "crd_number": "4198566"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "4198566",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA BrokerCheck data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "Joseph",
+        "middle": null,
+        "last": "Krauszer"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "JOSEPH",
+            "middle": "KRISTOPHER",
+            "last": "KRAUSZER"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        },
+        {
+          "name_source": "other_names[0]",
+          "fetched_name": {
+            "first": "KRIS",
+            "middle": null,
+            "last": "KRAUSZER"
+          },
+          "score": 55.56,
+          "first_score": 0.0,
+          "middle_score": 0.0,
+          "last_score": 1.0
+        }
+      ],
+      "best_match": {
+        "name_source": "main_fetched_name",
+        "fetched_name": {
+          "first": "JOSEPH",
+          "middle": "KRISTOPHER",
+          "last": "KRAUSZER"
+        },
+        "score": 95.0,
+        "first_score": 1.0,
+        "middle_score": 0.5,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "Joseph Krauszer has 1 customer dispute disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "CLAIMANT WHO TOOK OVER ACCOUNT FOR DECEASED FATHER ALLEGES THAT FA RECOMMENDED AN UNSUITBALE LEHMAN BROTHERS STRUCTURED PRODUCT, AND MISREPRESENTED THAT IT WAS GUARANTEED. TIME FRAME: JANUARY 2008-OCTOBER 2008",
+            "Damage Amount Requested": "$30,000.00",
+            "Settlement Amount": "$14,490.00",
+            "DisplayAAOLinkIfExists": "Y",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "11-00355",
+            "Broker Comment": [
+              "THE MATTER WAS LATER SETTLED BY UBS WITHOUT ANY FINDING OF WRONGDOING ON THE PART OF MR. KRAUSZER, WHO WAS NOT REQUIRED TO MAKE ANY MONETARY CONTRIBUTION TO THE\r\nSETTLEMENT ENTERED INTO WITH CLAIMANT."
+            ]
+          },
+          "event_date": "3/8/2011",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 3/8/2011. Resolution: Settled. Allegations: CLAIMANT WHO TOOK OVER ACCOUNT FOR DECEASED FATHER ALLEGES THAT FA RECOMMENDED AN UNSUITBALE LEHMAN BROTHERS STRUCTURED PRODUCT, AND MISREPRESENTED THAT IT WAS GUARANTEED. TIME FRAME: JANUARY 2008-OCTOBER 2008. Damage requested: $30,000.00. Settlement: $14,490.00"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No matching disciplinary records found for Joseph Krauszer, but 15 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Search Info",
+        "alert_category": "DISCIPLINARY",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Joseph Krauszer",
+            "sec_disciplinary": {
+              "source": "SEC_Disciplinary",
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records found"
+            },
+            "finra_disciplinary": {
+              "source": "FINRA_Disciplinary",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Joseph L. Tranchina",
+                "Joseph A. Eisler",
+                "Joseph Michael Cannon",
+                "Joseph Arthur Ondris",
+                "Peter Joseph Glowacki",
+                "Richard Joseph Jackson",
+                "Charles Joseph Riccomini",
+                "Thomas Joseph Clifford III",
+                "Thomas Joseph Clifford III",
+                "Joseph A. Occhipinti",
+                "Joseph G. Ritter",
+                "Matthew Joseph Mathesen",
+                "Joseph Samuel Vanelli III",
+                "Joseph Samuel Vanelli III",
+                "Christopher Joseph McCoy",
+                "Joseph Kevin Mathesen",
+                "Joseph Michael Cucinotta, Jr.",
+                "Joseph Michael Cucinotta, Jr."
+              ],
+              "name_scores": {
+                "Joseph L. Tranchina": 47.62,
+                "Joseph A. Eisler": 47.62,
+                "Joseph Michael Cannon": 47.62,
+                "Joseph Arthur Ondris": 47.62,
+                "Peter Joseph Glowacki": 9.52,
+                "Richard Joseph Jackson": 9.52,
+                "Charles Joseph Riccomini": 9.52,
+                "Thomas Joseph Clifford III": 0.0,
+                "Joseph A. Occhipinti": 47.62,
+                "Joseph G. Ritter": 47.62,
+                "Matthew Joseph Mathesen": 9.52,
+                "Joseph Samuel Vanelli III": 0.0,
+                "Christopher Joseph McCoy": 9.52,
+                "Joseph Kevin Mathesen": 47.62,
+                "Joseph Michael Cucinotta, Jr.": 0.0
+              },
+              "exact_match_found": false,
+              "status": "Partial failure: Error processing 'Joseph Michael Cucinotta, Jr.'"
+            }
+          }
+        },
+        "description": "Found 15 disciplinary records for Joseph Krauszer, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Joseph Krauszer",
+      "sec_disciplinary": {
+        "source": "SEC_Disciplinary",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_disciplinary": {
+        "source": "FINRA_Disciplinary",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Joseph L. Tranchina",
+          "Joseph A. Eisler",
+          "Joseph Michael Cannon",
+          "Joseph Arthur Ondris",
+          "Peter Joseph Glowacki",
+          "Richard Joseph Jackson",
+          "Charles Joseph Riccomini",
+          "Thomas Joseph Clifford III",
+          "Thomas Joseph Clifford III",
+          "Joseph A. Occhipinti",
+          "Joseph G. Ritter",
+          "Matthew Joseph Mathesen",
+          "Joseph Samuel Vanelli III",
+          "Joseph Samuel Vanelli III",
+          "Christopher Joseph McCoy",
+          "Joseph Kevin Mathesen",
+          "Joseph Michael Cucinotta, Jr.",
+          "Joseph Michael Cucinotta, Jr."
+        ],
+        "name_scores": {
+          "Joseph L. Tranchina": 47.62,
+          "Joseph A. Eisler": 47.62,
+          "Joseph Michael Cannon": 47.62,
+          "Joseph Arthur Ondris": 47.62,
+          "Peter Joseph Glowacki": 9.52,
+          "Richard Joseph Jackson": 9.52,
+          "Charles Joseph Riccomini": 9.52,
+          "Thomas Joseph Clifford III": 0.0,
+          "Joseph A. Occhipinti": 47.62,
+          "Joseph G. Ritter": 47.62,
+          "Matthew Joseph Mathesen": 9.52,
+          "Joseph Samuel Vanelli III": 0.0,
+          "Christopher Joseph McCoy": 9.52,
+          "Joseph Kevin Mathesen": 47.62,
+          "Joseph Michael Cucinotta, Jr.": 0.0
+        },
+        "exact_match_found": false,
+        "status": "Partial failure: Error processing 'Joseph Michael Cucinotta, Jr.'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": false,
+    "compliance_explanation": "Arbitration issues found for Joseph Krauszer.",
+    "actions": [
+      {
+        "case_id": "13-01285",
+        "date": "10/18/2013",
+        "details": {
+          "action_type": "Award",
+          "firms_individuals": "Joseph Krauszer",
+          "description": "Case 13-01285 closed with outcome: Award against individual",
+          "award_document": "13-01285",
+          "pdf_url": "/sites/default/files/aao_documents/13-01285-Award-FINRA-20131018.pdf",
+          "case_summary": {
+            "Claimant(s):": "Wells Fargo Advisors, LLC",
+            "Claimant Representative(s):": "Gregory Tendrich",
+            "Respondent(s):": "Joseph Krauszer",
+            "Neutral(s):": "Gary M. Landau",
+            "Hearing Site:": "Boca Raton, FL"
+          },
+          "forum": "FINRA"
+        },
+        "matched_name": "Joseph Krauszer"
+      }
+    ],
+    "alerts": [
+      {
+        "alert_type": "Arbitration Compliance",
+        "alert_category": "ARBITRATION",
+        "severity": "HIGH",
+        "metadata": {
+          "arbitration": {
+            "case_id": "13-01285",
+            "date": "10/18/2013",
+            "details": {
+              "action_type": "Award",
+              "firms_individuals": "Joseph Krauszer",
+              "description": "Case 13-01285 closed with outcome: Award against individual",
+              "award_document": "13-01285",
+              "pdf_url": "/sites/default/files/aao_documents/13-01285-Award-FINRA-20131018.pdf",
+              "case_summary": {
+                "Claimant(s):": "Wells Fargo Advisors, LLC",
+                "Claimant Representative(s):": "Gregory Tendrich",
+                "Respondent(s):": "Joseph Krauszer",
+                "Neutral(s):": "Gary M. Landau",
+                "Hearing Site:": "Boca Raton, FL"
+              },
+              "forum": "FINRA"
+            },
+            "matched_name": "Joseph Krauszer"
+          }
+        },
+        "description": "Arbitration issue found: Case 13-01285 for Joseph Krauszer, status: unknown, outcome: award."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Joseph Krauszer",
+      "sec_arbitration": {
+        "source": "SEC_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_arbitration": {
+        "source": "FINRA_Arbitration",
+        "records_found": 15,
+        "records_filtered": 14,
+        "names_found": [
+          "Joseph Krauszer",
+          "Joseph Caruso",
+          "Joseph Alagna",
+          "Stephan Stein",
+          "Joseph Gunnar & Co.",
+          "LLC",
+          "TD Ameritrade",
+          "Inc.",
+          "E*Trade Securities LLC",
+          "Joseph Di Peri",
+          "Jeffrey Kernke",
+          "Charles Schwab & Co.",
+          "Inc.",
+          "Joseph Riccelli",
+          "Henry Sanabria",
+          "John Sideris",
+          "Joseph Blocken",
+          "Louis Scalise",
+          "Mark Dalcollo",
+          "Renatto Cornejo",
+          "Thomas Gallagher",
+          "Vincent Trapozzano",
+          "Joseph Casella",
+          "Joseph Frasko",
+          "Brandon Pflaum",
+          "Cesar Pozo",
+          "Worden Capital Management LLC",
+          "Joseph Alagna",
+          "Matthew Gates",
+          "Miguel Cabarcas",
+          "Christopher Nelson",
+          "Craig Sherman",
+          "Joseph Thurnherr",
+          "Robert Calamunci",
+          "Wynston Hill Capital",
+          "LLC",
+          "Joseph Gunnar & Co. LLC"
+        ],
+        "name_scores": {
+          "Joseph Krauszer": 100.0,
+          "Joseph Caruso": 47.37,
+          "Joseph Alagna": 47.37,
+          "Stephan Stein": 5.26,
+          "Joseph Gunnar & Co.": 47.62,
+          "LLC": 5.26,
+          "TD Ameritrade": 5.26,
+          "Inc.": 5.26,
+          "E*Trade Securities LLC": 9.52,
+          "Joseph Di Peri": 47.62,
+          "Jeffrey Kernke": 5.26,
+          "Charles Schwab & Co.": 9.52,
+          "Joseph Riccelli": 47.37,
+          "Henry Sanabria": 5.26,
+          "John Sideris": 5.26,
+          "Joseph Blocken": 47.37,
+          "Louis Scalise": 5.26,
+          "Mark Dalcollo": 5.26,
+          "Renatto Cornejo": 5.26,
+          "Thomas Gallagher": 5.26,
+          "Vincent Trapozzano": 5.26,
+          "Joseph Casella": 47.37,
+          "Joseph Frasko": 47.37,
+          "Brandon Pflaum": 5.26,
+          "Cesar Pozo": 5.26,
+          "Worden Capital Management LLC": 9.52,
+          "Matthew Gates": 5.26,
+          "Miguel Cabarcas": 5.26,
+          "Christopher Nelson": 5.26,
+          "Craig Sherman": 5.26,
+          "Joseph Thurnherr": 47.37,
+          "Robert Calamunci": 5.26,
+          "Wynston Hill Capital": 9.52,
+          "Joseph Gunnar & Co. LLC": 47.62
+        },
+        "exact_match_found": true,
+        "status": "Exact matches found"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for Joseph Krauszer; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "CLAIMANT WHO TOOK OVER ACCOUNT FOR DECEASED FATHER ALLEGES THAT FA RECOMMENDED AN UNSUITBALE LEHMAN BROTHERS STRUCTURED PRODUCT, AND MISREPRESENTED THAT IT WAS GUARANTEED. TIME FRAME: JANUARY 2008-OCTOBER 2008",
+            "Damage Amount Requested": "$30,000.00",
+            "Settlement Amount": "$14,490.00",
+            "DisplayAAOLinkIfExists": "Y",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "11-00355",
+            "Broker Comment": [
+              "THE MATTER WAS LATER SETTLED BY UBS WITHOUT ANY FINDING OF WRONGDOING ON THE PART OF MR. KRAUSZER, WHO WAS NOT REQUIRED TO MAKE ANY MONETARY CONTRIBUTION TO THE\r\nSETTLEMENT ENTERED INTO WITH CLAIMANT."
+            ]
+          },
+          "event_date": "3/8/2011",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 3/8/2011. Resolution: Settled. Allegations: CLAIMANT WHO TOOK OVER ACCOUNT FOR DECEASED FATHER ALLEGES THAT FA RECOMMENDED AN UNSUITBALE LEHMAN BROTHERS STRUCTURED PRODUCT, AND MISREPRESENTED THAT IT WAS GUARANTEED. TIME FRAME: JANUARY 2008-OCTOBER 2008. Damage requested: $30,000.00. Settlement: $14,490.00"
+      },
+      {
+        "alert_type": "Arbitration Compliance",
+        "alert_category": "ARBITRATION",
+        "severity": "HIGH",
+        "metadata": {
+          "arbitration": {
+            "case_id": "13-01285",
+            "date": "10/18/2013",
+            "details": {
+              "action_type": "Award",
+              "firms_individuals": "Joseph Krauszer",
+              "description": "Case 13-01285 closed with outcome: Award against individual",
+              "award_document": "13-01285",
+              "pdf_url": "/sites/default/files/aao_documents/13-01285-Award-FINRA-20131018.pdf",
+              "case_summary": {
+                "Claimant(s):": "Wells Fargo Advisors, LLC",
+                "Claimant Representative(s):": "Gregory Tendrich",
+                "Respondent(s):": "Joseph Krauszer",
+                "Neutral(s):": "Gary M. Landau",
+                "Hearing Site:": "Boca Raton, FL"
+              },
+              "forum": "FINRA"
+            },
+            "matched_name": "Joseph Krauszer"
+          }
+        },
+        "description": "Arbitration issue found: Case 13-01285 for Joseph Krauszer, status: unknown, outcome: award."
+      }
+    ]
+  }
+}

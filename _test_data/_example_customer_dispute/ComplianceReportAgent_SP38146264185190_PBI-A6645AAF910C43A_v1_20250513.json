@@ -1,0 +1,658 @@
+{
+  "reference_id": "SP38146264185190_PBI-A6645AAF910C43A",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-A6645AAF910C43A",
+    "first_name": "Christopher",
+    "last_name": "Brown",
+    "employee_number": "EN-046374",
+    "zip": "77365",
+    "crdNumber": "3265510",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "3265510",
+    "individual_name": "Christopher Brown",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "FINRA_BrokerCheck",
+    "basic_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "CHRISTOPHER JASON BROWN",
+      "other_names": [],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "4/22/2015",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "Client alleges her money was not invested properly for over a year. Engaged rep Jason Brown to rollover her 401k/profit sharing plan into the Elite Access VA. To facilitate this, Mr. Brown rolled [customer's] funds into an IRA brokerage account, from which the VA was to be purchased. Mr. Brown submitted the VA application to IPI where it was deemed to be NIGO. Mr. Brown stated that he forwarded to necessary form to bring the paperwork into IGO status, but he never received it back from [customer]. [customer] stated that she believed her money has been invested in the VA since October 2013. Upon receipt of [customer's] complaint, Mr. Mixon helped facilitate getting the VA contract issued to [customer], and offered her $5,834.83 in restitution for the time [customer's] funds were not invested based on on illustration provided by Jackson National Life. [customer] accepted this offer.",
+            "Damage Amount Requested": "$5,000.00",
+            "Settlement Amount": "$5,834.83",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 66",
+          "examName": "Uniform Combined State Law Examination",
+          "examTakenDate": "10/1/1999",
+          "examScope": "BOTH"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "8/5/2015",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "10/8/1999",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "30184",
+          "firm_name": "INVESTMENT PROFESSIONALS, INC.",
+          "registration_begin_date": "9/3/2013",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/5/2015"
+        },
+        {
+          "firm_id": "6413",
+          "firm_name": "LPL FINANCIAL LLC",
+          "registration_begin_date": "9/26/2012",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "9/10/2013"
+        },
+        {
+          "firm_id": "19616",
+          "firm_name": "WELLS FARGO ADVISORS, LLC",
+          "registration_begin_date": "10/20/2008",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "9/24/2012"
+        },
+        {
+          "firm_id": "7059",
+          "firm_name": "CITIGROUP GLOBAL MARKETS INC.",
+          "registration_begin_date": "7/22/2002",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/3/2008"
+        },
+        {
+          "firm_id": "6363",
+          "firm_name": "AMERICAN EXPRESS FINANCIAL ADVISORS INC.",
+          "registration_begin_date": "10/11/1999",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/19/2002"
+        },
+        {
+          "firm_id": "6321",
+          "firm_name": "IDS LIFE INSURANCE COMPANY",
+          "registration_begin_date": "10/11/1999",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/19/2002"
+        }
+      ],
+      "crd_number": "3265510"
+    },
+    "detailed_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "CHRISTOPHER JASON BROWN",
+      "other_names": [],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "4/22/2015",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "Client alleges her money was not invested properly for over a year. Engaged rep Jason Brown to rollover her 401k/profit sharing plan into the Elite Access VA. To facilitate this, Mr. Brown rolled [customer's] funds into an IRA brokerage account, from which the VA was to be purchased. Mr. Brown submitted the VA application to IPI where it was deemed to be NIGO. Mr. Brown stated that he forwarded to necessary form to bring the paperwork into IGO status, but he never received it back from [customer]. [customer] stated that she believed her money has been invested in the VA since October 2013. Upon receipt of [customer's] complaint, Mr. Mixon helped facilitate getting the VA contract issued to [customer], and offered her $5,834.83 in restitution for the time [customer's] funds were not invested based on on illustration provided by Jackson National Life. [customer] accepted this offer.",
+            "Damage Amount Requested": "$5,000.00",
+            "Settlement Amount": "$5,834.83",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 66",
+          "examName": "Uniform Combined State Law Examination",
+          "examTakenDate": "10/1/1999",
+          "examScope": "BOTH"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "8/5/2015",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "10/8/1999",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "30184",
+          "firm_name": "INVESTMENT PROFESSIONALS, INC.",
+          "registration_begin_date": "9/3/2013",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/5/2015"
+        },
+        {
+          "firm_id": "6413",
+          "firm_name": "LPL FINANCIAL LLC",
+          "registration_begin_date": "9/26/2012",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "9/10/2013"
+        },
+        {
+          "firm_id": "19616",
+          "firm_name": "WELLS FARGO ADVISORS, LLC",
+          "registration_begin_date": "10/20/2008",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "9/24/2012"
+        },
+        {
+          "firm_id": "7059",
+          "firm_name": "CITIGROUP GLOBAL MARKETS INC.",
+          "registration_begin_date": "7/22/2002",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/3/2008"
+        },
+        {
+          "firm_id": "6363",
+          "firm_name": "AMERICAN EXPRESS FINANCIAL ADVISORS INC.",
+          "registration_begin_date": "10/11/1999",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/19/2002"
+        },
+        {
+          "firm_id": "6321",
+          "firm_name": "IDS LIFE INSURANCE COMPANY",
+          "registration_begin_date": "10/11/1999",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/19/2002"
+        }
+      ],
+      "crd_number": "3265510"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "3265510",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA BrokerCheck data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "Christopher",
+        "middle": null,
+        "last": "Brown"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "CHRISTOPHER",
+            "middle": "JASON",
+            "last": "BROWN"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        }
+      ],
+      "best_match": {
+        "name_source": "main_fetched_name",
+        "fetched_name": {
+          "first": "CHRISTOPHER",
+          "middle": "JASON",
+          "last": "BROWN"
+        },
+        "score": 95.0,
+        "first_score": 1.0,
+        "middle_score": 0.5,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "Christopher Brown has 1 customer dispute disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "Client alleges her money was not invested properly for over a year. Engaged rep Jason Brown to rollover her 401k/profit sharing plan into the Elite Access VA. To facilitate this, Mr. Brown rolled [customer's] funds into an IRA brokerage account, from which the VA was to be purchased. Mr. Brown submitted the VA application to IPI where it was deemed to be NIGO. Mr. Brown stated that he forwarded to necessary form to bring the paperwork into IGO status, but he never received it back from [customer]. [customer] stated that she believed her money has been invested in the VA since October 2013. Upon receipt of [customer's] complaint, Mr. Mixon helped facilitate getting the VA contract issued to [customer], and offered her $5,834.83 in restitution for the time [customer's] funds were not invested based on on illustration provided by Jackson National Life. [customer] accepted this offer.",
+            "Damage Amount Requested": "$5,000.00",
+            "Settlement Amount": "$5,834.83",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          },
+          "event_date": "4/22/2015",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 4/22/2015. Resolution: Settled. Allegations: Client alleges her money was not invested properly for over a year. Engaged rep Jason Brown to rollover her 401k/profit sharing plan into the Elite Access VA. To facilitate this, Mr. Brown rolled [customer's] funds into an IRA brokerage account, from which the VA was to be purchased. Mr. Brown submitted the VA application to IPI where it was deemed to be NIGO. Mr. Brown stated that he forwarded to necessary form to bring the paperwork into IGO status, but he never received it back from [customer]. [customer] stated that she believed her money has been invested in the VA since October 2013. Upon receipt of [customer's] complaint, Mr. Mixon helped facilitate getting the VA contract issued to [customer], and offered her $5,834.83 in restitution for the time [customer's] funds were not invested based on on illustration provided by Jackson National Life. [customer] accepted this offer.. Damage requested: $5,000.00. Settlement: $5,834.83"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No matching disciplinary records found for Christopher Brown, but 15 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Search Info",
+        "alert_category": "DISCIPLINARY",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Christopher Brown",
+            "sec_disciplinary": {
+              "source": "SEC_Disciplinary",
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records found"
+            },
+            "finra_disciplinary": {
+              "source": "FINRA_Disciplinary",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Christopher T. Harpin",
+                "Christopher J. Christensen",
+                "Christopher Denis",
+                "Christopher M. Chiampas",
+                "Christopher D. Martin",
+                "Christopher J. Christensen",
+                "Christopher Mullaly",
+                "Christopher P. Gallo",
+                "Christopher Bailey",
+                "Christopher S. Coffey",
+                "Christopher J. Shaw",
+                "Christopher J. Booher",
+                "Christopher C. Mancini",
+                "Christopher Philip Arnella",
+                "Christopher Frank Deo"
+              ],
+              "name_scores": {
+                "Christopher T. Harpin": 47.62,
+                "Christopher J. Christensen": 47.62,
+                "Christopher Denis": 47.37,
+                "Christopher M. Chiampas": 47.62,
+                "Christopher D. Martin": 47.62,
+                "Christopher Mullaly": 47.37,
+                "Christopher P. Gallo": 47.62,
+                "Christopher Bailey": 47.37,
+                "Christopher S. Coffey": 47.62,
+                "Christopher J. Shaw": 47.62,
+                "Christopher J. Booher": 47.62,
+                "Christopher C. Mancini": 47.62,
+                "Christopher Philip Arnella": 47.62,
+                "Christopher Frank Deo": 47.62
+              },
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'Christopher Brown'"
+            }
+          }
+        },
+        "description": "Found 15 disciplinary records for Christopher Brown, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Christopher Brown",
+      "sec_disciplinary": {
+        "source": "SEC_Disciplinary",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_disciplinary": {
+        "source": "FINRA_Disciplinary",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Christopher T. Harpin",
+          "Christopher J. Christensen",
+          "Christopher Denis",
+          "Christopher M. Chiampas",
+          "Christopher D. Martin",
+          "Christopher J. Christensen",
+          "Christopher Mullaly",
+          "Christopher P. Gallo",
+          "Christopher Bailey",
+          "Christopher S. Coffey",
+          "Christopher J. Shaw",
+          "Christopher J. Booher",
+          "Christopher C. Mancini",
+          "Christopher Philip Arnella",
+          "Christopher Frank Deo"
+        ],
+        "name_scores": {
+          "Christopher T. Harpin": 47.62,
+          "Christopher J. Christensen": 47.62,
+          "Christopher Denis": 47.37,
+          "Christopher M. Chiampas": 47.62,
+          "Christopher D. Martin": 47.62,
+          "Christopher Mullaly": 47.37,
+          "Christopher P. Gallo": 47.62,
+          "Christopher Bailey": 47.37,
+          "Christopher S. Coffey": 47.62,
+          "Christopher J. Shaw": 47.62,
+          "Christopher J. Booher": 47.62,
+          "Christopher C. Mancini": 47.62,
+          "Christopher Philip Arnella": 47.62,
+          "Christopher Frank Deo": 47.62
+        },
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Christopher Brown'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": true,
+    "compliance_explanation": "No matching arbitration records found for Christopher Brown, but 15 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Arbitration Search Info",
+        "alert_category": "ARBITRATION",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Christopher Brown",
+            "sec_arbitration": {
+              "source": "SEC_Arbitration",
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records found"
+            },
+            "finra_arbitration": {
+              "source": "FINRA_Arbitration",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Gary Brown",
+                "Christopher Amo",
+                "UBS Financial Services Inc.",
+                "Citigroup Global Markets",
+                "Inc.",
+                "PNC Investments",
+                "Christopher Olson",
+                "Yi Yang",
+                "James Brown",
+                "SunTrust Investment Services",
+                "Inc.",
+                "Wells Fargo Advisors",
+                "LLC",
+                "Merrill Lynch Pierce Fenner & Smith Inc.",
+                "Merrill Lynch Pierce Fenner & Smith Inc.",
+                "Charles Childs",
+                "Joshua Suter",
+                "Lynn Koczera",
+                "Blue Moon Financial",
+                "LLC",
+                "Nomlis",
+                "LLC",
+                "Adam Estes",
+                "Christopher Aime",
+                "Raymond James & Associates",
+                "Inc.",
+                "Gregory Smith",
+                "Mark Liston",
+                "Michael Holland",
+                "Simon Hamilton",
+                "Jeffrey Silverman",
+                "Bryan Mazliach",
+                "Jonothon Lieberman",
+                "Rockwell Global Capital LLC",
+                "Donald Beary",
+                "James Stanfield"
+              ],
+              "name_scores": {
+                "Gary Brown": 57.89,
+                "Christopher Amo": 47.37,
+                "UBS Financial Services Inc.": 9.52,
+                "Citigroup Global Markets": 9.52,
+                "Inc.": 5.26,
+                "PNC Investments": 5.26,
+                "Christopher Olson": 47.37,
+                "Yi Yang": 5.26,
+                "James Brown": 57.89,
+                "SunTrust Investment Services": 9.52,
+                "Wells Fargo Advisors": 9.52,
+                "LLC": 5.26,
+                "Merrill Lynch Pierce Fenner & Smith Inc.": 9.52,
+                "Charles Childs": 5.26,
+                "Joshua Suter": 5.26,
+                "Lynn Koczera": 5.26,
+                "Blue Moon Financial": 9.52,
+                "Nomlis": 5.26,
+                "Adam Estes": 5.26,
+                "Christopher Aime": 47.37,
+                "Raymond James & Associates": 9.52,
+                "Gregory Smith": 5.26,
+                "Mark Liston": 5.26,
+                "Michael Holland": 5.26,
+                "Simon Hamilton": 5.26,
+                "Jeffrey Silverman": 5.26,
+                "Bryan Mazliach": 5.26,
+                "Jonothon Lieberman": 5.26,
+                "Rockwell Global Capital LLC": 9.52,
+                "Donald Beary": 5.26,
+                "James Stanfield": 5.26
+              },
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'Christopher Brown'"
+            }
+          }
+        },
+        "description": "Found 15 arbitration records for Christopher Brown, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Christopher Brown",
+      "sec_arbitration": {
+        "source": "SEC_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_arbitration": {
+        "source": "FINRA_Arbitration",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Gary Brown",
+          "Christopher Amo",
+          "UBS Financial Services Inc.",
+          "Citigroup Global Markets",
+          "Inc.",
+          "PNC Investments",
+          "Christopher Olson",
+          "Yi Yang",
+          "James Brown",
+          "SunTrust Investment Services",
+          "Inc.",
+          "Wells Fargo Advisors",
+          "LLC",
+          "Merrill Lynch Pierce Fenner & Smith Inc.",
+          "Merrill Lynch Pierce Fenner & Smith Inc.",
+          "Charles Childs",
+          "Joshua Suter",
+          "Lynn Koczera",
+          "Blue Moon Financial",
+          "LLC",
+          "Nomlis",
+          "LLC",
+          "Adam Estes",
+          "Christopher Aime",
+          "Raymond James & Associates",
+          "Inc.",
+          "Gregory Smith",
+          "Mark Liston",
+          "Michael Holland",
+          "Simon Hamilton",
+          "Jeffrey Silverman",
+          "Bryan Mazliach",
+          "Jonothon Lieberman",
+          "Rockwell Global Capital LLC",
+          "Donald Beary",
+          "James Stanfield"
+        ],
+        "name_scores": {
+          "Gary Brown": 57.89,
+          "Christopher Amo": 47.37,
+          "UBS Financial Services Inc.": 9.52,
+          "Citigroup Global Markets": 9.52,
+          "Inc.": 5.26,
+          "PNC Investments": 5.26,
+          "Christopher Olson": 47.37,
+          "Yi Yang": 5.26,
+          "James Brown": 57.89,
+          "SunTrust Investment Services": 9.52,
+          "Wells Fargo Advisors": 9.52,
+          "LLC": 5.26,
+          "Merrill Lynch Pierce Fenner & Smith Inc.": 9.52,
+          "Charles Childs": 5.26,
+          "Joshua Suter": 5.26,
+          "Lynn Koczera": 5.26,
+          "Blue Moon Financial": 9.52,
+          "Nomlis": 5.26,
+          "Adam Estes": 5.26,
+          "Christopher Aime": 47.37,
+          "Raymond James & Associates": 9.52,
+          "Gregory Smith": 5.26,
+          "Mark Liston": 5.26,
+          "Michael Holland": 5.26,
+          "Simon Hamilton": 5.26,
+          "Jeffrey Silverman": 5.26,
+          "Bryan Mazliach": 5.26,
+          "Jonothon Lieberman": 5.26,
+          "Rockwell Global Capital LLC": 9.52,
+          "Donald Beary": 5.26,
+          "James Stanfield": 5.26
+        },
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Christopher Brown'"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for Christopher Brown; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "Client alleges her money was not invested properly for over a year. Engaged rep Jason Brown to rollover her 401k/profit sharing plan into the Elite Access VA. To facilitate this, Mr. Brown rolled [customer's] funds into an IRA brokerage account, from which the VA was to be purchased. Mr. Brown submitted the VA application to IPI where it was deemed to be NIGO. Mr. Brown stated that he forwarded to necessary form to bring the paperwork into IGO status, but he never received it back from [customer]. [customer] stated that she believed her money has been invested in the VA since October 2013. Upon receipt of [customer's] complaint, Mr. Mixon helped facilitate getting the VA contract issued to [customer], and offered her $5,834.83 in restitution for the time [customer's] funds were not invested based on on illustration provided by Jackson National Life. [customer] accepted this offer.",
+            "Damage Amount Requested": "$5,000.00",
+            "Settlement Amount": "$5,834.83",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          },
+          "event_date": "4/22/2015",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 4/22/2015. Resolution: Settled. Allegations: Client alleges her money was not invested properly for over a year. Engaged rep Jason Brown to rollover her 401k/profit sharing plan into the Elite Access VA. To facilitate this, Mr. Brown rolled [customer's] funds into an IRA brokerage account, from which the VA was to be purchased. Mr. Brown submitted the VA application to IPI where it was deemed to be NIGO. Mr. Brown stated that he forwarded to necessary form to bring the paperwork into IGO status, but he never received it back from [customer]. [customer] stated that she believed her money has been invested in the VA since October 2013. Upon receipt of [customer's] complaint, Mr. Mixon helped facilitate getting the VA contract issued to [customer], and offered her $5,834.83 in restitution for the time [customer's] funds were not invested based on on illustration provided by Jackson National Life. [customer] accepted this offer.. Damage requested: $5,000.00. Settlement: $5,834.83"
+      }
+    ]
+  }
+}

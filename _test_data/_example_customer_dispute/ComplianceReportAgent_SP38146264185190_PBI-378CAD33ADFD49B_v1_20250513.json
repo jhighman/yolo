@@ -1,0 +1,450 @@
+{
+  "reference_id": "SP38146264185190_PBI-378CAD33ADFD49B",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-378CAD33ADFD49B",
+    "first_name": "Payam",
+    "last_name": "Taghibagi",
+    "employee_number": "EN-046242",
+    "zip": "90272",
+    "crdNumber": "2075689",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "2075689",
+    "individual_name": "Payam Taghibagi",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "FINRA_BrokerCheck",
+    "basic_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "PAYAM TAGHIBAGI",
+      "other_names": [
+        "PAUL  TAGHIBAGI"
+      ],
+      "bc_scope": "Active",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "7/7/2020",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "Customer alleges that Representative recommended unsuitable investments resulting in losses.",
+            "Damage Amount Requested": "$5,000.00",
+            "Settlement Amount": "$14,999.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "Advisor maintains that the recommendations to the client were suitable and inline with the client's instructions and stated investment objectives. Nevertheless, as a gesture of customer goodwill and without admitting to any wrongdoing, customer was provided a refund of $14,999 in management fees."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "9/8/1998",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "8/3/1990",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 24",
+          "examName": "General Securities Principal Examination",
+          "examTakenDate": "4/6/1999",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "11/3/1993",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 22",
+          "examName": "Direct Participation Programs Representative Examination",
+          "examTakenDate": "3/14/1991",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 6",
+          "examName": "Investment Company Products/Variable Contracts Representative Examination",
+          "examTakenDate": "7/20/1990",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "18923",
+          "firm_name": "SIGNATURE ESTATE SECURITIES, LLC",
+          "registration_begin_date": "8/20/2023",
+          "branch_offices": [
+            {
+              "street": "2121 Avenue of Stars",
+              "city": "Los Angeles",
+              "state": "CA",
+              "zip_code": "90067"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "23131",
+          "firm_name": "OSAIC WEALTH, INC.",
+          "registration_begin_date": "11/2/2018",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/23/2023"
+        },
+        {
+          "firm_id": "468",
+          "firm_name": "SIGNATOR INVESTORS, INC.",
+          "registration_begin_date": "7/23/1990",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/2/2018"
+        },
+        {
+          "firm_id": "5181",
+          "firm_name": "JOHN HANCOCK MUTUAL LIFE INSURANCE COMPANY",
+          "registration_begin_date": "7/23/1990",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "5/1/1997"
+        }
+      ],
+      "crd_number": "2075689"
+    },
+    "detailed_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "PAYAM TAGHIBAGI",
+      "other_names": [
+        "PAUL  TAGHIBAGI"
+      ],
+      "bc_scope": "Active",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "7/7/2020",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "Customer alleges that Representative recommended unsuitable investments resulting in losses.",
+            "Damage Amount Requested": "$5,000.00",
+            "Settlement Amount": "$14,999.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "Advisor maintains that the recommendations to the client were suitable and inline with the client's instructions and stated investment objectives. Nevertheless, as a gesture of customer goodwill and without admitting to any wrongdoing, customer was provided a refund of $14,999 in management fees."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "9/8/1998",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "8/3/1990",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 24",
+          "examName": "General Securities Principal Examination",
+          "examTakenDate": "4/6/1999",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "11/3/1993",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 22",
+          "examName": "Direct Participation Programs Representative Examination",
+          "examTakenDate": "3/14/1991",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 6",
+          "examName": "Investment Company Products/Variable Contracts Representative Examination",
+          "examTakenDate": "7/20/1990",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "18923",
+          "firm_name": "SIGNATURE ESTATE SECURITIES, LLC",
+          "registration_begin_date": "8/20/2023",
+          "branch_offices": [
+            {
+              "street": "2121 Avenue of Stars",
+              "city": "Los Angeles",
+              "state": "CA",
+              "zip_code": "90067"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "23131",
+          "firm_name": "OSAIC WEALTH, INC.",
+          "registration_begin_date": "11/2/2018",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/23/2023"
+        },
+        {
+          "firm_id": "468",
+          "firm_name": "SIGNATOR INVESTORS, INC.",
+          "registration_begin_date": "7/23/1990",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/2/2018"
+        },
+        {
+          "firm_id": "5181",
+          "firm_name": "JOHN HANCOCK MUTUAL LIFE INSURANCE COMPANY",
+          "registration_begin_date": "7/23/1990",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "5/1/1997"
+        }
+      ],
+      "crd_number": "2075689"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "2075689",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA BrokerCheck data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "Payam",
+        "middle": null,
+        "last": "Taghibagi"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "PAYAM",
+            "middle": null,
+            "last": "TAGHIBAGI"
+          },
+          "score": 100.0,
+          "first_score": 1.0,
+          "middle_score": 0.0,
+          "last_score": 1.0
+        },
+        {
+          "name_source": "other_names[0]",
+          "fetched_name": {
+            "first": "PAUL",
+            "middle": null,
+            "last": "TAGHIBAGI"
+          },
+          "score": 55.56,
+          "first_score": 0.0,
+          "middle_score": 0.0,
+          "last_score": 1.0
+        }
+      ],
+      "best_match": {
+        "name_source": "main_fetched_name",
+        "fetched_name": {
+          "first": "PAYAM",
+          "middle": null,
+          "last": "TAGHIBAGI"
+        },
+        "score": 100.0,
+        "first_score": 1.0,
+        "middle_score": 0.0,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "Payam Taghibagi has 1 customer dispute disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "Customer alleges that Representative recommended unsuitable investments resulting in losses.",
+            "Damage Amount Requested": "$5,000.00",
+            "Settlement Amount": "$14,999.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "Advisor maintains that the recommendations to the client were suitable and inline with the client's instructions and stated investment objectives. Nevertheless, as a gesture of customer goodwill and without admitting to any wrongdoing, customer was provided a refund of $14,999 in management fees."
+            ]
+          },
+          "event_date": "7/7/2020",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 7/7/2020. Resolution: Settled. Allegations: Customer alleges that Representative recommended unsuitable investments resulting in losses.. Damage requested: $5,000.00. Settlement: $14,999.00"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No disciplinary records found for Payam Taghibagi.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "searched_name": "Payam Taghibagi",
+      "sec_disciplinary": {
+        "source": "SEC_Disciplinary",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_disciplinary": {
+        "source": "FINRA_Disciplinary",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": true,
+    "compliance_explanation": "No arbitration records found for Payam Taghibagi.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "searched_name": "Payam Taghibagi",
+      "sec_arbitration": {
+        "source": "SEC_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_arbitration": {
+        "source": "FINRA_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for Payam Taghibagi; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "Customer alleges that Representative recommended unsuitable investments resulting in losses.",
+            "Damage Amount Requested": "$5,000.00",
+            "Settlement Amount": "$14,999.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "Advisor maintains that the recommendations to the client were suitable and inline with the client's instructions and stated investment objectives. Nevertheless, as a gesture of customer goodwill and without admitting to any wrongdoing, customer was provided a refund of $14,999 in management fees."
+            ]
+          },
+          "event_date": "7/7/2020",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 7/7/2020. Resolution: Settled. Allegations: Customer alleges that Representative recommended unsuitable investments resulting in losses.. Damage requested: $5,000.00. Settlement: $14,999.00"
+      }
+    ]
+  }
+}

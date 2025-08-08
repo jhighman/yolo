@@ -1,0 +1,313 @@
+{
+  "basicInformation": {
+    "individualId": 2512188,
+    "firstName": "GARY",
+    "middleName": "KENDALL",
+    "lastName": "LISKA",
+    "otherNames": [
+      "GARY K LISKA"
+    ],
+    "bcScope": "Active",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDate": "8/2/1994"
+  },
+  "currentEmployments": [
+    {
+      "firmId": 18923,
+      "firmName": "SIGNATURE ESTATE SECURITIES, LLC",
+      "iaOnly": "N",
+      "registrationBeginDate": "8/16/2023",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE",
+      "bdSECNumber": "37065",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "797302",
+          "street1": "2121 Avenue of Stars",
+          "street2": "Suite 1600",
+          "city": "Los Angeles",
+          "cityAlias": [
+            "CENTURY CITY",
+            "LOS ANGELES"
+          ],
+          "state": "CA",
+          "country": "United States",
+          "zipCode": "90067",
+          "latitude": "34.05775",
+          "longitude": "-118.4138",
+          "geoLocation": "34.05775,-118.4138",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "08/16/2023"
+        }
+      ]
+    }
+  ],
+  "currentIAEmployments": [
+    {
+      "firmId": 108163,
+      "firmName": "SEIA",
+      "iaOnly": "Y",
+      "registrationBeginDate": "5/12/1997",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "56288",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "2121 AVENUE OF THE STARS, SUITE 1600",
+          "city": "LOS ANGELES",
+          "cityAlias": [
+            "CENTURY CITY",
+            "LOS ANGELES"
+          ],
+          "state": "CA",
+          "country": "United States",
+          "zipCode": "90067",
+          "latitude": "34.05775",
+          "longitude": "-118.4138",
+          "geoLocation": "34.05775,-118.4138",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "04/01/1997"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "54859",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "40218",
+      "firmId": 23131,
+      "firmName": "OSAIC WEALTH, INC.",
+      "city": "LOS ANGELES",
+      "state": "CA",
+      "registrationBeginDate": "11/2/2018",
+      "registrationEndDate": "8/23/2023",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "56298",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "13995",
+      "firmId": 468,
+      "firmName": "SIGNATOR INVESTORS, INC.",
+      "city": "LOS ANGELES",
+      "state": "CA",
+      "registrationBeginDate": "8/3/1994",
+      "registrationEndDate": "11/2/2018",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "15661",
+      "firmId": 5181,
+      "firmName": "JOHN HANCOCK MUTUAL LIFE INSURANCE COMPANY",
+      "city": "BOSTON",
+      "state": "MA",
+      "country": "United States",
+      "registrationBeginDate": "8/3/1994",
+      "registrationEndDate": "5/1/1997",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "previousIAEmployments": [],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "5/11/2022",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Denied",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 10,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "Client alleges losses due to representative's bad judgement and mismanagement.",
+        "Damage Amount Requested": "$100,000.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": ""
+      }
+    },
+    {
+      "eventDate": "12/20/2021",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Denied",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 10,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "Customer alleges misrepresentation and unsuitability of options strategy and poor advise regarding overall investment strategy",
+        "Damage Amount Requested": "$1,000,000.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": "",
+        "Broker Comment": [
+          "Customer submitted a written complaint alleging that the representative failed to adequately advise him of an option hedging strategy that resulted in losses, when in fact the customer's portfolio had positive returns. The customer to date has pursued no action or civil litigation. The Firm believes this complaint to be meritless."
+        ]
+      }
+    },
+    {
+      "eventDate": "7/21/2020",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Denied",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 10,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "Customer alleges misrepresentation of an inherited annuity and unsuitable sub account choices.",
+        "Damage Amount Requested": "$33,000.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": ""
+      }
+    },
+    {
+      "eventDate": "10/18/1989",
+      "disclosureType": "Criminal",
+      "disclosureResolution": "Final Disposition",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 10,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "criminalCharges": [
+          {
+            "Charges": "Shoplifting",
+            "Disposition": "Pled guilty"
+          }
+        ],
+        "Broker Comment": [
+          "I HAVE SATISFIED THE COURT REQUIREMENTS, PAID THE FINE ON 02/16/1990 AND SERVED THREE YEARS OF PROBATION ENDING IN 1992. JUDGE MICHAEL A LEVERSEN OF THE NORTH ORANGE COUNTY MUNICIPAL COURT HAS ORDERED PETITION 1203.4 TO WITHDRAW THE PLEA OF GUILTY AND EXPUNGE THE CASE FROM MY RECORD."
+        ]
+      }
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 0,
+    "productExamCount": 3
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "7/1/1998",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "8/2/1994",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "10/1/2018",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "7/30/1996",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 6",
+      "examName": "Investment Company Products/Variable Contracts Representative Examination",
+      "examTakenDate": "8/2/1994",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "approvedSRORegistrationCount": 1,
+    "approvedFinraRegistrationCount": 1,
+    "approvedStateRegistrationCount": 5,
+    "approvedIAStateRegistrationCount": 3
+  },
+  "registeredStates": [
+    {
+      "state": "California",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "5/12/1997"
+    },
+    {
+      "state": "California",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/17/2023"
+    },
+    {
+      "state": "Hawaii",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "1/2/2024"
+    },
+    {
+      "state": "Michigan",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/31/2022"
+    },
+    {
+      "state": "Nevada",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/29/2023"
+    },
+    {
+      "state": "New Jersey",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "5/7/2024"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED_RES",
+      "regDate": "11/19/2009"
+    },
+    {
+      "state": "Texas",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/23/2023"
+    }
+  ],
+  "registeredSROs": [
+    {
+      "sro": "FINRA",
+      "status": "APPROVED",
+      "CategoriesList": [
+        "Full Registration/General Securities Representative",
+        "Investment Company and Variable Contracts Products Rep."
+      ]
+    }
+  ],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}

@@ -1,0 +1,662 @@
+{
+  "basicInformation": {
+    "individualId": 1428116,
+    "firstName": "MICHAEL",
+    "middleName": "ANTHONY",
+    "lastName": "MULLEN",
+    "otherNames": [
+      "MICHAEL  MULLEN"
+    ],
+    "bcScope": "Active",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDate": "9/2/1989"
+  },
+  "currentEmployments": [
+    {
+      "firmId": 2543,
+      "firmName": "B. RILEY WEALTH MANAGEMENT",
+      "iaOnly": "N",
+      "registrationBeginDate": "3/16/2021",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "INACTIVE",
+      "iaSECNumber": "67275",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "31206",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "792891",
+          "street1": "10 BROAD STREET",
+          "street2": "SUITE 203/303",
+          "city": "RED BANK",
+          "cityAlias": [
+            "RED BANK",
+            "TINTON FALLS",
+            "WESTBORO"
+          ],
+          "state": "NJ",
+          "country": "United States",
+          "zipCode": "07701",
+          "latitude": "40.356745",
+          "longitude": "-74.075105",
+          "geoLocation": "40.356745,-74.075105",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "07/22/2022"
+        }
+      ]
+    }
+  ],
+  "currentIAEmployments": [
+    {
+      "firmId": 315851,
+      "firmName": "B. RILEY WEALTH PRIVATE SHARES",
+      "iaOnly": "Y",
+      "registrationBeginDate": "4/4/2023",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "122228",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "2-10 Broad St.",
+          "street2": "Suite 203/303",
+          "city": "Red Bank",
+          "cityAlias": [
+            "RED BANK",
+            "TINTON FALLS",
+            "WESTBORO"
+          ],
+          "state": "NJ",
+          "country": "United States",
+          "zipCode": "07701",
+          "latitude": "40.356745",
+          "longitude": "-74.075105",
+          "geoLocation": "40.356745,-74.075105",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "03/31/2023"
+        }
+      ]
+    },
+    {
+      "firmId": 115927,
+      "firmName": "B. RILEY WEALTH ADVISORS, INC.",
+      "iaOnly": "Y",
+      "registrationBeginDate": "1/13/2012",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "64837",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "2-10 Broad St.",
+          "street2": "Suite 203/303",
+          "city": "Red Bank",
+          "cityAlias": [
+            "RED BANK",
+            "TINTON FALLS",
+            "WESTBORO"
+          ],
+          "state": "NJ",
+          "country": "United States",
+          "zipCode": "07701",
+          "latitude": "40.356745",
+          "longitude": "-74.075105",
+          "geoLocation": "40.356745,-74.075105",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "07/22/2022"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "164",
+      "firmId": 7569,
+      "firmName": "NATIONAL SECURITIES CORPORATION",
+      "city": "NEW YORK",
+      "state": "NY",
+      "registrationBeginDate": "5/30/2008",
+      "registrationEndDate": "7/22/2022",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "63905",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "44347",
+      "firmId": 29686,
+      "firmName": "WINSLOW, EVANS & CROCKER, INC.",
+      "city": "BOSTON",
+      "state": "MA",
+      "registrationBeginDate": "1/23/2020",
+      "registrationEndDate": "6/10/2021",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "35508",
+      "firmId": 17609,
+      "firmName": "GUNNALLEN FINANCIAL, INC",
+      "city": "STATEN ISLAND",
+      "state": "NY",
+      "registrationBeginDate": "4/12/2006",
+      "registrationEndDate": "6/6/2008",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "46901",
+      "firmId": 35459,
+      "firmName": "JOSEPH STEVENS & COMPANY, INC.",
+      "city": "STATEN ISLAND",
+      "state": "NY",
+      "registrationBeginDate": "4/25/1994",
+      "registrationEndDate": "4/28/2006",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "40257",
+      "firmId": 23180,
+      "firmName": "A.S. GOLDMEN & CO., INC.",
+      "city": "RED BANK",
+      "state": "NJ",
+      "country": "United States",
+      "registrationBeginDate": "8/29/1991",
+      "registrationEndDate": "5/2/1994",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "18290",
+      "firmId": 6833,
+      "firmName": "D. H. BLAIR & CO., INC.",
+      "city": "NEW YORK",
+      "state": "NY",
+      "country": "United States",
+      "registrationBeginDate": "8/22/1989",
+      "registrationEndDate": "8/16/1991",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "67275",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "31206",
+      "firmId": 2543,
+      "firmName": "B RILEY WEALTH MANAGEMENT",
+      "city": "Boca Raton",
+      "state": "FL",
+      "country": "United States",
+      "registrationBeginDate": "3/17/2021",
+      "registrationEndDate": "12/31/2022",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "INACTIVE"
+    }
+  ],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "1/18/1996",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Award / Judgment",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 10,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "MISREPRESENTATION ALLEGED DAMAGES 248,000",
+        "Damage Amount Requested": "$248,000.00",
+        "Damages Granted": "$280,582.41",
+        "DisplayAAOLinkIfExists": "Y",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": "96-00125",
+        "Broker Comment": [
+          "THE ARBITRATION CLAIMANTS WERE CLIENTS THROUGH A JOINT REP NUMBER. THE SERVICING BROKER LEFT THE FIRM AND TOOK THE CLIENTS WITH HIM. SUBSEQUENTLY AN ARBITRATION CLAIM WAS FILED THAT NAMED THE FIRM, THE CEO AND MYSELF. DESPITE THE EVIDENCE PRESENTED; THE PANEL RULED IN THE CUSTOMERS' FAVOR AND AN AWARD WAS GRANTED, A DECISION WHICH I STRONGLY DISAGREED WITH. I MADE NO CONTRIBUTIONS TO THE AWARD; THE ENTIRE AMOUNT WAS PAID BY MY PREVIOUS FIRM."
+        ]
+      }
+    },
+    {
+      "eventDate": "10/25/1990",
+      "disclosureType": "Regulatory",
+      "disclosureResolution": "Final",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 10,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "DocketNumberFDA": "",
+        "DocketNumberAAO": "",
+        "Initiated By": "HAWAII SECURITIES ENFORCEMENT UNIT",
+        "Allegations": "OFFER AND SALE OF SECURITIES BY AN\r\nUNREGISTERED SALESPERSON.",
+        "Resolution": "Consent",
+        "SanctionDetails": [
+          {
+            "Sanctions": "Suspension"
+          }
+        ],
+        "Sanction Details": "A CONSENT AGREEMENT WAS EXECUTED ON 10/25/90\r\nWHEREBY, MICHAEL ANTHONY MULLEN AGREED TO CONTRIBUTE $500 TO\r\nTHE COMPLIANCE RESOLUTION FUND AND TO A SUSPENSION OF HIS\r\nHAWAII REGISTRATION FROM 12/21/89 TO 6/21/90. D. H. BLAIR &\r\nCO., INC., ON BEHALF OF MULLEN, WILL OFFER TO RESCIND THE SALE\r\nOF SECURITIES TO ONE HAWAII RESIDENT.",
+        "Broker Comment": [
+          "NOT PROVIDED"
+        ]
+      }
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 2,
+    "productExamCount": 3
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "12/31/2011",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "9/14/1989",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [
+    {
+      "examCategory": "Series 4",
+      "examName": "Registered Options Principal Examination",
+      "examTakenDate": "12/5/2006",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 24",
+      "examName": "General Securities Principal Examination",
+      "examTakenDate": "4/8/1994",
+      "examScope": "BC"
+    }
+  ],
+  "productExamCategory": [
+    {
+      "examCategory": "Series 99TO",
+      "examName": "Operations Professional Examination",
+      "examTakenDate": "1/2/2023",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "10/1/2018",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "8/19/1989",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "approvedSRORegistrationCount": 1,
+    "approvedFinraRegistrationCount": 1,
+    "approvedStateRegistrationCount": 51,
+    "approvedIAStateRegistrationCount": 2
+  },
+  "registeredStates": [
+    {
+      "state": "Alabama",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Alaska",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Arizona",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Arkansas",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "California",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Colorado",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Connecticut",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Delaware",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "District of Columbia",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Florida",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Georgia",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Hawaii",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Idaho",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Illinois",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Indiana",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Iowa",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Kansas",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Kentucky",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Louisiana",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Maine",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Maryland",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Massachusetts",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Michigan",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Minnesota",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Mississippi",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Missouri",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Montana",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Nebraska",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Nevada",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "New Hampshire",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "New Jersey",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "1/13/2012"
+    },
+    {
+      "state": "New Jersey",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "3/16/2021"
+    },
+    {
+      "state": "New Mexico",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "New York",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "3/16/2021"
+    },
+    {
+      "state": "New York",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "6/23/2021"
+    },
+    {
+      "state": "North Carolina",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "North Dakota",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Ohio",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Oklahoma",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Oregon",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Pennsylvania",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Rhode Island",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "South Carolina",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "South Dakota",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Tennessee",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Texas",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Utah",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Vermont",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Virginia",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Washington",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "West Virginia",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Wisconsin",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    },
+    {
+      "state": "Wyoming",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/22/2022"
+    }
+  ],
+  "registeredSROs": [
+    {
+      "sro": "FINRA",
+      "status": "APPROVED",
+      "CategoriesList": [
+        "General Securities Principal",
+        "Full Registration/General Securities Representative",
+        "Operations Professional",
+        "Registered Options Principal"
+      ]
+    }
+  ],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}

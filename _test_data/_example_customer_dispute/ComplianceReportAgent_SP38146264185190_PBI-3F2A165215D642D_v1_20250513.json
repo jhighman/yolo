@@ -1,0 +1,688 @@
+{
+  "reference_id": "SP38146264185190_PBI-3F2A165215D642D",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-3F2A165215D642D",
+    "first_name": "John",
+    "last_name": "McChesney Jr",
+    "employee_number": "EN-053591",
+    "zip": "60047",
+    "crdNumber": "4982969",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "4982969",
+    "individual_name": "John McChesney Jr",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "FINRA_BrokerCheck",
+    "basic_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "JOHN CONNOR MCCHESNEY",
+      "other_names": [
+        "JOHN C MCCHESNEY",
+        "CONNOR  MCHESNEY"
+      ],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "4/14/2014",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Denied",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "MISREPRESENTATION",
+            "Damage Amount Requested": "$100,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "FINRA AWARD DATED 11/5/15 DENIED ALL CLAIMANT'S CLAIMS.  TD AMERITRADE REVIEWED THIS MATTER AND FOUND NO EVIDENCE OF MISREPRESENTATION OR FAILURE TO DISCLOSE BY THE REPRESENTATIVE."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 66",
+          "examName": "Uniform Combined State Law Examination",
+          "examTakenDate": "6/4/2007",
+          "examScope": "BOTH"
+        },
+        {
+          "examCategory": "Series 4",
+          "examName": "Registered Options Principal Examination",
+          "examTakenDate": "5/27/2010",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 24",
+          "examName": "General Securities Principal Examination",
+          "examTakenDate": "5/11/2010",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "6/9/2017",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 31",
+          "examName": "Futures Managed Funds Examination",
+          "examTakenDate": "6/8/2007",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "4/26/2007",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "5393",
+          "firm_name": "CHARLES SCHWAB & CO., INC.",
+          "registration_begin_date": "8/20/2015",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "6/9/2017"
+        },
+        {
+          "firm_id": "7870",
+          "firm_name": "TD AMERITRADE, INC.",
+          "registration_begin_date": "2/5/2013",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/29/2015"
+        },
+        {
+          "firm_id": "135625",
+          "firm_name": "OPTIONSHOUSE, LLC",
+          "registration_begin_date": "9/25/2008",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "2/7/2012"
+        },
+        {
+          "firm_id": "7874",
+          "firm_name": "ZACKS & COMPANY",
+          "registration_begin_date": "2/27/2008",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/21/2008"
+        },
+        {
+          "firm_id": "8209",
+          "firm_name": "MORGAN STANLEY & CO., INCORPORATED",
+          "registration_begin_date": "4/27/2007",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "1/2/2008"
+        }
+      ],
+      "crd_number": "4982969"
+    },
+    "detailed_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "JOHN CONNOR MCCHESNEY",
+      "other_names": [
+        "JOHN C MCCHESNEY",
+        "CONNOR  MCHESNEY"
+      ],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "4/14/2014",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Denied",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "MISREPRESENTATION",
+            "Damage Amount Requested": "$100,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "FINRA AWARD DATED 11/5/15 DENIED ALL CLAIMANT'S CLAIMS.  TD AMERITRADE REVIEWED THIS MATTER AND FOUND NO EVIDENCE OF MISREPRESENTATION OR FAILURE TO DISCLOSE BY THE REPRESENTATIVE."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 66",
+          "examName": "Uniform Combined State Law Examination",
+          "examTakenDate": "6/4/2007",
+          "examScope": "BOTH"
+        },
+        {
+          "examCategory": "Series 4",
+          "examName": "Registered Options Principal Examination",
+          "examTakenDate": "5/27/2010",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 24",
+          "examName": "General Securities Principal Examination",
+          "examTakenDate": "5/11/2010",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "6/9/2017",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 31",
+          "examName": "Futures Managed Funds Examination",
+          "examTakenDate": "6/8/2007",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "4/26/2007",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "5393",
+          "firm_name": "CHARLES SCHWAB & CO., INC.",
+          "registration_begin_date": "8/20/2015",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "6/9/2017"
+        },
+        {
+          "firm_id": "7870",
+          "firm_name": "TD AMERITRADE, INC.",
+          "registration_begin_date": "2/5/2013",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/29/2015"
+        },
+        {
+          "firm_id": "135625",
+          "firm_name": "OPTIONSHOUSE, LLC",
+          "registration_begin_date": "9/25/2008",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "2/7/2012"
+        },
+        {
+          "firm_id": "7874",
+          "firm_name": "ZACKS & COMPANY",
+          "registration_begin_date": "2/27/2008",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/21/2008"
+        },
+        {
+          "firm_id": "8209",
+          "firm_name": "MORGAN STANLEY & CO., INCORPORATED",
+          "registration_begin_date": "4/27/2007",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "1/2/2008"
+        }
+      ],
+      "crd_number": "4982969"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "4982969",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA BrokerCheck data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": false,
+    "compliance_explanation": "Name mismatch detected.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "John",
+        "middle": "McChesney",
+        "last": "Jr"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "JOHN",
+            "middle": "CONNOR",
+            "last": "MCCHESNEY"
+          },
+          "score": 40.0,
+          "first_score": 1.0,
+          "middle_score": 0.0,
+          "last_score": 0.0
+        },
+        {
+          "name_source": "other_names[0]",
+          "fetched_name": {
+            "first": "JOHN",
+            "middle": "C",
+            "last": "MCCHESNEY"
+          },
+          "score": 40.0,
+          "first_score": 1.0,
+          "middle_score": 0.0,
+          "last_score": 0.0
+        },
+        {
+          "name_source": "other_names[1]",
+          "fetched_name": {
+            "first": "CONNOR",
+            "middle": null,
+            "last": "MCHESNEY"
+          },
+          "score": 5.0,
+          "first_score": 0.0,
+          "middle_score": 0.5,
+          "last_score": 0.0
+        }
+      ],
+      "best_match": {
+        "name_source": "main_fetched_name",
+        "fetched_name": {
+          "first": "JOHN",
+          "middle": "CONNOR",
+          "last": "MCCHESNEY"
+        },
+        "score": 40.0,
+        "first_score": 1.0,
+        "middle_score": 0.0,
+        "last_score": 0.0
+      },
+      "compliance": false
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "John McChesney Jr has 1 customer dispute disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "MISREPRESENTATION",
+            "Damage Amount Requested": "$100,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "FINRA AWARD DATED 11/5/15 DENIED ALL CLAIMANT'S CLAIMS.  TD AMERITRADE REVIEWED THIS MATTER AND FOUND NO EVIDENCE OF MISREPRESENTATION OR FAILURE TO DISCLOSE BY THE REPRESENTATIVE."
+            ]
+          },
+          "event_date": "4/14/2014",
+          "resolution": "Denied"
+        },
+        "description": "Customer dispute on 4/14/2014. Resolution: Denied. Allegations: MISREPRESENTATION. Damage requested: $100,000.00. Settlement: Not specified"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No matching disciplinary records found for John McChesney Jr, but 15 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Search Info",
+        "alert_category": "DISCIPLINARY",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "John McChesney Jr",
+            "sec_disciplinary": {
+              "source": "SEC_Disciplinary",
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records found"
+            },
+            "finra_disciplinary": {
+              "source": "FINRA_Disciplinary",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Michael Barrows, Eric John Ludovico",
+                "Michael Barrows, Eric John Ludovico",
+                "John E. Fendrich, Jr.",
+                "John E. Fendrich, Jr.",
+                "James Elroy Burton, Jr.",
+                "James Elroy Burton, Jr.",
+                "Dennis Matthew Lovett, Jr.",
+                "Dennis Matthew Lovett, Jr.",
+                "John Michael Palma",
+                "John Paul Meadow",
+                "Kevin John Herne",
+                "John Alfred Dow, Jr.",
+                "John Alfred Dow, Jr.",
+                "Emilio Guajardo, Jr.",
+                "Emilio Guajardo, Jr.",
+                "Donald Ayers Jr.",
+                "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.",
+                "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.",
+                "John Franzino",
+                "Rudy R. Mejia Jr.",
+                "John Lowry, Kim Monchik",
+                "John Lowry, Kim Monchik",
+                "Smith, Brown & Groover, Inc.Raymond Hill Smith, Jr.",
+                "Smith, Brown & Groover, Inc.Raymond Hill Smith, Jr."
+              ],
+              "name_scores": {
+                "Michael Barrows, Eric John Ludovico": 0.0,
+                "John E. Fendrich, Jr.": 0.0,
+                "James Elroy Burton, Jr.": 0.0,
+                "Dennis Matthew Lovett, Jr.": 0.0,
+                "John Michael Palma": 42.86,
+                "John Paul Meadow": 42.86,
+                "Kevin John Herne": 4.76,
+                "John Alfred Dow, Jr.": 0.0,
+                "Emilio Guajardo, Jr.": 0.0,
+                "Donald Ayers Jr.": 4.76,
+                "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.": 0.0,
+                "John Franzino": 47.62,
+                "Rudy R. Mejia Jr.": 4.76,
+                "John Lowry, Kim Monchik": 0.0,
+                "Smith, Brown & Groover, Inc.Raymond Hill Smith, Jr.": 0.0
+              },
+              "exact_match_found": false,
+              "status": "Partial failure: Error processing 'Smith, Brown & Groover, Inc.Raymond Hill Smith, Jr.'"
+            }
+          }
+        },
+        "description": "Found 15 disciplinary records for John McChesney Jr, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "John McChesney Jr",
+      "sec_disciplinary": {
+        "source": "SEC_Disciplinary",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_disciplinary": {
+        "source": "FINRA_Disciplinary",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Michael Barrows, Eric John Ludovico",
+          "Michael Barrows, Eric John Ludovico",
+          "John E. Fendrich, Jr.",
+          "John E. Fendrich, Jr.",
+          "James Elroy Burton, Jr.",
+          "James Elroy Burton, Jr.",
+          "Dennis Matthew Lovett, Jr.",
+          "Dennis Matthew Lovett, Jr.",
+          "John Michael Palma",
+          "John Paul Meadow",
+          "Kevin John Herne",
+          "John Alfred Dow, Jr.",
+          "John Alfred Dow, Jr.",
+          "Emilio Guajardo, Jr.",
+          "Emilio Guajardo, Jr.",
+          "Donald Ayers Jr.",
+          "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.",
+          "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.",
+          "John Franzino",
+          "Rudy R. Mejia Jr.",
+          "John Lowry, Kim Monchik",
+          "John Lowry, Kim Monchik",
+          "Smith, Brown & Groover, Inc.Raymond Hill Smith, Jr.",
+          "Smith, Brown & Groover, Inc.Raymond Hill Smith, Jr."
+        ],
+        "name_scores": {
+          "Michael Barrows, Eric John Ludovico": 0.0,
+          "John E. Fendrich, Jr.": 0.0,
+          "James Elroy Burton, Jr.": 0.0,
+          "Dennis Matthew Lovett, Jr.": 0.0,
+          "John Michael Palma": 42.86,
+          "John Paul Meadow": 42.86,
+          "Kevin John Herne": 4.76,
+          "John Alfred Dow, Jr.": 0.0,
+          "Emilio Guajardo, Jr.": 0.0,
+          "Donald Ayers Jr.": 4.76,
+          "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.": 0.0,
+          "John Franzino": 47.62,
+          "Rudy R. Mejia Jr.": 4.76,
+          "John Lowry, Kim Monchik": 0.0,
+          "Smith, Brown & Groover, Inc.Raymond Hill Smith, Jr.": 0.0
+        },
+        "exact_match_found": false,
+        "status": "Partial failure: Error processing 'Smith, Brown & Groover, Inc.Raymond Hill Smith, Jr.'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": true,
+    "compliance_explanation": "No matching arbitration records found for John McChesney Jr, but 15 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Arbitration Search Info",
+        "alert_category": "ARBITRATION",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "John McChesney Jr",
+            "sec_arbitration": {
+              "source": "SEC_Arbitration",
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records found"
+            },
+            "finra_arbitration": {
+              "source": "FINRA_Arbitration",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Paulson Investment Company",
+                "LLC",
+                "James Schwartz",
+                "Joseph Lascala",
+                "Kevin Stamm",
+                "Shawn Mcchesney",
+                "Steven Luftschein",
+                "Thomas Custance",
+                "Merrill Lynch Pierce Fenner & Smith Inc.",
+                "Merrill Lynch Pierce Fenner & Smith Inc.",
+                "TD Ameritrade",
+                "Inc.",
+                "David Ivanovich Jr.",
+                "John Campeau",
+                "UBS Financial Services Inc.",
+                "Pershing LLC",
+                "Morgan Stanley",
+                "Jonathan Lonske",
+                "John Santariello",
+                "E*Trade Securities LLC",
+                "Kimberly Herkert and John Herkert",
+                "Jr.",
+                "Morgan Stanley"
+              ],
+              "name_scores": {
+                "Paulson Investment Company": 4.76,
+                "LLC": 9.52,
+                "James Schwartz": 9.52,
+                "Joseph Lascala": 9.52,
+                "Kevin Stamm": 9.52,
+                "Shawn Mcchesney": 9.52,
+                "Steven Luftschein": 9.52,
+                "Thomas Custance": 9.52,
+                "Merrill Lynch Pierce Fenner & Smith Inc.": 4.76,
+                "TD Ameritrade": 9.52,
+                "Inc.": 9.52,
+                "David Ivanovich Jr.": 4.76,
+                "John Campeau": 47.62,
+                "UBS Financial Services Inc.": 4.76,
+                "Pershing LLC": 9.52,
+                "Morgan Stanley": 9.52,
+                "Jonathan Lonske": 9.52,
+                "John Santariello": 47.62,
+                "E*Trade Securities LLC": 4.76,
+                "Kimberly Herkert and John Herkert": 4.76,
+                "Jr.": 9.52
+              },
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'John McChesney Jr'"
+            }
+          }
+        },
+        "description": "Found 15 arbitration records for John McChesney Jr, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "John McChesney Jr",
+      "sec_arbitration": {
+        "source": "SEC_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_arbitration": {
+        "source": "FINRA_Arbitration",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Paulson Investment Company",
+          "LLC",
+          "James Schwartz",
+          "Joseph Lascala",
+          "Kevin Stamm",
+          "Shawn Mcchesney",
+          "Steven Luftschein",
+          "Thomas Custance",
+          "Merrill Lynch Pierce Fenner & Smith Inc.",
+          "Merrill Lynch Pierce Fenner & Smith Inc.",
+          "TD Ameritrade",
+          "Inc.",
+          "David Ivanovich Jr.",
+          "John Campeau",
+          "UBS Financial Services Inc.",
+          "Pershing LLC",
+          "Morgan Stanley",
+          "Jonathan Lonske",
+          "John Santariello",
+          "E*Trade Securities LLC",
+          "Kimberly Herkert and John Herkert",
+          "Jr.",
+          "Morgan Stanley"
+        ],
+        "name_scores": {
+          "Paulson Investment Company": 4.76,
+          "LLC": 9.52,
+          "James Schwartz": 9.52,
+          "Joseph Lascala": 9.52,
+          "Kevin Stamm": 9.52,
+          "Shawn Mcchesney": 9.52,
+          "Steven Luftschein": 9.52,
+          "Thomas Custance": 9.52,
+          "Merrill Lynch Pierce Fenner & Smith Inc.": 4.76,
+          "TD Ameritrade": 9.52,
+          "Inc.": 9.52,
+          "David Ivanovich Jr.": 4.76,
+          "John Campeau": 47.62,
+          "UBS Financial Services Inc.": 4.76,
+          "Pershing LLC": 9.52,
+          "Morgan Stanley": 9.52,
+          "Jonathan Lonske": 9.52,
+          "John Santariello": 47.62,
+          "E*Trade Securities LLC": 4.76,
+          "Kimberly Herkert and John Herkert": 4.76,
+          "Jr.": 9.52
+        },
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'John McChesney Jr'"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for John McChesney Jr; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "MISREPRESENTATION",
+            "Damage Amount Requested": "$100,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "FINRA AWARD DATED 11/5/15 DENIED ALL CLAIMANT'S CLAIMS.  TD AMERITRADE REVIEWED THIS MATTER AND FOUND NO EVIDENCE OF MISREPRESENTATION OR FAILURE TO DISCLOSE BY THE REPRESENTATIVE."
+            ]
+          },
+          "event_date": "4/14/2014",
+          "resolution": "Denied"
+        },
+        "description": "Customer dispute on 4/14/2014. Resolution: Denied. Allegations: MISREPRESENTATION. Damage requested: $100,000.00. Settlement: Not specified"
+      }
+    ]
+  }
+}

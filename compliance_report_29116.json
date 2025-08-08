@@ -1,0 +1,185 @@
+{
+  "reference_id": "test-ref-29116",
+  "claim": {
+    "reference_id": "test-ref-29116",
+    "business_ref": "BIZ_29116",
+    "business_name": "BROOKSTONE SECURITIES, INC.",
+    "organization_crd": "29116",
+    "entityName": "BROOKSTONE SECURITIES, INC."
+  },
+  "entity": {
+    "firm_name": "BROOKSTONE SECURITIES, INC.",
+    "crd_number": "29116",
+    "sec_number": "",
+    "registration_status": "",
+    "address": {},
+    "registration_date": "",
+    "other_names": [
+      "BROOKSTONE INVESTMENT ADVISORY SERVICES",
+      "RISE, INC.",
+      "RESOURCE-REALTY INVESTMENT SECURITIES ENTERPRISES, INC.",
+      "BROOKSTONE SECURITIES, INC."
+    ],
+    "is_sec_registered": false,
+    "is_state_registered": false,
+    "is_era_registered": false,
+    "is_sec_era_registered": false,
+    "is_state_era_registered": false,
+    "adv_filing_date": "",
+    "has_adv_pdf": false
+  },
+  "search_evaluation": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with SEC data, individual found.",
+    "basic_result": {
+      "crd_number": "29116",
+      "firm_status": "inactive",
+      "firm_name": "BROOKSTONE SECURITIES, INC.",
+      "other_names": [
+        "BROOKSTONE INVESTMENT ADVISORY SERVICES",
+        "RISE, INC.",
+        "RESOURCE-REALTY INVESTMENT SECURITIES ENTERPRISES, INC.",
+        "BROOKSTONE SECURITIES, INC."
+      ],
+      "status_message": "This firm exists but appears to be inactive or expelled. Limited information is available.",
+      "registration_status": ""
+    },
+    "sec_search_result": {
+      "org_name": "BROOKSTONE SECURITIES, INC.",
+      "org_crd": "13366",
+      "firm_ia_sec_number": "",
+      "firm_ia_full_sec_number": "",
+      "firm_other_names": [
+        "BROOKSTONE INVESTMENT ADVISORY SERVICES",
+        "RISE, INC.",
+        "RESOURCE-REALTY INVESTMENT SECURITIES ENTERPRISES, INC.",
+        "BROOKSTONE SECURITIES, INC."
+      ],
+      "firm_type": "",
+      "registration_status": "",
+      "firm_ia_scope": "INACTIVE",
+      "firm_ia_disclosure_fl": "Y",
+      "firm_branches_count": 0
+    },
+    "finra_search_result": {
+      "status": "not_found",
+      "details": {}
+    }
+  },
+  "status_evaluation": {
+    "source": "SEC",
+    "compliance": false,
+    "compliance_explanation": "Firm is inactive or expelled",
+    "alerts": [
+      {
+        "alert_type": "InactiveExpelledFirm",
+        "severity": "HIGH",
+        "metadata": {
+          "firm_status": "inactive",
+          "status_message": "This firm exists but appears to be inactive or expelled. Limited information is available."
+        },
+        "description": "Firm is inactive or has been expelled from regulatory bodies",
+        "alert_category": "REGISTRATION"
+      },
+      {
+        "alert_type": "NoActiveRegistration",
+        "severity": "HIGH",
+        "metadata": {
+          "registration_status": "",
+          "firm_ia_scope": "",
+          "firm_status": "inactive",
+          "source": "Unknown"
+        },
+        "description": "No active registrations found with any regulatory body",
+        "alert_category": "REGISTRATION"
+      }
+    ]
+  },
+  "disclosure_review": {
+    "source": "SEC",
+    "compliance": false,
+    "compliance_explanation": "Disclosure flag indicates disclosures exist but records are unavailable",
+    "alerts": [
+      {
+        "alert_type": "MissingDisclosureRecords",
+        "severity": "HIGH",
+        "metadata": {
+          "disclosure_flag": "Y",
+          "business_name": "BROOKSTONE SECURITIES, INC."
+        },
+        "description": "Disclosure flag is 'Y' but no disclosure records are available",
+        "alert_category": "DISCLOSURE"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "No disciplinary actions found.",
+    "alerts": []
+  },
+  "arbitration_review": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "No arbitration cases found.",
+    "alerts": []
+  },
+  "adv_evaluation": {
+    "compliance": true,
+    "explanation": "ADV evaluation skipped due to configuration",
+    "alerts": [],
+    "skipped": true,
+    "skip_timestamp": "2025-08-01T12:38:30.467832",
+    "source": "SEC",
+    "adv_status": "skipped"
+  },
+  "final_evaluation": {
+    "source": "SEC",
+    "overall_compliance": false,
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "description": "One or more compliance checks failed",
+    "alerts": [
+      {
+        "eventDate": "2025-08-01",
+        "severity": "HIGH",
+        "alert_category": "REGISTRATION",
+        "alert_type": "Registration Issue",
+        "description": "Firm is inactive or has been expelled from regulatory bodies",
+        "source": "SEC",
+        "metadata": {
+          "firm_status": "inactive",
+          "status_message": "This firm exists but appears to be inactive or expelled. Limited information is available."
+        }
+      },
+      {
+        "eventDate": "2025-08-01",
+        "severity": "HIGH",
+        "alert_category": "REGISTRATION",
+        "alert_type": "Registration Issue",
+        "description": "No active registrations found with any regulatory body",
+        "source": "SEC",
+        "metadata": {
+          "registration_status": "",
+          "firm_ia_scope": "",
+          "firm_status": "inactive",
+          "source": "Unknown"
+        }
+      },
+      {
+        "eventDate": "2025-08-01",
+        "severity": "HIGH",
+        "alert_category": "DISCLOSURE",
+        "alert_type": "MissingDisclosureRecords",
+        "description": "Disclosure flag is 'Y' but no disclosure records are available",
+        "source": "SEC",
+        "metadata": {
+          "disclosure_flag": "Y",
+          "business_name": "BROOKSTONE SECURITIES, INC."
+        }
+      }
+    ]
+  },
+  "generated_at": "2025-08-01T12:38:30.475414"
+}

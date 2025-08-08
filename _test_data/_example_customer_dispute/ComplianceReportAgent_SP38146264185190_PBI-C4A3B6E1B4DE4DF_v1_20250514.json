@@ -1,0 +1,731 @@
+{
+  "reference_id": "SP38146264185190_PBI-C4A3B6E1B4DE4DF",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-C4A3B6E1B4DE4DF",
+    "first_name": "Jeffrey",
+    "last_name": "Brown",
+    "employee_number": "EN-057217",
+    "zip": "92024",
+    "crdNumber": "2694917",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "2694917",
+    "individual_name": "Jeffrey Brown",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "FINRA_BrokerCheck",
+    "basic_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "JEFFREY ALAN BROWN",
+      "other_names": [
+        "JEFF  BROWN"
+      ],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "2/13/2004",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "CLIENT ALLEGES, INTER ALIA, INVESTMENTS IN MUTUAL FUND SHARES IN 2001 WERE INAPPROPRIATE.",
+            "Damage Amount Requested": "$8,520.00",
+            "Settlement Amount": "$8,525.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "THIS MATTER WAS SETTLED FOR COST OF LITIGATION PURPOSES."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "2/25/1997",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "1/19/1996",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 31",
+          "examName": "Futures Managed Funds Examination",
+          "examTakenDate": "10/22/2001",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "1/15/1996",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "6413",
+          "firm_name": "LPL FINANCIAL LLC",
+          "registration_begin_date": "9/18/2015",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/3/2019"
+        },
+        {
+          "firm_id": "19616",
+          "firm_name": "WELLS FARGO ADVISORS, LLC",
+          "registration_begin_date": "7/1/2003",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "9/25/2015"
+        },
+        {
+          "firm_id": "7471",
+          "firm_name": "PRUDENTIAL SECURITIES INCORPORATED",
+          "registration_begin_date": "8/9/2002",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/1/2003"
+        },
+        {
+          "firm_id": "7556",
+          "firm_name": "MORGAN STANLEY DW INC.",
+          "registration_begin_date": "11/19/1999",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/15/2002"
+        },
+        {
+          "firm_id": "7471",
+          "firm_name": "PRUDENTIAL SECURITIES INCORPORATED",
+          "registration_begin_date": "2/4/1997",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/12/1999"
+        },
+        {
+          "firm_id": "6363",
+          "firm_name": "AMERICAN EXPRESS FINANCIAL ADVISORS INC.",
+          "registration_begin_date": "1/16/1996",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "1/30/1997"
+        },
+        {
+          "firm_id": "6321",
+          "firm_name": "IDS LIFE INSURANCE COMPANY",
+          "registration_begin_date": "1/16/1996",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "1/30/1997"
+        }
+      ],
+      "crd_number": "2694917"
+    },
+    "detailed_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "JEFFREY ALAN BROWN",
+      "other_names": [
+        "JEFF  BROWN"
+      ],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "2/13/2004",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "CLIENT ALLEGES, INTER ALIA, INVESTMENTS IN MUTUAL FUND SHARES IN 2001 WERE INAPPROPRIATE.",
+            "Damage Amount Requested": "$8,520.00",
+            "Settlement Amount": "$8,525.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "THIS MATTER WAS SETTLED FOR COST OF LITIGATION PURPOSES."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "2/25/1997",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "1/19/1996",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 31",
+          "examName": "Futures Managed Funds Examination",
+          "examTakenDate": "10/22/2001",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "1/15/1996",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "6413",
+          "firm_name": "LPL FINANCIAL LLC",
+          "registration_begin_date": "9/18/2015",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/3/2019"
+        },
+        {
+          "firm_id": "19616",
+          "firm_name": "WELLS FARGO ADVISORS, LLC",
+          "registration_begin_date": "7/1/2003",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "9/25/2015"
+        },
+        {
+          "firm_id": "7471",
+          "firm_name": "PRUDENTIAL SECURITIES INCORPORATED",
+          "registration_begin_date": "8/9/2002",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/1/2003"
+        },
+        {
+          "firm_id": "7556",
+          "firm_name": "MORGAN STANLEY DW INC.",
+          "registration_begin_date": "11/19/1999",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/15/2002"
+        },
+        {
+          "firm_id": "7471",
+          "firm_name": "PRUDENTIAL SECURITIES INCORPORATED",
+          "registration_begin_date": "2/4/1997",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/12/1999"
+        },
+        {
+          "firm_id": "6363",
+          "firm_name": "AMERICAN EXPRESS FINANCIAL ADVISORS INC.",
+          "registration_begin_date": "1/16/1996",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "1/30/1997"
+        },
+        {
+          "firm_id": "6321",
+          "firm_name": "IDS LIFE INSURANCE COMPANY",
+          "registration_begin_date": "1/16/1996",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "1/30/1997"
+        }
+      ],
+      "crd_number": "2694917"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "2694917",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA BrokerCheck data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "Jeffrey",
+        "middle": null,
+        "last": "Brown"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "JEFFREY",
+            "middle": "ALAN",
+            "last": "BROWN"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        },
+        {
+          "name_source": "other_names[0]",
+          "fetched_name": {
+            "first": "JEFF",
+            "middle": null,
+            "last": "BROWN"
+          },
+          "score": 55.56,
+          "first_score": 0.0,
+          "middle_score": 0.0,
+          "last_score": 1.0
+        }
+      ],
+      "best_match": {
+        "name_source": "main_fetched_name",
+        "fetched_name": {
+          "first": "JEFFREY",
+          "middle": "ALAN",
+          "last": "BROWN"
+        },
+        "score": 95.0,
+        "first_score": 1.0,
+        "middle_score": 0.5,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "Jeffrey Brown has 1 customer dispute disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "CLIENT ALLEGES, INTER ALIA, INVESTMENTS IN MUTUAL FUND SHARES IN 2001 WERE INAPPROPRIATE.",
+            "Damage Amount Requested": "$8,520.00",
+            "Settlement Amount": "$8,525.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "THIS MATTER WAS SETTLED FOR COST OF LITIGATION PURPOSES."
+            ]
+          },
+          "event_date": "2/13/2004",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 2/13/2004. Resolution: Settled. Allegations: CLIENT ALLEGES, INTER ALIA, INVESTMENTS IN MUTUAL FUND SHARES IN 2001 WERE INAPPROPRIATE.. Damage requested: $8,520.00. Settlement: $8,525.00"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No matching disciplinary records found for Jeffrey Brown, but 16 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Search Info",
+        "alert_category": "DISCIPLINARY",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Jeffrey Brown",
+            "sec_disciplinary": {
+              "source": "SEC_Disciplinary",
+              "records_found": 1,
+              "records_filtered": 1,
+              "names_found": [
+                "JEFFREY  BROWN",
+                "JEFFREY  BROWN"
+              ],
+              "name_scores": {
+                "JEFFREY  BROWN": 0.0
+              },
+              "exact_match_found": false,
+              "status": "Partial failure: Error processing 'JEFFREY  BROWN'"
+            },
+            "finra_disciplinary": {
+              "source": "FINRA_Disciplinary",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Jeffrey Arthur Perryman",
+                "Jeffrey Tabak",
+                "Jeffrey T. Higgins",
+                "Jeffrey Payne",
+                "Jeffrey Dattilo",
+                "Sean Jeffrey Fields",
+                "Reuben Lamont Brown",
+                "Jeffrey W. Davidson",
+                "Jeffrey A. Russell",
+                "Jeffrey Kenneth Kirkpatrick",
+                "Jeffrey Max Cohen",
+                "Jeffrey L. Prince",
+                "FFED Wealth Partners LLCJeffrey Scott Graves",
+                "Jeffrey D. Basford",
+                "Jeffrey Martin"
+              ],
+              "name_scores": {
+                "Jeffrey Arthur Perryman": 47.62,
+                "Jeffrey Tabak": 47.37,
+                "Jeffrey T. Higgins": 47.62,
+                "Jeffrey Payne": 47.37,
+                "Jeffrey Dattilo": 47.37,
+                "Sean Jeffrey Fields": 9.52,
+                "Reuben Lamont Brown": 57.14,
+                "Jeffrey W. Davidson": 47.62,
+                "Jeffrey A. Russell": 47.62,
+                "Jeffrey Kenneth Kirkpatrick": 47.62,
+                "Jeffrey Max Cohen": 47.62,
+                "Jeffrey L. Prince": 47.62,
+                "FFED Wealth Partners LLCJeffrey Scott Graves": 9.52,
+                "Jeffrey D. Basford": 47.62,
+                "Jeffrey Martin": 47.37
+              },
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'Jeffrey Brown'"
+            }
+          }
+        },
+        "description": "Found 16 disciplinary records for Jeffrey Brown, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Jeffrey Brown",
+      "sec_disciplinary": {
+        "source": "SEC_Disciplinary",
+        "records_found": 1,
+        "records_filtered": 1,
+        "names_found": [
+          "JEFFREY  BROWN",
+          "JEFFREY  BROWN"
+        ],
+        "name_scores": {
+          "JEFFREY  BROWN": 0.0
+        },
+        "exact_match_found": false,
+        "status": "Partial failure: Error processing 'JEFFREY  BROWN'"
+      },
+      "finra_disciplinary": {
+        "source": "FINRA_Disciplinary",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Jeffrey Arthur Perryman",
+          "Jeffrey Tabak",
+          "Jeffrey T. Higgins",
+          "Jeffrey Payne",
+          "Jeffrey Dattilo",
+          "Sean Jeffrey Fields",
+          "Reuben Lamont Brown",
+          "Jeffrey W. Davidson",
+          "Jeffrey A. Russell",
+          "Jeffrey Kenneth Kirkpatrick",
+          "Jeffrey Max Cohen",
+          "Jeffrey L. Prince",
+          "FFED Wealth Partners LLCJeffrey Scott Graves",
+          "Jeffrey D. Basford",
+          "Jeffrey Martin"
+        ],
+        "name_scores": {
+          "Jeffrey Arthur Perryman": 47.62,
+          "Jeffrey Tabak": 47.37,
+          "Jeffrey T. Higgins": 47.62,
+          "Jeffrey Payne": 47.37,
+          "Jeffrey Dattilo": 47.37,
+          "Sean Jeffrey Fields": 9.52,
+          "Reuben Lamont Brown": 57.14,
+          "Jeffrey W. Davidson": 47.62,
+          "Jeffrey A. Russell": 47.62,
+          "Jeffrey Kenneth Kirkpatrick": 47.62,
+          "Jeffrey Max Cohen": 47.62,
+          "Jeffrey L. Prince": 47.62,
+          "FFED Wealth Partners LLCJeffrey Scott Graves": 9.52,
+          "Jeffrey D. Basford": 47.62,
+          "Jeffrey Martin": 47.37
+        },
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Jeffrey Brown'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": false,
+    "compliance_explanation": "Arbitration issues found for Jeffrey Brown.",
+    "actions": [
+      {
+        "case_id": "In the Matter of JEFFREY BROWN, SEC File No. 3-15030",
+        "date": "Sept. 18, 2012",
+        "details": {
+          "action_type": "Award against individual",
+          "firms_individuals": "Jeffrey Brown",
+          "description": "Case In the Matter of JEFFREY BROWN, SEC File No. 3-15030 closed with outcome: Award against individual",
+          "enforcement_action": "In the Matter of JEFFREY BROWN, SEC File No. 3-15030",
+          "documents": [
+            {
+              "title": "IA-3466",
+              "link": "https://www.sec.gov/litigation/admin/2012/ia-3466.pdf"
+            }
+          ]
+        },
+        "matched_name": "Jeffrey Brown"
+      }
+    ],
+    "alerts": [
+      {
+        "alert_type": "Arbitration Compliance",
+        "alert_category": "ARBITRATION",
+        "severity": "HIGH",
+        "metadata": {
+          "arbitration": {
+            "case_id": "In the Matter of JEFFREY BROWN, SEC File No. 3-15030",
+            "date": "Sept. 18, 2012",
+            "details": {
+              "action_type": "Award against individual",
+              "firms_individuals": "Jeffrey Brown",
+              "description": "Case In the Matter of JEFFREY BROWN, SEC File No. 3-15030 closed with outcome: Award against individual",
+              "enforcement_action": "In the Matter of JEFFREY BROWN, SEC File No. 3-15030",
+              "documents": [
+                {
+                  "title": "IA-3466",
+                  "link": "https://www.sec.gov/litigation/admin/2012/ia-3466.pdf"
+                }
+              ]
+            },
+            "matched_name": "Jeffrey Brown"
+          }
+        },
+        "description": "Arbitration issue found: Case In the Matter of JEFFREY BROWN, SEC File No. 3-15030 for Jeffrey Brown, status: unknown, outcome: award against individual."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Jeffrey Brown",
+      "sec_arbitration": {
+        "source": "SEC_Arbitration",
+        "records_found": 1,
+        "records_filtered": 0,
+        "names_found": [
+          "Jeffrey Brown"
+        ],
+        "name_scores": {
+          "Jeffrey Brown": 100.0
+        },
+        "exact_match_found": true,
+        "status": "Exact matches found"
+      },
+      "finra_arbitration": {
+        "source": "FINRA_Arbitration",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Morgan Stanley",
+          "Morgan Stanley & Co.",
+          "LLC",
+          "Leonard Waldmann",
+          "Falcon Square Capital",
+          "LLC",
+          "Pacific West Financial Group",
+          "Pacific West Securities",
+          "Inc.",
+          "Chase Investment Services Corp.",
+          "Lamon Jackson",
+          "Susan Vanspybrook",
+          "J.P. Morgan Securities",
+          "LLC",
+          "Angela Bearup",
+          "Bahram Shidoosh",
+          "Craig Connor",
+          "Daniel Fuller",
+          "Charles Schwab & Co.",
+          "Inc.",
+          "James Shoultz",
+          "Jeffrey Paulson",
+          "John Gustafson",
+          "Karen Smith",
+          "Kelley Densham",
+          "Rachel Brown",
+          "Richard Schroeder",
+          "Sean Connolly",
+          "Stephen Petti",
+          "Stephen Jay Muth",
+          "FSC Securities Corporation",
+          "Robin Naylor",
+          "Pacific West Securities",
+          "Inc.",
+          "Richard Plevy",
+          "Bryan Mazliach",
+          "Jonothon Lieberman",
+          "Rockwell Global Capital LLC",
+          "Citigroup Global Markets",
+          "Inc.",
+          "J.P. Morgan Securities",
+          "LLC",
+          "SunTrust Investment Services",
+          "Inc.",
+          "Christopher Amo",
+          "UBS Financial Services Inc.",
+          "UBS Financial Services Inc."
+        ],
+        "name_scores": {
+          "Morgan Stanley": 5.26,
+          "Morgan Stanley & Co.": 9.52,
+          "LLC": 5.26,
+          "Leonard Waldmann": 5.26,
+          "Falcon Square Capital": 9.52,
+          "Pacific West Financial Group": 9.52,
+          "Pacific West Securities": 9.52,
+          "Inc.": 5.26,
+          "Chase Investment Services Corp.": 9.52,
+          "Lamon Jackson": 5.26,
+          "Susan Vanspybrook": 5.26,
+          "J.P. Morgan Securities": 9.52,
+          "Angela Bearup": 5.26,
+          "Bahram Shidoosh": 5.26,
+          "Craig Connor": 5.26,
+          "Daniel Fuller": 5.26,
+          "Charles Schwab & Co.": 9.52,
+          "James Shoultz": 5.26,
+          "Jeffrey Paulson": 47.37,
+          "John Gustafson": 5.26,
+          "Karen Smith": 5.26,
+          "Kelley Densham": 5.26,
+          "Rachel Brown": 57.89,
+          "Richard Schroeder": 5.26,
+          "Sean Connolly": 5.26,
+          "Stephen Petti": 5.26,
+          "Stephen Jay Muth": 9.52,
+          "FSC Securities Corporation": 9.52,
+          "Robin Naylor": 5.26,
+          "Richard Plevy": 5.26,
+          "Bryan Mazliach": 5.26,
+          "Jonothon Lieberman": 5.26,
+          "Rockwell Global Capital LLC": 9.52,
+          "Citigroup Global Markets": 9.52,
+          "SunTrust Investment Services": 9.52,
+          "Christopher Amo": 5.26,
+          "UBS Financial Services Inc.": 9.52
+        },
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Jeffrey Brown'"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for Jeffrey Brown; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "CLIENT ALLEGES, INTER ALIA, INVESTMENTS IN MUTUAL FUND SHARES IN 2001 WERE INAPPROPRIATE.",
+            "Damage Amount Requested": "$8,520.00",
+            "Settlement Amount": "$8,525.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "THIS MATTER WAS SETTLED FOR COST OF LITIGATION PURPOSES."
+            ]
+          },
+          "event_date": "2/13/2004",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 2/13/2004. Resolution: Settled. Allegations: CLIENT ALLEGES, INTER ALIA, INVESTMENTS IN MUTUAL FUND SHARES IN 2001 WERE INAPPROPRIATE.. Damage requested: $8,520.00. Settlement: $8,525.00"
+      },
+      {
+        "alert_type": "Arbitration Compliance",
+        "alert_category": "ARBITRATION",
+        "severity": "HIGH",
+        "metadata": {
+          "arbitration": {
+            "case_id": "In the Matter of JEFFREY BROWN, SEC File No. 3-15030",
+            "date": "Sept. 18, 2012",
+            "details": {
+              "action_type": "Award against individual",
+              "firms_individuals": "Jeffrey Brown",
+              "description": "Case In the Matter of JEFFREY BROWN, SEC File No. 3-15030 closed with outcome: Award against individual",
+              "enforcement_action": "In the Matter of JEFFREY BROWN, SEC File No. 3-15030",
+              "documents": [
+                {
+                  "title": "IA-3466",
+                  "link": "https://www.sec.gov/litigation/admin/2012/ia-3466.pdf"
+                }
+              ]
+            },
+            "matched_name": "Jeffrey Brown"
+          }
+        },
+        "description": "Arbitration issue found: Case In the Matter of JEFFREY BROWN, SEC File No. 3-15030 for Jeffrey Brown, status: unknown, outcome: award against individual."
+      }
+    ]
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "basicInformation": {
+    "individualId": 4982969,
+    "firstName": "JOHN",
+    "middleName": "CONNOR",
+    "lastName": "MCCHESNEY",
+    "otherNames": [
+      "JOHN C MCCHESNEY",
+      "CONNOR  MCHESNEY"
+    ],
+    "bcScope": "InActive",
+    "iaScope": "Active",
+    "daysInIndustry": 3224
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "29938",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "16514",
+      "firmId": 5393,
+      "firmName": "CHARLES SCHWAB & CO., INC.",
+      "city": "SCHAUMBURG",
+      "state": "IL",
+      "registrationBeginDate": "8/20/2015",
+      "registrationEndDate": "6/9/2017",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "60469",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "23395",
+      "firmId": 7870,
+      "firmName": "TD AMERITRADE, INC.",
+      "city": "NORTHBROOK",
+      "state": "IL",
+      "registrationBeginDate": "2/5/2013",
+      "registrationEndDate": "7/29/2015",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "66936",
+      "firmId": 135625,
+      "firmName": "OPTIONSHOUSE, LLC",
+      "city": "DRAPER",
+      "state": "UT",
+      "registrationBeginDate": "9/25/2008",
+      "registrationEndDate": "2/7/2012",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "23266",
+      "firmId": 7874,
+      "firmName": "ZACKS & COMPANY",
+      "city": "CHICAGO",
+      "state": "IL",
+      "registrationBeginDate": "2/27/2008",
+      "registrationEndDate": "8/21/2008",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "15869",
+      "firmId": 8209,
+      "firmName": "MORGAN STANLEY & CO., INCORPORATED",
+      "city": "RIVERWOODS",
+      "state": "IL",
+      "registrationBeginDate": "4/27/2007",
+      "registrationEndDate": "1/2/2008",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "previousIAEmployments": [],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "4/14/2014",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Denied",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 11,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "MISREPRESENTATION",
+        "Damage Amount Requested": "$100,000.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": "",
+        "Broker Comment": [
+          "FINRA AWARD DATED 11/5/15 DENIED ALL CLAIMANT'S CLAIMS.  TD AMERITRADE REVIEWED THIS MATTER AND FOUND NO EVIDENCE OF MISREPRESENTATION OR FAILURE TO DISCLOSE BY THE REPRESENTATIVE."
+        ]
+      }
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 1,
+    "principalExamCount": 2,
+    "productExamCount": 3
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 66",
+      "examName": "Uniform Combined State Law Examination",
+      "examTakenDate": "6/4/2007",
+      "examScope": "BOTH"
+    }
+  ],
+  "principalExamCategory": [
+    {
+      "examCategory": "Series 4",
+      "examName": "Registered Options Principal Examination",
+      "examTakenDate": "5/27/2010",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 24",
+      "examName": "General Securities Principal Examination",
+      "examTakenDate": "5/11/2010",
+      "examScope": "BC"
+    }
+  ],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "6/9/2017",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 31",
+      "examName": "Futures Managed Funds Examination",
+      "examTakenDate": "6/8/2007",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "4/26/2007",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0
+  },
+  "registeredStates": [
+    {
+      "state": "Illinois",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "6/9/2017"
+    },
+    {
+      "state": "Pennsylvania",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "10/13/2020"
+    },
+    {
+      "state": "Wisconsin",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "10/13/2020"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}

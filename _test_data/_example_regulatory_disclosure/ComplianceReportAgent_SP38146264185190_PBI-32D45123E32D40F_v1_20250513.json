@@ -1,0 +1,688 @@
+{
+  "reference_id": "SP38146264185190_PBI-32D45123E32D40F",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-32D45123E32D40F",
+    "first_name": "Brian",
+    "last_name": "Mulvey",
+    "employee_number": "EN-044494",
+    "zip": "2090",
+    "crdNumber": "2286524",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "2286524",
+    "individual_name": "Brian Mulvey",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "FINRA_BrokerCheck",
+    "basic_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "BRIAN PATRICK MULVEY",
+      "other_names": [
+        "BRIAN P MULVEY"
+      ],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "6/28/2011",
+          "disclosureType": "Regulatory",
+          "disclosureResolution": "Final",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "DocketNumberFDA": "2008013864401",
+            "DocketNumberAAO": "2008013864401",
+            "Initiated By": "FINRA",
+            "Allegations": "NASD RULE 2110 - BRIAN MULVEY'S MEMBER FIRM OFFERED ITS CUSTOMERS ACCESS TO THIRD PARTY INVESTMENT ADVISERS BY MEANS OF ITS ADVISER SELECT PROGRAM THROUGH WHICH REPRESENTATIVES WOULD RECOMMEND CERTAIN THIRD PARTY ADVISERS TO FIRM CUSTOMERS WHO THEN \"HIRED\" THE ADVISER TO EXECUTE TRADES IN THEIR ACCOUNTS. THE THIRD PARTY INVESTMENT ADVISERS WERE GRANTED FULL TRADING DISCRETION OVER THE CUSTOMERS' ACCOUNTS AND THE ADVISERS' TRADING STRATEGIES WITHIN THE ACCOUNTS WERE CONFIDENTIAL. A PORTION OF THE FEE CHARGED TO CUSTOMERS FOR THE ADVISER SELECT PROGRAM WAS PAID TO THE THIRD PARTY ADVISERS FOR THEIR SERVICES; THE FIRM'S REGISTERED REPRESENTATIVES HAD DISCRETION TO DECIDE THE OVERALL FEE TO CHARGE CUSTOMERS, AS LONG AS THE THIRD PARTY INVESTMENT ADVISERS WERE PAID THEIR APPROPRIATE PERCENTAGE. THE FIRM ALSO HAD A MANAGED SELECT PROGRAM WHICH GAVE ITS REGISTERED REPRESENTATIVES TRADING DISCRETION IN CUSTOMER ACCOUNTS INCLUDING THE DISCRETION TO DECIDE THE OVERALL FEE FOR MANAGED SELECT ACCOUNTS; THESE ACCOUNTS DID NOT INCLUDE FEES FOR THIRD PARTY INVESTMENT ADVISERS BECAUSE THE ACCOUNTS WERE NOT SUPPOSED TO USE THE ADVISERS OR THEIR WORK PRODUCT. MULVEY MANAGED ACCOUNTS FOR A FAMILY WITH ANOTHER REGISTERED REPRESENTATIVE WHO STRUCTURED THE ACCOUNTS SO THAT SEVERAL ACCOUNTS WOULD SHADOW ADVISER SELECT TRADES BY REVIEWING TRADES IN THESE ACCOUNTS AND THEN PLACE IDENTICAL TRADES IN THE FAMILY'S MANAGED SELECT ACCOUNTS. MULVEY CHARGED THE FAMILY A FEE BUT DID NOT PAY THE THIRD PARTY INVESTMENT ADVISERS FOR THE ACCOUNTS IN WHICH HE WAS SHADOWING THE ADVISERS' TRADES. MULVEY KEPT THE FEES FOR THE MANAGED SELECT ACCOUNTS AND APPLIED THEM TO HIS GROSS PRODUCTION NUMBERS. WITHOUT CONDUCTING HIS OWN RESEARCH OR DUE DILIGENCE, MULVEY USED THE EXPERTISE AND CONFIDENTIAL TRADING STRATEGIES OF THE THIRD PARTY INVESTMENT ADVISERS WITHOUT PAYING THEM PROPER FEES. MULVEY AND ANOTHER REGISTERED REPRESENTATIVE AVOIDED PAYING APPROXIMATELY $186,820 TO THE ADVISERS AND THEY EACH MADE APPROXIMATELY $23,000 IN NET COMMISSIONS. THE FIRM DISSEMINATED TO EMPLOYEES, INCLUDING MULVEY, A POLICY AND PROCEDURE MANUAL THAT SPECIFICALLY PROHIBITED SHADOWING TRADES EXECUTED IN THE ADVISER SELECT ACCOUNTS AND THE FIRM FURTHER EMPHASIZED THE PROHIBITION IN A COMPLIANCE ALERT EMAIL AND REMINDED EMPLOYEES TO REVIEW AND COMPLY WITH THE PROCEDURE MANUAL.",
+            "Resolution": "Decision",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Civil and Administrative Penalty(ies)/Fine(s)",
+                "SanctionDetails": [
+                  {
+                    "Amount": "$5,000.00"
+                  }
+                ]
+              }
+            ],
+            "Regulator Statement": "AMENDED HEARING PANEL DECISION RENDERED MARCH 4, 2013 WHEREIN RESPONDENT IS FINED $5,000 FOR SHADOWING THIRD-PARTY MANAGERS, IN VIOLATION OF NASD RULE 2110. IN ADDITION, THE RESPONDENT IS JOINTLY AND SEVERALLY ORDERED TO PAY COSTS OF THE PROCEEDING IN THE AMOUNT OF $10,735.40. DECISION IS FINAL APRIL 22, 2013."
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "2/21/1997",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "10/9/1992",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "8/24/1994",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 6",
+          "examName": "Investment Company Products/Variable Contracts Representative Examination",
+          "examTakenDate": "10/3/1992",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "8174",
+          "firm_name": "UBS FINANCIAL SERVICES INC.",
+          "registration_begin_date": "5/15/2008",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "5/1/2019"
+        },
+        {
+          "firm_id": "2525",
+          "firm_name": "DEUTSCHE BANK SECURITIES INC.",
+          "registration_begin_date": "1/13/2001",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "6/13/2008"
+        },
+        {
+          "firm_id": "17790",
+          "firm_name": "DB ALEX. BROWN LLC",
+          "registration_begin_date": "7/7/1998",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "1/13/2001"
+        },
+        {
+          "firm_id": "17790",
+          "firm_name": "BT ALEX. BROWN INCORPORATED",
+          "registration_begin_date": "9/1/1997",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/12/1997"
+        },
+        {
+          "firm_id": "20",
+          "firm_name": "ALEX. BROWN & SONS INCORPORATED",
+          "registration_begin_date": "4/11/1996",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "9/1/1997"
+        },
+        {
+          "firm_id": "615",
+          "firm_name": "NEW ENGLAND SECURITIES",
+          "registration_begin_date": "10/9/1992",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "4/12/1996"
+        }
+      ],
+      "crd_number": "2286524"
+    },
+    "detailed_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "BRIAN PATRICK MULVEY",
+      "other_names": [
+        "BRIAN P MULVEY"
+      ],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "6/28/2011",
+          "disclosureType": "Regulatory",
+          "disclosureResolution": "Final",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "DocketNumberFDA": "2008013864401",
+            "DocketNumberAAO": "2008013864401",
+            "Initiated By": "FINRA",
+            "Allegations": "NASD RULE 2110 - BRIAN MULVEY'S MEMBER FIRM OFFERED ITS CUSTOMERS ACCESS TO THIRD PARTY INVESTMENT ADVISERS BY MEANS OF ITS ADVISER SELECT PROGRAM THROUGH WHICH REPRESENTATIVES WOULD RECOMMEND CERTAIN THIRD PARTY ADVISERS TO FIRM CUSTOMERS WHO THEN \"HIRED\" THE ADVISER TO EXECUTE TRADES IN THEIR ACCOUNTS. THE THIRD PARTY INVESTMENT ADVISERS WERE GRANTED FULL TRADING DISCRETION OVER THE CUSTOMERS' ACCOUNTS AND THE ADVISERS' TRADING STRATEGIES WITHIN THE ACCOUNTS WERE CONFIDENTIAL. A PORTION OF THE FEE CHARGED TO CUSTOMERS FOR THE ADVISER SELECT PROGRAM WAS PAID TO THE THIRD PARTY ADVISERS FOR THEIR SERVICES; THE FIRM'S REGISTERED REPRESENTATIVES HAD DISCRETION TO DECIDE THE OVERALL FEE TO CHARGE CUSTOMERS, AS LONG AS THE THIRD PARTY INVESTMENT ADVISERS WERE PAID THEIR APPROPRIATE PERCENTAGE. THE FIRM ALSO HAD A MANAGED SELECT PROGRAM WHICH GAVE ITS REGISTERED REPRESENTATIVES TRADING DISCRETION IN CUSTOMER ACCOUNTS INCLUDING THE DISCRETION TO DECIDE THE OVERALL FEE FOR MANAGED SELECT ACCOUNTS; THESE ACCOUNTS DID NOT INCLUDE FEES FOR THIRD PARTY INVESTMENT ADVISERS BECAUSE THE ACCOUNTS WERE NOT SUPPOSED TO USE THE ADVISERS OR THEIR WORK PRODUCT. MULVEY MANAGED ACCOUNTS FOR A FAMILY WITH ANOTHER REGISTERED REPRESENTATIVE WHO STRUCTURED THE ACCOUNTS SO THAT SEVERAL ACCOUNTS WOULD SHADOW ADVISER SELECT TRADES BY REVIEWING TRADES IN THESE ACCOUNTS AND THEN PLACE IDENTICAL TRADES IN THE FAMILY'S MANAGED SELECT ACCOUNTS. MULVEY CHARGED THE FAMILY A FEE BUT DID NOT PAY THE THIRD PARTY INVESTMENT ADVISERS FOR THE ACCOUNTS IN WHICH HE WAS SHADOWING THE ADVISERS' TRADES. MULVEY KEPT THE FEES FOR THE MANAGED SELECT ACCOUNTS AND APPLIED THEM TO HIS GROSS PRODUCTION NUMBERS. WITHOUT CONDUCTING HIS OWN RESEARCH OR DUE DILIGENCE, MULVEY USED THE EXPERTISE AND CONFIDENTIAL TRADING STRATEGIES OF THE THIRD PARTY INVESTMENT ADVISERS WITHOUT PAYING THEM PROPER FEES. MULVEY AND ANOTHER REGISTERED REPRESENTATIVE AVOIDED PAYING APPROXIMATELY $186,820 TO THE ADVISERS AND THEY EACH MADE APPROXIMATELY $23,000 IN NET COMMISSIONS. THE FIRM DISSEMINATED TO EMPLOYEES, INCLUDING MULVEY, A POLICY AND PROCEDURE MANUAL THAT SPECIFICALLY PROHIBITED SHADOWING TRADES EXECUTED IN THE ADVISER SELECT ACCOUNTS AND THE FIRM FURTHER EMPHASIZED THE PROHIBITION IN A COMPLIANCE ALERT EMAIL AND REMINDED EMPLOYEES TO REVIEW AND COMPLY WITH THE PROCEDURE MANUAL.",
+            "Resolution": "Decision",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Civil and Administrative Penalty(ies)/Fine(s)",
+                "SanctionDetails": [
+                  {
+                    "Amount": "$5,000.00"
+                  }
+                ]
+              }
+            ],
+            "Regulator Statement": "AMENDED HEARING PANEL DECISION RENDERED MARCH 4, 2013 WHEREIN RESPONDENT IS FINED $5,000 FOR SHADOWING THIRD-PARTY MANAGERS, IN VIOLATION OF NASD RULE 2110. IN ADDITION, THE RESPONDENT IS JOINTLY AND SEVERALLY ORDERED TO PAY COSTS OF THE PROCEEDING IN THE AMOUNT OF $10,735.40. DECISION IS FINAL APRIL 22, 2013."
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "2/21/1997",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "10/9/1992",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "8/24/1994",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 6",
+          "examName": "Investment Company Products/Variable Contracts Representative Examination",
+          "examTakenDate": "10/3/1992",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "8174",
+          "firm_name": "UBS FINANCIAL SERVICES INC.",
+          "registration_begin_date": "5/15/2008",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "5/1/2019"
+        },
+        {
+          "firm_id": "2525",
+          "firm_name": "DEUTSCHE BANK SECURITIES INC.",
+          "registration_begin_date": "1/13/2001",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "6/13/2008"
+        },
+        {
+          "firm_id": "17790",
+          "firm_name": "DB ALEX. BROWN LLC",
+          "registration_begin_date": "7/7/1998",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "1/13/2001"
+        },
+        {
+          "firm_id": "17790",
+          "firm_name": "BT ALEX. BROWN INCORPORATED",
+          "registration_begin_date": "9/1/1997",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/12/1997"
+        },
+        {
+          "firm_id": "20",
+          "firm_name": "ALEX. BROWN & SONS INCORPORATED",
+          "registration_begin_date": "4/11/1996",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "9/1/1997"
+        },
+        {
+          "firm_id": "615",
+          "firm_name": "NEW ENGLAND SECURITIES",
+          "registration_begin_date": "10/9/1992",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "4/12/1996"
+        }
+      ],
+      "crd_number": "2286524"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "2286524",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA BrokerCheck data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "Brian",
+        "middle": null,
+        "last": "Mulvey"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "BRIAN",
+            "middle": "PATRICK",
+            "last": "MULVEY"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        },
+        {
+          "name_source": "other_names[0]",
+          "fetched_name": {
+            "first": "BRIAN",
+            "middle": "P",
+            "last": "MULVEY"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        }
+      ],
+      "best_match": {
+        "name_source": "main_fetched_name",
+        "fetched_name": {
+          "first": "BRIAN",
+          "middle": "PATRICK",
+          "last": "MULVEY"
+        },
+        "score": 95.0,
+        "first_score": 1.0,
+        "middle_score": 0.5,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "Brian Mulvey has 1 regulatory disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Regulatory Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "DocketNumberFDA": "2008013864401",
+            "DocketNumberAAO": "2008013864401",
+            "Initiated By": "FINRA",
+            "Allegations": "NASD RULE 2110 - BRIAN MULVEY'S MEMBER FIRM OFFERED ITS CUSTOMERS ACCESS TO THIRD PARTY INVESTMENT ADVISERS BY MEANS OF ITS ADVISER SELECT PROGRAM THROUGH WHICH REPRESENTATIVES WOULD RECOMMEND CERTAIN THIRD PARTY ADVISERS TO FIRM CUSTOMERS WHO THEN \"HIRED\" THE ADVISER TO EXECUTE TRADES IN THEIR ACCOUNTS. THE THIRD PARTY INVESTMENT ADVISERS WERE GRANTED FULL TRADING DISCRETION OVER THE CUSTOMERS' ACCOUNTS AND THE ADVISERS' TRADING STRATEGIES WITHIN THE ACCOUNTS WERE CONFIDENTIAL. A PORTION OF THE FEE CHARGED TO CUSTOMERS FOR THE ADVISER SELECT PROGRAM WAS PAID TO THE THIRD PARTY ADVISERS FOR THEIR SERVICES; THE FIRM'S REGISTERED REPRESENTATIVES HAD DISCRETION TO DECIDE THE OVERALL FEE TO CHARGE CUSTOMERS, AS LONG AS THE THIRD PARTY INVESTMENT ADVISERS WERE PAID THEIR APPROPRIATE PERCENTAGE. THE FIRM ALSO HAD A MANAGED SELECT PROGRAM WHICH GAVE ITS REGISTERED REPRESENTATIVES TRADING DISCRETION IN CUSTOMER ACCOUNTS INCLUDING THE DISCRETION TO DECIDE THE OVERALL FEE FOR MANAGED SELECT ACCOUNTS; THESE ACCOUNTS DID NOT INCLUDE FEES FOR THIRD PARTY INVESTMENT ADVISERS BECAUSE THE ACCOUNTS WERE NOT SUPPOSED TO USE THE ADVISERS OR THEIR WORK PRODUCT. MULVEY MANAGED ACCOUNTS FOR A FAMILY WITH ANOTHER REGISTERED REPRESENTATIVE WHO STRUCTURED THE ACCOUNTS SO THAT SEVERAL ACCOUNTS WOULD SHADOW ADVISER SELECT TRADES BY REVIEWING TRADES IN THESE ACCOUNTS AND THEN PLACE IDENTICAL TRADES IN THE FAMILY'S MANAGED SELECT ACCOUNTS. MULVEY CHARGED THE FAMILY A FEE BUT DID NOT PAY THE THIRD PARTY INVESTMENT ADVISERS FOR THE ACCOUNTS IN WHICH HE WAS SHADOWING THE ADVISERS' TRADES. MULVEY KEPT THE FEES FOR THE MANAGED SELECT ACCOUNTS AND APPLIED THEM TO HIS GROSS PRODUCTION NUMBERS. WITHOUT CONDUCTING HIS OWN RESEARCH OR DUE DILIGENCE, MULVEY USED THE EXPERTISE AND CONFIDENTIAL TRADING STRATEGIES OF THE THIRD PARTY INVESTMENT ADVISERS WITHOUT PAYING THEM PROPER FEES. MULVEY AND ANOTHER REGISTERED REPRESENTATIVE AVOIDED PAYING APPROXIMATELY $186,820 TO THE ADVISERS AND THEY EACH MADE APPROXIMATELY $23,000 IN NET COMMISSIONS. THE FIRM DISSEMINATED TO EMPLOYEES, INCLUDING MULVEY, A POLICY AND PROCEDURE MANUAL THAT SPECIFICALLY PROHIBITED SHADOWING TRADES EXECUTED IN THE ADVISER SELECT ACCOUNTS AND THE FIRM FURTHER EMPHASIZED THE PROHIBITION IN A COMPLIANCE ALERT EMAIL AND REMINDED EMPLOYEES TO REVIEW AND COMPLY WITH THE PROCEDURE MANUAL.",
+            "Resolution": "Decision",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Civil and Administrative Penalty(ies)/Fine(s)",
+                "SanctionDetails": [
+                  {
+                    "Amount": "$5,000.00"
+                  }
+                ]
+              }
+            ],
+            "Regulator Statement": "AMENDED HEARING PANEL DECISION RENDERED MARCH 4, 2013 WHEREIN RESPONDENT IS FINED $5,000 FOR SHADOWING THIRD-PARTY MANAGERS, IN VIOLATION OF NASD RULE 2110. IN ADDITION, THE RESPONDENT IS JOINTLY AND SEVERALLY ORDERED TO PAY COSTS OF THE PROCEEDING IN THE AMOUNT OF $10,735.40. DECISION IS FINAL APRIL 22, 2013."
+          },
+          "event_date": "6/28/2011",
+          "resolution": "Final"
+        },
+        "description": "Regulatory action on 6/28/2011 initiated by FINRA. Resolution: Final. Allegations: NASD RULE 2110 - BRIAN MULVEY'S MEMBER FIRM OFFERED ITS CUSTOMERS ACCESS TO THIRD PARTY INVESTMENT ADVISERS BY MEANS OF ITS ADVISER SELECT PROGRAM THROUGH WHICH REPRESENTATIVES WOULD RECOMMEND CERTAIN THIRD PARTY ADVISERS TO FIRM CUSTOMERS WHO THEN \"HIRED\" THE ADVISER TO EXECUTE TRADES IN THEIR ACCOUNTS. THE THIRD PARTY INVESTMENT ADVISERS WERE GRANTED FULL TRADING DISCRETION OVER THE CUSTOMERS' ACCOUNTS AND THE ADVISERS' TRADING STRATEGIES WITHIN THE ACCOUNTS WERE CONFIDENTIAL. A PORTION OF THE FEE CHARGED TO CUSTOMERS FOR THE ADVISER SELECT PROGRAM WAS PAID TO THE THIRD PARTY ADVISERS FOR THEIR SERVICES; THE FIRM'S REGISTERED REPRESENTATIVES HAD DISCRETION TO DECIDE THE OVERALL FEE TO CHARGE CUSTOMERS, AS LONG AS THE THIRD PARTY INVESTMENT ADVISERS WERE PAID THEIR APPROPRIATE PERCENTAGE. THE FIRM ALSO HAD A MANAGED SELECT PROGRAM WHICH GAVE ITS REGISTERED REPRESENTATIVES TRADING DISCRETION IN CUSTOMER ACCOUNTS INCLUDING THE DISCRETION TO DECIDE THE OVERALL FEE FOR MANAGED SELECT ACCOUNTS; THESE ACCOUNTS DID NOT INCLUDE FEES FOR THIRD PARTY INVESTMENT ADVISERS BECAUSE THE ACCOUNTS WERE NOT SUPPOSED TO USE THE ADVISERS OR THEIR WORK PRODUCT. MULVEY MANAGED ACCOUNTS FOR A FAMILY WITH ANOTHER REGISTERED REPRESENTATIVE WHO STRUCTURED THE ACCOUNTS SO THAT SEVERAL ACCOUNTS WOULD SHADOW ADVISER SELECT TRADES BY REVIEWING TRADES IN THESE ACCOUNTS AND THEN PLACE IDENTICAL TRADES IN THE FAMILY'S MANAGED SELECT ACCOUNTS. MULVEY CHARGED THE FAMILY A FEE BUT DID NOT PAY THE THIRD PARTY INVESTMENT ADVISERS FOR THE ACCOUNTS IN WHICH HE WAS SHADOWING THE ADVISERS' TRADES. MULVEY KEPT THE FEES FOR THE MANAGED SELECT ACCOUNTS AND APPLIED THEM TO HIS GROSS PRODUCTION NUMBERS. WITHOUT CONDUCTING HIS OWN RESEARCH OR DUE DILIGENCE, MULVEY USED THE EXPERTISE AND CONFIDENTIAL TRADING STRATEGIES OF THE THIRD PARTY INVESTMENT ADVISERS WITHOUT PAYING THEM PROPER FEES. MULVEY AND ANOTHER REGISTERED REPRESENTATIVE AVOIDED PAYING APPROXIMATELY $186,820 TO THE ADVISERS AND THEY EACH MADE APPROXIMATELY $23,000 IN NET COMMISSIONS. THE FIRM DISSEMINATED TO EMPLOYEES, INCLUDING MULVEY, A POLICY AND PROCEDURE MANUAL THAT SPECIFICALLY PROHIBITED SHADOWING TRADES EXECUTED IN THE ADVISER SELECT ACCOUNTS AND THE FIRM FURTHER EMPHASIZED THE PROHIBITION IN A COMPLIANCE ALERT EMAIL AND REMINDED EMPLOYEES TO REVIEW AND COMPLY WITH THE PROCEDURE MANUAL.. Sanctions: Civil and Administrative Penalty(ies)/Fine(s) [Civil penalty detected.]"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No matching disciplinary records found for Brian Mulvey, but 16 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Search Info",
+        "alert_category": "DISCIPLINARY",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Brian Mulvey",
+            "sec_disciplinary": {
+              "source": "SEC_Disciplinary",
+              "records_found": 1,
+              "records_filtered": 1,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'Brian Mulvey'"
+            },
+            "finra_disciplinary": {
+              "source": "FINRA_Disciplinary",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Brian Robert Roth",
+                "Brian S. Graham",
+                "Brian Beh",
+                "Brian Keith Jones",
+                "Brian Shevland",
+                "Brian K. Shey",
+                "Brian Francis Giammona",
+                "Brian E. Reilly",
+                "Brian Harold Young",
+                "Brian F. Donnelly",
+                "Brian Blanco",
+                "Brian Jerome Rice",
+                "Brian S. Pearce",
+                "Brian Maguire",
+                "Brian Coburn, Alexander Blau",
+                "Brian Coburn, Alexander Blau"
+              ],
+              "name_scores": {
+                "Brian Robert Roth": 47.62,
+                "Brian S. Graham": 47.62,
+                "Brian Beh": 47.37,
+                "Brian Keith Jones": 47.62,
+                "Brian Shevland": 47.37,
+                "Brian K. Shey": 47.62,
+                "Brian Francis Giammona": 47.62,
+                "Brian E. Reilly": 47.62,
+                "Brian Harold Young": 47.62,
+                "Brian F. Donnelly": 47.62,
+                "Brian Blanco": 47.37,
+                "Brian Jerome Rice": 47.62,
+                "Brian S. Pearce": 47.62,
+                "Brian Maguire": 47.37,
+                "Brian Coburn, Alexander Blau": 0.0
+              },
+              "exact_match_found": false,
+              "status": "Partial failure: Error processing 'Brian Coburn, Alexander Blau'"
+            }
+          }
+        },
+        "description": "Found 16 disciplinary records for Brian Mulvey, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Brian Mulvey",
+      "sec_disciplinary": {
+        "source": "SEC_Disciplinary",
+        "records_found": 1,
+        "records_filtered": 1,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Brian Mulvey'"
+      },
+      "finra_disciplinary": {
+        "source": "FINRA_Disciplinary",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Brian Robert Roth",
+          "Brian S. Graham",
+          "Brian Beh",
+          "Brian Keith Jones",
+          "Brian Shevland",
+          "Brian K. Shey",
+          "Brian Francis Giammona",
+          "Brian E. Reilly",
+          "Brian Harold Young",
+          "Brian F. Donnelly",
+          "Brian Blanco",
+          "Brian Jerome Rice",
+          "Brian S. Pearce",
+          "Brian Maguire",
+          "Brian Coburn, Alexander Blau",
+          "Brian Coburn, Alexander Blau"
+        ],
+        "name_scores": {
+          "Brian Robert Roth": 47.62,
+          "Brian S. Graham": 47.62,
+          "Brian Beh": 47.37,
+          "Brian Keith Jones": 47.62,
+          "Brian Shevland": 47.37,
+          "Brian K. Shey": 47.62,
+          "Brian Francis Giammona": 47.62,
+          "Brian E. Reilly": 47.62,
+          "Brian Harold Young": 47.62,
+          "Brian F. Donnelly": 47.62,
+          "Brian Blanco": 47.37,
+          "Brian Jerome Rice": 47.62,
+          "Brian S. Pearce": 47.62,
+          "Brian Maguire": 47.37,
+          "Brian Coburn, Alexander Blau": 0.0
+        },
+        "exact_match_found": false,
+        "status": "Partial failure: Error processing 'Brian Coburn, Alexander Blau'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": true,
+    "compliance_explanation": "No matching arbitration records found for Brian Mulvey, but 15 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Arbitration Search Info",
+        "alert_category": "ARBITRATION",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Brian Mulvey",
+            "sec_arbitration": {
+              "source": "SEC_Arbitration",
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records found"
+            },
+            "finra_arbitration": {
+              "source": "FINRA_Arbitration",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Deutsche Bank Securities",
+                "Inc.",
+                "UBS Financial Services Inc.",
+                "E*Trade Securities LLC",
+                "Merrill Lynch Pierce Fenner & Smith Inc.",
+                "Brian Zaid",
+                "John Cvach",
+                "Terry Reinhart",
+                "Merrill Lynch Pierce Fenner & Smith Inc.",
+                "Brian Wurdemann",
+                "Morgan Stanley",
+                "UBS Financial Services Inc.",
+                "Brian O'Neill",
+                "Brian Wurdemann",
+                "Brian Simone",
+                "Steven Simone",
+                "LPL Financial LLC",
+                "Brian Furrow",
+                "Frank Sullivan",
+                "TD Ameritrade",
+                "Inc.",
+                "Brian Dabney"
+              ],
+              "name_scores": {
+                "Deutsche Bank Securities": 9.52,
+                "Inc.": 5.26,
+                "UBS Financial Services Inc.": 9.52,
+                "E*Trade Securities LLC": 9.52,
+                "Merrill Lynch Pierce Fenner & Smith Inc.": 9.52,
+                "Brian Zaid": 47.37,
+                "John Cvach": 5.26,
+                "Terry Reinhart": 5.26,
+                "Brian Wurdemann": 47.37,
+                "Morgan Stanley": 5.26,
+                "Brian O'Neill": 47.37,
+                "Brian Simone": 47.37,
+                "Steven Simone": 5.26,
+                "LPL Financial LLC": 9.52,
+                "Brian Furrow": 47.37,
+                "Frank Sullivan": 5.26,
+                "TD Ameritrade": 5.26,
+                "Brian Dabney": 47.37
+              },
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'Brian Mulvey'"
+            }
+          }
+        },
+        "description": "Found 15 arbitration records for Brian Mulvey, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Brian Mulvey",
+      "sec_arbitration": {
+        "source": "SEC_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_arbitration": {
+        "source": "FINRA_Arbitration",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Deutsche Bank Securities",
+          "Inc.",
+          "UBS Financial Services Inc.",
+          "E*Trade Securities LLC",
+          "Merrill Lynch Pierce Fenner & Smith Inc.",
+          "Brian Zaid",
+          "John Cvach",
+          "Terry Reinhart",
+          "Merrill Lynch Pierce Fenner & Smith Inc.",
+          "Brian Wurdemann",
+          "Morgan Stanley",
+          "UBS Financial Services Inc.",
+          "Brian O'Neill",
+          "Brian Wurdemann",
+          "Brian Simone",
+          "Steven Simone",
+          "LPL Financial LLC",
+          "Brian Furrow",
+          "Frank Sullivan",
+          "TD Ameritrade",
+          "Inc.",
+          "Brian Dabney"
+        ],
+        "name_scores": {
+          "Deutsche Bank Securities": 9.52,
+          "Inc.": 5.26,
+          "UBS Financial Services Inc.": 9.52,
+          "E*Trade Securities LLC": 9.52,
+          "Merrill Lynch Pierce Fenner & Smith Inc.": 9.52,
+          "Brian Zaid": 47.37,
+          "John Cvach": 5.26,
+          "Terry Reinhart": 5.26,
+          "Brian Wurdemann": 47.37,
+          "Morgan Stanley": 5.26,
+          "Brian O'Neill": 47.37,
+          "Brian Simone": 47.37,
+          "Steven Simone": 5.26,
+          "LPL Financial LLC": 9.52,
+          "Brian Furrow": 47.37,
+          "Frank Sullivan": 5.26,
+          "TD Ameritrade": 5.26,
+          "Brian Dabney": 47.37
+        },
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Brian Mulvey'"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for Brian Mulvey; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Regulatory Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "DocketNumberFDA": "2008013864401",
+            "DocketNumberAAO": "2008013864401",
+            "Initiated By": "FINRA",
+            "Allegations": "NASD RULE 2110 - BRIAN MULVEY'S MEMBER FIRM OFFERED ITS CUSTOMERS ACCESS TO THIRD PARTY INVESTMENT ADVISERS BY MEANS OF ITS ADVISER SELECT PROGRAM THROUGH WHICH REPRESENTATIVES WOULD RECOMMEND CERTAIN THIRD PARTY ADVISERS TO FIRM CUSTOMERS WHO THEN \"HIRED\" THE ADVISER TO EXECUTE TRADES IN THEIR ACCOUNTS. THE THIRD PARTY INVESTMENT ADVISERS WERE GRANTED FULL TRADING DISCRETION OVER THE CUSTOMERS' ACCOUNTS AND THE ADVISERS' TRADING STRATEGIES WITHIN THE ACCOUNTS WERE CONFIDENTIAL. A PORTION OF THE FEE CHARGED TO CUSTOMERS FOR THE ADVISER SELECT PROGRAM WAS PAID TO THE THIRD PARTY ADVISERS FOR THEIR SERVICES; THE FIRM'S REGISTERED REPRESENTATIVES HAD DISCRETION TO DECIDE THE OVERALL FEE TO CHARGE CUSTOMERS, AS LONG AS THE THIRD PARTY INVESTMENT ADVISERS WERE PAID THEIR APPROPRIATE PERCENTAGE. THE FIRM ALSO HAD A MANAGED SELECT PROGRAM WHICH GAVE ITS REGISTERED REPRESENTATIVES TRADING DISCRETION IN CUSTOMER ACCOUNTS INCLUDING THE DISCRETION TO DECIDE THE OVERALL FEE FOR MANAGED SELECT ACCOUNTS; THESE ACCOUNTS DID NOT INCLUDE FEES FOR THIRD PARTY INVESTMENT ADVISERS BECAUSE THE ACCOUNTS WERE NOT SUPPOSED TO USE THE ADVISERS OR THEIR WORK PRODUCT. MULVEY MANAGED ACCOUNTS FOR A FAMILY WITH ANOTHER REGISTERED REPRESENTATIVE WHO STRUCTURED THE ACCOUNTS SO THAT SEVERAL ACCOUNTS WOULD SHADOW ADVISER SELECT TRADES BY REVIEWING TRADES IN THESE ACCOUNTS AND THEN PLACE IDENTICAL TRADES IN THE FAMILY'S MANAGED SELECT ACCOUNTS. MULVEY CHARGED THE FAMILY A FEE BUT DID NOT PAY THE THIRD PARTY INVESTMENT ADVISERS FOR THE ACCOUNTS IN WHICH HE WAS SHADOWING THE ADVISERS' TRADES. MULVEY KEPT THE FEES FOR THE MANAGED SELECT ACCOUNTS AND APPLIED THEM TO HIS GROSS PRODUCTION NUMBERS. WITHOUT CONDUCTING HIS OWN RESEARCH OR DUE DILIGENCE, MULVEY USED THE EXPERTISE AND CONFIDENTIAL TRADING STRATEGIES OF THE THIRD PARTY INVESTMENT ADVISERS WITHOUT PAYING THEM PROPER FEES. MULVEY AND ANOTHER REGISTERED REPRESENTATIVE AVOIDED PAYING APPROXIMATELY $186,820 TO THE ADVISERS AND THEY EACH MADE APPROXIMATELY $23,000 IN NET COMMISSIONS. THE FIRM DISSEMINATED TO EMPLOYEES, INCLUDING MULVEY, A POLICY AND PROCEDURE MANUAL THAT SPECIFICALLY PROHIBITED SHADOWING TRADES EXECUTED IN THE ADVISER SELECT ACCOUNTS AND THE FIRM FURTHER EMPHASIZED THE PROHIBITION IN A COMPLIANCE ALERT EMAIL AND REMINDED EMPLOYEES TO REVIEW AND COMPLY WITH THE PROCEDURE MANUAL.",
+            "Resolution": "Decision",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Civil and Administrative Penalty(ies)/Fine(s)",
+                "SanctionDetails": [
+                  {
+                    "Amount": "$5,000.00"
+                  }
+                ]
+              }
+            ],
+            "Regulator Statement": "AMENDED HEARING PANEL DECISION RENDERED MARCH 4, 2013 WHEREIN RESPONDENT IS FINED $5,000 FOR SHADOWING THIRD-PARTY MANAGERS, IN VIOLATION OF NASD RULE 2110. IN ADDITION, THE RESPONDENT IS JOINTLY AND SEVERALLY ORDERED TO PAY COSTS OF THE PROCEEDING IN THE AMOUNT OF $10,735.40. DECISION IS FINAL APRIL 22, 2013."
+          },
+          "event_date": "6/28/2011",
+          "resolution": "Final"
+        },
+        "description": "Regulatory action on 6/28/2011 initiated by FINRA. Resolution: Final. Allegations: NASD RULE 2110 - BRIAN MULVEY'S MEMBER FIRM OFFERED ITS CUSTOMERS ACCESS TO THIRD PARTY INVESTMENT ADVISERS BY MEANS OF ITS ADVISER SELECT PROGRAM THROUGH WHICH REPRESENTATIVES WOULD RECOMMEND CERTAIN THIRD PARTY ADVISERS TO FIRM CUSTOMERS WHO THEN \"HIRED\" THE ADVISER TO EXECUTE TRADES IN THEIR ACCOUNTS. THE THIRD PARTY INVESTMENT ADVISERS WERE GRANTED FULL TRADING DISCRETION OVER THE CUSTOMERS' ACCOUNTS AND THE ADVISERS' TRADING STRATEGIES WITHIN THE ACCOUNTS WERE CONFIDENTIAL. A PORTION OF THE FEE CHARGED TO CUSTOMERS FOR THE ADVISER SELECT PROGRAM WAS PAID TO THE THIRD PARTY ADVISERS FOR THEIR SERVICES; THE FIRM'S REGISTERED REPRESENTATIVES HAD DISCRETION TO DECIDE THE OVERALL FEE TO CHARGE CUSTOMERS, AS LONG AS THE THIRD PARTY INVESTMENT ADVISERS WERE PAID THEIR APPROPRIATE PERCENTAGE. THE FIRM ALSO HAD A MANAGED SELECT PROGRAM WHICH GAVE ITS REGISTERED REPRESENTATIVES TRADING DISCRETION IN CUSTOMER ACCOUNTS INCLUDING THE DISCRETION TO DECIDE THE OVERALL FEE FOR MANAGED SELECT ACCOUNTS; THESE ACCOUNTS DID NOT INCLUDE FEES FOR THIRD PARTY INVESTMENT ADVISERS BECAUSE THE ACCOUNTS WERE NOT SUPPOSED TO USE THE ADVISERS OR THEIR WORK PRODUCT. MULVEY MANAGED ACCOUNTS FOR A FAMILY WITH ANOTHER REGISTERED REPRESENTATIVE WHO STRUCTURED THE ACCOUNTS SO THAT SEVERAL ACCOUNTS WOULD SHADOW ADVISER SELECT TRADES BY REVIEWING TRADES IN THESE ACCOUNTS AND THEN PLACE IDENTICAL TRADES IN THE FAMILY'S MANAGED SELECT ACCOUNTS. MULVEY CHARGED THE FAMILY A FEE BUT DID NOT PAY THE THIRD PARTY INVESTMENT ADVISERS FOR THE ACCOUNTS IN WHICH HE WAS SHADOWING THE ADVISERS' TRADES. MULVEY KEPT THE FEES FOR THE MANAGED SELECT ACCOUNTS AND APPLIED THEM TO HIS GROSS PRODUCTION NUMBERS. WITHOUT CONDUCTING HIS OWN RESEARCH OR DUE DILIGENCE, MULVEY USED THE EXPERTISE AND CONFIDENTIAL TRADING STRATEGIES OF THE THIRD PARTY INVESTMENT ADVISERS WITHOUT PAYING THEM PROPER FEES. MULVEY AND ANOTHER REGISTERED REPRESENTATIVE AVOIDED PAYING APPROXIMATELY $186,820 TO THE ADVISERS AND THEY EACH MADE APPROXIMATELY $23,000 IN NET COMMISSIONS. THE FIRM DISSEMINATED TO EMPLOYEES, INCLUDING MULVEY, A POLICY AND PROCEDURE MANUAL THAT SPECIFICALLY PROHIBITED SHADOWING TRADES EXECUTED IN THE ADVISER SELECT ACCOUNTS AND THE FIRM FURTHER EMPHASIZED THE PROHIBITION IN A COMPLIANCE ALERT EMAIL AND REMINDED EMPLOYEES TO REVIEW AND COMPLY WITH THE PROCEDURE MANUAL.. Sanctions: Civil and Administrative Penalty(ies)/Fine(s) [Civil penalty detected.]"
+      }
+    ]
+  }
+}

@@ -1,0 +1,684 @@
+{
+  "reference_id": "SP38146264185190_PBI-70E06A419BD746B",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-70E06A419BD746B",
+    "first_name": "Duncan",
+    "last_name": "Highmark",
+    "employee_number": "EN-054364",
+    "zip": "63131",
+    "crdNumber": "2707962",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "2707962",
+    "individual_name": "Duncan Highmark",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "FINRA_BrokerCheck",
+    "basic_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "DUNCAN SCOTT HIGHMARK",
+      "other_names": [
+        "SCOTT  HIGHMARK"
+      ],
+      "bc_scope": "Active",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "3/2/2010",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "CLAIMANTS ALLEGE, INTER ALIA, THAT DURING 2008 THE FA INVESTED THE CLIENT'S ACCOUNT UNSUITABLY IN EQUITIES.",
+            "Damage Amount Requested": "$500,000.00",
+            "Settlement Amount": "$55,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "THIS MATTER WAS SETTLED TO AVOID THE COSTS OF LITIGATION, WITH NO ADMISSION OF LIABILITY BY THE FIRM OR FA. FA DID NOT CONTRIBUTE TO SETTLEMENT."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 66",
+          "examName": "Uniform Combined State Law Examination",
+          "examTakenDate": "2/13/2006",
+          "examScope": "BOTH"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "2/12/1996",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 99TO",
+          "examName": "Operations Professional Examination",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 31",
+          "examName": "Futures Managed Funds Examination",
+          "examTakenDate": "10/14/2006",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "9/12/1996",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 6",
+          "examName": "Investment Company Products/Variable Contracts Representative Examination",
+          "examTakenDate": "2/9/1996",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "35747",
+          "firm_name": "PURSHE KAPLAN STERLING INVESTMENTS",
+          "registration_begin_date": "2/20/2015",
+          "branch_offices": [
+            {
+              "street": "1401 South Brentwood Blvd.",
+              "city": "St. Louis",
+              "state": "MO",
+              "zip_code": "63144"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "149777",
+          "firm_name": "MORGAN STANLEY",
+          "registration_begin_date": "6/1/2009",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "3/5/2015"
+        },
+        {
+          "firm_id": "7059",
+          "firm_name": "CITIGROUP GLOBAL MARKETS INC.",
+          "registration_begin_date": "4/21/2006",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "6/1/2009"
+        },
+        {
+          "firm_id": "4",
+          "firm_name": "A. G. EDWARDS & SONS, INC.",
+          "registration_begin_date": "8/6/1996",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "4/26/2006"
+        },
+        {
+          "firm_id": "5435",
+          "firm_name": "FRANKLIN FINANCIAL SERVICES CORPORATION",
+          "registration_begin_date": "2/12/1996",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/9/1996"
+        }
+      ],
+      "crd_number": "2707962"
+    },
+    "detailed_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "DUNCAN SCOTT HIGHMARK",
+      "other_names": [
+        "SCOTT  HIGHMARK"
+      ],
+      "bc_scope": "Active",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "3/2/2010",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "CLAIMANTS ALLEGE, INTER ALIA, THAT DURING 2008 THE FA INVESTED THE CLIENT'S ACCOUNT UNSUITABLY IN EQUITIES.",
+            "Damage Amount Requested": "$500,000.00",
+            "Settlement Amount": "$55,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "THIS MATTER WAS SETTLED TO AVOID THE COSTS OF LITIGATION, WITH NO ADMISSION OF LIABILITY BY THE FIRM OR FA. FA DID NOT CONTRIBUTE TO SETTLEMENT."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 66",
+          "examName": "Uniform Combined State Law Examination",
+          "examTakenDate": "2/13/2006",
+          "examScope": "BOTH"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "2/12/1996",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 99TO",
+          "examName": "Operations Professional Examination",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 31",
+          "examName": "Futures Managed Funds Examination",
+          "examTakenDate": "10/14/2006",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "9/12/1996",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 6",
+          "examName": "Investment Company Products/Variable Contracts Representative Examination",
+          "examTakenDate": "2/9/1996",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "35747",
+          "firm_name": "PURSHE KAPLAN STERLING INVESTMENTS",
+          "registration_begin_date": "2/20/2015",
+          "branch_offices": [
+            {
+              "street": "1401 South Brentwood Blvd.",
+              "city": "St. Louis",
+              "state": "MO",
+              "zip_code": "63144"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "149777",
+          "firm_name": "MORGAN STANLEY",
+          "registration_begin_date": "6/1/2009",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "3/5/2015"
+        },
+        {
+          "firm_id": "7059",
+          "firm_name": "CITIGROUP GLOBAL MARKETS INC.",
+          "registration_begin_date": "4/21/2006",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "6/1/2009"
+        },
+        {
+          "firm_id": "4",
+          "firm_name": "A. G. EDWARDS & SONS, INC.",
+          "registration_begin_date": "8/6/1996",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "4/26/2006"
+        },
+        {
+          "firm_id": "5435",
+          "firm_name": "FRANKLIN FINANCIAL SERVICES CORPORATION",
+          "registration_begin_date": "2/12/1996",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/9/1996"
+        }
+      ],
+      "crd_number": "2707962"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "2707962",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA BrokerCheck data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "Duncan",
+        "middle": null,
+        "last": "Highmark"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "DUNCAN",
+            "middle": "SCOTT",
+            "last": "HIGHMARK"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        },
+        {
+          "name_source": "other_names[0]",
+          "fetched_name": {
+            "first": "SCOTT",
+            "middle": null,
+            "last": "HIGHMARK"
+          },
+          "score": 55.56,
+          "first_score": 0.0,
+          "middle_score": 0.0,
+          "last_score": 1.0
+        }
+      ],
+      "best_match": {
+        "name_source": "main_fetched_name",
+        "fetched_name": {
+          "first": "DUNCAN",
+          "middle": "SCOTT",
+          "last": "HIGHMARK"
+        },
+        "score": 95.0,
+        "first_score": 1.0,
+        "middle_score": 0.5,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "Duncan Highmark has 1 customer dispute disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "CLAIMANTS ALLEGE, INTER ALIA, THAT DURING 2008 THE FA INVESTED THE CLIENT'S ACCOUNT UNSUITABLY IN EQUITIES.",
+            "Damage Amount Requested": "$500,000.00",
+            "Settlement Amount": "$55,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "THIS MATTER WAS SETTLED TO AVOID THE COSTS OF LITIGATION, WITH NO ADMISSION OF LIABILITY BY THE FIRM OR FA. FA DID NOT CONTRIBUTE TO SETTLEMENT."
+            ]
+          },
+          "event_date": "3/2/2010",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 3/2/2010. Resolution: Settled. Allegations: CLAIMANTS ALLEGE, INTER ALIA, THAT DURING 2008 THE FA INVESTED THE CLIENT'S ACCOUNT UNSUITABLY IN EQUITIES.. Damage requested: $500,000.00. Settlement: $55,000.00"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No matching disciplinary records found for Duncan Highmark, 8 records reviewed with 8 filtered.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Search Info",
+        "alert_category": "DISCIPLINARY",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Duncan Highmark",
+            "sec_disciplinary": {
+              "source": "SEC_Disciplinary",
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records found"
+            },
+            "finra_disciplinary": {
+              "source": "FINRA_Disciplinary",
+              "records_found": 8,
+              "records_filtered": 8,
+              "names_found": [
+                "RANDALL M. DUNCAN",
+                "R.M. DUNCAN SECURITIES, INC, CALTON AND ASSOCIATES, INCRANDALL M. DUNCAN, STEPHEN B. MURCHISON, KENNETH R. HARTER",
+                "R.M. DUNCAN SECURITIES, INC, CALTON AND ASSOCIATES, INCRANDALL M. DUNCAN, STEPHEN B. MURCHISON, KENNETH R. HARTER",
+                "DUNCAN E. WINE",
+                "Duncan C. Dewahl",
+                "THE VERTICAL TRADING GROUP, LLCMARK MCCABE DUNCAN, GLENN MATTHEW CHALEFF",
+                "THE VERTICAL TRADING GROUP, LLCMARK MCCABE DUNCAN, GLENN MATTHEW CHALEFF",
+                "JOHN DUNCAN MONTFORT",
+                "JOHN DUNCAN MONTFORT",
+                "CHAD R. DUNCAN"
+              ],
+              "name_scores": {
+                "RANDALL M. DUNCAN": 9.52,
+                "R.M. DUNCAN SECURITIES, INC, CALTON AND ASSOCIATES, INCRANDALL M. DUNCAN, STEPHEN B. MURCHISON, KENNETH R. HARTER": 0.0,
+                "DUNCAN E. WINE": 47.62,
+                "Duncan C. Dewahl": 47.62,
+                "THE VERTICAL TRADING GROUP, LLCMARK MCCABE DUNCAN, GLENN MATTHEW CHALEFF": 0.0,
+                "JOHN DUNCAN MONTFORT": 9.52,
+                "CHAD R. DUNCAN": 9.52
+              },
+              "exact_match_found": false,
+              "status": "Partial failure: Error processing 'THE VERTICAL TRADING GROUP, LLCMARK MCCABE DUNCAN, GLENN MATTHEW CHALEFF'"
+            }
+          }
+        },
+        "description": "Found 8 disciplinary records for Duncan Highmark, 8 filtered out."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Duncan Highmark",
+      "sec_disciplinary": {
+        "source": "SEC_Disciplinary",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_disciplinary": {
+        "source": "FINRA_Disciplinary",
+        "records_found": 8,
+        "records_filtered": 8,
+        "names_found": [
+          "RANDALL M. DUNCAN",
+          "R.M. DUNCAN SECURITIES, INC, CALTON AND ASSOCIATES, INCRANDALL M. DUNCAN, STEPHEN B. MURCHISON, KENNETH R. HARTER",
+          "R.M. DUNCAN SECURITIES, INC, CALTON AND ASSOCIATES, INCRANDALL M. DUNCAN, STEPHEN B. MURCHISON, KENNETH R. HARTER",
+          "DUNCAN E. WINE",
+          "Duncan C. Dewahl",
+          "THE VERTICAL TRADING GROUP, LLCMARK MCCABE DUNCAN, GLENN MATTHEW CHALEFF",
+          "THE VERTICAL TRADING GROUP, LLCMARK MCCABE DUNCAN, GLENN MATTHEW CHALEFF",
+          "JOHN DUNCAN MONTFORT",
+          "JOHN DUNCAN MONTFORT",
+          "CHAD R. DUNCAN"
+        ],
+        "name_scores": {
+          "RANDALL M. DUNCAN": 9.52,
+          "R.M. DUNCAN SECURITIES, INC, CALTON AND ASSOCIATES, INCRANDALL M. DUNCAN, STEPHEN B. MURCHISON, KENNETH R. HARTER": 0.0,
+          "DUNCAN E. WINE": 47.62,
+          "Duncan C. Dewahl": 47.62,
+          "THE VERTICAL TRADING GROUP, LLCMARK MCCABE DUNCAN, GLENN MATTHEW CHALEFF": 0.0,
+          "JOHN DUNCAN MONTFORT": 9.52,
+          "CHAD R. DUNCAN": 9.52
+        },
+        "exact_match_found": false,
+        "status": "Partial failure: Error processing 'THE VERTICAL TRADING GROUP, LLCMARK MCCABE DUNCAN, GLENN MATTHEW CHALEFF'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": true,
+    "compliance_explanation": "No matching arbitration records found for Duncan Highmark, but 15 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Arbitration Search Info",
+        "alert_category": "ARBITRATION",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Duncan Highmark",
+            "sec_arbitration": {
+              "source": "SEC_Arbitration",
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records found"
+            },
+            "finra_arbitration": {
+              "source": "FINRA_Arbitration",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Duncan Preston",
+                "Duncan Sandlin",
+                "Brandon Duncan",
+                "Moloney Securities Co.",
+                "Inc.",
+                "Merrill Lynch Pierce Fenner & Smith Inc.",
+                "Dennis Willis",
+                "Associated Securities Corp.",
+                "William Leighton",
+                "Law Office of William Leighton PLLC",
+                "Leighton & Brantley PLLC",
+                "Moloney Securities Co.",
+                "Inc.",
+                "Sammons Securities Company",
+                "LLC",
+                "Wells Fargo Advisors",
+                "LLC",
+                "Marc Rogers",
+                "Raymond James Financial Services",
+                "Inc.",
+                "William Leighton",
+                "Law Office of William Leighton PLLC",
+                "Leighton & Brantley PLLC",
+                "Michael Dawes",
+                "Emmett A. Larkin Company",
+                "Inc.",
+                "Colin Lewis",
+                "Jeffrey Suhanic",
+                "Kenneth Duncan",
+                "PNC Investments",
+                "Keith Duncan",
+                "Investacorp",
+                "Inc."
+              ],
+              "name_scores": {
+                "Duncan Preston": 47.37,
+                "Duncan Sandlin": 47.37,
+                "Brandon Duncan": 5.26,
+                "Moloney Securities Co.": 9.52,
+                "Inc.": 5.26,
+                "Merrill Lynch Pierce Fenner & Smith Inc.": 9.52,
+                "Dennis Willis": 5.26,
+                "Associated Securities Corp.": 9.52,
+                "William Leighton": 5.26,
+                "Law Office of William Leighton PLLC": 9.52,
+                "Leighton & Brantley PLLC": 9.52,
+                "Sammons Securities Company": 9.52,
+                "LLC": 5.26,
+                "Wells Fargo Advisors": 9.52,
+                "Marc Rogers": 5.26,
+                "Raymond James Financial Services": 9.52,
+                "Michael Dawes": 5.26,
+                "Emmett A. Larkin Company": 9.52,
+                "Colin Lewis": 5.26,
+                "Jeffrey Suhanic": 5.26,
+                "Kenneth Duncan": 5.26,
+                "PNC Investments": 5.26,
+                "Keith Duncan": 5.26,
+                "Investacorp": 5.26
+              },
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'Duncan Highmark'"
+            }
+          }
+        },
+        "description": "Found 15 arbitration records for Duncan Highmark, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Duncan Highmark",
+      "sec_arbitration": {
+        "source": "SEC_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_arbitration": {
+        "source": "FINRA_Arbitration",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Duncan Preston",
+          "Duncan Sandlin",
+          "Brandon Duncan",
+          "Moloney Securities Co.",
+          "Inc.",
+          "Merrill Lynch Pierce Fenner & Smith Inc.",
+          "Dennis Willis",
+          "Associated Securities Corp.",
+          "William Leighton",
+          "Law Office of William Leighton PLLC",
+          "Leighton & Brantley PLLC",
+          "Moloney Securities Co.",
+          "Inc.",
+          "Sammons Securities Company",
+          "LLC",
+          "Wells Fargo Advisors",
+          "LLC",
+          "Marc Rogers",
+          "Raymond James Financial Services",
+          "Inc.",
+          "William Leighton",
+          "Law Office of William Leighton PLLC",
+          "Leighton & Brantley PLLC",
+          "Michael Dawes",
+          "Emmett A. Larkin Company",
+          "Inc.",
+          "Colin Lewis",
+          "Jeffrey Suhanic",
+          "Kenneth Duncan",
+          "PNC Investments",
+          "Keith Duncan",
+          "Investacorp",
+          "Inc."
+        ],
+        "name_scores": {
+          "Duncan Preston": 47.37,
+          "Duncan Sandlin": 47.37,
+          "Brandon Duncan": 5.26,
+          "Moloney Securities Co.": 9.52,
+          "Inc.": 5.26,
+          "Merrill Lynch Pierce Fenner & Smith Inc.": 9.52,
+          "Dennis Willis": 5.26,
+          "Associated Securities Corp.": 9.52,
+          "William Leighton": 5.26,
+          "Law Office of William Leighton PLLC": 9.52,
+          "Leighton & Brantley PLLC": 9.52,
+          "Sammons Securities Company": 9.52,
+          "LLC": 5.26,
+          "Wells Fargo Advisors": 9.52,
+          "Marc Rogers": 5.26,
+          "Raymond James Financial Services": 9.52,
+          "Michael Dawes": 5.26,
+          "Emmett A. Larkin Company": 9.52,
+          "Colin Lewis": 5.26,
+          "Jeffrey Suhanic": 5.26,
+          "Kenneth Duncan": 5.26,
+          "PNC Investments": 5.26,
+          "Keith Duncan": 5.26,
+          "Investacorp": 5.26
+        },
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Duncan Highmark'"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for Duncan Highmark; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "CLAIMANTS ALLEGE, INTER ALIA, THAT DURING 2008 THE FA INVESTED THE CLIENT'S ACCOUNT UNSUITABLY IN EQUITIES.",
+            "Damage Amount Requested": "$500,000.00",
+            "Settlement Amount": "$55,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "THIS MATTER WAS SETTLED TO AVOID THE COSTS OF LITIGATION, WITH NO ADMISSION OF LIABILITY BY THE FIRM OR FA. FA DID NOT CONTRIBUTE TO SETTLEMENT."
+            ]
+          },
+          "event_date": "3/2/2010",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 3/2/2010. Resolution: Settled. Allegations: CLAIMANTS ALLEGE, INTER ALIA, THAT DURING 2008 THE FA INVESTED THE CLIENT'S ACCOUNT UNSUITABLY IN EQUITIES.. Damage requested: $500,000.00. Settlement: $55,000.00"
+      }
+    ]
+  }
+}

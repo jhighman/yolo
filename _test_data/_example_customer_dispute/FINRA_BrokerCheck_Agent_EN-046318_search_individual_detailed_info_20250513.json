@@ -1,0 +1,326 @@
+{
+  "basicInformation": {
+    "individualId": 4216156,
+    "firstName": "LEONARD",
+    "middleName": "FREDERICK",
+    "lastName": "HIRSH",
+    "otherNames": [],
+    "bcScope": "Active",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDate": "4/20/2015"
+  },
+  "currentEmployments": [
+    {
+      "firmId": 18923,
+      "firmName": "SIGNATURE ESTATE SECURITIES, LLC",
+      "iaOnly": "N",
+      "registrationBeginDate": "7/25/2023",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE",
+      "bdSECNumber": "37065",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "91091",
+          "street1": "2121 AVENUE OF STARS",
+          "street2": "SUITE 1600",
+          "city": "LOS ANGELES",
+          "cityAlias": [
+            "CENTURY CITY",
+            "LOS ANGELES"
+          ],
+          "state": "CA",
+          "country": "UNITED STATES",
+          "zipCode": "90067",
+          "latitude": "34.05775",
+          "longitude": "-118.4138",
+          "geoLocation": "34.05775,-118.4138",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "07/25/2023"
+        }
+      ]
+    }
+  ],
+  "currentIAEmployments": [
+    {
+      "firmId": 108163,
+      "firmName": "SEIA",
+      "iaOnly": "Y",
+      "registrationBeginDate": "4/1/2016",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "56288",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 2,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "1848 S. Elena Ave.",
+          "street2": "Suite 100",
+          "city": "Redondo Beach",
+          "cityAlias": [
+            "REDONDO BEACH"
+          ],
+          "state": "CA",
+          "country": "United States",
+          "zipCode": "90277",
+          "latitude": "33.830793",
+          "longitude": "-118.387452",
+          "geoLocation": "33.830793,-118.387452",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "10/05/2015"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "54859",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "40218",
+      "firmId": 23131,
+      "firmName": "OSAIC WEALTH, INC.",
+      "city": "REDONDO BEACH",
+      "state": "CA",
+      "registrationBeginDate": "11/2/2018",
+      "registrationEndDate": "7/25/2023",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "56298",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "13995",
+      "firmId": 468,
+      "firmName": "SIGNATOR INVESTORS, INC.",
+      "city": "LOS ANGELES",
+      "state": "CA",
+      "registrationBeginDate": "2/9/2016",
+      "registrationEndDate": "11/2/2018",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "48719",
+      "firmId": 39438,
+      "firmName": "BARCLAYS GLOBAL INVESTORS SERVICES",
+      "city": "NEW YORK",
+      "state": "NY",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "8/18/2000",
+      "registrationEndDate": "6/7/2001",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "previousIAEmployments": [],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "7/2/2024",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Pending",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 10,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "Option trading strategies (collar and call writing) are alleged to been inappropriate and are alleged to have resulted in losses, notwithstanding the fact that any loss was offset by gain elsewhere in the client's portfolio.",
+        "Damage Amount Requested": "$600,000.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": "",
+        "Broker Comment": [
+          "As of this filing, no details have been provided."
+        ]
+      }
+    },
+    {
+      "eventDate": "1/30/2011",
+      "disclosureType": "Criminal",
+      "disclosureResolution": "Final Disposition",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 10,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "criminalCharges": [
+          {
+            "Charges": "Theft and Unlawful Taking or Driving of a Vehicle",
+            "Disposition": "Dismissed"
+          }
+        ],
+        "Broker Comment": [
+          "Confused friend's unlocked rental car and accidentally entered another person's vehicle. Was mistakenly confronted for having intended to separate the owner from his vehicle. All charges were dropped once it was clear that the occurrence was nothing more than a simple mistake."
+        ]
+      }
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 0,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 66",
+      "examName": "Uniform Combined State Law Examination",
+      "examTakenDate": "6/29/2016",
+      "examScope": "BOTH"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "11/17/2000",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "10/1/2018",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "2/8/2016",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "approvedSRORegistrationCount": 1,
+    "approvedFinraRegistrationCount": 1,
+    "approvedStateRegistrationCount": 15,
+    "approvedIAStateRegistrationCount": 2
+  },
+  "registeredStates": [
+    {
+      "state": "California",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "4/1/2016"
+    },
+    {
+      "state": "California",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "7/26/2023"
+    },
+    {
+      "state": "Colorado",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/4/2023"
+    },
+    {
+      "state": "Florida",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/3/2023"
+    },
+    {
+      "state": "Idaho",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/2/2023"
+    },
+    {
+      "state": "Illinois",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/8/2023"
+    },
+    {
+      "state": "Indiana",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/4/2023"
+    },
+    {
+      "state": "Kansas",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/2/2023"
+    },
+    {
+      "state": "Maine",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/2/2023"
+    },
+    {
+      "state": "Nevada",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/7/2023"
+    },
+    {
+      "state": "Pennsylvania",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/3/2023"
+    },
+    {
+      "state": "Tennessee",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/3/2023"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED_RES",
+      "regDate": "5/16/2022"
+    },
+    {
+      "state": "Texas",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/3/2023"
+    },
+    {
+      "state": "Utah",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/3/2023"
+    },
+    {
+      "state": "Washington",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/2/2023"
+    },
+    {
+      "state": "Wisconsin",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/3/2023"
+    }
+  ],
+  "registeredSROs": [
+    {
+      "sro": "FINRA",
+      "status": "APPROVED",
+      "CategoriesList": [
+        "Full Registration/General Securities Representative"
+      ]
+    }
+  ],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}

@@ -1,0 +1,764 @@
+{
+  "reference_id": "SP38146264185190_PBI-26E6B2D224B4439",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-26E6B2D224B4439",
+    "first_name": "Robert Rob",
+    "last_name": "Bartenstein",
+    "employee_number": "EN-052571",
+    "zip": "78704-3128",
+    "crdNumber": "2503260",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "2503260",
+    "individual_name": "Robert Rob Bartenstein",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "FINRA_BrokerCheck",
+    "basic_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "ROBERT MASON BARTENSTEIN",
+      "other_names": [
+        "ROBERT MASON BARTENSTEIN III"
+      ],
+      "bc_scope": "Active",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "7/30/2008",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "CUSTOMER ALLEGED THAT HE WAS PLACED IN AUCTION MARKET SECURITIES WITHOUT HIS KNOWLEDGE. DAMAGES UNSPECIFIED.",
+            "Settlement Amount": "$425,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "THIS MATTER INVOLVES THE SALES OF AUCTION RATE SECURITIES (ARS). THE TRANSACTION(S) AT ISSUE TOOK PLACE BEFORE MID-FEBRUARY 2008, WHEN THE ARS MARKET SUFFERED WIDESPREAD AUCTION FAILURES AND ILLIQUIDITY. THE FINANCIAL ADVISOR DID NOT CAUSE, CONTRIBUTE OR HAVE ANY CONTROL WHATSOEVER OVER THESE MARKET EVENTS. THE FIRM REACHED AGREEMENT WITH CERTAIN OF ITS REGULATORS, PURSUANT TO WHICH IT REPURCHASED ARS FOR THEIR FULL PAR VALUE FROM CERTAIN CLIENTS, INCLUDING THE INSTANT CLIENT, WHERE THEY COMPLAINED OR NOT. THE FINANCIAL ADVISOR WAS NOT A PARTY TO THAT AGREEMENT, DID NOT MAKE ANY PAYMENT TO THE CLIENT, AND WAS NOT ASKED TO AND DID NOT CONTRIBUTE TO THE REPURCHSE AMOUNT. THE SETTLEMENT AMOUNT IN ITEM 11 ABOVE REFLECTS THE PAR VALUE OF THE REPURCHASED ARS, AS REQUIRED BY FINRA REGULATORY NOTICE 09-12."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 66",
+          "examName": "Uniform Combined State Law Examination",
+          "examTakenDate": "11/13/1999",
+          "examScope": "BOTH"
+        },
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "2/2/1995",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "7/28/1994",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 9",
+          "examName": "General Securities Sales Supervisor - Options Module Examination",
+          "examTakenDate": "5/27/2008",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 10",
+          "examName": "General Securities Sales Supervisor - General Module Examination",
+          "examTakenDate": "3/3/2008",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "10/23/1999",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "42046",
+          "firm_name": "KESTRA INVESTMENT SERVICES, LLC",
+          "registration_begin_date": "1/4/2023",
+          "branch_offices": [
+            {
+              "street": "5707 Southwest Parkway",
+              "city": "AUSTIN",
+              "state": "TX",
+              "zip_code": "78735"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "42046",
+          "firm_name": "KESTRA INVESTMENT SERVICES, LLC",
+          "registration_begin_date": "11/6/2017",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "1/21/2022"
+        },
+        {
+          "firm_id": "42046",
+          "firm_name": "KESTRA INVESTMENT SERVICES, LLC",
+          "registration_begin_date": "3/19/2014",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "9/29/2016"
+        },
+        {
+          "firm_id": "144131",
+          "firm_name": "SPIRE SECURITIES, LLC",
+          "registration_begin_date": "2/7/2012",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "9/28/2012"
+        },
+        {
+          "firm_id": "149777",
+          "firm_name": "MORGAN STANLEY SMITH BARNEY",
+          "registration_begin_date": "6/1/2009",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/4/2011"
+        },
+        {
+          "firm_id": "8209",
+          "firm_name": "MORGAN STANLEY & CO. INCORPORATED",
+          "registration_begin_date": "3/28/2008",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "6/1/2009"
+        },
+        {
+          "firm_id": "7691",
+          "firm_name": "MERRILL LYNCH, PIERCE, FENNER & SMITH INCORPORATED",
+          "registration_begin_date": "5/22/2002",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "4/2/2008"
+        },
+        {
+          "firm_id": "7560",
+          "firm_name": "DONALDSON, LUFKIN & JENRETTE SECURITIES CORPORATION",
+          "registration_begin_date": "10/25/1999",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "5/30/2002"
+        },
+        {
+          "firm_id": "6124",
+          "firm_name": "WHEAT, FIRST SECURITIES, INC.",
+          "registration_begin_date": "1/1/1995",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "5/6/1996"
+        },
+        {
+          "firm_id": "250",
+          "firm_name": "EDWARD D. JONES & CO., L.P.",
+          "registration_begin_date": "7/27/1994",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "12/6/1994"
+        }
+      ],
+      "crd_number": "2503260"
+    },
+    "detailed_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "ROBERT MASON BARTENSTEIN",
+      "other_names": [
+        "ROBERT MASON BARTENSTEIN III"
+      ],
+      "bc_scope": "Active",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "7/30/2008",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "CUSTOMER ALLEGED THAT HE WAS PLACED IN AUCTION MARKET SECURITIES WITHOUT HIS KNOWLEDGE. DAMAGES UNSPECIFIED.",
+            "Settlement Amount": "$425,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "THIS MATTER INVOLVES THE SALES OF AUCTION RATE SECURITIES (ARS). THE TRANSACTION(S) AT ISSUE TOOK PLACE BEFORE MID-FEBRUARY 2008, WHEN THE ARS MARKET SUFFERED WIDESPREAD AUCTION FAILURES AND ILLIQUIDITY. THE FINANCIAL ADVISOR DID NOT CAUSE, CONTRIBUTE OR HAVE ANY CONTROL WHATSOEVER OVER THESE MARKET EVENTS. THE FIRM REACHED AGREEMENT WITH CERTAIN OF ITS REGULATORS, PURSUANT TO WHICH IT REPURCHASED ARS FOR THEIR FULL PAR VALUE FROM CERTAIN CLIENTS, INCLUDING THE INSTANT CLIENT, WHERE THEY COMPLAINED OR NOT. THE FINANCIAL ADVISOR WAS NOT A PARTY TO THAT AGREEMENT, DID NOT MAKE ANY PAYMENT TO THE CLIENT, AND WAS NOT ASKED TO AND DID NOT CONTRIBUTE TO THE REPURCHSE AMOUNT. THE SETTLEMENT AMOUNT IN ITEM 11 ABOVE REFLECTS THE PAR VALUE OF THE REPURCHASED ARS, AS REQUIRED BY FINRA REGULATORY NOTICE 09-12."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 66",
+          "examName": "Uniform Combined State Law Examination",
+          "examTakenDate": "11/13/1999",
+          "examScope": "BOTH"
+        },
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "2/2/1995",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "7/28/1994",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 9",
+          "examName": "General Securities Sales Supervisor - Options Module Examination",
+          "examTakenDate": "5/27/2008",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 10",
+          "examName": "General Securities Sales Supervisor - General Module Examination",
+          "examTakenDate": "3/3/2008",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "10/23/1999",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "42046",
+          "firm_name": "KESTRA INVESTMENT SERVICES, LLC",
+          "registration_begin_date": "1/4/2023",
+          "branch_offices": [
+            {
+              "street": "5707 Southwest Parkway",
+              "city": "AUSTIN",
+              "state": "TX",
+              "zip_code": "78735"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "42046",
+          "firm_name": "KESTRA INVESTMENT SERVICES, LLC",
+          "registration_begin_date": "11/6/2017",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "1/21/2022"
+        },
+        {
+          "firm_id": "42046",
+          "firm_name": "KESTRA INVESTMENT SERVICES, LLC",
+          "registration_begin_date": "3/19/2014",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "9/29/2016"
+        },
+        {
+          "firm_id": "144131",
+          "firm_name": "SPIRE SECURITIES, LLC",
+          "registration_begin_date": "2/7/2012",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "9/28/2012"
+        },
+        {
+          "firm_id": "149777",
+          "firm_name": "MORGAN STANLEY SMITH BARNEY",
+          "registration_begin_date": "6/1/2009",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/4/2011"
+        },
+        {
+          "firm_id": "8209",
+          "firm_name": "MORGAN STANLEY & CO. INCORPORATED",
+          "registration_begin_date": "3/28/2008",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "6/1/2009"
+        },
+        {
+          "firm_id": "7691",
+          "firm_name": "MERRILL LYNCH, PIERCE, FENNER & SMITH INCORPORATED",
+          "registration_begin_date": "5/22/2002",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "4/2/2008"
+        },
+        {
+          "firm_id": "7560",
+          "firm_name": "DONALDSON, LUFKIN & JENRETTE SECURITIES CORPORATION",
+          "registration_begin_date": "10/25/1999",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "5/30/2002"
+        },
+        {
+          "firm_id": "6124",
+          "firm_name": "WHEAT, FIRST SECURITIES, INC.",
+          "registration_begin_date": "1/1/1995",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "5/6/1996"
+        },
+        {
+          "firm_id": "250",
+          "firm_name": "EDWARD D. JONES & CO., L.P.",
+          "registration_begin_date": "7/27/1994",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "12/6/1994"
+        }
+      ],
+      "crd_number": "2503260"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "2503260",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA BrokerCheck data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "Robert",
+        "middle": "Rob",
+        "last": "Bartenstein"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "ROBERT",
+            "middle": "MASON",
+            "last": "BARTENSTEIN"
+          },
+          "score": 90.0,
+          "first_score": 1.0,
+          "middle_score": 0.0,
+          "last_score": 1.0
+        },
+        {
+          "name_source": "other_names[0]",
+          "fetched_name": {
+            "first": "ROBERT",
+            "middle": "MASON BARTENSTEIN",
+            "last": "III"
+          },
+          "score": 40.0,
+          "first_score": 1.0,
+          "middle_score": 0.0,
+          "last_score": 0.0
+        }
+      ],
+      "best_match": {
+        "name_source": "main_fetched_name",
+        "fetched_name": {
+          "first": "ROBERT",
+          "middle": "MASON",
+          "last": "BARTENSTEIN"
+        },
+        "score": 90.0,
+        "first_score": 1.0,
+        "middle_score": 0.0,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "Robert Rob Bartenstein has 1 customer dispute disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "CUSTOMER ALLEGED THAT HE WAS PLACED IN AUCTION MARKET SECURITIES WITHOUT HIS KNOWLEDGE. DAMAGES UNSPECIFIED.",
+            "Settlement Amount": "$425,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "THIS MATTER INVOLVES THE SALES OF AUCTION RATE SECURITIES (ARS). THE TRANSACTION(S) AT ISSUE TOOK PLACE BEFORE MID-FEBRUARY 2008, WHEN THE ARS MARKET SUFFERED WIDESPREAD AUCTION FAILURES AND ILLIQUIDITY. THE FINANCIAL ADVISOR DID NOT CAUSE, CONTRIBUTE OR HAVE ANY CONTROL WHATSOEVER OVER THESE MARKET EVENTS. THE FIRM REACHED AGREEMENT WITH CERTAIN OF ITS REGULATORS, PURSUANT TO WHICH IT REPURCHASED ARS FOR THEIR FULL PAR VALUE FROM CERTAIN CLIENTS, INCLUDING THE INSTANT CLIENT, WHERE THEY COMPLAINED OR NOT. THE FINANCIAL ADVISOR WAS NOT A PARTY TO THAT AGREEMENT, DID NOT MAKE ANY PAYMENT TO THE CLIENT, AND WAS NOT ASKED TO AND DID NOT CONTRIBUTE TO THE REPURCHSE AMOUNT. THE SETTLEMENT AMOUNT IN ITEM 11 ABOVE REFLECTS THE PAR VALUE OF THE REPURCHASED ARS, AS REQUIRED BY FINRA REGULATORY NOTICE 09-12."
+            ]
+          },
+          "event_date": "7/30/2008",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 7/30/2008. Resolution: Settled. Allegations: CUSTOMER ALLEGED THAT HE WAS PLACED IN AUCTION MARKET SECURITIES WITHOUT HIS KNOWLEDGE. DAMAGES UNSPECIFIED.. Damage requested: Not specified. Settlement: $425,000.00"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No matching disciplinary records found for Robert Rob Bartenstein, but 15 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Search Info",
+        "alert_category": "DISCIPLINARY",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Robert Rob Bartenstein",
+            "sec_disciplinary": {
+              "source": "SEC_Disciplinary",
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records found"
+            },
+            "finra_disciplinary": {
+              "source": "FINRA_Disciplinary",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Robert W. Fort",
+                "Robert F. Meyer",
+                "Brian Robert Roth",
+                "Jerry L. Little, Robert E. Cline, Bjorn J. Erickson",
+                "Jerry L. Little, Robert E. Cline, Bjorn J. Erickson",
+                "Robert Franklin Muller",
+                "ROBERT JAMES TRACY",
+                "Robert R. Tweed",
+                "Robert A. Yedid",
+                "Arlington Securities, Inc.Robert Earl Hillard",
+                "Arlington Securities, Inc.Robert Earl Hillard",
+                "Robert Anthony Daly",
+                "Robert K. Thompson",
+                "Andrew Robert Hutcheson",
+                "Robert Torres",
+                "Robert Steven Meyer",
+                "Robert Spaulding Gleason Jr."
+              ],
+              "name_scores": {
+                "Robert W. Fort": 42.86,
+                "Robert F. Meyer": 42.86,
+                "Brian Robert Roth": 4.76,
+                "Jerry L. Little, Robert E. Cline, Bjorn J. Erickson": 0.0,
+                "Robert Franklin Muller": 42.86,
+                "ROBERT JAMES TRACY": 42.86,
+                "Robert R. Tweed": 42.86,
+                "Robert A. Yedid": 42.86,
+                "Arlington Securities, Inc.Robert Earl Hillard": 0.0,
+                "Robert Anthony Daly": 42.86,
+                "Robert K. Thompson": 42.86,
+                "Andrew Robert Hutcheson": 4.76,
+                "Robert Torres": 47.62,
+                "Robert Steven Meyer": 42.86,
+                "Robert Spaulding Gleason Jr.": 42.86
+              },
+              "exact_match_found": false,
+              "status": "Partial failure: Error processing 'Arlington Securities, Inc.Robert Earl Hillard'"
+            }
+          }
+        },
+        "description": "Found 15 disciplinary records for Robert Rob Bartenstein, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Robert Rob Bartenstein",
+      "sec_disciplinary": {
+        "source": "SEC_Disciplinary",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_disciplinary": {
+        "source": "FINRA_Disciplinary",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Robert W. Fort",
+          "Robert F. Meyer",
+          "Brian Robert Roth",
+          "Jerry L. Little, Robert E. Cline, Bjorn J. Erickson",
+          "Jerry L. Little, Robert E. Cline, Bjorn J. Erickson",
+          "Robert Franklin Muller",
+          "ROBERT JAMES TRACY",
+          "Robert R. Tweed",
+          "Robert A. Yedid",
+          "Arlington Securities, Inc.Robert Earl Hillard",
+          "Arlington Securities, Inc.Robert Earl Hillard",
+          "Robert Anthony Daly",
+          "Robert K. Thompson",
+          "Andrew Robert Hutcheson",
+          "Robert Torres",
+          "Robert Steven Meyer",
+          "Robert Spaulding Gleason Jr."
+        ],
+        "name_scores": {
+          "Robert W. Fort": 42.86,
+          "Robert F. Meyer": 42.86,
+          "Brian Robert Roth": 4.76,
+          "Jerry L. Little, Robert E. Cline, Bjorn J. Erickson": 0.0,
+          "Robert Franklin Muller": 42.86,
+          "ROBERT JAMES TRACY": 42.86,
+          "Robert R. Tweed": 42.86,
+          "Robert A. Yedid": 42.86,
+          "Arlington Securities, Inc.Robert Earl Hillard": 0.0,
+          "Robert Anthony Daly": 42.86,
+          "Robert K. Thompson": 42.86,
+          "Andrew Robert Hutcheson": 4.76,
+          "Robert Torres": 47.62,
+          "Robert Steven Meyer": 42.86,
+          "Robert Spaulding Gleason Jr.": 42.86
+        },
+        "exact_match_found": false,
+        "status": "Partial failure: Error processing 'Arlington Securities, Inc.Robert Earl Hillard'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": true,
+    "compliance_explanation": "No matching arbitration records found for Robert Rob Bartenstein, but 15 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Arbitration Search Info",
+        "alert_category": "ARBITRATION",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Robert Rob Bartenstein",
+            "sec_arbitration": {
+              "source": "SEC_Arbitration",
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records found"
+            },
+            "finra_arbitration": {
+              "source": "FINRA_Arbitration",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Rob Salinger",
+                "William Pfeifer",
+                "James Dryden",
+                "LPL Financial LLC",
+                "Rob Baitinger",
+                "Robert Nagy",
+                "Berthel",
+                "Fisher & Company Financial Serv",
+                "Fisher & Company Financial Serv",
+                "Morgan Keegan & Company",
+                "LLC",
+                "Peter Rhee",
+                "John Lindsey",
+                "Aaron Lupuloff",
+                "Stifel",
+                "Nicolaus & Co.",
+                "Inc.",
+                "Jandra Lubovich",
+                "Jon Cooper",
+                "Intl Fcstone Financial Inc."
+              ],
+              "name_scores": {
+                "Rob Salinger": 47.62,
+                "William Pfeifer": 9.52,
+                "James Dryden": 9.52,
+                "LPL Financial LLC": 4.76,
+                "Rob Baitinger": 47.62,
+                "Robert Nagy": 47.62,
+                "Berthel": 9.52,
+                "Fisher & Company Financial Serv": 0.0,
+                "Morgan Keegan & Company": 4.76,
+                "LLC": 9.52,
+                "Peter Rhee": 9.52,
+                "John Lindsey": 9.52,
+                "Aaron Lupuloff": 9.52,
+                "Stifel": 9.52,
+                "Nicolaus & Co.": 4.76,
+                "Inc.": 9.52,
+                "Jandra Lubovich": 9.52,
+                "Jon Cooper": 9.52,
+                "Intl Fcstone Financial Inc.": 4.76
+              },
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'Robert Rob Bartenstein'"
+            }
+          }
+        },
+        "description": "Found 15 arbitration records for Robert Rob Bartenstein, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Robert Rob Bartenstein",
+      "sec_arbitration": {
+        "source": "SEC_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_arbitration": {
+        "source": "FINRA_Arbitration",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Rob Salinger",
+          "William Pfeifer",
+          "James Dryden",
+          "LPL Financial LLC",
+          "Rob Baitinger",
+          "Robert Nagy",
+          "Berthel",
+          "Fisher & Company Financial Serv",
+          "Fisher & Company Financial Serv",
+          "Morgan Keegan & Company",
+          "LLC",
+          "Peter Rhee",
+          "John Lindsey",
+          "Aaron Lupuloff",
+          "Stifel",
+          "Nicolaus & Co.",
+          "Inc.",
+          "Jandra Lubovich",
+          "Jon Cooper",
+          "Intl Fcstone Financial Inc."
+        ],
+        "name_scores": {
+          "Rob Salinger": 47.62,
+          "William Pfeifer": 9.52,
+          "James Dryden": 9.52,
+          "LPL Financial LLC": 4.76,
+          "Rob Baitinger": 47.62,
+          "Robert Nagy": 47.62,
+          "Berthel": 9.52,
+          "Fisher & Company Financial Serv": 0.0,
+          "Morgan Keegan & Company": 4.76,
+          "LLC": 9.52,
+          "Peter Rhee": 9.52,
+          "John Lindsey": 9.52,
+          "Aaron Lupuloff": 9.52,
+          "Stifel": 9.52,
+          "Nicolaus & Co.": 4.76,
+          "Inc.": 9.52,
+          "Jandra Lubovich": 9.52,
+          "Jon Cooper": 9.52,
+          "Intl Fcstone Financial Inc.": 4.76
+        },
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Robert Rob Bartenstein'"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for Robert Rob Bartenstein; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "CUSTOMER ALLEGED THAT HE WAS PLACED IN AUCTION MARKET SECURITIES WITHOUT HIS KNOWLEDGE. DAMAGES UNSPECIFIED.",
+            "Settlement Amount": "$425,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "THIS MATTER INVOLVES THE SALES OF AUCTION RATE SECURITIES (ARS). THE TRANSACTION(S) AT ISSUE TOOK PLACE BEFORE MID-FEBRUARY 2008, WHEN THE ARS MARKET SUFFERED WIDESPREAD AUCTION FAILURES AND ILLIQUIDITY. THE FINANCIAL ADVISOR DID NOT CAUSE, CONTRIBUTE OR HAVE ANY CONTROL WHATSOEVER OVER THESE MARKET EVENTS. THE FIRM REACHED AGREEMENT WITH CERTAIN OF ITS REGULATORS, PURSUANT TO WHICH IT REPURCHASED ARS FOR THEIR FULL PAR VALUE FROM CERTAIN CLIENTS, INCLUDING THE INSTANT CLIENT, WHERE THEY COMPLAINED OR NOT. THE FINANCIAL ADVISOR WAS NOT A PARTY TO THAT AGREEMENT, DID NOT MAKE ANY PAYMENT TO THE CLIENT, AND WAS NOT ASKED TO AND DID NOT CONTRIBUTE TO THE REPURCHSE AMOUNT. THE SETTLEMENT AMOUNT IN ITEM 11 ABOVE REFLECTS THE PAR VALUE OF THE REPURCHASED ARS, AS REQUIRED BY FINRA REGULATORY NOTICE 09-12."
+            ]
+          },
+          "event_date": "7/30/2008",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 7/30/2008. Resolution: Settled. Allegations: CUSTOMER ALLEGED THAT HE WAS PLACED IN AUCTION MARKET SECURITIES WITHOUT HIS KNOWLEDGE. DAMAGES UNSPECIFIED.. Damage requested: Not specified. Settlement: $425,000.00"
+      }
+    ]
+  }
+}

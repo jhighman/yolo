@@ -1,0 +1,265 @@
+{
+  "reference_id": "test-ref-10863",
+  "claim": {
+    "reference_id": "test-ref-10863",
+    "business_ref": "BIZ_10863",
+    "business_name": "GATE US LLC",
+    "organization_crd": "10863",
+    "entityName": "GATE US LLC"
+  },
+  "entity": {
+    "firm_name": "GATE US LLC",
+    "crd_number": "10863",
+    "sec_number": "8-27970",
+    "registration_status": null,
+    "address": {},
+    "registration_date": null,
+    "other_names": [
+      "GATE US INC",
+      "L.J. GOLDSTEIN & COMPANY, INCORPORATED",
+      "GATE US LLC"
+    ],
+    "is_sec_registered": false,
+    "is_state_registered": false,
+    "is_era_registered": false,
+    "is_sec_era_registered": false,
+    "is_state_era_registered": false,
+    "adv_filing_date": null,
+    "has_adv_pdf": false
+  },
+  "search_evaluation": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with SEC data, individual found.",
+    "basic_result": {
+      "firm_name": "GATE US LLC",
+      "crd_number": "10863",
+      "registration_status": null,
+      "addresses": [],
+      "disclosures": [
+        {
+          "disclosureType": "Regulatory Event",
+          "disclosureCount": 1
+        }
+      ],
+      "raw_data": {
+        "basicInformation": {
+          "firmId": 10863,
+          "firmName": "GATE US LLC",
+          "otherNames": [
+            "GATE US INC",
+            "L.J. GOLDSTEIN & COMPANY, INCORPORATED",
+            "GATE US LLC"
+          ],
+          "bcScope": "INACTIVE",
+          "isLegacy": "N",
+          "finraRegistered": "N",
+          "districtName": "New York",
+          "firmType": "Limited Liability Company",
+          "formedState": "New York",
+          "firmStatus": "Terminated",
+          "regulator": "SEC",
+          "firmStatusDate": "03/27/2016",
+          "formedDate": "02/04/2009",
+          "fiscalMonthEndCode": "December",
+          "legacyReportStatus": "Not Requested",
+          "bdSECNumber": "27970"
+        },
+        "bdDisclosureFlag": "Y",
+        "iaDisclosureFlag": "N",
+        "disclosures": [
+          {
+            "disclosureType": "Regulatory Event",
+            "disclosureCount": 1
+          }
+        ],
+        "registrations": {
+          "approvedFinraRegistrationCount": 0,
+          "approvedSECRegistrationCount": 0,
+          "approvedSRORegistrationCount": 0,
+          "approvedStateRegistrationCount": 0,
+          "stateList": [],
+          "businessTypeCount": 0
+        },
+        "directOwners": [
+          {
+            "legalName": "GATE TECHNOLOGIES, LLC",
+            "position": "DIRECT OWNER",
+            "bcScope": "NotInScope",
+            "crdNumber": ""
+          },
+          {
+            "legalName": "BARRENECHEA, PATRICIA MARGOT",
+            "position": "FINOP",
+            "bcScope": "Active",
+            "crdNumber": "1715189"
+          },
+          {
+            "legalName": "HUGHES, DANIELLE FRANCES",
+            "position": "CHIEF EXECUTIVE OFFICER/CHIEF COMPLIANCE OFFICER",
+            "bcScope": "Active",
+            "crdNumber": "2189447"
+          }
+        ]
+      },
+      "sec_number": "8-27970",
+      "other_names": [
+        "GATE US INC",
+        "L.J. GOLDSTEIN & COMPANY, INCORPORATED",
+        "GATE US LLC"
+      ],
+      "notice_filings": [],
+      "registration_date": null,
+      "is_sec_registered": false,
+      "is_state_registered": false,
+      "is_era_registered": false,
+      "is_sec_era_registered": false,
+      "is_state_era_registered": false,
+      "adv_filing_date": null,
+      "has_adv_pdf": false,
+      "accountant_exams": [],
+      "brochures": [],
+      "firm_status": "active",
+      "is_finra_registered": true
+    },
+    "sec_search_result": {
+      "org_name": "GATE US LLC",
+      "org_crd": "10863",
+      "firm_ia_sec_number": "",
+      "firm_ia_full_sec_number": "",
+      "firm_other_names": [
+        "GATE US INC",
+        "L.J. GOLDSTEIN & COMPANY, INCORPORATED",
+        "GATE US LLC"
+      ],
+      "firm_type": "",
+      "registration_status": "",
+      "firm_ia_scope": "INACTIVE",
+      "firm_ia_disclosure_fl": "N",
+      "firm_branches_count": 0
+    },
+    "finra_search_result": {
+      "firm_name": "GATE US LLC",
+      "crd_number": "10863"
+    }
+  },
+  "status_evaluation": {
+    "source": "SEC",
+    "compliance": false,
+    "compliance_explanation": "No active registrations found",
+    "alerts": [
+      {
+        "alert_type": "InactiveScope",
+        "severity": "HIGH",
+        "metadata": {
+          "firm_ia_scope": "INACTIVE"
+        },
+        "description": "Firm's IA scope is inactive",
+        "alert_category": "GENERAL"
+      },
+      {
+        "alert_type": "NoActiveRegistration",
+        "severity": "HIGH",
+        "metadata": {
+          "registration_status": "",
+          "firm_ia_scope": "INACTIVE",
+          "firm_status": "active",
+          "source": "Unknown",
+          "is_sec_registered": false,
+          "is_state_registered": false,
+          "is_finra_registered": true
+        },
+        "description": "No active registrations found with any regulatory body",
+        "alert_category": "REGISTRATION"
+      }
+    ]
+  },
+  "disclosure_review": {
+    "source": "SEC",
+    "compliance": false,
+    "compliance_explanation": "Significant disclosures found: Regulatory Event (1)",
+    "alerts": [
+      {
+        "alert_type": "RegulatoryEventDisclosure",
+        "severity": "HIGH",
+        "metadata": {
+          "disclosure_type": "Regulatory Event",
+          "count": 1
+        },
+        "description": "1 Regulatory Event disclosure(s) found",
+        "alert_category": "DISCLOSURE"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "No disciplinary actions found.",
+    "alerts": []
+  },
+  "arbitration_review": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "No arbitration cases found.",
+    "alerts": []
+  },
+  "adv_evaluation": {
+    "compliance": true,
+    "explanation": "ADV evaluation skipped due to configuration",
+    "alerts": [],
+    "skipped": true,
+    "skip_timestamp": "2025-08-01T09:46:22.540982",
+    "source": "SEC",
+    "adv_status": "skipped"
+  },
+  "final_evaluation": {
+    "source": "SEC",
+    "overall_compliance": false,
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "description": "One or more compliance checks failed",
+    "alerts": [
+      {
+        "eventDate": "2025-08-01",
+        "severity": "HIGH",
+        "alert_category": "REGULATORY",
+        "alert_type": "InactiveScope",
+        "description": "Firm's IA scope is inactive",
+        "source": "SEC",
+        "metadata": {
+          "firm_ia_scope": "INACTIVE"
+        }
+      },
+      {
+        "eventDate": "2025-08-01",
+        "severity": "HIGH",
+        "alert_category": "REGISTRATION",
+        "alert_type": "Registration Issue",
+        "description": "No active registrations found with any regulatory body",
+        "source": "SEC",
+        "metadata": {
+          "registration_status": "",
+          "firm_ia_scope": "INACTIVE",
+          "firm_status": "active",
+          "source": "Unknown",
+          "is_sec_registered": false,
+          "is_state_registered": false,
+          "is_finra_registered": true
+        }
+      },
+      {
+        "eventDate": "2025-08-01",
+        "severity": "HIGH",
+        "alert_category": "DISCLOSURE",
+        "alert_type": "RegulatoryEventDisclosure",
+        "description": "1 Regulatory Event disclosure(s) found",
+        "source": "SEC",
+        "metadata": {
+          "disclosure_type": "Regulatory Event",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "generated_at": "2025-08-01T09:46:22.545070"
+}

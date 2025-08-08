@@ -1,0 +1,149 @@
+{
+  "basicInformation": {
+    "individualId": 4198566,
+    "firstName": "JOSEPH",
+    "middleName": "KRISTOPHER",
+    "lastName": "KRAUSZER",
+    "otherNames": [
+      "KRIS  KRAUSZER"
+    ],
+    "bcScope": "InActive",
+    "iaScope": "Active",
+    "daysInIndustry": 7254
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "23292",
+      "firmId": 7784,
+      "firmName": "FIDELITY BROKERAGE SERVICES LLC",
+      "city": "ALTAMONTE SPRINGS",
+      "state": "FL",
+      "registrationBeginDate": "2/14/2012",
+      "registrationEndDate": "3/18/2022",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "37967",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "37180",
+      "firmId": 19616,
+      "firmName": "WELLS FARGO ADVISORS, LLC",
+      "city": "VERO BEACH",
+      "state": "FL",
+      "registrationBeginDate": "7/25/2008",
+      "registrationEndDate": "1/19/2012",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "7163",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "16267",
+      "firmId": 8174,
+      "firmName": "UBS FINANCIAL SERVICES INC.",
+      "city": "VERO BEACH",
+      "state": "FL",
+      "registrationBeginDate": "5/16/2005",
+      "registrationEndDate": "8/8/2008",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "14172",
+      "firmId": 7556,
+      "firmName": "MORGAN STANLEY DW INC.",
+      "city": "PURCHASE",
+      "state": "NY",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "3/18/2002",
+      "registrationEndDate": "4/18/2005",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "previousIAEmployments": [],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "3/8/2011",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 11,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "CLAIMANT WHO TOOK OVER ACCOUNT FOR DECEASED FATHER ALLEGES THAT FA RECOMMENDED AN UNSUITBALE LEHMAN BROTHERS STRUCTURED PRODUCT, AND MISREPRESENTED THAT IT WAS GUARANTEED. TIME FRAME: JANUARY 2008-OCTOBER 2008",
+        "Damage Amount Requested": "$30,000.00",
+        "Settlement Amount": "$14,490.00",
+        "DisplayAAOLinkIfExists": "Y",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": "11-00355",
+        "Broker Comment": [
+          "THE MATTER WAS LATER SETTLED BY UBS WITHOUT ANY FINDING OF WRONGDOING ON THE PART OF MR. KRAUSZER, WHO WAS NOT REQUIRED TO MAKE ANY MONETARY CONTRIBUTION TO THE\r\nSETTLEMENT ENTERED INTO WITH CLAIMANT."
+        ]
+      }
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 1,
+    "principalExamCount": 0,
+    "productExamCount": 3
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 66",
+      "examName": "Uniform Combined State Law Examination",
+      "examTakenDate": "6/6/2005",
+      "examScope": "BOTH"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "Series 6TO",
+      "examName": "Investment Company Products/Variable Contracts Representative Examination",
+      "examTakenDate": "1/2/2023",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "10/1/2018",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "3/15/2002",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0
+  },
+  "registeredStates": [
+    {
+      "state": "Florida",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "7/10/2023"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}

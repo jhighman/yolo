@@ -1,0 +1,402 @@
+{
+  "reference_id": "Integration-Test-3",
+  "claim": {
+    "reference_id": "Integration-Test-3",
+    "first_name": "Mark",
+    "last_name": "Copeland",
+    "individual_name": "Mark Copeland",
+    "crd_number": "1844301",
+    "organization_crd": null,
+    "organization_name": null,
+    "zip": "92705",
+    "crdNumber": "1844301",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK"
+  },
+  "search_evaluation": {
+    "source": "FINRA_BrokerCheck",
+    "basic_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "MARK EDWARD COPELAND",
+      "other_names": [],
+      "bc_scope": "Active",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "1/18/2012",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "CLIENT ALLEGES ADVISOR FAILED TO MANAGE HER ACCOUNT WITHDRAWALS AND PROPERLY SERVICE HER ACCOUNT.",
+            "Damage Amount Requested": "$180,000.00",
+            "Settlement Amount": "$5,262.51",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "CLIENT WAS TAKING UNSUSTAINABLE WITHDRAWALS FROM HER ACCOUNT.  IT WAS AGREED TO REIMBURSE THE CLIENT FOR THE DIFFERENCE BETWEEN THE MINIMUM FEE THAT COULD OF BEEN CHARGED VERSUS THE FEE PAID."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "11/17/1999",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "10/20/1998",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "9/2/1997",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 22",
+          "examName": "Direct Participation Programs Representative Examination",
+          "examTakenDate": "3/28/1989",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 6",
+          "examName": "Investment Company Products/Variable Contracts Representative Examination",
+          "examTakenDate": "7/18/1988",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "18923",
+          "firm_name": "SIGNATURE ESTATE SECURITIES, LLC",
+          "registration_begin_date": "8/14/2023",
+          "branch_offices": [
+            {
+              "street": "610 Newport Center Drive",
+              "city": "Newport Beach",
+              "state": "CA",
+              "zip_code": "92660"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "23131",
+          "firm_name": "OSAIC WEALTH, INC.",
+          "registration_begin_date": "11/2/2018",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/24/2023"
+        },
+        {
+          "firm_id": "468",
+          "firm_name": "SIGNATOR INVESTORS, INC.",
+          "registration_begin_date": "7/19/1988",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/2/2018"
+        },
+        {
+          "firm_id": "5181",
+          "firm_name": "JOHN HANCOCK MUTUAL LIFE INSURANCE COMPANY",
+          "registration_begin_date": "7/19/1988",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "5/1/1997"
+        }
+      ],
+      "crd_number": "1844301"
+    },
+    "detailed_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "MARK EDWARD COPELAND",
+      "other_names": [],
+      "bc_scope": "Active",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "1/18/2012",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "CLIENT ALLEGES ADVISOR FAILED TO MANAGE HER ACCOUNT WITHDRAWALS AND PROPERLY SERVICE HER ACCOUNT.",
+            "Damage Amount Requested": "$180,000.00",
+            "Settlement Amount": "$5,262.51",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "CLIENT WAS TAKING UNSUSTAINABLE WITHDRAWALS FROM HER ACCOUNT.  IT WAS AGREED TO REIMBURSE THE CLIENT FOR THE DIFFERENCE BETWEEN THE MINIMUM FEE THAT COULD OF BEEN CHARGED VERSUS THE FEE PAID."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "11/17/1999",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "10/20/1998",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "9/2/1997",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 22",
+          "examName": "Direct Participation Programs Representative Examination",
+          "examTakenDate": "3/28/1989",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 6",
+          "examName": "Investment Company Products/Variable Contracts Representative Examination",
+          "examTakenDate": "7/18/1988",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "18923",
+          "firm_name": "SIGNATURE ESTATE SECURITIES, LLC",
+          "registration_begin_date": "8/14/2023",
+          "branch_offices": [
+            {
+              "street": "610 Newport Center Drive",
+              "city": "Newport Beach",
+              "state": "CA",
+              "zip_code": "92660"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "23131",
+          "firm_name": "OSAIC WEALTH, INC.",
+          "registration_begin_date": "11/2/2018",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/24/2023"
+        },
+        {
+          "firm_id": "468",
+          "firm_name": "SIGNATOR INVESTORS, INC.",
+          "registration_begin_date": "7/19/1988",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/2/2018"
+        },
+        {
+          "firm_id": "5181",
+          "firm_name": "JOHN HANCOCK MUTUAL LIFE INSURANCE COMPANY",
+          "registration_begin_date": "7/19/1988",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "5/1/1997"
+        }
+      ],
+      "crd_number": "1844301"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "1844301",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA BrokerCheck data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": [],
+    "source": "FINRA_BrokerCheck"
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "expected_name": "Mark Copeland",
+      "claimed_name": {
+        "first": "Mark",
+        "middle": null,
+        "last": "Copeland"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "MARK",
+            "middle": "EDWARD",
+            "last": "COPELAND"
+          },
+          "score": 100.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        }
+      ],
+      "best_match": {
+        "name_source": "main_fetched_name",
+        "fetched_name": {
+          "first": "MARK",
+          "middle": "EDWARD",
+          "last": "COPELAND"
+        },
+        "score": 100.0
+      },
+      "compliance": true,
+      "compliance_explanation": "Name matches fetched record."
+    },
+    "alerts": [],
+    "source": "FINRA_BrokerCheck"
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": [],
+    "source": "FINRA_BrokerCheck"
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": [],
+    "source": "FINRA_BrokerCheck"
+  },
+  "employment_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Active employment found for Mark Copeland.",
+    "alerts": [],
+    "source": "FINRA_BrokerCheck"
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "Mark Copeland has 1 customer dispute disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "CLIENT ALLEGES ADVISOR FAILED TO MANAGE HER ACCOUNT WITHDRAWALS AND PROPERLY SERVICE HER ACCOUNT.",
+            "Damage Amount Requested": "$180,000.00",
+            "Settlement Amount": "$5,262.51",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "CLIENT WAS TAKING UNSUSTAINABLE WITHDRAWALS FROM HER ACCOUNT.  IT WAS AGREED TO REIMBURSE THE CLIENT FOR THE DIFFERENCE BETWEEN THE MINIMUM FEE THAT COULD OF BEEN CHARGED VERSUS THE FEE PAID."
+            ]
+          },
+          "event_date": "1/18/2012",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 1/18/2012. Resolution: Settled. Allegations: CLIENT ALLEGES ADVISOR FAILED TO MANAGE HER ACCOUNT WITHDRAWALS AND PROPERLY SERVICE HER ACCOUNT.. Damage requested: $180,000.00. Settlement: $5,262.51",
+        "source": "FINRA_BrokerCheck"
+      }
+    ],
+    "source": "FINRA_BrokerCheck"
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No disciplinary records found for Mark Copeland.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    },
+    "source": "FINRA_BrokerCheck"
+  },
+  "arbitration_review": {
+    "compliance": true,
+    "compliance_explanation": "No arbitration records found for Mark Copeland.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    },
+    "source": "FINRA_BrokerCheck"
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for Mark Copeland; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    },
+    "source": "FINRA_BrokerCheck"
+  },
+  "final_evaluation": {
+    "compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_compliance": false,
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "CLIENT ALLEGES ADVISOR FAILED TO MANAGE HER ACCOUNT WITHDRAWALS AND PROPERLY SERVICE HER ACCOUNT.",
+            "Damage Amount Requested": "$180,000.00",
+            "Settlement Amount": "$5,262.51",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "CLIENT WAS TAKING UNSUSTAINABLE WITHDRAWALS FROM HER ACCOUNT.  IT WAS AGREED TO REIMBURSE THE CLIENT FOR THE DIFFERENCE BETWEEN THE MINIMUM FEE THAT COULD OF BEEN CHARGED VERSUS THE FEE PAID."
+            ]
+          },
+          "event_date": "1/18/2012",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 1/18/2012. Resolution: Settled. Allegations: CLIENT ALLEGES ADVISOR FAILED TO MANAGE HER ACCOUNT WITHDRAWALS AND PROPERLY SERVICE HER ACCOUNT.. Damage requested: $180,000.00. Settlement: $5,262.51",
+        "source": "FINRA_BrokerCheck"
+      }
+    ]
+  }
+}

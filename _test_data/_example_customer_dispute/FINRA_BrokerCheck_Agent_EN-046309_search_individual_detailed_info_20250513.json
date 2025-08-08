@@ -1,0 +1,320 @@
+{
+  "basicInformation": {
+    "individualId": 1844301,
+    "firstName": "MARK",
+    "middleName": "EDWARD",
+    "lastName": "COPELAND",
+    "otherNames": [],
+    "bcScope": "Active",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDate": "7/18/1988"
+  },
+  "currentEmployments": [
+    {
+      "firmId": 18923,
+      "firmName": "SIGNATURE ESTATE SECURITIES, LLC",
+      "iaOnly": "N",
+      "registrationBeginDate": "8/14/2023",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE",
+      "bdSECNumber": "37065",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 2,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "816246",
+          "street1": "610 Newport Center Drive",
+          "street2": "Suite 300",
+          "city": "Newport Beach",
+          "cityAlias": [
+            "NEWPORT BEACH"
+          ],
+          "state": "CA",
+          "country": "United States",
+          "zipCode": "92660",
+          "latitude": "33.637966",
+          "longitude": "-117.873246",
+          "geoLocation": "33.637966,-117.873246",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "08/14/2023"
+        }
+      ]
+    }
+  ],
+  "currentIAEmployments": [
+    {
+      "firmId": 108163,
+      "firmName": "SEIA",
+      "iaOnly": "Y",
+      "registrationBeginDate": "7/8/1997",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "56288",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 2,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "610 Newport Center Dr.",
+          "street2": "SUITE 300",
+          "city": "Newport Beach",
+          "cityAlias": [
+            "NEWPORT BEACH"
+          ],
+          "state": "CA",
+          "country": "United States",
+          "zipCode": "92660",
+          "latitude": "33.637966",
+          "longitude": "-117.873246",
+          "geoLocation": "33.637966,-117.873246",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "04/01/1997"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "54859",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "40218",
+      "firmId": 23131,
+      "firmName": "OSAIC WEALTH, INC.",
+      "city": "NEWPORT BEACH",
+      "state": "CA",
+      "registrationBeginDate": "11/2/2018",
+      "registrationEndDate": "8/24/2023",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "56298",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "13995",
+      "firmId": 468,
+      "firmName": "SIGNATOR INVESTORS, INC.",
+      "city": "NEWPORT BEACH",
+      "state": "CA",
+      "registrationBeginDate": "7/19/1988",
+      "registrationEndDate": "11/2/2018",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "15661",
+      "firmId": 5181,
+      "firmName": "JOHN HANCOCK MUTUAL LIFE INSURANCE COMPANY",
+      "city": "BOSTON",
+      "state": "MA",
+      "country": "United States",
+      "registrationBeginDate": "7/19/1988",
+      "registrationEndDate": "5/1/1997",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "previousIAEmployments": [],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "1/18/2012",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 10,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "CLIENT ALLEGES ADVISOR FAILED TO MANAGE HER ACCOUNT WITHDRAWALS AND PROPERLY SERVICE HER ACCOUNT.",
+        "Damage Amount Requested": "$180,000.00",
+        "Settlement Amount": "$5,262.51",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": "",
+        "Broker Comment": [
+          "CLIENT WAS TAKING UNSUSTAINABLE WITHDRAWALS FROM HER ACCOUNT.  IT WAS AGREED TO REIMBURSE THE CLIENT FOR THE DIFFERENCE BETWEEN THE MINIMUM FEE THAT COULD OF BEEN CHARGED VERSUS THE FEE PAID."
+        ]
+      }
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 0,
+    "productExamCount": 4
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "11/17/1999",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "10/20/1998",
+      "examScope": "IA"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "10/1/2018",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "9/2/1997",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 22",
+      "examName": "Direct Participation Programs Representative Examination",
+      "examTakenDate": "3/28/1989",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 6",
+      "examName": "Investment Company Products/Variable Contracts Representative Examination",
+      "examTakenDate": "7/18/1988",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "approvedSRORegistrationCount": 1,
+    "approvedFinraRegistrationCount": 1,
+    "approvedStateRegistrationCount": 14,
+    "approvedIAStateRegistrationCount": 3
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "9/5/2023"
+    },
+    {
+      "state": "California",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "7/8/1997"
+    },
+    {
+      "state": "California",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/14/2023"
+    },
+    {
+      "state": "Colorado",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "9/5/2023"
+    },
+    {
+      "state": "Connecticut",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "10/12/2023"
+    },
+    {
+      "state": "Florida",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "9/5/2023"
+    },
+    {
+      "state": "Idaho",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "9/5/2023"
+    },
+    {
+      "state": "Illinois",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "9/5/2023"
+    },
+    {
+      "state": "Louisiana",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/27/2019"
+    },
+    {
+      "state": "Nevada",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "9/5/2023"
+    },
+    {
+      "state": "Oregon",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "11/19/2024"
+    },
+    {
+      "state": "South Carolina",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "9/5/2023"
+    },
+    {
+      "state": "Tennessee",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "9/5/2023"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/27/2019"
+    },
+    {
+      "state": "Texas",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "9/5/2023"
+    },
+    {
+      "state": "Utah",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "9/5/2023"
+    },
+    {
+      "state": "Washington",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "9/5/2023"
+    }
+  ],
+  "registeredSROs": [
+    {
+      "sro": "FINRA",
+      "status": "APPROVED",
+      "CategoriesList": [
+        "Direct Participation Program Representative",
+        "Full Registration/General Securities Representative",
+        "Investment Company and Variable Contracts Products Rep."
+      ]
+    }
+  ],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}

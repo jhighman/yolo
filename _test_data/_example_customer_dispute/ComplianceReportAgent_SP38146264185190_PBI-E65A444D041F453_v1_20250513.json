@@ -1,0 +1,646 @@
+{
+  "reference_id": "SP38146264185190_PBI-E65A444D041F453",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-E65A444D041F453",
+    "first_name": "Mark",
+    "last_name": "Copeland",
+    "employee_number": "EN-046309",
+    "zip": "92705",
+    "crdNumber": "1844301",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "1844301",
+    "individual_name": "Mark Copeland",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "FINRA_BrokerCheck",
+    "basic_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "MARK EDWARD COPELAND",
+      "other_names": [],
+      "bc_scope": "Active",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "1/18/2012",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "CLIENT ALLEGES ADVISOR FAILED TO MANAGE HER ACCOUNT WITHDRAWALS AND PROPERLY SERVICE HER ACCOUNT.",
+            "Damage Amount Requested": "$180,000.00",
+            "Settlement Amount": "$5,262.51",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "CLIENT WAS TAKING UNSUSTAINABLE WITHDRAWALS FROM HER ACCOUNT.  IT WAS AGREED TO REIMBURSE THE CLIENT FOR THE DIFFERENCE BETWEEN THE MINIMUM FEE THAT COULD OF BEEN CHARGED VERSUS THE FEE PAID."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "11/17/1999",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "10/20/1998",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "9/2/1997",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 22",
+          "examName": "Direct Participation Programs Representative Examination",
+          "examTakenDate": "3/28/1989",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 6",
+          "examName": "Investment Company Products/Variable Contracts Representative Examination",
+          "examTakenDate": "7/18/1988",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "18923",
+          "firm_name": "SIGNATURE ESTATE SECURITIES, LLC",
+          "registration_begin_date": "8/14/2023",
+          "branch_offices": [
+            {
+              "street": "610 Newport Center Drive",
+              "city": "Newport Beach",
+              "state": "CA",
+              "zip_code": "92660"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "23131",
+          "firm_name": "OSAIC WEALTH, INC.",
+          "registration_begin_date": "11/2/2018",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/24/2023"
+        },
+        {
+          "firm_id": "468",
+          "firm_name": "SIGNATOR INVESTORS, INC.",
+          "registration_begin_date": "7/19/1988",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/2/2018"
+        },
+        {
+          "firm_id": "5181",
+          "firm_name": "JOHN HANCOCK MUTUAL LIFE INSURANCE COMPANY",
+          "registration_begin_date": "7/19/1988",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "5/1/1997"
+        }
+      ],
+      "crd_number": "1844301"
+    },
+    "detailed_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "MARK EDWARD COPELAND",
+      "other_names": [],
+      "bc_scope": "Active",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "1/18/2012",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "CLIENT ALLEGES ADVISOR FAILED TO MANAGE HER ACCOUNT WITHDRAWALS AND PROPERLY SERVICE HER ACCOUNT.",
+            "Damage Amount Requested": "$180,000.00",
+            "Settlement Amount": "$5,262.51",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "CLIENT WAS TAKING UNSUSTAINABLE WITHDRAWALS FROM HER ACCOUNT.  IT WAS AGREED TO REIMBURSE THE CLIENT FOR THE DIFFERENCE BETWEEN THE MINIMUM FEE THAT COULD OF BEEN CHARGED VERSUS THE FEE PAID."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "11/17/1999",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "10/20/1998",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "9/2/1997",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 22",
+          "examName": "Direct Participation Programs Representative Examination",
+          "examTakenDate": "3/28/1989",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 6",
+          "examName": "Investment Company Products/Variable Contracts Representative Examination",
+          "examTakenDate": "7/18/1988",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "18923",
+          "firm_name": "SIGNATURE ESTATE SECURITIES, LLC",
+          "registration_begin_date": "8/14/2023",
+          "branch_offices": [
+            {
+              "street": "610 Newport Center Drive",
+              "city": "Newport Beach",
+              "state": "CA",
+              "zip_code": "92660"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "23131",
+          "firm_name": "OSAIC WEALTH, INC.",
+          "registration_begin_date": "11/2/2018",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/24/2023"
+        },
+        {
+          "firm_id": "468",
+          "firm_name": "SIGNATOR INVESTORS, INC.",
+          "registration_begin_date": "7/19/1988",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/2/2018"
+        },
+        {
+          "firm_id": "5181",
+          "firm_name": "JOHN HANCOCK MUTUAL LIFE INSURANCE COMPANY",
+          "registration_begin_date": "7/19/1988",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "5/1/1997"
+        }
+      ],
+      "crd_number": "1844301"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "1844301",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA BrokerCheck data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "Mark",
+        "middle": null,
+        "last": "Copeland"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "MARK",
+            "middle": "EDWARD",
+            "last": "COPELAND"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        }
+      ],
+      "best_match": {
+        "name_source": "main_fetched_name",
+        "fetched_name": {
+          "first": "MARK",
+          "middle": "EDWARD",
+          "last": "COPELAND"
+        },
+        "score": 95.0,
+        "first_score": 1.0,
+        "middle_score": 0.5,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "Mark Copeland has 1 customer dispute disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "CLIENT ALLEGES ADVISOR FAILED TO MANAGE HER ACCOUNT WITHDRAWALS AND PROPERLY SERVICE HER ACCOUNT.",
+            "Damage Amount Requested": "$180,000.00",
+            "Settlement Amount": "$5,262.51",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "CLIENT WAS TAKING UNSUSTAINABLE WITHDRAWALS FROM HER ACCOUNT.  IT WAS AGREED TO REIMBURSE THE CLIENT FOR THE DIFFERENCE BETWEEN THE MINIMUM FEE THAT COULD OF BEEN CHARGED VERSUS THE FEE PAID."
+            ]
+          },
+          "event_date": "1/18/2012",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 1/18/2012. Resolution: Settled. Allegations: CLIENT ALLEGES ADVISOR FAILED TO MANAGE HER ACCOUNT WITHDRAWALS AND PROPERLY SERVICE HER ACCOUNT.. Damage requested: $180,000.00. Settlement: $5,262.51"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No matching disciplinary records found for Mark Copeland, but 15 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Search Info",
+        "alert_category": "DISCIPLINARY",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Mark Copeland",
+            "sec_disciplinary": {
+              "source": "SEC_Disciplinary",
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records found"
+            },
+            "finra_disciplinary": {
+              "source": "FINRA_Disciplinary",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Mark Frederic Seruya",
+                "Derek Lee Copeland",
+                "Mark G. Beesley",
+                "MARK SAM KOLTA",
+                "Jason Mark Kurtz",
+                "Mark W. Manning",
+                "Lori Fleischhacker Copeland",
+                "Mark Bedros Beloyan",
+                "Mark Allen Brewer",
+                "Gary Mark Goldberg",
+                "Mark Sam Kolta",
+                "Mark Bedros Beloyan",
+                "Mark D. Martino",
+                "Mark L. Guarino",
+                "Mark Giordano"
+              ],
+              "name_scores": {
+                "Mark Frederic Seruya": 47.62,
+                "Derek Lee Copeland": 57.14,
+                "Mark G. Beesley": 47.62,
+                "MARK SAM KOLTA": 47.62,
+                "Jason Mark Kurtz": 9.52,
+                "Mark W. Manning": 47.62,
+                "Lori Fleischhacker Copeland": 57.14,
+                "Mark Bedros Beloyan": 47.62,
+                "Mark Allen Brewer": 47.62,
+                "Gary Mark Goldberg": 9.52,
+                "Mark Sam Kolta": 47.62,
+                "Mark D. Martino": 47.62,
+                "Mark L. Guarino": 47.62,
+                "Mark Giordano": 47.37
+              },
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'Mark Copeland'"
+            }
+          }
+        },
+        "description": "Found 15 disciplinary records for Mark Copeland, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Mark Copeland",
+      "sec_disciplinary": {
+        "source": "SEC_Disciplinary",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_disciplinary": {
+        "source": "FINRA_Disciplinary",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Mark Frederic Seruya",
+          "Derek Lee Copeland",
+          "Mark G. Beesley",
+          "MARK SAM KOLTA",
+          "Jason Mark Kurtz",
+          "Mark W. Manning",
+          "Lori Fleischhacker Copeland",
+          "Mark Bedros Beloyan",
+          "Mark Allen Brewer",
+          "Gary Mark Goldberg",
+          "Mark Sam Kolta",
+          "Mark Bedros Beloyan",
+          "Mark D. Martino",
+          "Mark L. Guarino",
+          "Mark Giordano"
+        ],
+        "name_scores": {
+          "Mark Frederic Seruya": 47.62,
+          "Derek Lee Copeland": 57.14,
+          "Mark G. Beesley": 47.62,
+          "MARK SAM KOLTA": 47.62,
+          "Jason Mark Kurtz": 9.52,
+          "Mark W. Manning": 47.62,
+          "Lori Fleischhacker Copeland": 57.14,
+          "Mark Bedros Beloyan": 47.62,
+          "Mark Allen Brewer": 47.62,
+          "Gary Mark Goldberg": 9.52,
+          "Mark Sam Kolta": 47.62,
+          "Mark D. Martino": 47.62,
+          "Mark L. Guarino": 47.62,
+          "Mark Giordano": 47.37
+        },
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Mark Copeland'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": true,
+    "compliance_explanation": "No matching arbitration records found for Mark Copeland, but 15 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Arbitration Search Info",
+        "alert_category": "ARBITRATION",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Mark Copeland",
+            "sec_arbitration": {
+              "source": "SEC_Arbitration",
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records found"
+            },
+            "finra_arbitration": {
+              "source": "FINRA_Arbitration",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "David Copeland",
+                "Neal Price",
+                "Strategic Wealth Partners",
+                "LLC",
+                "Morgan Stanley",
+                "Morgan Stanley & Co.",
+                "LLC",
+                "Anthony Sarracino",
+                "Anthony Viviano",
+                "Scottrade Inc.",
+                "Randle Copeland",
+                "Rodger Riney",
+                "Capital Financial Services",
+                "Inc.",
+                "J.P. Morgan Securities",
+                "LLC",
+                "LPL Financial LLC",
+                "UBS Financial Services Inc.",
+                "Charles Schwab & Co.",
+                "Inc.",
+                "Isadore Schifano",
+                "Jay Lanstein",
+                "Robert Gleason",
+                "Cantella & Co.",
+                "Inc.",
+                "SW Financial",
+                "SW Financial"
+              ],
+              "name_scores": {
+                "David Copeland": 57.89,
+                "Neal Price": 5.26,
+                "Strategic Wealth Partners": 9.52,
+                "LLC": 5.26,
+                "Morgan Stanley": 5.26,
+                "Morgan Stanley & Co.": 9.52,
+                "Anthony Sarracino": 5.26,
+                "Anthony Viviano": 5.26,
+                "Scottrade Inc.": 5.26,
+                "Randle Copeland": 57.89,
+                "Rodger Riney": 5.26,
+                "Capital Financial Services": 9.52,
+                "Inc.": 5.26,
+                "J.P. Morgan Securities": 9.52,
+                "LPL Financial LLC": 9.52,
+                "UBS Financial Services Inc.": 9.52,
+                "Charles Schwab & Co.": 9.52,
+                "Isadore Schifano": 5.26,
+                "Jay Lanstein": 5.26,
+                "Robert Gleason": 5.26,
+                "Cantella & Co.": 9.52,
+                "SW Financial": 5.26
+              },
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'Mark Copeland'"
+            }
+          }
+        },
+        "description": "Found 15 arbitration records for Mark Copeland, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Mark Copeland",
+      "sec_arbitration": {
+        "source": "SEC_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_arbitration": {
+        "source": "FINRA_Arbitration",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "David Copeland",
+          "Neal Price",
+          "Strategic Wealth Partners",
+          "LLC",
+          "Morgan Stanley",
+          "Morgan Stanley & Co.",
+          "LLC",
+          "Anthony Sarracino",
+          "Anthony Viviano",
+          "Scottrade Inc.",
+          "Randle Copeland",
+          "Rodger Riney",
+          "Capital Financial Services",
+          "Inc.",
+          "J.P. Morgan Securities",
+          "LLC",
+          "LPL Financial LLC",
+          "UBS Financial Services Inc.",
+          "Charles Schwab & Co.",
+          "Inc.",
+          "Isadore Schifano",
+          "Jay Lanstein",
+          "Robert Gleason",
+          "Cantella & Co.",
+          "Inc.",
+          "SW Financial",
+          "SW Financial"
+        ],
+        "name_scores": {
+          "David Copeland": 57.89,
+          "Neal Price": 5.26,
+          "Strategic Wealth Partners": 9.52,
+          "LLC": 5.26,
+          "Morgan Stanley": 5.26,
+          "Morgan Stanley & Co.": 9.52,
+          "Anthony Sarracino": 5.26,
+          "Anthony Viviano": 5.26,
+          "Scottrade Inc.": 5.26,
+          "Randle Copeland": 57.89,
+          "Rodger Riney": 5.26,
+          "Capital Financial Services": 9.52,
+          "Inc.": 5.26,
+          "J.P. Morgan Securities": 9.52,
+          "LPL Financial LLC": 9.52,
+          "UBS Financial Services Inc.": 9.52,
+          "Charles Schwab & Co.": 9.52,
+          "Isadore Schifano": 5.26,
+          "Jay Lanstein": 5.26,
+          "Robert Gleason": 5.26,
+          "Cantella & Co.": 9.52,
+          "SW Financial": 5.26
+        },
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Mark Copeland'"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for Mark Copeland; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "CLIENT ALLEGES ADVISOR FAILED TO MANAGE HER ACCOUNT WITHDRAWALS AND PROPERLY SERVICE HER ACCOUNT.",
+            "Damage Amount Requested": "$180,000.00",
+            "Settlement Amount": "$5,262.51",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "CLIENT WAS TAKING UNSUSTAINABLE WITHDRAWALS FROM HER ACCOUNT.  IT WAS AGREED TO REIMBURSE THE CLIENT FOR THE DIFFERENCE BETWEEN THE MINIMUM FEE THAT COULD OF BEEN CHARGED VERSUS THE FEE PAID."
+            ]
+          },
+          "event_date": "1/18/2012",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 1/18/2012. Resolution: Settled. Allegations: CLIENT ALLEGES ADVISOR FAILED TO MANAGE HER ACCOUNT WITHDRAWALS AND PROPERLY SERVICE HER ACCOUNT.. Damage requested: $180,000.00. Settlement: $5,262.51"
+      }
+    ]
+  }
+}

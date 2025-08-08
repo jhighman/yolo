@@ -1,0 +1,160 @@
+{
+  "basicInformation": {
+    "individualId": 1638779,
+    "firstName": "STEPHANIE",
+    "middleName": "NOREEN",
+    "lastName": "RICHMAN",
+    "otherNames": [],
+    "bcScope": "InActive",
+    "iaScope": "Active",
+    "daysInIndustry": 9441
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "23292",
+      "firmId": 7784,
+      "firmName": "FIDELITY BROKERAGE SERVICES LLC",
+      "city": "PALO ALTO",
+      "state": "CA",
+      "registrationBeginDate": "5/28/2004",
+      "registrationEndDate": "7/12/2017",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "35097",
+      "firmId": 17507,
+      "firmName": "FIDELITY INVESTMENTS INSTITUTIONAL SERVICES COMPANY, INC.",
+      "city": "SMITHFIELD",
+      "state": "RI",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "10/21/1999",
+      "registrationEndDate": "5/27/2004",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "23292",
+      "firmId": 7784,
+      "firmName": "FIDELITY BROKERAGE SERVICES, INC.",
+      "city": "SMITHFIELD",
+      "state": "RI",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "10/21/1993",
+      "registrationEndDate": "10/21/1999",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "30258",
+      "firmId": 10510,
+      "firmName": "SMITH NEW COURT, INC.",
+      "city": "NEW YORK",
+      "state": "NY",
+      "country": "United States",
+      "registrationBeginDate": "4/30/1990",
+      "registrationEndDate": "6/12/1992",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "previousIAEmployments": [],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "7/26/2002",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Closed-No Action",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 11,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "THE CUSTOMERS ALLEGE THEY WERE MISLED INTO INVESTING IN A HIGH-RISK MUTUAL FUND BY MS. RICHMAN IN FEBRUARY 2002.",
+        "Damage Amount Requested": "$52,775.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": ""
+      }
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 2,
+    "productExamCount": 3
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "8/11/1997",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "3/31/1992",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [
+    {
+      "examCategory": "Series 10",
+      "examName": "General Securities Sales Supervisor - General Module Examination",
+      "examTakenDate": "9/30/2005",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 9",
+      "examName": "General Securities Sales Supervisor - Options Module Examination",
+      "examTakenDate": "9/3/2005",
+      "examScope": "BC"
+    }
+  ],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "7/12/2017",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "4/21/1990",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 6",
+      "examName": "Investment Company Products/Variable Contracts Representative Examination",
+      "examTakenDate": "4/7/1987",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0
+  },
+  "registeredStates": [
+    {
+      "state": "California",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "6/25/2019"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}

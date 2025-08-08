@@ -1,0 +1,376 @@
+{
+  "basicInformation": {
+    "individualId": 2503260,
+    "firstName": "ROBERT",
+    "middleName": "MASON",
+    "lastName": "BARTENSTEIN",
+    "otherNames": [
+      "ROBERT MASON BARTENSTEIN III"
+    ],
+    "bcScope": "Active",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDate": "8/11/1998"
+  },
+  "currentEmployments": [
+    {
+      "firmId": 42046,
+      "firmName": "KESTRA INVESTMENT SERVICES, LLC",
+      "iaOnly": "N",
+      "registrationBeginDate": "1/4/2023",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "INACTIVE",
+      "bdSECNumber": "49672",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "808266",
+          "street1": "5707 Southwest Parkway",
+          "street2": "Building 2, STE 400",
+          "city": "AUSTIN",
+          "cityAlias": [
+            "AUSTIN",
+            "OAK HILL",
+            "SUNSET VALLEY"
+          ],
+          "state": "TX",
+          "country": "United States",
+          "zipCode": "78735",
+          "latitude": "30.269685",
+          "longitude": "-97.861058",
+          "geoLocation": "30.269685,-97.861058",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "03/20/2023"
+        }
+      ]
+    }
+  ],
+  "currentIAEmployments": [
+    {
+      "firmId": 155193,
+      "firmName": "KESTRA PRIVATE WEALTH SERVICES, LLC",
+      "iaOnly": "Y",
+      "registrationBeginDate": "9/29/2016",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "71936",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "453303",
+          "street1": "5707 SOUTHWEST PARKWAY",
+          "street2": "BLDG. 2 STE 400",
+          "city": "AUSTIN",
+          "cityAlias": [
+            "AUSTIN",
+            "OAK HILL",
+            "SUNSET VALLEY"
+          ],
+          "state": "TX",
+          "country": "United States",
+          "zipCode": "78735",
+          "latitude": "30.269685",
+          "longitude": "-97.861058",
+          "geoLocation": "30.269685,-97.861058",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "11/11/2011"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "49672",
+      "firmId": 42046,
+      "firmName": "KESTRA INVESTMENT SERVICES, LLC",
+      "city": "SAN DIEGO",
+      "state": "CA",
+      "registrationBeginDate": "11/6/2017",
+      "registrationEndDate": "1/21/2022",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "49672",
+      "firmId": 42046,
+      "firmName": "KESTRA INVESTMENT SERVICES, LLC",
+      "city": "SAN DIEGO",
+      "state": "CA",
+      "registrationBeginDate": "3/19/2014",
+      "registrationEndDate": "9/29/2016",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "67635",
+      "firmId": 144131,
+      "firmName": "SPIRE SECURITIES, LLC",
+      "city": "SAN DIEGO",
+      "state": "CA",
+      "registrationBeginDate": "2/7/2012",
+      "registrationEndDate": "9/28/2012",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "70103",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "68191",
+      "firmId": 149777,
+      "firmName": "MORGAN STANLEY SMITH BARNEY",
+      "city": "SAN DIEGO",
+      "state": "CA",
+      "registrationBeginDate": "6/1/2009",
+      "registrationEndDate": "8/4/2011",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "15869",
+      "firmId": 8209,
+      "firmName": "MORGAN STANLEY & CO. INCORPORATED",
+      "city": "SAN DIEGO",
+      "state": "CA",
+      "registrationBeginDate": "3/28/2008",
+      "registrationEndDate": "6/1/2009",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "14235",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "7221",
+      "firmId": 7691,
+      "firmName": "MERRILL LYNCH, PIERCE, FENNER & SMITH INCORPORATED",
+      "city": "WASHINGTON",
+      "state": "DC",
+      "registrationBeginDate": "5/22/2002",
+      "registrationEndDate": "4/2/2008",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "17574",
+      "firmId": 7560,
+      "firmName": "DONALDSON, LUFKIN & JENRETTE SECURITIES CORPORATION",
+      "city": "JERSEY CITY",
+      "state": "NJ",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "10/25/1999",
+      "registrationEndDate": "5/30/2002",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "12886",
+      "firmId": 6124,
+      "firmName": "WHEAT, FIRST SECURITIES, INC.",
+      "city": "CHARLOTTE",
+      "state": "NC",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "1/1/1995",
+      "registrationEndDate": "5/6/1996",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "3297",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "759",
+      "firmId": 250,
+      "firmName": "EDWARD D. JONES & CO., L.P.",
+      "city": "ST. LOUIS",
+      "state": "MO",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "7/27/1994",
+      "registrationEndDate": "12/6/1994",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "71936",
+      "iaSECNumberType": "801",
+      "firmId": 155193,
+      "firmName": "KESTRA PRIVATE WEALTH SERVICES, LLC",
+      "city": "SAN DIEGO",
+      "state": "CA",
+      "country": "United States",
+      "registrationBeginDate": "2/8/2012",
+      "registrationEndDate": "9/29/2016",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "70103",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "68191",
+      "firmId": 149777,
+      "firmName": "MORGAN STANLEY SMITH BARNEY LLC",
+      "city": "SAN DIEGO",
+      "state": "CA",
+      "country": "United States",
+      "registrationBeginDate": "6/1/2009",
+      "registrationEndDate": "8/4/2011",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "bdSECNumber": "15869",
+      "firmId": 8209,
+      "firmName": "MORGAN STANLEY & CO. INCORPORATED",
+      "city": "SAN DIEGO",
+      "state": "CA",
+      "country": "United States",
+      "registrationBeginDate": "3/28/2008",
+      "registrationEndDate": "6/1/2009",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "14235",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "7221",
+      "firmId": 7691,
+      "firmName": "MERRILL LYNCH, PIERCE, FENNER & SMITH INCORPORATED",
+      "city": "WASHINGTON",
+      "state": "DC",
+      "country": "United States",
+      "registrationBeginDate": "7/31/2002",
+      "registrationEndDate": "4/2/2008",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "7/30/2008",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 10,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "CUSTOMER ALLEGED THAT HE WAS PLACED IN AUCTION MARKET SECURITIES WITHOUT HIS KNOWLEDGE. DAMAGES UNSPECIFIED.",
+        "Settlement Amount": "$425,000.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": "",
+        "Broker Comment": [
+          "THIS MATTER INVOLVES THE SALES OF AUCTION RATE SECURITIES (ARS). THE TRANSACTION(S) AT ISSUE TOOK PLACE BEFORE MID-FEBRUARY 2008, WHEN THE ARS MARKET SUFFERED WIDESPREAD AUCTION FAILURES AND ILLIQUIDITY. THE FINANCIAL ADVISOR DID NOT CAUSE, CONTRIBUTE OR HAVE ANY CONTROL WHATSOEVER OVER THESE MARKET EVENTS. THE FIRM REACHED AGREEMENT WITH CERTAIN OF ITS REGULATORS, PURSUANT TO WHICH IT REPURCHASED ARS FOR THEIR FULL PAR VALUE FROM CERTAIN CLIENTS, INCLUDING THE INSTANT CLIENT, WHERE THEY COMPLAINED OR NOT. THE FINANCIAL ADVISOR WAS NOT A PARTY TO THAT AGREEMENT, DID NOT MAKE ANY PAYMENT TO THE CLIENT, AND WAS NOT ASKED TO AND DID NOT CONTRIBUTE TO THE REPURCHSE AMOUNT. THE SETTLEMENT AMOUNT IN ITEM 11 ABOVE REFLECTS THE PAR VALUE OF THE REPURCHASED ARS, AS REQUIRED BY FINRA REGULATORY NOTICE 09-12."
+        ]
+      }
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 3,
+    "principalExamCount": 2,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 66",
+      "examName": "Uniform Combined State Law Examination",
+      "examTakenDate": "11/13/1999",
+      "examScope": "BOTH"
+    },
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "2/2/1995",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "7/28/1994",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [
+    {
+      "examCategory": "Series 9",
+      "examName": "General Securities Sales Supervisor - Options Module Examination",
+      "examTakenDate": "5/27/2008",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 10",
+      "examName": "General Securities Sales Supervisor - General Module Examination",
+      "examTakenDate": "3/3/2008",
+      "examScope": "BC"
+    }
+  ],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "10/1/2018",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "10/23/1999",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "approvedSRORegistrationCount": 1,
+    "approvedFinraRegistrationCount": 1,
+    "approvedStateRegistrationCount": 1,
+    "approvedIAStateRegistrationCount": 1
+  },
+  "registeredStates": [
+    {
+      "state": "Texas",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "1/5/2023"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "1/5/2023"
+    }
+  ],
+  "registeredSROs": [
+    {
+      "sro": "FINRA",
+      "status": "APPROVED",
+      "CategoriesList": [
+        "Full Registration/General Securities Representative",
+        "General Securities Sales Supervisor"
+      ]
+    }
+  ],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}

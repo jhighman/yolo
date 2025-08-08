@@ -1,0 +1,524 @@
+{
+  "reference_id": "test-ref-112694",
+  "claim": {
+    "reference_id": "test-ref-112694",
+    "business_ref": "BIZ_112694",
+    "business_name": "CONSOLIDATED PORTFOLIO REVIEW CORP",
+    "organization_crd": "112694",
+    "entityName": "CONSOLIDATED PORTFOLIO REVIEW CORP"
+  },
+  "entity": {
+    "firm_name": "CONSOLIDATED PORTFOLIO REVIEW CORP",
+    "crd_number": "112694",
+    "sec_number": "801-38795",
+    "registration_status": "ACTIVE",
+    "address": {},
+    "registration_date": "12/2/1991",
+    "other_names": [
+      "3 DIMENSIONAL WEALTH ADVISORY",
+      "ZIRCON FINANCIAL PLANNING, LLC",
+      "VISPER WEALTH MANAGEMENT",
+      "VIRTUS WEALTH INC",
+      "VAUGHT WEALTH MANAGEMENT",
+      "SUMMIT ADVISORS NW",
+      "STREAMLINE ASSET MANAGEMENT, LLC",
+      "STRATEGIC WEALTH ENDEAVOR INC",
+      "STONEFIELD WEALTH MANAGEMENT",
+      "STOECKLEIN FINANCIAL SERVICES",
+      "SEQUOIA WEALTH & RISK MANAGEMENT",
+      "SCOPO CAPITAL PLANNING",
+      "RED HORSE FINANCIAL GROUP",
+      "RANDALL WEALTH MANAGEMENT",
+      "PARAMOUNT FINANCIAL GROUP, LLC.",
+      "PACKARD ADVISORY SERVICES",
+      "NATIONAL ONE ADVISORS",
+      "MARTINSON STOLLER ADVISORS",
+      "LEGACY SOLUTIONS WEALTH MANAGEMENT LLC",
+      "HEWITT PLANNING SERVICES",
+      "HATTIG FINANCIAL COMPANY",
+      "GRANITE CANYON WEALTH",
+      "GOLDEN ELDRIDGE FINANCIAL LLC",
+      "FINANCIAL RESOURCES INC.",
+      "DELANCEY WEALTH MANAGEMENT",
+      "CONSOLIDATED PORTFOLIO REVIEW CORP",
+      "CHIAPPETTA FINANCIAL GROUP",
+      "AMERICAN CAPITAL ADVISORS, LLC",
+      "ABRAMOVITZ WEALTH MANAGEMENT LLC",
+      "3D WEALTH ADVISORY"
+    ],
+    "is_sec_registered": true,
+    "is_state_registered": false,
+    "is_era_registered": false,
+    "is_sec_era_registered": false,
+    "is_state_era_registered": false,
+    "adv_filing_date": "07/11/2025",
+    "has_adv_pdf": true
+  },
+  "search_evaluation": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with SEC data, individual found.",
+    "basic_result": {
+      "firm_name": "CONSOLIDATED PORTFOLIO REVIEW CORP",
+      "crd_number": "112694",
+      "registration_status": "ACTIVE",
+      "addresses": [],
+      "disclosures": [],
+      "raw_data": {
+        "basicInformation": {
+          "firmId": 112694,
+          "firmName": "CONSOLIDATED PORTFOLIO REVIEW CORP",
+          "otherNames": [
+            "3 DIMENSIONAL WEALTH ADVISORY",
+            "ZIRCON FINANCIAL PLANNING, LLC",
+            "VISPER WEALTH MANAGEMENT",
+            "VIRTUS WEALTH INC",
+            "VAUGHT WEALTH MANAGEMENT",
+            "SUMMIT ADVISORS NW",
+            "STREAMLINE ASSET MANAGEMENT, LLC",
+            "STRATEGIC WEALTH ENDEAVOR INC",
+            "STONEFIELD WEALTH MANAGEMENT",
+            "STOECKLEIN FINANCIAL SERVICES",
+            "SEQUOIA WEALTH & RISK MANAGEMENT",
+            "SCOPO CAPITAL PLANNING",
+            "RED HORSE FINANCIAL GROUP",
+            "RANDALL WEALTH MANAGEMENT",
+            "PARAMOUNT FINANCIAL GROUP, LLC.",
+            "PACKARD ADVISORY SERVICES",
+            "NATIONAL ONE ADVISORS",
+            "MARTINSON STOLLER ADVISORS",
+            "LEGACY SOLUTIONS WEALTH MANAGEMENT LLC",
+            "HEWITT PLANNING SERVICES",
+            "HATTIG FINANCIAL COMPANY",
+            "GRANITE CANYON WEALTH",
+            "GOLDEN ELDRIDGE FINANCIAL LLC",
+            "FINANCIAL RESOURCES INC.",
+            "DELANCEY WEALTH MANAGEMENT",
+            "CONSOLIDATED PORTFOLIO REVIEW CORP",
+            "CHIAPPETTA FINANCIAL GROUP",
+            "AMERICAN CAPITAL ADVISORS, LLC",
+            "ABRAMOVITZ WEALTH MANAGEMENT LLC",
+            "3D WEALTH ADVISORY"
+          ],
+          "iaScope": "ACTIVE",
+          "isIAFirm": "Y",
+          "legacyReportStatus": "Not Requested",
+          "iaSECNumber": "38795",
+          "iaSECNumberType": "801",
+          "crs": {
+            "crsType": "IA",
+            "fileId": "8fb7d6b4-a3c6-4031-ba7e-16f3bbf8bcc9"
+          }
+        },
+        "iaFirmAddressDetails": {
+          "officeAddress": {
+            "street1": "125 FROEHLICH FARM BLVD.",
+            "city": "WOODBURY",
+            "state": "NY",
+            "country": "United States",
+            "postalCode": "11797"
+          }
+        },
+        "iaDisclosureFlag": "N"
+      },
+      "sec_number": "801-38795",
+      "other_names": [
+        "3 DIMENSIONAL WEALTH ADVISORY",
+        "ZIRCON FINANCIAL PLANNING, LLC",
+        "VISPER WEALTH MANAGEMENT",
+        "VIRTUS WEALTH INC",
+        "VAUGHT WEALTH MANAGEMENT",
+        "SUMMIT ADVISORS NW",
+        "STREAMLINE ASSET MANAGEMENT, LLC",
+        "STRATEGIC WEALTH ENDEAVOR INC",
+        "STONEFIELD WEALTH MANAGEMENT",
+        "STOECKLEIN FINANCIAL SERVICES",
+        "SEQUOIA WEALTH & RISK MANAGEMENT",
+        "SCOPO CAPITAL PLANNING",
+        "RED HORSE FINANCIAL GROUP",
+        "RANDALL WEALTH MANAGEMENT",
+        "PARAMOUNT FINANCIAL GROUP, LLC.",
+        "PACKARD ADVISORY SERVICES",
+        "NATIONAL ONE ADVISORS",
+        "MARTINSON STOLLER ADVISORS",
+        "LEGACY SOLUTIONS WEALTH MANAGEMENT LLC",
+        "HEWITT PLANNING SERVICES",
+        "HATTIG FINANCIAL COMPANY",
+        "GRANITE CANYON WEALTH",
+        "GOLDEN ELDRIDGE FINANCIAL LLC",
+        "FINANCIAL RESOURCES INC.",
+        "DELANCEY WEALTH MANAGEMENT",
+        "CONSOLIDATED PORTFOLIO REVIEW CORP",
+        "CHIAPPETTA FINANCIAL GROUP",
+        "AMERICAN CAPITAL ADVISORS, LLC",
+        "ABRAMOVITZ WEALTH MANAGEMENT LLC",
+        "3D WEALTH ADVISORY"
+      ],
+      "notice_filings": [
+        {
+          "jurisdiction": "Alabama",
+          "status": "Notice Filed",
+          "effective_date": "1/14/2022"
+        },
+        {
+          "jurisdiction": "Alaska",
+          "status": "Notice Filed",
+          "effective_date": "10/13/2020"
+        },
+        {
+          "jurisdiction": "Arizona",
+          "status": "Notice Filed",
+          "effective_date": "10/13/2020"
+        },
+        {
+          "jurisdiction": "Arkansas",
+          "status": "Notice Filed",
+          "effective_date": "1/14/2022"
+        },
+        {
+          "jurisdiction": "California",
+          "status": "Notice Filed",
+          "effective_date": "1/11/2017"
+        },
+        {
+          "jurisdiction": "Colorado",
+          "status": "Notice Filed",
+          "effective_date": "10/13/2020"
+        },
+        {
+          "jurisdiction": "Connecticut",
+          "status": "Notice Filed",
+          "effective_date": "1/11/2017"
+        },
+        {
+          "jurisdiction": "Delaware",
+          "status": "Notice Filed",
+          "effective_date": "8/12/2021"
+        },
+        {
+          "jurisdiction": "District of Columbia",
+          "status": "Notice Filed",
+          "effective_date": "8/12/2021"
+        },
+        {
+          "jurisdiction": "Florida",
+          "status": "Notice Filed",
+          "effective_date": "7/8/2015"
+        },
+        {
+          "jurisdiction": "Georgia",
+          "status": "Notice Filed",
+          "effective_date": "1/11/2017"
+        },
+        {
+          "jurisdiction": "Hawaii",
+          "status": "Notice Filed",
+          "effective_date": "10/13/2020"
+        },
+        {
+          "jurisdiction": "Idaho",
+          "status": "Notice Filed",
+          "effective_date": "1/14/2022"
+        },
+        {
+          "jurisdiction": "Illinois",
+          "status": "Notice Filed",
+          "effective_date": "8/18/2021"
+        },
+        {
+          "jurisdiction": "Indiana",
+          "status": "Notice Filed",
+          "effective_date": "5/19/2021"
+        },
+        {
+          "jurisdiction": "Iowa",
+          "status": "Notice Filed",
+          "effective_date": "1/14/2022"
+        },
+        {
+          "jurisdiction": "Kansas",
+          "status": "Notice Filed",
+          "effective_date": "1/14/2022"
+        },
+        {
+          "jurisdiction": "Kentucky",
+          "status": "Notice Filed",
+          "effective_date": "10/28/2020"
+        },
+        {
+          "jurisdiction": "Louisiana",
+          "status": "Notice Filed",
+          "effective_date": "1/14/2022"
+        },
+        {
+          "jurisdiction": "Maine",
+          "status": "Notice Filed",
+          "effective_date": "1/14/2022"
+        },
+        {
+          "jurisdiction": "Maryland",
+          "status": "Notice Filed",
+          "effective_date": "1/11/2017"
+        },
+        {
+          "jurisdiction": "Massachusetts",
+          "status": "Notice Filed",
+          "effective_date": "7/22/2020"
+        },
+        {
+          "jurisdiction": "Michigan",
+          "status": "Notice Filed",
+          "effective_date": "4/29/2021"
+        },
+        {
+          "jurisdiction": "Minnesota",
+          "status": "Notice Filed",
+          "effective_date": "8/12/2021"
+        },
+        {
+          "jurisdiction": "Mississippi",
+          "status": "Notice Filed",
+          "effective_date": "1/14/2022"
+        },
+        {
+          "jurisdiction": "Missouri",
+          "status": "Notice Filed",
+          "effective_date": "8/12/2021"
+        },
+        {
+          "jurisdiction": "Montana",
+          "status": "Notice Filed",
+          "effective_date": "10/13/2020"
+        },
+        {
+          "jurisdiction": "Nebraska",
+          "status": "Notice Filed",
+          "effective_date": "1/14/2022"
+        },
+        {
+          "jurisdiction": "Nevada",
+          "status": "Notice Filed",
+          "effective_date": "10/13/2020"
+        },
+        {
+          "jurisdiction": "New Hampshire",
+          "status": "Notice Filed",
+          "effective_date": "7/8/2015"
+        },
+        {
+          "jurisdiction": "New Jersey",
+          "status": "Notice Filed",
+          "effective_date": "1/17/2017"
+        },
+        {
+          "jurisdiction": "New Mexico",
+          "status": "Notice Filed",
+          "effective_date": "10/13/2020"
+        },
+        {
+          "jurisdiction": "New York",
+          "status": "Notice Filed",
+          "effective_date": "1/11/2017"
+        },
+        {
+          "jurisdiction": "North Carolina",
+          "status": "Notice Filed",
+          "effective_date": "1/11/2017"
+        },
+        {
+          "jurisdiction": "North Dakota",
+          "status": "Notice Filed",
+          "effective_date": "1/14/2022"
+        },
+        {
+          "jurisdiction": "Ohio",
+          "status": "Notice Filed",
+          "effective_date": "7/22/2020"
+        },
+        {
+          "jurisdiction": "Oklahoma",
+          "status": "Notice Filed",
+          "effective_date": "1/14/2022"
+        },
+        {
+          "jurisdiction": "Oregon",
+          "status": "Notice Filed",
+          "effective_date": "10/13/2020"
+        },
+        {
+          "jurisdiction": "Pennsylvania",
+          "status": "Notice Filed",
+          "effective_date": "1/11/2017"
+        },
+        {
+          "jurisdiction": "Rhode Island",
+          "status": "Notice Filed",
+          "effective_date": "2/15/2017"
+        },
+        {
+          "jurisdiction": "South Carolina",
+          "status": "Notice Filed",
+          "effective_date": "1/11/2017"
+        },
+        {
+          "jurisdiction": "South Dakota",
+          "status": "Notice Filed",
+          "effective_date": "1/11/2017"
+        },
+        {
+          "jurisdiction": "Tennessee",
+          "status": "Notice Filed",
+          "effective_date": "1/14/2022"
+        },
+        {
+          "jurisdiction": "Texas",
+          "status": "Notice Filed",
+          "effective_date": "1/11/2017"
+        },
+        {
+          "jurisdiction": "Utah",
+          "status": "Notice Filed",
+          "effective_date": "10/13/2020"
+        },
+        {
+          "jurisdiction": "Vermont",
+          "status": "Notice Filed",
+          "effective_date": "8/12/2021"
+        },
+        {
+          "jurisdiction": "Virginia",
+          "status": "Notice Filed",
+          "effective_date": "1/11/2017"
+        },
+        {
+          "jurisdiction": "Washington",
+          "status": "Notice Filed",
+          "effective_date": "10/13/2020"
+        },
+        {
+          "jurisdiction": "West Virginia",
+          "status": "Notice Filed",
+          "effective_date": "1/14/2022"
+        },
+        {
+          "jurisdiction": "Wisconsin",
+          "status": "Notice Filed",
+          "effective_date": "1/14/2022"
+        },
+        {
+          "jurisdiction": "Wyoming",
+          "status": "Notice Filed",
+          "effective_date": "1/14/2022"
+        }
+      ],
+      "registration_date": "12/2/1991",
+      "is_sec_registered": true,
+      "is_state_registered": false,
+      "is_era_registered": false,
+      "is_sec_era_registered": false,
+      "is_state_era_registered": false,
+      "adv_filing_date": "07/11/2025",
+      "has_adv_pdf": true,
+      "accountant_exams": [],
+      "brochures": [
+        {
+          "name": "CONSOLIDATED PORTFOLIO REVIEW ADV PART 2A - MARCH 2025",
+          "version_id": 952200,
+          "date_submitted": "3/13/2025",
+          "last_confirmed": null
+        }
+      ],
+      "firm_status": "active",
+      "is_finra_registered": true
+    },
+    "sec_search_result": {
+      "org_name": "CONSOLIDATED PORTFOLIO REVIEW CORP",
+      "org_crd": "112694",
+      "firm_ia_sec_number": "38795",
+      "firm_ia_full_sec_number": "801-38795",
+      "firm_other_names": [
+        "3 DIMENSIONAL WEALTH ADVISORY",
+        "ZIRCON FINANCIAL PLANNING, LLC",
+        "VISPER WEALTH MANAGEMENT",
+        "VIRTUS WEALTH INC",
+        "VAUGHT WEALTH MANAGEMENT",
+        "SUMMIT ADVISORS NW",
+        "STREAMLINE ASSET MANAGEMENT, LLC",
+        "STRATEGIC WEALTH ENDEAVOR INC",
+        "STONEFIELD WEALTH MANAGEMENT",
+        "STOECKLEIN FINANCIAL SERVICES",
+        "SEQUOIA WEALTH & RISK MANAGEMENT",
+        "SCOPO CAPITAL PLANNING",
+        "RED HORSE FINANCIAL GROUP",
+        "RANDALL WEALTH MANAGEMENT",
+        "PARAMOUNT FINANCIAL GROUP, LLC.",
+        "PACKARD ADVISORY SERVICES",
+        "NATIONAL ONE ADVISORS",
+        "MARTINSON STOLLER ADVISORS",
+        "LEGACY SOLUTIONS WEALTH MANAGEMENT LLC",
+        "HEWITT PLANNING SERVICES",
+        "HATTIG FINANCIAL COMPANY",
+        "GRANITE CANYON WEALTH",
+        "GOLDEN ELDRIDGE FINANCIAL LLC",
+        "FINANCIAL RESOURCES INC.",
+        "DELANCEY WEALTH MANAGEMENT",
+        "CONSOLIDATED PORTFOLIO REVIEW CORP",
+        "CHIAPPETTA FINANCIAL GROUP",
+        "AMERICAN CAPITAL ADVISORS, LLC",
+        "ABRAMOVITZ WEALTH MANAGEMENT LLC",
+        "3D WEALTH ADVISORY"
+      ],
+      "firm_type": "",
+      "registration_status": "",
+      "firm_ia_scope": "",
+      "firm_ia_disclosure_fl": "N",
+      "firm_branches_count": 47
+    },
+    "finra_search_result": {
+      "firm_name": "CONSOLIDATED PORTFOLIO REVIEW CORP",
+      "crd_number": "112694"
+    }
+  },
+  "status_evaluation": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "Firm is registered with SEC, FINRA",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "No disclosures found",
+    "alerts": []
+  },
+  "disciplinary_evaluation": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "No disciplinary actions found.",
+    "alerts": []
+  },
+  "arbitration_review": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "No arbitration cases found.",
+    "alerts": []
+  },
+  "adv_evaluation": {
+    "compliance": true,
+    "explanation": "ADV evaluation skipped due to configuration",
+    "alerts": [],
+    "skipped": true,
+    "skip_timestamp": "2025-08-05T14:48:29.789163",
+    "source": "SEC",
+    "adv_status": "skipped"
+  },
+  "final_evaluation": {
+    "source": "SEC",
+    "overall_compliance": true,
+    "overall_risk_level": "Low",
+    "recommendations": "No immediate action required, monitor for changes.",
+    "description": "All compliance checks passed",
+    "alerts": []
+  },
+  "generated_at": "2025-08-05T14:48:29.796114"
+}

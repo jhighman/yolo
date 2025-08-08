@@ -1,0 +1,405 @@
+{
+  "reference_id": "SP38146264185190_PBI-02B5DB0565ED479",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-02B5DB0565ED479",
+    "first_name": "David",
+    "last_name": "Willett",
+    "employee_number": "EN-042821",
+    "crdNumber": "6184005",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "6184005",
+    "individual_name": "David Willett",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "BrokerCheck",
+    "basic_result": {
+      "fetched_name": "DAVID ALAN WILLETT",
+      "other_names": [],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "3/14/2014",
+          "disclosureType": "Criminal",
+          "disclosureResolution": "Final Disposition",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "criminalCharges": [
+              {
+                "Charges": "Misdemeanor-Giving False Information To Law Enforcement Officer",
+                "Disposition": "Dismissed",
+                "Amended Charges": "Original charge of misdemeanor was dismissed after completion of diversion program. Completed program and charge was officially dismissed 06/05/2014.",
+                "Amended Charge Type": "OTHER",
+                "Amended Charge Disposition": "Dismissed"
+              }
+            ],
+            "Broker Comment": "Per the representative: In March of 2014 while on spring break in college, he had presented a fake ID to the bouncer to obtain entry into a bar. He was pulled aside by a police officer and given a ticket, he was released immediately and obtained entry to the same bar as a minor."
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "3/29/2019",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "11/19/2015",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 6",
+          "examName": "Investment Company Products/Variable Contracts Representative Examination",
+          "examTakenDate": "9/11/2015",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "2881",
+          "firm_name": "NORTHWESTERN MUTUAL INVESTMENT SERVICES, LLC",
+          "registration_begin_date": "9/11/2015",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "12/11/2018"
+        }
+      ],
+      "crd_number": "6184005"
+    },
+    "detailed_result": {
+      "fetched_name": "DAVID ALAN WILLETT",
+      "other_names": [],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "3/14/2014",
+          "disclosureType": "Criminal",
+          "disclosureResolution": "Final Disposition",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "criminalCharges": [
+              {
+                "Charges": "Misdemeanor-Giving False Information To Law Enforcement Officer",
+                "Disposition": "Dismissed",
+                "Amended Charges": "Original charge of misdemeanor was dismissed after completion of diversion program. Completed program and charge was officially dismissed 06/05/2014.",
+                "Amended Charge Type": "OTHER",
+                "Amended Charge Disposition": "Dismissed"
+              }
+            ],
+            "Broker Comment": "Per the representative: In March of 2014 while on spring break in college, he had presented a fake ID to the bouncer to obtain entry into a bar. He was pulled aside by a police officer and given a ticket, he was released immediately and obtained entry to the same bar as a minor."
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "3/29/2019",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "11/19/2015",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 6",
+          "examName": "Investment Company Products/Variable Contracts Representative Examination",
+          "examTakenDate": "9/11/2015",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "2881",
+          "firm_name": "NORTHWESTERN MUTUAL INVESTMENT SERVICES, LLC",
+          "registration_begin_date": "9/11/2015",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "12/11/2018"
+        }
+      ],
+      "crd_number": "6184005"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "6184005",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with BrokerCheck data, individual found with employments."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "compliance": true,
+      "compliance_explanation": "Name matches fetched record.",
+      "due_diligence": {
+        "searched_name": "David Willett",
+        "records_found": 1,
+        "records_filtered": 0,
+        "names_found": [
+          "DAVID ALAN WILLETT"
+        ],
+        "name_scores": {
+          "DAVID ALAN WILLETT": 95.24
+        },
+        "exact_match_found": true,
+        "status": "Exact matches found"
+      },
+      "alerts": []
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "David Willett has 1 criminal disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Criminal Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "criminalCharges": [
+              {
+                "Charges": "Misdemeanor-Giving False Information To Law Enforcement Officer",
+                "Disposition": "Dismissed",
+                "Amended Charges": "Original charge of misdemeanor was dismissed after completion of diversion program. Completed program and charge was officially dismissed 06/05/2014.",
+                "Amended Charge Type": "OTHER",
+                "Amended Charge Disposition": "Dismissed"
+              }
+            ],
+            "Broker Comment": "Per the representative: In March of 2014 while on spring break in college, he had presented a fake ID to the bouncer to obtain entry into a bar. He was pulled aside by a police officer and given a ticket, he was released immediately and obtained entry to the same bar as a minor."
+          },
+          "event_date": "3/14/2014",
+          "resolution": "Final Disposition"
+        },
+        "description": "Criminal disclosure on 3/14/2014. Resolution: Final Disposition. Charges: Misdemeanor-Giving False Information To Law Enforcement Officer. Disposition: Dismissed"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No matching disciplinary records found for David Willett, but 15 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Search Info",
+        "alert_category": "DISCIPLINARY",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "David Willett",
+            "sec_disciplinary": {
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records fetched"
+            },
+            "finra_disciplinary": {
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "David Wong",
+                "David L. Jerke",
+                "Jack David Faller",
+                "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.",
+                "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.",
+                "David Cordell Rollins",
+                "David Halfen",
+                "David Allen Gibbs",
+                "David Nathan Slater",
+                "David Reyes",
+                "David S. Lerner",
+                "David C. Burke",
+                "David Wong",
+                "David A. Dodson",
+                "Ramses David Visher",
+                "David Victor Tall"
+              ],
+              "name_scores": {
+                "David Wong": 47.37,
+                "David L. Jerke": 47.62,
+                "Jack David Faller": 9.52,
+                "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.": 0.0,
+                "David Cordell Rollins": 47.62,
+                "David Halfen": 47.37,
+                "David Allen Gibbs": 47.62,
+                "David Nathan Slater": 47.62,
+                "David Reyes": 47.37,
+                "David S. Lerner": 47.62,
+                "David C. Burke": 47.62,
+                "David A. Dodson": 47.62,
+                "Ramses David Visher": 9.52,
+                "David Victor Tall": 47.62
+              },
+              "exact_match_found": false,
+              "status": "Partial failure: Error processing 'Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.'"
+            }
+          }
+        },
+        "description": "Found 15 disciplinary records for David Willett, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "David Willett",
+      "sec_disciplinary": {
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records fetched"
+      },
+      "finra_disciplinary": {
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "David Wong",
+          "David L. Jerke",
+          "Jack David Faller",
+          "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.",
+          "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.",
+          "David Cordell Rollins",
+          "David Halfen",
+          "David Allen Gibbs",
+          "David Nathan Slater",
+          "David Reyes",
+          "David S. Lerner",
+          "David C. Burke",
+          "David Wong",
+          "David A. Dodson",
+          "Ramses David Visher",
+          "David Victor Tall"
+        ],
+        "name_scores": {
+          "David Wong": 47.37,
+          "David L. Jerke": 47.62,
+          "Jack David Faller": 9.52,
+          "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.": 0.0,
+          "David Cordell Rollins": 47.62,
+          "David Halfen": 47.37,
+          "David Allen Gibbs": 47.62,
+          "David Nathan Slater": 47.62,
+          "David Reyes": 47.37,
+          "David S. Lerner": 47.62,
+          "David C. Burke": 47.62,
+          "David A. Dodson": 47.62,
+          "Ramses David Visher": 9.52,
+          "David Victor Tall": 47.62
+        },
+        "exact_match_found": false,
+        "status": "Partial failure: Error processing 'Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": true,
+    "compliance_explanation": "No arbitration records found for David Willett.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "searched_name": "David Willett",
+      "sec_arbitration": {
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records fetched"
+      },
+      "finra_arbitration": {
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records fetched"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for David Willett; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Criminal Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "criminalCharges": [
+              {
+                "Charges": "Misdemeanor-Giving False Information To Law Enforcement Officer",
+                "Disposition": "Dismissed",
+                "Amended Charges": "Original charge of misdemeanor was dismissed after completion of diversion program. Completed program and charge was officially dismissed 06/05/2014.",
+                "Amended Charge Type": "OTHER",
+                "Amended Charge Disposition": "Dismissed"
+              }
+            ],
+            "Broker Comment": "Per the representative: In March of 2014 while on spring break in college, he had presented a fake ID to the bouncer to obtain entry into a bar. He was pulled aside by a police officer and given a ticket, he was released immediately and obtained entry to the same bar as a minor."
+          },
+          "event_date": "3/14/2014",
+          "resolution": "Final Disposition"
+        },
+        "description": "Criminal disclosure on 3/14/2014. Resolution: Final Disposition. Charges: Misdemeanor-Giving False Information To Law Enforcement Officer. Disposition: Dismissed"
+      }
+    ]
+  }
+}

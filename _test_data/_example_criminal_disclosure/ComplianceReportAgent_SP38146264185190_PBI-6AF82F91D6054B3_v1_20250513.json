@@ -1,0 +1,654 @@
+{
+  "reference_id": "SP38146264185190_PBI-6AF82F91D6054B3",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-6AF82F91D6054B3",
+    "first_name": "Ryan",
+    "last_name": "Tomer",
+    "employee_number": "EN-055777",
+    "zip": "33543",
+    "crdNumber": "3198818",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "3198818",
+    "individual_name": "Ryan Tomer",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "FINRA_BrokerCheck",
+    "basic_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "RYAN THOMAS TOMER",
+      "other_names": [],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "10/28/1992",
+          "disclosureType": "Criminal",
+          "disclosureResolution": "Final Disposition",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "criminalCharges": [
+              {
+                "Charges": "Falsifying Motor Vehicle Document",
+                "Disposition": "Dismissed"
+              }
+            ],
+            "Broker Comment": [
+              "When I was 18 years old I was charged with possession of a fake ID.  The charge was dismissed."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "1/12/2001",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "1/19/2000",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "12/22/2000",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 6",
+          "examName": "Investment Company Products/Variable Contracts Representative Examination",
+          "examTakenDate": "9/23/1999",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "42046",
+          "firm_name": "KESTRA INVESTMENT SERVICES, LLC",
+          "registration_begin_date": "7/12/2017",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "6/24/2019"
+        },
+        {
+          "firm_id": "129035",
+          "firm_name": "USAA FINANCIAL ADVISORS, INC.",
+          "registration_begin_date": "6/6/2011",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "4/12/2017"
+        },
+        {
+          "firm_id": "7691",
+          "firm_name": "MERRILL LYNCH, PIERCE, FENNER & SMITH INCORPORATED",
+          "registration_begin_date": "9/23/2009",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "5/19/2011"
+        },
+        {
+          "firm_id": "6413",
+          "firm_name": "LPL FINANCIAL CORPORATION",
+          "registration_begin_date": "8/25/2009",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "9/10/2009"
+        },
+        {
+          "firm_id": "16361",
+          "firm_name": "BANC OF AMERICA INVESTMENT SERVICES, INC.",
+          "registration_begin_date": "11/10/2006",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "4/28/2009"
+        },
+        {
+          "firm_id": "8174",
+          "firm_name": "UBS FINANCIAL SERVICES INC.",
+          "registration_begin_date": "3/3/2005",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "10/31/2006"
+        },
+        {
+          "firm_id": "5249",
+          "firm_name": "JOHN HANCOCK DISTRIBUTORS LLC",
+          "registration_begin_date": "9/2/2004",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "1/14/2005"
+        },
+        {
+          "firm_id": "39550",
+          "firm_name": "CITIZENS INVESTMENT SERVICES CORP.",
+          "registration_begin_date": "11/5/2002",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/7/2004"
+        },
+        {
+          "firm_id": "14251",
+          "firm_name": "METLIFE SECURITIES INC.",
+          "registration_begin_date": "8/15/2001",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/1/2002"
+        },
+        {
+          "firm_id": "4095",
+          "firm_name": "METROPOLITAN LIFE INSURANCE COMPANY",
+          "registration_begin_date": "8/15/2001",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/1/2002"
+        },
+        {
+          "firm_id": "7471",
+          "firm_name": "PRUDENTIAL SECURITIES INCORPORATED",
+          "registration_begin_date": "1/12/2001",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/18/2001"
+        },
+        {
+          "firm_id": "5685",
+          "firm_name": "PRUCO SECURITIES CORPORATION",
+          "registration_begin_date": "11/8/2000",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "2/7/2001"
+        },
+        {
+          "firm_id": "468",
+          "firm_name": "SIGNATOR INVESTORS, INC.",
+          "registration_begin_date": "9/27/1999",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/2/2000"
+        }
+      ],
+      "crd_number": "3198818"
+    },
+    "detailed_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "RYAN THOMAS TOMER",
+      "other_names": [],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "10/28/1992",
+          "disclosureType": "Criminal",
+          "disclosureResolution": "Final Disposition",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "criminalCharges": [
+              {
+                "Charges": "Falsifying Motor Vehicle Document",
+                "Disposition": "Dismissed"
+              }
+            ],
+            "Broker Comment": [
+              "When I was 18 years old I was charged with possession of a fake ID.  The charge was dismissed."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "1/12/2001",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "1/19/2000",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "12/22/2000",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 6",
+          "examName": "Investment Company Products/Variable Contracts Representative Examination",
+          "examTakenDate": "9/23/1999",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "42046",
+          "firm_name": "KESTRA INVESTMENT SERVICES, LLC",
+          "registration_begin_date": "7/12/2017",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "6/24/2019"
+        },
+        {
+          "firm_id": "129035",
+          "firm_name": "USAA FINANCIAL ADVISORS, INC.",
+          "registration_begin_date": "6/6/2011",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "4/12/2017"
+        },
+        {
+          "firm_id": "7691",
+          "firm_name": "MERRILL LYNCH, PIERCE, FENNER & SMITH INCORPORATED",
+          "registration_begin_date": "9/23/2009",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "5/19/2011"
+        },
+        {
+          "firm_id": "6413",
+          "firm_name": "LPL FINANCIAL CORPORATION",
+          "registration_begin_date": "8/25/2009",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "9/10/2009"
+        },
+        {
+          "firm_id": "16361",
+          "firm_name": "BANC OF AMERICA INVESTMENT SERVICES, INC.",
+          "registration_begin_date": "11/10/2006",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "4/28/2009"
+        },
+        {
+          "firm_id": "8174",
+          "firm_name": "UBS FINANCIAL SERVICES INC.",
+          "registration_begin_date": "3/3/2005",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "10/31/2006"
+        },
+        {
+          "firm_id": "5249",
+          "firm_name": "JOHN HANCOCK DISTRIBUTORS LLC",
+          "registration_begin_date": "9/2/2004",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "1/14/2005"
+        },
+        {
+          "firm_id": "39550",
+          "firm_name": "CITIZENS INVESTMENT SERVICES CORP.",
+          "registration_begin_date": "11/5/2002",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/7/2004"
+        },
+        {
+          "firm_id": "14251",
+          "firm_name": "METLIFE SECURITIES INC.",
+          "registration_begin_date": "8/15/2001",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/1/2002"
+        },
+        {
+          "firm_id": "4095",
+          "firm_name": "METROPOLITAN LIFE INSURANCE COMPANY",
+          "registration_begin_date": "8/15/2001",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/1/2002"
+        },
+        {
+          "firm_id": "7471",
+          "firm_name": "PRUDENTIAL SECURITIES INCORPORATED",
+          "registration_begin_date": "1/12/2001",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/18/2001"
+        },
+        {
+          "firm_id": "5685",
+          "firm_name": "PRUCO SECURITIES CORPORATION",
+          "registration_begin_date": "11/8/2000",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "2/7/2001"
+        },
+        {
+          "firm_id": "468",
+          "firm_name": "SIGNATOR INVESTORS, INC.",
+          "registration_begin_date": "9/27/1999",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/2/2000"
+        }
+      ],
+      "crd_number": "3198818"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "3198818",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA BrokerCheck data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "Ryan",
+        "middle": null,
+        "last": "Tomer"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "RYAN",
+            "middle": "THOMAS",
+            "last": "TOMER"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        }
+      ],
+      "best_match": {
+        "name_source": "main_fetched_name",
+        "fetched_name": {
+          "first": "RYAN",
+          "middle": "THOMAS",
+          "last": "TOMER"
+        },
+        "score": 95.0,
+        "first_score": 1.0,
+        "middle_score": 0.5,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "Ryan Tomer has 1 criminal disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Criminal Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "criminalCharges": [
+              {
+                "Charges": "Falsifying Motor Vehicle Document",
+                "Disposition": "Dismissed"
+              }
+            ],
+            "Broker Comment": [
+              "When I was 18 years old I was charged with possession of a fake ID.  The charge was dismissed."
+            ]
+          },
+          "event_date": "10/28/1992",
+          "resolution": "Final Disposition"
+        },
+        "description": "Criminal disclosure on 10/28/1992. Resolution: Final Disposition. Charges: Falsifying Motor Vehicle Document. Disposition: Dismissed"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No matching disciplinary records found for Ryan Tomer, but 16 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Search Info",
+        "alert_category": "DISCIPLINARY",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Ryan Tomer",
+            "sec_disciplinary": {
+              "source": "SEC_Disciplinary",
+              "records_found": 1,
+              "records_filtered": 1,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'Ryan Tomer'"
+            },
+            "finra_disciplinary": {
+              "source": "FINRA_Disciplinary",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "MICHAEL RYAN PETRUSKA",
+                "Ryan Emerson Bennett",
+                "Ryan T. Murphy",
+                "Michael Ryan Petruska",
+                "Ryan Morfin",
+                "American Independent Securities Group, LLCRyan Carlson, Nicholas Cioffi",
+                "American Independent Securities Group, LLCRyan Carlson, Nicholas Cioffi",
+                "Ryan Tarjanyi",
+                "Ryan Raskin",
+                "Timothy Ryan Deegan",
+                "Timothy Ryan Deegan",
+                "Ryan M. Davis",
+                "Ryan A. Logan",
+                "Ryan Stefan",
+                "Ryan C. Keller",
+                "Edward Ryan Buechting"
+              ],
+              "name_scores": {
+                "MICHAEL RYAN PETRUSKA": 9.52,
+                "Ryan Emerson Bennett": 47.62,
+                "Ryan T. Murphy": 47.62,
+                "Michael Ryan Petruska": 9.52,
+                "Ryan Morfin": 47.37,
+                "American Independent Securities Group, LLCRyan Carlson, Nicholas Cioffi": 0.0,
+                "Ryan Tarjanyi": 47.37,
+                "Ryan Raskin": 47.37,
+                "Timothy Ryan Deegan": 9.52,
+                "Ryan M. Davis": 47.62,
+                "Ryan A. Logan": 47.62,
+                "Ryan Stefan": 47.37,
+                "Ryan C. Keller": 47.62,
+                "Edward Ryan Buechting": 9.52
+              },
+              "exact_match_found": false,
+              "status": "Partial failure: Error processing 'American Independent Securities Group, LLCRyan Carlson, Nicholas Cioffi'"
+            }
+          }
+        },
+        "description": "Found 16 disciplinary records for Ryan Tomer, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Ryan Tomer",
+      "sec_disciplinary": {
+        "source": "SEC_Disciplinary",
+        "records_found": 1,
+        "records_filtered": 1,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Ryan Tomer'"
+      },
+      "finra_disciplinary": {
+        "source": "FINRA_Disciplinary",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "MICHAEL RYAN PETRUSKA",
+          "Ryan Emerson Bennett",
+          "Ryan T. Murphy",
+          "Michael Ryan Petruska",
+          "Ryan Morfin",
+          "American Independent Securities Group, LLCRyan Carlson, Nicholas Cioffi",
+          "American Independent Securities Group, LLCRyan Carlson, Nicholas Cioffi",
+          "Ryan Tarjanyi",
+          "Ryan Raskin",
+          "Timothy Ryan Deegan",
+          "Timothy Ryan Deegan",
+          "Ryan M. Davis",
+          "Ryan A. Logan",
+          "Ryan Stefan",
+          "Ryan C. Keller",
+          "Edward Ryan Buechting"
+        ],
+        "name_scores": {
+          "MICHAEL RYAN PETRUSKA": 9.52,
+          "Ryan Emerson Bennett": 47.62,
+          "Ryan T. Murphy": 47.62,
+          "Michael Ryan Petruska": 9.52,
+          "Ryan Morfin": 47.37,
+          "American Independent Securities Group, LLCRyan Carlson, Nicholas Cioffi": 0.0,
+          "Ryan Tarjanyi": 47.37,
+          "Ryan Raskin": 47.37,
+          "Timothy Ryan Deegan": 9.52,
+          "Ryan M. Davis": 47.62,
+          "Ryan A. Logan": 47.62,
+          "Ryan Stefan": 47.37,
+          "Ryan C. Keller": 47.62,
+          "Edward Ryan Buechting": 9.52
+        },
+        "exact_match_found": false,
+        "status": "Partial failure: Error processing 'American Independent Securities Group, LLCRyan Carlson, Nicholas Cioffi'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": true,
+    "compliance_explanation": "No arbitration records found for Ryan Tomer.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "searched_name": "Ryan Tomer",
+      "sec_arbitration": {
+        "source": "SEC_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_arbitration": {
+        "source": "FINRA_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for Ryan Tomer; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Criminal Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "criminalCharges": [
+              {
+                "Charges": "Falsifying Motor Vehicle Document",
+                "Disposition": "Dismissed"
+              }
+            ],
+            "Broker Comment": [
+              "When I was 18 years old I was charged with possession of a fake ID.  The charge was dismissed."
+            ]
+          },
+          "event_date": "10/28/1992",
+          "resolution": "Final Disposition"
+        },
+        "description": "Criminal disclosure on 10/28/1992. Resolution: Final Disposition. Charges: Falsifying Motor Vehicle Document. Disposition: Dismissed"
+      }
+    ]
+  }
+}

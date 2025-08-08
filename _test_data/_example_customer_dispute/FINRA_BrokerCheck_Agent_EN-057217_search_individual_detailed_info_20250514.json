@@ -1,0 +1,209 @@
+{
+  "basicInformation": {
+    "individualId": 2694917,
+    "firstName": "JEFFREY",
+    "middleName": "ALAN",
+    "lastName": "BROWN",
+    "otherNames": [
+      "JEFF  BROWN"
+    ],
+    "bcScope": "InActive",
+    "iaScope": "Active",
+    "daysInIndustry": 8560
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "10970",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "17668",
+      "firmId": 6413,
+      "firmName": "LPL FINANCIAL LLC",
+      "city": "SAN DIEGO",
+      "state": "CA",
+      "registrationBeginDate": "9/18/2015",
+      "registrationEndDate": "7/3/2019",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "37967",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "37180",
+      "firmId": 19616,
+      "firmName": "WELLS FARGO ADVISORS, LLC",
+      "city": "SAN DIEGO",
+      "state": "CA",
+      "registrationBeginDate": "7/1/2003",
+      "registrationEndDate": "9/25/2015",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "27154",
+      "firmId": 7471,
+      "firmName": "PRUDENTIAL SECURITIES INCORPORATED",
+      "city": "NEW YORK",
+      "state": "NY",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "8/9/2002",
+      "registrationEndDate": "7/1/2003",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "14172",
+      "firmId": 7556,
+      "firmName": "MORGAN STANLEY DW INC.",
+      "city": "PURCHASE",
+      "state": "NY",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "11/19/1999",
+      "registrationEndDate": "8/15/2002",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "27154",
+      "firmId": 7471,
+      "firmName": "PRUDENTIAL SECURITIES INCORPORATED",
+      "city": "NEW YORK",
+      "state": "NY",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "2/4/1997",
+      "registrationEndDate": "11/12/1999",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "28543",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "16791",
+      "firmId": 6363,
+      "firmName": "AMERICAN EXPRESS FINANCIAL ADVISORS INC.",
+      "city": "MINNEAPOLIS",
+      "state": "MN",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "1/16/1996",
+      "registrationEndDate": "1/30/1997",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "14124",
+      "firmId": 6321,
+      "firmName": "IDS LIFE INSURANCE COMPANY",
+      "city": "MINNEAPOLIS",
+      "state": "MN",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "1/16/1996",
+      "registrationEndDate": "1/30/1997",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "previousIAEmployments": [],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "2/13/2004",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 11,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "CLIENT ALLEGES, INTER ALIA, INVESTMENTS IN MUTUAL FUND SHARES IN 2001 WERE INAPPROPRIATE.",
+        "Damage Amount Requested": "$8,520.00",
+        "Settlement Amount": "$8,525.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": "",
+        "Broker Comment": [
+          "THIS MATTER WAS SETTLED FOR COST OF LITIGATION PURPOSES."
+        ]
+      }
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 0,
+    "productExamCount": 3
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "2/25/1997",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "1/19/1996",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "10/1/2018",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 31",
+      "examName": "Futures Managed Funds Examination",
+      "examTakenDate": "10/22/2001",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "1/15/1996",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0
+  },
+  "registeredStates": [
+    {
+      "state": "California",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "9/18/2015"
+    },
+    {
+      "state": "Louisiana",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/9/2016"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/9/2016"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}

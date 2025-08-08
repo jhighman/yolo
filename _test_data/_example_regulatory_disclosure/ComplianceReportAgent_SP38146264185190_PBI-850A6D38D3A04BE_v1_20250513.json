@@ -1,0 +1,794 @@
+{
+  "reference_id": "SP38146264185190_PBI-850A6D38D3A04BE",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-850A6D38D3A04BE",
+    "first_name": "John",
+    "last_name": "Calamos Sr.",
+    "employee_number": "EN-045225",
+    "zip": "60502",
+    "crdNumber": "38210",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "38210",
+    "individual_name": "John Calamos Sr.",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "FINRA_BrokerCheck",
+    "basic_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "JOHN PETER CALAMOS SR.",
+      "other_names": [
+        "JOHN PETER CALAMOS"
+      ],
+      "bc_scope": "Active",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "6/28/2010",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "CLAIMANT ALLEGES THAT SHE COMPLAINED TO MR. CALAMOS ABOUT A FIRM EMPLOYEE WHO ALLEDGEDLY FAILED TO FOLLOW HER ORAL INSTRUCTION TO SELL MUTUAL FUNDS IN 2008, AND THAT MR. CALAMOS FAILED TO RESPOND TO HER COMPLAINT AS PROMISED. MR. CALAMOS DENIES THAT CLAIMANT MADE SUCH A COMPLAINT TO HIM, OR THAT SHE MADE ANY COMPLAINT OTHER THAN THAT SHE HAD NOT RECEIVED A TAX REPORT. MR. CALAMOS DENIES ANY WRONGDOING.",
+            "Damage Amount Requested": "$2,700,000.00",
+            "Settlement Amount": "$1,350,000.00",
+            "DisplayAAOLinkIfExists": "Y",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "10-02858",
+            "Broker Comment": [
+              "CLAIMANT WITHDREW AND VOLUNTARILY DISMISSED WITH PREJUDICE ALL CLAIMS AGAINST JOHN P. CALAMOS, SR. CLAIMANT SETTLED ALL CLAIMS AGAINST CALAMOS FINANCIAL SERVICES LLC (\"CFS\") IN EXCHANGE FOR A PAYMENT BY CFS IN THE AMOUNT OF $1,350,000, REPRESENTING 50% OF HER CLAIM. JOHN P. CALAMOS, SR. DID NOT CONTRIBUTE TO THE SETTLEMENT."
+            ]
+          }
+        },
+        {
+          "eventDate": "10/16/1996",
+          "disclosureType": "Regulatory",
+          "disclosureResolution": "Final",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "DocketNumberFDA": "",
+            "DocketNumberAAO": "",
+            "Initiated By": "SECURITIES AND EXCHANGE COMMISSION",
+            "Resolution": "Consent",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Cease and Desist/Injunction"
+              }
+            ],
+            "Broker Comment": [
+              "THE TRADES IN QUESTION RESULTED FROM BUNCHING ORDERS FOR 17 BROKER DEALER CLIENTS FOR WHICH CALAMOS WAS ALSO THE INVESTMENT ADVISER.  CFS USED AN AVERAGE PRICE ACCOUNT TO\r\nCONSOLIDATE THESE TRADES. IN THE COURSE OF CONSOLIDATION,\r\nTHESE TRADES WERE TEMPORARILY HELD IN AN ACCOUNT BEARING CFS' NAME. THE SEC CLAIMED THAT EVEN TEMPORARILY HOLDING THE\r\nSECURITIES IN CFS' ACCOUNT VIOLATED SECURITES LAWS. UPON\r\nNOTIFICATION CFS IMMEDIATELY CORRECTED THE PROCEDURE. THE\r\nTRADES DID NOT IMPOSE ANY FINANCIAL ADVERSITY ON THE CLIENTS. PRINCIPAL TRADE MARK UPS AND MARK DOWNS WERE EQUIVALENT COMMISSIONS BEING CHARGED ON AN AGENCY BASIS."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "1/7/1993",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "1/7/1993",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 27",
+          "examName": "Financial and Operations Principal Examination",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 53",
+          "examName": "Municipal Securities Principal Examination",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 24",
+          "examName": "General Securities Principal Examination",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 4",
+          "examName": "Registered Options Principal Examination",
+          "examTakenDate": "9/13/1977",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "F04",
+          "examName": "Financial Principal Examination",
+          "examTakenDate": "4/6/1977",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 40",
+          "examName": "Registered Principal Examination",
+          "examTakenDate": "12/29/1976",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 99TO",
+          "examName": "Operations Professional Examination",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7TO",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 52TO",
+          "examName": "Municipal Securities Representative Examination",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 1",
+          "examName": "Registered Representative Examination",
+          "examTakenDate": "11/19/1971",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "19850",
+          "firm_name": "CALAMOS FINANCIAL SERVICES LLC",
+          "registration_begin_date": "7/15/1987",
+          "branch_offices": [
+            {
+              "street": "2020 CALAMOS COURT",
+              "city": "NAPERVILLE",
+              "state": "IL",
+              "zip_code": "60563"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "7411",
+          "firm_name": "NODDINGS, CALAMOS AND ASSOCIATES, INC.",
+          "registration_begin_date": "6/17/1977",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "9/17/1987"
+        },
+        {
+          "firm_id": "906",
+          "firm_name": "WOOLARD & COMPANY INCORPORATED",
+          "registration_begin_date": "6/4/1976",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/11/1977"
+        },
+        {
+          "firm_id": "412",
+          "firm_name": "HORNBLOWER & WEEKS - HEMPHILL, NOYES INCORPORATED",
+          "registration_begin_date": "10/6/1975",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/18/1976"
+        },
+        {
+          "firm_id": "325",
+          "firm_name": "DUPONT GLORE FORGAN INCORPORATED",
+          "registration_begin_date": "12/1/1971",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "4/23/1976"
+        },
+        {
+          "firm_id": "7058",
+          "firm_name": "BACHE & CO INCORPORATED",
+          "registration_begin_date": "10/23/1974",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "10/30/1975"
+        },
+        {
+          "firm_id": "1000003",
+          "firm_name": "LOEB RHOADES & CO",
+          "registration_begin_date": "3/27/1974",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/2/1974"
+        },
+        {
+          "firm_id": "870",
+          "firm_name": "DUPONT WALSTON, INCORPORATED",
+          "registration_begin_date": "7/2/1973",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "5/26/1974"
+        }
+      ],
+      "crd_number": "38210"
+    },
+    "detailed_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "JOHN PETER CALAMOS SR.",
+      "other_names": [
+        "JOHN PETER CALAMOS"
+      ],
+      "bc_scope": "Active",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "6/28/2010",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "CLAIMANT ALLEGES THAT SHE COMPLAINED TO MR. CALAMOS ABOUT A FIRM EMPLOYEE WHO ALLEDGEDLY FAILED TO FOLLOW HER ORAL INSTRUCTION TO SELL MUTUAL FUNDS IN 2008, AND THAT MR. CALAMOS FAILED TO RESPOND TO HER COMPLAINT AS PROMISED. MR. CALAMOS DENIES THAT CLAIMANT MADE SUCH A COMPLAINT TO HIM, OR THAT SHE MADE ANY COMPLAINT OTHER THAN THAT SHE HAD NOT RECEIVED A TAX REPORT. MR. CALAMOS DENIES ANY WRONGDOING.",
+            "Damage Amount Requested": "$2,700,000.00",
+            "Settlement Amount": "$1,350,000.00",
+            "DisplayAAOLinkIfExists": "Y",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "10-02858",
+            "Broker Comment": [
+              "CLAIMANT WITHDREW AND VOLUNTARILY DISMISSED WITH PREJUDICE ALL CLAIMS AGAINST JOHN P. CALAMOS, SR. CLAIMANT SETTLED ALL CLAIMS AGAINST CALAMOS FINANCIAL SERVICES LLC (\"CFS\") IN EXCHANGE FOR A PAYMENT BY CFS IN THE AMOUNT OF $1,350,000, REPRESENTING 50% OF HER CLAIM. JOHN P. CALAMOS, SR. DID NOT CONTRIBUTE TO THE SETTLEMENT."
+            ]
+          }
+        },
+        {
+          "eventDate": "10/16/1996",
+          "disclosureType": "Regulatory",
+          "disclosureResolution": "Final",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "DocketNumberFDA": "",
+            "DocketNumberAAO": "",
+            "Initiated By": "SECURITIES AND EXCHANGE COMMISSION",
+            "Resolution": "Consent",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Cease and Desist/Injunction"
+              }
+            ],
+            "Broker Comment": [
+              "THE TRADES IN QUESTION RESULTED FROM BUNCHING ORDERS FOR 17 BROKER DEALER CLIENTS FOR WHICH CALAMOS WAS ALSO THE INVESTMENT ADVISER.  CFS USED AN AVERAGE PRICE ACCOUNT TO\r\nCONSOLIDATE THESE TRADES. IN THE COURSE OF CONSOLIDATION,\r\nTHESE TRADES WERE TEMPORARILY HELD IN AN ACCOUNT BEARING CFS' NAME. THE SEC CLAIMED THAT EVEN TEMPORARILY HOLDING THE\r\nSECURITIES IN CFS' ACCOUNT VIOLATED SECURITES LAWS. UPON\r\nNOTIFICATION CFS IMMEDIATELY CORRECTED THE PROCEDURE. THE\r\nTRADES DID NOT IMPOSE ANY FINANCIAL ADVERSITY ON THE CLIENTS. PRINCIPAL TRADE MARK UPS AND MARK DOWNS WERE EQUIVALENT COMMISSIONS BEING CHARGED ON AN AGENCY BASIS."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "1/7/1993",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "1/7/1993",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 27",
+          "examName": "Financial and Operations Principal Examination",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 53",
+          "examName": "Municipal Securities Principal Examination",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 24",
+          "examName": "General Securities Principal Examination",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 4",
+          "examName": "Registered Options Principal Examination",
+          "examTakenDate": "9/13/1977",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "F04",
+          "examName": "Financial Principal Examination",
+          "examTakenDate": "4/6/1977",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 40",
+          "examName": "Registered Principal Examination",
+          "examTakenDate": "12/29/1976",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 99TO",
+          "examName": "Operations Professional Examination",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7TO",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 52TO",
+          "examName": "Municipal Securities Representative Examination",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 1",
+          "examName": "Registered Representative Examination",
+          "examTakenDate": "11/19/1971",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "19850",
+          "firm_name": "CALAMOS FINANCIAL SERVICES LLC",
+          "registration_begin_date": "7/15/1987",
+          "branch_offices": [
+            {
+              "street": "2020 CALAMOS COURT",
+              "city": "NAPERVILLE",
+              "state": "IL",
+              "zip_code": "60563"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "7411",
+          "firm_name": "NODDINGS, CALAMOS AND ASSOCIATES, INC.",
+          "registration_begin_date": "6/17/1977",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "9/17/1987"
+        },
+        {
+          "firm_id": "906",
+          "firm_name": "WOOLARD & COMPANY INCORPORATED",
+          "registration_begin_date": "6/4/1976",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/11/1977"
+        },
+        {
+          "firm_id": "412",
+          "firm_name": "HORNBLOWER & WEEKS - HEMPHILL, NOYES INCORPORATED",
+          "registration_begin_date": "10/6/1975",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/18/1976"
+        },
+        {
+          "firm_id": "325",
+          "firm_name": "DUPONT GLORE FORGAN INCORPORATED",
+          "registration_begin_date": "12/1/1971",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "4/23/1976"
+        },
+        {
+          "firm_id": "7058",
+          "firm_name": "BACHE & CO INCORPORATED",
+          "registration_begin_date": "10/23/1974",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "10/30/1975"
+        },
+        {
+          "firm_id": "1000003",
+          "firm_name": "LOEB RHOADES & CO",
+          "registration_begin_date": "3/27/1974",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/2/1974"
+        },
+        {
+          "firm_id": "870",
+          "firm_name": "DUPONT WALSTON, INCORPORATED",
+          "registration_begin_date": "7/2/1973",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "5/26/1974"
+        }
+      ],
+      "crd_number": "38210"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "38210",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA BrokerCheck data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "John",
+        "middle": "Calamos",
+        "last": "Sr."
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "JOHN",
+            "middle": "PETER CALAMOS",
+            "last": "SR."
+          },
+          "score": 90.0,
+          "first_score": 1.0,
+          "middle_score": 0.0,
+          "last_score": 1.0
+        },
+        {
+          "name_source": "other_names[0]",
+          "fetched_name": {
+            "first": "JOHN",
+            "middle": "PETER",
+            "last": "CALAMOS"
+          },
+          "score": 40.0,
+          "first_score": 1.0,
+          "middle_score": 0.0,
+          "last_score": 0.0
+        }
+      ],
+      "best_match": {
+        "name_source": "main_fetched_name",
+        "fetched_name": {
+          "first": "JOHN",
+          "middle": "PETER CALAMOS",
+          "last": "SR."
+        },
+        "score": 90.0,
+        "first_score": 1.0,
+        "middle_score": 0.0,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "John Calamos Sr. has 1 customer dispute disclosure, 1 regulatory disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "CLAIMANT ALLEGES THAT SHE COMPLAINED TO MR. CALAMOS ABOUT A FIRM EMPLOYEE WHO ALLEDGEDLY FAILED TO FOLLOW HER ORAL INSTRUCTION TO SELL MUTUAL FUNDS IN 2008, AND THAT MR. CALAMOS FAILED TO RESPOND TO HER COMPLAINT AS PROMISED. MR. CALAMOS DENIES THAT CLAIMANT MADE SUCH A COMPLAINT TO HIM, OR THAT SHE MADE ANY COMPLAINT OTHER THAN THAT SHE HAD NOT RECEIVED A TAX REPORT. MR. CALAMOS DENIES ANY WRONGDOING.",
+            "Damage Amount Requested": "$2,700,000.00",
+            "Settlement Amount": "$1,350,000.00",
+            "DisplayAAOLinkIfExists": "Y",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "10-02858",
+            "Broker Comment": [
+              "CLAIMANT WITHDREW AND VOLUNTARILY DISMISSED WITH PREJUDICE ALL CLAIMS AGAINST JOHN P. CALAMOS, SR. CLAIMANT SETTLED ALL CLAIMS AGAINST CALAMOS FINANCIAL SERVICES LLC (\"CFS\") IN EXCHANGE FOR A PAYMENT BY CFS IN THE AMOUNT OF $1,350,000, REPRESENTING 50% OF HER CLAIM. JOHN P. CALAMOS, SR. DID NOT CONTRIBUTE TO THE SETTLEMENT."
+            ]
+          },
+          "event_date": "6/28/2010",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 6/28/2010. Resolution: Settled. Allegations: CLAIMANT ALLEGES THAT SHE COMPLAINED TO MR. CALAMOS ABOUT A FIRM EMPLOYEE WHO ALLEDGEDLY FAILED TO FOLLOW HER ORAL INSTRUCTION TO SELL MUTUAL FUNDS IN 2008, AND THAT MR. CALAMOS FAILED TO RESPOND TO HER COMPLAINT AS PROMISED. MR. CALAMOS DENIES THAT CLAIMANT MADE SUCH A COMPLAINT TO HIM, OR THAT SHE MADE ANY COMPLAINT OTHER THAN THAT SHE HAD NOT RECEIVED A TAX REPORT. MR. CALAMOS DENIES ANY WRONGDOING.. Damage requested: $2,700,000.00. Settlement: $1,350,000.00"
+      },
+      {
+        "alert_type": "Regulatory Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "DocketNumberFDA": "",
+            "DocketNumberAAO": "",
+            "Initiated By": "SECURITIES AND EXCHANGE COMMISSION",
+            "Resolution": "Consent",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Cease and Desist/Injunction"
+              }
+            ],
+            "Broker Comment": [
+              "THE TRADES IN QUESTION RESULTED FROM BUNCHING ORDERS FOR 17 BROKER DEALER CLIENTS FOR WHICH CALAMOS WAS ALSO THE INVESTMENT ADVISER.  CFS USED AN AVERAGE PRICE ACCOUNT TO\r\nCONSOLIDATE THESE TRADES. IN THE COURSE OF CONSOLIDATION,\r\nTHESE TRADES WERE TEMPORARILY HELD IN AN ACCOUNT BEARING CFS' NAME. THE SEC CLAIMED THAT EVEN TEMPORARILY HOLDING THE\r\nSECURITIES IN CFS' ACCOUNT VIOLATED SECURITES LAWS. UPON\r\nNOTIFICATION CFS IMMEDIATELY CORRECTED THE PROCEDURE. THE\r\nTRADES DID NOT IMPOSE ANY FINANCIAL ADVERSITY ON THE CLIENTS. PRINCIPAL TRADE MARK UPS AND MARK DOWNS WERE EQUIVALENT COMMISSIONS BEING CHARGED ON AN AGENCY BASIS."
+            ]
+          },
+          "event_date": "10/16/1996",
+          "resolution": "Final"
+        },
+        "description": "Regulatory action on 10/16/1996 initiated by SECURITIES AND EXCHANGE COMMISSION. Resolution: Final. Allegations: Not specified. Sanctions: Cease and Desist/Injunction"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No matching disciplinary records found for John Calamos Sr., but 16 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Search Info",
+        "alert_category": "DISCIPLINARY",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "John Calamos Sr.",
+            "sec_disciplinary": {
+              "source": "SEC_Disciplinary",
+              "records_found": 1,
+              "records_filtered": 1,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'John Calamos Sr.'"
+            },
+            "finra_disciplinary": {
+              "source": "FINRA_Disciplinary",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Michael Barrows, Eric John Ludovico",
+                "Michael Barrows, Eric John Ludovico",
+                "John E. Fendrich, Jr.",
+                "John E. Fendrich, Jr.",
+                "Percival Financial Partners, LtdKenneth P. Taylor, Sr.",
+                "Percival Financial Partners, LtdKenneth P. Taylor, Sr.",
+                "John Michael Palma",
+                "John Paul Meadow",
+                "Kevin John Herne",
+                "John Alfred Dow, Jr.",
+                "John Alfred Dow, Jr.",
+                "John Franzino",
+                "John Lowry, Kim Monchik",
+                "John Lowry, Kim Monchik",
+                "Spartan Capital Securities, LLCJohn D. Lowry, Kim M. Monchik",
+                "Spartan Capital Securities, LLCJohn D. Lowry, Kim M. Monchik",
+                "John A. Perez-Cubero",
+                "John Babatunde Abolarin",
+                "John C. Shen",
+                "John Christoforidis",
+                "John R. Emanuele"
+              ],
+              "name_scores": {
+                "Michael Barrows, Eric John Ludovico": 0.0,
+                "John E. Fendrich, Jr.": 0.0,
+                "Percival Financial Partners, LtdKenneth P. Taylor, Sr.": 0.0,
+                "John Michael Palma": 42.86,
+                "John Paul Meadow": 42.86,
+                "Kevin John Herne": 4.76,
+                "John Alfred Dow, Jr.": 0.0,
+                "John Franzino": 47.62,
+                "John Lowry, Kim Monchik": 0.0,
+                "Spartan Capital Securities, LLCJohn D. Lowry, Kim M. Monchik": 0.0,
+                "John A. Perez-Cubero": 42.86,
+                "John Babatunde Abolarin": 42.86,
+                "John C. Shen": 42.86,
+                "John Christoforidis": 47.62,
+                "John R. Emanuele": 42.86
+              },
+              "exact_match_found": false,
+              "status": "Partial failure: Error processing 'Spartan Capital Securities, LLCJohn D. Lowry, Kim M. Monchik'"
+            }
+          }
+        },
+        "description": "Found 16 disciplinary records for John Calamos Sr., all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "John Calamos Sr.",
+      "sec_disciplinary": {
+        "source": "SEC_Disciplinary",
+        "records_found": 1,
+        "records_filtered": 1,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'John Calamos Sr.'"
+      },
+      "finra_disciplinary": {
+        "source": "FINRA_Disciplinary",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Michael Barrows, Eric John Ludovico",
+          "Michael Barrows, Eric John Ludovico",
+          "John E. Fendrich, Jr.",
+          "John E. Fendrich, Jr.",
+          "Percival Financial Partners, LtdKenneth P. Taylor, Sr.",
+          "Percival Financial Partners, LtdKenneth P. Taylor, Sr.",
+          "John Michael Palma",
+          "John Paul Meadow",
+          "Kevin John Herne",
+          "John Alfred Dow, Jr.",
+          "John Alfred Dow, Jr.",
+          "John Franzino",
+          "John Lowry, Kim Monchik",
+          "John Lowry, Kim Monchik",
+          "Spartan Capital Securities, LLCJohn D. Lowry, Kim M. Monchik",
+          "Spartan Capital Securities, LLCJohn D. Lowry, Kim M. Monchik",
+          "John A. Perez-Cubero",
+          "John Babatunde Abolarin",
+          "John C. Shen",
+          "John Christoforidis",
+          "John R. Emanuele"
+        ],
+        "name_scores": {
+          "Michael Barrows, Eric John Ludovico": 0.0,
+          "John E. Fendrich, Jr.": 0.0,
+          "Percival Financial Partners, LtdKenneth P. Taylor, Sr.": 0.0,
+          "John Michael Palma": 42.86,
+          "John Paul Meadow": 42.86,
+          "Kevin John Herne": 4.76,
+          "John Alfred Dow, Jr.": 0.0,
+          "John Franzino": 47.62,
+          "John Lowry, Kim Monchik": 0.0,
+          "Spartan Capital Securities, LLCJohn D. Lowry, Kim M. Monchik": 0.0,
+          "John A. Perez-Cubero": 42.86,
+          "John Babatunde Abolarin": 42.86,
+          "John C. Shen": 42.86,
+          "John Christoforidis": 47.62,
+          "John R. Emanuele": 42.86
+        },
+        "exact_match_found": false,
+        "status": "Partial failure: Error processing 'Spartan Capital Securities, LLCJohn D. Lowry, Kim M. Monchik'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": true,
+    "compliance_explanation": "No arbitration records found for John Calamos Sr..",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "searched_name": "John Calamos Sr.",
+      "sec_arbitration": {
+        "source": "SEC_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_arbitration": {
+        "source": "FINRA_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for John Calamos Sr.; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "CLAIMANT ALLEGES THAT SHE COMPLAINED TO MR. CALAMOS ABOUT A FIRM EMPLOYEE WHO ALLEDGEDLY FAILED TO FOLLOW HER ORAL INSTRUCTION TO SELL MUTUAL FUNDS IN 2008, AND THAT MR. CALAMOS FAILED TO RESPOND TO HER COMPLAINT AS PROMISED. MR. CALAMOS DENIES THAT CLAIMANT MADE SUCH A COMPLAINT TO HIM, OR THAT SHE MADE ANY COMPLAINT OTHER THAN THAT SHE HAD NOT RECEIVED A TAX REPORT. MR. CALAMOS DENIES ANY WRONGDOING.",
+            "Damage Amount Requested": "$2,700,000.00",
+            "Settlement Amount": "$1,350,000.00",
+            "DisplayAAOLinkIfExists": "Y",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "10-02858",
+            "Broker Comment": [
+              "CLAIMANT WITHDREW AND VOLUNTARILY DISMISSED WITH PREJUDICE ALL CLAIMS AGAINST JOHN P. CALAMOS, SR. CLAIMANT SETTLED ALL CLAIMS AGAINST CALAMOS FINANCIAL SERVICES LLC (\"CFS\") IN EXCHANGE FOR A PAYMENT BY CFS IN THE AMOUNT OF $1,350,000, REPRESENTING 50% OF HER CLAIM. JOHN P. CALAMOS, SR. DID NOT CONTRIBUTE TO THE SETTLEMENT."
+            ]
+          },
+          "event_date": "6/28/2010",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 6/28/2010. Resolution: Settled. Allegations: CLAIMANT ALLEGES THAT SHE COMPLAINED TO MR. CALAMOS ABOUT A FIRM EMPLOYEE WHO ALLEDGEDLY FAILED TO FOLLOW HER ORAL INSTRUCTION TO SELL MUTUAL FUNDS IN 2008, AND THAT MR. CALAMOS FAILED TO RESPOND TO HER COMPLAINT AS PROMISED. MR. CALAMOS DENIES THAT CLAIMANT MADE SUCH A COMPLAINT TO HIM, OR THAT SHE MADE ANY COMPLAINT OTHER THAN THAT SHE HAD NOT RECEIVED A TAX REPORT. MR. CALAMOS DENIES ANY WRONGDOING.. Damage requested: $2,700,000.00. Settlement: $1,350,000.00"
+      },
+      {
+        "alert_type": "Regulatory Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "DocketNumberFDA": "",
+            "DocketNumberAAO": "",
+            "Initiated By": "SECURITIES AND EXCHANGE COMMISSION",
+            "Resolution": "Consent",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Cease and Desist/Injunction"
+              }
+            ],
+            "Broker Comment": [
+              "THE TRADES IN QUESTION RESULTED FROM BUNCHING ORDERS FOR 17 BROKER DEALER CLIENTS FOR WHICH CALAMOS WAS ALSO THE INVESTMENT ADVISER.  CFS USED AN AVERAGE PRICE ACCOUNT TO\r\nCONSOLIDATE THESE TRADES. IN THE COURSE OF CONSOLIDATION,\r\nTHESE TRADES WERE TEMPORARILY HELD IN AN ACCOUNT BEARING CFS' NAME. THE SEC CLAIMED THAT EVEN TEMPORARILY HOLDING THE\r\nSECURITIES IN CFS' ACCOUNT VIOLATED SECURITES LAWS. UPON\r\nNOTIFICATION CFS IMMEDIATELY CORRECTED THE PROCEDURE. THE\r\nTRADES DID NOT IMPOSE ANY FINANCIAL ADVERSITY ON THE CLIENTS. PRINCIPAL TRADE MARK UPS AND MARK DOWNS WERE EQUIVALENT COMMISSIONS BEING CHARGED ON AN AGENCY BASIS."
+            ]
+          },
+          "event_date": "10/16/1996",
+          "resolution": "Final"
+        },
+        "description": "Regulatory action on 10/16/1996 initiated by SECURITIES AND EXCHANGE COMMISSION. Resolution: Final. Allegations: Not specified. Sanctions: Cease and Desist/Injunction"
+      }
+    ]
+  }
+}

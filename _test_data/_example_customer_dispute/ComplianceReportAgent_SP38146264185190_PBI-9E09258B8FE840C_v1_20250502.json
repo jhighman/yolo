@@ -1,0 +1,367 @@
+{
+  "reference_id": "SP38146264185190_PBI-9E09258B8FE840C",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-9E09258B8FE840C",
+    "first_name": "Edward",
+    "last_name": "DeWees",
+    "employee_number": "EN-042567",
+    "crdNumber": "2505417",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "2505417",
+    "individual_name": "Edward DeWees",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "SEC_IAPD",
+    "basic_result": {
+      "fetched_name": "EDWARD DAKIN DEWEES",
+      "other_names": [],
+      "bc_scope": "NotInScope",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "10/13/2020",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "Client alleges advisor improperly acted on instructions from client's spouse in connection with transactions in client's account on March 23, 2020.",
+            "Damage Amount Requested": "$475,000.00",
+            "Settlement Amount": "$475,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [],
+      "employments": [
+        {
+          "firm_id": "282563",
+          "firm_name": "DOUGLAS C. LANE & ASSOCIATES",
+          "registration_begin_date": "2/17/2016",
+          "branch_offices": [
+            {
+              "street": "ONE DAG HAMMARSKJOLD PLAZA",
+              "city": "NEW YORK",
+              "state": "NY",
+              "zip_code": "10017"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "104882",
+          "firm_name": "DOUGLAS C. LANE & ASSOCIATES, INC.",
+          "registration_begin_date": "7/25/2006",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "2/12/2016"
+        }
+      ],
+      "crd_number": "2505417"
+    },
+    "detailed_result": {
+      "fetched_name": "EDWARD DAKIN DEWEES",
+      "other_names": [],
+      "bc_scope": "NotInScope",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "10/13/2020",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "Client alleges advisor improperly acted on instructions from client's spouse in connection with transactions in client's account on March 23, 2020.",
+            "Damage Amount Requested": "$475,000.00",
+            "Settlement Amount": "$475,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [],
+      "employments": [
+        {
+          "firm_id": "282563",
+          "firm_name": "DOUGLAS C. LANE & ASSOCIATES",
+          "registration_begin_date": "2/17/2016",
+          "branch_offices": [
+            {
+              "street": "ONE DAG HAMMARSKJOLD PLAZA",
+              "city": "NEW YORK",
+              "state": "NY",
+              "zip_code": "10017"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "104882",
+          "firm_name": "DOUGLAS C. LANE & ASSOCIATES, INC.",
+          "registration_begin_date": "7/25/2006",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "2/12/2016"
+        }
+      ],
+      "crd_number": "2505417"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "2505417",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with SEC IAPD data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "compliance": true,
+      "compliance_explanation": "Name matches fetched record.",
+      "due_diligence": {
+        "searched_name": "Edward DeWees",
+        "records_found": 1,
+        "records_filtered": 0,
+        "names_found": [
+          "EDWARD DAKIN DEWEES"
+        ],
+        "name_scores": {
+          "EDWARD DAKIN DEWEES": 95.24
+        },
+        "exact_match_found": true,
+        "status": "Exact matches found"
+      },
+      "alerts": []
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "Edward DeWees has 1 customer dispute disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "Client alleges advisor improperly acted on instructions from client's spouse in connection with transactions in client's account on March 23, 2020.",
+            "Damage Amount Requested": "$475,000.00",
+            "Settlement Amount": "$475,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          },
+          "event_date": "10/13/2020",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 10/13/2020. Resolution: Settled. Allegations: Client alleges advisor improperly acted on instructions from client's spouse in connection with transactions in client's account on March 23, 2020.. Damage requested: $475,000.00. Settlement: $475,000.00"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No matching disciplinary records found for Edward DeWees, but 15 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Search Info",
+        "alert_category": "DISCIPLINARY",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Edward DeWees",
+            "sec_disciplinary": {
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records fetched"
+            },
+            "finra_disciplinary": {
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Edward Kotak, Jr.",
+                "Edward Kotak, Jr.",
+                "Robert Edward Johnson",
+                "Edward Steven Mercer",
+                "CRAIG S. TADDONIOEDWARD BEYN",
+                "CRAIG S. TADDONIOEDWARD BEYN",
+                "Edward Scott Short",
+                "Charles Paul Edward Jumet, Jr.",
+                "Charles Paul Edward Jumet, Jr.",
+                "Edward L. Turley",
+                "William Edward Torriente",
+                "Eric Edward Nicolassy",
+                "Bentley Edward Blackmon",
+                "Dan Edward Droeg",
+                "Christopher Edward Bond",
+                "Shane Edward Perry",
+                "Douglas Edward Szempruch"
+              ],
+              "name_scores": {
+                "Edward Kotak, Jr.": 0.0,
+                "Robert Edward Johnson": 9.52,
+                "Edward Steven Mercer": 47.62,
+                "CRAIG S. TADDONIOEDWARD BEYN": 9.52,
+                "Edward Scott Short": 47.62,
+                "Charles Paul Edward Jumet, Jr.": 0.0,
+                "Edward L. Turley": 47.62,
+                "William Edward Torriente": 9.52,
+                "Eric Edward Nicolassy": 9.52,
+                "Bentley Edward Blackmon": 9.52,
+                "Dan Edward Droeg": 9.52,
+                "Christopher Edward Bond": 9.52,
+                "Shane Edward Perry": 9.52,
+                "Douglas Edward Szempruch": 9.52
+              },
+              "exact_match_found": false,
+              "status": "Partial failure: Error processing 'Charles Paul Edward Jumet, Jr.'"
+            }
+          }
+        },
+        "description": "Found 15 disciplinary records for Edward DeWees, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Edward DeWees",
+      "sec_disciplinary": {
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records fetched"
+      },
+      "finra_disciplinary": {
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Edward Kotak, Jr.",
+          "Edward Kotak, Jr.",
+          "Robert Edward Johnson",
+          "Edward Steven Mercer",
+          "CRAIG S. TADDONIOEDWARD BEYN",
+          "CRAIG S. TADDONIOEDWARD BEYN",
+          "Edward Scott Short",
+          "Charles Paul Edward Jumet, Jr.",
+          "Charles Paul Edward Jumet, Jr.",
+          "Edward L. Turley",
+          "William Edward Torriente",
+          "Eric Edward Nicolassy",
+          "Bentley Edward Blackmon",
+          "Dan Edward Droeg",
+          "Christopher Edward Bond",
+          "Shane Edward Perry",
+          "Douglas Edward Szempruch"
+        ],
+        "name_scores": {
+          "Edward Kotak, Jr.": 0.0,
+          "Robert Edward Johnson": 9.52,
+          "Edward Steven Mercer": 47.62,
+          "CRAIG S. TADDONIOEDWARD BEYN": 9.52,
+          "Edward Scott Short": 47.62,
+          "Charles Paul Edward Jumet, Jr.": 0.0,
+          "Edward L. Turley": 47.62,
+          "William Edward Torriente": 9.52,
+          "Eric Edward Nicolassy": 9.52,
+          "Bentley Edward Blackmon": 9.52,
+          "Dan Edward Droeg": 9.52,
+          "Christopher Edward Bond": 9.52,
+          "Shane Edward Perry": 9.52,
+          "Douglas Edward Szempruch": 9.52
+        },
+        "exact_match_found": false,
+        "status": "Partial failure: Error processing 'Charles Paul Edward Jumet, Jr.'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": true,
+    "compliance_explanation": "No arbitration records found for Edward DeWees.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "searched_name": "Edward DeWees",
+      "sec_arbitration": {
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records fetched"
+      },
+      "finra_arbitration": {
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records fetched"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for Edward DeWees; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "Client alleges advisor improperly acted on instructions from client's spouse in connection with transactions in client's account on March 23, 2020.",
+            "Damage Amount Requested": "$475,000.00",
+            "Settlement Amount": "$475,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          },
+          "event_date": "10/13/2020",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 10/13/2020. Resolution: Settled. Allegations: Client alleges advisor improperly acted on instructions from client's spouse in connection with transactions in client's account on March 23, 2020.. Damage requested: $475,000.00. Settlement: $475,000.00"
+      }
+    ]
+  }
+}

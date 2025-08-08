@@ -1,0 +1,790 @@
+{
+  "reference_id": "SP38146264185190_PBI-D777B5840A5648D",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-D777B5840A5648D",
+    "first_name": "Christopher",
+    "last_name": "Airey",
+    "employee_number": "EN-057728",
+    "zip": "20194",
+    "crdNumber": "3083616",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "3083616",
+    "individual_name": "Christopher Airey",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "FINRA_BrokerCheck",
+    "basic_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "CHRISTOPHER SCOTT AIREY",
+      "other_names": [
+        "SCOTT  AIREY"
+      ],
+      "bc_scope": "Active",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "7/1/2009",
+          "disclosureType": "Regulatory",
+          "disclosureResolution": "Final",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "DocketNumberFDA": "2007011128201",
+            "DocketNumberAAO": "2007011128201",
+            "Initiated By": "FINRA",
+            "Allegations": "NASD RULES 2110 AND 3040: RESPONDENT CHRISTOPHER SCOTT AIREY PARTICIPATED IN PRIVATE SECURITIES TRANSACTIONS WITHOUT GIVING PRIOR WRITTEN NOTICE TO, OR OBTAINING WRITTEN APPROVAL FROM, HIS MEMBER FIRM.",
+            "Resolution": "Acceptance, Waiver & Consent(AWC)",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Civil and Administrative Penalty(ies)/Fine(s)",
+                "SanctionDetails": [
+                  {
+                    "Amount": "$5,000.00"
+                  }
+                ]
+              },
+              {
+                "Sanctions": "Suspension",
+                "SanctionDetails": [
+                  {
+                    "Registration Capacities Affected": "ANY CAPACITY",
+                    "Duration": "THREE MONTHS",
+                    "Start Date": "8/3/2009",
+                    "End Date": "11/2/2009"
+                  }
+                ]
+              }
+            ],
+            "Regulator Statement": "WITHOUT ADMITTING OR DENYING THE FINDINGS, AIREY CONSENTED TO THE DESCRIBED SANCTIONS AND TO THE ENTRY OF FINDINGS; THEREFORE, HE IS FINED $5,000 AND SUSPENDED FROM ASSOCIATION WITH ANY FINRA MEMBER IN ANY CAPACITY FOR THREE MONTHS.\r\n\r\nTHE SUSPENSION IS IN EFFECT FROM AUGUST 3, 2009 THROUGH NOVEMBER 2, 2009.",
+            "Broker Comment": [
+              "WITHOUT ADMITTING OR DENYING THE FINDINGS, AIREY CONSENTED TO THE DESCRIBED SANCTIONS AND TO THE ENTRY OF FINDINGS; THEREFORE, HE IS FINED $5000 AND SUSPENDED FROM ASSOCIATION WITH ANY FINRA MEMBER IN ANY CAPACITY FOR THREE MONTHS.  THE SUSPENSION IS IN EFFECT FROM AUGUST 3, 2009 THROUGH NOVEMBER 2, 2009."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "6/18/1999",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "5/15/1999",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 10",
+          "examName": "General Securities Sales Supervisor - General Module Examination",
+          "examTakenDate": "10/8/1999",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 9",
+          "examName": "General Securities Sales Supervisor - Options Module Examination",
+          "examTakenDate": "10/7/1999",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "4/6/1999",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "144131",
+          "firm_name": "SPIRE SECURITIES, LLC",
+          "registration_begin_date": "11/1/2007",
+          "branch_offices": [
+            {
+              "street": "7901 Jones Branch Dr.",
+              "city": "MCLEAN",
+              "state": "VA",
+              "zip_code": "22102"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "39543",
+          "firm_name": "CAMBRIDGE INVESTMENT RESEARCH, INC.",
+          "registration_begin_date": "8/27/2003",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/2/2007"
+        },
+        {
+          "firm_id": "5393",
+          "firm_name": "CHARLES SCHWAB & CO., INC.",
+          "registration_begin_date": "7/26/2002",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/14/2003"
+        },
+        {
+          "firm_id": "6555",
+          "firm_name": "LEGG MASON WOOD WALKER, INCORPORATED",
+          "registration_begin_date": "4/7/1999",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/13/2002"
+        }
+      ],
+      "crd_number": "3083616"
+    },
+    "detailed_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "CHRISTOPHER SCOTT AIREY",
+      "other_names": [
+        "SCOTT  AIREY"
+      ],
+      "bc_scope": "Active",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "7/1/2009",
+          "disclosureType": "Regulatory",
+          "disclosureResolution": "Final",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "DocketNumberFDA": "2007011128201",
+            "DocketNumberAAO": "2007011128201",
+            "Initiated By": "FINRA",
+            "Allegations": "NASD RULES 2110 AND 3040: RESPONDENT CHRISTOPHER SCOTT AIREY PARTICIPATED IN PRIVATE SECURITIES TRANSACTIONS WITHOUT GIVING PRIOR WRITTEN NOTICE TO, OR OBTAINING WRITTEN APPROVAL FROM, HIS MEMBER FIRM.",
+            "Resolution": "Acceptance, Waiver & Consent(AWC)",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Civil and Administrative Penalty(ies)/Fine(s)",
+                "SanctionDetails": [
+                  {
+                    "Amount": "$5,000.00"
+                  }
+                ]
+              },
+              {
+                "Sanctions": "Suspension",
+                "SanctionDetails": [
+                  {
+                    "Registration Capacities Affected": "ANY CAPACITY",
+                    "Duration": "THREE MONTHS",
+                    "Start Date": "8/3/2009",
+                    "End Date": "11/2/2009"
+                  }
+                ]
+              }
+            ],
+            "Regulator Statement": "WITHOUT ADMITTING OR DENYING THE FINDINGS, AIREY CONSENTED TO THE DESCRIBED SANCTIONS AND TO THE ENTRY OF FINDINGS; THEREFORE, HE IS FINED $5,000 AND SUSPENDED FROM ASSOCIATION WITH ANY FINRA MEMBER IN ANY CAPACITY FOR THREE MONTHS.\r\n\r\nTHE SUSPENSION IS IN EFFECT FROM AUGUST 3, 2009 THROUGH NOVEMBER 2, 2009.",
+            "Broker Comment": [
+              "WITHOUT ADMITTING OR DENYING THE FINDINGS, AIREY CONSENTED TO THE DESCRIBED SANCTIONS AND TO THE ENTRY OF FINDINGS; THEREFORE, HE IS FINED $5000 AND SUSPENDED FROM ASSOCIATION WITH ANY FINRA MEMBER IN ANY CAPACITY FOR THREE MONTHS.  THE SUSPENSION IS IN EFFECT FROM AUGUST 3, 2009 THROUGH NOVEMBER 2, 2009."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "6/18/1999",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "5/15/1999",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 10",
+          "examName": "General Securities Sales Supervisor - General Module Examination",
+          "examTakenDate": "10/8/1999",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 9",
+          "examName": "General Securities Sales Supervisor - Options Module Examination",
+          "examTakenDate": "10/7/1999",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "4/6/1999",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "144131",
+          "firm_name": "SPIRE SECURITIES, LLC",
+          "registration_begin_date": "11/1/2007",
+          "branch_offices": [
+            {
+              "street": "7901 Jones Branch Dr.",
+              "city": "MCLEAN",
+              "state": "VA",
+              "zip_code": "22102"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "39543",
+          "firm_name": "CAMBRIDGE INVESTMENT RESEARCH, INC.",
+          "registration_begin_date": "8/27/2003",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/2/2007"
+        },
+        {
+          "firm_id": "5393",
+          "firm_name": "CHARLES SCHWAB & CO., INC.",
+          "registration_begin_date": "7/26/2002",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/14/2003"
+        },
+        {
+          "firm_id": "6555",
+          "firm_name": "LEGG MASON WOOD WALKER, INCORPORATED",
+          "registration_begin_date": "4/7/1999",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/13/2002"
+        }
+      ],
+      "crd_number": "3083616"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "3083616",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA BrokerCheck data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "Christopher",
+        "middle": null,
+        "last": "Airey"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "CHRISTOPHER",
+            "middle": "SCOTT",
+            "last": "AIREY"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        },
+        {
+          "name_source": "other_names[0]",
+          "fetched_name": {
+            "first": "SCOTT",
+            "middle": null,
+            "last": "AIREY"
+          },
+          "score": 55.56,
+          "first_score": 0.0,
+          "middle_score": 0.0,
+          "last_score": 1.0
+        }
+      ],
+      "best_match": {
+        "name_source": "main_fetched_name",
+        "fetched_name": {
+          "first": "CHRISTOPHER",
+          "middle": "SCOTT",
+          "last": "AIREY"
+        },
+        "score": 95.0,
+        "first_score": 1.0,
+        "middle_score": 0.5,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "Christopher Airey has 1 regulatory disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Regulatory Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "DocketNumberFDA": "2007011128201",
+            "DocketNumberAAO": "2007011128201",
+            "Initiated By": "FINRA",
+            "Allegations": "NASD RULES 2110 AND 3040: RESPONDENT CHRISTOPHER SCOTT AIREY PARTICIPATED IN PRIVATE SECURITIES TRANSACTIONS WITHOUT GIVING PRIOR WRITTEN NOTICE TO, OR OBTAINING WRITTEN APPROVAL FROM, HIS MEMBER FIRM.",
+            "Resolution": "Acceptance, Waiver & Consent(AWC)",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Civil and Administrative Penalty(ies)/Fine(s)",
+                "SanctionDetails": [
+                  {
+                    "Amount": "$5,000.00"
+                  }
+                ]
+              },
+              {
+                "Sanctions": "Suspension",
+                "SanctionDetails": [
+                  {
+                    "Registration Capacities Affected": "ANY CAPACITY",
+                    "Duration": "THREE MONTHS",
+                    "Start Date": "8/3/2009",
+                    "End Date": "11/2/2009"
+                  }
+                ]
+              }
+            ],
+            "Regulator Statement": "WITHOUT ADMITTING OR DENYING THE FINDINGS, AIREY CONSENTED TO THE DESCRIBED SANCTIONS AND TO THE ENTRY OF FINDINGS; THEREFORE, HE IS FINED $5,000 AND SUSPENDED FROM ASSOCIATION WITH ANY FINRA MEMBER IN ANY CAPACITY FOR THREE MONTHS.\r\n\r\nTHE SUSPENSION IS IN EFFECT FROM AUGUST 3, 2009 THROUGH NOVEMBER 2, 2009.",
+            "Broker Comment": [
+              "WITHOUT ADMITTING OR DENYING THE FINDINGS, AIREY CONSENTED TO THE DESCRIBED SANCTIONS AND TO THE ENTRY OF FINDINGS; THEREFORE, HE IS FINED $5000 AND SUSPENDED FROM ASSOCIATION WITH ANY FINRA MEMBER IN ANY CAPACITY FOR THREE MONTHS.  THE SUSPENSION IS IN EFFECT FROM AUGUST 3, 2009 THROUGH NOVEMBER 2, 2009."
+            ]
+          },
+          "event_date": "7/1/2009",
+          "resolution": "Final"
+        },
+        "description": "Regulatory action on 7/1/2009 initiated by FINRA. Resolution: Final. Allegations: NASD RULES 2110 AND 3040: RESPONDENT CHRISTOPHER SCOTT AIREY PARTICIPATED IN PRIVATE SECURITIES TRANSACTIONS WITHOUT GIVING PRIOR WRITTEN NOTICE TO, OR OBTAINING WRITTEN APPROVAL FROM, HIS MEMBER FIRM.. Sanctions: Civil and Administrative Penalty(ies)/Fine(s), Suspension [Civil penalty detected.]"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No matching disciplinary records found for Christopher Airey, but 15 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Search Info",
+        "alert_category": "DISCIPLINARY",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Christopher Airey",
+            "sec_disciplinary": {
+              "source": "SEC_Disciplinary",
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records found"
+            },
+            "finra_disciplinary": {
+              "source": "FINRA_Disciplinary",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Christopher T. Harpin",
+                "Christopher J. Christensen",
+                "Christopher Denis",
+                "Christopher M. Chiampas",
+                "Christopher D. Martin",
+                "Christopher J. Christensen",
+                "Christopher Mullaly",
+                "Christopher P. Gallo",
+                "Christopher Bailey",
+                "Christopher S. Coffey",
+                "Christopher J. Shaw",
+                "Christopher J. Booher",
+                "Christopher C. Mancini",
+                "Christopher Philip Arnella",
+                "Christopher Frank Deo"
+              ],
+              "name_scores": {
+                "Christopher T. Harpin": 47.62,
+                "Christopher J. Christensen": 47.62,
+                "Christopher Denis": 47.37,
+                "Christopher M. Chiampas": 47.62,
+                "Christopher D. Martin": 47.62,
+                "Christopher Mullaly": 47.37,
+                "Christopher P. Gallo": 47.62,
+                "Christopher Bailey": 47.37,
+                "Christopher S. Coffey": 47.62,
+                "Christopher J. Shaw": 47.62,
+                "Christopher J. Booher": 47.62,
+                "Christopher C. Mancini": 47.62,
+                "Christopher Philip Arnella": 47.62,
+                "Christopher Frank Deo": 47.62
+              },
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'Christopher Airey'"
+            }
+          }
+        },
+        "description": "Found 15 disciplinary records for Christopher Airey, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Christopher Airey",
+      "sec_disciplinary": {
+        "source": "SEC_Disciplinary",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_disciplinary": {
+        "source": "FINRA_Disciplinary",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Christopher T. Harpin",
+          "Christopher J. Christensen",
+          "Christopher Denis",
+          "Christopher M. Chiampas",
+          "Christopher D. Martin",
+          "Christopher J. Christensen",
+          "Christopher Mullaly",
+          "Christopher P. Gallo",
+          "Christopher Bailey",
+          "Christopher S. Coffey",
+          "Christopher J. Shaw",
+          "Christopher J. Booher",
+          "Christopher C. Mancini",
+          "Christopher Philip Arnella",
+          "Christopher Frank Deo"
+        ],
+        "name_scores": {
+          "Christopher T. Harpin": 47.62,
+          "Christopher J. Christensen": 47.62,
+          "Christopher Denis": 47.37,
+          "Christopher M. Chiampas": 47.62,
+          "Christopher D. Martin": 47.62,
+          "Christopher Mullaly": 47.37,
+          "Christopher P. Gallo": 47.62,
+          "Christopher Bailey": 47.37,
+          "Christopher S. Coffey": 47.62,
+          "Christopher J. Shaw": 47.62,
+          "Christopher J. Booher": 47.62,
+          "Christopher C. Mancini": 47.62,
+          "Christopher Philip Arnella": 47.62,
+          "Christopher Frank Deo": 47.62
+        },
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Christopher Airey'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": true,
+    "compliance_explanation": "No matching arbitration records found for Christopher Airey, but 15 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Arbitration Search Info",
+        "alert_category": "ARBITRATION",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Christopher Airey",
+            "sec_arbitration": {
+              "source": "SEC_Arbitration",
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records found"
+            },
+            "finra_arbitration": {
+              "source": "FINRA_Arbitration",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Pershing LLC",
+                "Christopher Halotek",
+                "Morgan Stanley",
+                "George Bevins",
+                "Patrick McDonnell",
+                "Bryn Mawr Securities Corp.",
+                "Christopher Corso",
+                "CAC Capital Corp.",
+                "Allyson Reed",
+                "Brian Murray",
+                "Christopher Belle",
+                "Christopher Taylor",
+                "Edward Jones",
+                "Jesse Dietz",
+                "Christopher China",
+                "Eric Arlt",
+                "Itradedirect.Com Corp",
+                "Christopher Cushman",
+                "Tsarina Branyan",
+                "Brian Sanders",
+                "Christopher Atteo",
+                "Clayton Sontag",
+                "Christopher Roumayeh",
+                "John Wanken",
+                "Raymond James Financial Services",
+                "Inc.",
+                "Christopher Guenther",
+                "Christopher Vanstelle",
+                "Steelpoint Securities",
+                "LLC",
+                "Christopher Cochrane",
+                "Donald Slye",
+                "Christopher Cervino",
+                "Larry Werbel",
+                "Wilson-Davis & Company",
+                "Inc."
+              ],
+              "name_scores": {
+                "Pershing LLC": 5.26,
+                "Christopher Halotek": 47.37,
+                "Morgan Stanley": 5.26,
+                "George Bevins": 5.26,
+                "Patrick McDonnell": 5.26,
+                "Bryn Mawr Securities Corp.": 9.52,
+                "Christopher Corso": 47.37,
+                "CAC Capital Corp.": 9.52,
+                "Allyson Reed": 5.26,
+                "Brian Murray": 5.26,
+                "Christopher Belle": 47.37,
+                "Christopher Taylor": 47.37,
+                "Edward Jones": 5.26,
+                "Jesse Dietz": 5.26,
+                "Christopher China": 47.37,
+                "Eric Arlt": 5.26,
+                "Itradedirect.Com Corp": 5.26,
+                "Christopher Cushman": 47.37,
+                "Tsarina Branyan": 5.26,
+                "Brian Sanders": 5.26,
+                "Christopher Atteo": 47.37,
+                "Clayton Sontag": 5.26,
+                "Christopher Roumayeh": 47.37,
+                "John Wanken": 5.26,
+                "Raymond James Financial Services": 9.52,
+                "Inc.": 5.26,
+                "Christopher Guenther": 47.37,
+                "Christopher Vanstelle": 47.37,
+                "Steelpoint Securities": 5.26,
+                "LLC": 5.26,
+                "Christopher Cochrane": 47.37,
+                "Donald Slye": 5.26,
+                "Christopher Cervino": 47.37,
+                "Larry Werbel": 5.26,
+                "Wilson-Davis & Company": 9.52
+              },
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'Christopher Airey'"
+            }
+          }
+        },
+        "description": "Found 15 arbitration records for Christopher Airey, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Christopher Airey",
+      "sec_arbitration": {
+        "source": "SEC_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_arbitration": {
+        "source": "FINRA_Arbitration",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Pershing LLC",
+          "Christopher Halotek",
+          "Morgan Stanley",
+          "George Bevins",
+          "Patrick McDonnell",
+          "Bryn Mawr Securities Corp.",
+          "Christopher Corso",
+          "CAC Capital Corp.",
+          "Allyson Reed",
+          "Brian Murray",
+          "Christopher Belle",
+          "Christopher Taylor",
+          "Edward Jones",
+          "Jesse Dietz",
+          "Christopher China",
+          "Eric Arlt",
+          "Itradedirect.Com Corp",
+          "Christopher Cushman",
+          "Tsarina Branyan",
+          "Brian Sanders",
+          "Christopher Atteo",
+          "Clayton Sontag",
+          "Christopher Roumayeh",
+          "John Wanken",
+          "Raymond James Financial Services",
+          "Inc.",
+          "Christopher Guenther",
+          "Christopher Vanstelle",
+          "Steelpoint Securities",
+          "LLC",
+          "Christopher Cochrane",
+          "Donald Slye",
+          "Christopher Cervino",
+          "Larry Werbel",
+          "Wilson-Davis & Company",
+          "Inc."
+        ],
+        "name_scores": {
+          "Pershing LLC": 5.26,
+          "Christopher Halotek": 47.37,
+          "Morgan Stanley": 5.26,
+          "George Bevins": 5.26,
+          "Patrick McDonnell": 5.26,
+          "Bryn Mawr Securities Corp.": 9.52,
+          "Christopher Corso": 47.37,
+          "CAC Capital Corp.": 9.52,
+          "Allyson Reed": 5.26,
+          "Brian Murray": 5.26,
+          "Christopher Belle": 47.37,
+          "Christopher Taylor": 47.37,
+          "Edward Jones": 5.26,
+          "Jesse Dietz": 5.26,
+          "Christopher China": 47.37,
+          "Eric Arlt": 5.26,
+          "Itradedirect.Com Corp": 5.26,
+          "Christopher Cushman": 47.37,
+          "Tsarina Branyan": 5.26,
+          "Brian Sanders": 5.26,
+          "Christopher Atteo": 47.37,
+          "Clayton Sontag": 5.26,
+          "Christopher Roumayeh": 47.37,
+          "John Wanken": 5.26,
+          "Raymond James Financial Services": 9.52,
+          "Inc.": 5.26,
+          "Christopher Guenther": 47.37,
+          "Christopher Vanstelle": 47.37,
+          "Steelpoint Securities": 5.26,
+          "LLC": 5.26,
+          "Christopher Cochrane": 47.37,
+          "Donald Slye": 5.26,
+          "Christopher Cervino": 47.37,
+          "Larry Werbel": 5.26,
+          "Wilson-Davis & Company": 9.52
+        },
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Christopher Airey'"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for Christopher Airey; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Regulatory Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "DocketNumberFDA": "2007011128201",
+            "DocketNumberAAO": "2007011128201",
+            "Initiated By": "FINRA",
+            "Allegations": "NASD RULES 2110 AND 3040: RESPONDENT CHRISTOPHER SCOTT AIREY PARTICIPATED IN PRIVATE SECURITIES TRANSACTIONS WITHOUT GIVING PRIOR WRITTEN NOTICE TO, OR OBTAINING WRITTEN APPROVAL FROM, HIS MEMBER FIRM.",
+            "Resolution": "Acceptance, Waiver & Consent(AWC)",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Civil and Administrative Penalty(ies)/Fine(s)",
+                "SanctionDetails": [
+                  {
+                    "Amount": "$5,000.00"
+                  }
+                ]
+              },
+              {
+                "Sanctions": "Suspension",
+                "SanctionDetails": [
+                  {
+                    "Registration Capacities Affected": "ANY CAPACITY",
+                    "Duration": "THREE MONTHS",
+                    "Start Date": "8/3/2009",
+                    "End Date": "11/2/2009"
+                  }
+                ]
+              }
+            ],
+            "Regulator Statement": "WITHOUT ADMITTING OR DENYING THE FINDINGS, AIREY CONSENTED TO THE DESCRIBED SANCTIONS AND TO THE ENTRY OF FINDINGS; THEREFORE, HE IS FINED $5,000 AND SUSPENDED FROM ASSOCIATION WITH ANY FINRA MEMBER IN ANY CAPACITY FOR THREE MONTHS.\r\n\r\nTHE SUSPENSION IS IN EFFECT FROM AUGUST 3, 2009 THROUGH NOVEMBER 2, 2009.",
+            "Broker Comment": [
+              "WITHOUT ADMITTING OR DENYING THE FINDINGS, AIREY CONSENTED TO THE DESCRIBED SANCTIONS AND TO THE ENTRY OF FINDINGS; THEREFORE, HE IS FINED $5000 AND SUSPENDED FROM ASSOCIATION WITH ANY FINRA MEMBER IN ANY CAPACITY FOR THREE MONTHS.  THE SUSPENSION IS IN EFFECT FROM AUGUST 3, 2009 THROUGH NOVEMBER 2, 2009."
+            ]
+          },
+          "event_date": "7/1/2009",
+          "resolution": "Final"
+        },
+        "description": "Regulatory action on 7/1/2009 initiated by FINRA. Resolution: Final. Allegations: NASD RULES 2110 AND 3040: RESPONDENT CHRISTOPHER SCOTT AIREY PARTICIPATED IN PRIVATE SECURITIES TRANSACTIONS WITHOUT GIVING PRIOR WRITTEN NOTICE TO, OR OBTAINING WRITTEN APPROVAL FROM, HIS MEMBER FIRM.. Sanctions: Civil and Administrative Penalty(ies)/Fine(s), Suspension [Civil penalty detected.]"
+      }
+    ]
+  }
+}

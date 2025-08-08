@@ -1,0 +1,583 @@
+{
+  "reference_id": "SP38146264185190_PBI-D477774F44D24B2",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-D477774F44D24B2",
+    "first_name": "Jon",
+    "last_name": "Cherry",
+    "employee_number": "EN-042420",
+    "crdNumber": "4255568",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "4255568",
+    "individual_name": "Jon Cherry",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "BrokerCheck",
+    "basic_result": {
+      "fetched_name": "JON VINCENT CHERRY",
+      "other_names": [],
+      "bc_scope": "Active",
+      "ia_scope": "NotInScope",
+      "disclosures": [
+        {
+          "eventDate": "9/30/2015",
+          "disclosureType": "Judgment / Lien",
+          "disclosureResolution": "",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "disclosureDetail": {
+            "Judgment/Lien Amount": "$236,995.65",
+            "Judgment/Lien Type": "Tax"
+          }
+        },
+        {
+          "eventDate": "3/7/2013",
+          "disclosureType": "Judgment / Lien",
+          "disclosureResolution": "",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "disclosureDetail": {
+            "Judgment/Lien Amount": "$71,336.65",
+            "Judgment/Lien Type": "Tax"
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "10/10/2007",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 4",
+          "examName": "Registered Options Principal Examination",
+          "examTakenDate": "12/30/2022",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 24",
+          "examName": "General Securities Principal Examination",
+          "examTakenDate": "11/9/2021",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 52TO",
+          "examName": "Municipal Securities Representative Examination",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 57TO",
+          "examName": "Securities Trader Exam",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 55",
+          "examName": "Limited Representative-Equity Trader Exam",
+          "examTakenDate": "10/14/2003",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "9/9/2002",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "7927",
+          "firm_name": "NORTHERN TRUST SECURITIES, INC.",
+          "registration_begin_date": "12/1/2015",
+          "branch_offices": [
+            {
+              "street": "50 South LaSalle",
+              "city": "Chicago",
+              "state": "IL",
+              "zip_code": "60603"
+            },
+            {
+              "street": "333 South Wabash Avenue",
+              "city": "CHICAGO",
+              "state": "IL",
+              "zip_code": "60604"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "46300",
+          "firm_name": "TJM INVESTMENTS, LLC",
+          "registration_begin_date": "7/17/2012",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "12/1/2015"
+        },
+        {
+          "firm_id": "127081",
+          "firm_name": "BROKERSXPRESS LLC",
+          "registration_begin_date": "11/30/2009",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/12/2012"
+        },
+        {
+          "firm_id": "6731",
+          "firm_name": "MF GLOBAL INC.",
+          "registration_begin_date": "7/17/2007",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/30/2009"
+        },
+        {
+          "firm_id": "728",
+          "firm_name": "ROTHSCHILD INVESTMENT CORPORATION",
+          "registration_begin_date": "9/11/2002",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "1/17/2007"
+        }
+      ],
+      "crd_number": "4255568"
+    },
+    "detailed_result": {
+      "fetched_name": "JON VINCENT CHERRY",
+      "other_names": [],
+      "bc_scope": "Active",
+      "ia_scope": "NotInScope",
+      "disclosures": [
+        {
+          "eventDate": "9/30/2015",
+          "disclosureType": "Judgment / Lien",
+          "disclosureResolution": "",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "disclosureDetail": {
+            "Judgment/Lien Amount": "$236,995.65",
+            "Judgment/Lien Type": "Tax"
+          }
+        },
+        {
+          "eventDate": "3/7/2013",
+          "disclosureType": "Judgment / Lien",
+          "disclosureResolution": "",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "disclosureDetail": {
+            "Judgment/Lien Amount": "$71,336.65",
+            "Judgment/Lien Type": "Tax"
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "10/10/2007",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 4",
+          "examName": "Registered Options Principal Examination",
+          "examTakenDate": "12/30/2022",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 24",
+          "examName": "General Securities Principal Examination",
+          "examTakenDate": "11/9/2021",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 52TO",
+          "examName": "Municipal Securities Representative Examination",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 57TO",
+          "examName": "Securities Trader Exam",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 55",
+          "examName": "Limited Representative-Equity Trader Exam",
+          "examTakenDate": "10/14/2003",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "9/9/2002",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "7927",
+          "firm_name": "NORTHERN TRUST SECURITIES, INC.",
+          "registration_begin_date": "12/1/2015",
+          "branch_offices": [
+            {
+              "street": "50 South LaSalle",
+              "city": "Chicago",
+              "state": "IL",
+              "zip_code": "60603"
+            },
+            {
+              "street": "333 South Wabash Avenue",
+              "city": "CHICAGO",
+              "state": "IL",
+              "zip_code": "60604"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "46300",
+          "firm_name": "TJM INVESTMENTS, LLC",
+          "registration_begin_date": "7/17/2012",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "12/1/2015"
+        },
+        {
+          "firm_id": "127081",
+          "firm_name": "BROKERSXPRESS LLC",
+          "registration_begin_date": "11/30/2009",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/12/2012"
+        },
+        {
+          "firm_id": "6731",
+          "firm_name": "MF GLOBAL INC.",
+          "registration_begin_date": "7/17/2007",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/30/2009"
+        },
+        {
+          "firm_id": "728",
+          "firm_name": "ROTHSCHILD INVESTMENT CORPORATION",
+          "registration_begin_date": "9/11/2002",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "1/17/2007"
+        }
+      ],
+      "crd_number": "4255568"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "4255568",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with BrokerCheck data, individual found with employments."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "Jon",
+        "middle": null,
+        "last": "Cherry"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "JON",
+            "middle": "VINCENT",
+            "last": "CHERRY"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        }
+      ],
+      "best_match": {
+        "name_source": "main_fetched_name",
+        "fetched_name": {
+          "first": "JON",
+          "middle": "VINCENT",
+          "last": "CHERRY"
+        },
+        "score": 95.0,
+        "first_score": 1.0,
+        "middle_score": 0.5,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "Jon Cherry has 2 judgment / lien disclosures.",
+    "alerts": [
+      {
+        "alert_type": "Judgment / Lien Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Judgment/Lien Amount": "$236,995.65",
+            "Judgment/Lien Type": "Tax"
+          },
+          "event_date": "9/30/2015",
+          "resolution": ""
+        },
+        "description": "Judgment/Lien disclosure on 9/30/2015. Resolution: . Amount: $236,995.65. Type: Tax"
+      },
+      {
+        "alert_type": "Judgment / Lien Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Judgment/Lien Amount": "$71,336.65",
+            "Judgment/Lien Type": "Tax"
+          },
+          "event_date": "3/7/2013",
+          "resolution": ""
+        },
+        "description": "Judgment/Lien disclosure on 3/7/2013. Resolution: . Amount: $71,336.65. Type: Tax"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No matching disciplinary records found for Jon Cherry, but 15 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Search Info",
+        "alert_category": "DISCIPLINARY",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Jon Cherry",
+            "sec_disciplinary": {
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records fetched"
+            },
+            "finra_disciplinary": {
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Jon Stankovich",
+                "Alexander Jon James",
+                "Jon Pariser",
+                "Jon Sugick",
+                "Jon W. Stagnone (CRD No. 2433974)",
+                "JON TIMOTHY VANSLOOTEN",
+                "Jon DeBow",
+                "DAN JON CARPENTER",
+                "JON DAVID WEIR",
+                "JON KEVIN FOLAN",
+                "JON L. COX",
+                "JOHN CHERRY III",
+                "JOHN CHERRY III",
+                "JON MARK DABAREINER",
+                "JON L. COX",
+                "MARK JON SLOCUM"
+              ],
+              "name_scores": {
+                "Jon Stankovich": 47.37,
+                "Alexander Jon James": 9.52,
+                "Jon Pariser": 47.37,
+                "Jon Sugick": 47.37,
+                "Jon W. Stagnone (CRD No. 2433974)": 47.62,
+                "JON TIMOTHY VANSLOOTEN": 47.62,
+                "Jon DeBow": 47.37,
+                "DAN JON CARPENTER": 9.52,
+                "JON DAVID WEIR": 47.62,
+                "JON KEVIN FOLAN": 47.62,
+                "JON L. COX": 47.62,
+                "JOHN CHERRY III": 0.0,
+                "JON MARK DABAREINER": 47.62,
+                "MARK JON SLOCUM": 9.52
+              },
+              "exact_match_found": false,
+              "status": "Partial failure: Error processing 'JOHN CHERRY III'"
+            }
+          }
+        },
+        "description": "Found 15 disciplinary records for Jon Cherry, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Jon Cherry",
+      "sec_disciplinary": {
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records fetched"
+      },
+      "finra_disciplinary": {
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Jon Stankovich",
+          "Alexander Jon James",
+          "Jon Pariser",
+          "Jon Sugick",
+          "Jon W. Stagnone (CRD No. 2433974)",
+          "JON TIMOTHY VANSLOOTEN",
+          "Jon DeBow",
+          "DAN JON CARPENTER",
+          "JON DAVID WEIR",
+          "JON KEVIN FOLAN",
+          "JON L. COX",
+          "JOHN CHERRY III",
+          "JOHN CHERRY III",
+          "JON MARK DABAREINER",
+          "JON L. COX",
+          "MARK JON SLOCUM"
+        ],
+        "name_scores": {
+          "Jon Stankovich": 47.37,
+          "Alexander Jon James": 9.52,
+          "Jon Pariser": 47.37,
+          "Jon Sugick": 47.37,
+          "Jon W. Stagnone (CRD No. 2433974)": 47.62,
+          "JON TIMOTHY VANSLOOTEN": 47.62,
+          "Jon DeBow": 47.37,
+          "DAN JON CARPENTER": 9.52,
+          "JON DAVID WEIR": 47.62,
+          "JON KEVIN FOLAN": 47.62,
+          "JON L. COX": 47.62,
+          "JOHN CHERRY III": 0.0,
+          "JON MARK DABAREINER": 47.62,
+          "MARK JON SLOCUM": 9.52
+        },
+        "exact_match_found": false,
+        "status": "Partial failure: Error processing 'JOHN CHERRY III'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": true,
+    "compliance_explanation": "No arbitration records found for Jon Cherry.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "searched_name": "Jon Cherry",
+      "sec_arbitration": {
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records fetched"
+      },
+      "finra_arbitration": {
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records fetched"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for Jon Cherry; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Judgment / Lien Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Judgment/Lien Amount": "$236,995.65",
+            "Judgment/Lien Type": "Tax"
+          },
+          "event_date": "9/30/2015",
+          "resolution": ""
+        },
+        "description": "Judgment/Lien disclosure on 9/30/2015. Resolution: . Amount: $236,995.65. Type: Tax"
+      },
+      {
+        "alert_type": "Judgment / Lien Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Judgment/Lien Amount": "$71,336.65",
+            "Judgment/Lien Type": "Tax"
+          },
+          "event_date": "3/7/2013",
+          "resolution": ""
+        },
+        "description": "Judgment/Lien disclosure on 3/7/2013. Resolution: . Amount: $71,336.65. Type: Tax"
+      }
+    ]
+  }
+}

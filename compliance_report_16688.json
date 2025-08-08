@@ -1,0 +1,197 @@
+{
+  "reference_id": "test-ref-16688",
+  "claim": {
+    "reference_id": "test-ref-16688",
+    "business_ref": "BIZ_16688",
+    "business_name": "ADAMS SECURITIES, INC.",
+    "organization_crd": "16688",
+    "entityName": "ADAMS SECURITIES, INC."
+  },
+  "entity": {
+    "firm_name": "ADAMS SECURITIES, INC.",
+    "crd_number": "16688",
+    "sec_number": "8-36609",
+    "registration_status": null,
+    "address": {},
+    "registration_date": null,
+    "other_names": [
+      "ADAMS SECURITIES, INC.",
+      "STARSHIP SECURITIES"
+    ],
+    "is_sec_registered": false,
+    "is_state_registered": false,
+    "is_era_registered": false,
+    "is_sec_era_registered": false,
+    "is_state_era_registered": false,
+    "adv_filing_date": null,
+    "has_adv_pdf": false
+  },
+  "search_evaluation": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with SEC data, individual found.",
+    "basic_result": {
+      "firm_name": "ADAMS SECURITIES, INC.",
+      "crd_number": "16688",
+      "registration_status": null,
+      "addresses": [],
+      "disclosures": [],
+      "raw_data": {
+        "basicInformation": {
+          "firmId": 16688,
+          "firmName": "ADAMS SECURITIES, INC.",
+          "otherNames": [
+            "ADAMS SECURITIES, INC.",
+            "STARSHIP SECURITIES"
+          ],
+          "bcScope": "INACTIVE",
+          "isLegacy": "Y",
+          "firmType": "Corporation",
+          "formedState": "New York",
+          "firmStatus": "Terminated",
+          "regulator": "SEC",
+          "firmStatusDate": "09/22/1992",
+          "formedDate": "09/13/1985",
+          "fiscalMonthEndCode": "December",
+          "expelledDate": "05/10/1993",
+          "legacyReportStatus": "Generated",
+          "bdSECNumber": "36609"
+        },
+        "iaDisclosureFlag": "N"
+      },
+      "sec_number": "8-36609",
+      "other_names": [
+        "ADAMS SECURITIES, INC.",
+        "STARSHIP SECURITIES"
+      ],
+      "notice_filings": [],
+      "registration_date": null,
+      "is_sec_registered": false,
+      "is_state_registered": false,
+      "is_era_registered": false,
+      "is_sec_era_registered": false,
+      "is_state_era_registered": false,
+      "adv_filing_date": null,
+      "has_adv_pdf": false,
+      "accountant_exams": [],
+      "brochures": [],
+      "firm_status": "active",
+      "is_finra_registered": true
+    },
+    "sec_search_result": {
+      "org_name": "ADAMS SECURITIES, INC.",
+      "org_crd": "16688",
+      "firm_ia_sec_number": "",
+      "firm_ia_full_sec_number": "",
+      "firm_other_names": [
+        "ADAMS SECURITIES, INC.",
+        "STARSHIP SECURITIES"
+      ],
+      "firm_type": "",
+      "registration_status": "",
+      "firm_ia_scope": "INACTIVE",
+      "firm_ia_disclosure_fl": "N",
+      "firm_branches_count": 0
+    },
+    "finra_search_result": {
+      "firm_name": "ADAMS SECURITIES, INC.",
+      "crd_number": "16688"
+    }
+  },
+  "status_evaluation": {
+    "source": "SEC",
+    "compliance": false,
+    "compliance_explanation": "No active registrations found",
+    "alerts": [
+      {
+        "alert_type": "InactiveScope",
+        "severity": "HIGH",
+        "metadata": {
+          "firm_ia_scope": "INACTIVE"
+        },
+        "description": "Firm's IA scope is inactive",
+        "alert_category": "GENERAL"
+      },
+      {
+        "alert_type": "NoActiveRegistration",
+        "severity": "HIGH",
+        "metadata": {
+          "registration_status": "",
+          "firm_ia_scope": "INACTIVE",
+          "firm_status": "active",
+          "source": "Unknown",
+          "is_sec_registered": false,
+          "is_state_registered": false,
+          "is_finra_registered": true
+        },
+        "description": "No active registrations found with any regulatory body",
+        "alert_category": "REGISTRATION"
+      }
+    ]
+  },
+  "disclosure_review": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "No disclosures found",
+    "alerts": []
+  },
+  "disciplinary_evaluation": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "No disciplinary actions found.",
+    "alerts": []
+  },
+  "arbitration_review": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "No arbitration cases found.",
+    "alerts": []
+  },
+  "adv_evaluation": {
+    "compliance": true,
+    "explanation": "ADV evaluation skipped due to configuration",
+    "alerts": [],
+    "skipped": true,
+    "skip_timestamp": "2025-08-01T09:49:22.763912",
+    "source": "SEC",
+    "adv_status": "skipped"
+  },
+  "final_evaluation": {
+    "source": "SEC",
+    "overall_compliance": false,
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "description": "One or more compliance checks failed",
+    "alerts": [
+      {
+        "eventDate": "2025-08-01",
+        "severity": "HIGH",
+        "alert_category": "REGULATORY",
+        "alert_type": "InactiveScope",
+        "description": "Firm's IA scope is inactive",
+        "source": "SEC",
+        "metadata": {
+          "firm_ia_scope": "INACTIVE"
+        }
+      },
+      {
+        "eventDate": "2025-08-01",
+        "severity": "HIGH",
+        "alert_category": "REGISTRATION",
+        "alert_type": "Registration Issue",
+        "description": "No active registrations found with any regulatory body",
+        "source": "SEC",
+        "metadata": {
+          "registration_status": "",
+          "firm_ia_scope": "INACTIVE",
+          "firm_status": "active",
+          "source": "Unknown",
+          "is_sec_registered": false,
+          "is_state_registered": false,
+          "is_finra_registered": true
+        }
+      }
+    ]
+  },
+  "generated_at": "2025-08-01T09:49:22.774217"
+}

@@ -1,0 +1,171 @@
+{
+  "reference_id": "test-ref-317700",
+  "claim": {
+    "reference_id": "test-ref-317700",
+    "business_ref": "BIZ_317700",
+    "business_name": "INTELNEURON LLC",
+    "organization_crd": "317700",
+    "entityName": "INTELNEURON LLC"
+  },
+  "entity": {
+    "firm_name": "INTELNEURON LLC",
+    "crd_number": "317700",
+    "sec_number": "-",
+    "registration_status": "ACTIVE",
+    "address": {},
+    "registration_date": "6/21/2023",
+    "other_names": [
+      "INTELNEURON LLC"
+    ],
+    "is_sec_registered": false,
+    "is_state_registered": false,
+    "is_era_registered": true,
+    "is_sec_era_registered": false,
+    "is_state_era_registered": true,
+    "adv_filing_date": "02/28/2025",
+    "has_adv_pdf": true
+  },
+  "search_evaluation": {
+    "source": "FINRA",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA data, individual found.",
+    "basic_result": {
+      "firm_name": "INTELNEURON LLC",
+      "crd_number": "317700",
+      "registration_status": "ACTIVE",
+      "addresses": [],
+      "disclosures": [],
+      "raw_data": {
+        "basicInformation": {
+          "firmId": 317700,
+          "firmName": "INTELNEURON LLC",
+          "otherNames": [
+            "INTELNEURON LLC"
+          ],
+          "iaScope": "ACTIVE",
+          "isIAFirm": "Y",
+          "legacyReportStatus": "Not Requested"
+        },
+        "iaFirmAddressDetails": {
+          "officeAddress": {
+            "city": "NEW YORK",
+            "state": "NY",
+            "country": "United States"
+          }
+        },
+        "iaDisclosureFlag": "N"
+      },
+      "sec_number": "-",
+      "other_names": [
+        "INTELNEURON LLC"
+      ],
+      "notice_filings": [],
+      "registration_date": "6/21/2023",
+      "is_sec_registered": false,
+      "is_state_registered": false,
+      "is_era_registered": true,
+      "is_sec_era_registered": false,
+      "is_state_era_registered": true,
+      "adv_filing_date": "02/28/2025",
+      "has_adv_pdf": true,
+      "accountant_exams": [],
+      "brochures": [],
+      "firm_status": "active",
+      "is_finra_registered": true
+    },
+    "sec_search_result": {
+      "org_name": "INTELNEURON LLC",
+      "org_crd": "317700",
+      "firm_ia_sec_number": "",
+      "firm_ia_full_sec_number": "",
+      "firm_other_names": [
+        "INTELNEURON LLC"
+      ],
+      "firm_type": "",
+      "registration_status": "",
+      "firm_ia_scope": "",
+      "firm_ia_disclosure_fl": "N",
+      "firm_branches_count": 0
+    },
+    "finra_search_result": {
+      "firm_name": "INTELNEURON LLC",
+      "crd_number": "317700"
+    }
+  },
+  "status_evaluation": {
+    "source": "FINRA",
+    "compliance": false,
+    "compliance_explanation": "No active registrations found",
+    "alerts": [
+      {
+        "alert_type": "NoActiveRegistration",
+        "severity": "HIGH",
+        "metadata": {
+          "registration_status": "",
+          "firm_ia_scope": "",
+          "firm_status": "active",
+          "source": "Unknown",
+          "is_sec_registered": false,
+          "is_state_registered": false,
+          "is_finra_registered": true
+        },
+        "description": "No active registrations found with any regulatory body",
+        "alert_category": "REGISTRATION"
+      }
+    ]
+  },
+  "disclosure_review": {
+    "source": "FINRA",
+    "compliance": true,
+    "compliance_explanation": "No disclosures found",
+    "alerts": []
+  },
+  "disciplinary_evaluation": {
+    "source": "FINRA",
+    "compliance": true,
+    "compliance_explanation": "No disciplinary actions found.",
+    "alerts": []
+  },
+  "arbitration_review": {
+    "source": "FINRA",
+    "compliance": true,
+    "compliance_explanation": "No arbitration cases found.",
+    "alerts": []
+  },
+  "adv_evaluation": {
+    "compliance": true,
+    "explanation": "ADV evaluation skipped due to configuration",
+    "alerts": [],
+    "skipped": true,
+    "skip_timestamp": "2025-08-04T16:47:50.743310",
+    "source": "FINRA",
+    "adv_status": "skipped"
+  },
+  "final_evaluation": {
+    "source": "FINRA",
+    "overall_compliance": false,
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "description": "One or more compliance checks failed",
+    "alerts": [
+      {
+        "eventDate": "2025-08-04",
+        "severity": "HIGH",
+        "alert_category": "REGISTRATION",
+        "alert_type": "Registration Issue",
+        "description": "No active registrations found with any regulatory body",
+        "source": "FINRA",
+        "metadata": {
+          "registration_status": "",
+          "firm_ia_scope": "",
+          "firm_status": "active",
+          "source": "Unknown",
+          "is_sec_registered": false,
+          "is_state_registered": false,
+          "is_finra_registered": true
+        }
+      }
+    ]
+  },
+  "generated_at": "2025-08-04T16:47:50.757735"
+}

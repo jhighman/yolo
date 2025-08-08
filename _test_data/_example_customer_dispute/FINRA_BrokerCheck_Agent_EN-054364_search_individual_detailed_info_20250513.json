@@ -1,0 +1,461 @@
+{
+  "basicInformation": {
+    "individualId": 2707962,
+    "firstName": "DUNCAN",
+    "middleName": "SCOTT",
+    "lastName": "HIGHMARK",
+    "otherNames": [
+      "SCOTT  HIGHMARK"
+    ],
+    "bcScope": "Active",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDate": "2/11/1996"
+  },
+  "currentEmployments": [
+    {
+      "firmId": 35747,
+      "firmName": "PURSHE KAPLAN STERLING INVESTMENTS",
+      "iaOnly": "N",
+      "registrationBeginDate": "2/20/2015",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE",
+      "bdSECNumber": "46844",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "582304",
+          "street1": "1401 South Brentwood Blvd.",
+          "street2": "Suite 630",
+          "city": "St. Louis",
+          "cityAlias": [
+            "BRENTWOOD",
+            "SAINT LOUIS"
+          ],
+          "state": "MO",
+          "country": "United States",
+          "zipCode": "63144",
+          "latitude": "38.618213",
+          "longitude": "-90.348428",
+          "geoLocation": "38.618213,-90.348428",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "02/24/2015"
+        }
+      ]
+    }
+  ],
+  "currentIAEmployments": [
+    {
+      "firmId": 317377,
+      "firmName": "MOSAIC WEALTH",
+      "iaOnly": "Y",
+      "registrationBeginDate": "1/4/2022",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "122745",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "773260",
+          "street1": "1401 S. BRENTWOOD BLVD.",
+          "street2": "SUITE 630",
+          "city": "ST. LOUIS",
+          "cityAlias": [
+            "BRENTWOOD",
+            "SAINT LOUIS"
+          ],
+          "state": "MO",
+          "country": "United States",
+          "zipCode": "63144",
+          "latitude": "38.618213",
+          "longitude": "-90.348428",
+          "geoLocation": "38.618213,-90.348428",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "01/03/2022"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "70103",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "68191",
+      "firmId": 149777,
+      "firmName": "MORGAN STANLEY",
+      "city": "CHESTERFIELD",
+      "state": "MO",
+      "registrationBeginDate": "6/1/2009",
+      "registrationEndDate": "3/5/2015",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "3387",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "8177",
+      "firmId": 7059,
+      "firmName": "CITIGROUP GLOBAL MARKETS INC.",
+      "city": "CHESTERFIELD",
+      "state": "MO",
+      "registrationBeginDate": "4/21/2006",
+      "registrationEndDate": "6/1/2009",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "13580",
+      "firmId": 4,
+      "firmName": "A. G. EDWARDS & SONS, INC.",
+      "city": "ST. LOUIS",
+      "state": "MO",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "8/6/1996",
+      "registrationEndDate": "4/26/2006",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "15847",
+      "firmId": 5435,
+      "firmName": "FRANKLIN FINANCIAL SERVICES CORPORATION",
+      "city": "HOUSTON",
+      "state": "TX",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "2/12/1996",
+      "registrationEndDate": "8/9/1996",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "79586",
+      "iaSECNumberType": "801",
+      "firmId": 170923,
+      "firmName": "MOSAIC FAMILY WEALTH, LLC",
+      "city": "ST. LOUIS",
+      "state": "MO",
+      "country": "United States",
+      "registrationBeginDate": "2/20/2015",
+      "registrationEndDate": "1/3/2022",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "70103",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "68191",
+      "firmId": 149777,
+      "firmName": "MORGAN STANLEY",
+      "city": "CHESTERFIELD",
+      "state": "MO",
+      "country": "United States",
+      "registrationBeginDate": "6/1/2009",
+      "registrationEndDate": "3/5/2015",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "3387",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "8177",
+      "firmId": 7059,
+      "firmName": "CITIGROUP GLOBAL MARKETS INC.",
+      "city": "CHESTERFIELD",
+      "state": "MO",
+      "country": "United States",
+      "registrationBeginDate": "4/21/2006",
+      "registrationEndDate": "6/1/2009",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "bdSECNumber": "13580",
+      "firmId": 4,
+      "firmName": "A. G. EDWARDS & SONS, INC.",
+      "city": "SAINT LOUIS",
+      "state": "MO",
+      "country": "United States",
+      "registrationBeginDate": "2/14/2006",
+      "registrationEndDate": "4/26/2006",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "3/2/2010",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 10,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "CLAIMANTS ALLEGE, INTER ALIA, THAT DURING 2008 THE FA INVESTED THE CLIENT'S ACCOUNT UNSUITABLY IN EQUITIES.",
+        "Damage Amount Requested": "$500,000.00",
+        "Settlement Amount": "$55,000.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": "",
+        "Broker Comment": [
+          "THIS MATTER WAS SETTLED TO AVOID THE COSTS OF LITIGATION, WITH NO ADMISSION OF LIABILITY BY THE FIRM OR FA. FA DID NOT CONTRIBUTE TO SETTLEMENT."
+        ]
+      }
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 0,
+    "productExamCount": 5
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 66",
+      "examName": "Uniform Combined State Law Examination",
+      "examTakenDate": "2/13/2006",
+      "examScope": "BOTH"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "2/12/1996",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "Series 99TO",
+      "examName": "Operations Professional Examination",
+      "examTakenDate": "1/2/2023",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "10/1/2018",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 31",
+      "examName": "Futures Managed Funds Examination",
+      "examTakenDate": "10/14/2006",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "9/12/1996",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 6",
+      "examName": "Investment Company Products/Variable Contracts Representative Examination",
+      "examTakenDate": "2/9/1996",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "approvedSRORegistrationCount": 1,
+    "approvedFinraRegistrationCount": 1,
+    "approvedStateRegistrationCount": 25,
+    "approvedIAStateRegistrationCount": 2
+  },
+  "registeredStates": [
+    {
+      "state": "California",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "1/6/2017"
+    },
+    {
+      "state": "Colorado",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "1/12/2016"
+    },
+    {
+      "state": "Florida",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "2/20/2015"
+    },
+    {
+      "state": "Georgia",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "4/27/2015"
+    },
+    {
+      "state": "Illinois",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "2/20/2015"
+    },
+    {
+      "state": "Indiana",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "1/2/2020"
+    },
+    {
+      "state": "Kansas",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "2/20/2015"
+    },
+    {
+      "state": "Kentucky",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "1/12/2016"
+    },
+    {
+      "state": "Louisiana",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "3/30/2015"
+    },
+    {
+      "state": "Maryland",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "1/3/2020"
+    },
+    {
+      "state": "Massachusetts",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "3/30/2015"
+    },
+    {
+      "state": "Michigan",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "6/8/2015"
+    },
+    {
+      "state": "Minnesota",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "1/3/2020"
+    },
+    {
+      "state": "Missouri",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "2/20/2015"
+    },
+    {
+      "state": "Missouri",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "1/4/2022"
+    },
+    {
+      "state": "Nevada",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "1/20/2016"
+    },
+    {
+      "state": "New York",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "2/20/2015"
+    },
+    {
+      "state": "North Carolina",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "6/4/2015"
+    },
+    {
+      "state": "Ohio",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "1/11/2016"
+    },
+    {
+      "state": "Oklahoma",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "1/9/2020"
+    },
+    {
+      "state": "Oregon",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "1/12/2016"
+    },
+    {
+      "state": "Pennsylvania",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "1/3/2020"
+    },
+    {
+      "state": "South Carolina",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "3/31/2015"
+    },
+    {
+      "state": "Texas",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "2/20/2015"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED_RES",
+      "regDate": "1/4/2022"
+    },
+    {
+      "state": "Utah",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "1/7/2020"
+    },
+    {
+      "state": "Wyoming",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "2/20/2015"
+    }
+  ],
+  "registeredSROs": [
+    {
+      "sro": "FINRA",
+      "status": "APPROVED",
+      "CategoriesList": [
+        "Full Registration/General Securities Representative",
+        "Operations Professional"
+      ]
+    }
+  ],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}

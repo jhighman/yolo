@@ -1,0 +1,765 @@
+{
+  "reference_id": "SP38146264185190_PBI-31FE44D744C1465",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-31FE44D744C1465",
+    "first_name": "George",
+    "last_name": "Brown",
+    "employee_number": "EN-046466",
+    "zip": "74132",
+    "crdNumber": "2719984",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "2719984",
+    "individual_name": "George Brown",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "FINRA_BrokerCheck",
+    "basic_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "GEORGE ANDERSON BROWN",
+      "other_names": [],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "4/26/2000",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "ON JANUARY 11, 1999, CLIENT ALLEGES THAT MR. BROWN BOUGHT INSTEAD OF SOLD 25 CONTRACTS OF DATA BROADCASTING CALLS. FURTHER, CLIENT ALLEGES HE WAS NOT INFORMED ABOUT THE OPENING ROTATION PROCEDURE AND CLIENT BELIEVES RESULTING SALES PRICES OF HIS 75 CONTRACTS WERE LOWER THAN WHAT HE SHOULD HAVE RECEIVED.",
+            "Damage Amount Requested": "$75,000.00",
+            "Settlement Amount": "$9,999.00",
+            "DisplayAAOLinkIfExists": "Y",
+            "arbitrationClaimFiledDetail": "2000-008427",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "CLAIMANT VOLUNTARILY DISMISSED BROKER FROM ARBITRATION AND SETTLED WITH DAIN RAUSCHER INCORPORATED."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "7/31/1996",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "5/17/1996",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/2/2017",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "5/6/1996",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "20050",
+          "firm_name": "MINSHALL & COMPANY INC.",
+          "registration_begin_date": "7/2/2001",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "10/2/2017"
+        },
+        {
+          "firm_id": "665",
+          "firm_name": "U.S. BANCORP PIPER JAFFRAY INC.",
+          "registration_begin_date": "6/21/1999",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/10/2001"
+        },
+        {
+          "firm_id": "31194",
+          "firm_name": "DAIN RAUSCHER INCORPORATED",
+          "registration_begin_date": "3/2/1998",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "6/23/1999"
+        },
+        {
+          "firm_id": "7600",
+          "firm_name": "DAIN RAUSCHER INCORPORATED",
+          "registration_begin_date": "1/2/1998",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "3/2/1998"
+        },
+        {
+          "firm_id": "6663",
+          "firm_name": "RAUSCHER PIERCE REFSNES, INC.",
+          "registration_begin_date": "5/7/1996",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "1/2/1998"
+        }
+      ],
+      "crd_number": "2719984"
+    },
+    "detailed_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "GEORGE ANDERSON BROWN",
+      "other_names": [],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "4/26/2000",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "ON JANUARY 11, 1999, CLIENT ALLEGES THAT MR. BROWN BOUGHT INSTEAD OF SOLD 25 CONTRACTS OF DATA BROADCASTING CALLS. FURTHER, CLIENT ALLEGES HE WAS NOT INFORMED ABOUT THE OPENING ROTATION PROCEDURE AND CLIENT BELIEVES RESULTING SALES PRICES OF HIS 75 CONTRACTS WERE LOWER THAN WHAT HE SHOULD HAVE RECEIVED.",
+            "Damage Amount Requested": "$75,000.00",
+            "Settlement Amount": "$9,999.00",
+            "DisplayAAOLinkIfExists": "Y",
+            "arbitrationClaimFiledDetail": "2000-008427",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "CLAIMANT VOLUNTARILY DISMISSED BROKER FROM ARBITRATION AND SETTLED WITH DAIN RAUSCHER INCORPORATED."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "7/31/1996",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "5/17/1996",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/2/2017",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "5/6/1996",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "20050",
+          "firm_name": "MINSHALL & COMPANY INC.",
+          "registration_begin_date": "7/2/2001",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "10/2/2017"
+        },
+        {
+          "firm_id": "665",
+          "firm_name": "U.S. BANCORP PIPER JAFFRAY INC.",
+          "registration_begin_date": "6/21/1999",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/10/2001"
+        },
+        {
+          "firm_id": "31194",
+          "firm_name": "DAIN RAUSCHER INCORPORATED",
+          "registration_begin_date": "3/2/1998",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "6/23/1999"
+        },
+        {
+          "firm_id": "7600",
+          "firm_name": "DAIN RAUSCHER INCORPORATED",
+          "registration_begin_date": "1/2/1998",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "3/2/1998"
+        },
+        {
+          "firm_id": "6663",
+          "firm_name": "RAUSCHER PIERCE REFSNES, INC.",
+          "registration_begin_date": "5/7/1996",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "1/2/1998"
+        }
+      ],
+      "crd_number": "2719984"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "2719984",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA BrokerCheck data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "George",
+        "middle": null,
+        "last": "Brown"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "GEORGE",
+            "middle": "ANDERSON",
+            "last": "BROWN"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        }
+      ],
+      "best_match": {
+        "name_source": "main_fetched_name",
+        "fetched_name": {
+          "first": "GEORGE",
+          "middle": "ANDERSON",
+          "last": "BROWN"
+        },
+        "score": 95.0,
+        "first_score": 1.0,
+        "middle_score": 0.5,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "George Brown has 1 customer dispute disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "ON JANUARY 11, 1999, CLIENT ALLEGES THAT MR. BROWN BOUGHT INSTEAD OF SOLD 25 CONTRACTS OF DATA BROADCASTING CALLS. FURTHER, CLIENT ALLEGES HE WAS NOT INFORMED ABOUT THE OPENING ROTATION PROCEDURE AND CLIENT BELIEVES RESULTING SALES PRICES OF HIS 75 CONTRACTS WERE LOWER THAN WHAT HE SHOULD HAVE RECEIVED.",
+            "Damage Amount Requested": "$75,000.00",
+            "Settlement Amount": "$9,999.00",
+            "DisplayAAOLinkIfExists": "Y",
+            "arbitrationClaimFiledDetail": "2000-008427",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "CLAIMANT VOLUNTARILY DISMISSED BROKER FROM ARBITRATION AND SETTLED WITH DAIN RAUSCHER INCORPORATED."
+            ]
+          },
+          "event_date": "4/26/2000",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 4/26/2000. Resolution: Settled. Allegations: ON JANUARY 11, 1999, CLIENT ALLEGES THAT MR. BROWN BOUGHT INSTEAD OF SOLD 25 CONTRACTS OF DATA BROADCASTING CALLS. FURTHER, CLIENT ALLEGES HE WAS NOT INFORMED ABOUT THE OPENING ROTATION PROCEDURE AND CLIENT BELIEVES RESULTING SALES PRICES OF HIS 75 CONTRACTS WERE LOWER THAN WHAT HE SHOULD HAVE RECEIVED.. Damage requested: $75,000.00. Settlement: $9,999.00"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": false,
+    "compliance_explanation": "Disciplinary records found for George Brown.",
+    "actions": [
+      {
+        "case_id": "Unknown",
+        "date": "Unknown",
+        "details": {
+          "action_type": "Disciplinary",
+          "firms_individuals": "GEORGE P BROWN",
+          "description": ""
+        }
+      },
+      {
+        "case_id": "Unknown",
+        "date": "Unknown",
+        "details": {
+          "action_type": "Disciplinary",
+          "firms_individuals": "GEORGE P BROWN",
+          "description": ""
+        }
+      }
+    ],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Proceeding",
+        "alert_category": "DISCIPLINARY",
+        "severity": "HIGH",
+        "metadata": {
+          "record": {
+            "case_id": "Unknown",
+            "date": "Unknown",
+            "details": {
+              "action_type": "Disciplinary",
+              "firms_individuals": "GEORGE P BROWN",
+              "description": ""
+            }
+          }
+        },
+        "description": "Disciplinary record found: Case ID Unknown for George Brown."
+      },
+      {
+        "alert_type": "Disciplinary Proceeding",
+        "alert_category": "DISCIPLINARY",
+        "severity": "HIGH",
+        "metadata": {
+          "record": {
+            "case_id": "Unknown",
+            "date": "Unknown",
+            "details": {
+              "action_type": "Disciplinary",
+              "firms_individuals": "GEORGE P BROWN",
+              "description": ""
+            }
+          }
+        },
+        "description": "Disciplinary record found: Case ID Unknown for George Brown."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "George Brown",
+      "sec_disciplinary": {
+        "source": "SEC_Disciplinary",
+        "records_found": 2,
+        "records_filtered": 0,
+        "names_found": [
+          "GEORGE P BROWN",
+          "GEORGE P BROWN"
+        ],
+        "name_scores": {
+          "GEORGE P BROWN": 95.24
+        },
+        "exact_match_found": true,
+        "status": "Exact matches found"
+      },
+      "finra_disciplinary": {
+        "source": "FINRA_Disciplinary",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "George Snyder IV",
+          "George Snyder IV",
+          "George Apolonides also known as George Apollo",
+          "George Condzal",
+          "Reuben Lamont Brown",
+          "Efthimios George Petrou",
+          "George N. Farah",
+          "Glendale Securities, Inc.George Alberto Castillo, Paul Eric Flesche, Albert Raymond Laubenstein, Jose Miguel Abadin, Huanwei Huang",
+          "Glendale Securities, Inc.George Alberto Castillo, Paul Eric Flesche, Albert Raymond Laubenstein, Jose Miguel Abadin, Huanwei Huang",
+          "George Louis McCaffrey III",
+          "George Louis McCaffrey III",
+          "Carl George Antaki",
+          "George Marshall Warner",
+          "George William Magladry, III",
+          "George William Magladry, III",
+          "William George Davis",
+          "George McElroy",
+          "Fred Brown",
+          "George C. Merhoff, Jr.",
+          "George C. Merhoff, Jr."
+        ],
+        "name_scores": {
+          "George Snyder IV": 0.0,
+          "George Apolonides also known as George Apollo": 47.62,
+          "George Condzal": 47.37,
+          "Reuben Lamont Brown": 57.14,
+          "Efthimios George Petrou": 9.52,
+          "George N. Farah": 47.62,
+          "Glendale Securities, Inc.George Alberto Castillo, Paul Eric Flesche, Albert Raymond Laubenstein, Jose Miguel Abadin, Huanwei Huang": 0.0,
+          "George Louis McCaffrey III": 0.0,
+          "Carl George Antaki": 9.52,
+          "George Marshall Warner": 47.62,
+          "George William Magladry, III": 0.0,
+          "William George Davis": 9.52,
+          "George McElroy": 47.37,
+          "Fred Brown": 57.89,
+          "George C. Merhoff, Jr.": 0.0
+        },
+        "exact_match_found": false,
+        "status": "Partial failure: Error processing 'George C. Merhoff, Jr.'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": false,
+    "compliance_explanation": "Arbitration issues found for George Brown.",
+    "actions": [
+      {
+        "case_id": "SECURITIES AND EXCHANGE COMMISSION v. SUMMIT TRUST COMPANY, RAMPART CAPITAL MANAGEMENT, LLC, TRUST COUNSELORS NETWORK, INC., BROWN INVESTMENT ADVISORS, INC., KEVIN C. BROWN, and GEORGE P. BROWN, 2:15-cv-05843 (E.D. Pa.)",
+        "date": "Oct. 27, 2015",
+        "details": {
+          "action_type": "Award against individual",
+          "firms_individuals": "George Brown",
+          "description": "Case SECURITIES AND EXCHANGE COMMISSION v. SUMMIT TRUST COMPANY, RAMPART CAPITAL MANAGEMENT, LLC, TRUST COUNSELORS NETWORK, INC., BROWN INVESTMENT ADVISORS, INC., KEVIN C. BROWN, and GEORGE P. BROWN, 2:15-cv-05843 (E.D. Pa.) closed with outcome: Award against individual",
+          "enforcement_action": "SECURITIES AND EXCHANGE COMMISSION v. SUMMIT TRUST COMPANY, RAMPART CAPITAL MANAGEMENT, LLC, TRUST COUNSELORS NETWORK, INC., BROWN INVESTMENT ADVISORS, INC., KEVIN C. BROWN, and GEORGE P. BROWN, 2:15-cv-05843 (E.D. Pa.)",
+          "documents": [
+            {
+              "title": "SEC Complaint",
+              "link": "https://www.sec.gov/litigation/complaints/2015/comp23393.pdf"
+            },
+            {
+              "title": "LR-23393",
+              "link": "https://www.sec.gov/litigation/litreleases/2015/lr23393.htm"
+            },
+            {
+              "title": "Judgment",
+              "link": "/files/Judg15-cv-05843BrownGeorge.pdf"
+            }
+          ]
+        },
+        "matched_name": "George Brown"
+      },
+      {
+        "case_id": "In the Matter of GEORGE P. BROWN , SEC File No. 3-16957",
+        "date": "Nov. 13, 2015",
+        "details": {
+          "action_type": "Award against individual",
+          "firms_individuals": "George Brown",
+          "description": "Case In the Matter of GEORGE P. BROWN , SEC File No. 3-16957 closed with outcome: Award against individual",
+          "enforcement_action": "In the Matter of GEORGE P. BROWN , SEC File No. 3-16957",
+          "documents": [
+            {
+              "title": "IA-4264",
+              "link": "https://www.sec.gov/litigation/admin/2015/ia-4264.pdf"
+            }
+          ]
+        },
+        "matched_name": "George Brown"
+      }
+    ],
+    "alerts": [
+      {
+        "alert_type": "Arbitration Compliance",
+        "alert_category": "ARBITRATION",
+        "severity": "HIGH",
+        "metadata": {
+          "arbitration": {
+            "case_id": "SECURITIES AND EXCHANGE COMMISSION v. SUMMIT TRUST COMPANY, RAMPART CAPITAL MANAGEMENT, LLC, TRUST COUNSELORS NETWORK, INC., BROWN INVESTMENT ADVISORS, INC., KEVIN C. BROWN, and GEORGE P. BROWN, 2:15-cv-05843 (E.D. Pa.)",
+            "date": "Oct. 27, 2015",
+            "details": {
+              "action_type": "Award against individual",
+              "firms_individuals": "George Brown",
+              "description": "Case SECURITIES AND EXCHANGE COMMISSION v. SUMMIT TRUST COMPANY, RAMPART CAPITAL MANAGEMENT, LLC, TRUST COUNSELORS NETWORK, INC., BROWN INVESTMENT ADVISORS, INC., KEVIN C. BROWN, and GEORGE P. BROWN, 2:15-cv-05843 (E.D. Pa.) closed with outcome: Award against individual",
+              "enforcement_action": "SECURITIES AND EXCHANGE COMMISSION v. SUMMIT TRUST COMPANY, RAMPART CAPITAL MANAGEMENT, LLC, TRUST COUNSELORS NETWORK, INC., BROWN INVESTMENT ADVISORS, INC., KEVIN C. BROWN, and GEORGE P. BROWN, 2:15-cv-05843 (E.D. Pa.)",
+              "documents": [
+                {
+                  "title": "SEC Complaint",
+                  "link": "https://www.sec.gov/litigation/complaints/2015/comp23393.pdf"
+                },
+                {
+                  "title": "LR-23393",
+                  "link": "https://www.sec.gov/litigation/litreleases/2015/lr23393.htm"
+                },
+                {
+                  "title": "Judgment",
+                  "link": "/files/Judg15-cv-05843BrownGeorge.pdf"
+                }
+              ]
+            },
+            "matched_name": "George Brown"
+          }
+        },
+        "description": "Arbitration issue found: Case SECURITIES AND EXCHANGE COMMISSION v. SUMMIT TRUST COMPANY, RAMPART CAPITAL MANAGEMENT, LLC, TRUST COUNSELORS NETWORK, INC., BROWN INVESTMENT ADVISORS, INC., KEVIN C. BROWN, and GEORGE P. BROWN, 2:15-cv-05843 (E.D. Pa.) for George Brown, status: unknown, outcome: award against individual."
+      },
+      {
+        "alert_type": "Arbitration Compliance",
+        "alert_category": "ARBITRATION",
+        "severity": "HIGH",
+        "metadata": {
+          "arbitration": {
+            "case_id": "In the Matter of GEORGE P. BROWN , SEC File No. 3-16957",
+            "date": "Nov. 13, 2015",
+            "details": {
+              "action_type": "Award against individual",
+              "firms_individuals": "George Brown",
+              "description": "Case In the Matter of GEORGE P. BROWN , SEC File No. 3-16957 closed with outcome: Award against individual",
+              "enforcement_action": "In the Matter of GEORGE P. BROWN , SEC File No. 3-16957",
+              "documents": [
+                {
+                  "title": "IA-4264",
+                  "link": "https://www.sec.gov/litigation/admin/2015/ia-4264.pdf"
+                }
+              ]
+            },
+            "matched_name": "George Brown"
+          }
+        },
+        "description": "Arbitration issue found: Case In the Matter of GEORGE P. BROWN , SEC File No. 3-16957 for George Brown, status: unknown, outcome: award against individual."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "George Brown",
+      "sec_arbitration": {
+        "source": "SEC_Arbitration",
+        "records_found": 2,
+        "records_filtered": 0,
+        "names_found": [
+          "George Brown",
+          "George Brown"
+        ],
+        "name_scores": {
+          "George Brown": 100.0
+        },
+        "exact_match_found": true,
+        "status": "Exact matches found"
+      },
+      "finra_arbitration": {
+        "source": "FINRA_Arbitration",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "George Rankin",
+          "UBS Financial Services Inc.",
+          "Samuel Rankin",
+          "Andrew Brown",
+          "FSC Securities Corporation",
+          "Edward Jones",
+          "Stephen Westphal",
+          "Arete Wealth Management",
+          "LLC",
+          "Pacific West Financial Group",
+          "Pacific West Securities",
+          "Inc.",
+          "Michael Megarit",
+          "Allegisone Securities",
+          "Inc.",
+          "Bruce Smith",
+          "Gary Paulzak",
+          "Jayanta Ghosh",
+          "Patrick Collins",
+          "Spelman & Co.",
+          "Inc.",
+          "Donald Beary",
+          "James Stanfield",
+          "Fidelity Brokerage Services LLC",
+          "Fidelity Brokerage Services LLC",
+          "Ameriprise Financial Services",
+          "Inc.",
+          "Charles Childs",
+          "Joshua Suter",
+          "Lynn Koczera",
+          "Blue Moon Financial",
+          "LLC",
+          "Nomlis",
+          "LLC",
+          "Cary Street Partners"
+        ],
+        "name_scores": {
+          "George Rankin": 47.37,
+          "UBS Financial Services Inc.": 9.52,
+          "Samuel Rankin": 5.26,
+          "Andrew Brown": 57.89,
+          "FSC Securities Corporation": 9.52,
+          "Edward Jones": 5.26,
+          "Stephen Westphal": 5.26,
+          "Arete Wealth Management": 9.52,
+          "LLC": 5.26,
+          "Pacific West Financial Group": 9.52,
+          "Pacific West Securities": 9.52,
+          "Inc.": 5.26,
+          "Michael Megarit": 5.26,
+          "Allegisone Securities": 5.26,
+          "Bruce Smith": 5.26,
+          "Gary Paulzak": 5.26,
+          "Jayanta Ghosh": 5.26,
+          "Patrick Collins": 5.26,
+          "Spelman & Co.": 9.52,
+          "Donald Beary": 5.26,
+          "James Stanfield": 5.26,
+          "Fidelity Brokerage Services LLC": 9.52,
+          "Ameriprise Financial Services": 9.52,
+          "Charles Childs": 5.26,
+          "Joshua Suter": 5.26,
+          "Lynn Koczera": 5.26,
+          "Blue Moon Financial": 9.52,
+          "Nomlis": 5.26,
+          "Cary Street Partners": 9.52
+        },
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'George Brown'"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for George Brown; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "ON JANUARY 11, 1999, CLIENT ALLEGES THAT MR. BROWN BOUGHT INSTEAD OF SOLD 25 CONTRACTS OF DATA BROADCASTING CALLS. FURTHER, CLIENT ALLEGES HE WAS NOT INFORMED ABOUT THE OPENING ROTATION PROCEDURE AND CLIENT BELIEVES RESULTING SALES PRICES OF HIS 75 CONTRACTS WERE LOWER THAN WHAT HE SHOULD HAVE RECEIVED.",
+            "Damage Amount Requested": "$75,000.00",
+            "Settlement Amount": "$9,999.00",
+            "DisplayAAOLinkIfExists": "Y",
+            "arbitrationClaimFiledDetail": "2000-008427",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "CLAIMANT VOLUNTARILY DISMISSED BROKER FROM ARBITRATION AND SETTLED WITH DAIN RAUSCHER INCORPORATED."
+            ]
+          },
+          "event_date": "4/26/2000",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 4/26/2000. Resolution: Settled. Allegations: ON JANUARY 11, 1999, CLIENT ALLEGES THAT MR. BROWN BOUGHT INSTEAD OF SOLD 25 CONTRACTS OF DATA BROADCASTING CALLS. FURTHER, CLIENT ALLEGES HE WAS NOT INFORMED ABOUT THE OPENING ROTATION PROCEDURE AND CLIENT BELIEVES RESULTING SALES PRICES OF HIS 75 CONTRACTS WERE LOWER THAN WHAT HE SHOULD HAVE RECEIVED.. Damage requested: $75,000.00. Settlement: $9,999.00"
+      },
+      {
+        "alert_type": "Disciplinary Proceeding",
+        "alert_category": "DISCIPLINARY",
+        "severity": "HIGH",
+        "metadata": {
+          "record": {
+            "case_id": "Unknown",
+            "date": "Unknown",
+            "details": {
+              "action_type": "Disciplinary",
+              "firms_individuals": "GEORGE P BROWN",
+              "description": ""
+            }
+          }
+        },
+        "description": "Disciplinary record found: Case ID Unknown for George Brown."
+      },
+      {
+        "alert_type": "Disciplinary Proceeding",
+        "alert_category": "DISCIPLINARY",
+        "severity": "HIGH",
+        "metadata": {
+          "record": {
+            "case_id": "Unknown",
+            "date": "Unknown",
+            "details": {
+              "action_type": "Disciplinary",
+              "firms_individuals": "GEORGE P BROWN",
+              "description": ""
+            }
+          }
+        },
+        "description": "Disciplinary record found: Case ID Unknown for George Brown."
+      },
+      {
+        "alert_type": "Arbitration Compliance",
+        "alert_category": "ARBITRATION",
+        "severity": "HIGH",
+        "metadata": {
+          "arbitration": {
+            "case_id": "SECURITIES AND EXCHANGE COMMISSION v. SUMMIT TRUST COMPANY, RAMPART CAPITAL MANAGEMENT, LLC, TRUST COUNSELORS NETWORK, INC., BROWN INVESTMENT ADVISORS, INC., KEVIN C. BROWN, and GEORGE P. BROWN, 2:15-cv-05843 (E.D. Pa.)",
+            "date": "Oct. 27, 2015",
+            "details": {
+              "action_type": "Award against individual",
+              "firms_individuals": "George Brown",
+              "description": "Case SECURITIES AND EXCHANGE COMMISSION v. SUMMIT TRUST COMPANY, RAMPART CAPITAL MANAGEMENT, LLC, TRUST COUNSELORS NETWORK, INC., BROWN INVESTMENT ADVISORS, INC., KEVIN C. BROWN, and GEORGE P. BROWN, 2:15-cv-05843 (E.D. Pa.) closed with outcome: Award against individual",
+              "enforcement_action": "SECURITIES AND EXCHANGE COMMISSION v. SUMMIT TRUST COMPANY, RAMPART CAPITAL MANAGEMENT, LLC, TRUST COUNSELORS NETWORK, INC., BROWN INVESTMENT ADVISORS, INC., KEVIN C. BROWN, and GEORGE P. BROWN, 2:15-cv-05843 (E.D. Pa.)",
+              "documents": [
+                {
+                  "title": "SEC Complaint",
+                  "link": "https://www.sec.gov/litigation/complaints/2015/comp23393.pdf"
+                },
+                {
+                  "title": "LR-23393",
+                  "link": "https://www.sec.gov/litigation/litreleases/2015/lr23393.htm"
+                },
+                {
+                  "title": "Judgment",
+                  "link": "/files/Judg15-cv-05843BrownGeorge.pdf"
+                }
+              ]
+            },
+            "matched_name": "George Brown"
+          }
+        },
+        "description": "Arbitration issue found: Case SECURITIES AND EXCHANGE COMMISSION v. SUMMIT TRUST COMPANY, RAMPART CAPITAL MANAGEMENT, LLC, TRUST COUNSELORS NETWORK, INC., BROWN INVESTMENT ADVISORS, INC., KEVIN C. BROWN, and GEORGE P. BROWN, 2:15-cv-05843 (E.D. Pa.) for George Brown, status: unknown, outcome: award against individual."
+      },
+      {
+        "alert_type": "Arbitration Compliance",
+        "alert_category": "ARBITRATION",
+        "severity": "HIGH",
+        "metadata": {
+          "arbitration": {
+            "case_id": "In the Matter of GEORGE P. BROWN , SEC File No. 3-16957",
+            "date": "Nov. 13, 2015",
+            "details": {
+              "action_type": "Award against individual",
+              "firms_individuals": "George Brown",
+              "description": "Case In the Matter of GEORGE P. BROWN , SEC File No. 3-16957 closed with outcome: Award against individual",
+              "enforcement_action": "In the Matter of GEORGE P. BROWN , SEC File No. 3-16957",
+              "documents": [
+                {
+                  "title": "IA-4264",
+                  "link": "https://www.sec.gov/litigation/admin/2015/ia-4264.pdf"
+                }
+              ]
+            },
+            "matched_name": "George Brown"
+          }
+        },
+        "description": "Arbitration issue found: Case In the Matter of GEORGE P. BROWN , SEC File No. 3-16957 for George Brown, status: unknown, outcome: award against individual."
+      }
+    ]
+  }
+}

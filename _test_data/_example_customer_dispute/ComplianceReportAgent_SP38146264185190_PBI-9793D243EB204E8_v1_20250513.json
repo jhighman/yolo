@@ -1,0 +1,760 @@
+{
+  "reference_id": "SP38146264185190_PBI-9793D243EB204E8",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-9793D243EB204E8",
+    "first_name": "Eduardo",
+    "last_name": "Sordo",
+    "employee_number": "EN-054654",
+    "zip": "33472",
+    "crdNumber": "4175091",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "4175091",
+    "individual_name": "Eduardo Sordo",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "FINRA_BrokerCheck",
+    "basic_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "EDUARDO LUIS SORDO",
+      "other_names": [
+        "EDDIE  SORDO",
+        "EDUARDO L SORDO",
+        "EDUARDO  SORDO"
+      ],
+      "bc_scope": "Active",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "8/26/2010",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "TIME FRAME: JULY 2007-DECEMBER 2008. CLAIMANT ALLEGES UNSUITABLE INVESTMENT RECOMMENDATIONS OF MUTUAL FUNDS AND USE OF MARGIN.",
+            "Damage Amount Requested": "$1,000,000.00",
+            "Settlement Amount": "$350,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "4/8/2005",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "5/16/2000",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 24",
+          "examName": "General Securities Principal Examination",
+          "examTakenDate": "3/29/2019",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 10",
+          "examName": "General Securities Sales Supervisor - General Module Examination",
+          "examTakenDate": "11/14/2013",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 9",
+          "examName": "General Securities Sales Supervisor - Options Module Examination",
+          "examTakenDate": "11/23/2011",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 31",
+          "examName": "Futures Managed Funds Examination",
+          "examTakenDate": "4/2/2010",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "2/9/2005",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 6",
+          "examName": "Investment Company Products/Variable Contracts Representative Examination",
+          "examTakenDate": "5/15/2000",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "19850",
+          "firm_name": "CALAMOS FINANCIAL SERVICES LLC",
+          "registration_begin_date": "2/8/2022",
+          "branch_offices": [
+            {
+              "street": "2020 CALAMOS COURT",
+              "city": "NAPERVILLE",
+              "state": "IL",
+              "zip_code": "60563-2787"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "7452",
+          "firm_name": "VANGUARD MARKETING CORPORATION",
+          "registration_begin_date": "1/25/2019",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/11/2021"
+        },
+        {
+          "firm_id": "7784",
+          "firm_name": "FIDELITY BROKERAGE SERVICES LLC",
+          "registration_begin_date": "11/2/2010",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "1/4/2019"
+        },
+        {
+          "firm_id": "19616",
+          "firm_name": "WELLS FARGO ADVISORS, LLC",
+          "registration_begin_date": "2/13/2009",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "10/5/2010"
+        },
+        {
+          "firm_id": "8174",
+          "firm_name": "UBS FINANCIAL SERVICES INC.",
+          "registration_begin_date": "4/19/2005",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "3/4/2009"
+        },
+        {
+          "firm_id": "1137",
+          "firm_name": "PRINCOR FINANCIAL SERVICES CORPORATION",
+          "registration_begin_date": "8/31/2004",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "4/8/2005"
+        },
+        {
+          "firm_id": "7691",
+          "firm_name": "MERRILL LYNCH, PIERCE, FENNER & SMITH INCORPORATED",
+          "registration_begin_date": "8/5/2004",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/19/2004"
+        },
+        {
+          "firm_id": "16361",
+          "firm_name": "BANC OF AMERICA INVESTMENT SERVICES, INC.",
+          "registration_begin_date": "5/16/2000",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "6/14/2004"
+        }
+      ],
+      "crd_number": "4175091"
+    },
+    "detailed_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "EDUARDO LUIS SORDO",
+      "other_names": [
+        "EDDIE  SORDO",
+        "EDUARDO L SORDO",
+        "EDUARDO  SORDO"
+      ],
+      "bc_scope": "Active",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "8/26/2010",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "TIME FRAME: JULY 2007-DECEMBER 2008. CLAIMANT ALLEGES UNSUITABLE INVESTMENT RECOMMENDATIONS OF MUTUAL FUNDS AND USE OF MARGIN.",
+            "Damage Amount Requested": "$1,000,000.00",
+            "Settlement Amount": "$350,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "4/8/2005",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "5/16/2000",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 24",
+          "examName": "General Securities Principal Examination",
+          "examTakenDate": "3/29/2019",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 10",
+          "examName": "General Securities Sales Supervisor - General Module Examination",
+          "examTakenDate": "11/14/2013",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 9",
+          "examName": "General Securities Sales Supervisor - Options Module Examination",
+          "examTakenDate": "11/23/2011",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 31",
+          "examName": "Futures Managed Funds Examination",
+          "examTakenDate": "4/2/2010",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "2/9/2005",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 6",
+          "examName": "Investment Company Products/Variable Contracts Representative Examination",
+          "examTakenDate": "5/15/2000",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "19850",
+          "firm_name": "CALAMOS FINANCIAL SERVICES LLC",
+          "registration_begin_date": "2/8/2022",
+          "branch_offices": [
+            {
+              "street": "2020 CALAMOS COURT",
+              "city": "NAPERVILLE",
+              "state": "IL",
+              "zip_code": "60563-2787"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "7452",
+          "firm_name": "VANGUARD MARKETING CORPORATION",
+          "registration_begin_date": "1/25/2019",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/11/2021"
+        },
+        {
+          "firm_id": "7784",
+          "firm_name": "FIDELITY BROKERAGE SERVICES LLC",
+          "registration_begin_date": "11/2/2010",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "1/4/2019"
+        },
+        {
+          "firm_id": "19616",
+          "firm_name": "WELLS FARGO ADVISORS, LLC",
+          "registration_begin_date": "2/13/2009",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "10/5/2010"
+        },
+        {
+          "firm_id": "8174",
+          "firm_name": "UBS FINANCIAL SERVICES INC.",
+          "registration_begin_date": "4/19/2005",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "3/4/2009"
+        },
+        {
+          "firm_id": "1137",
+          "firm_name": "PRINCOR FINANCIAL SERVICES CORPORATION",
+          "registration_begin_date": "8/31/2004",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "4/8/2005"
+        },
+        {
+          "firm_id": "7691",
+          "firm_name": "MERRILL LYNCH, PIERCE, FENNER & SMITH INCORPORATED",
+          "registration_begin_date": "8/5/2004",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/19/2004"
+        },
+        {
+          "firm_id": "16361",
+          "firm_name": "BANC OF AMERICA INVESTMENT SERVICES, INC.",
+          "registration_begin_date": "5/16/2000",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "6/14/2004"
+        }
+      ],
+      "crd_number": "4175091"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "4175091",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA BrokerCheck data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "Eduardo",
+        "middle": null,
+        "last": "Sordo"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "EDUARDO",
+            "middle": "LUIS",
+            "last": "SORDO"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        },
+        {
+          "name_source": "other_names[0]",
+          "fetched_name": {
+            "first": "EDDIE",
+            "middle": null,
+            "last": "SORDO"
+          },
+          "score": 55.56,
+          "first_score": 0.0,
+          "middle_score": 0.0,
+          "last_score": 1.0
+        },
+        {
+          "name_source": "other_names[1]",
+          "fetched_name": {
+            "first": "EDUARDO",
+            "middle": "L",
+            "last": "SORDO"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        },
+        {
+          "name_source": "other_names[2]",
+          "fetched_name": {
+            "first": "EDUARDO",
+            "middle": null,
+            "last": "SORDO"
+          },
+          "score": 100.0,
+          "first_score": 1.0,
+          "middle_score": 0.0,
+          "last_score": 1.0
+        }
+      ],
+      "best_match": {
+        "name_source": "other_names[2]",
+        "fetched_name": {
+          "first": "EDUARDO",
+          "middle": null,
+          "last": "SORDO"
+        },
+        "score": 100.0,
+        "first_score": 1.0,
+        "middle_score": 0.0,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "Eduardo Sordo has 1 customer dispute disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "TIME FRAME: JULY 2007-DECEMBER 2008. CLAIMANT ALLEGES UNSUITABLE INVESTMENT RECOMMENDATIONS OF MUTUAL FUNDS AND USE OF MARGIN.",
+            "Damage Amount Requested": "$1,000,000.00",
+            "Settlement Amount": "$350,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          },
+          "event_date": "8/26/2010",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 8/26/2010. Resolution: Settled. Allegations: TIME FRAME: JULY 2007-DECEMBER 2008. CLAIMANT ALLEGES UNSUITABLE INVESTMENT RECOMMENDATIONS OF MUTUAL FUNDS AND USE OF MARGIN.. Damage requested: $1,000,000.00. Settlement: $350,000.00"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No matching disciplinary records found for Eduardo Sordo, 8 records reviewed with 8 filtered.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Search Info",
+        "alert_category": "DISCIPLINARY",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Eduardo Sordo",
+            "sec_disciplinary": {
+              "source": "SEC_Disciplinary",
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records found"
+            },
+            "finra_disciplinary": {
+              "source": "FINRA_Disciplinary",
+              "records_found": 8,
+              "records_filtered": 8,
+              "names_found": [
+                "Eduardo Leon",
+                "EDUARDO PEYNETTI  VILLAFANA",
+                "EDUARDO PEYNETTI  VILLAFANA",
+                "EDUARDO TOBIAS TRAVIESO",
+                "EDUARDO GUILLERMO DIAZ",
+                "EDUARDO GUILLERMO DIAZ",
+                "EDUARDO BUSTANI",
+                "EDUARDO GALAN",
+                "EDUARDO M. TEJEDA"
+              ],
+              "name_scores": {
+                "Eduardo Leon": 47.37,
+                "EDUARDO PEYNETTI  VILLAFANA": 0.0,
+                "EDUARDO TOBIAS TRAVIESO": 47.62,
+                "EDUARDO GUILLERMO DIAZ": 47.62,
+                "EDUARDO BUSTANI": 47.37,
+                "EDUARDO GALAN": 47.37,
+                "EDUARDO M. TEJEDA": 47.62
+              },
+              "exact_match_found": false,
+              "status": "Partial failure: Error processing 'EDUARDO PEYNETTI  VILLAFANA'"
+            }
+          }
+        },
+        "description": "Found 8 disciplinary records for Eduardo Sordo, 8 filtered out."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Eduardo Sordo",
+      "sec_disciplinary": {
+        "source": "SEC_Disciplinary",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_disciplinary": {
+        "source": "FINRA_Disciplinary",
+        "records_found": 8,
+        "records_filtered": 8,
+        "names_found": [
+          "Eduardo Leon",
+          "EDUARDO PEYNETTI  VILLAFANA",
+          "EDUARDO PEYNETTI  VILLAFANA",
+          "EDUARDO TOBIAS TRAVIESO",
+          "EDUARDO GUILLERMO DIAZ",
+          "EDUARDO GUILLERMO DIAZ",
+          "EDUARDO BUSTANI",
+          "EDUARDO GALAN",
+          "EDUARDO M. TEJEDA"
+        ],
+        "name_scores": {
+          "Eduardo Leon": 47.37,
+          "EDUARDO PEYNETTI  VILLAFANA": 0.0,
+          "EDUARDO TOBIAS TRAVIESO": 47.62,
+          "EDUARDO GUILLERMO DIAZ": 47.62,
+          "EDUARDO BUSTANI": 47.37,
+          "EDUARDO GALAN": 47.37,
+          "EDUARDO M. TEJEDA": 47.62
+        },
+        "exact_match_found": false,
+        "status": "Partial failure: Error processing 'EDUARDO PEYNETTI  VILLAFANA'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": true,
+    "compliance_explanation": "No matching arbitration records found for Eduardo Sordo, but 15 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Arbitration Search Info",
+        "alert_category": "ARBITRATION",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Eduardo Sordo",
+            "sec_arbitration": {
+              "source": "SEC_Arbitration",
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records found"
+            },
+            "finra_arbitration": {
+              "source": "FINRA_Arbitration",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "UBS Financial Services Inc.",
+                "Eduardo Tejada",
+                "Pershing LLC",
+                "Morgan Keegan & Company",
+                "LLC",
+                "Morgan Keegan & Company",
+                "LLC",
+                "Eduardo Prado",
+                "Finacorp Securities",
+                "Morgan Keegan & Company",
+                "LLC",
+                "Morgan Keegan & Company",
+                "LLC",
+                "UBS Financial Services Inc.",
+                "UBS Financial Services Inc. Of PR",
+                "Raymond James & Associates",
+                "Inc.",
+                "Raymond James Financial Services",
+                "Inc.",
+                "Jose Delgado",
+                "Morgan Keegan & Company",
+                "LLC",
+                "Santander Securities LLC",
+                "Gustavo Vega",
+                "Gustavo Vega",
+                "Eduardo Bustani",
+                "Jane Bates",
+                "Ricardo Perusquia",
+                "Global Financial Services",
+                "L.L.P."
+              ],
+              "name_scores": {
+                "UBS Financial Services Inc.": 9.52,
+                "Eduardo Tejada": 47.37,
+                "Pershing LLC": 5.26,
+                "Morgan Keegan & Company": 9.52,
+                "LLC": 5.26,
+                "Eduardo Prado": 47.37,
+                "Finacorp Securities": 5.26,
+                "UBS Financial Services Inc. Of PR": 9.52,
+                "Raymond James & Associates": 9.52,
+                "Inc.": 5.26,
+                "Raymond James Financial Services": 9.52,
+                "Jose Delgado": 5.26,
+                "Santander Securities LLC": 9.52,
+                "Gustavo Vega": 5.26,
+                "Eduardo Bustani": 47.37,
+                "Jane Bates": 5.26,
+                "Ricardo Perusquia": 5.26,
+                "Global Financial Services": 9.52,
+                "L.L.P.": 5.26
+              },
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'Eduardo Sordo'"
+            }
+          }
+        },
+        "description": "Found 15 arbitration records for Eduardo Sordo, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Eduardo Sordo",
+      "sec_arbitration": {
+        "source": "SEC_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_arbitration": {
+        "source": "FINRA_Arbitration",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "UBS Financial Services Inc.",
+          "Eduardo Tejada",
+          "Pershing LLC",
+          "Morgan Keegan & Company",
+          "LLC",
+          "Morgan Keegan & Company",
+          "LLC",
+          "Eduardo Prado",
+          "Finacorp Securities",
+          "Morgan Keegan & Company",
+          "LLC",
+          "Morgan Keegan & Company",
+          "LLC",
+          "UBS Financial Services Inc.",
+          "UBS Financial Services Inc. Of PR",
+          "Raymond James & Associates",
+          "Inc.",
+          "Raymond James Financial Services",
+          "Inc.",
+          "Jose Delgado",
+          "Morgan Keegan & Company",
+          "LLC",
+          "Santander Securities LLC",
+          "Gustavo Vega",
+          "Gustavo Vega",
+          "Eduardo Bustani",
+          "Jane Bates",
+          "Ricardo Perusquia",
+          "Global Financial Services",
+          "L.L.P."
+        ],
+        "name_scores": {
+          "UBS Financial Services Inc.": 9.52,
+          "Eduardo Tejada": 47.37,
+          "Pershing LLC": 5.26,
+          "Morgan Keegan & Company": 9.52,
+          "LLC": 5.26,
+          "Eduardo Prado": 47.37,
+          "Finacorp Securities": 5.26,
+          "UBS Financial Services Inc. Of PR": 9.52,
+          "Raymond James & Associates": 9.52,
+          "Inc.": 5.26,
+          "Raymond James Financial Services": 9.52,
+          "Jose Delgado": 5.26,
+          "Santander Securities LLC": 9.52,
+          "Gustavo Vega": 5.26,
+          "Eduardo Bustani": 47.37,
+          "Jane Bates": 5.26,
+          "Ricardo Perusquia": 5.26,
+          "Global Financial Services": 9.52,
+          "L.L.P.": 5.26
+        },
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Eduardo Sordo'"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for Eduardo Sordo; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "TIME FRAME: JULY 2007-DECEMBER 2008. CLAIMANT ALLEGES UNSUITABLE INVESTMENT RECOMMENDATIONS OF MUTUAL FUNDS AND USE OF MARGIN.",
+            "Damage Amount Requested": "$1,000,000.00",
+            "Settlement Amount": "$350,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          },
+          "event_date": "8/26/2010",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 8/26/2010. Resolution: Settled. Allegations: TIME FRAME: JULY 2007-DECEMBER 2008. CLAIMANT ALLEGES UNSUITABLE INVESTMENT RECOMMENDATIONS OF MUTUAL FUNDS AND USE OF MARGIN.. Damage requested: $1,000,000.00. Settlement: $350,000.00"
+      }
+    ]
+  }
+}

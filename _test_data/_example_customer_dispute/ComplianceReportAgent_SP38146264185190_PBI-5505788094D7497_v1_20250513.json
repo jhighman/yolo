@@ -1,0 +1,730 @@
+{
+  "reference_id": "SP38146264185190_PBI-5505788094D7497",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-5505788094D7497",
+    "first_name": "Gary",
+    "last_name": "Liska",
+    "employee_number": "EN-046357",
+    "zip": "90272",
+    "crdNumber": "2512188",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "2512188",
+    "individual_name": "Gary Liska",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "FINRA_BrokerCheck",
+    "basic_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "GARY KENDALL LISKA",
+      "other_names": [
+        "GARY K LISKA"
+      ],
+      "bc_scope": "Active",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "5/11/2022",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Denied",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "Client alleges losses due to representative's bad judgement and mismanagement.",
+            "Damage Amount Requested": "$100,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          }
+        },
+        {
+          "eventDate": "12/20/2021",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Denied",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "Customer alleges misrepresentation and unsuitability of options strategy and poor advise regarding overall investment strategy",
+            "Damage Amount Requested": "$1,000,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "Customer submitted a written complaint alleging that the representative failed to adequately advise him of an option hedging strategy that resulted in losses, when in fact the customer's portfolio had positive returns. The customer to date has pursued no action or civil litigation. The Firm believes this complaint to be meritless."
+            ]
+          }
+        },
+        {
+          "eventDate": "7/21/2020",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Denied",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "Customer alleges misrepresentation of an inherited annuity and unsuitable sub account choices.",
+            "Damage Amount Requested": "$33,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          }
+        },
+        {
+          "eventDate": "10/18/1989",
+          "disclosureType": "Criminal",
+          "disclosureResolution": "Final Disposition",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "criminalCharges": [
+              {
+                "Charges": "Shoplifting",
+                "Disposition": "Pled guilty"
+              }
+            ],
+            "Broker Comment": [
+              "I HAVE SATISFIED THE COURT REQUIREMENTS, PAID THE FINE ON 02/16/1990 AND SERVED THREE YEARS OF PROBATION ENDING IN 1992. JUDGE MICHAEL A LEVERSEN OF THE NORTH ORANGE COUNTY MUNICIPAL COURT HAS ORDERED PETITION 1203.4 TO WITHDRAW THE PLEA OF GUILTY AND EXPUNGE THE CASE FROM MY RECORD."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "7/1/1998",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "8/2/1994",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "7/30/1996",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 6",
+          "examName": "Investment Company Products/Variable Contracts Representative Examination",
+          "examTakenDate": "8/2/1994",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "18923",
+          "firm_name": "SIGNATURE ESTATE SECURITIES, LLC",
+          "registration_begin_date": "8/16/2023",
+          "branch_offices": [
+            {
+              "street": "2121 Avenue of Stars",
+              "city": "Los Angeles",
+              "state": "CA",
+              "zip_code": "90067"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "23131",
+          "firm_name": "OSAIC WEALTH, INC.",
+          "registration_begin_date": "11/2/2018",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/23/2023"
+        },
+        {
+          "firm_id": "468",
+          "firm_name": "SIGNATOR INVESTORS, INC.",
+          "registration_begin_date": "8/3/1994",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/2/2018"
+        },
+        {
+          "firm_id": "5181",
+          "firm_name": "JOHN HANCOCK MUTUAL LIFE INSURANCE COMPANY",
+          "registration_begin_date": "8/3/1994",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "5/1/1997"
+        }
+      ],
+      "crd_number": "2512188"
+    },
+    "detailed_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "GARY KENDALL LISKA",
+      "other_names": [
+        "GARY K LISKA"
+      ],
+      "bc_scope": "Active",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "5/11/2022",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Denied",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "Client alleges losses due to representative's bad judgement and mismanagement.",
+            "Damage Amount Requested": "$100,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          }
+        },
+        {
+          "eventDate": "12/20/2021",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Denied",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "Customer alleges misrepresentation and unsuitability of options strategy and poor advise regarding overall investment strategy",
+            "Damage Amount Requested": "$1,000,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "Customer submitted a written complaint alleging that the representative failed to adequately advise him of an option hedging strategy that resulted in losses, when in fact the customer's portfolio had positive returns. The customer to date has pursued no action or civil litigation. The Firm believes this complaint to be meritless."
+            ]
+          }
+        },
+        {
+          "eventDate": "7/21/2020",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Denied",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "Customer alleges misrepresentation of an inherited annuity and unsuitable sub account choices.",
+            "Damage Amount Requested": "$33,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          }
+        },
+        {
+          "eventDate": "10/18/1989",
+          "disclosureType": "Criminal",
+          "disclosureResolution": "Final Disposition",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "criminalCharges": [
+              {
+                "Charges": "Shoplifting",
+                "Disposition": "Pled guilty"
+              }
+            ],
+            "Broker Comment": [
+              "I HAVE SATISFIED THE COURT REQUIREMENTS, PAID THE FINE ON 02/16/1990 AND SERVED THREE YEARS OF PROBATION ENDING IN 1992. JUDGE MICHAEL A LEVERSEN OF THE NORTH ORANGE COUNTY MUNICIPAL COURT HAS ORDERED PETITION 1203.4 TO WITHDRAW THE PLEA OF GUILTY AND EXPUNGE THE CASE FROM MY RECORD."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "7/1/1998",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "8/2/1994",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "7/30/1996",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 6",
+          "examName": "Investment Company Products/Variable Contracts Representative Examination",
+          "examTakenDate": "8/2/1994",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "18923",
+          "firm_name": "SIGNATURE ESTATE SECURITIES, LLC",
+          "registration_begin_date": "8/16/2023",
+          "branch_offices": [
+            {
+              "street": "2121 Avenue of Stars",
+              "city": "Los Angeles",
+              "state": "CA",
+              "zip_code": "90067"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "23131",
+          "firm_name": "OSAIC WEALTH, INC.",
+          "registration_begin_date": "11/2/2018",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "8/23/2023"
+        },
+        {
+          "firm_id": "468",
+          "firm_name": "SIGNATOR INVESTORS, INC.",
+          "registration_begin_date": "8/3/1994",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/2/2018"
+        },
+        {
+          "firm_id": "5181",
+          "firm_name": "JOHN HANCOCK MUTUAL LIFE INSURANCE COMPANY",
+          "registration_begin_date": "8/3/1994",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "5/1/1997"
+        }
+      ],
+      "crd_number": "2512188"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "2512188",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA BrokerCheck data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "Gary",
+        "middle": null,
+        "last": "Liska"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "GARY",
+            "middle": "KENDALL",
+            "last": "LISKA"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        },
+        {
+          "name_source": "other_names[0]",
+          "fetched_name": {
+            "first": "GARY",
+            "middle": "K",
+            "last": "LISKA"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        }
+      ],
+      "best_match": {
+        "name_source": "main_fetched_name",
+        "fetched_name": {
+          "first": "GARY",
+          "middle": "KENDALL",
+          "last": "LISKA"
+        },
+        "score": 95.0,
+        "first_score": 1.0,
+        "middle_score": 0.5,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "Gary Liska has 3 customer dispute disclosures, 1 criminal disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "Client alleges losses due to representative's bad judgement and mismanagement.",
+            "Damage Amount Requested": "$100,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          },
+          "event_date": "5/11/2022",
+          "resolution": "Denied"
+        },
+        "description": "Customer dispute on 5/11/2022. Resolution: Denied. Allegations: Client alleges losses due to representative's bad judgement and mismanagement.. Damage requested: $100,000.00. Settlement: Not specified"
+      },
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "Customer alleges misrepresentation and unsuitability of options strategy and poor advise regarding overall investment strategy",
+            "Damage Amount Requested": "$1,000,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "Customer submitted a written complaint alleging that the representative failed to adequately advise him of an option hedging strategy that resulted in losses, when in fact the customer's portfolio had positive returns. The customer to date has pursued no action or civil litigation. The Firm believes this complaint to be meritless."
+            ]
+          },
+          "event_date": "12/20/2021",
+          "resolution": "Denied"
+        },
+        "description": "Customer dispute on 12/20/2021. Resolution: Denied. Allegations: Customer alleges misrepresentation and unsuitability of options strategy and poor advise regarding overall investment strategy. Damage requested: $1,000,000.00. Settlement: Not specified"
+      },
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "Customer alleges misrepresentation of an inherited annuity and unsuitable sub account choices.",
+            "Damage Amount Requested": "$33,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          },
+          "event_date": "7/21/2020",
+          "resolution": "Denied"
+        },
+        "description": "Customer dispute on 7/21/2020. Resolution: Denied. Allegations: Customer alleges misrepresentation of an inherited annuity and unsuitable sub account choices.. Damage requested: $33,000.00. Settlement: Not specified"
+      },
+      {
+        "alert_type": "Criminal Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "criminalCharges": [
+              {
+                "Charges": "Shoplifting",
+                "Disposition": "Pled guilty"
+              }
+            ],
+            "Broker Comment": [
+              "I HAVE SATISFIED THE COURT REQUIREMENTS, PAID THE FINE ON 02/16/1990 AND SERVED THREE YEARS OF PROBATION ENDING IN 1992. JUDGE MICHAEL A LEVERSEN OF THE NORTH ORANGE COUNTY MUNICIPAL COURT HAS ORDERED PETITION 1203.4 TO WITHDRAW THE PLEA OF GUILTY AND EXPUNGE THE CASE FROM MY RECORD."
+            ]
+          },
+          "event_date": "10/18/1989",
+          "resolution": "Final Disposition"
+        },
+        "description": "Criminal disclosure on 10/18/1989. Resolution: Final Disposition. Charges: Shoplifting. Disposition: Pled guilty"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No matching disciplinary records found for Gary Liska, but 16 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Search Info",
+        "alert_category": "DISCIPLINARY",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Gary Liska",
+            "sec_disciplinary": {
+              "source": "SEC_Disciplinary",
+              "records_found": 1,
+              "records_filtered": 1,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'Gary Liska'"
+            },
+            "finra_disciplinary": {
+              "source": "FINRA_Disciplinary",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Gary S. Costello",
+                "Investment Network, Inc.Gary L. Arnold",
+                "Investment Network, Inc.Gary L. Arnold",
+                "Gary Francis Harpe",
+                "Gary Alan Kieper",
+                "Gary Francis Harpe",
+                "Gary Mark Goldberg",
+                "Ching Yuan \u201cGary\u201d Chang",
+                "Gary M. Bowman",
+                "Gary Len Wells",
+                "Gary Wayne Hammond",
+                "Steven Todd Gary",
+                "Gary A. Forrest",
+                "Gary L. Pevey",
+                "Scott Gary Dolven (\"Dolven\")",
+                "Gary J. Basralian"
+              ],
+              "name_scores": {
+                "Gary S. Costello": 47.62,
+                "Investment Network, Inc.Gary L. Arnold": 0.0,
+                "Gary Francis Harpe": 47.62,
+                "Gary Alan Kieper": 47.62,
+                "Gary Mark Goldberg": 47.62,
+                "Ching Yuan \u201cGary\u201d Chang": 9.52,
+                "Gary M. Bowman": 47.62,
+                "Gary Len Wells": 47.62,
+                "Gary Wayne Hammond": 47.62,
+                "Steven Todd Gary": 9.52,
+                "Gary A. Forrest": 47.62,
+                "Gary L. Pevey": 47.62,
+                "Scott Gary Dolven (\"Dolven\")": 9.52,
+                "Gary J. Basralian": 47.62
+              },
+              "exact_match_found": false,
+              "status": "Partial failure: Error processing 'Investment Network, Inc.Gary L. Arnold'"
+            }
+          }
+        },
+        "description": "Found 16 disciplinary records for Gary Liska, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Gary Liska",
+      "sec_disciplinary": {
+        "source": "SEC_Disciplinary",
+        "records_found": 1,
+        "records_filtered": 1,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Gary Liska'"
+      },
+      "finra_disciplinary": {
+        "source": "FINRA_Disciplinary",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Gary S. Costello",
+          "Investment Network, Inc.Gary L. Arnold",
+          "Investment Network, Inc.Gary L. Arnold",
+          "Gary Francis Harpe",
+          "Gary Alan Kieper",
+          "Gary Francis Harpe",
+          "Gary Mark Goldberg",
+          "Ching Yuan \u201cGary\u201d Chang",
+          "Gary M. Bowman",
+          "Gary Len Wells",
+          "Gary Wayne Hammond",
+          "Steven Todd Gary",
+          "Gary A. Forrest",
+          "Gary L. Pevey",
+          "Scott Gary Dolven (\"Dolven\")",
+          "Gary J. Basralian"
+        ],
+        "name_scores": {
+          "Gary S. Costello": 47.62,
+          "Investment Network, Inc.Gary L. Arnold": 0.0,
+          "Gary Francis Harpe": 47.62,
+          "Gary Alan Kieper": 47.62,
+          "Gary Mark Goldberg": 47.62,
+          "Ching Yuan \u201cGary\u201d Chang": 9.52,
+          "Gary M. Bowman": 47.62,
+          "Gary Len Wells": 47.62,
+          "Gary Wayne Hammond": 47.62,
+          "Steven Todd Gary": 9.52,
+          "Gary A. Forrest": 47.62,
+          "Gary L. Pevey": 47.62,
+          "Scott Gary Dolven (\"Dolven\")": 9.52,
+          "Gary J. Basralian": 47.62
+        },
+        "exact_match_found": false,
+        "status": "Partial failure: Error processing 'Investment Network, Inc.Gary L. Arnold'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": true,
+    "compliance_explanation": "No arbitration records found for Gary Liska.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "searched_name": "Gary Liska",
+      "sec_arbitration": {
+        "source": "SEC_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_arbitration": {
+        "source": "FINRA_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for Gary Liska; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "Client alleges losses due to representative's bad judgement and mismanagement.",
+            "Damage Amount Requested": "$100,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          },
+          "event_date": "5/11/2022",
+          "resolution": "Denied"
+        },
+        "description": "Customer dispute on 5/11/2022. Resolution: Denied. Allegations: Client alleges losses due to representative's bad judgement and mismanagement.. Damage requested: $100,000.00. Settlement: Not specified"
+      },
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "Customer alleges misrepresentation and unsuitability of options strategy and poor advise regarding overall investment strategy",
+            "Damage Amount Requested": "$1,000,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "Customer submitted a written complaint alleging that the representative failed to adequately advise him of an option hedging strategy that resulted in losses, when in fact the customer's portfolio had positive returns. The customer to date has pursued no action or civil litigation. The Firm believes this complaint to be meritless."
+            ]
+          },
+          "event_date": "12/20/2021",
+          "resolution": "Denied"
+        },
+        "description": "Customer dispute on 12/20/2021. Resolution: Denied. Allegations: Customer alleges misrepresentation and unsuitability of options strategy and poor advise regarding overall investment strategy. Damage requested: $1,000,000.00. Settlement: Not specified"
+      },
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "Customer alleges misrepresentation of an inherited annuity and unsuitable sub account choices.",
+            "Damage Amount Requested": "$33,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          },
+          "event_date": "7/21/2020",
+          "resolution": "Denied"
+        },
+        "description": "Customer dispute on 7/21/2020. Resolution: Denied. Allegations: Customer alleges misrepresentation of an inherited annuity and unsuitable sub account choices.. Damage requested: $33,000.00. Settlement: Not specified"
+      },
+      {
+        "alert_type": "Criminal Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "criminalCharges": [
+              {
+                "Charges": "Shoplifting",
+                "Disposition": "Pled guilty"
+              }
+            ],
+            "Broker Comment": [
+              "I HAVE SATISFIED THE COURT REQUIREMENTS, PAID THE FINE ON 02/16/1990 AND SERVED THREE YEARS OF PROBATION ENDING IN 1992. JUDGE MICHAEL A LEVERSEN OF THE NORTH ORANGE COUNTY MUNICIPAL COURT HAS ORDERED PETITION 1203.4 TO WITHDRAW THE PLEA OF GUILTY AND EXPUNGE THE CASE FROM MY RECORD."
+            ]
+          },
+          "event_date": "10/18/1989",
+          "resolution": "Final Disposition"
+        },
+        "description": "Criminal disclosure on 10/18/1989. Resolution: Final Disposition. Charges: Shoplifting. Disposition: Pled guilty"
+      }
+    ]
+  }
+}

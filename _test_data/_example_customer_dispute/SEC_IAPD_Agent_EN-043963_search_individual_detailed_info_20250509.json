@@ -1,0 +1,153 @@
+{
+  "basicInformation": {
+    "individualId": 5467210,
+    "firstName": "JAMES",
+    "middleName": "T.",
+    "lastName": "AHN",
+    "otherNames": [
+      "JAMES T AHN",
+      "JAMES  AHN"
+    ],
+    "bcScope": "NotInScope",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDateIAPD": "6/14/2008"
+  },
+  "currentIAEmployments": [
+    {
+      "firmId": 105515,
+      "firmName": "HALBERT HARGROVE",
+      "iaOnly": "Y",
+      "registrationBeginDate": "6/29/2012",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "77013",
+          "street1": "111 WEST OCEAN BOULEVARD",
+          "street2": "23RD FLOOR",
+          "city": "LONG BEACH",
+          "cityAlias": [
+            "LONG BEACH"
+          ],
+          "state": "CA",
+          "country": "United States",
+          "zipCode": "90802-7908",
+          "latitude": "33.746545",
+          "longitude": "-118.213256",
+          "geoLocation": "33.746545,-118.213256",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "06/25/2012"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "3387",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "8177",
+      "firmId": 7059,
+      "firmName": "CITIGROUP GLOBAL MARKETS INC.",
+      "city": "SANTA MONICA",
+      "state": "CA",
+      "country": "United States",
+      "registrationBeginDate": "4/4/2011",
+      "registrationEndDate": "5/23/2012",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "Y",
+      "iaSECNumber": "3297",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "759",
+      "firmId": 250,
+      "firmName": "EDWARD JONES",
+      "city": "BEVERLY HILLS",
+      "state": "CA",
+      "country": "United States",
+      "registrationBeginDate": "4/8/2008",
+      "registrationEndDate": "3/2/2011",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "12/3/2019",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "THE CUSTOMER ALLEGES BREACH OF FIDUCIARY DUTIES UNDER THE EMPLOYEE RETIREMENT INCOME SECURITY ACT\r\nOF 1974 AND BREACH OF CONTRACT IN CONNECTION WITH IMPRUDENT MANAGEMENT OF THE CUSTOMER'S\r\nINVESTMENT PORTFOLIO BY THE FIRM AND CERTAIN NAMED INDIVIDUALS BETWEEN 2012 AND 2019.",
+        "Damage Amount Requested": "$16,326,890.00",
+        "Settlement Amount": "$2,500,000.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": "",
+        "Broker Comment": "Solely to avoid the expense, inconvenience, distractions and inherent uncertainties associated with any legal proceeding, as well as the additional legal fees and  expenses that would be incurred in connection with litigating the disputed claims to a conclusion, the parties agreed to settle all disputes."
+      }
+    }
+  ],
+  "iaDisclosures": [
+    {
+      "disclosureType": "Customer Dispute",
+      "disclosureCount": 1
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 1,
+    "principalExamCount": 0,
+    "productExamCount": 1
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 66",
+      "examName": "Uniform Combined State Law Examination",
+      "examTakenDate": "4/4/2008",
+      "examScope": "BOTH"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "2/13/2008",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "hasInactiveRegistration": "N",
+    "hasSuspendedRegistration": "N",
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0,
+    "approvedIAStateRegistrationCount": 2
+  },
+  "registeredStates": [
+    {
+      "state": "California",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "6/29/2012"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED_RES",
+      "regDate": "5/9/2024"
+    }
+  ],
+  "registeredSROs": [],
+  "currentEmployments": []
+}

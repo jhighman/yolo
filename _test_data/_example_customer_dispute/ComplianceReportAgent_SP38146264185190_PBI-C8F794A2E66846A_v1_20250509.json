@@ -1,0 +1,493 @@
+{
+  "reference_id": "SP38146264185190_PBI-C8F794A2E66846A",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-C8F794A2E66846A",
+    "first_name": "James",
+    "last_name": "Ahn",
+    "employee_number": "EN-043963",
+    "crdNumber": "5467210",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "5467210",
+    "individual_name": "James Ahn",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "SEC_IAPD",
+    "basic_result": {
+      "fetched_name": "JAMES T. AHN",
+      "other_names": [
+        "JAMES T AHN",
+        "JAMES  AHN"
+      ],
+      "bc_scope": "NotInScope",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "12/3/2019",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "THE CUSTOMER ALLEGES BREACH OF FIDUCIARY DUTIES UNDER THE EMPLOYEE RETIREMENT INCOME SECURITY ACT\r\nOF 1974 AND BREACH OF CONTRACT IN CONNECTION WITH IMPRUDENT MANAGEMENT OF THE CUSTOMER'S\r\nINVESTMENT PORTFOLIO BY THE FIRM AND CERTAIN NAMED INDIVIDUALS BETWEEN 2012 AND 2019.",
+            "Damage Amount Requested": "$16,326,890.00",
+            "Settlement Amount": "$2,500,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": "Solely to avoid the expense, inconvenience, distractions and inherent uncertainties associated with any legal proceeding, as well as the additional legal fees and  expenses that would be incurred in connection with litigating the disputed claims to a conclusion, the parties agreed to settle all disputes."
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 66",
+          "examName": "Uniform Combined State Law Examination",
+          "examTakenDate": "4/4/2008",
+          "examScope": "BOTH"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "2/13/2008",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "105515",
+          "firm_name": "HALBERT HARGROVE",
+          "registration_begin_date": "6/29/2012",
+          "branch_offices": [
+            {
+              "street": "111 WEST OCEAN BOULEVARD",
+              "city": "LONG BEACH",
+              "state": "CA",
+              "zip_code": "90802-7908"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "7059",
+          "firm_name": "CITIGROUP GLOBAL MARKETS INC.",
+          "registration_begin_date": "4/4/2011",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "5/23/2012"
+        },
+        {
+          "firm_id": "250",
+          "firm_name": "EDWARD JONES",
+          "registration_begin_date": "4/8/2008",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "3/2/2011"
+        }
+      ],
+      "crd_number": "5467210"
+    },
+    "detailed_result": {
+      "fetched_name": "JAMES T. AHN",
+      "other_names": [
+        "JAMES T AHN",
+        "JAMES  AHN"
+      ],
+      "bc_scope": "NotInScope",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "12/3/2019",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "THE CUSTOMER ALLEGES BREACH OF FIDUCIARY DUTIES UNDER THE EMPLOYEE RETIREMENT INCOME SECURITY ACT\r\nOF 1974 AND BREACH OF CONTRACT IN CONNECTION WITH IMPRUDENT MANAGEMENT OF THE CUSTOMER'S\r\nINVESTMENT PORTFOLIO BY THE FIRM AND CERTAIN NAMED INDIVIDUALS BETWEEN 2012 AND 2019.",
+            "Damage Amount Requested": "$16,326,890.00",
+            "Settlement Amount": "$2,500,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": "Solely to avoid the expense, inconvenience, distractions and inherent uncertainties associated with any legal proceeding, as well as the additional legal fees and  expenses that would be incurred in connection with litigating the disputed claims to a conclusion, the parties agreed to settle all disputes."
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 66",
+          "examName": "Uniform Combined State Law Examination",
+          "examTakenDate": "4/4/2008",
+          "examScope": "BOTH"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "2/13/2008",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "105515",
+          "firm_name": "HALBERT HARGROVE",
+          "registration_begin_date": "6/29/2012",
+          "branch_offices": [
+            {
+              "street": "111 WEST OCEAN BOULEVARD",
+              "city": "LONG BEACH",
+              "state": "CA",
+              "zip_code": "90802-7908"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "7059",
+          "firm_name": "CITIGROUP GLOBAL MARKETS INC.",
+          "registration_begin_date": "4/4/2011",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "5/23/2012"
+        },
+        {
+          "firm_id": "250",
+          "firm_name": "EDWARD JONES",
+          "registration_begin_date": "4/8/2008",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "3/2/2011"
+        }
+      ],
+      "crd_number": "5467210"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "5467210",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with SEC IAPD data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "James",
+        "middle": null,
+        "last": "Ahn"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "JAMES",
+            "middle": "T.",
+            "last": "AHN"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        },
+        {
+          "name_source": "other_names[0]",
+          "fetched_name": {
+            "first": "JAMES",
+            "middle": "T",
+            "last": "AHN"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        },
+        {
+          "name_source": "other_names[1]",
+          "fetched_name": {
+            "first": "JAMES",
+            "middle": null,
+            "last": "AHN"
+          },
+          "score": 100.0,
+          "first_score": 1.0,
+          "middle_score": 0.0,
+          "last_score": 1.0
+        }
+      ],
+      "best_match": {
+        "name_source": "other_names[1]",
+        "fetched_name": {
+          "first": "JAMES",
+          "middle": null,
+          "last": "AHN"
+        },
+        "score": 100.0,
+        "first_score": 1.0,
+        "middle_score": 0.0,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "James Ahn has 1 customer dispute disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "THE CUSTOMER ALLEGES BREACH OF FIDUCIARY DUTIES UNDER THE EMPLOYEE RETIREMENT INCOME SECURITY ACT\r\nOF 1974 AND BREACH OF CONTRACT IN CONNECTION WITH IMPRUDENT MANAGEMENT OF THE CUSTOMER'S\r\nINVESTMENT PORTFOLIO BY THE FIRM AND CERTAIN NAMED INDIVIDUALS BETWEEN 2012 AND 2019.",
+            "Damage Amount Requested": "$16,326,890.00",
+            "Settlement Amount": "$2,500,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": "Solely to avoid the expense, inconvenience, distractions and inherent uncertainties associated with any legal proceeding, as well as the additional legal fees and  expenses that would be incurred in connection with litigating the disputed claims to a conclusion, the parties agreed to settle all disputes."
+          },
+          "event_date": "12/3/2019",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 12/3/2019. Resolution: Settled. Allegations: THE CUSTOMER ALLEGES BREACH OF FIDUCIARY DUTIES UNDER THE EMPLOYEE RETIREMENT INCOME SECURITY ACT\r\nOF 1974 AND BREACH OF CONTRACT IN CONNECTION WITH IMPRUDENT MANAGEMENT OF THE CUSTOMER'S\r\nINVESTMENT PORTFOLIO BY THE FIRM AND CERTAIN NAMED INDIVIDUALS BETWEEN 2012 AND 2019.. Damage requested: $16,326,890.00. Settlement: $2,500,000.00"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No matching disciplinary records found for James Ahn, but 15 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Search Info",
+        "alert_category": "DISCIPLINARY",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "James Ahn",
+            "sec_disciplinary": {
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records fetched"
+            },
+            "finra_disciplinary": {
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "James Elroy Burton, Jr.",
+                "James Elroy Burton, Jr.",
+                "ROBERT JAMES TRACY",
+                "James A. Bowman",
+                "James Iannazzo",
+                "James Lukezic",
+                "James Clayton Langford III",
+                "James Clayton Langford III",
+                "James C. Etter",
+                "James C. Stockton",
+                "James A. Martin",
+                "STEPHEN JAMES SULLIVAN",
+                "James Pruitt, II",
+                "James Pruitt, II",
+                "James H. MacKellar",
+                "Stephen James Sullivan",
+                "James Brett Stuart",
+                "James V. Scheidel Jr."
+              ],
+              "name_scores": {
+                "James Elroy Burton, Jr.": 0.0,
+                "ROBERT JAMES TRACY": 9.52,
+                "James A. Bowman": 47.62,
+                "James Iannazzo": 47.37,
+                "James Lukezic": 47.37,
+                "James Clayton Langford III": 0.0,
+                "James C. Etter": 47.62,
+                "James C. Stockton": 47.62,
+                "James A. Martin": 47.62,
+                "STEPHEN JAMES SULLIVAN": 9.52,
+                "James Pruitt, II": 0.0,
+                "James H. MacKellar": 47.62,
+                "Stephen James Sullivan": 9.52,
+                "James Brett Stuart": 47.62,
+                "James V. Scheidel Jr.": 47.62
+              },
+              "exact_match_found": false,
+              "status": "Partial failure: Error processing 'James Pruitt, II'"
+            }
+          }
+        },
+        "description": "Found 15 disciplinary records for James Ahn, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "James Ahn",
+      "sec_disciplinary": {
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records fetched"
+      },
+      "finra_disciplinary": {
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "James Elroy Burton, Jr.",
+          "James Elroy Burton, Jr.",
+          "ROBERT JAMES TRACY",
+          "James A. Bowman",
+          "James Iannazzo",
+          "James Lukezic",
+          "James Clayton Langford III",
+          "James Clayton Langford III",
+          "James C. Etter",
+          "James C. Stockton",
+          "James A. Martin",
+          "STEPHEN JAMES SULLIVAN",
+          "James Pruitt, II",
+          "James Pruitt, II",
+          "James H. MacKellar",
+          "Stephen James Sullivan",
+          "James Brett Stuart",
+          "James V. Scheidel Jr."
+        ],
+        "name_scores": {
+          "James Elroy Burton, Jr.": 0.0,
+          "ROBERT JAMES TRACY": 9.52,
+          "James A. Bowman": 47.62,
+          "James Iannazzo": 47.37,
+          "James Lukezic": 47.37,
+          "James Clayton Langford III": 0.0,
+          "James C. Etter": 47.62,
+          "James C. Stockton": 47.62,
+          "James A. Martin": 47.62,
+          "STEPHEN JAMES SULLIVAN": 9.52,
+          "James Pruitt, II": 0.0,
+          "James H. MacKellar": 47.62,
+          "Stephen James Sullivan": 9.52,
+          "James Brett Stuart": 47.62,
+          "James V. Scheidel Jr.": 47.62
+        },
+        "exact_match_found": false,
+        "status": "Partial failure: Error processing 'James Pruitt, II'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": true,
+    "compliance_explanation": "No matching arbitration records found for James Ahn, but 15 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Arbitration Search Info",
+        "alert_category": "ARBITRATION",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "James Ahn",
+            "sec_arbitration": {
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records found"
+            },
+            "finra_arbitration": {
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'James Ahn'"
+            }
+          }
+        },
+        "description": "Found 15 arbitration records for James Ahn, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "James Ahn",
+      "sec_arbitration": {
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_arbitration": {
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'James Ahn'"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for James Ahn; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "THE CUSTOMER ALLEGES BREACH OF FIDUCIARY DUTIES UNDER THE EMPLOYEE RETIREMENT INCOME SECURITY ACT\r\nOF 1974 AND BREACH OF CONTRACT IN CONNECTION WITH IMPRUDENT MANAGEMENT OF THE CUSTOMER'S\r\nINVESTMENT PORTFOLIO BY THE FIRM AND CERTAIN NAMED INDIVIDUALS BETWEEN 2012 AND 2019.",
+            "Damage Amount Requested": "$16,326,890.00",
+            "Settlement Amount": "$2,500,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": "Solely to avoid the expense, inconvenience, distractions and inherent uncertainties associated with any legal proceeding, as well as the additional legal fees and  expenses that would be incurred in connection with litigating the disputed claims to a conclusion, the parties agreed to settle all disputes."
+          },
+          "event_date": "12/3/2019",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 12/3/2019. Resolution: Settled. Allegations: THE CUSTOMER ALLEGES BREACH OF FIDUCIARY DUTIES UNDER THE EMPLOYEE RETIREMENT INCOME SECURITY ACT\r\nOF 1974 AND BREACH OF CONTRACT IN CONNECTION WITH IMPRUDENT MANAGEMENT OF THE CUSTOMER'S\r\nINVESTMENT PORTFOLIO BY THE FIRM AND CERTAIN NAMED INDIVIDUALS BETWEEN 2012 AND 2019.. Damage requested: $16,326,890.00. Settlement: $2,500,000.00"
+      }
+    ]
+  }
+}

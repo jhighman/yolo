@@ -1,0 +1,229 @@
+{
+  "basicInformation": {
+    "individualId": 3265510,
+    "firstName": "CHRISTOPHER",
+    "middleName": "JASON",
+    "lastName": "BROWN",
+    "otherNames": [],
+    "bcScope": "InActive",
+    "iaScope": "Active",
+    "daysInIndustry": 5775
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "67704",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "44786",
+      "firmId": 30184,
+      "firmName": "INVESTMENT PROFESSIONALS, INC.",
+      "city": "SHELBY",
+      "state": "NC",
+      "registrationBeginDate": "9/3/2013",
+      "registrationEndDate": "8/5/2015",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "10970",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "17668",
+      "firmId": 6413,
+      "firmName": "LPL FINANCIAL LLC",
+      "city": "SHELBY",
+      "state": "NC",
+      "registrationBeginDate": "9/26/2012",
+      "registrationEndDate": "9/10/2013",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "37967",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "37180",
+      "firmId": 19616,
+      "firmName": "WELLS FARGO ADVISORS, LLC",
+      "city": "DAVIDSON",
+      "state": "NC",
+      "registrationBeginDate": "10/20/2008",
+      "registrationEndDate": "9/24/2012",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "3387",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "8177",
+      "firmId": 7059,
+      "firmName": "CITIGROUP GLOBAL MARKETS INC.",
+      "city": "CORNELIUS",
+      "state": "NC",
+      "registrationBeginDate": "7/22/2002",
+      "registrationEndDate": "11/3/2008",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "28543",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "16791",
+      "firmId": 6363,
+      "firmName": "AMERICAN EXPRESS FINANCIAL ADVISORS INC.",
+      "city": "MINNEAPOLIS",
+      "state": "MN",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "10/11/1999",
+      "registrationEndDate": "7/19/2002",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "14124",
+      "firmId": 6321,
+      "firmName": "IDS LIFE INSURANCE COMPANY",
+      "city": "MINNEAPOLIS",
+      "state": "MN",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "10/11/1999",
+      "registrationEndDate": "7/19/2002",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "previousIAEmployments": [],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "4/22/2015",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 11,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "Client alleges her money was not invested properly for over a year. Engaged rep Jason Brown to rollover her 401k/profit sharing plan into the Elite Access VA. To facilitate this, Mr. Brown rolled [customer's] funds into an IRA brokerage account, from which the VA was to be purchased. Mr. Brown submitted the VA application to IPI where it was deemed to be NIGO. Mr. Brown stated that he forwarded to necessary form to bring the paperwork into IGO status, but he never received it back from [customer]. [customer] stated that she believed her money has been invested in the VA since October 2013. Upon receipt of [customer's] complaint, Mr. Mixon helped facilitate getting the VA contract issued to [customer], and offered her $5,834.83 in restitution for the time [customer's] funds were not invested based on on illustration provided by Jackson National Life. [customer] accepted this offer.",
+        "Damage Amount Requested": "$5,000.00",
+        "Settlement Amount": "$5,834.83",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": ""
+      }
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 1,
+    "principalExamCount": 0,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 66",
+      "examName": "Uniform Combined State Law Examination",
+      "examTakenDate": "10/1/1999",
+      "examScope": "BOTH"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "8/5/2015",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "10/8/1999",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0
+  },
+  "registeredStates": [
+    {
+      "state": "California",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "2/28/2024"
+    },
+    {
+      "state": "Colorado",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "4/11/2023"
+    },
+    {
+      "state": "Connecticut",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "7/31/2023"
+    },
+    {
+      "state": "Florida",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "8/3/2023"
+    },
+    {
+      "state": "North Carolina",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "6/9/2020"
+    },
+    {
+      "state": "Ohio",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "4/13/2023"
+    },
+    {
+      "state": "Oklahoma",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "6/11/2020"
+    },
+    {
+      "state": "Pennsylvania",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "2/29/2024"
+    },
+    {
+      "state": "South Carolina",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "4/13/2023"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED_RES",
+      "regDate": "4/11/2023"
+    },
+    {
+      "state": "Virginia",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "4/11/2023"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}

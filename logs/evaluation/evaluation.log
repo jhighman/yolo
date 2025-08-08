@@ -1,0 +1,188 @@
+2025-07-06 11:40:57,862 - firm_evaluation_processor - DEBUG - Evaluating data integrity
+2025-07-06 11:40:57,864 - firm_evaluation_processor - DEBUG - Evaluating data integrity
+2025-07-06 11:40:57,864 - firm_evaluation_processor - DEBUG - Evaluating data integrity
+2025-07-06 11:40:57,864 - firm_evaluation_processor - ERROR - Invalid last updated date format: invalid-date
+2025-07-06 11:40:57,864 - firm_evaluation_processor - ERROR - Invalid cache date format: also-invalid
+2025-07-06 11:40:57,865 - firm_evaluation_processor - DEBUG - Evaluating data integrity
+2025-07-06 11:40:57,865 - firm_evaluation_processor - DEBUG - Evaluating data integrity
+2025-07-06 11:40:57,865 - firm_evaluation_processor - DEBUG - Evaluating disclosures for Test Firm
+2025-07-06 11:40:57,866 - firm_evaluation_processor - DEBUG - Evaluating disclosures for Test Firm
+2025-07-06 11:40:57,866 - firm_evaluation_processor - ERROR - Missing date in disclosure
+2025-07-06 11:40:57,866 - firm_evaluation_processor - DEBUG - Evaluating disclosures for Test Firm
+2025-07-06 11:40:57,866 - firm_evaluation_processor - DEBUG - Evaluating disclosures for Test Firm
+2025-07-06 11:40:57,866 - firm_evaluation_processor - DEBUG - Evaluating disclosures for Test Firm
+2025-07-06 11:40:57,867 - firm_evaluation_processor - DEBUG - Evaluating financials for Test Firm
+2025-07-06 11:40:57,867 - firm_evaluation_processor - DEBUG - Evaluating financials for Test Firm
+2025-07-06 11:40:57,867 - firm_evaluation_processor - DEBUG - Evaluating financials for Test Firm
+2025-07-06 11:40:57,868 - firm_evaluation_processor - DEBUG - Evaluating financials for Test Firm
+2025-07-06 11:40:57,868 - firm_evaluation_processor - DEBUG - Evaluating financials for Test Firm
+2025-07-06 11:40:57,868 - firm_evaluation_processor - DEBUG - Evaluating financials for Test Firm
+2025-07-06 11:40:57,868 - firm_evaluation_processor - DEBUG - Evaluating legal compliance for Test Firm
+2025-07-06 11:40:57,869 - firm_evaluation_processor - DEBUG - Evaluating legal compliance for Test Firm
+2025-07-06 11:40:57,869 - firm_evaluation_processor - DEBUG - Evaluating qualifications for Test Firm
+2025-07-06 11:40:57,869 - firm_evaluation_processor - DEBUG - Evaluating qualifications for Test Firm
+2025-07-06 11:40:57,869 - firm_evaluation_processor - DEBUG - Evaluating qualifications for Test Firm
+2025-07-06 11:40:57,869 - firm_evaluation_processor - ERROR - Missing date for Series 7 exam
+2025-07-06 11:40:57,869 - firm_evaluation_processor - DEBUG - Evaluating qualifications for Test Firm
+2025-07-06 11:40:57,870 - firm_evaluation_processor - DEBUG - Evaluating qualifications for Test Firm
+2025-07-06 11:40:57,870 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:40:57,872 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:40:57,872 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:40:57,873 - firm_evaluation_processor - ERROR - Invalid registration date format: invalid-date
+2025-07-06 11:40:57,874 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:40:57,875 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:40:57,876 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:40:57,878 - firm_evaluation_processor - DEBUG - Evaluating regulatory oversight for Test Firm
+2025-07-06 11:40:57,878 - firm_evaluation_processor - DEBUG - Evaluating regulatory oversight for Test Firm
+2025-07-06 11:40:57,879 - firm_evaluation_processor - ERROR - Missing effective date in notice filing for CA
+2025-07-06 11:40:57,879 - firm_evaluation_processor - DEBUG - Evaluating regulatory oversight for Test Firm
+2025-07-06 11:40:57,879 - firm_evaluation_processor - DEBUG - Evaluating regulatory oversight for Test Firm
+2025-07-06 11:40:57,879 - firm_evaluation_processor - DEBUG - Evaluating regulatory oversight for Test Firm
+2025-07-06 11:42:05,735 - firm_evaluation_processor - DEBUG - Evaluating data integrity
+2025-07-06 11:42:05,737 - firm_evaluation_processor - DEBUG - Evaluating data integrity
+2025-07-06 11:42:05,737 - firm_evaluation_processor - DEBUG - Evaluating data integrity
+2025-07-06 11:42:05,738 - firm_evaluation_processor - ERROR - Invalid last updated date format: invalid-date
+2025-07-06 11:42:05,738 - firm_evaluation_processor - ERROR - Invalid cache date format: also-invalid
+2025-07-06 11:42:05,738 - firm_evaluation_processor - DEBUG - Evaluating data integrity
+2025-07-06 11:42:05,738 - firm_evaluation_processor - DEBUG - Evaluating data integrity
+2025-07-06 11:42:05,738 - firm_evaluation_processor - DEBUG - Evaluating disclosures for Test Firm
+2025-07-06 11:42:05,739 - firm_evaluation_processor - DEBUG - Evaluating disclosures for Test Firm
+2025-07-06 11:42:05,739 - firm_evaluation_processor - ERROR - Missing date in disclosure
+2025-07-06 11:42:05,739 - firm_evaluation_processor - DEBUG - Evaluating disclosures for Test Firm
+2025-07-06 11:42:05,739 - firm_evaluation_processor - DEBUG - Evaluating disclosures for Test Firm
+2025-07-06 11:42:05,740 - firm_evaluation_processor - DEBUG - Evaluating disclosures for Test Firm
+2025-07-06 11:42:05,740 - firm_evaluation_processor - DEBUG - Evaluating financials for Test Firm
+2025-07-06 11:42:05,740 - firm_evaluation_processor - DEBUG - Evaluating financials for Test Firm
+2025-07-06 11:42:05,740 - firm_evaluation_processor - DEBUG - Evaluating financials for Test Firm
+2025-07-06 11:42:05,740 - firm_evaluation_processor - DEBUG - Evaluating financials for Test Firm
+2025-07-06 11:42:05,741 - firm_evaluation_processor - DEBUG - Evaluating financials for Test Firm
+2025-07-06 11:42:05,741 - firm_evaluation_processor - DEBUG - Evaluating financials for Test Firm
+2025-07-06 11:42:05,742 - firm_evaluation_processor - DEBUG - Evaluating legal compliance for Test Firm
+2025-07-06 11:42:05,742 - firm_evaluation_processor - DEBUG - Evaluating legal compliance for Test Firm
+2025-07-06 11:42:05,742 - firm_evaluation_processor - DEBUG - Evaluating qualifications for Test Firm
+2025-07-06 11:42:05,743 - firm_evaluation_processor - DEBUG - Evaluating qualifications for Test Firm
+2025-07-06 11:42:05,743 - firm_evaluation_processor - DEBUG - Evaluating qualifications for Test Firm
+2025-07-06 11:42:05,743 - firm_evaluation_processor - ERROR - Missing date for Series 7 exam
+2025-07-06 11:42:05,743 - firm_evaluation_processor - DEBUG - Evaluating qualifications for Test Firm
+2025-07-06 11:42:05,743 - firm_evaluation_processor - DEBUG - Evaluating qualifications for Test Firm
+2025-07-06 11:42:05,744 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:42:05,744 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:42:05,744 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:42:05,744 - firm_evaluation_processor - ERROR - Invalid registration date format: invalid-date
+2025-07-06 11:42:05,744 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:42:05,744 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:42:05,744 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:42:05,744 - firm_evaluation_processor - DEBUG - Evaluating regulatory oversight for Test Firm
+2025-07-06 11:42:05,745 - firm_evaluation_processor - DEBUG - Evaluating regulatory oversight for Test Firm
+2025-07-06 11:42:05,745 - firm_evaluation_processor - ERROR - Missing effective date in notice filing for CA
+2025-07-06 11:42:05,745 - firm_evaluation_processor - DEBUG - Evaluating regulatory oversight for Test Firm
+2025-07-06 11:42:05,745 - firm_evaluation_processor - DEBUG - Evaluating regulatory oversight for Test Firm
+2025-07-06 11:42:05,745 - firm_evaluation_processor - DEBUG - Evaluating regulatory oversight for Test Firm
+2025-07-06 11:42:52,718 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:42:52,721 - firm_evaluation_processor - DEBUG - Evaluating regulatory oversight for Test Firm
+2025-07-06 11:42:52,721 - firm_evaluation_processor - DEBUG - Evaluating disclosures for Test Firm
+2025-07-06 11:43:04,988 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:43:04,989 - firm_evaluation_processor - DEBUG - Evaluating regulatory oversight for Test Firm
+2025-07-06 11:43:04,989 - firm_evaluation_processor - DEBUG - Evaluating disclosures for Test Firm
+2025-07-06 11:43:18,731 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:43:18,732 - firm_evaluation_processor - DEBUG - Evaluating regulatory oversight for Test Firm
+2025-07-06 11:43:18,732 - firm_evaluation_processor - DEBUG - Evaluating disclosures for Test Firm
+2025-07-06 11:51:18,479 - firm_evaluation_processor - DEBUG - Evaluating data integrity
+2025-07-06 11:51:18,481 - firm_evaluation_processor - DEBUG - Evaluating data integrity
+2025-07-06 11:51:18,481 - firm_evaluation_processor - DEBUG - Evaluating data integrity
+2025-07-06 11:51:18,481 - firm_evaluation_processor - ERROR - Invalid last updated date format: invalid-date
+2025-07-06 11:51:18,481 - firm_evaluation_processor - ERROR - Invalid cache date format: also-invalid
+2025-07-06 11:51:18,481 - firm_evaluation_processor - DEBUG - Evaluating data integrity
+2025-07-06 11:51:18,481 - firm_evaluation_processor - DEBUG - Evaluating data integrity
+2025-07-06 11:51:18,481 - firm_evaluation_processor - DEBUG - Evaluating disclosures for Test Firm
+2025-07-06 11:51:18,482 - firm_evaluation_processor - DEBUG - Evaluating disclosures for Test Firm
+2025-07-06 11:51:18,482 - firm_evaluation_processor - ERROR - Missing date in disclosure
+2025-07-06 11:51:18,482 - firm_evaluation_processor - DEBUG - Evaluating disclosures for Test Firm
+2025-07-06 11:51:18,482 - firm_evaluation_processor - DEBUG - Evaluating disclosures for Test Firm
+2025-07-06 11:51:18,482 - firm_evaluation_processor - DEBUG - Evaluating disclosures for Test Firm
+2025-07-06 11:51:18,482 - firm_evaluation_processor - DEBUG - Evaluating financials for Test Firm
+2025-07-06 11:51:18,482 - firm_evaluation_processor - DEBUG - Evaluating financials for Test Firm
+2025-07-06 11:51:18,482 - firm_evaluation_processor - DEBUG - Evaluating financials for Test Firm
+2025-07-06 11:51:18,482 - firm_evaluation_processor - DEBUG - Evaluating financials for Test Firm
+2025-07-06 11:51:18,483 - firm_evaluation_processor - DEBUG - Evaluating financials for Test Firm
+2025-07-06 11:51:18,483 - firm_evaluation_processor - DEBUG - Evaluating financials for Test Firm
+2025-07-06 11:51:18,483 - firm_evaluation_processor - DEBUG - Evaluating legal compliance for Test Firm
+2025-07-06 11:51:18,483 - firm_evaluation_processor - DEBUG - Evaluating legal compliance for Test Firm
+2025-07-06 11:51:18,483 - firm_evaluation_processor - DEBUG - Evaluating qualifications for Test Firm
+2025-07-06 11:51:18,483 - firm_evaluation_processor - DEBUG - Evaluating qualifications for Test Firm
+2025-07-06 11:51:18,483 - firm_evaluation_processor - DEBUG - Evaluating qualifications for Test Firm
+2025-07-06 11:51:18,484 - firm_evaluation_processor - ERROR - Missing date for Series 7 exam
+2025-07-06 11:51:18,484 - firm_evaluation_processor - DEBUG - Evaluating qualifications for Test Firm
+2025-07-06 11:51:18,484 - firm_evaluation_processor - DEBUG - Evaluating qualifications for Test Firm
+2025-07-06 11:51:18,484 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:51:18,484 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:51:18,484 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:51:18,485 - firm_evaluation_processor - ERROR - Invalid registration date format: invalid-date
+2025-07-06 11:51:18,485 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:51:18,486 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:51:18,486 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:51:18,486 - firm_evaluation_processor - DEBUG - Evaluating regulatory oversight for Test Firm
+2025-07-06 11:51:18,487 - firm_evaluation_processor - DEBUG - Evaluating regulatory oversight for Test Firm
+2025-07-06 11:51:18,487 - firm_evaluation_processor - ERROR - Missing effective date in notice filing for CA
+2025-07-06 11:51:18,488 - firm_evaluation_processor - DEBUG - Evaluating regulatory oversight for Test Firm
+2025-07-06 11:51:18,488 - firm_evaluation_processor - DEBUG - Evaluating regulatory oversight for Test Firm
+2025-07-06 11:51:18,488 - firm_evaluation_processor - DEBUG - Evaluating regulatory oversight for Test Firm
+2025-07-06 11:54:11,986 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:54:11,996 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:54:11,996 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:54:11,999 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:54:12,000 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:54:12,001 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:54:12,006 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:58:01,876 - firm_evaluation_processor - DEBUG - Evaluating data integrity
+2025-07-06 11:58:01,877 - firm_evaluation_processor - DEBUG - Evaluating data integrity
+2025-07-06 11:58:01,877 - firm_evaluation_processor - DEBUG - Evaluating data integrity
+2025-07-06 11:58:01,877 - firm_evaluation_processor - ERROR - Invalid last updated date format: invalid-date
+2025-07-06 11:58:01,877 - firm_evaluation_processor - ERROR - Invalid cache date format: also-invalid
+2025-07-06 11:58:01,878 - firm_evaluation_processor - DEBUG - Evaluating data integrity
+2025-07-06 11:58:01,878 - firm_evaluation_processor - DEBUG - Evaluating data integrity
+2025-07-06 11:58:01,878 - firm_evaluation_processor - DEBUG - Evaluating disclosures for Test Firm
+2025-07-06 11:58:01,878 - firm_evaluation_processor - DEBUG - Evaluating disclosures for Test Firm
+2025-07-06 11:58:01,879 - firm_evaluation_processor - ERROR - Missing date in disclosure
+2025-07-06 11:58:01,879 - firm_evaluation_processor - DEBUG - Evaluating disclosures for Test Firm
+2025-07-06 11:58:01,879 - firm_evaluation_processor - DEBUG - Evaluating disclosures for Test Firm
+2025-07-06 11:58:01,879 - firm_evaluation_processor - DEBUG - Evaluating disclosures for Test Firm
+2025-07-06 11:58:01,880 - firm_evaluation_processor - DEBUG - Evaluating financials for Test Firm
+2025-07-06 11:58:01,880 - firm_evaluation_processor - DEBUG - Evaluating financials for Test Firm
+2025-07-06 11:58:01,881 - firm_evaluation_processor - DEBUG - Evaluating financials for Test Firm
+2025-07-06 11:58:01,881 - firm_evaluation_processor - DEBUG - Evaluating financials for Test Firm
+2025-07-06 11:58:01,881 - firm_evaluation_processor - DEBUG - Evaluating financials for Test Firm
+2025-07-06 11:58:01,882 - firm_evaluation_processor - DEBUG - Evaluating financials for Test Firm
+2025-07-06 11:58:01,882 - firm_evaluation_processor - DEBUG - Evaluating legal compliance for Test Firm
+2025-07-06 11:58:01,883 - firm_evaluation_processor - DEBUG - Evaluating legal compliance for Test Firm
+2025-07-06 11:58:01,884 - firm_evaluation_processor - DEBUG - Evaluating qualifications for Test Firm
+2025-07-06 11:58:01,884 - firm_evaluation_processor - DEBUG - Evaluating qualifications for Test Firm
+2025-07-06 11:58:01,884 - firm_evaluation_processor - DEBUG - Evaluating qualifications for Test Firm
+2025-07-06 11:58:01,885 - firm_evaluation_processor - ERROR - Missing date for Series 7 exam
+2025-07-06 11:58:01,885 - firm_evaluation_processor - DEBUG - Evaluating qualifications for Test Firm
+2025-07-06 11:58:01,886 - firm_evaluation_processor - DEBUG - Evaluating qualifications for Test Firm
+2025-07-06 11:58:01,887 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:58:01,887 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:58:01,887 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:58:01,888 - firm_evaluation_processor - ERROR - Invalid registration date format: invalid-date
+2025-07-06 11:58:01,889 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:58:01,890 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:58:01,890 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:58:01,893 - firm_evaluation_processor - DEBUG - Evaluating regulatory oversight for Test Firm
+2025-07-06 11:58:01,894 - firm_evaluation_processor - DEBUG - Evaluating regulatory oversight for Test Firm
+2025-07-06 11:58:01,894 - firm_evaluation_processor - ERROR - Missing effective date in notice filing for CA
+2025-07-06 11:58:01,894 - firm_evaluation_processor - DEBUG - Evaluating regulatory oversight for Test Firm
+2025-07-06 11:58:01,895 - firm_evaluation_processor - DEBUG - Evaluating regulatory oversight for Test Firm
+2025-07-06 11:58:01,895 - firm_evaluation_processor - DEBUG - Evaluating regulatory oversight for Test Firm
+2025-07-06 11:58:10,720 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:58:10,721 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:58:10,723 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:58:10,723 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:58:10,724 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:58:10,725 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-06 11:58:10,726 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-18 16:11:30,814 - firm_evaluation_processor - DEBUG - Evaluating registration status
+2025-07-18 16:11:30,816 - firm_evaluation_processor - DEBUG - Evaluating disclosures for Test Business
+2025-07-22 15:14:59,436 - firm_evaluation_processor - DEBUG - Evaluating disclosures for TEST FIRM
+2025-07-22 15:14:59,437 - firm_evaluation_processor - DEBUG - Evaluating disclosures for TEST FIRM
+2025-07-22 15:14:59,437 - firm_evaluation_processor - DEBUG - Evaluating disclosures for TEST FIRM

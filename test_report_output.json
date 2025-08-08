@@ -1,0 +1,61 @@
+{
+  "reference_id": "TEST-12345",
+  "claim": {
+    "referenceId": "TEST-12345",
+    "crdNumber": "12345",
+    "entityName": "Test Company"
+  },
+  "entity": {
+    "firm_name": "Test Company",
+    "crd_number": "12345",
+    "sec_number": "",
+    "registration_status": "",
+    "address": {},
+    "registration_date": "",
+    "other_names": [],
+    "is_sec_registered": false,
+    "is_state_registered": false,
+    "is_era_registered": false,
+    "is_sec_era_registered": false,
+    "is_state_era_registered": false,
+    "adv_filing_date": "",
+    "has_adv_pdf": false
+  },
+  "search_evaluation": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with SEC data, individual found.",
+    "basic_result": {
+      "firm_name": "Test Company",
+      "crd_number": "12345"
+    },
+    "sec_search_result": {
+      "status": "not_found",
+      "details": {}
+    },
+    "finra_search_result": {
+      "status": "not_found",
+      "details": {}
+    }
+  },
+  "status_evaluation": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "All status checks passed",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "No disclosure issues found",
+    "alerts": []
+  },
+  "final_evaluation": {
+    "source": "SEC",
+    "overall_compliance": true,
+    "overall_risk_level": "Low",
+    "recommendations": "No action required",
+    "description": "All compliance checks passed",
+    "alerts": []
+  }
+}

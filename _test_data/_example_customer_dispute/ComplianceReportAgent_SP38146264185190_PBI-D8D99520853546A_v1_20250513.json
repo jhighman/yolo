@@ -1,0 +1,568 @@
+{
+  "reference_id": "SP38146264185190_PBI-D8D99520853546A",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-D8D99520853546A",
+    "first_name": "Leonard",
+    "last_name": "Hirsh",
+    "employee_number": "EN-046318",
+    "zip": "90254",
+    "crdNumber": "4216156",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "4216156",
+    "individual_name": "Leonard Hirsh",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "FINRA_BrokerCheck",
+    "basic_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "LEONARD FREDERICK HIRSH",
+      "other_names": [],
+      "bc_scope": "Active",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "7/2/2024",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Pending",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "Option trading strategies (collar and call writing) are alleged to been inappropriate and are alleged to have resulted in losses, notwithstanding the fact that any loss was offset by gain elsewhere in the client's portfolio.",
+            "Damage Amount Requested": "$600,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "As of this filing, no details have been provided."
+            ]
+          }
+        },
+        {
+          "eventDate": "1/30/2011",
+          "disclosureType": "Criminal",
+          "disclosureResolution": "Final Disposition",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "criminalCharges": [
+              {
+                "Charges": "Theft and Unlawful Taking or Driving of a Vehicle",
+                "Disposition": "Dismissed"
+              }
+            ],
+            "Broker Comment": [
+              "Confused friend's unlocked rental car and accidentally entered another person's vehicle. Was mistakenly confronted for having intended to separate the owner from his vehicle. All charges were dropped once it was clear that the occurrence was nothing more than a simple mistake."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 66",
+          "examName": "Uniform Combined State Law Examination",
+          "examTakenDate": "6/29/2016",
+          "examScope": "BOTH"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "11/17/2000",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "2/8/2016",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "18923",
+          "firm_name": "SIGNATURE ESTATE SECURITIES, LLC",
+          "registration_begin_date": "7/25/2023",
+          "branch_offices": [
+            {
+              "street": "2121 AVENUE OF STARS",
+              "city": "LOS ANGELES",
+              "state": "CA",
+              "zip_code": "90067"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "23131",
+          "firm_name": "OSAIC WEALTH, INC.",
+          "registration_begin_date": "11/2/2018",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/25/2023"
+        },
+        {
+          "firm_id": "468",
+          "firm_name": "SIGNATOR INVESTORS, INC.",
+          "registration_begin_date": "2/9/2016",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/2/2018"
+        },
+        {
+          "firm_id": "39438",
+          "firm_name": "BARCLAYS GLOBAL INVESTORS SERVICES",
+          "registration_begin_date": "8/18/2000",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "6/7/2001"
+        }
+      ],
+      "crd_number": "4216156"
+    },
+    "detailed_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "LEONARD FREDERICK HIRSH",
+      "other_names": [],
+      "bc_scope": "Active",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "7/2/2024",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Pending",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "Option trading strategies (collar and call writing) are alleged to been inappropriate and are alleged to have resulted in losses, notwithstanding the fact that any loss was offset by gain elsewhere in the client's portfolio.",
+            "Damage Amount Requested": "$600,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "As of this filing, no details have been provided."
+            ]
+          }
+        },
+        {
+          "eventDate": "1/30/2011",
+          "disclosureType": "Criminal",
+          "disclosureResolution": "Final Disposition",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "criminalCharges": [
+              {
+                "Charges": "Theft and Unlawful Taking or Driving of a Vehicle",
+                "Disposition": "Dismissed"
+              }
+            ],
+            "Broker Comment": [
+              "Confused friend's unlocked rental car and accidentally entered another person's vehicle. Was mistakenly confronted for having intended to separate the owner from his vehicle. All charges were dropped once it was clear that the occurrence was nothing more than a simple mistake."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 66",
+          "examName": "Uniform Combined State Law Examination",
+          "examTakenDate": "6/29/2016",
+          "examScope": "BOTH"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "11/17/2000",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "2/8/2016",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "18923",
+          "firm_name": "SIGNATURE ESTATE SECURITIES, LLC",
+          "registration_begin_date": "7/25/2023",
+          "branch_offices": [
+            {
+              "street": "2121 AVENUE OF STARS",
+              "city": "LOS ANGELES",
+              "state": "CA",
+              "zip_code": "90067"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "23131",
+          "firm_name": "OSAIC WEALTH, INC.",
+          "registration_begin_date": "11/2/2018",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/25/2023"
+        },
+        {
+          "firm_id": "468",
+          "firm_name": "SIGNATOR INVESTORS, INC.",
+          "registration_begin_date": "2/9/2016",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/2/2018"
+        },
+        {
+          "firm_id": "39438",
+          "firm_name": "BARCLAYS GLOBAL INVESTORS SERVICES",
+          "registration_begin_date": "8/18/2000",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "6/7/2001"
+        }
+      ],
+      "crd_number": "4216156"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "4216156",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA BrokerCheck data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "Leonard",
+        "middle": null,
+        "last": "Hirsh"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "LEONARD",
+            "middle": "FREDERICK",
+            "last": "HIRSH"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        }
+      ],
+      "best_match": {
+        "name_source": "main_fetched_name",
+        "fetched_name": {
+          "first": "LEONARD",
+          "middle": "FREDERICK",
+          "last": "HIRSH"
+        },
+        "score": 95.0,
+        "first_score": 1.0,
+        "middle_score": 0.5,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "Leonard Hirsh has 1 customer dispute disclosure, 1 criminal disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "Option trading strategies (collar and call writing) are alleged to been inappropriate and are alleged to have resulted in losses, notwithstanding the fact that any loss was offset by gain elsewhere in the client's portfolio.",
+            "Damage Amount Requested": "$600,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "As of this filing, no details have been provided."
+            ]
+          },
+          "event_date": "7/2/2024",
+          "resolution": "Pending"
+        },
+        "description": "Customer dispute on 7/2/2024. Resolution: Pending. Allegations: Option trading strategies (collar and call writing) are alleged to been inappropriate and are alleged to have resulted in losses, notwithstanding the fact that any loss was offset by gain elsewhere in the client's portfolio.. Damage requested: $600,000.00. Settlement: Not specified"
+      },
+      {
+        "alert_type": "Criminal Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "criminalCharges": [
+              {
+                "Charges": "Theft and Unlawful Taking or Driving of a Vehicle",
+                "Disposition": "Dismissed"
+              }
+            ],
+            "Broker Comment": [
+              "Confused friend's unlocked rental car and accidentally entered another person's vehicle. Was mistakenly confronted for having intended to separate the owner from his vehicle. All charges were dropped once it was clear that the occurrence was nothing more than a simple mistake."
+            ]
+          },
+          "event_date": "1/30/2011",
+          "resolution": "Final Disposition"
+        },
+        "description": "Criminal disclosure on 1/30/2011. Resolution: Final Disposition. Charges: Theft and Unlawful Taking or Driving of a Vehicle. Disposition: Dismissed"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No matching disciplinary records found for Leonard Hirsh, but 16 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Search Info",
+        "alert_category": "DISCIPLINARY",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Leonard Hirsh",
+            "sec_disciplinary": {
+              "source": "SEC_Disciplinary",
+              "records_found": 1,
+              "records_filtered": 1,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'Leonard Hirsh'"
+            },
+            "finra_disciplinary": {
+              "source": "FINRA_Disciplinary",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Leonard Joseph Marzocco",
+                "Leonard J. Marzocco",
+                "Leonard C. Kinsman",
+                "Leonard J. Kuczynski",
+                "LEONARD V. FOX, JR.",
+                "LEONARD V. FOX, JR.",
+                "Craig Leonard Buttignoli",
+                "LEONARD ALLEN GOLDBERG",
+                "LEONARD ALLEN GOLDBERG",
+                "PHILIP LEONARD GRASSO",
+                "Leonard E. Tanner",
+                "PHILIP LEONARD GRASSO",
+                "HERBERT LEONARD KAYE",
+                "John Leonard Ahramjian",
+                "John Leonard Gourdin (\"Gourdin\")",
+                "Frank Leonard Patti Jr."
+              ],
+              "name_scores": {
+                "Leonard Joseph Marzocco": 47.62,
+                "Leonard J. Marzocco": 47.62,
+                "Leonard C. Kinsman": 47.62,
+                "Leonard J. Kuczynski": 47.62,
+                "LEONARD V. FOX, JR.": 0.0,
+                "Craig Leonard Buttignoli": 9.52,
+                "LEONARD ALLEN GOLDBERG": 47.62,
+                "PHILIP LEONARD GRASSO": 9.52,
+                "Leonard E. Tanner": 47.62,
+                "HERBERT LEONARD KAYE": 9.52,
+                "John Leonard Ahramjian": 9.52,
+                "John Leonard Gourdin (\"Gourdin\")": 9.52,
+                "Frank Leonard Patti Jr.": 9.52
+              },
+              "exact_match_found": false,
+              "status": "Partial failure: Error processing 'LEONARD V. FOX, JR.'"
+            }
+          }
+        },
+        "description": "Found 16 disciplinary records for Leonard Hirsh, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Leonard Hirsh",
+      "sec_disciplinary": {
+        "source": "SEC_Disciplinary",
+        "records_found": 1,
+        "records_filtered": 1,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Leonard Hirsh'"
+      },
+      "finra_disciplinary": {
+        "source": "FINRA_Disciplinary",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Leonard Joseph Marzocco",
+          "Leonard J. Marzocco",
+          "Leonard C. Kinsman",
+          "Leonard J. Kuczynski",
+          "LEONARD V. FOX, JR.",
+          "LEONARD V. FOX, JR.",
+          "Craig Leonard Buttignoli",
+          "LEONARD ALLEN GOLDBERG",
+          "LEONARD ALLEN GOLDBERG",
+          "PHILIP LEONARD GRASSO",
+          "Leonard E. Tanner",
+          "PHILIP LEONARD GRASSO",
+          "HERBERT LEONARD KAYE",
+          "John Leonard Ahramjian",
+          "John Leonard Gourdin (\"Gourdin\")",
+          "Frank Leonard Patti Jr."
+        ],
+        "name_scores": {
+          "Leonard Joseph Marzocco": 47.62,
+          "Leonard J. Marzocco": 47.62,
+          "Leonard C. Kinsman": 47.62,
+          "Leonard J. Kuczynski": 47.62,
+          "LEONARD V. FOX, JR.": 0.0,
+          "Craig Leonard Buttignoli": 9.52,
+          "LEONARD ALLEN GOLDBERG": 47.62,
+          "PHILIP LEONARD GRASSO": 9.52,
+          "Leonard E. Tanner": 47.62,
+          "HERBERT LEONARD KAYE": 9.52,
+          "John Leonard Ahramjian": 9.52,
+          "John Leonard Gourdin (\"Gourdin\")": 9.52,
+          "Frank Leonard Patti Jr.": 9.52
+        },
+        "exact_match_found": false,
+        "status": "Partial failure: Error processing 'LEONARD V. FOX, JR.'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": true,
+    "compliance_explanation": "No arbitration records found for Leonard Hirsh.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "searched_name": "Leonard Hirsh",
+      "sec_arbitration": {
+        "source": "SEC_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_arbitration": {
+        "source": "FINRA_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for Leonard Hirsh; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "Option trading strategies (collar and call writing) are alleged to been inappropriate and are alleged to have resulted in losses, notwithstanding the fact that any loss was offset by gain elsewhere in the client's portfolio.",
+            "Damage Amount Requested": "$600,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "As of this filing, no details have been provided."
+            ]
+          },
+          "event_date": "7/2/2024",
+          "resolution": "Pending"
+        },
+        "description": "Customer dispute on 7/2/2024. Resolution: Pending. Allegations: Option trading strategies (collar and call writing) are alleged to been inappropriate and are alleged to have resulted in losses, notwithstanding the fact that any loss was offset by gain elsewhere in the client's portfolio.. Damage requested: $600,000.00. Settlement: Not specified"
+      },
+      {
+        "alert_type": "Criminal Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "criminalCharges": [
+              {
+                "Charges": "Theft and Unlawful Taking or Driving of a Vehicle",
+                "Disposition": "Dismissed"
+              }
+            ],
+            "Broker Comment": [
+              "Confused friend's unlocked rental car and accidentally entered another person's vehicle. Was mistakenly confronted for having intended to separate the owner from his vehicle. All charges were dropped once it was clear that the occurrence was nothing more than a simple mistake."
+            ]
+          },
+          "event_date": "1/30/2011",
+          "resolution": "Final Disposition"
+        },
+        "description": "Criminal disclosure on 1/30/2011. Resolution: Final Disposition. Charges: Theft and Unlawful Taking or Driving of a Vehicle. Disposition: Dismissed"
+      }
+    ]
+  }
+}

@@ -1,0 +1,233 @@
+{
+  "basicInformation": {
+    "individualId": 2538629,
+    "firstName": "SCOTT",
+    "middleName": "BRADLEY",
+    "lastName": "JACOBS",
+    "otherNames": [],
+    "bcScope": "InActive",
+    "iaScope": "Active",
+    "daysInIndustry": 8210
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "33020",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "26892",
+      "firmId": 10299,
+      "firmName": "CETERA ADVISORS LLC",
+      "city": "SAN FRANCISCO",
+      "state": "CA",
+      "registrationBeginDate": "2/28/2012",
+      "registrationEndDate": "7/2/2018",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "17377",
+      "firmId": 6390,
+      "firmName": "PACIFIC WEST SECURITIES, INC.",
+      "city": "SAN FRANCISCO",
+      "state": "CA",
+      "registrationBeginDate": "1/19/2010",
+      "registrationEndDate": "2/28/2012",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "31165",
+      "firmId": 1763,
+      "firmName": "H. BECK, INC.",
+      "city": "GREENBRAE",
+      "state": "CA",
+      "registrationBeginDate": "3/16/2009",
+      "registrationEndDate": "9/18/2009",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "38588",
+      "firmId": 10582,
+      "firmName": "WELLS FARGO INVESTMENTS, LLC",
+      "city": "SAN FRANCISCO",
+      "state": "CA",
+      "registrationBeginDate": "6/6/2003",
+      "registrationEndDate": "10/15/2008",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "27154",
+      "firmId": 7471,
+      "firmName": "PRUDENTIAL SECURITIES INCORPORATED",
+      "city": "NEW YORK",
+      "state": "NY",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "3/6/2001",
+      "registrationEndDate": "6/6/2003",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "7163",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "16267",
+      "firmId": 8174,
+      "firmName": "UBS PAINEWEBBER INC.",
+      "city": "WEEHAWKEN",
+      "state": "NJ",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "4/12/1995",
+      "registrationEndDate": "3/13/2001",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    }
+  ],
+  "previousIAEmployments": [],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "2/7/2014",
+      "disclosureType": "Regulatory",
+      "disclosureResolution": "Final",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 11,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "DocketNumberFDA": "",
+        "DocketNumberAAO": "",
+        "Initiated By": "CALIFORNIA DEPARTMENT OF BUSINESS OVERSIGHT",
+        "Allegations": "FIRM REGISTRATION WAS REVOKED FOR NON-PAYMENT OF FEES",
+        "Resolution": "REGISTRATION APPROVED",
+        "SanctionDetails": [
+          {
+            "Sanctions": "Revocation"
+          }
+        ],
+        "Broker Comment": [
+          "FIRM LICENSED WAS REVOKED FOR NON-FEE PAYMENT"
+        ]
+      }
+    },
+    {
+      "eventDate": "2/24/2009",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 11,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "CO-CONSERVATORS CLAIM THAT ACCOUNT WAS MISMANAGED, INCLUDING LACK OF DIVERSIFICATION AND EXCESSIVE TRADING.",
+        "Damage Amount Requested": "$140,000.00",
+        "Settlement Amount": "$61,475.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": ""
+      }
+    },
+    {
+      "eventDate": "9/16/2008",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 11,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "UNAUTHORIZED TRADING - COST TO FIRM TO REVERSE THE TRADE IN CLIENT'S ACCOUNT EXCEEDED $5,000",
+        "Settlement Amount": "$158,825.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": "",
+        "Broker Comment": [
+          "IN MAY 2008 [CUSTOMER] PURCHASED AN INVESTMENT GRADE BOND.  SHE RECEIVED A PROSPECTUS, CONFIRMATION AND FOUR SUBSEQUENT MONTHLY STATEMENTS.  IN SEPTEMBER 2008 THE CLIENT WAS CONTACTED BY US WHEN THE GOVERNMENT ANNOUNCED THE BAILOUT OF FANNIE MAE AND FREDDIE MAC.  WHILE OUR OUTBOUND CONFERENCE CALL WAS MADE TO INFORM THE CLIENT HOW THIS ADVERSELY AFFECTED HER INVESTMENT, THIS WAS THE FIRST TIME SHE MENTIONED SHE WAS UNAWARE OF THE INVESTMENT.  HER PORTFOLIO CONSISTED OF A DOZEN AND A HALF INVESTMENTS JUST LIKE THIS ONE OF WHICH SHE AGREED THEY WERE ALL HERS EXCEPT THE ONE THAT JUST WENT DOWN.\r\n\r\nIN AN EFFORT TO PLACATE AND SATISFY THE CLIENT QUICKLY, THE MANAGER, [OTHER FIRM EMPLOYEE] AGREED TO REFUND THE MONEY.\r\n\r\nIT WAS LATER UNCOVERED THAT THE CLIENT SIGNED A PROPOSAL BACK IN 2004.\r\n\r\nIT IS MY OPINION THE NEW MANAGER, ONLY WITH WELLS FARGO ABOUT A YEAR, DID NOT SPEND ENOUGH TIME FOR FULL DISCLOSURE."
+        ]
+      }
+    },
+    {
+      "eventDate": "9/15/2008",
+      "disclosureType": "Employment Separation After Allegations",
+      "disclosureResolution": "",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 11,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Firm Name": "WELLS FARGO INVESTMENTS, LLC.",
+        "Termination Type": "Discharged",
+        "Allegations": "REPRESENTATIVE FAILED TO FOLLOW FIRM PROCEDURES REGARDING CONFIRMATION OF CLIENT TRADE REQUEST."
+      }
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 2,
+    "principalExamCount": 0,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "12/23/1999",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "3/27/1995",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "7/2/2018",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "3/10/1995",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0
+  },
+  "registeredStates": [
+    {
+      "state": "California",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "2/9/2024"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED_RES",
+      "regDate": "2/9/2024"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}

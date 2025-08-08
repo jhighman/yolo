@@ -1,72 +1,37 @@
-# Project-specific directories
-/drop/
-/input/
-/cache/
-/output/
-/logs/
+# Environment variables
+.env
 
-# Byte-compiled / optimized / DLL files
+# Cache directories
+cache/
+
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
-
-# C extensions
 *.so
-
-# Distribution / packaging
-dist/
+.Python
+env/
 build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
 *.egg-info/
+.installed.cfg
 *.egg
 
-# Virtual environments
+# Virtual Environment
 venv/
-env/
-.env/
-.venv/
 ENV/
 
-# IDE specific files
+# IDE
 .idea/
 .vscode/
 *.swp
 *.swo
-.DS_Store
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# Python testing
-.pytest_cache/
-.coverage
-htmlcov/
-.tox/
-
-# Logs
-*.log
-
-# Local development settings
-.env
-.env.local
-.env.*.local
-
-# Database
-*.db
-*.sqlite3
-
-# Documentation
-docs/_build/
-
-# Poetry
-poetry.lock
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pipenv
-Pipfile.lock
-
-# Test data
-_test_data/

@@ -1,0 +1,834 @@
+{
+  "reference_id": "SP38146264185190_PBI-2F03092D9CF84EC",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-2F03092D9CF84EC",
+    "first_name": "David",
+    "last_name": "Blisk",
+    "employee_number": "EN-057729",
+    "zip": "20194",
+    "crdNumber": "2155652",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "2155652",
+    "individual_name": "David Blisk",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "FINRA_BrokerCheck",
+    "basic_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "DAVID LLOYD BLISK",
+      "other_names": [],
+      "bc_scope": "Active",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "5/30/2017",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Award / Judgment",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "Failure to supervise an unaffiliated RIA from 9/2009 to 2/2011.",
+            "Damage Amount Requested": "$22,000,000.00",
+            "Damages Granted": "$3,000,000.00",
+            "DisplayAAOLinkIfExists": "Y",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "17-01361",
+            "Regulator Statement": "Arbitration Case No. 16-01018 was consolidated with Arbitration Case No. 17-01361.",
+            "Broker Comment": [
+              "Mr. Blisk vehemently denies the allegations of a failure to supervise.  Spire Securities provided no investment advisory services to any of the Claimants. The alleged fraudulent conduct involved an unaffiliated SEC registered investment adviser with whom the Claimants established advisory accounts and purchased investments offered by this adviser.  The Investment Advisor that this claim identified, was subject to a separate regulatory regime under the Investment Advisors Act.  Claimants received the advisors offering materials that related to the investment now being complained of.   Spire was not mentioned in these materials.   The fraudulent conduct,  involving the adviser complained of,  was the subject of an SEC Complaint against the investment adviser and its principal that occurred several years after the former series 7 broker had resigned from Spire.  Arbitration award of $3000000 filed 6/20/2019 for claimants.  Motion to Vacate filed by respondents 7/22/2019."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "8/2/1991",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "7/25/1991",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 51",
+          "examName": "Municipal Fund Securities Principal Examination",
+          "examTakenDate": "3/12/2003",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 24",
+          "examName": "General Securities Principal Examination",
+          "examTakenDate": "5/14/1997",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 99TO",
+          "examName": "Operations Professional Examination",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 79TO",
+          "examName": "Investment Banking Registered Representative Examination",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 3",
+          "examName": "National Commodity Futures Examination",
+          "examTakenDate": "8/27/1991",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "7/22/1991",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "144131",
+          "firm_name": "SPIRE SECURITIES, LLC",
+          "registration_begin_date": "10/3/2007",
+          "branch_offices": [
+            {
+              "street": "7901 Jones Branch Dr.",
+              "city": "MCLEAN",
+              "state": "VA",
+              "zip_code": "22102"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "39543",
+          "firm_name": "CAMBRIDGE INVESTMENT RESEARCH, INC.",
+          "registration_begin_date": "1/2/2002",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/2/2007"
+        },
+        {
+          "firm_id": "40655",
+          "firm_name": "LOCKWOOD FINANCIAL SERVICES, INC.",
+          "registration_begin_date": "2/14/1997",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "12/31/2001"
+        },
+        {
+          "firm_id": "7059",
+          "firm_name": "SMITH BARNEY INC.",
+          "registration_begin_date": "7/31/1993",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "2/24/1997"
+        },
+        {
+          "firm_id": "7506",
+          "firm_name": "LEHMAN BROTHERS INC.",
+          "registration_begin_date": "7/24/1991",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/31/1993"
+        }
+      ],
+      "crd_number": "2155652"
+    },
+    "detailed_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "DAVID LLOYD BLISK",
+      "other_names": [],
+      "bc_scope": "Active",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "5/30/2017",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Award / Judgment",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "Failure to supervise an unaffiliated RIA from 9/2009 to 2/2011.",
+            "Damage Amount Requested": "$22,000,000.00",
+            "Damages Granted": "$3,000,000.00",
+            "DisplayAAOLinkIfExists": "Y",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "17-01361",
+            "Regulator Statement": "Arbitration Case No. 16-01018 was consolidated with Arbitration Case No. 17-01361.",
+            "Broker Comment": [
+              "Mr. Blisk vehemently denies the allegations of a failure to supervise.  Spire Securities provided no investment advisory services to any of the Claimants. The alleged fraudulent conduct involved an unaffiliated SEC registered investment adviser with whom the Claimants established advisory accounts and purchased investments offered by this adviser.  The Investment Advisor that this claim identified, was subject to a separate regulatory regime under the Investment Advisors Act.  Claimants received the advisors offering materials that related to the investment now being complained of.   Spire was not mentioned in these materials.   The fraudulent conduct,  involving the adviser complained of,  was the subject of an SEC Complaint against the investment adviser and its principal that occurred several years after the former series 7 broker had resigned from Spire.  Arbitration award of $3000000 filed 6/20/2019 for claimants.  Motion to Vacate filed by respondents 7/22/2019."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "8/2/1991",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "7/25/1991",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 51",
+          "examName": "Municipal Fund Securities Principal Examination",
+          "examTakenDate": "3/12/2003",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 24",
+          "examName": "General Securities Principal Examination",
+          "examTakenDate": "5/14/1997",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 99TO",
+          "examName": "Operations Professional Examination",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 79TO",
+          "examName": "Investment Banking Registered Representative Examination",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 3",
+          "examName": "National Commodity Futures Examination",
+          "examTakenDate": "8/27/1991",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "7/22/1991",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "144131",
+          "firm_name": "SPIRE SECURITIES, LLC",
+          "registration_begin_date": "10/3/2007",
+          "branch_offices": [
+            {
+              "street": "7901 Jones Branch Dr.",
+              "city": "MCLEAN",
+              "state": "VA",
+              "zip_code": "22102"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "39543",
+          "firm_name": "CAMBRIDGE INVESTMENT RESEARCH, INC.",
+          "registration_begin_date": "1/2/2002",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/2/2007"
+        },
+        {
+          "firm_id": "40655",
+          "firm_name": "LOCKWOOD FINANCIAL SERVICES, INC.",
+          "registration_begin_date": "2/14/1997",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "12/31/2001"
+        },
+        {
+          "firm_id": "7059",
+          "firm_name": "SMITH BARNEY INC.",
+          "registration_begin_date": "7/31/1993",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "2/24/1997"
+        },
+        {
+          "firm_id": "7506",
+          "firm_name": "LEHMAN BROTHERS INC.",
+          "registration_begin_date": "7/24/1991",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/31/1993"
+        }
+      ],
+      "crd_number": "2155652"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "2155652",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA BrokerCheck data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "David",
+        "middle": null,
+        "last": "Blisk"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "DAVID",
+            "middle": "LLOYD",
+            "last": "BLISK"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        }
+      ],
+      "best_match": {
+        "name_source": "main_fetched_name",
+        "fetched_name": {
+          "first": "DAVID",
+          "middle": "LLOYD",
+          "last": "BLISK"
+        },
+        "score": 95.0,
+        "first_score": 1.0,
+        "middle_score": 0.5,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "David Blisk has 1 customer dispute disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "Failure to supervise an unaffiliated RIA from 9/2009 to 2/2011.",
+            "Damage Amount Requested": "$22,000,000.00",
+            "Damages Granted": "$3,000,000.00",
+            "DisplayAAOLinkIfExists": "Y",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "17-01361",
+            "Regulator Statement": "Arbitration Case No. 16-01018 was consolidated with Arbitration Case No. 17-01361.",
+            "Broker Comment": [
+              "Mr. Blisk vehemently denies the allegations of a failure to supervise.  Spire Securities provided no investment advisory services to any of the Claimants. The alleged fraudulent conduct involved an unaffiliated SEC registered investment adviser with whom the Claimants established advisory accounts and purchased investments offered by this adviser.  The Investment Advisor that this claim identified, was subject to a separate regulatory regime under the Investment Advisors Act.  Claimants received the advisors offering materials that related to the investment now being complained of.   Spire was not mentioned in these materials.   The fraudulent conduct,  involving the adviser complained of,  was the subject of an SEC Complaint against the investment adviser and its principal that occurred several years after the former series 7 broker had resigned from Spire.  Arbitration award of $3000000 filed 6/20/2019 for claimants.  Motion to Vacate filed by respondents 7/22/2019."
+            ]
+          },
+          "event_date": "5/30/2017",
+          "resolution": "Award / Judgment"
+        },
+        "description": "Customer dispute on 5/30/2017. Resolution: Award / Judgment. Allegations: Failure to supervise an unaffiliated RIA from 9/2009 to 2/2011.. Damage requested: $22,000,000.00. Settlement: Not specified"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No matching disciplinary records found for David Blisk, but 15 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Search Info",
+        "alert_category": "DISCIPLINARY",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "David Blisk",
+            "sec_disciplinary": {
+              "source": "SEC_Disciplinary",
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records found"
+            },
+            "finra_disciplinary": {
+              "source": "FINRA_Disciplinary",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "David R. Ravarino",
+                "David Wong",
+                "David L. Jerke",
+                "Jack David Faller",
+                "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.",
+                "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.",
+                "David Cordell Rollins",
+                "David Halfen",
+                "David Allen Gibbs",
+                "David Nathan Slater",
+                "David Reyes",
+                "David S. Lerner",
+                "David C. Burke",
+                "David Wong",
+                "David A. Dodson",
+                "Ramses David Visher"
+              ],
+              "name_scores": {
+                "David R. Ravarino": 47.62,
+                "David Wong": 47.37,
+                "David L. Jerke": 47.62,
+                "Jack David Faller": 9.52,
+                "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.": 0.0,
+                "David Cordell Rollins": 47.62,
+                "David Halfen": 47.37,
+                "David Allen Gibbs": 47.62,
+                "David Nathan Slater": 47.62,
+                "David Reyes": 47.37,
+                "David S. Lerner": 47.62,
+                "David C. Burke": 47.62,
+                "David A. Dodson": 47.62,
+                "Ramses David Visher": 9.52
+              },
+              "exact_match_found": false,
+              "status": "Partial failure: Error processing 'Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.'"
+            }
+          }
+        },
+        "description": "Found 15 disciplinary records for David Blisk, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "David Blisk",
+      "sec_disciplinary": {
+        "source": "SEC_Disciplinary",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_disciplinary": {
+        "source": "FINRA_Disciplinary",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "David R. Ravarino",
+          "David Wong",
+          "David L. Jerke",
+          "Jack David Faller",
+          "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.",
+          "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.",
+          "David Cordell Rollins",
+          "David Halfen",
+          "David Allen Gibbs",
+          "David Nathan Slater",
+          "David Reyes",
+          "David S. Lerner",
+          "David C. Burke",
+          "David Wong",
+          "David A. Dodson",
+          "Ramses David Visher"
+        ],
+        "name_scores": {
+          "David R. Ravarino": 47.62,
+          "David Wong": 47.37,
+          "David L. Jerke": 47.62,
+          "Jack David Faller": 9.52,
+          "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.": 0.0,
+          "David Cordell Rollins": 47.62,
+          "David Halfen": 47.37,
+          "David Allen Gibbs": 47.62,
+          "David Nathan Slater": 47.62,
+          "David Reyes": 47.37,
+          "David S. Lerner": 47.62,
+          "David C. Burke": 47.62,
+          "David A. Dodson": 47.62,
+          "Ramses David Visher": 9.52
+        },
+        "exact_match_found": false,
+        "status": "Partial failure: Error processing 'Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": false,
+    "compliance_explanation": "Arbitration issues found for David Blisk.",
+    "actions": [
+      {
+        "case_id": "16-01018",
+        "date": "06/20/2019",
+        "details": {
+          "action_type": "Unknown",
+          "firms_individuals": "David Blisk, Suzanne McKeown, Spire Securities, LLC",
+          "description": "Case 16-01018 closed with outcome: Unknown",
+          "award_document": "16-01018",
+          "pdf_url": "/sites/default/files/aao_documents/16-01018%282%29.pdf",
+          "case_summary": {
+            "Claimant(s):": "Amy Eisner, Carolyn Herrmann, David Freilicher, Ellen Nass, Hal Nass, Helene Posnick, Herbert Pfeffer, Jean Schram, John Skalicky, Kirstine Schaeffer, Lawrence Eisner, Marc Hyman, Myrna Barzelatto, Paul Posnick, Richard Schram, Robert Gluckin, Robert Skollar, Thomas Herrmann, William Bernstein, Estate of Joan B. Gluckin, HFP Holdings, LLC, Holla4, LLC, Myrna Wendlinger Family Limited Partners, Betty Ziernicki Trust",
+            "Claimant Representative(s):": "Adam J. Weinstein, Adam Gana",
+            "Respondent(s):": "David Blisk, Suzanne McKeown, Spire Securities, LLC",
+            "Neutral(s):": "Sandra D. Parker, Amy Banet, Albert Rizzo",
+            "Hearing Site:": "New York, NY"
+          },
+          "forum": "FINRA"
+        },
+        "matched_name": "David Blisk"
+      },
+      {
+        "case_id": "17-01361",
+        "date": "06/20/2019",
+        "details": {
+          "action_type": "Award",
+          "firms_individuals": "David Blisk, Suzzane McKeown, Spire Securities, LLC",
+          "description": "Case 17-01361 closed with outcome: Award against individual",
+          "award_document": "17-01361",
+          "pdf_url": "/sites/default/files/aao_documents/17-01361.pdf",
+          "case_summary": {
+            "Claimant(s):": "Amy Eisner, Carolyn Herrmann, David Freilicher, Ellen Nass, Hal Nass, Helene Posnick, Jean Schram, John Skalicky, Kirstine Schaeffer, Lawrence Eisner, Marc Hyman, Paul Posnick, Richard Schram, Robert Gluckin, Robert Skollar, Thomas Herrmann, William Bernstein, Estate of Joan B. Gluckin, HFP Holdings, LLC, Holla4, LLC, Betty Ziernicki Trust",
+            "Claimant Representative(s):": "Adam J. Weinstein",
+            "Respondent(s):": "David Blisk, Suzzane McKeown, Spire Securities, LLC",
+            "Neutral(s):": "Dora M. Lassinger, Peter A. Goldman, Thomas Michael Gandolfo",
+            "Hearing Site:": "New York, NY"
+          },
+          "forum": "FINRA"
+        },
+        "matched_name": "David Blisk"
+      },
+      {
+        "case_id": "16-01018",
+        "date": "06/20/2019",
+        "details": {
+          "action_type": "Award",
+          "firms_individuals": "David Blisk, Suzanne McKeown, Spire Securities, LLC",
+          "description": "Case 16-01018 closed with outcome: Award against individual",
+          "award_document": "16-01018",
+          "pdf_url": "/sites/default/files/aao_documents/16-01018.pdf",
+          "case_summary": {
+            "Claimant(s):": "Amy Eisner, Carolyn Herrmann, David Freilicher, Ellen Nass, Hal Nass, Helene Posnick, Herbert Pfeffer, Jean Schram, John Skalicky, Kirstine Schaeffer, Lawrence Eisner, Marc Hyman, Myrna Barzelatto, Paul Posnick, Richard Schram, Robert Gluckin, Robert Skollar, Thomas Herrmann, William Bernstein, Estate of Joan B. Gluckin, HFP Holdings, LLC, Holla4, LLC, Myrna Wendlinger Family Limited Partners, Betty Ziernicki Trust",
+            "Claimant Representative(s):": "Adam J. Weinstein, Adam Gana",
+            "Respondent(s):": "David Blisk, Suzanne McKeown, Spire Securities, LLC",
+            "Neutral(s):": "Sandra D. Parker, Amy Banet, Albert Rizzo",
+            "Hearing Site:": "New York, NY"
+          },
+          "forum": "FINRA"
+        },
+        "matched_name": "David Blisk"
+      }
+    ],
+    "alerts": [
+      {
+        "alert_type": "Arbitration Compliance",
+        "alert_category": "ARBITRATION",
+        "severity": "HIGH",
+        "metadata": {
+          "arbitration": {
+            "case_id": "17-01361",
+            "date": "06/20/2019",
+            "details": {
+              "action_type": "Award",
+              "firms_individuals": "David Blisk, Suzzane McKeown, Spire Securities, LLC",
+              "description": "Case 17-01361 closed with outcome: Award against individual",
+              "award_document": "17-01361",
+              "pdf_url": "/sites/default/files/aao_documents/17-01361.pdf",
+              "case_summary": {
+                "Claimant(s):": "Amy Eisner, Carolyn Herrmann, David Freilicher, Ellen Nass, Hal Nass, Helene Posnick, Jean Schram, John Skalicky, Kirstine Schaeffer, Lawrence Eisner, Marc Hyman, Paul Posnick, Richard Schram, Robert Gluckin, Robert Skollar, Thomas Herrmann, William Bernstein, Estate of Joan B. Gluckin, HFP Holdings, LLC, Holla4, LLC, Betty Ziernicki Trust",
+                "Claimant Representative(s):": "Adam J. Weinstein",
+                "Respondent(s):": "David Blisk, Suzzane McKeown, Spire Securities, LLC",
+                "Neutral(s):": "Dora M. Lassinger, Peter A. Goldman, Thomas Michael Gandolfo",
+                "Hearing Site:": "New York, NY"
+              },
+              "forum": "FINRA"
+            },
+            "matched_name": "David Blisk"
+          }
+        },
+        "description": "Arbitration issue found: Case 17-01361 for David Blisk, status: unknown, outcome: award."
+      },
+      {
+        "alert_type": "Arbitration Compliance",
+        "alert_category": "ARBITRATION",
+        "severity": "HIGH",
+        "metadata": {
+          "arbitration": {
+            "case_id": "16-01018",
+            "date": "06/20/2019",
+            "details": {
+              "action_type": "Award",
+              "firms_individuals": "David Blisk, Suzanne McKeown, Spire Securities, LLC",
+              "description": "Case 16-01018 closed with outcome: Award against individual",
+              "award_document": "16-01018",
+              "pdf_url": "/sites/default/files/aao_documents/16-01018.pdf",
+              "case_summary": {
+                "Claimant(s):": "Amy Eisner, Carolyn Herrmann, David Freilicher, Ellen Nass, Hal Nass, Helene Posnick, Herbert Pfeffer, Jean Schram, John Skalicky, Kirstine Schaeffer, Lawrence Eisner, Marc Hyman, Myrna Barzelatto, Paul Posnick, Richard Schram, Robert Gluckin, Robert Skollar, Thomas Herrmann, William Bernstein, Estate of Joan B. Gluckin, HFP Holdings, LLC, Holla4, LLC, Myrna Wendlinger Family Limited Partners, Betty Ziernicki Trust",
+                "Claimant Representative(s):": "Adam J. Weinstein, Adam Gana",
+                "Respondent(s):": "David Blisk, Suzanne McKeown, Spire Securities, LLC",
+                "Neutral(s):": "Sandra D. Parker, Amy Banet, Albert Rizzo",
+                "Hearing Site:": "New York, NY"
+              },
+              "forum": "FINRA"
+            },
+            "matched_name": "David Blisk"
+          }
+        },
+        "description": "Arbitration issue found: Case 16-01018 for David Blisk, status: unknown, outcome: award."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "David Blisk",
+      "sec_arbitration": {
+        "source": "SEC_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_arbitration": {
+        "source": "FINRA_Arbitration",
+        "records_found": 15,
+        "records_filtered": 12,
+        "names_found": [
+          "David Blisk",
+          "David Blisk",
+          "David Blisk",
+          "Cecile Hult",
+          "Dianne Nolin",
+          "Eric Ashburn",
+          "Joseph Gallemore",
+          "Argent Bridge Advisors",
+          "LLC",
+          "David Lerner Associates",
+          "Inc.",
+          "David Tepper",
+          "Wedbush Securities Inc.",
+          "David Marina",
+          "Patrick Wainscott",
+          "David Theis",
+          "Barry Jin",
+          "Brent Porges",
+          "Charles Giaimo",
+          "David Sheppard",
+          "Joseph Valenti",
+          "Matthew Deblois",
+          "Matthew Siliato",
+          "Maxwell Delaney",
+          "Michael LaVolpe",
+          "William Leonard",
+          "David Niederkrome",
+          "John Jessum",
+          "Scott Baker",
+          "Stephen Rodgers",
+          "LPL Financial LLC",
+          "David Steckler",
+          "Legent Clearing",
+          "LLC",
+          "Linsco/Private Ledger Corp",
+          "Citigroup Global Markets",
+          "Inc.",
+          "Citigroup",
+          "Estate of David S. Knoll",
+          "David Riccio",
+          "E*Trade Securities LLC",
+          "David Page",
+          "SW Financial",
+          "Edward Jones"
+        ],
+        "name_scores": {
+          "David Blisk": 100.0,
+          "Cecile Hult": 5.26,
+          "Dianne Nolin": 5.26,
+          "Eric Ashburn": 5.26,
+          "Joseph Gallemore": 5.26,
+          "Argent Bridge Advisors": 9.52,
+          "LLC": 5.26,
+          "David Lerner Associates": 47.62,
+          "Inc.": 5.26,
+          "David Tepper": 47.37,
+          "Wedbush Securities Inc.": 9.52,
+          "David Marina": 47.37,
+          "Patrick Wainscott": 5.26,
+          "David Theis": 47.37,
+          "Barry Jin": 5.26,
+          "Brent Porges": 5.26,
+          "Charles Giaimo": 5.26,
+          "David Sheppard": 47.37,
+          "Joseph Valenti": 5.26,
+          "Matthew Deblois": 5.26,
+          "Matthew Siliato": 5.26,
+          "Maxwell Delaney": 5.26,
+          "Michael LaVolpe": 5.26,
+          "William Leonard": 5.26,
+          "David Niederkrome": 47.37,
+          "John Jessum": 5.26,
+          "Scott Baker": 5.26,
+          "Stephen Rodgers": 5.26,
+          "LPL Financial LLC": 9.52,
+          "David Steckler": 47.37,
+          "Legent Clearing": 5.26,
+          "Linsco/Private Ledger Corp": 9.52,
+          "Citigroup Global Markets": 9.52,
+          "Citigroup": 5.26,
+          "Estate of David S. Knoll": 9.52,
+          "David Riccio": 47.37,
+          "E*Trade Securities LLC": 9.52,
+          "David Page": 47.37,
+          "SW Financial": 5.26,
+          "Edward Jones": 5.26
+        },
+        "exact_match_found": true,
+        "status": "Exact matches found"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for David Blisk; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "Failure to supervise an unaffiliated RIA from 9/2009 to 2/2011.",
+            "Damage Amount Requested": "$22,000,000.00",
+            "Damages Granted": "$3,000,000.00",
+            "DisplayAAOLinkIfExists": "Y",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "17-01361",
+            "Regulator Statement": "Arbitration Case No. 16-01018 was consolidated with Arbitration Case No. 17-01361.",
+            "Broker Comment": [
+              "Mr. Blisk vehemently denies the allegations of a failure to supervise.  Spire Securities provided no investment advisory services to any of the Claimants. The alleged fraudulent conduct involved an unaffiliated SEC registered investment adviser with whom the Claimants established advisory accounts and purchased investments offered by this adviser.  The Investment Advisor that this claim identified, was subject to a separate regulatory regime under the Investment Advisors Act.  Claimants received the advisors offering materials that related to the investment now being complained of.   Spire was not mentioned in these materials.   The fraudulent conduct,  involving the adviser complained of,  was the subject of an SEC Complaint against the investment adviser and its principal that occurred several years after the former series 7 broker had resigned from Spire.  Arbitration award of $3000000 filed 6/20/2019 for claimants.  Motion to Vacate filed by respondents 7/22/2019."
+            ]
+          },
+          "event_date": "5/30/2017",
+          "resolution": "Award / Judgment"
+        },
+        "description": "Customer dispute on 5/30/2017. Resolution: Award / Judgment. Allegations: Failure to supervise an unaffiliated RIA from 9/2009 to 2/2011.. Damage requested: $22,000,000.00. Settlement: Not specified"
+      },
+      {
+        "alert_type": "Arbitration Compliance",
+        "alert_category": "ARBITRATION",
+        "severity": "HIGH",
+        "metadata": {
+          "arbitration": {
+            "case_id": "17-01361",
+            "date": "06/20/2019",
+            "details": {
+              "action_type": "Award",
+              "firms_individuals": "David Blisk, Suzzane McKeown, Spire Securities, LLC",
+              "description": "Case 17-01361 closed with outcome: Award against individual",
+              "award_document": "17-01361",
+              "pdf_url": "/sites/default/files/aao_documents/17-01361.pdf",
+              "case_summary": {
+                "Claimant(s):": "Amy Eisner, Carolyn Herrmann, David Freilicher, Ellen Nass, Hal Nass, Helene Posnick, Jean Schram, John Skalicky, Kirstine Schaeffer, Lawrence Eisner, Marc Hyman, Paul Posnick, Richard Schram, Robert Gluckin, Robert Skollar, Thomas Herrmann, William Bernstein, Estate of Joan B. Gluckin, HFP Holdings, LLC, Holla4, LLC, Betty Ziernicki Trust",
+                "Claimant Representative(s):": "Adam J. Weinstein",
+                "Respondent(s):": "David Blisk, Suzzane McKeown, Spire Securities, LLC",
+                "Neutral(s):": "Dora M. Lassinger, Peter A. Goldman, Thomas Michael Gandolfo",
+                "Hearing Site:": "New York, NY"
+              },
+              "forum": "FINRA"
+            },
+            "matched_name": "David Blisk"
+          }
+        },
+        "description": "Arbitration issue found: Case 17-01361 for David Blisk, status: unknown, outcome: award."
+      },
+      {
+        "alert_type": "Arbitration Compliance",
+        "alert_category": "ARBITRATION",
+        "severity": "HIGH",
+        "metadata": {
+          "arbitration": {
+            "case_id": "16-01018",
+            "date": "06/20/2019",
+            "details": {
+              "action_type": "Award",
+              "firms_individuals": "David Blisk, Suzanne McKeown, Spire Securities, LLC",
+              "description": "Case 16-01018 closed with outcome: Award against individual",
+              "award_document": "16-01018",
+              "pdf_url": "/sites/default/files/aao_documents/16-01018.pdf",
+              "case_summary": {
+                "Claimant(s):": "Amy Eisner, Carolyn Herrmann, David Freilicher, Ellen Nass, Hal Nass, Helene Posnick, Herbert Pfeffer, Jean Schram, John Skalicky, Kirstine Schaeffer, Lawrence Eisner, Marc Hyman, Myrna Barzelatto, Paul Posnick, Richard Schram, Robert Gluckin, Robert Skollar, Thomas Herrmann, William Bernstein, Estate of Joan B. Gluckin, HFP Holdings, LLC, Holla4, LLC, Myrna Wendlinger Family Limited Partners, Betty Ziernicki Trust",
+                "Claimant Representative(s):": "Adam J. Weinstein, Adam Gana",
+                "Respondent(s):": "David Blisk, Suzanne McKeown, Spire Securities, LLC",
+                "Neutral(s):": "Sandra D. Parker, Amy Banet, Albert Rizzo",
+                "Hearing Site:": "New York, NY"
+              },
+              "forum": "FINRA"
+            },
+            "matched_name": "David Blisk"
+          }
+        },
+        "description": "Arbitration issue found: Case 16-01018 for David Blisk, status: unknown, outcome: award."
+      }
+    ]
+  }
+}

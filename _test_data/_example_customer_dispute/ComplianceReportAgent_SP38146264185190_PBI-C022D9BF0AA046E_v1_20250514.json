@@ -1,0 +1,564 @@
+{
+  "reference_id": "SP38146264185190_PBI-C022D9BF0AA046E",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-C022D9BF0AA046E",
+    "first_name": "Stephanie",
+    "last_name": "Richman",
+    "employee_number": "EN-044671",
+    "zip": "94710",
+    "crdNumber": "1638779",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "1638779",
+    "individual_name": "Stephanie Richman",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "FINRA_BrokerCheck",
+    "basic_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "STEPHANIE NOREEN RICHMAN",
+      "other_names": [],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "7/26/2002",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Closed-No Action",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "THE CUSTOMERS ALLEGE THEY WERE MISLED INTO INVESTING IN A HIGH-RISK MUTUAL FUND BY MS. RICHMAN IN FEBRUARY 2002.",
+            "Damage Amount Requested": "$52,775.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "8/11/1997",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "3/31/1992",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 10",
+          "examName": "General Securities Sales Supervisor - General Module Examination",
+          "examTakenDate": "9/30/2005",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 9",
+          "examName": "General Securities Sales Supervisor - Options Module Examination",
+          "examTakenDate": "9/3/2005",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "7/12/2017",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "4/21/1990",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 6",
+          "examName": "Investment Company Products/Variable Contracts Representative Examination",
+          "examTakenDate": "4/7/1987",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "7784",
+          "firm_name": "FIDELITY BROKERAGE SERVICES LLC",
+          "registration_begin_date": "5/28/2004",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/12/2017"
+        },
+        {
+          "firm_id": "17507",
+          "firm_name": "FIDELITY INVESTMENTS INSTITUTIONAL SERVICES COMPANY, INC.",
+          "registration_begin_date": "10/21/1999",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "5/27/2004"
+        },
+        {
+          "firm_id": "7784",
+          "firm_name": "FIDELITY BROKERAGE SERVICES, INC.",
+          "registration_begin_date": "10/21/1993",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "10/21/1999"
+        },
+        {
+          "firm_id": "10510",
+          "firm_name": "SMITH NEW COURT, INC.",
+          "registration_begin_date": "4/30/1990",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "6/12/1992"
+        }
+      ],
+      "crd_number": "1638779"
+    },
+    "detailed_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "STEPHANIE NOREEN RICHMAN",
+      "other_names": [],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "7/26/2002",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Closed-No Action",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "THE CUSTOMERS ALLEGE THEY WERE MISLED INTO INVESTING IN A HIGH-RISK MUTUAL FUND BY MS. RICHMAN IN FEBRUARY 2002.",
+            "Damage Amount Requested": "$52,775.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "8/11/1997",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "3/31/1992",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 10",
+          "examName": "General Securities Sales Supervisor - General Module Examination",
+          "examTakenDate": "9/30/2005",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 9",
+          "examName": "General Securities Sales Supervisor - Options Module Examination",
+          "examTakenDate": "9/3/2005",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "7/12/2017",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "4/21/1990",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 6",
+          "examName": "Investment Company Products/Variable Contracts Representative Examination",
+          "examTakenDate": "4/7/1987",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "7784",
+          "firm_name": "FIDELITY BROKERAGE SERVICES LLC",
+          "registration_begin_date": "5/28/2004",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/12/2017"
+        },
+        {
+          "firm_id": "17507",
+          "firm_name": "FIDELITY INVESTMENTS INSTITUTIONAL SERVICES COMPANY, INC.",
+          "registration_begin_date": "10/21/1999",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "5/27/2004"
+        },
+        {
+          "firm_id": "7784",
+          "firm_name": "FIDELITY BROKERAGE SERVICES, INC.",
+          "registration_begin_date": "10/21/1993",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "10/21/1999"
+        },
+        {
+          "firm_id": "10510",
+          "firm_name": "SMITH NEW COURT, INC.",
+          "registration_begin_date": "4/30/1990",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "6/12/1992"
+        }
+      ],
+      "crd_number": "1638779"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "1638779",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA BrokerCheck data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "Stephanie",
+        "middle": null,
+        "last": "Richman"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "STEPHANIE",
+            "middle": "NOREEN",
+            "last": "RICHMAN"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        }
+      ],
+      "best_match": {
+        "name_source": "main_fetched_name",
+        "fetched_name": {
+          "first": "STEPHANIE",
+          "middle": "NOREEN",
+          "last": "RICHMAN"
+        },
+        "score": 95.0,
+        "first_score": 1.0,
+        "middle_score": 0.5,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "Stephanie Richman has 1 customer dispute disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "THE CUSTOMERS ALLEGE THEY WERE MISLED INTO INVESTING IN A HIGH-RISK MUTUAL FUND BY MS. RICHMAN IN FEBRUARY 2002.",
+            "Damage Amount Requested": "$52,775.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          },
+          "event_date": "7/26/2002",
+          "resolution": "Closed-No Action"
+        },
+        "description": "Customer dispute on 7/26/2002. Resolution: Closed-No Action. Allegations: THE CUSTOMERS ALLEGE THEY WERE MISLED INTO INVESTING IN A HIGH-RISK MUTUAL FUND BY MS. RICHMAN IN FEBRUARY 2002.. Damage requested: $52,775.00. Settlement: Not specified"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No matching disciplinary records found for Stephanie Richman, 9 records reviewed with 9 filtered.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Search Info",
+        "alert_category": "DISCIPLINARY",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Stephanie Richman",
+            "sec_disciplinary": {
+              "source": "SEC_Disciplinary",
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records found"
+            },
+            "finra_disciplinary": {
+              "source": "FINRA_Disciplinary",
+              "records_found": 9,
+              "records_filtered": 9,
+              "names_found": [
+                "Stephanie Amundsen Murray",
+                "Stephanie J. Xiao",
+                "Stephanie E. Jackson",
+                "STEPHANIE LYNN FAGENSON",
+                "STEPHANIE D. SAWYER",
+                "STEPHANIE ANN BECKER",
+                "STEPHANIE A. BOUDREAUX",
+                "STEPHANIE LEE WEBSTER",
+                "STEPHANIE M. HAGGERTY"
+              ],
+              "name_scores": {
+                "Stephanie Amundsen Murray": 47.62,
+                "Stephanie J. Xiao": 47.62,
+                "Stephanie E. Jackson": 47.62,
+                "STEPHANIE LYNN FAGENSON": 47.62,
+                "STEPHANIE D. SAWYER": 47.62,
+                "STEPHANIE ANN BECKER": 47.62,
+                "STEPHANIE A. BOUDREAUX": 47.62,
+                "STEPHANIE LEE WEBSTER": 47.62,
+                "STEPHANIE M. HAGGERTY": 47.62
+              },
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'Stephanie Richman'"
+            }
+          }
+        },
+        "description": "Found 9 disciplinary records for Stephanie Richman, 9 filtered out."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Stephanie Richman",
+      "sec_disciplinary": {
+        "source": "SEC_Disciplinary",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_disciplinary": {
+        "source": "FINRA_Disciplinary",
+        "records_found": 9,
+        "records_filtered": 9,
+        "names_found": [
+          "Stephanie Amundsen Murray",
+          "Stephanie J. Xiao",
+          "Stephanie E. Jackson",
+          "STEPHANIE LYNN FAGENSON",
+          "STEPHANIE D. SAWYER",
+          "STEPHANIE ANN BECKER",
+          "STEPHANIE A. BOUDREAUX",
+          "STEPHANIE LEE WEBSTER",
+          "STEPHANIE M. HAGGERTY"
+        ],
+        "name_scores": {
+          "Stephanie Amundsen Murray": 47.62,
+          "Stephanie J. Xiao": 47.62,
+          "Stephanie E. Jackson": 47.62,
+          "STEPHANIE LYNN FAGENSON": 47.62,
+          "STEPHANIE D. SAWYER": 47.62,
+          "STEPHANIE ANN BECKER": 47.62,
+          "STEPHANIE A. BOUDREAUX": 47.62,
+          "STEPHANIE LEE WEBSTER": 47.62,
+          "STEPHANIE M. HAGGERTY": 47.62
+        },
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Stephanie Richman'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": true,
+    "compliance_explanation": "No matching arbitration records found for Stephanie Richman, but 15 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Arbitration Search Info",
+        "alert_category": "ARBITRATION",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Stephanie Richman",
+            "sec_arbitration": {
+              "source": "SEC_Arbitration",
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records found"
+            },
+            "finra_arbitration": {
+              "source": "FINRA_Arbitration",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Morgan Stanley",
+                "Kevin Caputo",
+                "Citigroup Global Markets",
+                "Inc.",
+                "Douglas Frederick",
+                "Stephanie Chooi",
+                "Stephanie Yoingco",
+                "Wachovia Securities",
+                "LLC",
+                "Kurt Sylvia",
+                "Chase Investment Services Corp.",
+                "Morgan Keegan & Company",
+                "LLC",
+                "Mizuho Securities USA Inc."
+              ],
+              "name_scores": {
+                "Morgan Stanley": 5.26,
+                "Kevin Caputo": 5.26,
+                "Citigroup Global Markets": 9.52,
+                "Inc.": 5.26,
+                "Douglas Frederick": 5.26,
+                "Stephanie Chooi": 47.37,
+                "Stephanie Yoingco": 47.37,
+                "Wachovia Securities": 5.26,
+                "LLC": 5.26,
+                "Kurt Sylvia": 5.26,
+                "Chase Investment Services Corp.": 9.52,
+                "Morgan Keegan & Company": 9.52,
+                "Mizuho Securities USA Inc.": 9.52
+              },
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'Stephanie Richman'"
+            }
+          }
+        },
+        "description": "Found 15 arbitration records for Stephanie Richman, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Stephanie Richman",
+      "sec_arbitration": {
+        "source": "SEC_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_arbitration": {
+        "source": "FINRA_Arbitration",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Morgan Stanley",
+          "Kevin Caputo",
+          "Citigroup Global Markets",
+          "Inc.",
+          "Douglas Frederick",
+          "Stephanie Chooi",
+          "Stephanie Yoingco",
+          "Wachovia Securities",
+          "LLC",
+          "Kurt Sylvia",
+          "Chase Investment Services Corp.",
+          "Morgan Keegan & Company",
+          "LLC",
+          "Mizuho Securities USA Inc."
+        ],
+        "name_scores": {
+          "Morgan Stanley": 5.26,
+          "Kevin Caputo": 5.26,
+          "Citigroup Global Markets": 9.52,
+          "Inc.": 5.26,
+          "Douglas Frederick": 5.26,
+          "Stephanie Chooi": 47.37,
+          "Stephanie Yoingco": 47.37,
+          "Wachovia Securities": 5.26,
+          "LLC": 5.26,
+          "Kurt Sylvia": 5.26,
+          "Chase Investment Services Corp.": 9.52,
+          "Morgan Keegan & Company": 9.52,
+          "Mizuho Securities USA Inc.": 9.52
+        },
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Stephanie Richman'"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for Stephanie Richman; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "THE CUSTOMERS ALLEGE THEY WERE MISLED INTO INVESTING IN A HIGH-RISK MUTUAL FUND BY MS. RICHMAN IN FEBRUARY 2002.",
+            "Damage Amount Requested": "$52,775.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          },
+          "event_date": "7/26/2002",
+          "resolution": "Closed-No Action"
+        },
+        "description": "Customer dispute on 7/26/2002. Resolution: Closed-No Action. Allegations: THE CUSTOMERS ALLEGE THEY WERE MISLED INTO INVESTING IN A HIGH-RISK MUTUAL FUND BY MS. RICHMAN IN FEBRUARY 2002.. Damage requested: $52,775.00. Settlement: Not specified"
+      }
+    ]
+  }
+}

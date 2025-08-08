@@ -1,0 +1,544 @@
+{
+  "basicInformation": {
+    "individualId": 4053253,
+    "firstName": "MOEEZ",
+    "middleName": "UL-HAQ",
+    "lastName": "ANSARI",
+    "otherNames": [
+      "MOE  ANSARI"
+    ],
+    "bcScope": "Active",
+    "iaScope": "Active",
+    "daysInIndustryCalculatedDate": "12/26/1999"
+  },
+  "currentEmployments": [
+    {
+      "firmId": 125472,
+      "firmName": "COMPAK SECURITIES, INC.",
+      "iaOnly": "N",
+      "registrationBeginDate": "9/3/2003",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE",
+      "bdSECNumber": "65804",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "287873",
+          "street1": "1801 DOVE STREET",
+          "city": "NEWPORT BEACH",
+          "cityAlias": [
+            "NEWPORT BEACH"
+          ],
+          "state": "CA",
+          "country": "United States",
+          "zipCode": "92660",
+          "latitude": "33.637966",
+          "longitude": "-117.873246",
+          "geoLocation": "33.637966,-117.873246",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "12/06/2002"
+        },
+        {
+          "displayOrder": 2,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "299970",
+          "street1": "8865 E. BELL ROAD, SUITE 201",
+          "city": "SCOTTSDALE",
+          "cityAlias": [
+            "SCOTTSDALE"
+          ],
+          "state": "AZ",
+          "country": "United States",
+          "zipCode": "85251",
+          "latitude": "33.494096",
+          "longitude": "-111.922881",
+          "geoLocation": "33.494096,-111.922881",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "08/21/2006"
+        }
+      ]
+    }
+  ],
+  "currentIAEmployments": [
+    {
+      "firmId": 109930,
+      "firmName": "COMPAK ASSET MANAGEMENT",
+      "iaOnly": "Y",
+      "registrationBeginDate": "3/21/2001",
+      "firmBCScope": "NOTINSCOPE",
+      "firmIAScope": "ACTIVE",
+      "iaSECNumber": "58081",
+      "iaSECNumberType": "801",
+      "branchOfficeLocations": [
+        {
+          "displayOrder": 1,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "branchOfficeId": "62583",
+          "street1": "1801 DOVE STREET",
+          "city": "NEWPORT BEACH",
+          "cityAlias": [
+            "NEWPORT BEACH"
+          ],
+          "state": "CA",
+          "country": "United States",
+          "zipCode": "92660",
+          "latitude": "33.637966",
+          "longitude": "-117.873246",
+          "geoLocation": "33.637966,-117.873246",
+          "nonRegisteredOfficeFlag": "N",
+          "elaBeginDate": "12/01/1999"
+        },
+        {
+          "displayOrder": 2,
+          "locatedAtFlag": "Y",
+          "supervisedFromFlag": "N",
+          "privateResidenceFlag": "N",
+          "street1": "1801 DOVE STREET",
+          "city": "NEWPORT BEACH",
+          "cityAlias": [
+            "NEWPORT BEACH"
+          ],
+          "state": "CA",
+          "country": "United States",
+          "zipCode": "92660",
+          "latitude": "33.637966",
+          "longitude": "-117.873246",
+          "geoLocation": "33.637966,-117.873246",
+          "nonRegisteredOfficeFlag": "Y",
+          "elaBeginDate": "12/01/1999"
+        }
+      ]
+    }
+  ],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "52017",
+      "firmId": 100100,
+      "firmName": "MULTIPLE FINANCIAL SERVICES, INC.",
+      "city": "SAN JUAN CAPISTRANO",
+      "state": "CA",
+      "country": "USA",
+      "registrationBeginDate": "1/27/2003",
+      "registrationEndDate": "10/30/2003",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "55518",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "42007",
+      "firmId": 25803,
+      "firmName": "TRIAD ADVISORS, INC.",
+      "city": "ATLANTA",
+      "state": "GA",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "2/8/2001",
+      "registrationEndDate": "4/2/2002",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "26701",
+      "firmId": 10249,
+      "firmName": "SENTRA SECURITIES CORPORATION",
+      "city": "PHOENIX",
+      "state": "AZ",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "10/27/1999",
+      "registrationEndDate": "12/8/2000",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "previousIAEmployments": [
+    {
+      "iaOnly": "Y",
+      "bdSECNumber": "52017",
+      "firmId": 100100,
+      "firmName": "MULTIPLE FINANCIAL SERVICES, INC.",
+      "city": "MISSION VIEJO",
+      "state": "CA",
+      "country": "United States",
+      "registrationBeginDate": "1/27/2003",
+      "registrationEndDate": "10/30/2003",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "INACTIVE"
+    }
+  ],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "7/12/2002",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 10,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "THE CUSTOMER'S COMPLIANT IS AGAINST ANSARI AND COMPAK TRADING CO. THE CUSTOMER ALLEGES THAT ANSARI MISREPRESENTED THE RISKS, CHURNED HIS ACCOUNT AND VIOLATED HIS FIDUCIARY DUTY TO THE CUSTOMER. THE ALLEGED ACTIVITES OCCURRED BETWEEN SEPTEMBER 1999 AND APRIL 2000. THE ALLEGED ACTIVITIES DID NOT OCCUR THROUGH SENTRA SECURITIES CORPORATION.",
+        "Damage Amount Requested": "$32,166.09",
+        "Settlement Amount": "$4,000.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": ""
+      }
+    },
+    {
+      "eventDate": "7/12/2002",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 10,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "THE CUSTOMER  ALLEGES THAT BETWEEN APRIL 1999 AND JANUARY 2001 ANSARI VIOLATED HIS FIDUCIARY RESPONSIBILITY TO THE CUSTOMER  BY OVER EXTENDING HIS MANAGED COMMODITIES ACCOUNT ON MARGIN. THE CUSTOMER  STATES THAT HIS COMMODITIES ACCOUNT WAS WITH COMPAK TRADING COMPANY/COMPAK ASSET MANAGEMENT. THE ALLEGED ACTIVITES DID NOT OCCUR THROUGH SENTRA SECURITIES CORPORATION.",
+        "Damage Amount Requested": "$22,726.79",
+        "Settlement Amount": "$2,500.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": ""
+      }
+    },
+    {
+      "eventDate": "12/6/2001",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Closed-No Action",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 10,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "THE FIRM RECEIVED A CUSTOMER COMPLAINT FROM THE LAW OFFICES OF HOLAND & KNIGHT ON BEHALF OF 4 INDIVIDUALS ALLEGING THAT OPTION TRANSACTIONS WERE EXECUTED IN CLIENT ACCOUNTS WITHOUT THE DISCLOSURES OF RISK.  THE FIRM HAS REQUESTED THAT HOLAND & KNIGHT ADVISE COMPAK ASSET OF THE TRADE SPCIFICS.  COMPAK ASSET TO DATE HAS NOT HEARD BACK FROM HOLAND & KNIGHT.",
+        "Damage Amount Requested": "$111,405.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": ""
+      }
+    },
+    {
+      "eventDate": "10/26/2001",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 10,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "NOT REGISTERED AS A CTA, DID NOT DISCLOSE RISK.",
+        "Damage Amount Requested": "$68,000.00",
+        "Settlement Amount": "$29,000.00",
+        "DisplayAAOLinkIfExists": "Y",
+        "arbitrationClaimFiledDetail": "01-101",
+        "arbitrationDocketNumber": "",
+        "Broker Comment": [
+          "ADM INVESTOR SERVICES CONTRIBUTED $14,500.00 AND THE BALANCE OF $14,500.00 WAS PAID BY MR. ROBERT DUFFY.  "
+        ]
+      }
+    },
+    {
+      "eventDate": "3/19/2001",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 10,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "CLIENT ALLEGED THAT ACCOUNT EXECUTIVE [OTHER FIRM EMPLOYEE] AND MOEEZ ANSARI CHURNED HIS ACCOUNT.  AT THE TIME OF THE CLIENT HAD A DEBIT BALANCE IN HIS ACCOUNT OF $14,539.73.",
+        "Damage Amount Requested": "$14,539.73",
+        "Settlement Amount": "$14,539.73",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": "",
+        "Broker Comment": [
+          "THE FIRM MADE A DECISION TO PAY THE DEBIT BALANCE OF $14,539.73 TO THE CLEAARING FIRM TO RESOLVE THE MATTER. "
+        ]
+      }
+    },
+    {
+      "eventDate": "8/11/2000",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Award / Judgment",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 10,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "CLIENT FILED A COMPLAINT AGAINST COMPAK TRADING, ITS PRINCIPAL MOEEZ ANSARI AND ACCOUNT EXECUTIVE [OTHER FIRM EMPLOYEE] ALLEGING THAT THE FIRM AND ITS REPRESENTATIVES FAILED TO DISCLOSE RISKS; UNAUTHORIZED TRADING; MISREPRESENTATION; FRAUDULANT SOLICITATION.",
+        "Damage Amount Requested": "$160,283.73",
+        "Damages Granted": "$57,527.91",
+        "DisplayAAOLinkIfExists": "Y",
+        "arbitrationClaimFiledDetail": "00--71",
+        "arbitrationDocketNumber": "",
+        "Broker Comment": [
+          "[CUSTOMER] WAS AWARDED $57,527.91. THE FIRM CONTRIBUTED $27,763.95; THE ACCOUNT EXECUTIVE [OTHER FIRM EMPLOYEE] PAID THE BALANCE OF $27,763.95."
+        ]
+      }
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 1,
+    "principalExamCount": 2,
+    "productExamCount": 3
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 66",
+      "examName": "Uniform Combined State Law Examination",
+      "examTakenDate": "1/10/2000",
+      "examScope": "BOTH"
+    }
+  ],
+  "principalExamCategory": [
+    {
+      "examCategory": "Series 14",
+      "examName": "Compliance Officer Examination",
+      "examTakenDate": "1/2/2023",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 24",
+      "examName": "General Securities Principal Examination",
+      "examTakenDate": "5/19/2003",
+      "examScope": "BC"
+    }
+  ],
+  "productExamCategory": [
+    {
+      "examCategory": "Series 99TO",
+      "examName": "Operations Professional Examination",
+      "examTakenDate": "1/2/2023",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "10/1/2018",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "7/13/1999",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "approvedSRORegistrationCount": 1,
+    "approvedFinraRegistrationCount": 1,
+    "approvedStateRegistrationCount": 9,
+    "approvedIAStateRegistrationCount": 21
+  },
+  "registeredStates": [
+    {
+      "state": "Arizona",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "6/4/2003"
+    },
+    {
+      "state": "Arizona",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "4/11/2007"
+    },
+    {
+      "state": "California",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/21/2001"
+    },
+    {
+      "state": "California",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "4/10/2007"
+    },
+    {
+      "state": "Colorado",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "6/11/2014"
+    },
+    {
+      "state": "Colorado",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "4/13/2016"
+    },
+    {
+      "state": "Hawaii",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "4/5/2016"
+    },
+    {
+      "state": "Idaho",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "11/22/2010"
+    },
+    {
+      "state": "Idaho",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "5/29/2014"
+    },
+    {
+      "state": "Illinois",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "11/19/2010"
+    },
+    {
+      "state": "Indiana",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/21/2023"
+    },
+    {
+      "state": "Iowa",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/20/2023"
+    },
+    {
+      "state": "Maryland",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "6/2/2014"
+    },
+    {
+      "state": "Michigan",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "5/29/2014"
+    },
+    {
+      "state": "Minnesota",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "5/28/2014"
+    },
+    {
+      "state": "Nevada",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "1/21/2009"
+    },
+    {
+      "state": "Nevada",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "11/19/2010"
+    },
+    {
+      "state": "New Mexico",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/13/2023"
+    },
+    {
+      "state": "New York",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/13/2023"
+    },
+    {
+      "state": "North Carolina",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "5/29/2014"
+    },
+    {
+      "state": "Ohio",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "3/13/2023"
+    },
+    {
+      "state": "Oregon",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "8/31/2005"
+    },
+    {
+      "state": "Oregon",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "5/28/2014"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED_RES",
+      "regDate": "10/20/2004"
+    },
+    {
+      "state": "Texas",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "4/9/2015"
+    },
+    {
+      "state": "Utah",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "2/4/2025"
+    },
+    {
+      "state": "Virginia",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "2/25/2011"
+    },
+    {
+      "state": "Washington",
+      "regScope": "BC",
+      "status": "APPROVED",
+      "regDate": "11/18/2010"
+    },
+    {
+      "state": "Washington",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "11/18/2010"
+    },
+    {
+      "state": "Wisconsin",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "5/30/2014"
+    }
+  ],
+  "registeredSROs": [
+    {
+      "sro": "FINRA",
+      "status": "APPROVED",
+      "CategoriesList": [
+        "Compliance Officer",
+        "General Securities Principal",
+        "Full Registration/General Securities Representative",
+        "Operations Professional"
+      ]
+    }
+  ],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}

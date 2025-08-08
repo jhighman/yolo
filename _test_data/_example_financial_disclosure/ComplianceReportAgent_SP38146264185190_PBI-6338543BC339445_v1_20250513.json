@@ -1,0 +1,406 @@
+{
+  "reference_id": "SP38146264185190_PBI-6338543BC339445",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-6338543BC339445",
+    "first_name": "Anthony",
+    "last_name": "Rome",
+    "employee_number": "EN-055761",
+    "zip": "34637",
+    "crdNumber": "6436272",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "6436272",
+    "individual_name": "Anthony Rome",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "FINRA_BrokerCheck",
+    "basic_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "ANTHONY J ROME",
+      "other_names": [],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "9/30/2016",
+          "disclosureType": "Financial",
+          "disclosureResolution": "Final",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Type": "Compromise",
+            "Disposition": "Satisfied/Released"
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 66",
+          "examName": "Uniform Combined State Law Examination",
+          "examTakenDate": "12/6/2016",
+          "examScope": "BOTH"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "6/16/2015",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "129052",
+          "firm_name": "PNC INVESTMENTS",
+          "registration_begin_date": "8/27/2018",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "12/17/2018"
+        },
+        {
+          "firm_id": "6627",
+          "firm_name": "AXA ADVISORS, LLC",
+          "registration_begin_date": "6/16/2015",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "4/23/2018"
+        }
+      ],
+      "crd_number": "6436272"
+    },
+    "detailed_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "ANTHONY J ROME",
+      "other_names": [],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "9/30/2016",
+          "disclosureType": "Financial",
+          "disclosureResolution": "Final",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Type": "Compromise",
+            "Disposition": "Satisfied/Released"
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 66",
+          "examName": "Uniform Combined State Law Examination",
+          "examTakenDate": "12/6/2016",
+          "examScope": "BOTH"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "6/16/2015",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "129052",
+          "firm_name": "PNC INVESTMENTS",
+          "registration_begin_date": "8/27/2018",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "12/17/2018"
+        },
+        {
+          "firm_id": "6627",
+          "firm_name": "AXA ADVISORS, LLC",
+          "registration_begin_date": "6/16/2015",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "4/23/2018"
+        }
+      ],
+      "crd_number": "6436272"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "6436272",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA BrokerCheck data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "Anthony",
+        "middle": null,
+        "last": "Rome"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "ANTHONY",
+            "middle": "J",
+            "last": "ROME"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        }
+      ],
+      "best_match": {
+        "name_source": "main_fetched_name",
+        "fetched_name": {
+          "first": "ANTHONY",
+          "middle": "J",
+          "last": "ROME"
+        },
+        "score": 95.0,
+        "first_score": 1.0,
+        "middle_score": 0.5,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "Anthony Rome has 1 financial disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Financial Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Type": "Compromise",
+            "Disposition": "Satisfied/Released"
+          },
+          "event_date": "9/30/2016",
+          "resolution": "Final"
+        },
+        "description": "Financial disclosure on 9/30/2016. Resolution: Final. Disposition: Satisfied/Released. Type: Compromise"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No matching disciplinary records found for Anthony Rome, but 16 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Search Info",
+        "alert_category": "DISCIPLINARY",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Anthony Rome",
+            "sec_disciplinary": {
+              "source": "SEC_Disciplinary",
+              "records_found": 1,
+              "records_filtered": 1,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'Anthony Rome'"
+            },
+            "finra_disciplinary": {
+              "source": "FINRA_Disciplinary",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Anthony G. Saab",
+                "Anthony Neil Wenham",
+                "Anthony J. Seifert",
+                "Anthony Neil Wenham",
+                "Robert Anthony Daly",
+                "CANTONE RESEARCH INC.ANTHONY CANTONE, CHRISTINE CANTONE",
+                "CANTONE RESEARCH INC.ANTHONY CANTONE, CHRISTINE CANTONE",
+                "Cantone Research Inc.Anthony J. Cantone, Raymond J. DeRobbio",
+                "Cantone Research Inc.Anthony J. Cantone, Raymond J. DeRobbio",
+                "Cantone Research Inc.Anthony J. Cantone, Raymond J. DeRobbio",
+                "Cantone Research Inc.Anthony J. Cantone, Raymond J. DeRobbio",
+                "Anthony Joseph Cantone",
+                "Anthony L. Cross",
+                "Todd Anthony Cirella",
+                "Anthony Baker Liddle",
+                "Philip Anthony Riposo",
+                "Anthony Joseph Graziano",
+                "Robert Anthony Guidicipietro"
+              ],
+              "name_scores": {
+                "Anthony G. Saab": 47.62,
+                "Anthony Neil Wenham": 47.62,
+                "Anthony J. Seifert": 47.62,
+                "Robert Anthony Daly": 9.52,
+                "CANTONE RESEARCH INC.ANTHONY CANTONE, CHRISTINE CANTONE": 0.0,
+                "Cantone Research Inc.Anthony J. Cantone, Raymond J. DeRobbio": 0.0,
+                "Anthony Joseph Cantone": 47.62,
+                "Anthony L. Cross": 47.62,
+                "Todd Anthony Cirella": 9.52,
+                "Anthony Baker Liddle": 47.62,
+                "Philip Anthony Riposo": 9.52,
+                "Anthony Joseph Graziano": 47.62,
+                "Robert Anthony Guidicipietro": 9.52
+              },
+              "exact_match_found": false,
+              "status": "Partial failure: Error processing 'Cantone Research Inc.Anthony J. Cantone, Raymond J. DeRobbio'"
+            }
+          }
+        },
+        "description": "Found 16 disciplinary records for Anthony Rome, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Anthony Rome",
+      "sec_disciplinary": {
+        "source": "SEC_Disciplinary",
+        "records_found": 1,
+        "records_filtered": 1,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Anthony Rome'"
+      },
+      "finra_disciplinary": {
+        "source": "FINRA_Disciplinary",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Anthony G. Saab",
+          "Anthony Neil Wenham",
+          "Anthony J. Seifert",
+          "Anthony Neil Wenham",
+          "Robert Anthony Daly",
+          "CANTONE RESEARCH INC.ANTHONY CANTONE, CHRISTINE CANTONE",
+          "CANTONE RESEARCH INC.ANTHONY CANTONE, CHRISTINE CANTONE",
+          "Cantone Research Inc.Anthony J. Cantone, Raymond J. DeRobbio",
+          "Cantone Research Inc.Anthony J. Cantone, Raymond J. DeRobbio",
+          "Cantone Research Inc.Anthony J. Cantone, Raymond J. DeRobbio",
+          "Cantone Research Inc.Anthony J. Cantone, Raymond J. DeRobbio",
+          "Anthony Joseph Cantone",
+          "Anthony L. Cross",
+          "Todd Anthony Cirella",
+          "Anthony Baker Liddle",
+          "Philip Anthony Riposo",
+          "Anthony Joseph Graziano",
+          "Robert Anthony Guidicipietro"
+        ],
+        "name_scores": {
+          "Anthony G. Saab": 47.62,
+          "Anthony Neil Wenham": 47.62,
+          "Anthony J. Seifert": 47.62,
+          "Robert Anthony Daly": 9.52,
+          "CANTONE RESEARCH INC.ANTHONY CANTONE, CHRISTINE CANTONE": 0.0,
+          "Cantone Research Inc.Anthony J. Cantone, Raymond J. DeRobbio": 0.0,
+          "Anthony Joseph Cantone": 47.62,
+          "Anthony L. Cross": 47.62,
+          "Todd Anthony Cirella": 9.52,
+          "Anthony Baker Liddle": 47.62,
+          "Philip Anthony Riposo": 9.52,
+          "Anthony Joseph Graziano": 47.62,
+          "Robert Anthony Guidicipietro": 9.52
+        },
+        "exact_match_found": false,
+        "status": "Partial failure: Error processing 'Cantone Research Inc.Anthony J. Cantone, Raymond J. DeRobbio'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": true,
+    "compliance_explanation": "No arbitration records found for Anthony Rome.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "searched_name": "Anthony Rome",
+      "sec_arbitration": {
+        "source": "SEC_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_arbitration": {
+        "source": "FINRA_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for Anthony Rome; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Financial Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Type": "Compromise",
+            "Disposition": "Satisfied/Released"
+          },
+          "event_date": "9/30/2016",
+          "resolution": "Final"
+        },
+        "description": "Financial disclosure on 9/30/2016. Resolution: Final. Disposition: Satisfied/Released. Type: Compromise"
+      }
+    ]
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "basicInformation": {
+    "individualId": 2246562,
+    "firstName": "BRETT",
+    "middleName": "DEREK",
+    "lastName": "ANDERSON",
+    "otherNames": [
+      "BRETT  ANDERSON"
+    ],
+    "bcScope": "InActive",
+    "iaScope": "Active",
+    "daysInIndustry": 6740
+  },
+  "currentEmployments": [],
+  "currentIAEmployments": [],
+  "previousEmployments": [
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "37954",
+      "firmId": 19532,
+      "firmName": "INTERNATIONAL RESEARCH SECURITIES, INC.",
+      "city": "DALLAS",
+      "state": "TX",
+      "registrationBeginDate": "12/14/2007",
+      "registrationEndDate": "12/31/2015",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "50386",
+      "firmId": 43730,
+      "firmName": "AMERICAN SECURITIES GROUP, INC.",
+      "city": "DALLAS",
+      "state": "TX",
+      "registrationBeginDate": "3/11/2005",
+      "registrationEndDate": "10/8/2007",
+      "firmBCScope": "INACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "29938",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "16514",
+      "firmId": 5393,
+      "firmName": "CHARLES SCHWAB & CO., INC.",
+      "city": "WESTLAKE",
+      "state": "TX",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "4/19/2002",
+      "registrationEndDate": "8/9/2004",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "14235",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "7221",
+      "firmId": 7691,
+      "firmName": "MERRILL LYNCH, PIERCE, FENNER & SMITH INCORPORATED",
+      "city": "NEW YORK",
+      "state": "NY",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "11/5/1996",
+      "registrationEndDate": "9/1/1998",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "iaSECNumber": "29938",
+      "iaSECNumberType": "801",
+      "bdSECNumber": "16514",
+      "firmId": 5393,
+      "firmName": "CHARLES SCHWAB & CO., INC.",
+      "city": "WESTLAKE",
+      "state": "TX",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "4/6/1993",
+      "registrationEndDate": "10/10/1996",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "ACTIVE"
+    },
+    {
+      "iaOnly": "N",
+      "bdSECNumber": "29533",
+      "firmId": 13686,
+      "firmName": "H.D. VEST INVESTMENT SECURITIES, INC.",
+      "city": "DALLAS",
+      "state": "TX",
+      "country": "UNITED STATES",
+      "registrationBeginDate": "2/1/1993",
+      "registrationEndDate": "4/14/1993",
+      "firmBCScope": "ACTIVE",
+      "firmIAScope": "NOTINSCOPE"
+    }
+  ],
+  "previousIAEmployments": [],
+  "disclosureFlag": "Y",
+  "iaDisclosureFlag": "Y",
+  "disclosures": [
+    {
+      "eventDate": "10/21/2002",
+      "disclosureType": "Customer Dispute",
+      "disclosureResolution": "Settled",
+      "isIapdExcludedCCFlag": "N",
+      "isBcExcludedCCFlag": "N",
+      "bcCtgryType": 11,
+      "iaCtgryType": 10,
+      "disclosureDetail": {
+        "Allegations": "CLIENT ALLEGES A FAILURE TO FOLLOW INSTRUCTIONS IN A TIMELY MANNER TO LIQUIDATE MUTUAL FUND POSITIONS HELD AT ANOTHER FIRM AND TRANSFER THE ASSETS TO SCHWAB ON SEPTEMBER 3, 2002. REP DISPUTES CLIENT CLAIM, AND CLAIMS AGREEMENT WAS TO HOLD CERTAIN MUTUAL FUNDS WHILE SELLING CERTAIN OTHERS.",
+        "Damage Amount Requested": "$13,041.00",
+        "Settlement Amount": "$13,041.00",
+        "DisplayAAOLinkIfExists": "N",
+        "arbitrationClaimFiledDetail": "",
+        "arbitrationDocketNumber": ""
+      }
+    }
+  ],
+  "examsCount": {
+    "stateExamCount": 3,
+    "principalExamCount": 0,
+    "productExamCount": 2
+  },
+  "stateExamCategory": [
+    {
+      "examCategory": "Series 66",
+      "examName": "Uniform Combined State Law Examination",
+      "examTakenDate": "5/9/2002",
+      "examScope": "BOTH"
+    },
+    {
+      "examCategory": "Series 65",
+      "examName": "Uniform Investment Adviser Law Examination",
+      "examTakenDate": "11/14/1996",
+      "examScope": "IA"
+    },
+    {
+      "examCategory": "Series 63",
+      "examName": "Uniform Securities Agent State Law Examination",
+      "examTakenDate": "9/4/1992",
+      "examScope": "BC"
+    }
+  ],
+  "principalExamCategory": [],
+  "productExamCategory": [
+    {
+      "examCategory": "SIE",
+      "examName": "Securities Industry Essentials Examination",
+      "examTakenDate": "12/31/2015",
+      "examScope": "BC"
+    },
+    {
+      "examCategory": "Series 7",
+      "examName": "General Securities Representative Examination",
+      "examTakenDate": "12/23/1992",
+      "examScope": "BC"
+    }
+  ],
+  "registrationCount": {
+    "approvedSRORegistrationCount": 0,
+    "approvedFinraRegistrationCount": 0,
+    "approvedStateRegistrationCount": 0
+  },
+  "registeredStates": [
+    {
+      "state": "California",
+      "regScope": "IA",
+      "status": "APP_PEND_IARCE",
+      "regDate": "2/26/2020"
+    },
+    {
+      "state": "Maryland",
+      "regScope": "IA",
+      "status": "APP_PEND_IARCE",
+      "regDate": "7/10/2024"
+    },
+    {
+      "state": "Texas",
+      "regScope": "IA",
+      "status": "APPROVED",
+      "regDate": "2/25/2020"
+    }
+  ],
+  "registeredSROs": [],
+  "brokerDetails": {
+    "hasBCComments": "N",
+    "hasIAComments": "N",
+    "legacyReportStatusDescription": "Not Requested"
+  }
+}

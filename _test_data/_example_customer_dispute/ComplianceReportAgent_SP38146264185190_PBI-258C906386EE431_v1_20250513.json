@@ -1,0 +1,620 @@
+{
+  "reference_id": "SP38146264185190_PBI-258C906386EE431",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-258C906386EE431",
+    "first_name": "Michael",
+    "last_name": "Millman",
+    "employee_number": "EN-044973",
+    "zip": "89501",
+    "crdNumber": "2696729",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "2696729",
+    "individual_name": "Michael Millman",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "FINRA_BrokerCheck",
+    "basic_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "MICHAEL STEVEN MILLMAN",
+      "other_names": [],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "5/25/2012",
+          "disclosureType": "Employment Separation After Allegations",
+          "disclosureResolution": "",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Firm Name": "WELLS FARGO ADVISORS, LLC",
+            "Termination Type": "Voluntary Resignation",
+            "Allegations": "ALLEGATIONS WERE MADE THAT MR. MILLMAN, A WELLS FARGO BANK EMPLOYEE, RECEIVED PAYMENTS FROM A WELLS FARGO BANK CLIENT WHILE HE WAS EMPLOYED AT WELLS FARGO IN EXCHANGE FOR A CLIENT REFERRAL."
+          }
+        },
+        {
+          "eventDate": "9/16/2008",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "UNAUTHORIZED TRADING - COST TO FIRM TO REVERSE THE TRADE IN ACCOUNT EXCEEDED $5,000.",
+            "Settlement Amount": "$158,825.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "REGISTRANT IS EMPLOYED BY WELLS FARGO BANK N.A. HE IS REGISTERED WITH, BUT NOT AN EMPLOYEE OF, WELLS FARGO INVESTMENTS, LLC (WFI).  THE COMPLAINING CUSTOMER NAMED ALL MEMBERS OF HER BANKING/BROKERAGE TEAM IN HER COMPLAINT.  THE ALLEGED UNAUTHORIZED TRANSACTION TOOK PLACE WHILE REGISTRANT WAS TRAVELLING ABROAD ON VACATION.  FURTHER, REGISTRANT IS UNABLE TO ENTER ANY ORDER FOR ANY WFI CUSTOMER BECAUSE HE DOES NOT HAVE ACCESS TO THE WFI ORDER ENTRY SYSTEM.  REGISTRANT BECAME AWARE OF THE PROBLEM WHEN CUSTOMER FIRST COMPLAINED ABOUT IT IN EARLY SEPTEMBER 2008 (APPROXIMATELY 4 MONTHS AFTER TRADE DATE) AND UPON SAID NOTIFICATION, REGISTRANT PROMPTLY QUESTIONED BROKER THAT PLACED THE ORDER.  AFTER SAID INQUIRY, REGISTRANT IMMEDIATELY NOTIFIED MANAGEMENT.  REGISTRANT WAS NOT INVOLVED IN THE DECISION TO REVERSE THIS TRADE OR COMPENSATE CUSTOMER.  REGISTRANT BELIEVES THAT BROKER RESPONSIBLE FOR PLACING THIS TRANSACTION WAS TERMINATED. REGISTRANT ADVISED BY WFI COMPLIANCE THAT THE FIRM DECIDED TO REVERSE SAID TRANSACTION AS A BUSINESS DECISION AT A COST OF $158,825 AND FURTHER UNDERSTANDS THAT BROKER WHO PLACED THIS FNM.T TRADE WAS TERMINATED AS A RESULT OF ADMITTING THAT HE ENTERED THE ORDER WITHOUT OBTAINING DIRECT APPROVAL FROM THE WFI CUSTOMER."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "11/11/1998",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "12/12/1996",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "12/10/1996",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "17868",
+          "firm_name": "U.S. BANCORP INVESTMENTS, INC.",
+          "registration_begin_date": "4/18/2013",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/3/2022"
+        },
+        {
+          "firm_id": "19616",
+          "firm_name": "WELLS FARGO ADVISORS, LLC",
+          "registration_begin_date": "1/3/2011",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "6/22/2012"
+        },
+        {
+          "firm_id": "10582",
+          "firm_name": "WELLS FARGO INVESTMENTS, LLC",
+          "registration_begin_date": "12/18/2003",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "1/3/2011"
+        },
+        {
+          "firm_id": "16361",
+          "firm_name": "BANC OF AMERICA INVESTMENT SERVICES, INC.",
+          "registration_begin_date": "11/2/2001",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/14/2003"
+        },
+        {
+          "firm_id": "7784",
+          "firm_name": "FIDELITY BROKERAGE SERVICES LLC",
+          "registration_begin_date": "9/15/1998",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "9/28/2001"
+        },
+        {
+          "firm_id": "5393",
+          "firm_name": "CHARLES SCHWAB & CO., INC.",
+          "registration_begin_date": "4/28/1997",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "9/10/1998"
+        },
+        {
+          "firm_id": "24906",
+          "firm_name": "THE HERITAGE GROUP, INC.",
+          "registration_begin_date": "12/11/1996",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "3/5/1997"
+        }
+      ],
+      "crd_number": "2696729"
+    },
+    "detailed_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "MICHAEL STEVEN MILLMAN",
+      "other_names": [],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "5/25/2012",
+          "disclosureType": "Employment Separation After Allegations",
+          "disclosureResolution": "",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Firm Name": "WELLS FARGO ADVISORS, LLC",
+            "Termination Type": "Voluntary Resignation",
+            "Allegations": "ALLEGATIONS WERE MADE THAT MR. MILLMAN, A WELLS FARGO BANK EMPLOYEE, RECEIVED PAYMENTS FROM A WELLS FARGO BANK CLIENT WHILE HE WAS EMPLOYED AT WELLS FARGO IN EXCHANGE FOR A CLIENT REFERRAL."
+          }
+        },
+        {
+          "eventDate": "9/16/2008",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "UNAUTHORIZED TRADING - COST TO FIRM TO REVERSE THE TRADE IN ACCOUNT EXCEEDED $5,000.",
+            "Settlement Amount": "$158,825.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "REGISTRANT IS EMPLOYED BY WELLS FARGO BANK N.A. HE IS REGISTERED WITH, BUT NOT AN EMPLOYEE OF, WELLS FARGO INVESTMENTS, LLC (WFI).  THE COMPLAINING CUSTOMER NAMED ALL MEMBERS OF HER BANKING/BROKERAGE TEAM IN HER COMPLAINT.  THE ALLEGED UNAUTHORIZED TRANSACTION TOOK PLACE WHILE REGISTRANT WAS TRAVELLING ABROAD ON VACATION.  FURTHER, REGISTRANT IS UNABLE TO ENTER ANY ORDER FOR ANY WFI CUSTOMER BECAUSE HE DOES NOT HAVE ACCESS TO THE WFI ORDER ENTRY SYSTEM.  REGISTRANT BECAME AWARE OF THE PROBLEM WHEN CUSTOMER FIRST COMPLAINED ABOUT IT IN EARLY SEPTEMBER 2008 (APPROXIMATELY 4 MONTHS AFTER TRADE DATE) AND UPON SAID NOTIFICATION, REGISTRANT PROMPTLY QUESTIONED BROKER THAT PLACED THE ORDER.  AFTER SAID INQUIRY, REGISTRANT IMMEDIATELY NOTIFIED MANAGEMENT.  REGISTRANT WAS NOT INVOLVED IN THE DECISION TO REVERSE THIS TRADE OR COMPENSATE CUSTOMER.  REGISTRANT BELIEVES THAT BROKER RESPONSIBLE FOR PLACING THIS TRANSACTION WAS TERMINATED. REGISTRANT ADVISED BY WFI COMPLIANCE THAT THE FIRM DECIDED TO REVERSE SAID TRANSACTION AS A BUSINESS DECISION AT A COST OF $158,825 AND FURTHER UNDERSTANDS THAT BROKER WHO PLACED THIS FNM.T TRADE WAS TERMINATED AS A RESULT OF ADMITTING THAT HE ENTERED THE ORDER WITHOUT OBTAINING DIRECT APPROVAL FROM THE WFI CUSTOMER."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "11/11/1998",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "12/12/1996",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "12/10/1996",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "17868",
+          "firm_name": "U.S. BANCORP INVESTMENTS, INC.",
+          "registration_begin_date": "4/18/2013",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/3/2022"
+        },
+        {
+          "firm_id": "19616",
+          "firm_name": "WELLS FARGO ADVISORS, LLC",
+          "registration_begin_date": "1/3/2011",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "6/22/2012"
+        },
+        {
+          "firm_id": "10582",
+          "firm_name": "WELLS FARGO INVESTMENTS, LLC",
+          "registration_begin_date": "12/18/2003",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "1/3/2011"
+        },
+        {
+          "firm_id": "16361",
+          "firm_name": "BANC OF AMERICA INVESTMENT SERVICES, INC.",
+          "registration_begin_date": "11/2/2001",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/14/2003"
+        },
+        {
+          "firm_id": "7784",
+          "firm_name": "FIDELITY BROKERAGE SERVICES LLC",
+          "registration_begin_date": "9/15/1998",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "9/28/2001"
+        },
+        {
+          "firm_id": "5393",
+          "firm_name": "CHARLES SCHWAB & CO., INC.",
+          "registration_begin_date": "4/28/1997",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "9/10/1998"
+        },
+        {
+          "firm_id": "24906",
+          "firm_name": "THE HERITAGE GROUP, INC.",
+          "registration_begin_date": "12/11/1996",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "3/5/1997"
+        }
+      ],
+      "crd_number": "2696729"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "2696729",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA BrokerCheck data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "Michael",
+        "middle": null,
+        "last": "Millman"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "MICHAEL",
+            "middle": "STEVEN",
+            "last": "MILLMAN"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        }
+      ],
+      "best_match": {
+        "name_source": "main_fetched_name",
+        "fetched_name": {
+          "first": "MICHAEL",
+          "middle": "STEVEN",
+          "last": "MILLMAN"
+        },
+        "score": 95.0,
+        "first_score": 1.0,
+        "middle_score": 0.5,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "Michael Millman has 1 employment separation after allegations disclosure, 1 customer dispute disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "UNAUTHORIZED TRADING - COST TO FIRM TO REVERSE THE TRADE IN ACCOUNT EXCEEDED $5,000.",
+            "Settlement Amount": "$158,825.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "REGISTRANT IS EMPLOYED BY WELLS FARGO BANK N.A. HE IS REGISTERED WITH, BUT NOT AN EMPLOYEE OF, WELLS FARGO INVESTMENTS, LLC (WFI).  THE COMPLAINING CUSTOMER NAMED ALL MEMBERS OF HER BANKING/BROKERAGE TEAM IN HER COMPLAINT.  THE ALLEGED UNAUTHORIZED TRANSACTION TOOK PLACE WHILE REGISTRANT WAS TRAVELLING ABROAD ON VACATION.  FURTHER, REGISTRANT IS UNABLE TO ENTER ANY ORDER FOR ANY WFI CUSTOMER BECAUSE HE DOES NOT HAVE ACCESS TO THE WFI ORDER ENTRY SYSTEM.  REGISTRANT BECAME AWARE OF THE PROBLEM WHEN CUSTOMER FIRST COMPLAINED ABOUT IT IN EARLY SEPTEMBER 2008 (APPROXIMATELY 4 MONTHS AFTER TRADE DATE) AND UPON SAID NOTIFICATION, REGISTRANT PROMPTLY QUESTIONED BROKER THAT PLACED THE ORDER.  AFTER SAID INQUIRY, REGISTRANT IMMEDIATELY NOTIFIED MANAGEMENT.  REGISTRANT WAS NOT INVOLVED IN THE DECISION TO REVERSE THIS TRADE OR COMPENSATE CUSTOMER.  REGISTRANT BELIEVES THAT BROKER RESPONSIBLE FOR PLACING THIS TRANSACTION WAS TERMINATED. REGISTRANT ADVISED BY WFI COMPLIANCE THAT THE FIRM DECIDED TO REVERSE SAID TRANSACTION AS A BUSINESS DECISION AT A COST OF $158,825 AND FURTHER UNDERSTANDS THAT BROKER WHO PLACED THIS FNM.T TRADE WAS TERMINATED AS A RESULT OF ADMITTING THAT HE ENTERED THE ORDER WITHOUT OBTAINING DIRECT APPROVAL FROM THE WFI CUSTOMER."
+            ]
+          },
+          "event_date": "9/16/2008",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 9/16/2008. Resolution: Settled. Allegations: UNAUTHORIZED TRADING - COST TO FIRM TO REVERSE THE TRADE IN ACCOUNT EXCEEDED $5,000.. Damage requested: Not specified. Settlement: $158,825.00"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No matching disciplinary records found for Michael Millman, but 16 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Search Info",
+        "alert_category": "DISCIPLINARY",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Michael Millman",
+            "sec_disciplinary": {
+              "source": "SEC_Disciplinary",
+              "records_found": 1,
+              "records_filtered": 1,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'Michael Millman'"
+            },
+            "finra_disciplinary": {
+              "source": "FINRA_Disciplinary",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Michael Barrows, Eric John Ludovico",
+                "Michael Barrows, Eric John Ludovico",
+                "Michael J. Dugan",
+                "Jason Michael Poschinger",
+                "John Michael Palma",
+                "Joseph Michael Cannon",
+                "Network 1 Financial Securities Inc.Michael Molinaro",
+                "Michael Louis Miro",
+                "Steven Michael Blanchard",
+                "MICHAEL RYAN PETRUSKA",
+                "Michael J. Brewster",
+                "Michael T. Shoniker",
+                "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.",
+                "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.",
+                "Michael R. Rosalia",
+                "Jason Michael Poschinger",
+                "Michael Lancaster"
+              ],
+              "name_scores": {
+                "Michael Barrows, Eric John Ludovico": 0.0,
+                "Michael J. Dugan": 47.62,
+                "Jason Michael Poschinger": 9.52,
+                "John Michael Palma": 9.52,
+                "Joseph Michael Cannon": 9.52,
+                "Network 1 Financial Securities Inc.Michael Molinaro": 9.52,
+                "Michael Louis Miro": 47.62,
+                "Steven Michael Blanchard": 9.52,
+                "MICHAEL RYAN PETRUSKA": 47.62,
+                "Michael J. Brewster": 47.62,
+                "Michael T. Shoniker": 47.62,
+                "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.": 0.0,
+                "Michael R. Rosalia": 47.62,
+                "Michael Lancaster": 47.37
+              },
+              "exact_match_found": false,
+              "status": "Partial failure: Error processing 'Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.'"
+            }
+          }
+        },
+        "description": "Found 16 disciplinary records for Michael Millman, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Michael Millman",
+      "sec_disciplinary": {
+        "source": "SEC_Disciplinary",
+        "records_found": 1,
+        "records_filtered": 1,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Michael Millman'"
+      },
+      "finra_disciplinary": {
+        "source": "FINRA_Disciplinary",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Michael Barrows, Eric John Ludovico",
+          "Michael Barrows, Eric John Ludovico",
+          "Michael J. Dugan",
+          "Jason Michael Poschinger",
+          "John Michael Palma",
+          "Joseph Michael Cannon",
+          "Network 1 Financial Securities Inc.Michael Molinaro",
+          "Michael Louis Miro",
+          "Steven Michael Blanchard",
+          "MICHAEL RYAN PETRUSKA",
+          "Michael J. Brewster",
+          "Michael T. Shoniker",
+          "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.",
+          "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.",
+          "Michael R. Rosalia",
+          "Jason Michael Poschinger",
+          "Michael Lancaster"
+        ],
+        "name_scores": {
+          "Michael Barrows, Eric John Ludovico": 0.0,
+          "Michael J. Dugan": 47.62,
+          "Jason Michael Poschinger": 9.52,
+          "John Michael Palma": 9.52,
+          "Joseph Michael Cannon": 9.52,
+          "Network 1 Financial Securities Inc.Michael Molinaro": 9.52,
+          "Michael Louis Miro": 47.62,
+          "Steven Michael Blanchard": 9.52,
+          "MICHAEL RYAN PETRUSKA": 47.62,
+          "Michael J. Brewster": 47.62,
+          "Michael T. Shoniker": 47.62,
+          "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.": 0.0,
+          "Michael R. Rosalia": 47.62,
+          "Michael Lancaster": 47.37
+        },
+        "exact_match_found": false,
+        "status": "Partial failure: Error processing 'Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": true,
+    "compliance_explanation": "No matching arbitration records found for Michael Millman, but 15 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Arbitration Search Info",
+        "alert_category": "ARBITRATION",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Michael Millman",
+            "sec_arbitration": {
+              "source": "SEC_Arbitration",
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records found"
+            },
+            "finra_arbitration": {
+              "source": "FINRA_Arbitration",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Ankit Sahu",
+                "UBS Financial Services Inc.",
+                "Ankit Sahu",
+                "UBS Financial Services Inc.",
+                "Ankit Sahu",
+                "UBS Financial Services Inc.",
+                "Ankit Sahu",
+                "UBS Financial Services Inc.",
+                "Ankit Sahu",
+                "UBS Financial Services Inc.",
+                "UBS Financial Services Inc."
+              ],
+              "name_scores": {
+                "Ankit Sahu": 5.26,
+                "UBS Financial Services Inc.": 9.52
+              },
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'Michael Millman'"
+            }
+          }
+        },
+        "description": "Found 15 arbitration records for Michael Millman, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Michael Millman",
+      "sec_arbitration": {
+        "source": "SEC_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_arbitration": {
+        "source": "FINRA_Arbitration",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Ankit Sahu",
+          "UBS Financial Services Inc.",
+          "Ankit Sahu",
+          "UBS Financial Services Inc.",
+          "Ankit Sahu",
+          "UBS Financial Services Inc.",
+          "Ankit Sahu",
+          "UBS Financial Services Inc.",
+          "Ankit Sahu",
+          "UBS Financial Services Inc.",
+          "UBS Financial Services Inc."
+        ],
+        "name_scores": {
+          "Ankit Sahu": 5.26,
+          "UBS Financial Services Inc.": 9.52
+        },
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Michael Millman'"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for Michael Millman; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "UNAUTHORIZED TRADING - COST TO FIRM TO REVERSE THE TRADE IN ACCOUNT EXCEEDED $5,000.",
+            "Settlement Amount": "$158,825.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "REGISTRANT IS EMPLOYED BY WELLS FARGO BANK N.A. HE IS REGISTERED WITH, BUT NOT AN EMPLOYEE OF, WELLS FARGO INVESTMENTS, LLC (WFI).  THE COMPLAINING CUSTOMER NAMED ALL MEMBERS OF HER BANKING/BROKERAGE TEAM IN HER COMPLAINT.  THE ALLEGED UNAUTHORIZED TRANSACTION TOOK PLACE WHILE REGISTRANT WAS TRAVELLING ABROAD ON VACATION.  FURTHER, REGISTRANT IS UNABLE TO ENTER ANY ORDER FOR ANY WFI CUSTOMER BECAUSE HE DOES NOT HAVE ACCESS TO THE WFI ORDER ENTRY SYSTEM.  REGISTRANT BECAME AWARE OF THE PROBLEM WHEN CUSTOMER FIRST COMPLAINED ABOUT IT IN EARLY SEPTEMBER 2008 (APPROXIMATELY 4 MONTHS AFTER TRADE DATE) AND UPON SAID NOTIFICATION, REGISTRANT PROMPTLY QUESTIONED BROKER THAT PLACED THE ORDER.  AFTER SAID INQUIRY, REGISTRANT IMMEDIATELY NOTIFIED MANAGEMENT.  REGISTRANT WAS NOT INVOLVED IN THE DECISION TO REVERSE THIS TRADE OR COMPENSATE CUSTOMER.  REGISTRANT BELIEVES THAT BROKER RESPONSIBLE FOR PLACING THIS TRANSACTION WAS TERMINATED. REGISTRANT ADVISED BY WFI COMPLIANCE THAT THE FIRM DECIDED TO REVERSE SAID TRANSACTION AS A BUSINESS DECISION AT A COST OF $158,825 AND FURTHER UNDERSTANDS THAT BROKER WHO PLACED THIS FNM.T TRADE WAS TERMINATED AS A RESULT OF ADMITTING THAT HE ENTERED THE ORDER WITHOUT OBTAINING DIRECT APPROVAL FROM THE WFI CUSTOMER."
+            ]
+          },
+          "event_date": "9/16/2008",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 9/16/2008. Resolution: Settled. Allegations: UNAUTHORIZED TRADING - COST TO FIRM TO REVERSE THE TRADE IN ACCOUNT EXCEEDED $5,000.. Damage requested: Not specified. Settlement: $158,825.00"
+      }
+    ]
+  }
+}

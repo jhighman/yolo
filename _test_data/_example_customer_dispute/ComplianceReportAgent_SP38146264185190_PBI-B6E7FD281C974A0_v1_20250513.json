@@ -1,0 +1,808 @@
+{
+  "reference_id": "SP38146264185190_PBI-B6E7FD281C974A0",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-B6E7FD281C974A0",
+    "first_name": "Scott",
+    "last_name": "Jacobs",
+    "employee_number": "EN-044655",
+    "zip": "94605",
+    "crdNumber": "2538629",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "2538629",
+    "individual_name": "Scott Jacobs",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "FINRA_BrokerCheck",
+    "basic_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "SCOTT BRADLEY JACOBS",
+      "other_names": [],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "2/7/2014",
+          "disclosureType": "Regulatory",
+          "disclosureResolution": "Final",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "DocketNumberFDA": "",
+            "DocketNumberAAO": "",
+            "Initiated By": "CALIFORNIA DEPARTMENT OF BUSINESS OVERSIGHT",
+            "Allegations": "FIRM REGISTRATION WAS REVOKED FOR NON-PAYMENT OF FEES",
+            "Resolution": "REGISTRATION APPROVED",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Revocation"
+              }
+            ],
+            "Broker Comment": [
+              "FIRM LICENSED WAS REVOKED FOR NON-FEE PAYMENT"
+            ]
+          }
+        },
+        {
+          "eventDate": "2/24/2009",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "CO-CONSERVATORS CLAIM THAT ACCOUNT WAS MISMANAGED, INCLUDING LACK OF DIVERSIFICATION AND EXCESSIVE TRADING.",
+            "Damage Amount Requested": "$140,000.00",
+            "Settlement Amount": "$61,475.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          }
+        },
+        {
+          "eventDate": "9/16/2008",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "UNAUTHORIZED TRADING - COST TO FIRM TO REVERSE THE TRADE IN CLIENT'S ACCOUNT EXCEEDED $5,000",
+            "Settlement Amount": "$158,825.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "IN MAY 2008 [CUSTOMER] PURCHASED AN INVESTMENT GRADE BOND.  SHE RECEIVED A PROSPECTUS, CONFIRMATION AND FOUR SUBSEQUENT MONTHLY STATEMENTS.  IN SEPTEMBER 2008 THE CLIENT WAS CONTACTED BY US WHEN THE GOVERNMENT ANNOUNCED THE BAILOUT OF FANNIE MAE AND FREDDIE MAC.  WHILE OUR OUTBOUND CONFERENCE CALL WAS MADE TO INFORM THE CLIENT HOW THIS ADVERSELY AFFECTED HER INVESTMENT, THIS WAS THE FIRST TIME SHE MENTIONED SHE WAS UNAWARE OF THE INVESTMENT.  HER PORTFOLIO CONSISTED OF A DOZEN AND A HALF INVESTMENTS JUST LIKE THIS ONE OF WHICH SHE AGREED THEY WERE ALL HERS EXCEPT THE ONE THAT JUST WENT DOWN.\r\n\r\nIN AN EFFORT TO PLACATE AND SATISFY THE CLIENT QUICKLY, THE MANAGER, [OTHER FIRM EMPLOYEE] AGREED TO REFUND THE MONEY.\r\n\r\nIT WAS LATER UNCOVERED THAT THE CLIENT SIGNED A PROPOSAL BACK IN 2004.\r\n\r\nIT IS MY OPINION THE NEW MANAGER, ONLY WITH WELLS FARGO ABOUT A YEAR, DID NOT SPEND ENOUGH TIME FOR FULL DISCLOSURE."
+            ]
+          }
+        },
+        {
+          "eventDate": "9/15/2008",
+          "disclosureType": "Employment Separation After Allegations",
+          "disclosureResolution": "",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Firm Name": "WELLS FARGO INVESTMENTS, LLC.",
+            "Termination Type": "Discharged",
+            "Allegations": "REPRESENTATIVE FAILED TO FOLLOW FIRM PROCEDURES REGARDING CONFIRMATION OF CLIENT TRADE REQUEST."
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "12/23/1999",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "3/27/1995",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "7/2/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "3/10/1995",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "10299",
+          "firm_name": "CETERA ADVISORS LLC",
+          "registration_begin_date": "2/28/2012",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/2/2018"
+        },
+        {
+          "firm_id": "6390",
+          "firm_name": "PACIFIC WEST SECURITIES, INC.",
+          "registration_begin_date": "1/19/2010",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "2/28/2012"
+        },
+        {
+          "firm_id": "1763",
+          "firm_name": "H. BECK, INC.",
+          "registration_begin_date": "3/16/2009",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "9/18/2009"
+        },
+        {
+          "firm_id": "10582",
+          "firm_name": "WELLS FARGO INVESTMENTS, LLC",
+          "registration_begin_date": "6/6/2003",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "10/15/2008"
+        },
+        {
+          "firm_id": "7471",
+          "firm_name": "PRUDENTIAL SECURITIES INCORPORATED",
+          "registration_begin_date": "3/6/2001",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "6/6/2003"
+        },
+        {
+          "firm_id": "8174",
+          "firm_name": "UBS PAINEWEBBER INC.",
+          "registration_begin_date": "4/12/1995",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "3/13/2001"
+        }
+      ],
+      "crd_number": "2538629"
+    },
+    "detailed_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "SCOTT BRADLEY JACOBS",
+      "other_names": [],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "2/7/2014",
+          "disclosureType": "Regulatory",
+          "disclosureResolution": "Final",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "DocketNumberFDA": "",
+            "DocketNumberAAO": "",
+            "Initiated By": "CALIFORNIA DEPARTMENT OF BUSINESS OVERSIGHT",
+            "Allegations": "FIRM REGISTRATION WAS REVOKED FOR NON-PAYMENT OF FEES",
+            "Resolution": "REGISTRATION APPROVED",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Revocation"
+              }
+            ],
+            "Broker Comment": [
+              "FIRM LICENSED WAS REVOKED FOR NON-FEE PAYMENT"
+            ]
+          }
+        },
+        {
+          "eventDate": "2/24/2009",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "CO-CONSERVATORS CLAIM THAT ACCOUNT WAS MISMANAGED, INCLUDING LACK OF DIVERSIFICATION AND EXCESSIVE TRADING.",
+            "Damage Amount Requested": "$140,000.00",
+            "Settlement Amount": "$61,475.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          }
+        },
+        {
+          "eventDate": "9/16/2008",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "UNAUTHORIZED TRADING - COST TO FIRM TO REVERSE THE TRADE IN CLIENT'S ACCOUNT EXCEEDED $5,000",
+            "Settlement Amount": "$158,825.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "IN MAY 2008 [CUSTOMER] PURCHASED AN INVESTMENT GRADE BOND.  SHE RECEIVED A PROSPECTUS, CONFIRMATION AND FOUR SUBSEQUENT MONTHLY STATEMENTS.  IN SEPTEMBER 2008 THE CLIENT WAS CONTACTED BY US WHEN THE GOVERNMENT ANNOUNCED THE BAILOUT OF FANNIE MAE AND FREDDIE MAC.  WHILE OUR OUTBOUND CONFERENCE CALL WAS MADE TO INFORM THE CLIENT HOW THIS ADVERSELY AFFECTED HER INVESTMENT, THIS WAS THE FIRST TIME SHE MENTIONED SHE WAS UNAWARE OF THE INVESTMENT.  HER PORTFOLIO CONSISTED OF A DOZEN AND A HALF INVESTMENTS JUST LIKE THIS ONE OF WHICH SHE AGREED THEY WERE ALL HERS EXCEPT THE ONE THAT JUST WENT DOWN.\r\n\r\nIN AN EFFORT TO PLACATE AND SATISFY THE CLIENT QUICKLY, THE MANAGER, [OTHER FIRM EMPLOYEE] AGREED TO REFUND THE MONEY.\r\n\r\nIT WAS LATER UNCOVERED THAT THE CLIENT SIGNED A PROPOSAL BACK IN 2004.\r\n\r\nIT IS MY OPINION THE NEW MANAGER, ONLY WITH WELLS FARGO ABOUT A YEAR, DID NOT SPEND ENOUGH TIME FOR FULL DISCLOSURE."
+            ]
+          }
+        },
+        {
+          "eventDate": "9/15/2008",
+          "disclosureType": "Employment Separation After Allegations",
+          "disclosureResolution": "",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Firm Name": "WELLS FARGO INVESTMENTS, LLC.",
+            "Termination Type": "Discharged",
+            "Allegations": "REPRESENTATIVE FAILED TO FOLLOW FIRM PROCEDURES REGARDING CONFIRMATION OF CLIENT TRADE REQUEST."
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "12/23/1999",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "3/27/1995",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "7/2/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "3/10/1995",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "10299",
+          "firm_name": "CETERA ADVISORS LLC",
+          "registration_begin_date": "2/28/2012",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "7/2/2018"
+        },
+        {
+          "firm_id": "6390",
+          "firm_name": "PACIFIC WEST SECURITIES, INC.",
+          "registration_begin_date": "1/19/2010",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "2/28/2012"
+        },
+        {
+          "firm_id": "1763",
+          "firm_name": "H. BECK, INC.",
+          "registration_begin_date": "3/16/2009",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "9/18/2009"
+        },
+        {
+          "firm_id": "10582",
+          "firm_name": "WELLS FARGO INVESTMENTS, LLC",
+          "registration_begin_date": "6/6/2003",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "10/15/2008"
+        },
+        {
+          "firm_id": "7471",
+          "firm_name": "PRUDENTIAL SECURITIES INCORPORATED",
+          "registration_begin_date": "3/6/2001",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "6/6/2003"
+        },
+        {
+          "firm_id": "8174",
+          "firm_name": "UBS PAINEWEBBER INC.",
+          "registration_begin_date": "4/12/1995",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "3/13/2001"
+        }
+      ],
+      "crd_number": "2538629"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "2538629",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA BrokerCheck data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "Scott",
+        "middle": null,
+        "last": "Jacobs"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "SCOTT",
+            "middle": "BRADLEY",
+            "last": "JACOBS"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        }
+      ],
+      "best_match": {
+        "name_source": "main_fetched_name",
+        "fetched_name": {
+          "first": "SCOTT",
+          "middle": "BRADLEY",
+          "last": "JACOBS"
+        },
+        "score": 95.0,
+        "first_score": 1.0,
+        "middle_score": 0.5,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "Scott Jacobs has 1 regulatory disclosure, 2 customer dispute disclosures, 1 employment separation after allegations disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Regulatory Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "DocketNumberFDA": "",
+            "DocketNumberAAO": "",
+            "Initiated By": "CALIFORNIA DEPARTMENT OF BUSINESS OVERSIGHT",
+            "Allegations": "FIRM REGISTRATION WAS REVOKED FOR NON-PAYMENT OF FEES",
+            "Resolution": "REGISTRATION APPROVED",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Revocation"
+              }
+            ],
+            "Broker Comment": [
+              "FIRM LICENSED WAS REVOKED FOR NON-FEE PAYMENT"
+            ]
+          },
+          "event_date": "2/7/2014",
+          "resolution": "Final"
+        },
+        "description": "Regulatory action on 2/7/2014 initiated by CALIFORNIA DEPARTMENT OF BUSINESS OVERSIGHT. Resolution: Final. Allegations: FIRM REGISTRATION WAS REVOKED FOR NON-PAYMENT OF FEES. Sanctions: Revocation"
+      },
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "CO-CONSERVATORS CLAIM THAT ACCOUNT WAS MISMANAGED, INCLUDING LACK OF DIVERSIFICATION AND EXCESSIVE TRADING.",
+            "Damage Amount Requested": "$140,000.00",
+            "Settlement Amount": "$61,475.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          },
+          "event_date": "2/24/2009",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 2/24/2009. Resolution: Settled. Allegations: CO-CONSERVATORS CLAIM THAT ACCOUNT WAS MISMANAGED, INCLUDING LACK OF DIVERSIFICATION AND EXCESSIVE TRADING.. Damage requested: $140,000.00. Settlement: $61,475.00"
+      },
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "UNAUTHORIZED TRADING - COST TO FIRM TO REVERSE THE TRADE IN CLIENT'S ACCOUNT EXCEEDED $5,000",
+            "Settlement Amount": "$158,825.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "IN MAY 2008 [CUSTOMER] PURCHASED AN INVESTMENT GRADE BOND.  SHE RECEIVED A PROSPECTUS, CONFIRMATION AND FOUR SUBSEQUENT MONTHLY STATEMENTS.  IN SEPTEMBER 2008 THE CLIENT WAS CONTACTED BY US WHEN THE GOVERNMENT ANNOUNCED THE BAILOUT OF FANNIE MAE AND FREDDIE MAC.  WHILE OUR OUTBOUND CONFERENCE CALL WAS MADE TO INFORM THE CLIENT HOW THIS ADVERSELY AFFECTED HER INVESTMENT, THIS WAS THE FIRST TIME SHE MENTIONED SHE WAS UNAWARE OF THE INVESTMENT.  HER PORTFOLIO CONSISTED OF A DOZEN AND A HALF INVESTMENTS JUST LIKE THIS ONE OF WHICH SHE AGREED THEY WERE ALL HERS EXCEPT THE ONE THAT JUST WENT DOWN.\r\n\r\nIN AN EFFORT TO PLACATE AND SATISFY THE CLIENT QUICKLY, THE MANAGER, [OTHER FIRM EMPLOYEE] AGREED TO REFUND THE MONEY.\r\n\r\nIT WAS LATER UNCOVERED THAT THE CLIENT SIGNED A PROPOSAL BACK IN 2004.\r\n\r\nIT IS MY OPINION THE NEW MANAGER, ONLY WITH WELLS FARGO ABOUT A YEAR, DID NOT SPEND ENOUGH TIME FOR FULL DISCLOSURE."
+            ]
+          },
+          "event_date": "9/16/2008",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 9/16/2008. Resolution: Settled. Allegations: UNAUTHORIZED TRADING - COST TO FIRM TO REVERSE THE TRADE IN CLIENT'S ACCOUNT EXCEEDED $5,000. Damage requested: Not specified. Settlement: $158,825.00"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No matching disciplinary records found for Scott Jacobs, but 15 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Search Info",
+        "alert_category": "DISCIPLINARY",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Scott Jacobs",
+            "sec_disciplinary": {
+              "source": "SEC_Disciplinary",
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records found"
+            },
+            "finra_disciplinary": {
+              "source": "FINRA_Disciplinary",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Richard Scott Linden",
+                "Scott Eugene Buck",
+                "Scott Taubman",
+                "Scott Mullady",
+                "John Scott McCoy Jr.",
+                "Scott Lewis",
+                "Charles Scott Burford",
+                "Scott W. Norvell",
+                "Scott Michael Bremus",
+                "Scott J. Matalon",
+                "Gordon Scott Wallace",
+                "Edward Scott Short",
+                "Scott P. Smith",
+                "FFED Wealth Partners LLCJeffrey Scott Graves",
+                "Scott G. Warnock"
+              ],
+              "name_scores": {
+                "Richard Scott Linden": 9.52,
+                "Scott Eugene Buck": 47.62,
+                "Scott Taubman": 47.37,
+                "Scott Mullady": 47.37,
+                "John Scott McCoy Jr.": 9.52,
+                "Scott Lewis": 47.37,
+                "Charles Scott Burford": 9.52,
+                "Scott W. Norvell": 47.62,
+                "Scott Michael Bremus": 47.62,
+                "Scott J. Matalon": 47.62,
+                "Gordon Scott Wallace": 9.52,
+                "Edward Scott Short": 9.52,
+                "Scott P. Smith": 47.62,
+                "FFED Wealth Partners LLCJeffrey Scott Graves": 9.52,
+                "Scott G. Warnock": 47.62
+              },
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'Scott Jacobs'"
+            }
+          }
+        },
+        "description": "Found 15 disciplinary records for Scott Jacobs, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Scott Jacobs",
+      "sec_disciplinary": {
+        "source": "SEC_Disciplinary",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_disciplinary": {
+        "source": "FINRA_Disciplinary",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Richard Scott Linden",
+          "Scott Eugene Buck",
+          "Scott Taubman",
+          "Scott Mullady",
+          "John Scott McCoy Jr.",
+          "Scott Lewis",
+          "Charles Scott Burford",
+          "Scott W. Norvell",
+          "Scott Michael Bremus",
+          "Scott J. Matalon",
+          "Gordon Scott Wallace",
+          "Edward Scott Short",
+          "Scott P. Smith",
+          "FFED Wealth Partners LLCJeffrey Scott Graves",
+          "Scott G. Warnock"
+        ],
+        "name_scores": {
+          "Richard Scott Linden": 9.52,
+          "Scott Eugene Buck": 47.62,
+          "Scott Taubman": 47.37,
+          "Scott Mullady": 47.37,
+          "John Scott McCoy Jr.": 9.52,
+          "Scott Lewis": 47.37,
+          "Charles Scott Burford": 9.52,
+          "Scott W. Norvell": 47.62,
+          "Scott Michael Bremus": 47.62,
+          "Scott J. Matalon": 47.62,
+          "Gordon Scott Wallace": 9.52,
+          "Edward Scott Short": 9.52,
+          "Scott P. Smith": 47.62,
+          "FFED Wealth Partners LLCJeffrey Scott Graves": 9.52,
+          "Scott G. Warnock": 47.62
+        },
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Scott Jacobs'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": true,
+    "compliance_explanation": "No matching arbitration records found for Scott Jacobs, but 15 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Arbitration Search Info",
+        "alert_category": "ARBITRATION",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Scott Jacobs",
+            "sec_arbitration": {
+              "source": "SEC_Arbitration",
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records found"
+            },
+            "finra_arbitration": {
+              "source": "FINRA_Arbitration",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Alan Jacobs",
+                "Michael Jacobs",
+                "Ameriprise Financial Services",
+                "Inc.",
+                "Alan Jacobs",
+                "Leslie Lukoff",
+                "Michael Falken",
+                "Michael Jacobs",
+                "J.J.B. Hilliard",
+                "W.L. Lyons",
+                "LLC",
+                "Janney Montgomery Scott LLC",
+                "Rebecca Engle",
+                "Paul Jacobs",
+                "Raul Jacobs",
+                "Morgan Stanley",
+                "Principal Securities",
+                "Inc."
+              ],
+              "name_scores": {
+                "Alan Jacobs": 57.89,
+                "Michael Jacobs": 57.89,
+                "Ameriprise Financial Services": 9.52,
+                "Inc.": 5.26,
+                "Leslie Lukoff": 5.26,
+                "Michael Falken": 5.26,
+                "J.J.B. Hilliard": 5.26,
+                "W.L. Lyons": 5.26,
+                "LLC": 5.26,
+                "Janney Montgomery Scott LLC": 9.52,
+                "Rebecca Engle": 5.26,
+                "Paul Jacobs": 57.89,
+                "Raul Jacobs": 57.89,
+                "Morgan Stanley": 5.26,
+                "Principal Securities": 5.26
+              },
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'Scott Jacobs'"
+            }
+          }
+        },
+        "description": "Found 15 arbitration records for Scott Jacobs, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Scott Jacobs",
+      "sec_arbitration": {
+        "source": "SEC_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_arbitration": {
+        "source": "FINRA_Arbitration",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Alan Jacobs",
+          "Michael Jacobs",
+          "Ameriprise Financial Services",
+          "Inc.",
+          "Alan Jacobs",
+          "Leslie Lukoff",
+          "Michael Falken",
+          "Michael Jacobs",
+          "J.J.B. Hilliard",
+          "W.L. Lyons",
+          "LLC",
+          "Janney Montgomery Scott LLC",
+          "Rebecca Engle",
+          "Paul Jacobs",
+          "Raul Jacobs",
+          "Morgan Stanley",
+          "Principal Securities",
+          "Inc."
+        ],
+        "name_scores": {
+          "Alan Jacobs": 57.89,
+          "Michael Jacobs": 57.89,
+          "Ameriprise Financial Services": 9.52,
+          "Inc.": 5.26,
+          "Leslie Lukoff": 5.26,
+          "Michael Falken": 5.26,
+          "J.J.B. Hilliard": 5.26,
+          "W.L. Lyons": 5.26,
+          "LLC": 5.26,
+          "Janney Montgomery Scott LLC": 9.52,
+          "Rebecca Engle": 5.26,
+          "Paul Jacobs": 57.89,
+          "Raul Jacobs": 57.89,
+          "Morgan Stanley": 5.26,
+          "Principal Securities": 5.26
+        },
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Scott Jacobs'"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for Scott Jacobs; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Regulatory Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "DocketNumberFDA": "",
+            "DocketNumberAAO": "",
+            "Initiated By": "CALIFORNIA DEPARTMENT OF BUSINESS OVERSIGHT",
+            "Allegations": "FIRM REGISTRATION WAS REVOKED FOR NON-PAYMENT OF FEES",
+            "Resolution": "REGISTRATION APPROVED",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Revocation"
+              }
+            ],
+            "Broker Comment": [
+              "FIRM LICENSED WAS REVOKED FOR NON-FEE PAYMENT"
+            ]
+          },
+          "event_date": "2/7/2014",
+          "resolution": "Final"
+        },
+        "description": "Regulatory action on 2/7/2014 initiated by CALIFORNIA DEPARTMENT OF BUSINESS OVERSIGHT. Resolution: Final. Allegations: FIRM REGISTRATION WAS REVOKED FOR NON-PAYMENT OF FEES. Sanctions: Revocation"
+      },
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "CO-CONSERVATORS CLAIM THAT ACCOUNT WAS MISMANAGED, INCLUDING LACK OF DIVERSIFICATION AND EXCESSIVE TRADING.",
+            "Damage Amount Requested": "$140,000.00",
+            "Settlement Amount": "$61,475.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          },
+          "event_date": "2/24/2009",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 2/24/2009. Resolution: Settled. Allegations: CO-CONSERVATORS CLAIM THAT ACCOUNT WAS MISMANAGED, INCLUDING LACK OF DIVERSIFICATION AND EXCESSIVE TRADING.. Damage requested: $140,000.00. Settlement: $61,475.00"
+      },
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "UNAUTHORIZED TRADING - COST TO FIRM TO REVERSE THE TRADE IN CLIENT'S ACCOUNT EXCEEDED $5,000",
+            "Settlement Amount": "$158,825.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "IN MAY 2008 [CUSTOMER] PURCHASED AN INVESTMENT GRADE BOND.  SHE RECEIVED A PROSPECTUS, CONFIRMATION AND FOUR SUBSEQUENT MONTHLY STATEMENTS.  IN SEPTEMBER 2008 THE CLIENT WAS CONTACTED BY US WHEN THE GOVERNMENT ANNOUNCED THE BAILOUT OF FANNIE MAE AND FREDDIE MAC.  WHILE OUR OUTBOUND CONFERENCE CALL WAS MADE TO INFORM THE CLIENT HOW THIS ADVERSELY AFFECTED HER INVESTMENT, THIS WAS THE FIRST TIME SHE MENTIONED SHE WAS UNAWARE OF THE INVESTMENT.  HER PORTFOLIO CONSISTED OF A DOZEN AND A HALF INVESTMENTS JUST LIKE THIS ONE OF WHICH SHE AGREED THEY WERE ALL HERS EXCEPT THE ONE THAT JUST WENT DOWN.\r\n\r\nIN AN EFFORT TO PLACATE AND SATISFY THE CLIENT QUICKLY, THE MANAGER, [OTHER FIRM EMPLOYEE] AGREED TO REFUND THE MONEY.\r\n\r\nIT WAS LATER UNCOVERED THAT THE CLIENT SIGNED A PROPOSAL BACK IN 2004.\r\n\r\nIT IS MY OPINION THE NEW MANAGER, ONLY WITH WELLS FARGO ABOUT A YEAR, DID NOT SPEND ENOUGH TIME FOR FULL DISCLOSURE."
+            ]
+          },
+          "event_date": "9/16/2008",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 9/16/2008. Resolution: Settled. Allegations: UNAUTHORIZED TRADING - COST TO FIRM TO REVERSE THE TRADE IN CLIENT'S ACCOUNT EXCEEDED $5,000. Damage requested: Not specified. Settlement: $158,825.00"
+      }
+    ]
+  }
+}

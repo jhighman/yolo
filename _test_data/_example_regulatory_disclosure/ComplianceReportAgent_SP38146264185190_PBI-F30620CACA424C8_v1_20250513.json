@@ -1,0 +1,622 @@
+{
+  "reference_id": "SP38146264185190_PBI-F30620CACA424C8",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-F30620CACA424C8",
+    "first_name": "Michael",
+    "last_name": "Redhead",
+    "employee_number": "EN-055757",
+    "zip": "33618",
+    "crdNumber": "2314181",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "2314181",
+    "individual_name": "Michael Redhead",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "FINRA_BrokerCheck",
+    "basic_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "MICHAEL CHRISTOPHER REDHEAD",
+      "other_names": [
+        "M. CHRIS REDHEAD"
+      ],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "5/12/2011",
+          "disclosureType": "Regulatory",
+          "disclosureResolution": "Final",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "DocketNumberFDA": "",
+            "DocketNumberAAO": "",
+            "Initiated By": "FLORDIA DEPARTMENT OF FINANCIAL SERVICES",
+            "Allegations": "REPRESENTATIVE DID NOT COMPLETE REQUIRED CE FOR THE COMPLIANCE PERIOD ENDING 01/31/2011 TO KEEP HIS RESIDENT INSURANCE LICENSE IN FORCE. WHEN NOTIFIED BY THE FLORIDA DEPARTMENT OF FINANCIAL SERVICES, REPRESENTATIVE COMPLETED THE REQUIRED CE, PAID THE $250.00 FINE AND HIS INSURANCE LICENSE REINSTATED.",
+            "Resolution": "Stipulation and Consent",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Civil and Administrative Penalty(ies)/Fine(s)",
+                "SanctionDetails": [
+                  {
+                    "Amount": "$250.00"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "eventDate": "3/16/2009",
+          "disclosureType": "Regulatory",
+          "disclosureResolution": "Final",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "DocketNumberFDA": "",
+            "DocketNumberAAO": "",
+            "Initiated By": "FLORIDA DEPARTMENT OF FINANCIAL SERVICES",
+            "Allegations": "REPRESENTATIVE  DID NOT COMPLETE REQUIRED CE FOR THE COMPLIANCE PERIOND ENDING 01/31/2009 TO KEEP HIS RESIDEND FLORIDA INSURANCE LICENSE IN FORCE.  WHEN NOTIFIED BY THE FLORIDA DEPARTMENT OF FINANCIAL SERVICES, REPRESENTATIVE COMPLETED THE REQUIRED CE, PAID THE $250 FINE AND HIS INSURANCE LICENSE WAS REINSTATED.",
+            "Resolution": "Stipulation and Consent",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Civil and Administrative Penalty(ies)/Fine(s)",
+                "SanctionDetails": [
+                  {
+                    "Amount": "$250.00"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "6/15/1998",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "7/19/1997",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "12/17/2015",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "1/8/2001",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 6",
+          "examName": "Investment Company Products/Variable Contracts Representative Examination",
+          "examTakenDate": "1/22/1993",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "31243",
+          "firm_name": "VALMARK SECURITIES, INC.",
+          "registration_begin_date": "6/1/2009",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "12/17/2015"
+        },
+        {
+          "firm_id": "4806",
+          "firm_name": "MUTUAL SERVICE CORPORATION",
+          "registration_begin_date": "12/13/2004",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "6/2/2009"
+        },
+        {
+          "firm_id": "4386",
+          "firm_name": "MONY SECURITIES CORPORATION",
+          "registration_begin_date": "1/26/1993",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "12/17/2004"
+        }
+      ],
+      "crd_number": "2314181"
+    },
+    "detailed_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "MICHAEL CHRISTOPHER REDHEAD",
+      "other_names": [
+        "M. CHRIS REDHEAD"
+      ],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "5/12/2011",
+          "disclosureType": "Regulatory",
+          "disclosureResolution": "Final",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "DocketNumberFDA": "",
+            "DocketNumberAAO": "",
+            "Initiated By": "FLORDIA DEPARTMENT OF FINANCIAL SERVICES",
+            "Allegations": "REPRESENTATIVE DID NOT COMPLETE REQUIRED CE FOR THE COMPLIANCE PERIOD ENDING 01/31/2011 TO KEEP HIS RESIDENT INSURANCE LICENSE IN FORCE. WHEN NOTIFIED BY THE FLORIDA DEPARTMENT OF FINANCIAL SERVICES, REPRESENTATIVE COMPLETED THE REQUIRED CE, PAID THE $250.00 FINE AND HIS INSURANCE LICENSE REINSTATED.",
+            "Resolution": "Stipulation and Consent",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Civil and Administrative Penalty(ies)/Fine(s)",
+                "SanctionDetails": [
+                  {
+                    "Amount": "$250.00"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "eventDate": "3/16/2009",
+          "disclosureType": "Regulatory",
+          "disclosureResolution": "Final",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "DocketNumberFDA": "",
+            "DocketNumberAAO": "",
+            "Initiated By": "FLORIDA DEPARTMENT OF FINANCIAL SERVICES",
+            "Allegations": "REPRESENTATIVE  DID NOT COMPLETE REQUIRED CE FOR THE COMPLIANCE PERIOND ENDING 01/31/2009 TO KEEP HIS RESIDEND FLORIDA INSURANCE LICENSE IN FORCE.  WHEN NOTIFIED BY THE FLORIDA DEPARTMENT OF FINANCIAL SERVICES, REPRESENTATIVE COMPLETED THE REQUIRED CE, PAID THE $250 FINE AND HIS INSURANCE LICENSE WAS REINSTATED.",
+            "Resolution": "Stipulation and Consent",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Civil and Administrative Penalty(ies)/Fine(s)",
+                "SanctionDetails": [
+                  {
+                    "Amount": "$250.00"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "6/15/1998",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "7/19/1997",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "12/17/2015",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "1/8/2001",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 6",
+          "examName": "Investment Company Products/Variable Contracts Representative Examination",
+          "examTakenDate": "1/22/1993",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "31243",
+          "firm_name": "VALMARK SECURITIES, INC.",
+          "registration_begin_date": "6/1/2009",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "12/17/2015"
+        },
+        {
+          "firm_id": "4806",
+          "firm_name": "MUTUAL SERVICE CORPORATION",
+          "registration_begin_date": "12/13/2004",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "6/2/2009"
+        },
+        {
+          "firm_id": "4386",
+          "firm_name": "MONY SECURITIES CORPORATION",
+          "registration_begin_date": "1/26/1993",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "12/17/2004"
+        }
+      ],
+      "crd_number": "2314181"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "2314181",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA BrokerCheck data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "Michael",
+        "middle": null,
+        "last": "Redhead"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "MICHAEL",
+            "middle": "CHRISTOPHER",
+            "last": "REDHEAD"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        },
+        {
+          "name_source": "other_names[0]",
+          "fetched_name": {
+            "first": "M.",
+            "middle": "CHRIS",
+            "last": "REDHEAD"
+          },
+          "score": 55.0,
+          "first_score": 0.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        }
+      ],
+      "best_match": {
+        "name_source": "main_fetched_name",
+        "fetched_name": {
+          "first": "MICHAEL",
+          "middle": "CHRISTOPHER",
+          "last": "REDHEAD"
+        },
+        "score": 95.0,
+        "first_score": 1.0,
+        "middle_score": 0.5,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "Michael Redhead has 2 regulatory disclosures.",
+    "alerts": [
+      {
+        "alert_type": "Regulatory Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "DocketNumberFDA": "",
+            "DocketNumberAAO": "",
+            "Initiated By": "FLORDIA DEPARTMENT OF FINANCIAL SERVICES",
+            "Allegations": "REPRESENTATIVE DID NOT COMPLETE REQUIRED CE FOR THE COMPLIANCE PERIOD ENDING 01/31/2011 TO KEEP HIS RESIDENT INSURANCE LICENSE IN FORCE. WHEN NOTIFIED BY THE FLORIDA DEPARTMENT OF FINANCIAL SERVICES, REPRESENTATIVE COMPLETED THE REQUIRED CE, PAID THE $250.00 FINE AND HIS INSURANCE LICENSE REINSTATED.",
+            "Resolution": "Stipulation and Consent",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Civil and Administrative Penalty(ies)/Fine(s)",
+                "SanctionDetails": [
+                  {
+                    "Amount": "$250.00"
+                  }
+                ]
+              }
+            ]
+          },
+          "event_date": "5/12/2011",
+          "resolution": "Final"
+        },
+        "description": "Regulatory action on 5/12/2011 initiated by FLORDIA DEPARTMENT OF FINANCIAL SERVICES. Resolution: Final. Allegations: REPRESENTATIVE DID NOT COMPLETE REQUIRED CE FOR THE COMPLIANCE PERIOD ENDING 01/31/2011 TO KEEP HIS RESIDENT INSURANCE LICENSE IN FORCE. WHEN NOTIFIED BY THE FLORIDA DEPARTMENT OF FINANCIAL SERVICES, REPRESENTATIVE COMPLETED THE REQUIRED CE, PAID THE $250.00 FINE AND HIS INSURANCE LICENSE REINSTATED.. Sanctions: Civil and Administrative Penalty(ies)/Fine(s) [Civil penalty detected.]"
+      },
+      {
+        "alert_type": "Regulatory Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "DocketNumberFDA": "",
+            "DocketNumberAAO": "",
+            "Initiated By": "FLORIDA DEPARTMENT OF FINANCIAL SERVICES",
+            "Allegations": "REPRESENTATIVE  DID NOT COMPLETE REQUIRED CE FOR THE COMPLIANCE PERIOND ENDING 01/31/2009 TO KEEP HIS RESIDEND FLORIDA INSURANCE LICENSE IN FORCE.  WHEN NOTIFIED BY THE FLORIDA DEPARTMENT OF FINANCIAL SERVICES, REPRESENTATIVE COMPLETED THE REQUIRED CE, PAID THE $250 FINE AND HIS INSURANCE LICENSE WAS REINSTATED.",
+            "Resolution": "Stipulation and Consent",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Civil and Administrative Penalty(ies)/Fine(s)",
+                "SanctionDetails": [
+                  {
+                    "Amount": "$250.00"
+                  }
+                ]
+              }
+            ]
+          },
+          "event_date": "3/16/2009",
+          "resolution": "Final"
+        },
+        "description": "Regulatory action on 3/16/2009 initiated by FLORIDA DEPARTMENT OF FINANCIAL SERVICES. Resolution: Final. Allegations: REPRESENTATIVE  DID NOT COMPLETE REQUIRED CE FOR THE COMPLIANCE PERIOND ENDING 01/31/2009 TO KEEP HIS RESIDEND FLORIDA INSURANCE LICENSE IN FORCE.  WHEN NOTIFIED BY THE FLORIDA DEPARTMENT OF FINANCIAL SERVICES, REPRESENTATIVE COMPLETED THE REQUIRED CE, PAID THE $250 FINE AND HIS INSURANCE LICENSE WAS REINSTATED.. Sanctions: Civil and Administrative Penalty(ies)/Fine(s) [Civil penalty detected.]"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No matching disciplinary records found for Michael Redhead, but 16 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Search Info",
+        "alert_category": "DISCIPLINARY",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Michael Redhead",
+            "sec_disciplinary": {
+              "source": "SEC_Disciplinary",
+              "records_found": 1,
+              "records_filtered": 1,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'Michael Redhead'"
+            },
+            "finra_disciplinary": {
+              "source": "FINRA_Disciplinary",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Michael Barrows, Eric John Ludovico",
+                "Michael Barrows, Eric John Ludovico",
+                "Michael J. Dugan",
+                "Jason Michael Poschinger",
+                "John Michael Palma",
+                "Joseph Michael Cannon",
+                "Network 1 Financial Securities Inc.Michael Molinaro",
+                "Michael Louis Miro",
+                "Steven Michael Blanchard",
+                "MICHAEL RYAN PETRUSKA",
+                "Michael J. Brewster",
+                "Michael T. Shoniker",
+                "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.",
+                "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.",
+                "Michael R. Rosalia",
+                "Jason Michael Poschinger",
+                "Michael Lancaster"
+              ],
+              "name_scores": {
+                "Michael Barrows, Eric John Ludovico": 0.0,
+                "Michael J. Dugan": 47.62,
+                "Jason Michael Poschinger": 9.52,
+                "John Michael Palma": 9.52,
+                "Joseph Michael Cannon": 9.52,
+                "Network 1 Financial Securities Inc.Michael Molinaro": 9.52,
+                "Michael Louis Miro": 47.62,
+                "Steven Michael Blanchard": 9.52,
+                "MICHAEL RYAN PETRUSKA": 47.62,
+                "Michael J. Brewster": 47.62,
+                "Michael T. Shoniker": 47.62,
+                "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.": 0.0,
+                "Michael R. Rosalia": 47.62,
+                "Michael Lancaster": 47.37
+              },
+              "exact_match_found": false,
+              "status": "Partial failure: Error processing 'Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.'"
+            }
+          }
+        },
+        "description": "Found 16 disciplinary records for Michael Redhead, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Michael Redhead",
+      "sec_disciplinary": {
+        "source": "SEC_Disciplinary",
+        "records_found": 1,
+        "records_filtered": 1,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Michael Redhead'"
+      },
+      "finra_disciplinary": {
+        "source": "FINRA_Disciplinary",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Michael Barrows, Eric John Ludovico",
+          "Michael Barrows, Eric John Ludovico",
+          "Michael J. Dugan",
+          "Jason Michael Poschinger",
+          "John Michael Palma",
+          "Joseph Michael Cannon",
+          "Network 1 Financial Securities Inc.Michael Molinaro",
+          "Michael Louis Miro",
+          "Steven Michael Blanchard",
+          "MICHAEL RYAN PETRUSKA",
+          "Michael J. Brewster",
+          "Michael T. Shoniker",
+          "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.",
+          "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.",
+          "Michael R. Rosalia",
+          "Jason Michael Poschinger",
+          "Michael Lancaster"
+        ],
+        "name_scores": {
+          "Michael Barrows, Eric John Ludovico": 0.0,
+          "Michael J. Dugan": 47.62,
+          "Jason Michael Poschinger": 9.52,
+          "John Michael Palma": 9.52,
+          "Joseph Michael Cannon": 9.52,
+          "Network 1 Financial Securities Inc.Michael Molinaro": 9.52,
+          "Michael Louis Miro": 47.62,
+          "Steven Michael Blanchard": 9.52,
+          "MICHAEL RYAN PETRUSKA": 47.62,
+          "Michael J. Brewster": 47.62,
+          "Michael T. Shoniker": 47.62,
+          "Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.": 0.0,
+          "Michael R. Rosalia": 47.62,
+          "Michael Lancaster": 47.37
+        },
+        "exact_match_found": false,
+        "status": "Partial failure: Error processing 'Drexel Hamilton, LLCMichael Ivcic, Frederick Phelan, David Steigerwald, Thomas McClure Mead, Jr.'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": true,
+    "compliance_explanation": "No arbitration records found for Michael Redhead.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "searched_name": "Michael Redhead",
+      "sec_arbitration": {
+        "source": "SEC_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_arbitration": {
+        "source": "FINRA_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for Michael Redhead; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Regulatory Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "DocketNumberFDA": "",
+            "DocketNumberAAO": "",
+            "Initiated By": "FLORDIA DEPARTMENT OF FINANCIAL SERVICES",
+            "Allegations": "REPRESENTATIVE DID NOT COMPLETE REQUIRED CE FOR THE COMPLIANCE PERIOD ENDING 01/31/2011 TO KEEP HIS RESIDENT INSURANCE LICENSE IN FORCE. WHEN NOTIFIED BY THE FLORIDA DEPARTMENT OF FINANCIAL SERVICES, REPRESENTATIVE COMPLETED THE REQUIRED CE, PAID THE $250.00 FINE AND HIS INSURANCE LICENSE REINSTATED.",
+            "Resolution": "Stipulation and Consent",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Civil and Administrative Penalty(ies)/Fine(s)",
+                "SanctionDetails": [
+                  {
+                    "Amount": "$250.00"
+                  }
+                ]
+              }
+            ]
+          },
+          "event_date": "5/12/2011",
+          "resolution": "Final"
+        },
+        "description": "Regulatory action on 5/12/2011 initiated by FLORDIA DEPARTMENT OF FINANCIAL SERVICES. Resolution: Final. Allegations: REPRESENTATIVE DID NOT COMPLETE REQUIRED CE FOR THE COMPLIANCE PERIOD ENDING 01/31/2011 TO KEEP HIS RESIDENT INSURANCE LICENSE IN FORCE. WHEN NOTIFIED BY THE FLORIDA DEPARTMENT OF FINANCIAL SERVICES, REPRESENTATIVE COMPLETED THE REQUIRED CE, PAID THE $250.00 FINE AND HIS INSURANCE LICENSE REINSTATED.. Sanctions: Civil and Administrative Penalty(ies)/Fine(s) [Civil penalty detected.]"
+      },
+      {
+        "alert_type": "Regulatory Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "DocketNumberFDA": "",
+            "DocketNumberAAO": "",
+            "Initiated By": "FLORIDA DEPARTMENT OF FINANCIAL SERVICES",
+            "Allegations": "REPRESENTATIVE  DID NOT COMPLETE REQUIRED CE FOR THE COMPLIANCE PERIOND ENDING 01/31/2009 TO KEEP HIS RESIDEND FLORIDA INSURANCE LICENSE IN FORCE.  WHEN NOTIFIED BY THE FLORIDA DEPARTMENT OF FINANCIAL SERVICES, REPRESENTATIVE COMPLETED THE REQUIRED CE, PAID THE $250 FINE AND HIS INSURANCE LICENSE WAS REINSTATED.",
+            "Resolution": "Stipulation and Consent",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Civil and Administrative Penalty(ies)/Fine(s)",
+                "SanctionDetails": [
+                  {
+                    "Amount": "$250.00"
+                  }
+                ]
+              }
+            ]
+          },
+          "event_date": "3/16/2009",
+          "resolution": "Final"
+        },
+        "description": "Regulatory action on 3/16/2009 initiated by FLORIDA DEPARTMENT OF FINANCIAL SERVICES. Resolution: Final. Allegations: REPRESENTATIVE  DID NOT COMPLETE REQUIRED CE FOR THE COMPLIANCE PERIOND ENDING 01/31/2009 TO KEEP HIS RESIDEND FLORIDA INSURANCE LICENSE IN FORCE.  WHEN NOTIFIED BY THE FLORIDA DEPARTMENT OF FINANCIAL SERVICES, REPRESENTATIVE COMPLETED THE REQUIRED CE, PAID THE $250 FINE AND HIS INSURANCE LICENSE WAS REINSTATED.. Sanctions: Civil and Administrative Penalty(ies)/Fine(s) [Civil penalty detected.]"
+      }
+    ]
+  }
+}

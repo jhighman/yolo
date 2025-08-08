@@ -1,0 +1,896 @@
+{
+  "reference_id": "SP38146264185190_PBI-D3D6038417024E1",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-D3D6038417024E1",
+    "first_name": "Moeez",
+    "last_name": "Ansari",
+    "employee_number": "EN-052298",
+    "zip": "92679",
+    "crdNumber": "4053253",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "4053253",
+    "individual_name": "Moeez Ansari",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "FINRA_BrokerCheck",
+    "basic_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "MOEEZ UL-HAQ ANSARI",
+      "other_names": [
+        "MOE  ANSARI"
+      ],
+      "bc_scope": "Active",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "7/12/2002",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "THE CUSTOMER'S COMPLIANT IS AGAINST ANSARI AND COMPAK TRADING CO. THE CUSTOMER ALLEGES THAT ANSARI MISREPRESENTED THE RISKS, CHURNED HIS ACCOUNT AND VIOLATED HIS FIDUCIARY DUTY TO THE CUSTOMER. THE ALLEGED ACTIVITES OCCURRED BETWEEN SEPTEMBER 1999 AND APRIL 2000. THE ALLEGED ACTIVITIES DID NOT OCCUR THROUGH SENTRA SECURITIES CORPORATION.",
+            "Damage Amount Requested": "$32,166.09",
+            "Settlement Amount": "$4,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          }
+        },
+        {
+          "eventDate": "7/12/2002",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "THE CUSTOMER  ALLEGES THAT BETWEEN APRIL 1999 AND JANUARY 2001 ANSARI VIOLATED HIS FIDUCIARY RESPONSIBILITY TO THE CUSTOMER  BY OVER EXTENDING HIS MANAGED COMMODITIES ACCOUNT ON MARGIN. THE CUSTOMER  STATES THAT HIS COMMODITIES ACCOUNT WAS WITH COMPAK TRADING COMPANY/COMPAK ASSET MANAGEMENT. THE ALLEGED ACTIVITES DID NOT OCCUR THROUGH SENTRA SECURITIES CORPORATION.",
+            "Damage Amount Requested": "$22,726.79",
+            "Settlement Amount": "$2,500.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          }
+        },
+        {
+          "eventDate": "12/6/2001",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Closed-No Action",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "THE FIRM RECEIVED A CUSTOMER COMPLAINT FROM THE LAW OFFICES OF HOLAND & KNIGHT ON BEHALF OF 4 INDIVIDUALS ALLEGING THAT OPTION TRANSACTIONS WERE EXECUTED IN CLIENT ACCOUNTS WITHOUT THE DISCLOSURES OF RISK.  THE FIRM HAS REQUESTED THAT HOLAND & KNIGHT ADVISE COMPAK ASSET OF THE TRADE SPCIFICS.  COMPAK ASSET TO DATE HAS NOT HEARD BACK FROM HOLAND & KNIGHT.",
+            "Damage Amount Requested": "$111,405.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          }
+        },
+        {
+          "eventDate": "10/26/2001",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "NOT REGISTERED AS A CTA, DID NOT DISCLOSE RISK.",
+            "Damage Amount Requested": "$68,000.00",
+            "Settlement Amount": "$29,000.00",
+            "DisplayAAOLinkIfExists": "Y",
+            "arbitrationClaimFiledDetail": "01-101",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "ADM INVESTOR SERVICES CONTRIBUTED $14,500.00 AND THE BALANCE OF $14,500.00 WAS PAID BY MR. ROBERT DUFFY.  "
+            ]
+          }
+        },
+        {
+          "eventDate": "3/19/2001",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "CLIENT ALLEGED THAT ACCOUNT EXECUTIVE [OTHER FIRM EMPLOYEE] AND MOEEZ ANSARI CHURNED HIS ACCOUNT.  AT THE TIME OF THE CLIENT HAD A DEBIT BALANCE IN HIS ACCOUNT OF $14,539.73.",
+            "Damage Amount Requested": "$14,539.73",
+            "Settlement Amount": "$14,539.73",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "THE FIRM MADE A DECISION TO PAY THE DEBIT BALANCE OF $14,539.73 TO THE CLEAARING FIRM TO RESOLVE THE MATTER. "
+            ]
+          }
+        },
+        {
+          "eventDate": "8/11/2000",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Award / Judgment",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "CLIENT FILED A COMPLAINT AGAINST COMPAK TRADING, ITS PRINCIPAL MOEEZ ANSARI AND ACCOUNT EXECUTIVE [OTHER FIRM EMPLOYEE] ALLEGING THAT THE FIRM AND ITS REPRESENTATIVES FAILED TO DISCLOSE RISKS; UNAUTHORIZED TRADING; MISREPRESENTATION; FRAUDULANT SOLICITATION.",
+            "Damage Amount Requested": "$160,283.73",
+            "Damages Granted": "$57,527.91",
+            "DisplayAAOLinkIfExists": "Y",
+            "arbitrationClaimFiledDetail": "00--71",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "[CUSTOMER] WAS AWARDED $57,527.91. THE FIRM CONTRIBUTED $27,763.95; THE ACCOUNT EXECUTIVE [OTHER FIRM EMPLOYEE] PAID THE BALANCE OF $27,763.95."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 66",
+          "examName": "Uniform Combined State Law Examination",
+          "examTakenDate": "1/10/2000",
+          "examScope": "BOTH"
+        },
+        {
+          "examCategory": "Series 14",
+          "examName": "Compliance Officer Examination",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 24",
+          "examName": "General Securities Principal Examination",
+          "examTakenDate": "5/19/2003",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 99TO",
+          "examName": "Operations Professional Examination",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "7/13/1999",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "125472",
+          "firm_name": "COMPAK SECURITIES, INC.",
+          "registration_begin_date": "9/3/2003",
+          "branch_offices": [
+            {
+              "street": "1801 DOVE STREET",
+              "city": "NEWPORT BEACH",
+              "state": "CA",
+              "zip_code": "92660"
+            },
+            {
+              "street": "8865 E. BELL ROAD, SUITE 201",
+              "city": "SCOTTSDALE",
+              "state": "AZ",
+              "zip_code": "85251"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "100100",
+          "firm_name": "MULTIPLE FINANCIAL SERVICES, INC.",
+          "registration_begin_date": "1/27/2003",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "10/30/2003"
+        },
+        {
+          "firm_id": "25803",
+          "firm_name": "TRIAD ADVISORS, INC.",
+          "registration_begin_date": "2/8/2001",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "4/2/2002"
+        },
+        {
+          "firm_id": "10249",
+          "firm_name": "SENTRA SECURITIES CORPORATION",
+          "registration_begin_date": "10/27/1999",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "12/8/2000"
+        }
+      ],
+      "crd_number": "4053253"
+    },
+    "detailed_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "MOEEZ UL-HAQ ANSARI",
+      "other_names": [
+        "MOE  ANSARI"
+      ],
+      "bc_scope": "Active",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "7/12/2002",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "THE CUSTOMER'S COMPLIANT IS AGAINST ANSARI AND COMPAK TRADING CO. THE CUSTOMER ALLEGES THAT ANSARI MISREPRESENTED THE RISKS, CHURNED HIS ACCOUNT AND VIOLATED HIS FIDUCIARY DUTY TO THE CUSTOMER. THE ALLEGED ACTIVITES OCCURRED BETWEEN SEPTEMBER 1999 AND APRIL 2000. THE ALLEGED ACTIVITIES DID NOT OCCUR THROUGH SENTRA SECURITIES CORPORATION.",
+            "Damage Amount Requested": "$32,166.09",
+            "Settlement Amount": "$4,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          }
+        },
+        {
+          "eventDate": "7/12/2002",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "THE CUSTOMER  ALLEGES THAT BETWEEN APRIL 1999 AND JANUARY 2001 ANSARI VIOLATED HIS FIDUCIARY RESPONSIBILITY TO THE CUSTOMER  BY OVER EXTENDING HIS MANAGED COMMODITIES ACCOUNT ON MARGIN. THE CUSTOMER  STATES THAT HIS COMMODITIES ACCOUNT WAS WITH COMPAK TRADING COMPANY/COMPAK ASSET MANAGEMENT. THE ALLEGED ACTIVITES DID NOT OCCUR THROUGH SENTRA SECURITIES CORPORATION.",
+            "Damage Amount Requested": "$22,726.79",
+            "Settlement Amount": "$2,500.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          }
+        },
+        {
+          "eventDate": "12/6/2001",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Closed-No Action",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "THE FIRM RECEIVED A CUSTOMER COMPLAINT FROM THE LAW OFFICES OF HOLAND & KNIGHT ON BEHALF OF 4 INDIVIDUALS ALLEGING THAT OPTION TRANSACTIONS WERE EXECUTED IN CLIENT ACCOUNTS WITHOUT THE DISCLOSURES OF RISK.  THE FIRM HAS REQUESTED THAT HOLAND & KNIGHT ADVISE COMPAK ASSET OF THE TRADE SPCIFICS.  COMPAK ASSET TO DATE HAS NOT HEARD BACK FROM HOLAND & KNIGHT.",
+            "Damage Amount Requested": "$111,405.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          }
+        },
+        {
+          "eventDate": "10/26/2001",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "NOT REGISTERED AS A CTA, DID NOT DISCLOSE RISK.",
+            "Damage Amount Requested": "$68,000.00",
+            "Settlement Amount": "$29,000.00",
+            "DisplayAAOLinkIfExists": "Y",
+            "arbitrationClaimFiledDetail": "01-101",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "ADM INVESTOR SERVICES CONTRIBUTED $14,500.00 AND THE BALANCE OF $14,500.00 WAS PAID BY MR. ROBERT DUFFY.  "
+            ]
+          }
+        },
+        {
+          "eventDate": "3/19/2001",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Settled",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "CLIENT ALLEGED THAT ACCOUNT EXECUTIVE [OTHER FIRM EMPLOYEE] AND MOEEZ ANSARI CHURNED HIS ACCOUNT.  AT THE TIME OF THE CLIENT HAD A DEBIT BALANCE IN HIS ACCOUNT OF $14,539.73.",
+            "Damage Amount Requested": "$14,539.73",
+            "Settlement Amount": "$14,539.73",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "THE FIRM MADE A DECISION TO PAY THE DEBIT BALANCE OF $14,539.73 TO THE CLEAARING FIRM TO RESOLVE THE MATTER. "
+            ]
+          }
+        },
+        {
+          "eventDate": "8/11/2000",
+          "disclosureType": "Customer Dispute",
+          "disclosureResolution": "Award / Judgment",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Allegations": "CLIENT FILED A COMPLAINT AGAINST COMPAK TRADING, ITS PRINCIPAL MOEEZ ANSARI AND ACCOUNT EXECUTIVE [OTHER FIRM EMPLOYEE] ALLEGING THAT THE FIRM AND ITS REPRESENTATIVES FAILED TO DISCLOSE RISKS; UNAUTHORIZED TRADING; MISREPRESENTATION; FRAUDULANT SOLICITATION.",
+            "Damage Amount Requested": "$160,283.73",
+            "Damages Granted": "$57,527.91",
+            "DisplayAAOLinkIfExists": "Y",
+            "arbitrationClaimFiledDetail": "00--71",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "[CUSTOMER] WAS AWARDED $57,527.91. THE FIRM CONTRIBUTED $27,763.95; THE ACCOUNT EXECUTIVE [OTHER FIRM EMPLOYEE] PAID THE BALANCE OF $27,763.95."
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 66",
+          "examName": "Uniform Combined State Law Examination",
+          "examTakenDate": "1/10/2000",
+          "examScope": "BOTH"
+        },
+        {
+          "examCategory": "Series 14",
+          "examName": "Compliance Officer Examination",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 24",
+          "examName": "General Securities Principal Examination",
+          "examTakenDate": "5/19/2003",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 99TO",
+          "examName": "Operations Professional Examination",
+          "examTakenDate": "1/2/2023",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "7/13/1999",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "125472",
+          "firm_name": "COMPAK SECURITIES, INC.",
+          "registration_begin_date": "9/3/2003",
+          "branch_offices": [
+            {
+              "street": "1801 DOVE STREET",
+              "city": "NEWPORT BEACH",
+              "state": "CA",
+              "zip_code": "92660"
+            },
+            {
+              "street": "8865 E. BELL ROAD, SUITE 201",
+              "city": "SCOTTSDALE",
+              "state": "AZ",
+              "zip_code": "85251"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "100100",
+          "firm_name": "MULTIPLE FINANCIAL SERVICES, INC.",
+          "registration_begin_date": "1/27/2003",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "10/30/2003"
+        },
+        {
+          "firm_id": "25803",
+          "firm_name": "TRIAD ADVISORS, INC.",
+          "registration_begin_date": "2/8/2001",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "4/2/2002"
+        },
+        {
+          "firm_id": "10249",
+          "firm_name": "SENTRA SECURITIES CORPORATION",
+          "registration_begin_date": "10/27/1999",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "12/8/2000"
+        }
+      ],
+      "crd_number": "4053253"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "4053253",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA BrokerCheck data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "Moeez",
+        "middle": null,
+        "last": "Ansari"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "MOEEZ",
+            "middle": "UL-HAQ",
+            "last": "ANSARI"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        },
+        {
+          "name_source": "other_names[0]",
+          "fetched_name": {
+            "first": "MOE",
+            "middle": null,
+            "last": "ANSARI"
+          },
+          "score": 55.56,
+          "first_score": 0.0,
+          "middle_score": 0.0,
+          "last_score": 1.0
+        }
+      ],
+      "best_match": {
+        "name_source": "main_fetched_name",
+        "fetched_name": {
+          "first": "MOEEZ",
+          "middle": "UL-HAQ",
+          "last": "ANSARI"
+        },
+        "score": 95.0,
+        "first_score": 1.0,
+        "middle_score": 0.5,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "Moeez Ansari has 6 customer dispute disclosures.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "THE CUSTOMER'S COMPLIANT IS AGAINST ANSARI AND COMPAK TRADING CO. THE CUSTOMER ALLEGES THAT ANSARI MISREPRESENTED THE RISKS, CHURNED HIS ACCOUNT AND VIOLATED HIS FIDUCIARY DUTY TO THE CUSTOMER. THE ALLEGED ACTIVITES OCCURRED BETWEEN SEPTEMBER 1999 AND APRIL 2000. THE ALLEGED ACTIVITIES DID NOT OCCUR THROUGH SENTRA SECURITIES CORPORATION.",
+            "Damage Amount Requested": "$32,166.09",
+            "Settlement Amount": "$4,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          },
+          "event_date": "7/12/2002",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 7/12/2002. Resolution: Settled. Allegations: THE CUSTOMER'S COMPLIANT IS AGAINST ANSARI AND COMPAK TRADING CO. THE CUSTOMER ALLEGES THAT ANSARI MISREPRESENTED THE RISKS, CHURNED HIS ACCOUNT AND VIOLATED HIS FIDUCIARY DUTY TO THE CUSTOMER. THE ALLEGED ACTIVITES OCCURRED BETWEEN SEPTEMBER 1999 AND APRIL 2000. THE ALLEGED ACTIVITIES DID NOT OCCUR THROUGH SENTRA SECURITIES CORPORATION.. Damage requested: $32,166.09. Settlement: $4,000.00"
+      },
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "THE CUSTOMER  ALLEGES THAT BETWEEN APRIL 1999 AND JANUARY 2001 ANSARI VIOLATED HIS FIDUCIARY RESPONSIBILITY TO THE CUSTOMER  BY OVER EXTENDING HIS MANAGED COMMODITIES ACCOUNT ON MARGIN. THE CUSTOMER  STATES THAT HIS COMMODITIES ACCOUNT WAS WITH COMPAK TRADING COMPANY/COMPAK ASSET MANAGEMENT. THE ALLEGED ACTIVITES DID NOT OCCUR THROUGH SENTRA SECURITIES CORPORATION.",
+            "Damage Amount Requested": "$22,726.79",
+            "Settlement Amount": "$2,500.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          },
+          "event_date": "7/12/2002",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 7/12/2002. Resolution: Settled. Allegations: THE CUSTOMER  ALLEGES THAT BETWEEN APRIL 1999 AND JANUARY 2001 ANSARI VIOLATED HIS FIDUCIARY RESPONSIBILITY TO THE CUSTOMER  BY OVER EXTENDING HIS MANAGED COMMODITIES ACCOUNT ON MARGIN. THE CUSTOMER  STATES THAT HIS COMMODITIES ACCOUNT WAS WITH COMPAK TRADING COMPANY/COMPAK ASSET MANAGEMENT. THE ALLEGED ACTIVITES DID NOT OCCUR THROUGH SENTRA SECURITIES CORPORATION.. Damage requested: $22,726.79. Settlement: $2,500.00"
+      },
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "THE FIRM RECEIVED A CUSTOMER COMPLAINT FROM THE LAW OFFICES OF HOLAND & KNIGHT ON BEHALF OF 4 INDIVIDUALS ALLEGING THAT OPTION TRANSACTIONS WERE EXECUTED IN CLIENT ACCOUNTS WITHOUT THE DISCLOSURES OF RISK.  THE FIRM HAS REQUESTED THAT HOLAND & KNIGHT ADVISE COMPAK ASSET OF THE TRADE SPCIFICS.  COMPAK ASSET TO DATE HAS NOT HEARD BACK FROM HOLAND & KNIGHT.",
+            "Damage Amount Requested": "$111,405.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          },
+          "event_date": "12/6/2001",
+          "resolution": "Closed-No Action"
+        },
+        "description": "Customer dispute on 12/6/2001. Resolution: Closed-No Action. Allegations: THE FIRM RECEIVED A CUSTOMER COMPLAINT FROM THE LAW OFFICES OF HOLAND & KNIGHT ON BEHALF OF 4 INDIVIDUALS ALLEGING THAT OPTION TRANSACTIONS WERE EXECUTED IN CLIENT ACCOUNTS WITHOUT THE DISCLOSURES OF RISK.  THE FIRM HAS REQUESTED THAT HOLAND & KNIGHT ADVISE COMPAK ASSET OF THE TRADE SPCIFICS.  COMPAK ASSET TO DATE HAS NOT HEARD BACK FROM HOLAND & KNIGHT.. Damage requested: $111,405.00. Settlement: Not specified"
+      },
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "NOT REGISTERED AS A CTA, DID NOT DISCLOSE RISK.",
+            "Damage Amount Requested": "$68,000.00",
+            "Settlement Amount": "$29,000.00",
+            "DisplayAAOLinkIfExists": "Y",
+            "arbitrationClaimFiledDetail": "01-101",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "ADM INVESTOR SERVICES CONTRIBUTED $14,500.00 AND THE BALANCE OF $14,500.00 WAS PAID BY MR. ROBERT DUFFY.  "
+            ]
+          },
+          "event_date": "10/26/2001",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 10/26/2001. Resolution: Settled. Allegations: NOT REGISTERED AS A CTA, DID NOT DISCLOSE RISK.. Damage requested: $68,000.00. Settlement: $29,000.00"
+      },
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "CLIENT ALLEGED THAT ACCOUNT EXECUTIVE [OTHER FIRM EMPLOYEE] AND MOEEZ ANSARI CHURNED HIS ACCOUNT.  AT THE TIME OF THE CLIENT HAD A DEBIT BALANCE IN HIS ACCOUNT OF $14,539.73.",
+            "Damage Amount Requested": "$14,539.73",
+            "Settlement Amount": "$14,539.73",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "THE FIRM MADE A DECISION TO PAY THE DEBIT BALANCE OF $14,539.73 TO THE CLEAARING FIRM TO RESOLVE THE MATTER. "
+            ]
+          },
+          "event_date": "3/19/2001",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 3/19/2001. Resolution: Settled. Allegations: CLIENT ALLEGED THAT ACCOUNT EXECUTIVE [OTHER FIRM EMPLOYEE] AND MOEEZ ANSARI CHURNED HIS ACCOUNT.  AT THE TIME OF THE CLIENT HAD A DEBIT BALANCE IN HIS ACCOUNT OF $14,539.73.. Damage requested: $14,539.73. Settlement: $14,539.73"
+      },
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "CLIENT FILED A COMPLAINT AGAINST COMPAK TRADING, ITS PRINCIPAL MOEEZ ANSARI AND ACCOUNT EXECUTIVE [OTHER FIRM EMPLOYEE] ALLEGING THAT THE FIRM AND ITS REPRESENTATIVES FAILED TO DISCLOSE RISKS; UNAUTHORIZED TRADING; MISREPRESENTATION; FRAUDULANT SOLICITATION.",
+            "Damage Amount Requested": "$160,283.73",
+            "Damages Granted": "$57,527.91",
+            "DisplayAAOLinkIfExists": "Y",
+            "arbitrationClaimFiledDetail": "00--71",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "[CUSTOMER] WAS AWARDED $57,527.91. THE FIRM CONTRIBUTED $27,763.95; THE ACCOUNT EXECUTIVE [OTHER FIRM EMPLOYEE] PAID THE BALANCE OF $27,763.95."
+            ]
+          },
+          "event_date": "8/11/2000",
+          "resolution": "Award / Judgment"
+        },
+        "description": "Customer dispute on 8/11/2000. Resolution: Award / Judgment. Allegations: CLIENT FILED A COMPLAINT AGAINST COMPAK TRADING, ITS PRINCIPAL MOEEZ ANSARI AND ACCOUNT EXECUTIVE [OTHER FIRM EMPLOYEE] ALLEGING THAT THE FIRM AND ITS REPRESENTATIVES FAILED TO DISCLOSE RISKS; UNAUTHORIZED TRADING; MISREPRESENTATION; FRAUDULANT SOLICITATION.. Damage requested: $160,283.73. Settlement: Not specified"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No disciplinary records found for Moeez Ansari.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "searched_name": "Moeez Ansari",
+      "sec_disciplinary": {
+        "source": "SEC_Disciplinary",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_disciplinary": {
+        "source": "FINRA_Disciplinary",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": true,
+    "compliance_explanation": "No matching arbitration records found for Moeez Ansari, 7 records reviewed with 7 filtered.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Arbitration Search Info",
+        "alert_category": "ARBITRATION",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Moeez Ansari",
+            "sec_arbitration": {
+              "source": "SEC_Arbitration",
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records found"
+            },
+            "finra_arbitration": {
+              "source": "FINRA_Arbitration",
+              "records_found": 7,
+              "records_filtered": 7,
+              "names_found": [
+                "Giovanni Narvaez",
+                "J.P. Morgan Securities",
+                "LLC",
+                "Mikal Haddad",
+                "Devin Marino",
+                "Morgan Stanley",
+                "Robert Stolar",
+                "Robinhood Financial",
+                "LLC.",
+                "Robinhood Securities",
+                "LLC"
+              ],
+              "name_scores": {
+                "Giovanni Narvaez": 5.26,
+                "J.P. Morgan Securities": 9.52,
+                "LLC": 5.26,
+                "Mikal Haddad": 5.26,
+                "Devin Marino": 5.26,
+                "Morgan Stanley": 5.26,
+                "Robert Stolar": 5.26,
+                "Robinhood Financial": 5.26,
+                "LLC.": 5.26,
+                "Robinhood Securities": 5.26
+              },
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'Moeez Ansari'"
+            }
+          }
+        },
+        "description": "Found 7 arbitration records for Moeez Ansari, 7 filtered out."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Moeez Ansari",
+      "sec_arbitration": {
+        "source": "SEC_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_arbitration": {
+        "source": "FINRA_Arbitration",
+        "records_found": 7,
+        "records_filtered": 7,
+        "names_found": [
+          "Giovanni Narvaez",
+          "J.P. Morgan Securities",
+          "LLC",
+          "Mikal Haddad",
+          "Devin Marino",
+          "Morgan Stanley",
+          "Robert Stolar",
+          "Robinhood Financial",
+          "LLC.",
+          "Robinhood Securities",
+          "LLC"
+        ],
+        "name_scores": {
+          "Giovanni Narvaez": 5.26,
+          "J.P. Morgan Securities": 9.52,
+          "LLC": 5.26,
+          "Mikal Haddad": 5.26,
+          "Devin Marino": 5.26,
+          "Morgan Stanley": 5.26,
+          "Robert Stolar": 5.26,
+          "Robinhood Financial": 5.26,
+          "LLC.": 5.26,
+          "Robinhood Securities": 5.26
+        },
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Moeez Ansari'"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for Moeez Ansari; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "THE CUSTOMER'S COMPLIANT IS AGAINST ANSARI AND COMPAK TRADING CO. THE CUSTOMER ALLEGES THAT ANSARI MISREPRESENTED THE RISKS, CHURNED HIS ACCOUNT AND VIOLATED HIS FIDUCIARY DUTY TO THE CUSTOMER. THE ALLEGED ACTIVITES OCCURRED BETWEEN SEPTEMBER 1999 AND APRIL 2000. THE ALLEGED ACTIVITIES DID NOT OCCUR THROUGH SENTRA SECURITIES CORPORATION.",
+            "Damage Amount Requested": "$32,166.09",
+            "Settlement Amount": "$4,000.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          },
+          "event_date": "7/12/2002",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 7/12/2002. Resolution: Settled. Allegations: THE CUSTOMER'S COMPLIANT IS AGAINST ANSARI AND COMPAK TRADING CO. THE CUSTOMER ALLEGES THAT ANSARI MISREPRESENTED THE RISKS, CHURNED HIS ACCOUNT AND VIOLATED HIS FIDUCIARY DUTY TO THE CUSTOMER. THE ALLEGED ACTIVITES OCCURRED BETWEEN SEPTEMBER 1999 AND APRIL 2000. THE ALLEGED ACTIVITIES DID NOT OCCUR THROUGH SENTRA SECURITIES CORPORATION.. Damage requested: $32,166.09. Settlement: $4,000.00"
+      },
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "THE CUSTOMER  ALLEGES THAT BETWEEN APRIL 1999 AND JANUARY 2001 ANSARI VIOLATED HIS FIDUCIARY RESPONSIBILITY TO THE CUSTOMER  BY OVER EXTENDING HIS MANAGED COMMODITIES ACCOUNT ON MARGIN. THE CUSTOMER  STATES THAT HIS COMMODITIES ACCOUNT WAS WITH COMPAK TRADING COMPANY/COMPAK ASSET MANAGEMENT. THE ALLEGED ACTIVITES DID NOT OCCUR THROUGH SENTRA SECURITIES CORPORATION.",
+            "Damage Amount Requested": "$22,726.79",
+            "Settlement Amount": "$2,500.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          },
+          "event_date": "7/12/2002",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 7/12/2002. Resolution: Settled. Allegations: THE CUSTOMER  ALLEGES THAT BETWEEN APRIL 1999 AND JANUARY 2001 ANSARI VIOLATED HIS FIDUCIARY RESPONSIBILITY TO THE CUSTOMER  BY OVER EXTENDING HIS MANAGED COMMODITIES ACCOUNT ON MARGIN. THE CUSTOMER  STATES THAT HIS COMMODITIES ACCOUNT WAS WITH COMPAK TRADING COMPANY/COMPAK ASSET MANAGEMENT. THE ALLEGED ACTIVITES DID NOT OCCUR THROUGH SENTRA SECURITIES CORPORATION.. Damage requested: $22,726.79. Settlement: $2,500.00"
+      },
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "THE FIRM RECEIVED A CUSTOMER COMPLAINT FROM THE LAW OFFICES OF HOLAND & KNIGHT ON BEHALF OF 4 INDIVIDUALS ALLEGING THAT OPTION TRANSACTIONS WERE EXECUTED IN CLIENT ACCOUNTS WITHOUT THE DISCLOSURES OF RISK.  THE FIRM HAS REQUESTED THAT HOLAND & KNIGHT ADVISE COMPAK ASSET OF THE TRADE SPCIFICS.  COMPAK ASSET TO DATE HAS NOT HEARD BACK FROM HOLAND & KNIGHT.",
+            "Damage Amount Requested": "$111,405.00",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": ""
+          },
+          "event_date": "12/6/2001",
+          "resolution": "Closed-No Action"
+        },
+        "description": "Customer dispute on 12/6/2001. Resolution: Closed-No Action. Allegations: THE FIRM RECEIVED A CUSTOMER COMPLAINT FROM THE LAW OFFICES OF HOLAND & KNIGHT ON BEHALF OF 4 INDIVIDUALS ALLEGING THAT OPTION TRANSACTIONS WERE EXECUTED IN CLIENT ACCOUNTS WITHOUT THE DISCLOSURES OF RISK.  THE FIRM HAS REQUESTED THAT HOLAND & KNIGHT ADVISE COMPAK ASSET OF THE TRADE SPCIFICS.  COMPAK ASSET TO DATE HAS NOT HEARD BACK FROM HOLAND & KNIGHT.. Damage requested: $111,405.00. Settlement: Not specified"
+      },
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "NOT REGISTERED AS A CTA, DID NOT DISCLOSE RISK.",
+            "Damage Amount Requested": "$68,000.00",
+            "Settlement Amount": "$29,000.00",
+            "DisplayAAOLinkIfExists": "Y",
+            "arbitrationClaimFiledDetail": "01-101",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "ADM INVESTOR SERVICES CONTRIBUTED $14,500.00 AND THE BALANCE OF $14,500.00 WAS PAID BY MR. ROBERT DUFFY.  "
+            ]
+          },
+          "event_date": "10/26/2001",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 10/26/2001. Resolution: Settled. Allegations: NOT REGISTERED AS A CTA, DID NOT DISCLOSE RISK.. Damage requested: $68,000.00. Settlement: $29,000.00"
+      },
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "CLIENT ALLEGED THAT ACCOUNT EXECUTIVE [OTHER FIRM EMPLOYEE] AND MOEEZ ANSARI CHURNED HIS ACCOUNT.  AT THE TIME OF THE CLIENT HAD A DEBIT BALANCE IN HIS ACCOUNT OF $14,539.73.",
+            "Damage Amount Requested": "$14,539.73",
+            "Settlement Amount": "$14,539.73",
+            "DisplayAAOLinkIfExists": "N",
+            "arbitrationClaimFiledDetail": "",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "THE FIRM MADE A DECISION TO PAY THE DEBIT BALANCE OF $14,539.73 TO THE CLEAARING FIRM TO RESOLVE THE MATTER. "
+            ]
+          },
+          "event_date": "3/19/2001",
+          "resolution": "Settled"
+        },
+        "description": "Customer dispute on 3/19/2001. Resolution: Settled. Allegations: CLIENT ALLEGED THAT ACCOUNT EXECUTIVE [OTHER FIRM EMPLOYEE] AND MOEEZ ANSARI CHURNED HIS ACCOUNT.  AT THE TIME OF THE CLIENT HAD A DEBIT BALANCE IN HIS ACCOUNT OF $14,539.73.. Damage requested: $14,539.73. Settlement: $14,539.73"
+      },
+      {
+        "alert_type": "Customer Dispute Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Allegations": "CLIENT FILED A COMPLAINT AGAINST COMPAK TRADING, ITS PRINCIPAL MOEEZ ANSARI AND ACCOUNT EXECUTIVE [OTHER FIRM EMPLOYEE] ALLEGING THAT THE FIRM AND ITS REPRESENTATIVES FAILED TO DISCLOSE RISKS; UNAUTHORIZED TRADING; MISREPRESENTATION; FRAUDULANT SOLICITATION.",
+            "Damage Amount Requested": "$160,283.73",
+            "Damages Granted": "$57,527.91",
+            "DisplayAAOLinkIfExists": "Y",
+            "arbitrationClaimFiledDetail": "00--71",
+            "arbitrationDocketNumber": "",
+            "Broker Comment": [
+              "[CUSTOMER] WAS AWARDED $57,527.91. THE FIRM CONTRIBUTED $27,763.95; THE ACCOUNT EXECUTIVE [OTHER FIRM EMPLOYEE] PAID THE BALANCE OF $27,763.95."
+            ]
+          },
+          "event_date": "8/11/2000",
+          "resolution": "Award / Judgment"
+        },
+        "description": "Customer dispute on 8/11/2000. Resolution: Award / Judgment. Allegations: CLIENT FILED A COMPLAINT AGAINST COMPAK TRADING, ITS PRINCIPAL MOEEZ ANSARI AND ACCOUNT EXECUTIVE [OTHER FIRM EMPLOYEE] ALLEGING THAT THE FIRM AND ITS REPRESENTATIVES FAILED TO DISCLOSE RISKS; UNAUTHORIZED TRADING; MISREPRESENTATION; FRAUDULANT SOLICITATION.. Damage requested: $160,283.73. Settlement: Not specified"
+      }
+    ]
+  }
+}

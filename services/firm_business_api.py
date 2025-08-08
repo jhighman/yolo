@@ -22,6 +22,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, HttpUrl, root_validator, validator
 import sys
 from pathlib import Path
+from celery import Celery
 
 # Add parent directory to Python path
 sys.path.append(str(Path(__file__).parent.parent))
@@ -43,6 +44,15 @@ app = FastAPI(
 
 # Initialize facade
 facade = FirmServicesFacade()
+
+# Initialize Celery client to use the main app's Celery instance
+def get_celery_app():
+    """Get the Celery app instance from the main application."""
+    from api import celery_app
+    return celery_app
+
+# Get Celery app
+celery_app = get_celery_app()
 
 # Define processing modes and their settings
 PROCESSING_MODES = {
@@ -93,38 +103,8 @@ class ClaimRequest(BaseModel):
             raise ValueError("entityName cannot be empty")
         return v.strip()
 
-async def send_to_webhook(webhook_url: str, report: Dict[str, Any], reference_id: str) -> None:
-    """
-    Asynchronously sends the report to a specified webhook URL.
-    
-    Args:
-        webhook_url: URL to send the report to
-        report: The compliance report to send
-        reference_id: Claim identifier for logging
-    """
-    try:
-        async with aiohttp.ClientSession() as session:
-            async with session.post(webhook_url, json=report) as response:
-                if response.status == 200:
-                    logger.info(f"Successfully sent report to webhook", extra={
-                        "reference_id": reference_id,
-                        "webhook_url": webhook_url,
-                        "status": response.status
-                    })
-                else:
-                    logger.error(f"Failed to send report to webhook", extra={
-                        "reference_id": reference_id,
-                        "webhook_url": webhook_url,
-                        "status": response.status,
-                        "response_text": await response.text()
-                    })
-    except Exception as e:
-        logger.error(f"Error sending report to webhook", extra={
-            "reference_id": reference_id,
-            "webhook_url": webhook_url,
-            "error": str(e),
-            "error_type": type(e).__name__
-        })
+# Note: We're no longer using the async send_to_webhook function
+# Instead, we're using the Celery task from the main application
 
 async def process_claim_helper(request: ClaimRequest, mode: str) -> Dict[str, Any]:
     """
@@ -173,7 +153,9 @@ async def process_claim_helper(request: ClaimRequest, mode: str) -> Dict[str, An
         
         # Send to webhook if URL provided
         if webhook_url:
-            asyncio.create_task(send_to_webhook(webhook_url, report, request.referenceId))
+            # Use the Celery task instead of the async function
+            from api import send_webhook_notification
+            send_webhook_notification.delay(webhook_url, report, request.referenceId)
         
         return report
         

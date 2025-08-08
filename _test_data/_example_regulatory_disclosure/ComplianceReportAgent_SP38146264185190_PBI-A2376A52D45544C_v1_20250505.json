@@ -1,0 +1,453 @@
+{
+  "reference_id": "SP38146264185190_PBI-A2376A52D45544C",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-A2376A52D45544C",
+    "first_name": "Peter",
+    "last_name": "Mallouk",
+    "employee_number": "EN-116591",
+    "crdNumber": "4508063",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "4508063",
+    "individual_name": "Peter Mallouk",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "BrokerCheck",
+    "basic_result": {
+      "fetched_name": "PETER ALEX MALLOUK",
+      "other_names": [],
+      "bc_scope": "Expanded",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "9/18/2018",
+          "disclosureType": "Regulatory",
+          "disclosureResolution": "Final",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 20,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "DocketNumberFDA": "",
+            "DocketNumberAAO": "",
+            "Initiated By": "UNITED STATES SECURITIES AND EXCHANGE COMMISSION",
+            "Allegations": "IA Release 40-5035 / September 18, 2018:  \r\nThe Securities and Exchange Commission (\"Commission\") deems it appropriate and in the public interest that public administrative and cease-and-desist proceedings be, and hereby are, instituted pursuant to Sections 203(e) and 203(k) of the Investment Advisers Act of 1940 (\"Advisers Act\") against Creative Planning, Inc. (\"CPI\") and Peter A. Mallouk (collectively, \"Respondents\").   \r\nThe Commission finds that this matter involves violations of the Advisers Act and certain rules thereunder by CPI, a registered investment adviser, that: (i) distributed hundreds of radio advertisements that contained prohibited client testimonials; (ii) failed to enforce the firm's code of ethics (\"Code of Ethics\") with regard to the radio advertisements and the reporting and review of certain securities accounts in which the firm's president had a beneficial interest; (iii) failed to keep true and accurate books and records; and (iv) failed to adopt and implement written policies and procedures reasonably designed to prevent violations of the Advisers Act. Mallouk, the firm's president and majority owner, caused certain of CPI's Code of Ethics violations.  \r\nIn August 2015, CPI engaged a local radio station to air live and pre-recorded radio advertisements regarding CPI through two radio hosts in the Kansas City area. In January 2016, one of the radio hosts became a client of CPI, and shortly thereafter independently began including testimonials regarding his personal experiences with CPI during his live radio endorsements. The live personal testimonials aired until October 2017. In March 2017, the radio station created a prerecorded spot containing a client testimonial that also aired until October 2017. Although CPI's policies and procedures required the firm to pre-approve and maintain copies of all of its advertisements, CPI did not monitor adequately the live and pre-recorded radio advertisements. CPI did not obtain copies of the live radio spots from August 2015 through October 2017, and did not obtain a copy of the March 2017 pre-recorded radio spot until October 2017.  \r\nIn addition, from July 2013 through November 2015, Mallouk did not report securities holdings and transactions from three personal securities accounts held for the benefit of his family and over which he exercised control to CPI's chief compliance officer (\"CCO\"), in contravention of CPI's Code of Ethics.  \r\nAs a result of the conduct described, CPI willfully violated Sections 204, 204A, and 206(4) of the Advisers Act and Rules 204-2(a)(11), 204A-1, 206(4)-1(a)(1), and 206(4)-7 thereunder, and Mallouk caused CPI's violations of Section 204A of the Advisers Act and Rule 204A-1 thereunder.",
+            "Resolution": "Order",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Cease and Desist"
+              },
+              {
+                "Sanctions": "Civil and Administrative Penalty(ies)/Fine(s)",
+                "SanctionDetails": [
+                  {
+                    "Amount": "$50,000.00"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "7/18/2009",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "11/20/2001",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "8/28/2009",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "35747",
+          "firm_name": "PURSHE KAPLAN STERLING INVESTMENTS",
+          "registration_begin_date": "8/31/2009",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "4/30/2010"
+        },
+        {
+          "firm_id": "615",
+          "firm_name": "NEW ENGLAND SECURITIES",
+          "registration_begin_date": "4/17/2002",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "4/7/2004"
+        }
+      ],
+      "crd_number": "4508063"
+    },
+    "detailed_result": {
+      "fetched_name": "PETER ALEX MALLOUK",
+      "other_names": [],
+      "bc_scope": "Expanded",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "9/18/2018",
+          "disclosureType": "Regulatory",
+          "disclosureResolution": "Final",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 20,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "DocketNumberFDA": "",
+            "DocketNumberAAO": "",
+            "Initiated By": "UNITED STATES SECURITIES AND EXCHANGE COMMISSION",
+            "Allegations": "IA Release 40-5035 / September 18, 2018:  \r\nThe Securities and Exchange Commission (\"Commission\") deems it appropriate and in the public interest that public administrative and cease-and-desist proceedings be, and hereby are, instituted pursuant to Sections 203(e) and 203(k) of the Investment Advisers Act of 1940 (\"Advisers Act\") against Creative Planning, Inc. (\"CPI\") and Peter A. Mallouk (collectively, \"Respondents\").   \r\nThe Commission finds that this matter involves violations of the Advisers Act and certain rules thereunder by CPI, a registered investment adviser, that: (i) distributed hundreds of radio advertisements that contained prohibited client testimonials; (ii) failed to enforce the firm's code of ethics (\"Code of Ethics\") with regard to the radio advertisements and the reporting and review of certain securities accounts in which the firm's president had a beneficial interest; (iii) failed to keep true and accurate books and records; and (iv) failed to adopt and implement written policies and procedures reasonably designed to prevent violations of the Advisers Act. Mallouk, the firm's president and majority owner, caused certain of CPI's Code of Ethics violations.  \r\nIn August 2015, CPI engaged a local radio station to air live and pre-recorded radio advertisements regarding CPI through two radio hosts in the Kansas City area. In January 2016, one of the radio hosts became a client of CPI, and shortly thereafter independently began including testimonials regarding his personal experiences with CPI during his live radio endorsements. The live personal testimonials aired until October 2017. In March 2017, the radio station created a prerecorded spot containing a client testimonial that also aired until October 2017. Although CPI's policies and procedures required the firm to pre-approve and maintain copies of all of its advertisements, CPI did not monitor adequately the live and pre-recorded radio advertisements. CPI did not obtain copies of the live radio spots from August 2015 through October 2017, and did not obtain a copy of the March 2017 pre-recorded radio spot until October 2017.  \r\nIn addition, from July 2013 through November 2015, Mallouk did not report securities holdings and transactions from three personal securities accounts held for the benefit of his family and over which he exercised control to CPI's chief compliance officer (\"CCO\"), in contravention of CPI's Code of Ethics.  \r\nAs a result of the conduct described, CPI willfully violated Sections 204, 204A, and 206(4) of the Advisers Act and Rules 204-2(a)(11), 204A-1, 206(4)-1(a)(1), and 206(4)-7 thereunder, and Mallouk caused CPI's violations of Section 204A of the Advisers Act and Rule 204A-1 thereunder.",
+            "Resolution": "Order",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Cease and Desist"
+              },
+              {
+                "Sanctions": "Civil and Administrative Penalty(ies)/Fine(s)",
+                "SanctionDetails": [
+                  {
+                    "Amount": "$50,000.00"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "7/18/2009",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "11/20/2001",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "8/28/2009",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "35747",
+          "firm_name": "PURSHE KAPLAN STERLING INVESTMENTS",
+          "registration_begin_date": "8/31/2009",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "4/30/2010"
+        },
+        {
+          "firm_id": "615",
+          "firm_name": "NEW ENGLAND SECURITIES",
+          "registration_begin_date": "4/17/2002",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "4/7/2004"
+        }
+      ],
+      "crd_number": "4508063"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "4508063",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with BrokerCheck data, individual found with employments."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "Peter",
+        "middle": null,
+        "last": "Mallouk"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "PETER",
+            "middle": "ALEX",
+            "last": "MALLOUK"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        }
+      ],
+      "best_match": {
+        "name_source": "main_fetched_name",
+        "fetched_name": {
+          "first": "PETER",
+          "middle": "ALEX",
+          "last": "MALLOUK"
+        },
+        "score": 95.0,
+        "first_score": 1.0,
+        "middle_score": 0.5,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "Peter Mallouk has 1 regulatory disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Regulatory Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "DocketNumberFDA": "",
+            "DocketNumberAAO": "",
+            "Initiated By": "UNITED STATES SECURITIES AND EXCHANGE COMMISSION",
+            "Allegations": "IA Release 40-5035 / September 18, 2018:  \r\nThe Securities and Exchange Commission (\"Commission\") deems it appropriate and in the public interest that public administrative and cease-and-desist proceedings be, and hereby are, instituted pursuant to Sections 203(e) and 203(k) of the Investment Advisers Act of 1940 (\"Advisers Act\") against Creative Planning, Inc. (\"CPI\") and Peter A. Mallouk (collectively, \"Respondents\").   \r\nThe Commission finds that this matter involves violations of the Advisers Act and certain rules thereunder by CPI, a registered investment adviser, that: (i) distributed hundreds of radio advertisements that contained prohibited client testimonials; (ii) failed to enforce the firm's code of ethics (\"Code of Ethics\") with regard to the radio advertisements and the reporting and review of certain securities accounts in which the firm's president had a beneficial interest; (iii) failed to keep true and accurate books and records; and (iv) failed to adopt and implement written policies and procedures reasonably designed to prevent violations of the Advisers Act. Mallouk, the firm's president and majority owner, caused certain of CPI's Code of Ethics violations.  \r\nIn August 2015, CPI engaged a local radio station to air live and pre-recorded radio advertisements regarding CPI through two radio hosts in the Kansas City area. In January 2016, one of the radio hosts became a client of CPI, and shortly thereafter independently began including testimonials regarding his personal experiences with CPI during his live radio endorsements. The live personal testimonials aired until October 2017. In March 2017, the radio station created a prerecorded spot containing a client testimonial that also aired until October 2017. Although CPI's policies and procedures required the firm to pre-approve and maintain copies of all of its advertisements, CPI did not monitor adequately the live and pre-recorded radio advertisements. CPI did not obtain copies of the live radio spots from August 2015 through October 2017, and did not obtain a copy of the March 2017 pre-recorded radio spot until October 2017.  \r\nIn addition, from July 2013 through November 2015, Mallouk did not report securities holdings and transactions from three personal securities accounts held for the benefit of his family and over which he exercised control to CPI's chief compliance officer (\"CCO\"), in contravention of CPI's Code of Ethics.  \r\nAs a result of the conduct described, CPI willfully violated Sections 204, 204A, and 206(4) of the Advisers Act and Rules 204-2(a)(11), 204A-1, 206(4)-1(a)(1), and 206(4)-7 thereunder, and Mallouk caused CPI's violations of Section 204A of the Advisers Act and Rule 204A-1 thereunder.",
+            "Resolution": "Order",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Cease and Desist"
+              },
+              {
+                "Sanctions": "Civil and Administrative Penalty(ies)/Fine(s)",
+                "SanctionDetails": [
+                  {
+                    "Amount": "$50,000.00"
+                  }
+                ]
+              }
+            ]
+          },
+          "event_date": "9/18/2018",
+          "resolution": "Final"
+        },
+        "description": "Regulatory action on 9/18/2018 initiated by UNITED STATES SECURITIES AND EXCHANGE COMMISSION. Resolution: Final. Allegations: IA Release 40-5035 / September 18, 2018:  \r\nThe Securities and Exchange Commission (\"Commission\") deems it appropriate and in the public interest that public administrative and cease-and-desist proceedings be, and hereby are, instituted pursuant to Sections 203(e) and 203(k) of the Investment Advisers Act of 1940 (\"Advisers Act\") against Creative Planning, Inc. (\"CPI\") and Peter A. Mallouk (collectively, \"Respondents\").   \r\nThe Commission finds that this matter involves violations of the Advisers Act and certain rules thereunder by CPI, a registered investment adviser, that: (i) distributed hundreds of radio advertisements that contained prohibited client testimonials; (ii) failed to enforce the firm's code of ethics (\"Code of Ethics\") with regard to the radio advertisements and the reporting and review of certain securities accounts in which the firm's president had a beneficial interest; (iii) failed to keep true and accurate books and records; and (iv) failed to adopt and implement written policies and procedures reasonably designed to prevent violations of the Advisers Act. Mallouk, the firm's president and majority owner, caused certain of CPI's Code of Ethics violations.  \r\nIn August 2015, CPI engaged a local radio station to air live and pre-recorded radio advertisements regarding CPI through two radio hosts in the Kansas City area. In January 2016, one of the radio hosts became a client of CPI, and shortly thereafter independently began including testimonials regarding his personal experiences with CPI during his live radio endorsements. The live personal testimonials aired until October 2017. In March 2017, the radio station created a prerecorded spot containing a client testimonial that also aired until October 2017. Although CPI's policies and procedures required the firm to pre-approve and maintain copies of all of its advertisements, CPI did not monitor adequately the live and pre-recorded radio advertisements. CPI did not obtain copies of the live radio spots from August 2015 through October 2017, and did not obtain a copy of the March 2017 pre-recorded radio spot until October 2017.  \r\nIn addition, from July 2013 through November 2015, Mallouk did not report securities holdings and transactions from three personal securities accounts held for the benefit of his family and over which he exercised control to CPI's chief compliance officer (\"CCO\"), in contravention of CPI's Code of Ethics.  \r\nAs a result of the conduct described, CPI willfully violated Sections 204, 204A, and 206(4) of the Advisers Act and Rules 204-2(a)(11), 204A-1, 206(4)-1(a)(1), and 206(4)-7 thereunder, and Mallouk caused CPI's violations of Section 204A of the Advisers Act and Rule 204A-1 thereunder.. Sanctions: Cease and Desist, Civil and Administrative Penalty(ies)/Fine(s) [Civil penalty detected.]"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No matching disciplinary records found for Peter Mallouk, but 15 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Search Info",
+        "alert_category": "DISCIPLINARY",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Peter Mallouk",
+            "sec_disciplinary": {
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records fetched"
+            },
+            "finra_disciplinary": {
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Fabio Peter La Rosa",
+                "Peter J. Fetherston",
+                "Roger Peter Daly",
+                "Peter Joseph Glowacki",
+                "Louis Peter Goff",
+                "Peter J. Fetherston",
+                "Christopher Peter Tranchina",
+                "Igor Peter Kislitsa",
+                "Peter J. Fetherston",
+                "Michael Peter Dmytryshyn",
+                "Peter N. Girgis",
+                "Igor Peter Kislitsa",
+                "Peter Bruce Suyama",
+                "CHRISTOPHER PETER TRANCHINA",
+                "Daniel Peter Daly"
+              ],
+              "name_scores": {
+                "Fabio Peter La Rosa": 9.52,
+                "Peter J. Fetherston": 47.62,
+                "Roger Peter Daly": 9.52,
+                "Peter Joseph Glowacki": 47.62,
+                "Louis Peter Goff": 9.52,
+                "Christopher Peter Tranchina": 9.52,
+                "Igor Peter Kislitsa": 9.52,
+                "Michael Peter Dmytryshyn": 9.52,
+                "Peter N. Girgis": 47.62,
+                "Peter Bruce Suyama": 47.62,
+                "CHRISTOPHER PETER TRANCHINA": 9.52,
+                "Daniel Peter Daly": 9.52
+              },
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'Peter Mallouk'"
+            }
+          }
+        },
+        "description": "Found 15 disciplinary records for Peter Mallouk, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Peter Mallouk",
+      "sec_disciplinary": {
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records fetched"
+      },
+      "finra_disciplinary": {
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Fabio Peter La Rosa",
+          "Peter J. Fetherston",
+          "Roger Peter Daly",
+          "Peter Joseph Glowacki",
+          "Louis Peter Goff",
+          "Peter J. Fetherston",
+          "Christopher Peter Tranchina",
+          "Igor Peter Kislitsa",
+          "Peter J. Fetherston",
+          "Michael Peter Dmytryshyn",
+          "Peter N. Girgis",
+          "Igor Peter Kislitsa",
+          "Peter Bruce Suyama",
+          "CHRISTOPHER PETER TRANCHINA",
+          "Daniel Peter Daly"
+        ],
+        "name_scores": {
+          "Fabio Peter La Rosa": 9.52,
+          "Peter J. Fetherston": 47.62,
+          "Roger Peter Daly": 9.52,
+          "Peter Joseph Glowacki": 47.62,
+          "Louis Peter Goff": 9.52,
+          "Christopher Peter Tranchina": 9.52,
+          "Igor Peter Kislitsa": 9.52,
+          "Michael Peter Dmytryshyn": 9.52,
+          "Peter N. Girgis": 47.62,
+          "Peter Bruce Suyama": 47.62,
+          "CHRISTOPHER PETER TRANCHINA": 9.52,
+          "Daniel Peter Daly": 9.52
+        },
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Peter Mallouk'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": true,
+    "compliance_explanation": "No arbitration records found for Peter Mallouk.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "searched_name": "Peter Mallouk",
+      "sec_arbitration": {
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records fetched"
+      },
+      "finra_arbitration": {
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records fetched"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for Peter Mallouk; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Regulatory Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "DocketNumberFDA": "",
+            "DocketNumberAAO": "",
+            "Initiated By": "UNITED STATES SECURITIES AND EXCHANGE COMMISSION",
+            "Allegations": "IA Release 40-5035 / September 18, 2018:  \r\nThe Securities and Exchange Commission (\"Commission\") deems it appropriate and in the public interest that public administrative and cease-and-desist proceedings be, and hereby are, instituted pursuant to Sections 203(e) and 203(k) of the Investment Advisers Act of 1940 (\"Advisers Act\") against Creative Planning, Inc. (\"CPI\") and Peter A. Mallouk (collectively, \"Respondents\").   \r\nThe Commission finds that this matter involves violations of the Advisers Act and certain rules thereunder by CPI, a registered investment adviser, that: (i) distributed hundreds of radio advertisements that contained prohibited client testimonials; (ii) failed to enforce the firm's code of ethics (\"Code of Ethics\") with regard to the radio advertisements and the reporting and review of certain securities accounts in which the firm's president had a beneficial interest; (iii) failed to keep true and accurate books and records; and (iv) failed to adopt and implement written policies and procedures reasonably designed to prevent violations of the Advisers Act. Mallouk, the firm's president and majority owner, caused certain of CPI's Code of Ethics violations.  \r\nIn August 2015, CPI engaged a local radio station to air live and pre-recorded radio advertisements regarding CPI through two radio hosts in the Kansas City area. In January 2016, one of the radio hosts became a client of CPI, and shortly thereafter independently began including testimonials regarding his personal experiences with CPI during his live radio endorsements. The live personal testimonials aired until October 2017. In March 2017, the radio station created a prerecorded spot containing a client testimonial that also aired until October 2017. Although CPI's policies and procedures required the firm to pre-approve and maintain copies of all of its advertisements, CPI did not monitor adequately the live and pre-recorded radio advertisements. CPI did not obtain copies of the live radio spots from August 2015 through October 2017, and did not obtain a copy of the March 2017 pre-recorded radio spot until October 2017.  \r\nIn addition, from July 2013 through November 2015, Mallouk did not report securities holdings and transactions from three personal securities accounts held for the benefit of his family and over which he exercised control to CPI's chief compliance officer (\"CCO\"), in contravention of CPI's Code of Ethics.  \r\nAs a result of the conduct described, CPI willfully violated Sections 204, 204A, and 206(4) of the Advisers Act and Rules 204-2(a)(11), 204A-1, 206(4)-1(a)(1), and 206(4)-7 thereunder, and Mallouk caused CPI's violations of Section 204A of the Advisers Act and Rule 204A-1 thereunder.",
+            "Resolution": "Order",
+            "SanctionDetails": [
+              {
+                "Sanctions": "Cease and Desist"
+              },
+              {
+                "Sanctions": "Civil and Administrative Penalty(ies)/Fine(s)",
+                "SanctionDetails": [
+                  {
+                    "Amount": "$50,000.00"
+                  }
+                ]
+              }
+            ]
+          },
+          "event_date": "9/18/2018",
+          "resolution": "Final"
+        },
+        "description": "Regulatory action on 9/18/2018 initiated by UNITED STATES SECURITIES AND EXCHANGE COMMISSION. Resolution: Final. Allegations: IA Release 40-5035 / September 18, 2018:  \r\nThe Securities and Exchange Commission (\"Commission\") deems it appropriate and in the public interest that public administrative and cease-and-desist proceedings be, and hereby are, instituted pursuant to Sections 203(e) and 203(k) of the Investment Advisers Act of 1940 (\"Advisers Act\") against Creative Planning, Inc. (\"CPI\") and Peter A. Mallouk (collectively, \"Respondents\").   \r\nThe Commission finds that this matter involves violations of the Advisers Act and certain rules thereunder by CPI, a registered investment adviser, that: (i) distributed hundreds of radio advertisements that contained prohibited client testimonials; (ii) failed to enforce the firm's code of ethics (\"Code of Ethics\") with regard to the radio advertisements and the reporting and review of certain securities accounts in which the firm's president had a beneficial interest; (iii) failed to keep true and accurate books and records; and (iv) failed to adopt and implement written policies and procedures reasonably designed to prevent violations of the Advisers Act. Mallouk, the firm's president and majority owner, caused certain of CPI's Code of Ethics violations.  \r\nIn August 2015, CPI engaged a local radio station to air live and pre-recorded radio advertisements regarding CPI through two radio hosts in the Kansas City area. In January 2016, one of the radio hosts became a client of CPI, and shortly thereafter independently began including testimonials regarding his personal experiences with CPI during his live radio endorsements. The live personal testimonials aired until October 2017. In March 2017, the radio station created a prerecorded spot containing a client testimonial that also aired until October 2017. Although CPI's policies and procedures required the firm to pre-approve and maintain copies of all of its advertisements, CPI did not monitor adequately the live and pre-recorded radio advertisements. CPI did not obtain copies of the live radio spots from August 2015 through October 2017, and did not obtain a copy of the March 2017 pre-recorded radio spot until October 2017.  \r\nIn addition, from July 2013 through November 2015, Mallouk did not report securities holdings and transactions from three personal securities accounts held for the benefit of his family and over which he exercised control to CPI's chief compliance officer (\"CCO\"), in contravention of CPI's Code of Ethics.  \r\nAs a result of the conduct described, CPI willfully violated Sections 204, 204A, and 206(4) of the Advisers Act and Rules 204-2(a)(11), 204A-1, 206(4)-1(a)(1), and 206(4)-7 thereunder, and Mallouk caused CPI's violations of Section 204A of the Advisers Act and Rule 204A-1 thereunder.. Sanctions: Cease and Desist, Civil and Administrative Penalty(ies)/Fine(s) [Civil penalty detected.]"
+      }
+    ]
+  }
+}

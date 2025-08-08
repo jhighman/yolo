@@ -1,0 +1,518 @@
+{
+  "reference_id": "SP38146264185190_PBI-D616827CFC8347B",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-D616827CFC8347B",
+    "first_name": "Mardie",
+    "last_name": "Dotseth",
+    "employee_number": "EN-057171",
+    "zip": "84790",
+    "crdNumber": "6996775",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "6996775",
+    "individual_name": "Mardie Dotseth",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "FINRA_BrokerCheck",
+    "basic_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "MARDIE LYNN DOTSETH",
+      "other_names": [
+        "Mardie  Hull",
+        "Mardie  Yarber"
+      ],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "4/13/2018",
+          "disclosureType": "Financial",
+          "disclosureResolution": "Final",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Type": "Compromise",
+            "Disposition": "Satisfied/Released"
+          }
+        },
+        {
+          "eventDate": "4/10/2018",
+          "disclosureType": "Financial",
+          "disclosureResolution": "Final",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Type": "Compromise",
+            "Disposition": "Satisfied/Released"
+          }
+        },
+        {
+          "eventDate": "3/12/1998",
+          "disclosureType": "Criminal",
+          "disclosureResolution": "Final Disposition",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "criminalCharges": [
+              {
+                "Charges": "9780 Trafficking in methamphetamine",
+                "Disposition": "Dismissed"
+              },
+              {
+                "Charges": "9747C Consp manufacturing methamphetamine",
+                "Disposition": "Amended",
+                "Amended Charges": "9552 possession charge not introduced into commerce.",
+                "Amended Charge Type": "MISDEMEANOR",
+                "Amended Charge Disposition": "Pled guilty"
+              },
+              {
+                "Charges": "9747 Manufacturing methamphetamine",
+                "Disposition": "Dismissed"
+              },
+              {
+                "Charges": "9784 Possession of drug paraphernalia w/ intent to sell",
+                "Disposition": "Dismissed"
+              }
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "12/31/2019",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "8/17/2019",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7TO",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "7/29/2019",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "6/29/2019",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "42132",
+          "firm_name": "CUSO FINANCIAL SERVICES, L.P.",
+          "registration_begin_date": "7/29/2019",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "1/6/2020"
+        }
+      ],
+      "crd_number": "6996775"
+    },
+    "detailed_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "MARDIE LYNN DOTSETH",
+      "other_names": [
+        "Mardie  Hull",
+        "Mardie  Yarber"
+      ],
+      "bc_scope": "InActive",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "4/13/2018",
+          "disclosureType": "Financial",
+          "disclosureResolution": "Final",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Type": "Compromise",
+            "Disposition": "Satisfied/Released"
+          }
+        },
+        {
+          "eventDate": "4/10/2018",
+          "disclosureType": "Financial",
+          "disclosureResolution": "Final",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Type": "Compromise",
+            "Disposition": "Satisfied/Released"
+          }
+        },
+        {
+          "eventDate": "3/12/1998",
+          "disclosureType": "Criminal",
+          "disclosureResolution": "Final Disposition",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 11,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "criminalCharges": [
+              {
+                "Charges": "9780 Trafficking in methamphetamine",
+                "Disposition": "Dismissed"
+              },
+              {
+                "Charges": "9747C Consp manufacturing methamphetamine",
+                "Disposition": "Amended",
+                "Amended Charges": "9552 possession charge not introduced into commerce.",
+                "Amended Charge Type": "MISDEMEANOR",
+                "Amended Charge Disposition": "Pled guilty"
+              },
+              {
+                "Charges": "9747 Manufacturing methamphetamine",
+                "Disposition": "Dismissed"
+              },
+              {
+                "Charges": "9784 Possession of drug paraphernalia w/ intent to sell",
+                "Disposition": "Dismissed"
+              }
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "12/31/2019",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "8/17/2019",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7TO",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "7/29/2019",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "6/29/2019",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "42132",
+          "firm_name": "CUSO FINANCIAL SERVICES, L.P.",
+          "registration_begin_date": "7/29/2019",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "1/6/2020"
+        }
+      ],
+      "crd_number": "6996775"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "6996775",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA BrokerCheck data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "Mardie",
+        "middle": null,
+        "last": "Dotseth"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "MARDIE",
+            "middle": "LYNN",
+            "last": "DOTSETH"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        },
+        {
+          "name_source": "other_names[0]",
+          "fetched_name": {
+            "first": "Mardie",
+            "middle": null,
+            "last": "Hull"
+          },
+          "score": 44.44,
+          "first_score": 1.0,
+          "middle_score": 0.0,
+          "last_score": 0.0
+        },
+        {
+          "name_source": "other_names[1]",
+          "fetched_name": {
+            "first": "Mardie",
+            "middle": null,
+            "last": "Yarber"
+          },
+          "score": 44.44,
+          "first_score": 1.0,
+          "middle_score": 0.0,
+          "last_score": 0.0
+        }
+      ],
+      "best_match": {
+        "name_source": "main_fetched_name",
+        "fetched_name": {
+          "first": "MARDIE",
+          "middle": "LYNN",
+          "last": "DOTSETH"
+        },
+        "score": 95.0,
+        "first_score": 1.0,
+        "middle_score": 0.5,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "Mardie Dotseth has 2 financial disclosures, 1 criminal disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Financial Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Type": "Compromise",
+            "Disposition": "Satisfied/Released"
+          },
+          "event_date": "4/13/2018",
+          "resolution": "Final"
+        },
+        "description": "Financial disclosure on 4/13/2018. Resolution: Final. Disposition: Satisfied/Released. Type: Compromise"
+      },
+      {
+        "alert_type": "Financial Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Type": "Compromise",
+            "Disposition": "Satisfied/Released"
+          },
+          "event_date": "4/10/2018",
+          "resolution": "Final"
+        },
+        "description": "Financial disclosure on 4/10/2018. Resolution: Final. Disposition: Satisfied/Released. Type: Compromise"
+      },
+      {
+        "alert_type": "Criminal Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "criminalCharges": [
+              {
+                "Charges": "9780 Trafficking in methamphetamine",
+                "Disposition": "Dismissed"
+              },
+              {
+                "Charges": "9747C Consp manufacturing methamphetamine",
+                "Disposition": "Amended",
+                "Amended Charges": "9552 possession charge not introduced into commerce.",
+                "Amended Charge Type": "MISDEMEANOR",
+                "Amended Charge Disposition": "Pled guilty"
+              },
+              {
+                "Charges": "9747 Manufacturing methamphetamine",
+                "Disposition": "Dismissed"
+              },
+              {
+                "Charges": "9784 Possession of drug paraphernalia w/ intent to sell",
+                "Disposition": "Dismissed"
+              }
+            ]
+          },
+          "event_date": "3/12/1998",
+          "resolution": "Final Disposition"
+        },
+        "description": "Criminal disclosure on 3/12/1998. Resolution: Final Disposition. Charges: 9780 Trafficking in methamphetamine, 9747C Consp manufacturing methamphetamine, 9747 Manufacturing methamphetamine, 9784 Possession of drug paraphernalia w/ intent to sell. Disposition: Dismissed, Amended, Dismissed, Dismissed"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No disciplinary records found for Mardie Dotseth.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "searched_name": "Mardie Dotseth",
+      "sec_disciplinary": {
+        "source": "SEC_Disciplinary",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_disciplinary": {
+        "source": "FINRA_Disciplinary",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": true,
+    "compliance_explanation": "No arbitration records found for Mardie Dotseth.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "searched_name": "Mardie Dotseth",
+      "sec_arbitration": {
+        "source": "SEC_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_arbitration": {
+        "source": "FINRA_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for Mardie Dotseth; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Financial Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Type": "Compromise",
+            "Disposition": "Satisfied/Released"
+          },
+          "event_date": "4/13/2018",
+          "resolution": "Final"
+        },
+        "description": "Financial disclosure on 4/13/2018. Resolution: Final. Disposition: Satisfied/Released. Type: Compromise"
+      },
+      {
+        "alert_type": "Financial Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Type": "Compromise",
+            "Disposition": "Satisfied/Released"
+          },
+          "event_date": "4/10/2018",
+          "resolution": "Final"
+        },
+        "description": "Financial disclosure on 4/10/2018. Resolution: Final. Disposition: Satisfied/Released. Type: Compromise"
+      },
+      {
+        "alert_type": "Criminal Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "criminalCharges": [
+              {
+                "Charges": "9780 Trafficking in methamphetamine",
+                "Disposition": "Dismissed"
+              },
+              {
+                "Charges": "9747C Consp manufacturing methamphetamine",
+                "Disposition": "Amended",
+                "Amended Charges": "9552 possession charge not introduced into commerce.",
+                "Amended Charge Type": "MISDEMEANOR",
+                "Amended Charge Disposition": "Pled guilty"
+              },
+              {
+                "Charges": "9747 Manufacturing methamphetamine",
+                "Disposition": "Dismissed"
+              },
+              {
+                "Charges": "9784 Possession of drug paraphernalia w/ intent to sell",
+                "Disposition": "Dismissed"
+              }
+            ]
+          },
+          "event_date": "3/12/1998",
+          "resolution": "Final Disposition"
+        },
+        "description": "Criminal disclosure on 3/12/1998. Resolution: Final Disposition. Charges: 9780 Trafficking in methamphetamine, 9747C Consp manufacturing methamphetamine, 9747 Manufacturing methamphetamine, 9784 Possession of drug paraphernalia w/ intent to sell. Disposition: Dismissed, Amended, Dismissed, Dismissed"
+      }
+    ]
+  }
+}

@@ -1,0 +1,524 @@
+{
+  "reference_id": "SP38146264185190_PBI-AAA9241CE4B04BA",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-AAA9241CE4B04BA",
+    "first_name": "Robert",
+    "last_name": "Fincher",
+    "employee_number": "EN-044969",
+    "zip": "33629",
+    "crdNumber": "4168267",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "4168267",
+    "individual_name": "Robert Fincher",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "FINRA_BrokerCheck",
+    "basic_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "ROBERT BRADLEY FINCHER",
+      "other_names": [
+        "BRAD  FINCHER",
+        "BRADLEY  FINCHER"
+      ],
+      "bc_scope": "Active",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "9/22/2017",
+          "disclosureType": "Financial",
+          "disclosureResolution": "Final",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Type": "Compromise",
+            "Disposition": "Dismissed"
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "11/15/2023",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 66",
+          "examName": "Uniform Combined State Law Examination",
+          "examTakenDate": "7/27/2011",
+          "examScope": "BOTH"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "2/26/2001",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 31",
+          "examName": "Futures Managed Funds Examination",
+          "examTakenDate": "7/24/2013",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "7/2/2011",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "630",
+          "firm_name": "CIBC WORLD MARKETS CORP.",
+          "registration_begin_date": "3/24/2016",
+          "branch_offices": [
+            {
+              "street": "300 MADISON AVENUE",
+              "city": "NEW YORK",
+              "state": "NY",
+              "zip_code": "10017"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "104474",
+          "firm_name": "SANFORD C. BERNSTEIN & CO., LLC",
+          "registration_begin_date": "7/4/2011",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "3/9/2016"
+        },
+        {
+          "firm_id": "6363",
+          "firm_name": "AMERICAN EXPRESS FINANCIAL ADVISORS INC.",
+          "registration_begin_date": "6/26/2000",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/15/2001"
+        },
+        {
+          "firm_id": "6321",
+          "firm_name": "IDS LIFE INSURANCE COMPANY",
+          "registration_begin_date": "6/26/2000",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/15/2001"
+        }
+      ],
+      "crd_number": "4168267"
+    },
+    "detailed_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "ROBERT BRADLEY FINCHER",
+      "other_names": [
+        "BRAD  FINCHER",
+        "BRADLEY  FINCHER"
+      ],
+      "bc_scope": "Active",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "9/22/2017",
+          "disclosureType": "Financial",
+          "disclosureResolution": "Final",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 10,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "Type": "Compromise",
+            "Disposition": "Dismissed"
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "11/15/2023",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 66",
+          "examName": "Uniform Combined State Law Examination",
+          "examTakenDate": "7/27/2011",
+          "examScope": "BOTH"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "2/26/2001",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "SIE",
+          "examName": "Securities Industry Essentials Examination",
+          "examTakenDate": "10/1/2018",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 31",
+          "examName": "Futures Managed Funds Examination",
+          "examTakenDate": "7/24/2013",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "7/2/2011",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "630",
+          "firm_name": "CIBC WORLD MARKETS CORP.",
+          "registration_begin_date": "3/24/2016",
+          "branch_offices": [
+            {
+              "street": "300 MADISON AVENUE",
+              "city": "NEW YORK",
+              "state": "NY",
+              "zip_code": "10017"
+            }
+          ],
+          "status": "current",
+          "type": "registered_firm"
+        },
+        {
+          "firm_id": "104474",
+          "firm_name": "SANFORD C. BERNSTEIN & CO., LLC",
+          "registration_begin_date": "7/4/2011",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "3/9/2016"
+        },
+        {
+          "firm_id": "6363",
+          "firm_name": "AMERICAN EXPRESS FINANCIAL ADVISORS INC.",
+          "registration_begin_date": "6/26/2000",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/15/2001"
+        },
+        {
+          "firm_id": "6321",
+          "firm_name": "IDS LIFE INSURANCE COMPANY",
+          "registration_begin_date": "6/26/2000",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "11/15/2001"
+        }
+      ],
+      "crd_number": "4168267"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "4168267",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA BrokerCheck data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "Robert",
+        "middle": null,
+        "last": "Fincher"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "ROBERT",
+            "middle": "BRADLEY",
+            "last": "FINCHER"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        },
+        {
+          "name_source": "other_names[0]",
+          "fetched_name": {
+            "first": "BRAD",
+            "middle": null,
+            "last": "FINCHER"
+          },
+          "score": 55.56,
+          "first_score": 0.0,
+          "middle_score": 0.0,
+          "last_score": 1.0
+        },
+        {
+          "name_source": "other_names[1]",
+          "fetched_name": {
+            "first": "BRADLEY",
+            "middle": null,
+            "last": "FINCHER"
+          },
+          "score": 55.56,
+          "first_score": 0.0,
+          "middle_score": 0.0,
+          "last_score": 1.0
+        }
+      ],
+      "best_match": {
+        "name_source": "main_fetched_name",
+        "fetched_name": {
+          "first": "ROBERT",
+          "middle": "BRADLEY",
+          "last": "FINCHER"
+        },
+        "score": 95.0,
+        "first_score": 1.0,
+        "middle_score": 0.5,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "Robert Fincher has 1 financial disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Financial Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Type": "Compromise",
+            "Disposition": "Dismissed"
+          },
+          "event_date": "9/22/2017",
+          "resolution": "Final"
+        },
+        "description": "Financial disclosure on 9/22/2017. Resolution: Final. Disposition: Dismissed. Type: Compromise"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No matching disciplinary records found for Robert Fincher, but 16 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Search Info",
+        "alert_category": "DISCIPLINARY",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Robert Fincher",
+            "sec_disciplinary": {
+              "source": "SEC_Disciplinary",
+              "records_found": 1,
+              "records_filtered": 1,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'Robert Fincher'"
+            },
+            "finra_disciplinary": {
+              "source": "FINRA_Disciplinary",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Robert W. Fort",
+                "Robert F. Meyer",
+                "Brian Robert Roth",
+                "Jerry L. Little, Robert E. Cline, Bjorn J. Erickson",
+                "Jerry L. Little, Robert E. Cline, Bjorn J. Erickson",
+                "Robert Franklin Muller",
+                "ROBERT JAMES TRACY",
+                "Robert R. Tweed",
+                "Robert A. Yedid",
+                "Arlington Securities, Inc.Robert Earl Hillard",
+                "Arlington Securities, Inc.Robert Earl Hillard",
+                "Robert Anthony Daly",
+                "Robert K. Thompson",
+                "Andrew Robert Hutcheson",
+                "Robert Torres",
+                "Robert Steven Meyer",
+                "Dawson James Securities, Inc.,Robert Dawson Keyser Jr.",
+                "Dawson James Securities, Inc.,Robert Dawson Keyser Jr."
+              ],
+              "name_scores": {
+                "Robert W. Fort": 47.62,
+                "Robert F. Meyer": 47.62,
+                "Brian Robert Roth": 9.52,
+                "Jerry L. Little, Robert E. Cline, Bjorn J. Erickson": 0.0,
+                "Robert Franklin Muller": 47.62,
+                "ROBERT JAMES TRACY": 47.62,
+                "Robert R. Tweed": 47.62,
+                "Robert A. Yedid": 47.62,
+                "Arlington Securities, Inc.Robert Earl Hillard": 0.0,
+                "Robert Anthony Daly": 47.62,
+                "Robert K. Thompson": 47.62,
+                "Andrew Robert Hutcheson": 9.52,
+                "Robert Torres": 47.37,
+                "Robert Steven Meyer": 47.62,
+                "Dawson James Securities, Inc.,Robert Dawson Keyser Jr.": 0.0
+              },
+              "exact_match_found": false,
+              "status": "Partial failure: Error processing 'Dawson James Securities, Inc.,Robert Dawson Keyser Jr.'"
+            }
+          }
+        },
+        "description": "Found 16 disciplinary records for Robert Fincher, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Robert Fincher",
+      "sec_disciplinary": {
+        "source": "SEC_Disciplinary",
+        "records_found": 1,
+        "records_filtered": 1,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Robert Fincher'"
+      },
+      "finra_disciplinary": {
+        "source": "FINRA_Disciplinary",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Robert W. Fort",
+          "Robert F. Meyer",
+          "Brian Robert Roth",
+          "Jerry L. Little, Robert E. Cline, Bjorn J. Erickson",
+          "Jerry L. Little, Robert E. Cline, Bjorn J. Erickson",
+          "Robert Franklin Muller",
+          "ROBERT JAMES TRACY",
+          "Robert R. Tweed",
+          "Robert A. Yedid",
+          "Arlington Securities, Inc.Robert Earl Hillard",
+          "Arlington Securities, Inc.Robert Earl Hillard",
+          "Robert Anthony Daly",
+          "Robert K. Thompson",
+          "Andrew Robert Hutcheson",
+          "Robert Torres",
+          "Robert Steven Meyer",
+          "Dawson James Securities, Inc.,Robert Dawson Keyser Jr.",
+          "Dawson James Securities, Inc.,Robert Dawson Keyser Jr."
+        ],
+        "name_scores": {
+          "Robert W. Fort": 47.62,
+          "Robert F. Meyer": 47.62,
+          "Brian Robert Roth": 9.52,
+          "Jerry L. Little, Robert E. Cline, Bjorn J. Erickson": 0.0,
+          "Robert Franklin Muller": 47.62,
+          "ROBERT JAMES TRACY": 47.62,
+          "Robert R. Tweed": 47.62,
+          "Robert A. Yedid": 47.62,
+          "Arlington Securities, Inc.Robert Earl Hillard": 0.0,
+          "Robert Anthony Daly": 47.62,
+          "Robert K. Thompson": 47.62,
+          "Andrew Robert Hutcheson": 9.52,
+          "Robert Torres": 47.37,
+          "Robert Steven Meyer": 47.62,
+          "Dawson James Securities, Inc.,Robert Dawson Keyser Jr.": 0.0
+        },
+        "exact_match_found": false,
+        "status": "Partial failure: Error processing 'Dawson James Securities, Inc.,Robert Dawson Keyser Jr.'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": true,
+    "compliance_explanation": "No arbitration records found for Robert Fincher.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "searched_name": "Robert Fincher",
+      "sec_arbitration": {
+        "source": "SEC_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_arbitration": {
+        "source": "FINRA_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for Robert Fincher; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Financial Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "Type": "Compromise",
+            "Disposition": "Dismissed"
+          },
+          "event_date": "9/22/2017",
+          "resolution": "Final"
+        },
+        "description": "Financial disclosure on 9/22/2017. Resolution: Final. Disposition: Dismissed. Type: Compromise"
+      }
+    ]
+  }
+}

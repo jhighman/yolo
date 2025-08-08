@@ -1,0 +1,552 @@
+{
+  "reference_id": "SP38146264185190_PBI-54D1C658E9F4400",
+  "claim": {
+    "reference_id": "SP38146264185190_PBI-54D1C658E9F4400",
+    "first_name": "Ryan",
+    "last_name": "Murphy",
+    "employee_number": "EN-053597",
+    "zip": "92656",
+    "crdNumber": "3014951",
+    "requestType": "ENROLL",
+    "packageName": "BROKERCHECK",
+    "crd_number": "3014951",
+    "individual_name": "Ryan Murphy",
+    "organization_crd": null
+  },
+  "search_evaluation": {
+    "source": "FINRA_BrokerCheck",
+    "basic_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "RYAN MICHAEL MURPHY",
+      "other_names": [
+        "RYAN M MURPHY"
+      ],
+      "bc_scope": "Expanded",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "1/19/1993",
+          "disclosureType": "Criminal",
+          "disclosureResolution": "Final Disposition",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 20,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "criminalCharges": [
+              {
+                "Charges": "5th Degree Theft, Misdemeanor",
+                "Disposition": "Convicted"
+              }
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "3/9/1999",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "7/23/1998",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 10",
+          "examName": "General Securities Sales Supervisor - General Module Examination",
+          "examTakenDate": "11/27/2000",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 9",
+          "examName": "General Securities Sales Supervisor - Options Module Examination",
+          "examTakenDate": "10/11/2000",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "4/29/1998",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "5393",
+          "firm_name": "CHARLES SCHWAB & CO., INC.",
+          "registration_begin_date": "6/22/1998",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "1/25/2006"
+        }
+      ],
+      "crd_number": "3014951"
+    },
+    "detailed_result": {
+      "source": "FINRA_BrokerCheck",
+      "fetched_name": "RYAN MICHAEL MURPHY",
+      "other_names": [
+        "RYAN M MURPHY"
+      ],
+      "bc_scope": "Expanded",
+      "ia_scope": "Active",
+      "disclosures": [
+        {
+          "eventDate": "1/19/1993",
+          "disclosureType": "Criminal",
+          "disclosureResolution": "Final Disposition",
+          "isIapdExcludedCCFlag": "N",
+          "isBcExcludedCCFlag": "N",
+          "bcCtgryType": 20,
+          "iaCtgryType": 10,
+          "disclosureDetail": {
+            "criminalCharges": [
+              {
+                "Charges": "5th Degree Theft, Misdemeanor",
+                "Disposition": "Convicted"
+              }
+            ]
+          }
+        }
+      ],
+      "arbitrations": [],
+      "exams": [
+        {
+          "examCategory": "Series 65",
+          "examName": "Uniform Investment Adviser Law Examination",
+          "examTakenDate": "3/9/1999",
+          "examScope": "IA"
+        },
+        {
+          "examCategory": "Series 63",
+          "examName": "Uniform Securities Agent State Law Examination",
+          "examTakenDate": "7/23/1998",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 10",
+          "examName": "General Securities Sales Supervisor - General Module Examination",
+          "examTakenDate": "11/27/2000",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 9",
+          "examName": "General Securities Sales Supervisor - Options Module Examination",
+          "examTakenDate": "10/11/2000",
+          "examScope": "BC"
+        },
+        {
+          "examCategory": "Series 7",
+          "examName": "General Securities Representative Examination",
+          "examTakenDate": "4/29/1998",
+          "examScope": "BC"
+        }
+      ],
+      "employments": [
+        {
+          "firm_id": "5393",
+          "firm_name": "CHARLES SCHWAB & CO., INC.",
+          "registration_begin_date": "6/22/1998",
+          "branch_offices": [],
+          "status": "previous",
+          "type": "registered_firm",
+          "registration_end_date": "1/25/2006"
+        }
+      ],
+      "crd_number": "3014951"
+    },
+    "search_strategy": "search_with_crd_only",
+    "crd_number": "3014951",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA BrokerCheck data, individual found."
+  },
+  "status_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Registration status is valid.",
+    "alerts": []
+  },
+  "name_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Name matches fetched record.",
+    "evaluation_details": {
+      "claimed_name": {
+        "first": "Ryan",
+        "middle": null,
+        "last": "Murphy"
+      },
+      "all_matches": [
+        {
+          "name_source": "main_fetched_name",
+          "fetched_name": {
+            "first": "RYAN",
+            "middle": "MICHAEL",
+            "last": "MURPHY"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        },
+        {
+          "name_source": "other_names[0]",
+          "fetched_name": {
+            "first": "RYAN",
+            "middle": "M",
+            "last": "MURPHY"
+          },
+          "score": 95.0,
+          "first_score": 1.0,
+          "middle_score": 0.5,
+          "last_score": 1.0
+        }
+      ],
+      "best_match": {
+        "name_source": "main_fetched_name",
+        "fetched_name": {
+          "first": "RYAN",
+          "middle": "MICHAEL",
+          "last": "MURPHY"
+        },
+        "score": 95.0,
+        "first_score": 1.0,
+        "middle_score": 0.5,
+        "last_score": 1.0
+      },
+      "compliance": true
+    },
+    "alerts": []
+  },
+  "license_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "License is active and compliant.",
+    "alerts": []
+  },
+  "exam_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "Required exams are passed.",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "compliance": false,
+    "compliance_explanation": "Ryan Murphy has 1 criminal disclosure.",
+    "alerts": [
+      {
+        "alert_type": "Criminal Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "criminalCharges": [
+              {
+                "Charges": "5th Degree Theft, Misdemeanor",
+                "Disposition": "Convicted"
+              }
+            ]
+          },
+          "event_date": "1/19/1993",
+          "resolution": "Final Disposition"
+        },
+        "description": "Criminal disclosure on 1/19/1993. Resolution: Final Disposition. Charges: 5th Degree Theft, Misdemeanor. Disposition: Convicted"
+      }
+    ]
+  },
+  "disciplinary_evaluation": {
+    "compliance": false,
+    "compliance_explanation": "Disciplinary records found for Ryan Murphy.",
+    "actions": [
+      {
+        "case_id": "2024082044301",
+        "date": "08/01/2024",
+        "details": {
+          "action_type": "",
+          "firms_individuals": "Ryan T. Murphy",
+          "description": ""
+        }
+      }
+    ],
+    "alerts": [
+      {
+        "alert_type": "Disciplinary Proceeding",
+        "alert_category": "DISCIPLINARY",
+        "severity": "HIGH",
+        "metadata": {
+          "record": {
+            "case_id": "2024082044301",
+            "date": "08/01/2024",
+            "details": {
+              "action_type": "",
+              "firms_individuals": "Ryan T. Murphy",
+              "description": ""
+            }
+          }
+        },
+        "description": "Disciplinary record found: Case ID 2024082044301 for Ryan Murphy."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Ryan Murphy",
+      "sec_disciplinary": {
+        "source": "SEC_Disciplinary",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_disciplinary": {
+        "source": "FINRA_Disciplinary",
+        "records_found": 15,
+        "records_filtered": 14,
+        "names_found": [
+          "MICHAEL RYAN PETRUSKA",
+          "Ryan Emerson Bennett",
+          "Ryan T. Murphy",
+          "Michael Ryan Petruska",
+          "Ryan Morfin",
+          "William H. Murphy & Co., Inc.William H. Murphy",
+          "William H. Murphy & Co., Inc.William H. Murphy",
+          "American Independent Securities Group, LLCRyan Carlson, Nicholas Cioffi",
+          "American Independent Securities Group, LLCRyan Carlson, Nicholas Cioffi",
+          "Ryan Tarjanyi",
+          "Ryan Raskin",
+          "Timothy Ryan Deegan",
+          "Timothy Ryan Deegan",
+          "William H. Murphy & Co., Inc.William H. Murphy",
+          "William H. Murphy & Co., Inc.William H. Murphy",
+          "Ryan M. Davis",
+          "Michael Patrick Murphy",
+          "Dennis J. Murphy"
+        ],
+        "name_scores": {
+          "MICHAEL RYAN PETRUSKA": 9.52,
+          "Ryan Emerson Bennett": 47.62,
+          "Ryan T. Murphy": 95.24,
+          "Michael Ryan Petruska": 9.52,
+          "Ryan Morfin": 47.37,
+          "William H. Murphy & Co., Inc.William H. Murphy": 0.0,
+          "American Independent Securities Group, LLCRyan Carlson, Nicholas Cioffi": 0.0,
+          "Ryan Tarjanyi": 47.37,
+          "Ryan Raskin": 47.37,
+          "Timothy Ryan Deegan": 9.52,
+          "Ryan M. Davis": 47.62,
+          "Michael Patrick Murphy": 57.14,
+          "Dennis J. Murphy": 57.14
+        },
+        "exact_match_found": true,
+        "status": "Partial failure: Error processing 'William H. Murphy & Co., Inc.William H. Murphy'"
+      }
+    }
+  },
+  "arbitration_review": {
+    "compliance": true,
+    "compliance_explanation": "No matching arbitration records found for Ryan Murphy, but 15 records were reviewed and filtered, suggesting possible alias or data issues.",
+    "actions": [],
+    "alerts": [
+      {
+        "alert_type": "Arbitration Search Info",
+        "alert_category": "ARBITRATION",
+        "severity": "INFO",
+        "metadata": {
+          "due_diligence": {
+            "searched_name": "Ryan Murphy",
+            "sec_arbitration": {
+              "source": "SEC_Arbitration",
+              "records_found": 0,
+              "records_filtered": 0,
+              "names_found": [],
+              "name_scores": {},
+              "exact_match_found": false,
+              "status": "No records found"
+            },
+            "finra_arbitration": {
+              "source": "FINRA_Arbitration",
+              "records_found": 15,
+              "records_filtered": 15,
+              "names_found": [
+                "Sean Rhodes",
+                "Ryan Connelly",
+                "Steven Zimmerman",
+                "Ryan Connelly",
+                "Steven Zimmerman",
+                "Oppenheimer & Co.",
+                "Inc.",
+                "Ryan Beck & Co.",
+                "Stifel",
+                "Nicolaus & Co.",
+                "Inc.",
+                "Robert Gianchiglia",
+                "Ameritas Investment Corp.",
+                "Investors Capital Corp.",
+                "John Watson",
+                "Securities America",
+                "Inc.",
+                "Jon Pearn",
+                "Chikezie Esiobu",
+                "Ameriprise Financial Services",
+                "Inc.",
+                "Joseph Grund",
+                "Fifth Third Securities",
+                "Inc.",
+                "M. Games",
+                "Ryan Anderson"
+              ],
+              "name_scores": {
+                "Sean Rhodes": 5.26,
+                "Ryan Connelly": 47.37,
+                "Steven Zimmerman": 5.26,
+                "Oppenheimer & Co.": 9.52,
+                "Inc.": 5.26,
+                "Ryan Beck & Co.": 47.62,
+                "Stifel": 5.26,
+                "Nicolaus & Co.": 9.52,
+                "Robert Gianchiglia": 5.26,
+                "Ameritas Investment Corp.": 9.52,
+                "Investors Capital Corp.": 9.52,
+                "John Watson": 5.26,
+                "Securities America": 5.26,
+                "Jon Pearn": 5.26,
+                "Chikezie Esiobu": 5.26,
+                "Ameriprise Financial Services": 9.52,
+                "Joseph Grund": 5.26,
+                "Fifth Third Securities": 9.52,
+                "M. Games": 5.26,
+                "Ryan Anderson": 47.37
+              },
+              "exact_match_found": false,
+              "status": "Records found but no matches for 'Ryan Murphy'"
+            }
+          }
+        },
+        "description": "Found 15 arbitration records for Ryan Murphy, all filtered out due to name mismatch. Potential review needed."
+      }
+    ],
+    "due_diligence": {
+      "searched_name": "Ryan Murphy",
+      "sec_arbitration": {
+        "source": "SEC_Arbitration",
+        "records_found": 0,
+        "records_filtered": 0,
+        "names_found": [],
+        "name_scores": {},
+        "exact_match_found": false,
+        "status": "No records found"
+      },
+      "finra_arbitration": {
+        "source": "FINRA_Arbitration",
+        "records_found": 15,
+        "records_filtered": 15,
+        "names_found": [
+          "Sean Rhodes",
+          "Ryan Connelly",
+          "Steven Zimmerman",
+          "Ryan Connelly",
+          "Steven Zimmerman",
+          "Oppenheimer & Co.",
+          "Inc.",
+          "Ryan Beck & Co.",
+          "Stifel",
+          "Nicolaus & Co.",
+          "Inc.",
+          "Robert Gianchiglia",
+          "Ameritas Investment Corp.",
+          "Investors Capital Corp.",
+          "John Watson",
+          "Securities America",
+          "Inc.",
+          "Jon Pearn",
+          "Chikezie Esiobu",
+          "Ameriprise Financial Services",
+          "Inc.",
+          "Joseph Grund",
+          "Fifth Third Securities",
+          "Inc.",
+          "M. Games",
+          "Ryan Anderson"
+        ],
+        "name_scores": {
+          "Sean Rhodes": 5.26,
+          "Ryan Connelly": 47.37,
+          "Steven Zimmerman": 5.26,
+          "Oppenheimer & Co.": 9.52,
+          "Inc.": 5.26,
+          "Ryan Beck & Co.": 47.62,
+          "Stifel": 5.26,
+          "Nicolaus & Co.": 9.52,
+          "Robert Gianchiglia": 5.26,
+          "Ameritas Investment Corp.": 9.52,
+          "Investors Capital Corp.": 9.52,
+          "John Watson": 5.26,
+          "Securities America": 5.26,
+          "Jon Pearn": 5.26,
+          "Chikezie Esiobu": 5.26,
+          "Ameriprise Financial Services": 9.52,
+          "Joseph Grund": 5.26,
+          "Fifth Third Securities": 9.52,
+          "M. Games": 5.26,
+          "Ryan Anderson": 47.37
+        },
+        "exact_match_found": false,
+        "status": "Records found but no matches for 'Ryan Murphy'"
+      }
+    }
+  },
+  "regulatory_evaluation": {
+    "compliance": true,
+    "compliance_explanation": "No regulatory actions found for Ryan Murphy; only registration records present.",
+    "actions": [],
+    "alerts": [],
+    "due_diligence": {
+      "status": "Skipped per configuration"
+    }
+  },
+  "final_evaluation": {
+    "overall_compliance": false,
+    "compliance_explanation": "One or more compliance checks failed.",
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "alerts": [
+      {
+        "alert_type": "Criminal Disclosure",
+        "alert_category": "DISCLOSURE",
+        "severity": "HIGH",
+        "metadata": {
+          "details": {
+            "criminalCharges": [
+              {
+                "Charges": "5th Degree Theft, Misdemeanor",
+                "Disposition": "Convicted"
+              }
+            ]
+          },
+          "event_date": "1/19/1993",
+          "resolution": "Final Disposition"
+        },
+        "description": "Criminal disclosure on 1/19/1993. Resolution: Final Disposition. Charges: 5th Degree Theft, Misdemeanor. Disposition: Convicted"
+      },
+      {
+        "alert_type": "Disciplinary Proceeding",
+        "alert_category": "DISCIPLINARY",
+        "severity": "HIGH",
+        "metadata": {
+          "record": {
+            "case_id": "2024082044301",
+            "date": "08/01/2024",
+            "details": {
+              "action_type": "",
+              "firms_individuals": "Ryan T. Murphy",
+              "description": ""
+            }
+          }
+        },
+        "description": "Disciplinary record found: Case ID 2024082044301 for Ryan Murphy."
+      }
+    ]
+  }
+}
