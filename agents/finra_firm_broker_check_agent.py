@@ -26,6 +26,7 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))
 
 import requests
+from requests.adapters import HTTPAdapter
 from typing import Dict, Optional, Any, List
 import json
 import logging
@@ -122,23 +123,36 @@ def rate_limit(func):
     return wrapper
 
 
-def retry_with_backoff(max_retries=3, backoff_factor=1.5):
-    """Retry decorator with exponential backoff."""
+# Import random for jitter in retry logic
+import random
+
+def retry_with_backoff(max_retries=3, backoff_factor=1.5, max_wait=30, jitter=0.1):
+    """Retry decorator with exponential backoff and jitter.
+    
+    Args:
+        max_retries: Maximum number of retries before giving up
+        backoff_factor: Multiplier for the delay between retries
+        max_wait: Maximum wait time in seconds
+        jitter: Random factor to add to delay to prevent thundering herd
+    """
     def decorator(func):
         @wraps(func)
         def wrapper(*args, **kwargs):
             retries = 0
-            max_wait = 30  # Maximum wait time in seconds
             while retries < max_retries:
                 try:
                     return func(*args, **kwargs)
-                except (requests.exceptions.ConnectionError, ConnectionResetError) as e:
+                except (requests.exceptions.ConnectionError, ConnectionResetError, requests.exceptions.ChunkedEncodingError) as e:
                     retries += 1
                     if retries >= max_retries:
                         logger.error(f"Max retries ({max_retries}) exceeded for {func.__name__}: {e}")
                         raise
                     
+                    # Calculate backoff with jitter
                     wait_time = min(backoff_factor * (2 ** (retries - 1)), max_wait)
+                    jitter_amount = wait_time * jitter * (2 * random.random() - 1)
+                    wait_time = max(0.1, wait_time + jitter_amount)  # Ensure positive wait time
+                    
                     logger.warning(f"Connection error in {func.__name__}, retrying in {wait_time:.2f}s (attempt {retries}/{max_retries}): {e}")
                     time.sleep(wait_time)
             return func(*args, **kwargs)  # This line should never be reached
@@ -172,13 +186,30 @@ class FinraFirmBrokerCheckAgent:
         """
         self.config = config or {}
         self.use_mock = use_mock
+        
+        # Create a more robust session with connection pooling and retry configuration
         self.session = requests.Session()
+        
         # Add User-Agent header to avoid potential blocking
         self.session.headers.update({
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
         })
-        logger.info("Initialized FINRA BrokerCheck API agent with config: %s, use_mock: %s", 
-                   self.config, self.use_mock)
+        
+        # Configure connection pooling
+        adapter = HTTPAdapter(
+            pool_connections=10,
+            pool_maxsize=20,
+            max_retries=0,  # We handle retries ourselves with the retry_with_backoff decorator
+            pool_block=False
+        )
+        self.session.mount('http://', adapter)
+        self.session.mount('https://', adapter)
+        
+        # Set reasonable timeouts
+        self.timeout = (10, 30)  # (connect timeout, read timeout)
+        
+        logger.info("Initialized FINRA BrokerCheck API agent with config: %s, use_mock: %s",
+                    self.config, self.use_mock)
 
     @rate_limit
     @retry_with_backoff()
@@ -209,7 +240,7 @@ class FinraFirmBrokerCheckAgent:
             logger.debug("Fetching firm info from BrokerCheck API", 
                         extra={"url": url, "params": params})
             
-            response = self.session.get(url, params=params, timeout=(10, 30))
+            response = self.session.get(url, params=params, timeout=self.timeout)
             if response.status_code == 200:
                 data = response.json()
                 results = []
@@ -300,7 +331,7 @@ class FinraFirmBrokerCheckAgent:
             logger.debug("Fetching firm info from BrokerCheck API",
                         extra={**log_context, "url": url, "params": params})
             
-            response = self.session.get(url, params=params, timeout=(10, 30))
+            response = self.session.get(url, params=params, timeout=self.timeout)
             if response.status_code == 200:
                 data = response.json()
                 results = []
@@ -408,7 +439,7 @@ class FinraFirmBrokerCheckAgent:
             logger.debug("Fetching firm details from BrokerCheck API", 
                         extra={**log_context, "url": url, "params": params})
             
-            response = self.session.get(url, params=params)
+            response = self.session.get(url, params=params, timeout=self.timeout)
             if response.status_code == 200:
                 data = response.json()
                 
@@ -502,7 +533,7 @@ class FinraFirmBrokerCheckAgent:
             logger.debug(f"Fetching basic entity info from BrokerCheck API ({entity_type})",
                         extra={**log_context, "url": url, "params": params})
 
-            response = self.session.get(url, params=params)
+            response = self.session.get(url, params=params, timeout=self.timeout)
             
             if response.status_code == 200:
                 data = response.json()
@@ -587,7 +618,7 @@ class FinraFirmBrokerCheckAgent:
             logger.debug(f"Fetching detailed entity info from BrokerCheck API ({entity_type})", 
                         extra={**log_context, "url": base_url, "params": params})
 
-            response = self.session.get(base_url, params=params)
+            response = self.session.get(base_url, params=params, timeout=self.timeout)
             
             if response.status_code == 200:
                 raw_data = response.json()
