@@ -308,14 +308,16 @@ def evaluate_registration_status(business_info: Dict[str, Any]) -> Tuple[bool, s
     if firm_status == 'active':
         # Only consider active if at least one proper registration is active
         # ERA registration is not considered a proper registration
-        is_compliant = any([is_sec_registered, is_state_registered])
+        # FINRA registration is now considered sufficient based on CN-2064
+        is_compliant = any([is_sec_registered, is_state_registered, is_finra_registered])
     
     # Check if any proper registration is active (as a fallback)
-    # FINRA registration alone is not sufficient
+    # FINRA registration is now considered sufficient based on CN-2064
     # ERA registration is not considered a proper registration
     has_active_registration = any([
         is_sec_registered,
-        is_state_registered
+        is_state_registered,
+        is_finra_registered
     ])
     
     if has_active_registration:
