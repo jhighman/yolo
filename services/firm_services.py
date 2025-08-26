@@ -285,6 +285,23 @@ class FirmServicesFacade:
                             # Get other names if available
                             if 'firm_other_names' in sec_search_data:
                                 partial_info['other_names'] = sec_search_data.get('firm_other_names', [])
+                                
+                            # Extract SEC number if available
+                            ia_sec_number = sec_search_data.get('firm_ia_sec_number')
+                            ia_sec_number_type = sec_search_data.get('firm_ia_sec_number_type', '801')
+                            ia_full_sec_number = sec_search_data.get('firm_ia_full_sec_number')
+                            bd_sec_number = sec_search_data.get('firm_bd_sec_number')
+                            bd_full_sec_number = sec_search_data.get('firm_bd_full_sec_number')
+                            
+                            # Determine SEC number using the same logic as in firm_marshaller.py
+                            if ia_full_sec_number:
+                                partial_info['sec_number'] = ia_full_sec_number
+                            elif ia_sec_number and ia_sec_number_type:
+                                partial_info['sec_number'] = f"{ia_sec_number_type}-{ia_sec_number}"
+                            elif bd_full_sec_number:
+                                partial_info['sec_number'] = bd_full_sec_number
+                            elif bd_sec_number:
+                                partial_info['sec_number'] = f"8-{bd_sec_number}"
                         elif isinstance(sec_search_data, list) and sec_search_data:
                             first_result = sec_search_data[0]
                             firm_name = first_result.get('org_name') or first_result.get('firm_name')
@@ -296,21 +313,80 @@ class FirmServicesFacade:
                             # Get other names if available
                             if 'firm_other_names' in first_result:
                                 partial_info['other_names'] = first_result.get('firm_other_names', [])
+                                
+                            # Extract SEC number if available
+                            ia_sec_number = first_result.get('firm_ia_sec_number')
+                            ia_sec_number_type = first_result.get('firm_ia_sec_number_type', '801')
+                            ia_full_sec_number = first_result.get('firm_ia_full_sec_number')
+                            bd_sec_number = first_result.get('firm_bd_sec_number')
+                            bd_full_sec_number = first_result.get('firm_bd_full_sec_number')
+                            
+                            # Determine SEC number using the same logic as in firm_marshaller.py
+                            if ia_full_sec_number:
+                                partial_info['sec_number'] = ia_full_sec_number
+                            elif ia_sec_number and ia_sec_number_type:
+                                partial_info['sec_number'] = f"{ia_sec_number_type}-{ia_sec_number}"
+                            elif bd_full_sec_number:
+                                partial_info['sec_number'] = bd_full_sec_number
+                            elif bd_sec_number:
+                                partial_info['sec_number'] = f"8-{bd_sec_number}"
                     except Exception as e:
                         logger.error(f"Error extracting firm name from SEC search for CRD {crd_number}: {str(e)}")
                 
                 # Try FINRA search results if SEC didn't provide a name
-                if 'firm_name' not in partial_info and finra_exists and hasattr(finra_search_response, 'data') and finra_search_response.data:
+                if finra_exists and hasattr(finra_search_response, 'data') and finra_search_response.data:
                     try:
                         finra_search_data = finra_search_response.data
-                        if isinstance(finra_search_data, dict) and 'firm_name' in finra_search_data:
-                            firm_name = finra_search_data.get('firm_name')
-                            if firm_name is not None:
-                                partial_info['firm_name'] = firm_name
-                        elif isinstance(finra_search_data, list) and finra_search_data and 'firm_name' in finra_search_data[0]:
-                            firm_name = finra_search_data[0].get('firm_name')
-                            if firm_name is not None:
-                                partial_info['firm_name'] = firm_name
+                        
+                        # Extract firm name if not already set
+                        if 'firm_name' not in partial_info:
+                            if isinstance(finra_search_data, dict) and 'firm_name' in finra_search_data:
+                                firm_name = finra_search_data.get('firm_name')
+                                if firm_name is not None:
+                                    partial_info['firm_name'] = firm_name
+                            elif isinstance(finra_search_data, list) and finra_search_data and 'firm_name' in finra_search_data[0]:
+                                firm_name = finra_search_data[0].get('firm_name')
+                                if firm_name is not None:
+                                    partial_info['firm_name'] = firm_name
+                        
+                        # Extract SEC number if not already set and available in FINRA data
+                        if 'sec_number' not in partial_info:
+                            if isinstance(finra_search_data, dict):
+                                content = finra_search_data.get('content', {})
+                                if isinstance(content, str):
+                                    try:
+                                        content = json.loads(content)
+                                    except json.JSONDecodeError:
+                                        content = {}
+                                
+                                basic_info = content.get('basicInformation', {})
+                                ia_sec_number = basic_info.get('iaSECNumber')
+                                ia_sec_number_type = basic_info.get('iaSECNumberType')
+                                bd_sec_number = basic_info.get('bdSECNumber')
+                                
+                                if ia_sec_number and ia_sec_number_type:
+                                    partial_info['sec_number'] = f"{ia_sec_number_type}-{ia_sec_number}"
+                                elif bd_sec_number:
+                                    partial_info['sec_number'] = f"8-{bd_sec_number}"
+                            
+                            elif isinstance(finra_search_data, list) and finra_search_data:
+                                first_result = finra_search_data[0]
+                                content = first_result.get('content', {})
+                                if isinstance(content, str):
+                                    try:
+                                        content = json.loads(content)
+                                    except json.JSONDecodeError:
+                                        content = {}
+                                
+                                basic_info = content.get('basicInformation', {})
+                                ia_sec_number = basic_info.get('iaSECNumber')
+                                ia_sec_number_type = basic_info.get('iaSECNumberType')
+                                bd_sec_number = basic_info.get('bdSECNumber')
+                                
+                                if ia_sec_number and ia_sec_number_type:
+                                    partial_info['sec_number'] = f"{ia_sec_number_type}-{ia_sec_number}"
+                                elif bd_sec_number:
+                                    partial_info['sec_number'] = f"8-{bd_sec_number}"
                     except Exception as e:
                         logger.error(f"Error extracting firm name from FINRA search for CRD {crd_number}: {str(e)}")
                 
@@ -350,14 +426,55 @@ class FirmServicesFacade:
                 if sec_exists and hasattr(sec_search_response, 'data') and sec_search_response.data:
                     try:
                         sec_search_data = sec_search_response.data
-                        if isinstance(sec_search_data, dict) and 'org_name' in sec_search_data:
-                            firm_name = sec_search_data.get('org_name')
-                            if firm_name is not None:
-                                partial_info['firm_name'] = firm_name
-                        elif isinstance(sec_search_data, list) and sec_search_data and 'org_name' in sec_search_data[0]:
-                            firm_name = sec_search_data[0].get('org_name')
-                            if firm_name is not None:
-                                partial_info['firm_name'] = firm_name
+                        if isinstance(sec_search_data, dict):
+                            # Extract firm name
+                            if 'org_name' in sec_search_data:
+                                firm_name = sec_search_data.get('org_name')
+                                if firm_name is not None:
+                                    partial_info['firm_name'] = firm_name
+                            
+                            # Extract SEC number if available
+                            ia_sec_number = sec_search_data.get('firm_ia_sec_number')
+                            ia_sec_number_type = sec_search_data.get('firm_ia_sec_number_type', '801')
+                            ia_full_sec_number = sec_search_data.get('firm_ia_full_sec_number')
+                            bd_sec_number = sec_search_data.get('firm_bd_sec_number')
+                            bd_full_sec_number = sec_search_data.get('firm_bd_full_sec_number')
+                            
+                            # Determine SEC number using the same logic as in firm_marshaller.py
+                            if ia_full_sec_number:
+                                partial_info['sec_number'] = ia_full_sec_number
+                            elif ia_sec_number and ia_sec_number_type:
+                                partial_info['sec_number'] = f"{ia_sec_number_type}-{ia_sec_number}"
+                            elif bd_full_sec_number:
+                                partial_info['sec_number'] = bd_full_sec_number
+                            elif bd_sec_number:
+                                partial_info['sec_number'] = f"8-{bd_sec_number}"
+                                
+                        elif isinstance(sec_search_data, list) and sec_search_data:
+                            first_result = sec_search_data[0]
+                            
+                            # Extract firm name
+                            if 'org_name' in first_result:
+                                firm_name = first_result.get('org_name')
+                                if firm_name is not None:
+                                    partial_info['firm_name'] = firm_name
+                            
+                            # Extract SEC number if available
+                            ia_sec_number = first_result.get('firm_ia_sec_number')
+                            ia_sec_number_type = first_result.get('firm_ia_sec_number_type', '801')
+                            ia_full_sec_number = first_result.get('firm_ia_full_sec_number')
+                            bd_sec_number = first_result.get('firm_bd_sec_number')
+                            bd_full_sec_number = first_result.get('firm_bd_full_sec_number')
+                            
+                            # Determine SEC number using the same logic as in firm_marshaller.py
+                            if ia_full_sec_number:
+                                partial_info['sec_number'] = ia_full_sec_number
+                            elif ia_sec_number and ia_sec_number_type:
+                                partial_info['sec_number'] = f"{ia_sec_number_type}-{ia_sec_number}"
+                            elif bd_full_sec_number:
+                                partial_info['sec_number'] = bd_full_sec_number
+                            elif bd_sec_number:
+                                partial_info['sec_number'] = f"8-{bd_sec_number}"
                     except Exception as e:
                         logger.error(f"Error extracting firm name from SEC search for CRD {crd_number}: {str(e)}")
                 
