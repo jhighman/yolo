@@ -1,0 +1,473 @@
+{
+  "reference_id": "test-ref-106108",
+  "claim": {
+    "reference_id": "test-ref-106108",
+    "business_ref": "BIZ_106108",
+    "business_name": "BNY ADVISORS",
+    "organization_crd": "106108",
+    "entityName": "BNY ADVISORS"
+  },
+  "entity": {
+    "firm_name": "BNY ADVISORS",
+    "crd_number": "106108",
+    "sec_number": "801-52378",
+    "registration_status": "ACTIVE",
+    "address": {},
+    "registration_date": "7/15/1996",
+    "other_names": [
+      "BNY ADVISORS",
+      "LOCKWOOD MANAGED ACCOUNT SOLUTIONS",
+      "LOCKWOOD ADVISORS INC",
+      "LOCKWOOD ADVISORS",
+      "LOCKWOOD",
+      "BNY MELLON LOCKWOOD",
+      "BNY MELLON ADVISORS, INC.",
+      "BNY MELLON ADVISORS"
+    ],
+    "is_sec_registered": true,
+    "is_state_registered": false,
+    "is_era_registered": false,
+    "is_sec_era_registered": false,
+    "is_state_era_registered": false,
+    "adv_filing_date": "03/31/2025",
+    "has_adv_pdf": true
+  },
+  "search_evaluation": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with SEC data, individual found.",
+    "basic_result": {
+      "firm_name": "BNY ADVISORS",
+      "crd_number": "106108",
+      "registration_status": "ACTIVE",
+      "addresses": [],
+      "disclosures": [],
+      "raw_data": {
+        "basicInformation": {
+          "firmId": 106108,
+          "firmName": "BNY ADVISORS",
+          "otherNames": [
+            "BNY ADVISORS",
+            "LOCKWOOD MANAGED ACCOUNT SOLUTIONS",
+            "LOCKWOOD ADVISORS INC",
+            "LOCKWOOD ADVISORS",
+            "LOCKWOOD",
+            "BNY MELLON LOCKWOOD",
+            "BNY MELLON ADVISORS, INC.",
+            "BNY MELLON ADVISORS"
+          ],
+          "iaScope": "ACTIVE",
+          "isIAFirm": "Y",
+          "legacyReportStatus": "Not Requested",
+          "iaSECNumber": "52378",
+          "iaSECNumberType": "801",
+          "crs": {
+            "crsType": "IA",
+            "fileId": "70d37b48-be82-4699-b489-50c92f3ae443"
+          }
+        },
+        "iaFirmAddressDetails": {
+          "officeAddress": {
+            "street1": "1800 AMERICAN BLVD.",
+            "street2": "SUITE 300 - POD D",
+            "city": "PENNINGTON",
+            "state": "NJ",
+            "country": "United States",
+            "postalCode": "08534"
+          }
+        },
+        "iaDisclosureFlag": "Y"
+      },
+      "sec_number": "801-52378",
+      "other_names": [
+        "BNY ADVISORS",
+        "LOCKWOOD MANAGED ACCOUNT SOLUTIONS",
+        "LOCKWOOD ADVISORS INC",
+        "LOCKWOOD ADVISORS",
+        "LOCKWOOD",
+        "BNY MELLON LOCKWOOD",
+        "BNY MELLON ADVISORS, INC.",
+        "BNY MELLON ADVISORS"
+      ],
+      "notice_filings": [
+        {
+          "jurisdiction": "Alabama",
+          "status": "Notice Filed",
+          "effective_date": "4/21/2000"
+        },
+        {
+          "jurisdiction": "Alaska",
+          "status": "Notice Filed",
+          "effective_date": "4/17/2000"
+        },
+        {
+          "jurisdiction": "Arizona",
+          "status": "Notice Filed",
+          "effective_date": "4/13/2000"
+        },
+        {
+          "jurisdiction": "Arkansas",
+          "status": "Notice Filed",
+          "effective_date": "4/14/2000"
+        },
+        {
+          "jurisdiction": "California",
+          "status": "Notice Filed",
+          "effective_date": "3/1/2000"
+        },
+        {
+          "jurisdiction": "Colorado",
+          "status": "Notice Filed",
+          "effective_date": "4/14/2000"
+        },
+        {
+          "jurisdiction": "Connecticut",
+          "status": "Notice Filed",
+          "effective_date": "4/13/2000"
+        },
+        {
+          "jurisdiction": "Delaware",
+          "status": "Notice Filed",
+          "effective_date": "8/28/2003"
+        },
+        {
+          "jurisdiction": "District of Columbia",
+          "status": "Notice Filed",
+          "effective_date": "6/1/2000"
+        },
+        {
+          "jurisdiction": "Florida",
+          "status": "Notice Filed",
+          "effective_date": "4/19/2000"
+        },
+        {
+          "jurisdiction": "Georgia",
+          "status": "Notice Filed",
+          "effective_date": "4/13/2000"
+        },
+        {
+          "jurisdiction": "Hawaii",
+          "status": "Notice Filed",
+          "effective_date": "4/14/2000"
+        },
+        {
+          "jurisdiction": "Idaho",
+          "status": "Notice Filed",
+          "effective_date": "4/17/2000"
+        },
+        {
+          "jurisdiction": "Illinois",
+          "status": "Notice Filed",
+          "effective_date": "4/13/2000"
+        },
+        {
+          "jurisdiction": "Indiana",
+          "status": "Notice Filed",
+          "effective_date": "2/9/2001"
+        },
+        {
+          "jurisdiction": "Iowa",
+          "status": "Notice Filed",
+          "effective_date": "4/18/2000"
+        },
+        {
+          "jurisdiction": "Kansas",
+          "status": "Notice Filed",
+          "effective_date": "4/13/2000"
+        },
+        {
+          "jurisdiction": "Kentucky",
+          "status": "Notice Filed",
+          "effective_date": "4/13/2000"
+        },
+        {
+          "jurisdiction": "Louisiana",
+          "status": "Notice Filed",
+          "effective_date": "4/19/2000"
+        },
+        {
+          "jurisdiction": "Maine",
+          "status": "Notice Filed",
+          "effective_date": "5/3/2000"
+        },
+        {
+          "jurisdiction": "Maryland",
+          "status": "Notice Filed",
+          "effective_date": "4/24/2000"
+        },
+        {
+          "jurisdiction": "Massachusetts",
+          "status": "Notice Filed",
+          "effective_date": "4/13/2000"
+        },
+        {
+          "jurisdiction": "Michigan",
+          "status": "Notice Filed",
+          "effective_date": "1/31/2001"
+        },
+        {
+          "jurisdiction": "Minnesota",
+          "status": "Notice Filed",
+          "effective_date": "4/17/2000"
+        },
+        {
+          "jurisdiction": "Mississippi",
+          "status": "Notice Filed",
+          "effective_date": "4/14/2000"
+        },
+        {
+          "jurisdiction": "Missouri",
+          "status": "Notice Filed",
+          "effective_date": "4/13/2000"
+        },
+        {
+          "jurisdiction": "Montana",
+          "status": "Notice Filed",
+          "effective_date": "4/14/2000"
+        },
+        {
+          "jurisdiction": "Nebraska",
+          "status": "Notice Filed",
+          "effective_date": "4/17/2000"
+        },
+        {
+          "jurisdiction": "Nevada",
+          "status": "Notice Filed",
+          "effective_date": "4/14/2000"
+        },
+        {
+          "jurisdiction": "New Hampshire",
+          "status": "Notice Filed",
+          "effective_date": "4/14/2000"
+        },
+        {
+          "jurisdiction": "New Jersey",
+          "status": "Notice Filed",
+          "effective_date": "4/27/2000"
+        },
+        {
+          "jurisdiction": "New Mexico",
+          "status": "Notice Filed",
+          "effective_date": "4/19/2000"
+        },
+        {
+          "jurisdiction": "New York",
+          "status": "Notice Filed",
+          "effective_date": "5/26/2000"
+        },
+        {
+          "jurisdiction": "North Carolina",
+          "status": "Notice Filed",
+          "effective_date": "12/11/2000"
+        },
+        {
+          "jurisdiction": "North Dakota",
+          "status": "Notice Filed",
+          "effective_date": "4/8/2000"
+        },
+        {
+          "jurisdiction": "Ohio",
+          "status": "Notice Filed",
+          "effective_date": "10/14/1999"
+        },
+        {
+          "jurisdiction": "Oklahoma",
+          "status": "Notice Filed",
+          "effective_date": "6/13/2000"
+        },
+        {
+          "jurisdiction": "Oregon",
+          "status": "Notice Filed",
+          "effective_date": "5/5/2000"
+        },
+        {
+          "jurisdiction": "Pennsylvania",
+          "status": "Notice Filed",
+          "effective_date": "7/14/2000"
+        },
+        {
+          "jurisdiction": "Puerto Rico",
+          "status": "Notice Filed",
+          "effective_date": "5/5/2000"
+        },
+        {
+          "jurisdiction": "Rhode Island",
+          "status": "Notice Filed",
+          "effective_date": "4/18/2000"
+        },
+        {
+          "jurisdiction": "South Carolina",
+          "status": "Notice Filed",
+          "effective_date": "1/31/2001"
+        },
+        {
+          "jurisdiction": "South Dakota",
+          "status": "Notice Filed",
+          "effective_date": "4/17/2000"
+        },
+        {
+          "jurisdiction": "Tennessee",
+          "status": "Notice Filed",
+          "effective_date": "4/17/2000"
+        },
+        {
+          "jurisdiction": "Texas",
+          "status": "Notice Filed",
+          "effective_date": "5/1/2000"
+        },
+        {
+          "jurisdiction": "Utah",
+          "status": "Notice Filed",
+          "effective_date": "4/18/2000"
+        },
+        {
+          "jurisdiction": "Vermont",
+          "status": "Notice Filed",
+          "effective_date": "4/14/2000"
+        },
+        {
+          "jurisdiction": "Virginia",
+          "status": "Notice Filed",
+          "effective_date": "4/27/2000"
+        },
+        {
+          "jurisdiction": "Washington",
+          "status": "Notice Filed",
+          "effective_date": "4/17/2000"
+        },
+        {
+          "jurisdiction": "West Virginia",
+          "status": "Notice Filed",
+          "effective_date": "4/18/2000"
+        },
+        {
+          "jurisdiction": "Wisconsin",
+          "status": "Notice Filed",
+          "effective_date": "5/1/2000"
+        },
+        {
+          "jurisdiction": "Wyoming",
+          "status": "Notice Filed",
+          "effective_date": "7/10/2017"
+        }
+      ],
+      "registration_date": "7/15/1996",
+      "is_sec_registered": true,
+      "is_state_registered": false,
+      "is_era_registered": false,
+      "is_sec_era_registered": false,
+      "is_state_era_registered": false,
+      "adv_filing_date": "03/31/2025",
+      "has_adv_pdf": true,
+      "accountant_exams": [
+        {
+          "firm_name": "KPMG LLP",
+          "filing_date": "08/28/2024",
+          "status": "FILE"
+        },
+        {
+          "firm_name": "KPMG LLP",
+          "filing_date": "10/27/2023",
+          "status": "FILE"
+        },
+        {
+          "firm_name": "KPMG LLP",
+          "filing_date": "09/28/2022",
+          "status": "FILE"
+        }
+      ],
+      "brochures": [
+        {
+          "name": "BNY MELLON ADVISORS, INC. MANAGED360 PROGRAM WRAP FEE PROGRAM BROCHURE",
+          "version_id": 970833,
+          "date_submitted": "3/31/2025",
+          "last_confirmed": null
+        },
+        {
+          "name": "BNY MELLON ADVISORS, INC. FIRM BROCHURE - INTERMEDIARY SOLUTIONS",
+          "version_id": 970835,
+          "date_submitted": "3/31/2025",
+          "last_confirmed": null
+        },
+        {
+          "name": "BNY MELLON ADVISORS, INC. FIRM BROCHURE - INSTITUTIONAL & HIGH NET WORTH CLIENT SOLUTIONS",
+          "version_id": 970834,
+          "date_submitted": "3/31/2025",
+          "last_confirmed": null
+        }
+      ],
+      "firm_status": "active",
+      "is_finra_registered": true
+    },
+    "sec_search_result": {
+      "org_name": "BNY ADVISORS",
+      "org_crd": "106108",
+      "firm_ia_sec_number": "52378",
+      "firm_ia_full_sec_number": "801-52378",
+      "firm_other_names": [
+        "BNY ADVISORS",
+        "LOCKWOOD MANAGED ACCOUNT SOLUTIONS",
+        "LOCKWOOD ADVISORS INC",
+        "LOCKWOOD ADVISORS",
+        "LOCKWOOD",
+        "BNY MELLON LOCKWOOD",
+        "BNY MELLON ADVISORS, INC.",
+        "BNY MELLON ADVISORS"
+      ],
+      "firm_type": "",
+      "registration_status": "",
+      "firm_ia_scope": "",
+      "firm_ia_disclosure_fl": "Y",
+      "firm_branches_count": 5
+    },
+    "finra_search_result": {
+      "firm_name": "BNY ADVISORS",
+      "crd_number": "106108"
+    }
+  },
+  "status_evaluation": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "Firm is registered with SEC, FINRA",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "source": "SEC",
+    "compliance": false,
+    "compliance_explanation": "Disclosure flag indicates disclosures exist but records are unavailable",
+    "alerts": [
+      {
+        "alert_type": "MissingDisclosureRecords",
+        "severity": "HIGH",
+        "metadata": {
+          "disclosure_flag": "Y",
+          "business_name": "BNY ADVISORS"
+        },
+        "description": "Disclosure flag is 'Y' but no disclosure records are available",
+        "alert_category": "DISCLOSURE"
+      }
+    ]
+  },
+  "final_evaluation": {
+    "source": "SEC",
+    "overall_compliance": false,
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "description": "One or more compliance checks failed",
+    "alerts": [
+      {
+        "eventDate": "2025-08-26",
+        "severity": "HIGH",
+        "alert_category": "DISCLOSURE",
+        "alert_type": "MissingDisclosureRecords",
+        "description": "Disclosure flag is 'Y' but no disclosure records are available",
+        "source": "SEC",
+        "metadata": {
+          "disclosure_flag": "Y",
+          "business_name": "BNY ADVISORS"
+        }
+      }
+    ]
+  },
+  "generated_at": "2025-08-26T14:42:10.742943"
+}

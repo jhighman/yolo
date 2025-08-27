@@ -1,0 +1,193 @@
+{
+  "reference_id": "test-ref-131940",
+  "claim": {
+    "reference_id": "test-ref-131940",
+    "business_ref": "BIZ_131940",
+    "business_name": "TPG ANGELO GORDON",
+    "organization_crd": "131940",
+    "entityName": "TPG ANGELO GORDON"
+  },
+  "entity": {
+    "firm_name": "TPG ANGELO GORDON",
+    "crd_number": "131940",
+    "sec_number": "801-34300",
+    "registration_status": "ACTIVE",
+    "address": {},
+    "registration_date": "5/26/1989",
+    "other_names": [
+      "ANGELO, GORDON & CO., L.P.",
+      "TPG ANGELO GORDON"
+    ],
+    "is_sec_registered": true,
+    "is_state_registered": false,
+    "is_era_registered": false,
+    "is_sec_era_registered": false,
+    "is_state_era_registered": false,
+    "adv_filing_date": "05/29/2025",
+    "has_adv_pdf": true
+  },
+  "search_evaluation": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with SEC data, individual found.",
+    "basic_result": {
+      "firm_name": "TPG ANGELO GORDON",
+      "crd_number": "131940",
+      "registration_status": "ACTIVE",
+      "addresses": [],
+      "disclosures": [],
+      "raw_data": {
+        "basicInformation": {
+          "firmId": 131940,
+          "firmName": "TPG ANGELO GORDON",
+          "otherNames": [
+            "ANGELO, GORDON & CO., L.P.",
+            "TPG ANGELO GORDON"
+          ],
+          "iaScope": "ACTIVE",
+          "isIAFirm": "Y",
+          "legacyReportStatus": "Not Requested",
+          "iaSECNumber": "34300",
+          "iaSECNumberType": "801"
+        },
+        "iaFirmAddressDetails": {
+          "officeAddress": {
+            "street1": "245 PARK AVENUE",
+            "street2": "26TH FLOOR",
+            "city": "NEW YORK",
+            "state": "NY",
+            "country": "United States",
+            "postalCode": "10167"
+          }
+        },
+        "iaDisclosureFlag": "N",
+        "relyingAdvisors": [
+          {
+            "firmId": 299884,
+            "name": "NORTHWOODS EUROPEAN CLO MANAGEMENT LLC",
+            "status": "ACTIVE",
+            "nameStatus": "ACTIVE"
+          },
+          {
+            "firmId": 293798,
+            "name": "ANGELO, GORDON EUROPE LLP",
+            "status": "ACTIVE",
+            "nameStatus": "ACTIVE"
+          }
+        ]
+      },
+      "sec_number": "801-34300",
+      "other_names": [
+        "ANGELO, GORDON & CO., L.P.",
+        "TPG ANGELO GORDON"
+      ],
+      "notice_filings": [
+        {
+          "jurisdiction": "California",
+          "status": "Notice Filed",
+          "effective_date": "3/31/2011"
+        },
+        {
+          "jurisdiction": "District of Columbia",
+          "status": "Notice Filed",
+          "effective_date": "3/28/2024"
+        },
+        {
+          "jurisdiction": "Florida",
+          "status": "Notice Filed",
+          "effective_date": "3/28/2025"
+        },
+        {
+          "jurisdiction": "Illinois",
+          "status": "Notice Filed",
+          "effective_date": "3/31/2011"
+        },
+        {
+          "jurisdiction": "New York",
+          "status": "Notice Filed",
+          "effective_date": "3/31/2005"
+        },
+        {
+          "jurisdiction": "Texas",
+          "status": "Notice Filed",
+          "effective_date": "3/28/2024"
+        }
+      ],
+      "registration_date": "5/26/1989",
+      "is_sec_registered": true,
+      "is_state_registered": false,
+      "is_era_registered": false,
+      "is_sec_era_registered": false,
+      "is_state_era_registered": false,
+      "adv_filing_date": "05/29/2025",
+      "has_adv_pdf": true,
+      "accountant_exams": [
+        {
+          "firm_name": "DELOITTE & TOUCHE LLP",
+          "filing_date": "12/16/2024",
+          "status": "FILE"
+        },
+        {
+          "firm_name": "PRICEWATERHOUSECOOPERS LLP",
+          "filing_date": "11/28/2023",
+          "status": "FILE"
+        },
+        {
+          "firm_name": "PRICEWATERHOUSECOOPERS LLP",
+          "filing_date": "10/28/2022",
+          "status": "FILE"
+        }
+      ],
+      "brochures": [
+        {
+          "name": "TPG ANGELO GORDON FIRM BROCHURE",
+          "version_id": 966817,
+          "date_submitted": "3/28/2025",
+          "last_confirmed": null
+        }
+      ],
+      "firm_status": "active",
+      "is_finra_registered": true
+    },
+    "sec_search_result": {
+      "org_name": "",
+      "org_crd": "",
+      "firm_ia_sec_number": "34300",
+      "firm_ia_full_sec_number": "801-34300",
+      "firm_other_names": [
+        "ANGELO, GORDON & CO., L.P.",
+        "TPG ANGELO GORDON"
+      ],
+      "firm_type": "",
+      "registration_status": "",
+      "firm_ia_scope": "ACTIVE",
+      "firm_ia_disclosure_fl": "N",
+      "firm_branches_count": 1
+    },
+    "finra_search_result": {
+      "firm_name": "",
+      "crd_number": ""
+    }
+  },
+  "status_evaluation": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "Firm is registered with SEC, FINRA and has active IA scope",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "No disclosures found",
+    "alerts": []
+  },
+  "final_evaluation": {
+    "source": "SEC",
+    "overall_compliance": true,
+    "overall_risk_level": "Low",
+    "recommendations": "No immediate action required, monitor for changes.",
+    "description": "All compliance checks passed",
+    "alerts": []
+  },
+  "generated_at": "2025-08-25T15:20:23.740124"
+}

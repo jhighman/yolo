@@ -81,10 +81,24 @@ class FirmEvaluationReportBuilder:
         
         # Extract entity information from basic_result and set it
         if basic_result:
+            # Get SEC number from basic_result first
+            sec_number = basic_result.get("sec_number", "")
+            
+            # If SEC number is empty, try to get it from sec_search_result
+            if not sec_number and "sec_search_result" in search_evaluation:
+                sec_result = search_evaluation.get("sec_search_result", {})
+                # Try to get SEC number from firm_ia_full_sec_number first
+                if sec_result.get("firm_ia_full_sec_number"):
+                    sec_number = sec_result.get("firm_ia_full_sec_number")
+                # If not available, try to construct it from firm_ia_sec_number
+                elif sec_result.get("firm_ia_sec_number"):
+                    sec_number_type = sec_result.get("firm_ia_sec_number_type", "801")
+                    sec_number = f"{sec_number_type}-{sec_result.get('firm_ia_sec_number')}"
+            
             entity_data = {
                 "firm_name": basic_result.get("firm_name", ""),
                 "crd_number": basic_result.get("crd_number", ""),
-                "sec_number": basic_result.get("sec_number", ""),
+                "sec_number": sec_number,
                 "registration_status": basic_result.get("registration_status", ""),
                 "address": basic_result.get("address", {}),
                 "registration_date": basic_result.get("registration_date", ""),

@@ -1,0 +1,386 @@
+{
+  "reference_id": "test-ref-40290",
+  "claim": {
+    "reference_id": "test-ref-40290",
+    "business_ref": "BIZ_40290",
+    "business_name": "GREENHILL & CO., LLC",
+    "organization_crd": "40290",
+    "entityName": "GREENHILL & CO., LLC"
+  },
+  "entity": {
+    "firm_name": "GREENHILL & CO., LLC",
+    "crd_number": "40290",
+    "sec_number": "8-49000",
+    "registration_status": null,
+    "address": {},
+    "registration_date": null,
+    "other_names": [
+      "GREENHILL & CO., LLC"
+    ],
+    "is_sec_registered": false,
+    "is_state_registered": false,
+    "is_era_registered": false,
+    "is_sec_era_registered": false,
+    "is_state_era_registered": false,
+    "adv_filing_date": null,
+    "has_adv_pdf": false
+  },
+  "search_evaluation": {
+    "source": "FINRA",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA data, individual found.",
+    "basic_result": {
+      "firm_name": "GREENHILL & CO., LLC",
+      "crd_number": "40290",
+      "registration_status": null,
+      "addresses": [],
+      "disclosures": [
+        {
+          "disclosureType": "Regulatory Event",
+          "disclosureCount": 1
+        }
+      ],
+      "raw_data": {
+        "basicInformation": {
+          "firmId": 40290,
+          "firmName": "GREENHILL & CO., LLC",
+          "otherNames": [
+            "GREENHILL & CO., LLC"
+          ],
+          "bcScope": "ACTIVE",
+          "isLegacy": "N",
+          "finraRegistered": "Y",
+          "districtName": "New York",
+          "firmType": "Limited Liability Company",
+          "formedState": "New York",
+          "firmSize": "Small",
+          "firmStatus": "Approved",
+          "regulator": "SEC",
+          "finraLastApprovalDate": "06/13/1996",
+          "firmStatusDate": "06/13/1996",
+          "formedDate": "01/19/1996",
+          "fiscalMonthEndCode": "March",
+          "legacyReportStatus": "Not Requested",
+          "bdSECNumber": "49000"
+        },
+        "firmAddressDetails": {
+          "officeAddress": {
+            "street1": "1271 AVENUE OF THE AMERICAS",
+            "city": "NEW YORK",
+            "state": "NY",
+            "country": "UNITED STATES",
+            "postalCode": "10020"
+          },
+          "mailingAddress": {
+            "street1": "1271 AVENUE OF THE AMERICAS",
+            "city": "NEW YORK",
+            "state": "NY",
+            "country": "UNITED STATES",
+            "postalCode": "10020"
+          },
+          "businessPhoneNumber": "212-389-1500",
+          "finraLastApprovalDate": "1996-06-13T00:00:00"
+        },
+        "bdDisclosureFlag": "Y",
+        "iaDisclosureFlag": "N",
+        "disclosures": [
+          {
+            "disclosureType": "Regulatory Event",
+            "disclosureCount": 1
+          }
+        ],
+        "registrations": {
+          "approvedFinraRegistrationCount": 1,
+          "approvedSECRegistrationCount": 1,
+          "approvedSRORegistrationCount": 1,
+          "approvedStateRegistrationCount": 51,
+          "stateList": [
+            {
+              "state": "Alabama"
+            },
+            {
+              "state": "Alaska"
+            },
+            {
+              "state": "Arizona"
+            },
+            {
+              "state": "Arkansas"
+            },
+            {
+              "state": "California"
+            },
+            {
+              "state": "Colorado"
+            },
+            {
+              "state": "Connecticut"
+            },
+            {
+              "state": "Delaware"
+            },
+            {
+              "state": "District of Columbia"
+            },
+            {
+              "state": "Florida"
+            },
+            {
+              "state": "Georgia"
+            },
+            {
+              "state": "Hawaii"
+            },
+            {
+              "state": "Idaho"
+            },
+            {
+              "state": "Illinois"
+            },
+            {
+              "state": "Indiana"
+            },
+            {
+              "state": "Iowa"
+            },
+            {
+              "state": "Kansas"
+            },
+            {
+              "state": "Kentucky"
+            },
+            {
+              "state": "Louisiana"
+            },
+            {
+              "state": "Maine"
+            },
+            {
+              "state": "Maryland"
+            },
+            {
+              "state": "Massachusetts"
+            },
+            {
+              "state": "Michigan"
+            },
+            {
+              "state": "Minnesota"
+            },
+            {
+              "state": "Mississippi"
+            },
+            {
+              "state": "Missouri"
+            },
+            {
+              "state": "Montana"
+            },
+            {
+              "state": "Nebraska"
+            },
+            {
+              "state": "Nevada"
+            },
+            {
+              "state": "New Hampshire"
+            },
+            {
+              "state": "New Jersey"
+            },
+            {
+              "state": "New Mexico"
+            },
+            {
+              "state": "New York"
+            },
+            {
+              "state": "North Carolina"
+            },
+            {
+              "state": "North Dakota"
+            },
+            {
+              "state": "Ohio"
+            },
+            {
+              "state": "Oklahoma"
+            },
+            {
+              "state": "Oregon"
+            },
+            {
+              "state": "Pennsylvania"
+            },
+            {
+              "state": "Rhode Island"
+            },
+            {
+              "state": "South Carolina"
+            },
+            {
+              "state": "South Dakota"
+            },
+            {
+              "state": "Tennessee"
+            },
+            {
+              "state": "Texas"
+            },
+            {
+              "state": "Utah"
+            },
+            {
+              "state": "Vermont"
+            },
+            {
+              "state": "Virginia"
+            },
+            {
+              "state": "Washington"
+            },
+            {
+              "state": "West Virginia"
+            },
+            {
+              "state": "Wisconsin"
+            },
+            {
+              "state": "Wyoming"
+            }
+          ],
+          "businessTypeCount": 2,
+          "hasAffliation": "Y",
+          "referOtherBd": "N"
+        },
+        "directOwners": [
+          {
+            "legalName": "GREENHILL & CO., INC.",
+            "position": "OWNER",
+            "bcScope": "NotInScope",
+            "crdNumber": ""
+          },
+          {
+            "legalName": "DALY, BRENDAN GERARD",
+            "position": "CHIEF COMPLIANCE OFFICER",
+            "bcScope": "Active",
+            "crdNumber": "1823142"
+          },
+          {
+            "legalName": "FALEIRO, GITANJALI PINTO",
+            "position": "GENERAL COUNSEL",
+            "bcScope": "Active",
+            "crdNumber": "4250865"
+          },
+          {
+            "legalName": "KATZ, MICHAL",
+            "position": "MANGING DIRECTOR - HEAD OF INVESTMENT BANKING",
+            "bcScope": "Active",
+            "crdNumber": "2813944"
+          },
+          {
+            "legalName": "LASKY, MARK RICHARD",
+            "position": "CHIEF FINANCIAL OFFICER, PRINCIPAL FINANCIAL OFFICER, FINOP",
+            "bcScope": "Active",
+            "crdNumber": "6005542"
+          },
+          {
+            "legalName": "MIZUHO SECURITIES USA LLC",
+            "position": "MANAGER",
+            "bcScope": "NotInScope",
+            "crdNumber": "19647"
+          },
+          {
+            "legalName": "RIZZIERI, GERALD ANTHONY",
+            "position": "CHIEF EXECUTIVE OFFICER",
+            "bcScope": "Active",
+            "crdNumber": "1751181"
+          }
+        ],
+        "affiliateDisclosures": {
+          "nonRegisteredAffiliateDisclosureCount": 4
+        }
+      },
+      "sec_number": "8-49000",
+      "other_names": [
+        "GREENHILL & CO., LLC"
+      ],
+      "notice_filings": [],
+      "registration_date": null,
+      "is_sec_registered": false,
+      "is_state_registered": false,
+      "is_era_registered": false,
+      "is_sec_era_registered": false,
+      "is_state_era_registered": false,
+      "adv_filing_date": null,
+      "has_adv_pdf": false,
+      "accountant_exams": [],
+      "brochures": [],
+      "firm_status": "active",
+      "is_finra_registered": true
+    },
+    "sec_search_result": {
+      "org_name": "GREENHILL & CO., LLC",
+      "org_crd": "40290",
+      "firm_ia_sec_number": "",
+      "firm_ia_full_sec_number": "",
+      "firm_other_names": [
+        "GREENHILL & CO., LLC"
+      ],
+      "firm_type": "",
+      "registration_status": "",
+      "firm_ia_scope": "ACTIVE",
+      "firm_ia_disclosure_fl": "N",
+      "firm_branches_count": 5
+    },
+    "finra_search_result": {
+      "firm_name": "GREENHILL & CO., LLC",
+      "crd_number": "40290"
+    }
+  },
+  "status_evaluation": {
+    "source": "FINRA",
+    "compliance": true,
+    "compliance_explanation": "Firm is registered with FINRA and has active IA scope",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "source": "FINRA",
+    "compliance": false,
+    "compliance_explanation": "Significant disclosures found: Regulatory Event (1)",
+    "alerts": [
+      {
+        "alert_type": "RegulatoryEventDisclosure",
+        "severity": "HIGH",
+        "metadata": {
+          "disclosure_type": "Regulatory Event",
+          "count": 1
+        },
+        "description": "1 Regulatory Event disclosure(s) found",
+        "alert_category": "DISCLOSURE"
+      }
+    ]
+  },
+  "final_evaluation": {
+    "source": "FINRA",
+    "overall_compliance": false,
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "description": "One or more compliance checks failed",
+    "alerts": [
+      {
+        "eventDate": "2025-08-26",
+        "severity": "HIGH",
+        "alert_category": "DISCLOSURE",
+        "alert_type": "RegulatoryEventDisclosure",
+        "description": "1 Regulatory Event disclosure(s) found",
+        "source": "FINRA",
+        "metadata": {
+          "disclosure_type": "Regulatory Event",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "generated_at": "2025-08-26T14:57:13.337458"
+}

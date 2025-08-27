@@ -1,0 +1,112 @@
+{
+  "reference_id": "test-ref-284175",
+  "claim": {
+    "reference_id": "test-ref-284175",
+    "business_ref": "BIZ_284175",
+    "business_name": "Gordon Dyal & Co., LLC",
+    "organization_crd": "284175",
+    "entityName": "Gordon Dyal & Co., LLC"
+  },
+  "entity": {
+    "firm_name": "GORDON DYAL & CO., LLC",
+    "crd_number": "284175",
+    "sec_number": "8-69791",
+    "registration_status": null,
+    "address": {
+      "street": "",
+      "city": null,
+      "state": null,
+      "zip": null,
+      "country": null
+    },
+    "registration_date": null,
+    "other_names": [
+      "DYAL CO. LLC",
+      "GORDON DYAL & CO., LLC",
+      "DYAL CO., LLC"
+    ],
+    "is_sec_registered": true,
+    "is_state_registered": false,
+    "is_era_registered": false,
+    "is_sec_era_registered": false,
+    "is_state_era_registered": false,
+    "adv_filing_date": null,
+    "has_adv_pdf": false
+  },
+  "search_evaluation": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with SEC data, individual found.",
+    "basic_result": {
+      "firm_name": "GORDON DYAL & CO., LLC",
+      "crd_number": "284175",
+      "sec_number": "8-69791",
+      "registration_status": null,
+      "address": {
+        "street": "",
+        "city": null,
+        "state": null,
+        "zip": null,
+        "country": null
+      },
+      "notice_filings": [],
+      "registration_date": null,
+      "other_names": [
+        "DYAL CO. LLC",
+        "GORDON DYAL & CO., LLC",
+        "DYAL CO., LLC"
+      ],
+      "is_sec_registered": true,
+      "is_state_registered": false,
+      "is_era_registered": false,
+      "is_sec_era_registered": false,
+      "is_state_era_registered": false,
+      "adv_filing_date": null,
+      "has_adv_pdf": false,
+      "accountant_exams": [],
+      "brochures": [],
+      "firm_status": "active"
+    },
+    "sec_search_result": {
+      "org_name": "",
+      "org_crd": "",
+      "firm_ia_sec_number": "",
+      "firm_ia_full_sec_number": "",
+      "firm_other_names": [
+        "DYAL CO. LLC",
+        "GORDON DYAL & CO., LLC",
+        "DYAL CO., LLC"
+      ],
+      "firm_type": "",
+      "registration_status": "",
+      "firm_ia_scope": "",
+      "firm_ia_disclosure_fl": "N",
+      "firm_branches_count": 2
+    },
+    "finra_search_result": {
+      "status": "not_found",
+      "details": {}
+    }
+  },
+  "status_evaluation": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "Firm is registered with SEC",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "No disclosures found",
+    "alerts": []
+  },
+  "final_evaluation": {
+    "source": "SEC",
+    "overall_compliance": true,
+    "overall_risk_level": "Low",
+    "recommendations": "No immediate action required, monitor for changes.",
+    "description": "All compliance checks passed",
+    "alerts": []
+  },
+  "generated_at": "2025-08-26T15:01:05.627566"
+}

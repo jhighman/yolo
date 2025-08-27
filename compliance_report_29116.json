@@ -3,9 +3,9 @@
   "claim": {
     "reference_id": "test-ref-29116",
     "business_ref": "BIZ_29116",
-    "business_name": "BROOKSTONE SECURITIES, INC.",
+    "business_name": "Brookstone Securities, Inc.",
     "organization_crd": "29116",
-    "entityName": "BROOKSTONE SECURITIES, INC."
+    "entityName": "Brookstone Securities, Inc."
   },
   "entity": {
     "firm_name": "BROOKSTONE SECURITIES, INC.",
@@ -106,33 +106,12 @@
         "severity": "HIGH",
         "metadata": {
           "disclosure_flag": "Y",
-          "business_name": "BROOKSTONE SECURITIES, INC."
+          "business_name": "Brookstone Securities, Inc."
         },
         "description": "Disclosure flag is 'Y' but no disclosure records are available",
         "alert_category": "DISCLOSURE"
       }
     ]
-  },
-  "disciplinary_evaluation": {
-    "source": "SEC",
-    "compliance": true,
-    "compliance_explanation": "No disciplinary actions found.",
-    "alerts": []
-  },
-  "arbitration_review": {
-    "source": "SEC",
-    "compliance": true,
-    "compliance_explanation": "No arbitration cases found.",
-    "alerts": []
-  },
-  "adv_evaluation": {
-    "compliance": true,
-    "explanation": "ADV evaluation skipped due to configuration",
-    "alerts": [],
-    "skipped": true,
-    "skip_timestamp": "2025-08-01T12:38:30.467832",
-    "source": "SEC",
-    "adv_status": "skipped"
   },
   "final_evaluation": {
     "source": "SEC",
@@ -142,7 +121,7 @@
     "description": "One or more compliance checks failed",
     "alerts": [
       {
-        "eventDate": "2025-08-01",
+        "eventDate": "2025-08-26",
         "severity": "HIGH",
         "alert_category": "REGISTRATION",
         "alert_type": "Registration Issue",
@@ -154,7 +133,7 @@
         }
       },
       {
-        "eventDate": "2025-08-01",
+        "eventDate": "2025-08-26",
         "severity": "HIGH",
         "alert_category": "REGISTRATION",
         "alert_type": "Registration Issue",
@@ -168,7 +147,7 @@
         }
       },
       {
-        "eventDate": "2025-08-01",
+        "eventDate": "2025-08-26",
         "severity": "HIGH",
         "alert_category": "DISCLOSURE",
         "alert_type": "MissingDisclosureRecords",
@@ -176,10 +155,10 @@
         "source": "SEC",
         "metadata": {
           "disclosure_flag": "Y",
-          "business_name": "BROOKSTONE SECURITIES, INC."
+          "business_name": "Brookstone Securities, Inc."
         }
       }
     ]
   },
-  "generated_at": "2025-08-01T12:38:30.475414"
+  "generated_at": "2025-08-26T14:42:58.821091"
 }

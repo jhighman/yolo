@@ -1,0 +1,390 @@
+{
+  "reference_id": "test-ref-110181",
+  "claim": {
+    "reference_id": "test-ref-110181",
+    "business_ref": "BIZ_110181",
+    "business_name": "BROWN ADVISORY",
+    "organization_crd": "110181",
+    "entityName": "BROWN ADVISORY"
+  },
+  "entity": {
+    "firm_name": "BROWN ADVISORY",
+    "crd_number": "110181",
+    "sec_number": "801-38826",
+    "registration_status": "ACTIVE",
+    "address": {},
+    "registration_date": "6/7/1991",
+    "other_names": [
+      "BEATY HAYNES & ASSOCIATES, INC.",
+      "BROWN ADVISORY LLC",
+      "BROWN ADVISORY",
+      "BEATY HAYNES LLC",
+      "BEATY HAYNES & PATTERSON INC"
+    ],
+    "is_sec_registered": true,
+    "is_state_registered": false,
+    "is_era_registered": false,
+    "is_sec_era_registered": false,
+    "is_state_era_registered": false,
+    "adv_filing_date": "06/11/2025",
+    "has_adv_pdf": true
+  },
+  "search_evaluation": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with SEC data, individual found.",
+    "basic_result": {
+      "firm_name": "BROWN ADVISORY",
+      "crd_number": "110181",
+      "registration_status": "ACTIVE",
+      "addresses": [],
+      "disclosures": [],
+      "raw_data": {
+        "basicInformation": {
+          "firmId": 110181,
+          "firmName": "BROWN ADVISORY",
+          "otherNames": [
+            "BEATY HAYNES & ASSOCIATES, INC.",
+            "BROWN ADVISORY LLC",
+            "BROWN ADVISORY",
+            "BEATY HAYNES LLC",
+            "BEATY HAYNES & PATTERSON INC"
+          ],
+          "iaScope": "ACTIVE",
+          "isIAFirm": "Y",
+          "legacyReportStatus": "Not Requested",
+          "iaSECNumber": "38826",
+          "iaSECNumberType": "801",
+          "crs": {
+            "crsType": "IA",
+            "fileId": "99d193a7-20b7-464a-a114-c17cbf614b46"
+          }
+        },
+        "iaFirmAddressDetails": {
+          "officeAddress": {
+            "street1": "901 SOUTH BOND STREET",
+            "street2": "SUITE 400",
+            "city": "BALTIMORE",
+            "state": "MD",
+            "country": "United States",
+            "postalCode": "21231-3340"
+          }
+        },
+        "iaDisclosureFlag": "N"
+      },
+      "sec_number": "801-38826",
+      "other_names": [
+        "BEATY HAYNES & ASSOCIATES, INC.",
+        "BROWN ADVISORY LLC",
+        "BROWN ADVISORY",
+        "BEATY HAYNES LLC",
+        "BEATY HAYNES & PATTERSON INC"
+      ],
+      "notice_filings": [
+        {
+          "jurisdiction": "Alabama",
+          "status": "Notice Filed",
+          "effective_date": "3/16/2012"
+        },
+        {
+          "jurisdiction": "Arizona",
+          "status": "Notice Filed",
+          "effective_date": "3/16/2012"
+        },
+        {
+          "jurisdiction": "California",
+          "status": "Notice Filed",
+          "effective_date": "3/27/2003"
+        },
+        {
+          "jurisdiction": "Colorado",
+          "status": "Notice Filed",
+          "effective_date": "3/16/2012"
+        },
+        {
+          "jurisdiction": "Connecticut",
+          "status": "Notice Filed",
+          "effective_date": "3/16/2012"
+        },
+        {
+          "jurisdiction": "Delaware",
+          "status": "Notice Filed",
+          "effective_date": "3/16/2012"
+        },
+        {
+          "jurisdiction": "District of Columbia",
+          "status": "Notice Filed",
+          "effective_date": "1/15/1994"
+        },
+        {
+          "jurisdiction": "Florida",
+          "status": "Notice Filed",
+          "effective_date": "9/25/1996"
+        },
+        {
+          "jurisdiction": "Georgia",
+          "status": "Notice Filed",
+          "effective_date": "3/16/2012"
+        },
+        {
+          "jurisdiction": "Hawaii",
+          "status": "Notice Filed",
+          "effective_date": "3/28/2024"
+        },
+        {
+          "jurisdiction": "Idaho",
+          "status": "Notice Filed",
+          "effective_date": "3/31/2017"
+        },
+        {
+          "jurisdiction": "Illinois",
+          "status": "Notice Filed",
+          "effective_date": "3/19/2012"
+        },
+        {
+          "jurisdiction": "Indiana",
+          "status": "Notice Filed",
+          "effective_date": "3/29/2019"
+        },
+        {
+          "jurisdiction": "Kentucky",
+          "status": "Notice Filed",
+          "effective_date": "3/31/2017"
+        },
+        {
+          "jurisdiction": "Louisiana",
+          "status": "Notice Filed",
+          "effective_date": "3/16/2012"
+        },
+        {
+          "jurisdiction": "Maine",
+          "status": "Notice Filed",
+          "effective_date": "3/16/2012"
+        },
+        {
+          "jurisdiction": "Maryland",
+          "status": "Notice Filed",
+          "effective_date": "10/3/1991"
+        },
+        {
+          "jurisdiction": "Massachusetts",
+          "status": "Notice Filed",
+          "effective_date": "3/31/2011"
+        },
+        {
+          "jurisdiction": "Michigan",
+          "status": "Notice Filed",
+          "effective_date": "3/16/2012"
+        },
+        {
+          "jurisdiction": "Minnesota",
+          "status": "Notice Filed",
+          "effective_date": "3/16/2012"
+        },
+        {
+          "jurisdiction": "Missouri",
+          "status": "Notice Filed",
+          "effective_date": "3/16/2012"
+        },
+        {
+          "jurisdiction": "Montana",
+          "status": "Notice Filed",
+          "effective_date": "12/9/2021"
+        },
+        {
+          "jurisdiction": "Nevada",
+          "status": "Notice Filed",
+          "effective_date": "3/16/2012"
+        },
+        {
+          "jurisdiction": "New Hampshire",
+          "status": "Notice Filed",
+          "effective_date": "3/30/2015"
+        },
+        {
+          "jurisdiction": "New Jersey",
+          "status": "Notice Filed",
+          "effective_date": "4/18/2012"
+        },
+        {
+          "jurisdiction": "New Mexico",
+          "status": "Notice Filed",
+          "effective_date": "3/30/2015"
+        },
+        {
+          "jurisdiction": "New York",
+          "status": "Notice Filed",
+          "effective_date": "1/20/2004"
+        },
+        {
+          "jurisdiction": "North Carolina",
+          "status": "Notice Filed",
+          "effective_date": "3/16/2012"
+        },
+        {
+          "jurisdiction": "Ohio",
+          "status": "Notice Filed",
+          "effective_date": "3/16/2012"
+        },
+        {
+          "jurisdiction": "Oklahoma",
+          "status": "Notice Filed",
+          "effective_date": "3/30/2023"
+        },
+        {
+          "jurisdiction": "Oregon",
+          "status": "Notice Filed",
+          "effective_date": "3/29/2019"
+        },
+        {
+          "jurisdiction": "Pennsylvania",
+          "status": "Notice Filed",
+          "effective_date": "3/16/2012"
+        },
+        {
+          "jurisdiction": "Rhode Island",
+          "status": "Notice Filed",
+          "effective_date": "3/16/2012"
+        },
+        {
+          "jurisdiction": "South Carolina",
+          "status": "Notice Filed",
+          "effective_date": "3/16/2012"
+        },
+        {
+          "jurisdiction": "South Dakota",
+          "status": "Notice Filed",
+          "effective_date": "3/27/2025"
+        },
+        {
+          "jurisdiction": "Tennessee",
+          "status": "Notice Filed",
+          "effective_date": "3/16/2012"
+        },
+        {
+          "jurisdiction": "Texas",
+          "status": "Notice Filed",
+          "effective_date": "1/1/1999"
+        },
+        {
+          "jurisdiction": "Utah",
+          "status": "Notice Filed",
+          "effective_date": "3/16/2012"
+        },
+        {
+          "jurisdiction": "Vermont",
+          "status": "Notice Filed",
+          "effective_date": "1/3/2005"
+        },
+        {
+          "jurisdiction": "Virginia",
+          "status": "Notice Filed",
+          "effective_date": "9/20/1996"
+        },
+        {
+          "jurisdiction": "Washington",
+          "status": "Notice Filed",
+          "effective_date": "3/16/2012"
+        },
+        {
+          "jurisdiction": "West Virginia",
+          "status": "Notice Filed",
+          "effective_date": "3/16/2012"
+        },
+        {
+          "jurisdiction": "Wisconsin",
+          "status": "Notice Filed",
+          "effective_date": "3/16/2012"
+        },
+        {
+          "jurisdiction": "Wyoming",
+          "status": "Notice Filed",
+          "effective_date": "3/29/2019"
+        }
+      ],
+      "registration_date": "6/7/1991",
+      "is_sec_registered": true,
+      "is_state_registered": false,
+      "is_era_registered": false,
+      "is_sec_era_registered": false,
+      "is_state_era_registered": false,
+      "adv_filing_date": "06/11/2025",
+      "has_adv_pdf": true,
+      "accountant_exams": [
+        {
+          "firm_name": "MARCUM LLP",
+          "filing_date": "01/21/2025",
+          "status": "NOFILE"
+        },
+        {
+          "firm_name": "MARCUM LLP",
+          "filing_date": "10/28/2024",
+          "status": "FILE"
+        },
+        {
+          "firm_name": "MARCUM LLP",
+          "filing_date": "01/24/2024",
+          "status": "FILE"
+        },
+        {
+          "firm_name": "MARCUM",
+          "filing_date": "10/27/2022",
+          "status": "FILE"
+        }
+      ],
+      "brochures": [
+        {
+          "name": "BROWN ADVISORY, LLC FIRM BROCHURE",
+          "version_id": 963684,
+          "date_submitted": "3/27/2025",
+          "last_confirmed": null
+        }
+      ],
+      "firm_status": "active",
+      "is_finra_registered": true
+    },
+    "sec_search_result": {
+      "org_name": "",
+      "org_crd": "",
+      "firm_ia_sec_number": "38826",
+      "firm_ia_full_sec_number": "801-38826",
+      "firm_other_names": [
+        "BEATY HAYNES & ASSOCIATES, INC.",
+        "BROWN ADVISORY LLC",
+        "BROWN ADVISORY",
+        "BEATY HAYNES LLC",
+        "BEATY HAYNES & PATTERSON INC"
+      ],
+      "firm_type": "",
+      "registration_status": "",
+      "firm_ia_scope": "ACTIVE",
+      "firm_ia_disclosure_fl": "N",
+      "firm_branches_count": 12
+    },
+    "finra_search_result": {
+      "firm_name": "",
+      "crd_number": ""
+    }
+  },
+  "status_evaluation": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "Firm is registered with SEC, FINRA and has active IA scope",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "No disclosures found",
+    "alerts": []
+  },
+  "final_evaluation": {
+    "source": "SEC",
+    "overall_compliance": true,
+    "overall_risk_level": "Low",
+    "recommendations": "No immediate action required, monitor for changes.",
+    "description": "All compliance checks passed",
+    "alerts": []
+  },
+  "generated_at": "2025-08-26T14:43:58.904560"
+}

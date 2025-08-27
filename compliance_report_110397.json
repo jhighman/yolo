@@ -251,27 +251,6 @@
     "compliance_explanation": "No disclosures found",
     "alerts": []
   },
-  "disciplinary_evaluation": {
-    "source": "SEC",
-    "compliance": true,
-    "compliance_explanation": "No disciplinary actions found.",
-    "alerts": []
-  },
-  "arbitration_review": {
-    "source": "SEC",
-    "compliance": true,
-    "compliance_explanation": "No arbitration cases found.",
-    "alerts": []
-  },
-  "adv_evaluation": {
-    "compliance": true,
-    "explanation": "ADV evaluation skipped due to configuration",
-    "alerts": [],
-    "skipped": true,
-    "skip_timestamp": "2025-08-01T09:48:22.689550",
-    "source": "SEC",
-    "adv_status": "skipped"
-  },
   "final_evaluation": {
     "source": "SEC",
     "overall_compliance": true,
@@ -280,5 +259,5 @@
     "description": "All compliance checks passed",
     "alerts": []
   },
-  "generated_at": "2025-08-01T09:48:22.695464"
+  "generated_at": "2025-08-27T15:26:32.921730"
 }

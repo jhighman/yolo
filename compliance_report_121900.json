@@ -1,0 +1,131 @@
+{
+  "reference_id": "test-ref-121900",
+  "claim": {
+    "reference_id": "test-ref-121900",
+    "business_ref": "BIZ_121900",
+    "business_name": "WILSON & BROWNING, INC.",
+    "organization_crd": "121900",
+    "entityName": "WILSON & BROWNING, INC."
+  },
+  "entity": {
+    "firm_name": "WILSON & BROWNING, INC.",
+    "crd_number": "121900",
+    "sec_number": "-",
+    "registration_status": "ACTIVE",
+    "address": {},
+    "registration_date": "10/25/1999",
+    "other_names": [
+      "WILSON & BROWNING, INC."
+    ],
+    "is_sec_registered": false,
+    "is_state_registered": true,
+    "is_era_registered": false,
+    "is_sec_era_registered": false,
+    "is_state_era_registered": false,
+    "adv_filing_date": "02/12/2025",
+    "has_adv_pdf": true
+  },
+  "search_evaluation": {
+    "source": "FINRA",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with FINRA data, individual found.",
+    "basic_result": {
+      "firm_name": "WILSON & BROWNING, INC.",
+      "crd_number": "121900",
+      "registration_status": "ACTIVE",
+      "addresses": [],
+      "disclosures": [],
+      "raw_data": {
+        "basicInformation": {
+          "firmId": 121900,
+          "firmName": "WILSON & BROWNING, INC.",
+          "otherNames": [
+            "WILSON & BROWNING, INC."
+          ],
+          "iaScope": "ACTIVE",
+          "isIAFirm": "Y",
+          "legacyReportStatus": "Not Requested"
+        },
+        "iaFirmAddressDetails": {
+          "officeAddress": {
+            "street1": "2385 KENILWORTH RD.",
+            "city": "CLEVELAND HEIGHTS",
+            "state": "OH",
+            "country": "United States",
+            "postalCode": "44106"
+          }
+        },
+        "iaDisclosureFlag": "N"
+      },
+      "sec_number": "-",
+      "other_names": [
+        "WILSON & BROWNING, INC."
+      ],
+      "notice_filings": [],
+      "registration_date": "10/25/1999",
+      "is_sec_registered": false,
+      "is_state_registered": true,
+      "is_era_registered": false,
+      "is_sec_era_registered": false,
+      "is_state_era_registered": false,
+      "adv_filing_date": "02/12/2025",
+      "has_adv_pdf": true,
+      "accountant_exams": [],
+      "brochures": [
+        {
+          "name": "ADV PART 2B BROCHURE SUPPLEMENT (2025)",
+          "version_id": 942617,
+          "date_submitted": "2/12/2025",
+          "last_confirmed": "1/29/2016"
+        },
+        {
+          "name": "ADV PART 2A BROCHURE (2025)",
+          "version_id": 942616,
+          "date_submitted": "2/12/2025",
+          "last_confirmed": "1/29/2016"
+        }
+      ],
+      "firm_status": "active",
+      "is_finra_registered": true
+    },
+    "sec_search_result": {
+      "org_name": "",
+      "org_crd": "",
+      "firm_ia_sec_number": "",
+      "firm_ia_full_sec_number": "",
+      "firm_other_names": [
+        "WILSON & BROWNING, INC."
+      ],
+      "firm_type": "",
+      "registration_status": "",
+      "firm_ia_scope": "ACTIVE",
+      "firm_ia_disclosure_fl": "N",
+      "firm_branches_count": 3
+    },
+    "finra_search_result": {
+      "firm_name": "",
+      "crd_number": ""
+    }
+  },
+  "status_evaluation": {
+    "source": "FINRA",
+    "compliance": true,
+    "compliance_explanation": "Firm is registered with FINRA, state and has active IA scope",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "source": "FINRA",
+    "compliance": true,
+    "compliance_explanation": "No disclosures found",
+    "alerts": []
+  },
+  "final_evaluation": {
+    "source": "FINRA",
+    "overall_compliance": true,
+    "overall_risk_level": "Low",
+    "recommendations": "No immediate action required, monitor for changes.",
+    "description": "All compliance checks passed",
+    "alerts": []
+  },
+  "generated_at": "2025-08-25T15:22:01.522774"
+}

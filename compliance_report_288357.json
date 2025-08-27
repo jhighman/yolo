@@ -1,0 +1,162 @@
+{
+  "reference_id": "test-ref-288357",
+  "claim": {
+    "reference_id": "test-ref-288357",
+    "business_ref": "BIZ_288357",
+    "business_name": "QVR ADVISORS",
+    "organization_crd": "288357",
+    "entityName": "QVR ADVISORS"
+  },
+  "entity": {
+    "firm_name": "QVR ADVISORS",
+    "crd_number": "288357",
+    "sec_number": "801-110989",
+    "registration_status": "ACTIVE",
+    "address": {},
+    "registration_date": "8/15/2017",
+    "other_names": [
+      "QVR ADVISORS",
+      "QVR LLC"
+    ],
+    "is_sec_registered": true,
+    "is_state_registered": false,
+    "is_era_registered": false,
+    "is_sec_era_registered": false,
+    "is_state_era_registered": false,
+    "adv_filing_date": "05/14/2025",
+    "has_adv_pdf": true
+  },
+  "search_evaluation": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "Search completed successfully with SEC data, individual found.",
+    "basic_result": {
+      "firm_name": "QVR ADVISORS",
+      "crd_number": "288357",
+      "registration_status": "ACTIVE",
+      "addresses": [],
+      "disclosures": [],
+      "raw_data": {
+        "basicInformation": {
+          "firmId": 288357,
+          "firmName": "QVR ADVISORS",
+          "otherNames": [
+            "QVR ADVISORS",
+            "QVR LLC"
+          ],
+          "iaScope": "ACTIVE",
+          "isIAFirm": "Y",
+          "legacyReportStatus": "Not Requested",
+          "iaSECNumber": "110989",
+          "iaSECNumberType": "801"
+        },
+        "iaFirmAddressDetails": {
+          "officeAddress": {
+            "street1": "505 MONTGOMERY STREET",
+            "street2": "SUITE 1102",
+            "city": "SAN FRANCISCO",
+            "state": "CA",
+            "country": "United States",
+            "postalCode": "94111"
+          }
+        },
+        "iaDisclosureFlag": "Y"
+      },
+      "sec_number": "801-110989",
+      "other_names": [
+        "QVR ADVISORS",
+        "QVR LLC"
+      ],
+      "notice_filings": [
+        {
+          "jurisdiction": "California",
+          "status": "Notice Filed",
+          "effective_date": "8/15/2017"
+        }
+      ],
+      "registration_date": "8/15/2017",
+      "is_sec_registered": true,
+      "is_state_registered": false,
+      "is_era_registered": false,
+      "is_sec_era_registered": false,
+      "is_state_era_registered": false,
+      "adv_filing_date": "05/14/2025",
+      "has_adv_pdf": true,
+      "accountant_exams": [],
+      "brochures": [
+        {
+          "name": "QVR ADV PART 2A BROCHURE",
+          "version_id": 974505,
+          "date_submitted": "4/10/2025",
+          "last_confirmed": null
+        }
+      ],
+      "firm_status": "active",
+      "is_finra_registered": true
+    },
+    "sec_search_result": {
+      "org_name": "QVR ADVISORS",
+      "org_crd": "288357",
+      "firm_ia_sec_number": "110989",
+      "firm_ia_full_sec_number": "801-110989",
+      "firm_other_names": [
+        "QVR ADVISORS",
+        "QVR LLC"
+      ],
+      "firm_type": "",
+      "registration_status": "",
+      "firm_ia_scope": "",
+      "firm_ia_disclosure_fl": "Y",
+      "firm_branches_count": 1
+    },
+    "finra_search_result": {
+      "firm_name": "QVR ADVISORS",
+      "crd_number": "288357"
+    }
+  },
+  "status_evaluation": {
+    "source": "SEC",
+    "compliance": true,
+    "compliance_explanation": "Firm is registered with SEC, FINRA",
+    "alerts": []
+  },
+  "disclosure_review": {
+    "source": "SEC",
+    "compliance": false,
+    "compliance_explanation": "Disclosure flag indicates disclosures exist but records are unavailable",
+    "alerts": [
+      {
+        "alert_type": "MissingDisclosureRecords",
+        "severity": "HIGH",
+        "metadata": {
+          "disclosure_flag": "Y",
+          "business_name": "QVR ADVISORS"
+        },
+        "description": "Disclosure flag is 'Y' but no disclosure records are available",
+        "alert_category": "DISCLOSURE"
+      }
+    ]
+  },
+  "final_evaluation": {
+    "source": "SEC",
+    "overall_compliance": false,
+    "overall_risk_level": "High",
+    "recommendations": "Immediate action required due to critical compliance issues.",
+    "description": "One or more compliance checks failed",
+    "alerts": [
+      {
+        "eventDate": "2025-08-26",
+        "severity": "HIGH",
+        "alert_category": "DISCLOSURE",
+        "alert_type": "MissingDisclosureRecords",
+        "description": "Disclosure flag is 'Y' but no disclosure records are available",
+        "source": "SEC",
+        "metadata": {
+          "disclosure_flag": "Y",
+          "business_name": "QVR ADVISORS"
+        }
+      }
+    ]
+  },
+  "generated_at": "2025-08-26T14:41:10.652310"
+}
