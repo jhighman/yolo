@@ -194,6 +194,38 @@ class FirmServicesFacade:
             logger.debug(f"Found in both FINRA and SEC, combining data for CRD {crd_number}")
             # Start with FINRA details as base
             combined = finra_details.copy()
+            
+            # Check if the firm is expelled or terminated based on raw data
+            firm_status = 'active'
+            firm_status_raw = None
+            firm_status_date = None
+            expelled_date = None
+            
+            # Check FINRA raw data first
+            if 'raw_data' in finra_details and 'basicInformation' in finra_details['raw_data']:
+                basic_info = finra_details['raw_data']['basicInformation']
+                firm_status_raw = basic_info.get('firmStatus')
+                firm_status_date = basic_info.get('firmStatusDate')
+                expelled_date = basic_info.get('expelledDate')
+                
+                if firm_status_raw in ['Expelled', 'Terminated']:
+                    firm_status = 'inactive'
+                    logger.debug(f"Setting firm_status to 'inactive' based on FINRA firmStatus: {firm_status_raw}")
+            
+            # Check SEC raw data if still active
+            if firm_status == 'active' and 'raw_data' in sec_details and 'basicInformation' in sec_details['raw_data']:
+                basic_info = sec_details['raw_data']['basicInformation']
+                sec_firm_status_raw = basic_info.get('firmStatus')
+                sec_firm_status_date = basic_info.get('firmStatusDate')
+                sec_expelled_date = basic_info.get('expelledDate')
+                
+                if sec_firm_status_raw in ['Expelled', 'Terminated']:
+                    firm_status = 'inactive'
+                    firm_status_raw = sec_firm_status_raw
+                    firm_status_date = sec_firm_status_date
+                    expelled_date = sec_expelled_date
+                    logger.debug(f"Setting firm_status to 'inactive' based on SEC firmStatus: {firm_status_raw}")
+            
             # Add SEC-specific fields
             combined.update({
                 'sec_number': sec_details.get('sec_number'),
@@ -209,7 +241,10 @@ class FirmServicesFacade:
                 'has_adv_pdf': sec_details.get('has_adv_pdf', False),
                 'accountant_exams': sec_details.get('accountant_exams', []),
                 'brochures': sec_details.get('brochures', []),
-                'firm_status': 'active'
+                'firm_status': firm_status,
+                'firm_status_raw': firm_status_raw,
+                'firm_status_date': firm_status_date,
+                'expelled_date': expelled_date
             })
             
             # Determine the primary source based on registration status
@@ -240,7 +275,27 @@ class FirmServicesFacade:
             # If only found in FINRA, use FINRA details
             logger.debug(f"Found only in FINRA for CRD {crd_number}")
             finra_details['source'] = 'FINRA'
-            finra_details['firm_status'] = 'active'
+            
+            # Check if the firm is expelled or terminated based on raw data
+            firm_status = 'active'
+            firm_status_raw = None
+            firm_status_date = None
+            expelled_date = None
+            
+            if 'raw_data' in finra_details and 'basicInformation' in finra_details['raw_data']:
+                basic_info = finra_details['raw_data']['basicInformation']
+                firm_status_raw = basic_info.get('firmStatus')
+                firm_status_date = basic_info.get('firmStatusDate')
+                expelled_date = basic_info.get('expelledDate')
+                
+                if firm_status_raw in ['Expelled', 'Terminated']:
+                    firm_status = 'inactive'
+                    logger.debug(f"Setting firm_status to 'inactive' based on FINRA firmStatus: {firm_status_raw}")
+            
+            finra_details['firm_status'] = firm_status
+            finra_details['firm_status_raw'] = firm_status_raw
+            finra_details['firm_status_date'] = firm_status_date
+            finra_details['expelled_date'] = expelled_date
             
             # Always set is_finra_registered to True if firm exists in FINRA
             finra_details['is_finra_registered'] = True
@@ -250,7 +305,27 @@ class FirmServicesFacade:
             # If only found in SEC, use SEC details
             logger.debug(f"Found only in SEC for CRD {crd_number}")
             sec_details['source'] = 'SEC'
-            sec_details['firm_status'] = 'active'
+            
+            # Check if the firm is expelled or terminated based on raw data
+            firm_status = 'active'
+            firm_status_raw = None
+            firm_status_date = None
+            expelled_date = None
+            
+            if 'raw_data' in sec_details and 'basicInformation' in sec_details['raw_data']:
+                basic_info = sec_details['raw_data']['basicInformation']
+                firm_status_raw = basic_info.get('firmStatus')
+                firm_status_date = basic_info.get('firmStatusDate')
+                expelled_date = basic_info.get('expelledDate')
+                
+                if firm_status_raw in ['Expelled', 'Terminated']:
+                    firm_status = 'inactive'
+                    logger.debug(f"Setting firm_status to 'inactive' based on SEC firmStatus: {firm_status_raw}")
+            
+            sec_details['firm_status'] = firm_status
+            sec_details['firm_status_raw'] = firm_status_raw
+            sec_details['firm_status_date'] = firm_status_date
+            sec_details['expelled_date'] = expelled_date
             
             # Ensure SEC registration flag is set
             if not sec_details.get('is_sec_registered'):

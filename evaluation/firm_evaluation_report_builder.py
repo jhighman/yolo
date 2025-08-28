@@ -109,7 +109,11 @@ class FirmEvaluationReportBuilder:
                 "is_sec_era_registered": basic_result.get("is_sec_era_registered", False),
                 "is_state_era_registered": basic_result.get("is_state_era_registered", False),
                 "adv_filing_date": basic_result.get("adv_filing_date", ""),
-                "has_adv_pdf": basic_result.get("has_adv_pdf", False)
+                "has_adv_pdf": basic_result.get("has_adv_pdf", False),
+                "firm_status": basic_result.get("firm_status", ""),
+                "firm_status_raw": basic_result.get("firm_status_raw", ""),
+                "firm_status_date": basic_result.get("firm_status_date", ""),
+                "expelled_date": basic_result.get("expelled_date", "")
             }
             self.set_entity(entity_data)
         

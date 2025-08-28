@@ -314,6 +314,18 @@ class FirmEvaluationReportDirector:
                     business_info["firm_status"] = basic_result["firm_status"]
                 if "status_message" in basic_result:
                     business_info["status_message"] = basic_result["status_message"]
+                # Copy status information fields
+                if "firm_status_raw" in basic_result:
+                    business_info["firm_status_raw"] = basic_result["firm_status_raw"]
+                if "firm_status_date" in basic_result:
+                    business_info["firm_status_date"] = basic_result["firm_status_date"]
+                if "expelled_date" in basic_result:
+                    business_info["expelled_date"] = basic_result["expelled_date"]
+                # Copy raw_data field which contains the detailed status information
+                if "raw_data" in basic_result:
+                    business_info["raw_data"] = basic_result["raw_data"]
+                    # Also add basic_result to business_info to match the structure expected by evaluate_registration_status
+                    business_info["basic_result"] = {"raw_data": basic_result["raw_data"]}
                 # Copy registration flags
                 if "is_sec_registered" in basic_result:
                     business_info["is_sec_registered"] = basic_result["is_sec_registered"]
