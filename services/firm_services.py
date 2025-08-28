@@ -207,10 +207,14 @@ class FirmServicesFacade:
                 firm_status_raw = basic_info.get('firmStatus')
                 firm_status_date = basic_info.get('firmStatusDate')
                 expelled_date = basic_info.get('expelledDate')
+                ia_scope = basic_info.get('iaScope')
                 
                 if firm_status_raw in ['Expelled', 'Terminated']:
                     firm_status = 'inactive'
                     logger.debug(f"Setting firm_status to 'inactive' based on FINRA firmStatus: {firm_status_raw}")
+                elif ia_scope == 'INACTIVE':
+                    firm_status = 'inactive'
+                    logger.debug(f"Setting firm_status to 'inactive' based on FINRA iaScope: {ia_scope}")
             
             # Check SEC raw data if still active
             if firm_status == 'active' and 'raw_data' in sec_details and 'basicInformation' in sec_details['raw_data']:
@@ -218,6 +222,7 @@ class FirmServicesFacade:
                 sec_firm_status_raw = basic_info.get('firmStatus')
                 sec_firm_status_date = basic_info.get('firmStatusDate')
                 sec_expelled_date = basic_info.get('expelledDate')
+                sec_ia_scope = basic_info.get('iaScope')
                 
                 if sec_firm_status_raw in ['Expelled', 'Terminated']:
                     firm_status = 'inactive'
@@ -225,6 +230,12 @@ class FirmServicesFacade:
                     firm_status_date = sec_firm_status_date
                     expelled_date = sec_expelled_date
                     logger.debug(f"Setting firm_status to 'inactive' based on SEC firmStatus: {firm_status_raw}")
+                elif sec_ia_scope == 'INACTIVE':
+                    firm_status = 'inactive'
+                    firm_status_raw = "Not Currently Registered"
+                    firm_status_date = sec_firm_status_date
+                    expelled_date = sec_expelled_date
+                    logger.debug(f"Setting firm_status to 'inactive' based on SEC iaScope: {sec_ia_scope}")
             
             # Add SEC-specific fields
             combined.update({
@@ -260,9 +271,11 @@ class FirmServicesFacade:
             if not combined.get('is_sec_registered') and sec_details.get('is_sec_registered'):
                 combined['is_sec_registered'] = True
             
-            # Always set is_finra_registered to True if firm exists in FINRA
-            if finra_exists:
+            # Only set is_finra_registered to True if firm exists in FINRA AND is not inactive/expelled
+            if finra_exists and firm_status != 'inactive':
                 combined['is_finra_registered'] = True
+            else:
+                combined['is_finra_registered'] = False
                 
             # If firm_ia_scope is available in either source, include it
             if 'firm_ia_scope' in sec_details and not combined.get('firm_ia_scope'):
@@ -287,18 +300,26 @@ class FirmServicesFacade:
                 firm_status_raw = basic_info.get('firmStatus')
                 firm_status_date = basic_info.get('firmStatusDate')
                 expelled_date = basic_info.get('expelledDate')
+                ia_scope = basic_info.get('iaScope')
                 
                 if firm_status_raw in ['Expelled', 'Terminated']:
                     firm_status = 'inactive'
                     logger.debug(f"Setting firm_status to 'inactive' based on FINRA firmStatus: {firm_status_raw}")
+                elif ia_scope == 'INACTIVE':
+                    firm_status = 'inactive'
+                    firm_status_raw = "Not Currently Registered"
+                    logger.debug(f"Setting firm_status to 'inactive' based on FINRA iaScope: {ia_scope}")
             
             finra_details['firm_status'] = firm_status
             finra_details['firm_status_raw'] = firm_status_raw
             finra_details['firm_status_date'] = firm_status_date
             finra_details['expelled_date'] = expelled_date
             
-            # Always set is_finra_registered to True if firm exists in FINRA
-            finra_details['is_finra_registered'] = True
+            # Only set is_finra_registered to True if firm exists in FINRA AND is not inactive/expelled
+            if firm_status != 'inactive':
+                finra_details['is_finra_registered'] = True
+            else:
+                finra_details['is_finra_registered'] = False
                 
             return finra_details
         elif sec_details:
@@ -317,19 +338,26 @@ class FirmServicesFacade:
                 firm_status_raw = basic_info.get('firmStatus')
                 firm_status_date = basic_info.get('firmStatusDate')
                 expelled_date = basic_info.get('expelledDate')
+                ia_scope = basic_info.get('iaScope')
                 
                 if firm_status_raw in ['Expelled', 'Terminated']:
                     firm_status = 'inactive'
                     logger.debug(f"Setting firm_status to 'inactive' based on SEC firmStatus: {firm_status_raw}")
+                elif ia_scope == 'INACTIVE':
+                    firm_status = 'inactive'
+                    firm_status_raw = "Not Currently Registered"
+                    logger.debug(f"Setting firm_status to 'inactive' based on SEC iaScope: {ia_scope}")
             
             sec_details['firm_status'] = firm_status
             sec_details['firm_status_raw'] = firm_status_raw
             sec_details['firm_status_date'] = firm_status_date
             sec_details['expelled_date'] = expelled_date
             
-            # Ensure SEC registration flag is set
-            if not sec_details.get('is_sec_registered'):
+            # Only set SEC registration flag to True if firm is not inactive/expelled
+            if firm_status != 'inactive':
                 sec_details['is_sec_registered'] = True
+            else:
+                sec_details['is_sec_registered'] = False
                 
             return sec_details
         else:

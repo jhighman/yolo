@@ -150,16 +150,57 @@ def evaluate_registration_status(business_info: Dict[str, Any]) -> Tuple[bool, s
     # Check if firm is inactive/expelled first
     firm_status = business_info.get('firm_status', '').lower()
     if firm_status == 'inactive':
+        # Extract detailed status information from raw data
+        raw_data = None
+        firm_status_raw = None
+        firm_status_date = None
+        expelled_date = None
+        
+        # Check for raw data in different locations
+        if 'raw_data' in business_info:
+            raw_data = business_info.get('raw_data', {})
+        elif 'basic_result' in business_info and 'raw_data' in business_info.get('basic_result', {}):
+            raw_data = business_info.get('basic_result', {}).get('raw_data', {})
+            
+        # Extract status information from raw data
+        if raw_data and 'basicInformation' in raw_data:
+            basic_info = raw_data.get('basicInformation', {})
+            firm_status_raw = basic_info.get('firmStatus')
+            firm_status_date = basic_info.get('firmStatusDate')
+            expelled_date = basic_info.get('expelledDate')
+        
+        # Create status message based on available information
         status_message = business_info.get('status_message', 'Firm appears to be inactive or expelled')
+        
+        # Create description based on available status information
+        description = "No active registrations found with any regulatory body"
+        
+        if expelled_date:
+            description = f"Firm was expelled from regulatory bodies on {expelled_date}"
+        elif firm_status_raw == "Terminated" and firm_status_date:
+            description = f"Firm's registration was terminated on {firm_status_date}"
+        elif firm_status_raw == "Terminated":
+            description = "Firm's registration has been terminated"
+        elif firm_status_raw == "Not Currently Registered":
+            description = "Firm is not currently registered with any regulatory body"
+        elif firm_status_raw:
+            description = f"Firm's status is {firm_status_raw}"
+        # Check for inactive iaScope if no other specific status is available
+        elif 'raw_data' in business_info and 'basicInformation' in business_info.get('raw_data', {}) and business_info['raw_data']['basicInformation'].get('iaScope') == 'INACTIVE':
+            description = "Firm is not currently registered with any regulatory body"
+        
         # Add InactiveExpelledFirm alert
         alerts.append(Alert(
             alert_type="InactiveExpelledFirm",
             severity=AlertSeverity.HIGH,
             metadata={
                 "firm_status": firm_status,
-                "status_message": status_message
+                "status_message": status_message,
+                "firm_status_raw": firm_status_raw,
+                "firm_status_date": firm_status_date,
+                "expelled_date": expelled_date
             },
-            description="Firm is inactive or has been expelled from regulatory bodies",
+            description=description,
             alert_category="REGISTRATION"
         ))
         
@@ -171,9 +212,12 @@ def evaluate_registration_status(business_info: Dict[str, Any]) -> Tuple[bool, s
                 "registration_status": "",
                 "firm_ia_scope": "",
                 "firm_status": firm_status,
+                "firm_status_raw": firm_status_raw,
+                "firm_status_date": firm_status_date,
+                "expelled_date": expelled_date,
                 "source": business_info.get('source', 'Unknown')
             },
-            description="No active registrations found with any regulatory body",
+            description=description,
             alert_category="REGISTRATION"
         ))
         
@@ -324,6 +368,42 @@ def evaluate_registration_status(business_info: Dict[str, Any]) -> Tuple[bool, s
         is_compliant = True
     
     if not is_compliant:
+        # Extract detailed status information from raw data
+        raw_data = None
+        firm_status_raw = None
+        firm_status_date = None
+        expelled_date = None
+        
+        # Check for raw data in different locations
+        if 'raw_data' in business_info:
+            raw_data = business_info.get('raw_data', {})
+        elif 'basic_result' in business_info and 'raw_data' in business_info.get('basic_result', {}):
+            raw_data = business_info.get('basic_result', {}).get('raw_data', {})
+            
+        # Extract status information from raw data
+        if raw_data and 'basicInformation' in raw_data:
+            basic_info = raw_data.get('basicInformation', {})
+            firm_status_raw = basic_info.get('firmStatus')
+            firm_status_date = basic_info.get('firmStatusDate')
+            expelled_date = basic_info.get('expelledDate')
+        
+        # Create description based on available status information
+        description = "No active registrations found with any regulatory body"
+        
+        if expelled_date:
+            description = f"Firm was expelled from regulatory bodies on {expelled_date}"
+        elif firm_status_raw == "Terminated" and firm_status_date:
+            description = f"Firm's registration was terminated on {firm_status_date}"
+        elif firm_status_raw == "Terminated":
+            description = "Firm's registration has been terminated"
+        elif firm_status_raw == "Not Currently Registered":
+            description = "Firm is not currently registered with any regulatory body"
+        elif firm_status_raw:
+            description = f"Firm's status is {firm_status_raw}"
+        # Check for inactive iaScope if no other specific status is available
+        elif 'raw_data' in business_info and 'basicInformation' in business_info.get('raw_data', {}) and business_info['raw_data']['basicInformation'].get('iaScope') == 'INACTIVE':
+            description = "Firm is not currently registered with any regulatory body"
+        
         alerts.append(Alert(
             alert_type="NoActiveRegistration",
             severity=AlertSeverity.HIGH,
@@ -331,12 +411,15 @@ def evaluate_registration_status(business_info: Dict[str, Any]) -> Tuple[bool, s
                 "registration_status": registration_status,
                 "firm_ia_scope": firm_ia_scope,
                 "firm_status": firm_status,
+                "firm_status_raw": firm_status_raw,
+                "firm_status_date": firm_status_date,
+                "expelled_date": expelled_date,
                 "source": business_info.get('source', 'Unknown'),
                 "is_sec_registered": is_sec_registered,
                 "is_state_registered": is_state_registered,
                 "is_finra_registered": is_finra_registered
             },
-            description="No active registrations found with any regulatory body"
+            description=description
         ))
         return False, "No active registrations found", alerts
     
