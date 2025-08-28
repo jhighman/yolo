@@ -150,24 +150,30 @@ def evaluate_registration_status(business_info: Dict[str, Any]) -> Tuple[bool, s
     # Check if firm is inactive/expelled first
     firm_status = business_info.get('firm_status', '').lower()
     if firm_status == 'inactive':
-        # Extract detailed status information from raw data
-        raw_data = None
-        firm_status_raw = None
-        firm_status_date = None
-        expelled_date = None
+        # First check if firm_status_raw is already set in business_info
+        firm_status_raw = business_info.get('firm_status_raw')
+        firm_status_date = business_info.get('firm_status_date')
+        expelled_date = business_info.get('expelled_date')
         
-        # Check for raw data in different locations
-        if 'raw_data' in business_info:
-            raw_data = business_info.get('raw_data', {})
-        elif 'basic_result' in business_info and 'raw_data' in business_info.get('basic_result', {}):
-            raw_data = business_info.get('basic_result', {}).get('raw_data', {})
+        # If firm_status_raw is not set, extract it from raw data
+        if firm_status_raw is None:
+            # Extract detailed status information from raw data
+            raw_data = None
             
-        # Extract status information from raw data
-        if raw_data and 'basicInformation' in raw_data:
-            basic_info = raw_data.get('basicInformation', {})
-            firm_status_raw = basic_info.get('firmStatus')
-            firm_status_date = basic_info.get('firmStatusDate')
-            expelled_date = basic_info.get('expelledDate')
+            # Check for raw data in different locations
+            if 'raw_data' in business_info:
+                raw_data = business_info.get('raw_data', {})
+            elif 'basic_result' in business_info and 'raw_data' in business_info.get('basic_result', {}):
+                raw_data = business_info.get('basic_result', {}).get('raw_data', {})
+                
+            # Extract status information from raw data
+            if raw_data and 'basicInformation' in raw_data:
+                basic_info = raw_data.get('basicInformation', {})
+                firm_status_raw = basic_info.get('firmStatus')
+                if firm_status_date is None:
+                    firm_status_date = basic_info.get('firmStatusDate')
+                if expelled_date is None:
+                    expelled_date = basic_info.get('expelledDate')
         
         # Create status message based on available information
         status_message = business_info.get('status_message', 'Firm appears to be inactive or expelled')
@@ -182,7 +188,7 @@ def evaluate_registration_status(business_info: Dict[str, Any]) -> Tuple[bool, s
         elif firm_status_raw == "Terminated":
             description = "Firm's registration has been terminated"
         elif firm_status_raw == "Not Currently Registered":
-            description = "Firm is not currently registered with any regulatory body"
+            description = f"Firm is not registered - status is Not Currently Registered"
         elif firm_status_raw:
             description = f"Firm's status is {firm_status_raw}"
         # Check for inactive iaScope if no other specific status is available
@@ -368,27 +374,37 @@ def evaluate_registration_status(business_info: Dict[str, Any]) -> Tuple[bool, s
         is_compliant = True
     
     if not is_compliant:
-        # Extract detailed status information from raw data
-        raw_data = None
-        firm_status_raw = None
-        firm_status_date = None
-        expelled_date = None
+        # First check if firm_status_raw is already set in business_info
+        firm_status_raw = business_info.get('firm_status_raw')
+        firm_status_date = business_info.get('firm_status_date')
+        expelled_date = business_info.get('expelled_date')
         
-        # Check for raw data in different locations
-        if 'raw_data' in business_info:
-            raw_data = business_info.get('raw_data', {})
-        elif 'basic_result' in business_info and 'raw_data' in business_info.get('basic_result', {}):
-            raw_data = business_info.get('basic_result', {}).get('raw_data', {})
+        # If firm_status_raw is not set, extract it from raw data
+        if firm_status_raw is None:
+            # Extract detailed status information from raw data
+            raw_data = None
             
-        # Extract status information from raw data
-        if raw_data and 'basicInformation' in raw_data:
-            basic_info = raw_data.get('basicInformation', {})
-            firm_status_raw = basic_info.get('firmStatus')
-            firm_status_date = basic_info.get('firmStatusDate')
-            expelled_date = basic_info.get('expelledDate')
+            # Check for raw data in different locations
+            if 'raw_data' in business_info:
+                raw_data = business_info.get('raw_data', {})
+            elif 'basic_result' in business_info and 'raw_data' in business_info.get('basic_result', {}):
+                raw_data = business_info.get('basic_result', {}).get('raw_data', {})
+                
+            # Extract status information from raw data
+            if raw_data and 'basicInformation' in raw_data:
+                basic_info = raw_data.get('basicInformation', {})
+                firm_status_raw = basic_info.get('firmStatus')
+                if firm_status_date is None:
+                    firm_status_date = basic_info.get('firmStatusDate')
+                if expelled_date is None:
+                    expelled_date = basic_info.get('expelledDate')
         
         # Create description based on available status information
         description = "No active registrations found with any regulatory body"
+        
+        # If firm_status is inactive but firm_status_raw is not set, set it to "Not Currently Registered"
+        if business_info.get('firm_status') == 'inactive' and not firm_status_raw:
+            firm_status_raw = "Not Currently Registered"
         
         if expelled_date:
             description = f"Firm was expelled from regulatory bodies on {expelled_date}"
@@ -397,7 +413,7 @@ def evaluate_registration_status(business_info: Dict[str, Any]) -> Tuple[bool, s
         elif firm_status_raw == "Terminated":
             description = "Firm's registration has been terminated"
         elif firm_status_raw == "Not Currently Registered":
-            description = "Firm is not currently registered with any regulatory body"
+            description = f"Firm is not registered - status is Not Currently Registered"
         elif firm_status_raw:
             description = f"Firm's status is {firm_status_raw}"
         # Check for inactive iaScope if no other specific status is available
