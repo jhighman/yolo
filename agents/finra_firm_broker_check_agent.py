@@ -126,36 +126,16 @@ def rate_limit(func):
 # Import random for jitter in retry logic
 import random
 
-def retry_with_backoff(max_retries=3, backoff_factor=1.5, max_wait=30, jitter=0.1):
-    """Retry decorator with exponential backoff and jitter.
-    
-    Args:
-        max_retries: Maximum number of retries before giving up
-        backoff_factor: Multiplier for the delay between retries
-        max_wait: Maximum wait time in seconds
-        jitter: Random factor to add to delay to prevent thundering herd
-    """
+def retry_with_backoff(max_retries=0, backoff_factor=1.5, max_wait=30, jitter=0.1):
+    """Retry decorator with retries disabled for testing idle crash."""
     def decorator(func):
         @wraps(func)
         def wrapper(*args, **kwargs):
-            retries = 0
-            while retries < max_retries:
-                try:
-                    return func(*args, **kwargs)
-                except (requests.exceptions.ConnectionError, ConnectionResetError, requests.exceptions.ChunkedEncodingError) as e:
-                    retries += 1
-                    if retries >= max_retries:
-                        logger.error(f"Max retries ({max_retries}) exceeded for {func.__name__}: {e}")
-                        raise
-                    
-                    # Calculate backoff with jitter
-                    wait_time = min(backoff_factor * (2 ** (retries - 1)), max_wait)
-                    jitter_amount = wait_time * jitter * (2 * random.random() - 1)
-                    wait_time = max(0.1, wait_time + jitter_amount)  # Ensure positive wait time
-                    
-                    logger.warning(f"Connection error in {func.__name__}, retrying in {wait_time:.2f}s (attempt {retries}/{max_retries}): {e}")
-                    time.sleep(wait_time)
-            return func(*args, **kwargs)  # This line should never be reached
+            try:
+                return func(*args, **kwargs)  # Try once, no retries
+            except (requests.exceptions.ConnectionError, ConnectionResetError, requests.exceptions.ChunkedEncodingError) as e:
+                logger.error(f"Retries disabled for {func.__name__}: Connection error {e}")
+                raise  # Fail immediately
         return wrapper
     return decorator
 class FinraAPIError(Exception):
